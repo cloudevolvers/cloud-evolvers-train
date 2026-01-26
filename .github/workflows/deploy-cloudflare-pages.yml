@@ -1,0 +1,92 @@
+# 🚀 Cloudflare Pages Deployment Workflow
+# Deploys to poc.cloudevolvers.com on Cloudflare Pages
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: ["main", "feature/*", "fix/*"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        type: choice
+        options:
+          - poc
+          - dev
+          - production
+        default: 'poc'
+
+concurrency:
+  group: deploy-cf-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Set build date
+        id: build-date
+        run: echo "date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_OUTPUT
+
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_COMMIT_SHA: ${{ github.sha }}
+          VITE_ENVIRONMENT: ${{ github.event.inputs.environment || 'poc' }}
+          VITE_BUILD_DATE: ${{ steps.build-date.outputs.date }}
+          # Secrets from GitHub
+          VITE_API_KEY: ${{ secrets.API_KEY }}
+          VITE_AZURE_AD_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
+          VITE_AZURE_AD_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+          VITE_AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
+          EMAIL_AZURE_CLIENT_SECRET: ${{ secrets.EMAIL_AZURE_CLIENT_SECRET }}
+          API_KEY: ${{ secrets.API_KEY }}
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=cloud-evolvers-train --branch=${{ github.ref_name }}
+
+      - name: Deployment Success
+        if: success()
+        run: |
+          echo "🎉 Deployment successful!"
+          echo "🌿 Branch: ${{ github.ref_name }}"
+          echo ""
+          
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            echo "╔════════════════════════════════════════════════════════════════╗"
+            echo "║  🌍 POC ENVIRONMENT                                            ║"
+            echo "╚════════════════════════════════════════════════════════════════╝"
+            echo "🔗 URL: https://poc.cloudevolvers.com"
+            echo "🔗 Cloudflare URL: https://cloud-evolvers-train.pages.dev"
+          else
+            echo "╔════════════════════════════════════════════════════════════════╗"
+            echo "║  🔧 PREVIEW ENVIRONMENT                                        ║"
+            echo "╚════════════════════════════════════════════════════════════════╝"
+            echo "🔗 Preview URL available in Cloudflare Pages dashboard"
+          fi

@@ -1,0 +1,19 @@
+name = "cloud-evolvers-train"
+compatibility_date = "2024-01-01"
+
+# Cloudflare Pages configuration
+pages_build_output_dir = "dist"
+
+# Environment variables (non-sensitive)
+[vars]
+NODE_ENV = "production"
+VITE_ENVIRONMENT = "production"
+VITE_SHOW_CONSTRUCTION_BANNER = "false"
+
+# Preview environment (for PRs and branches)
+[env.preview]
+vars = { VITE_ENVIRONMENT = "preview" }
+
+# Production environment (main branch - poc.cloudevolvers.com)
+[env.production]
+vars = { VITE_ENVIRONMENT = "production" }
