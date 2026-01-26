@@ -1,7 +1,7 @@
 import { Hero } from "@/components/marketing/Hero";
 import { BentoFeatures } from "@/components/marketing/BentoFeatures";
 import { TrainingPathways } from "@/components/marketing/TrainingPathways";
-import { SocialProof } from "@/components/marketing/SocialProof";
+
 import { SEO, PAGE_SEO } from "@/components/SEO";
 
 export default function HomePage() {
@@ -14,7 +14,7 @@ export default function HomePage() {
                 <Hero />
 
                 {/* 2. Social Proof: Marquee */}
-                <SocialProof />
+
 
                 {/* 3. Features: Bento Grid */}
                 <BentoFeatures />

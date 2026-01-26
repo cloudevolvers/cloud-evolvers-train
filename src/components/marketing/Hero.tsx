@@ -60,7 +60,7 @@ export function Hero() {
                             <div className="mt-12 flex items-center gap-8 text-sm text-gray-400 w-full pt-8 border-t border-white/5">
                                 <div className="flex items-center gap-2">
                                     <ShieldCheck className="w-5 h-5 text-blue-500" />
-                                    <span>Microsoft Partner</span>
+                                    <span>Industry Standard</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Zap className="w-5 h-5 text-yellow-500" />
@@ -90,7 +90,39 @@ export function Hero() {
                                 </div>
                                 <div>
                                     <div className="text-xs text-gray-400">Certification</div>
-                                    <div className="text-sm font-bold text-white">AZ-104 Passed</div>
+                                    <div className="text-sm font-bold text-white">AZ-104 Admin</div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, 15, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                            className="absolute top-1/2 -right-16 bg-black/40 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl hidden xl:block"
+                        >
+                            <div className="flex items-center gap-3">
+                                <div className="bg-blue-500/20 p-2 rounded-lg">
+                                    <ShieldCheck className="w-6 h-6 text-blue-500" />
+                                </div>
+                                <div>
+                                    <div className="text-xs text-gray-400">Certification</div>
+                                    <div className="text-sm font-bold text-white">AZ-305 Expert</div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, -15, 0] }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                            className="absolute -bottom-8 -left-8 bg-black/40 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl hidden xl:block"
+                        >
+                            <div className="flex items-center gap-3">
+                                <div className="bg-amber-500/20 p-2 rounded-lg">
+                                    <ShieldCheck className="w-6 h-6 text-amber-500" />
+                                </div>
+                                <div>
+                                    <div className="text-xs text-gray-400">Certification</div>
+                                    <div className="text-sm font-bold text-white">AZ-500 Security</div>
                                 </div>
                             </div>
                         </motion.div>
