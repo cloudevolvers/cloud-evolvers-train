@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "slug": "microsoft-365-identity-access-administrator",
+    "title": "Microsoft 365 Identity Access Administrator",
+    "subtitle": "Master Identity and Access Management in Microsoft 365",
+    "description": "Become an expert in Microsoft 365 identity and access management, mastering Azure AD, conditional access, governance, and security features.",
+    "category": "Microsoft 365",
+    "level": "Advanced",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Microsoft 365", "Azure AD", "Identity", "Access Management", "Security", "Governance", "Conditional Access"],
+    "prerequisites": [
+      "Microsoft 365 Fundamentals or equivalent knowledge",
+      "Understanding of basic identity concepts",
+      "Experience with Windows Server administration",
+      "Knowledge of networking and security fundamentals",
+      "Azure AD fundamentals knowledge"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/m365-identity-admin-hero.jpg",
+    "badge": "SC-300",
+    "highlights": [
+      "Azure AD expertise",
+      "Conditional access mastery",
+      "Identity governance",
+      "Access management"
+    ]
+  },
+  "overview": {
+    "summary": "Microsoft 365 Identity Access Administrator training prepares you for the SC-300 certification by mastering Azure Active Directory, conditional access policies, identity governance, and access management in Microsoft 365 environments.",
+    "objectives": [
+      "Implement and manage Azure AD identities",
+      "Configure conditional access policies",
+      "Implement identity governance solutions",
+      "Manage access to applications and resources",
+      "Implement authentication methods",
+      "Monitor and troubleshoot identity issues"
+    ],
+    "targetAudience": "IT administrators, security professionals, and identity specialists who manage Microsoft 365 identities and access in enterprise environments."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure AD Identity Management",
+      "description": "Master Azure Active Directory identity management",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement Azure AD identities",
+        "Manage user and group accounts",
+        "Configure Azure AD Connect",
+        "Implement directory synchronization",
+        "Manage Azure AD domains",
+        "Configure self-service password reset"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure AD Fundamentals</h3><p>Azure Active Directory is the foundation of Microsoft 365 identity management, providing secure authentication and authorization for all Microsoft services.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Identity Management Components",
+            "items": [
+              "User and group management",
+              "Azure AD Connect configuration",
+              "Directory synchronization",
+              "Domain management",
+              "Self-service password reset",
+              "Azure AD Premium features"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/m365/azure-ad-identity.jpg",
+            "alt": "Azure AD Identity Management",
+            "caption": "Azure AD identity management architecture"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure AD Identity Lab",
+          "description": "Configure and manage Azure AD identities",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Authentication and Authorization",
+      "description": "Implement advanced authentication and authorization",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure multi-factor authentication",
+        "Implement passwordless authentication",
+        "Manage authentication methods",
+        "Configure Azure AD authentication policies",
+        "Implement certificate-based authentication",
+        "Manage device registration"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Modern Authentication</h3><p>Modern authentication provides enhanced security through multi-factor authentication, passwordless options, and advanced authentication methods.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Authentication Methods",
+            "items": [
+              "Multi-factor authentication (MFA)",
+              "Passwordless authentication",
+              "Windows Hello for Business",
+              "FIDO2 security keys",
+              "Certificate-based authentication",
+              "Phone and SMS authentication"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Authentication Lab",
+          "description": "Implement and configure authentication methods",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Conditional Access and Access Management",
+      "description": "Master conditional access policies and access management",
+      "duration": "8 hours",
+      "objectives": [
+        "Design conditional access policies",
+        "Configure access controls",
+        "Implement risk-based policies",
+        "Manage application access",
+        "Configure session controls",
+        "Monitor conditional access"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Conditional Access provides granular control over how and when users can access applications and resources based on defined conditions and policies.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Conditional Access Components",
+            "items": [
+              "User and group assignments",
+              "Cloud apps and actions",
+              "Conditions (location, device, client)",
+              "Access controls (grant/deny)",
+              "Session controls",
+              "Risk-based policies"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Conditional Access Lab",
+          "description": "Design and implement conditional access policies",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Identity Governance and Compliance",
+      "description": "Implement identity governance and compliance solutions",
+      "duration": "6 hours",
+      "objectives": [
+        "Configure Azure AD Identity Governance",
+        "Implement access reviews",
+        "Manage privileged identities",
+        "Configure entitlement management",
+        "Implement compliance policies",
+        "Monitor identity security"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Identity Governance</h3><p>Identity governance ensures that users have appropriate access to resources while maintaining security and compliance requirements.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Governance Features",
+            "items": [
+              "Access reviews and certifications",
+              "Privileged Identity Management (PIM)",
+              "Entitlement management",
+              "Lifecycle workflows",
+              "Compliance monitoring",
+              "Audit and reporting"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Identity Governance Lab",
+          "description": "Implement identity governance solutions",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1600,
+    "discountedPrice": 1280,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft SC-300 training materials",
+      "Hands-on lab access with Microsoft 365 tenant",
+      "Azure AD administration guide",
+      "Conditional access policy templates",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Microsoft 365 Identity Access Administrator badge"
+    ]
+  },
+  "instructor": {
+    "name": "Dr. Michael Thompson",
+    "title": "Principal Identity Architect",
+    "bio": "Michael is a Principal Identity Architect with extensive experience in enterprise identity management and security. He has designed and implemented identity solutions for Fortune 500 companies and specializes in Azure AD and Microsoft 365 security.",
+    "certifications": [
+      "Microsoft Certified: Identity and Access Administrator Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+      "Certified Information Systems Security Professional (CISSP)",
+      "Certified Identity and Access Manager (CIAM)",
+      "Certified Ethical Hacker (CEH)"
+    ],
+    "image": "/images/instructors/michael-thompson.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-06-17",
+        "endDate": "2024-06-20",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Microsoft Learn - SC-300",
+      "url": "https://learn.microsoft.com/en-us/training/paths/manage-identity-access/",
+      "description": "Official Microsoft learning path for SC-300 certification"
+    },
+    {
+      "type": "video",
+      "title": "Azure AD Training Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nB",
+      "description": "Video tutorials for Azure AD and identity management"
+    },
+    {
+      "type": "tool",
+      "title": "Azure AD Admin Center",
+      "url": "https://aad.portal.azure.com/",
+      "description": "Azure AD administration portal"
+    },
+    {
+      "type": "practice",
+      "title": "SC-300 Practice Tests",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/practice-assess/",
+      "description": "Official practice tests for SC-300 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Identity and Access Administrator Associate",
+    "code": "SC-300",
+    "description": "Demonstrate expertise in implementing and managing identity and access management solutions using Microsoft Azure AD and Microsoft 365",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Japanese", "Chinese (Simplified)", "Korean", "German", "French", "Spanish", "Portuguese (Brazil)", "Arabic", "Russian", "Chinese (Traditional)", "Italian", "Indonesian"]
+    },
+    "skillsMeasured": [
+      "Implement and manage Azure AD identities (20-25%)",
+      "Implement and manage authentication and authorization (20-25%)",
+      "Implement and manage access management (15-20%)",
+      "Implement and manage identity governance (20-25%)",
+      "Monitor and maintain identity infrastructure (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need an Azure AD Premium license?",
+      "answer": "Yes, many advanced features covered in this course require Azure AD Premium P1 or P2 licenses. We provide access to a demo tenant for labs."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a highly technical course covering advanced identity and access management concepts. Prior IT administration experience is recommended."
+    },
+    {
+      "question": "What Azure AD features are covered?",
+      "answer": "The course covers Azure AD Premium features including conditional access, identity governance, PIM, and advanced authentication methods."
+    },
+    {
+      "question": "Will I learn about hybrid identity?",
+      "answer": "Yes, the course includes Azure AD Connect, directory synchronization, and hybrid identity scenarios with on-premises Active Directory."
+    }
+  ]
+}

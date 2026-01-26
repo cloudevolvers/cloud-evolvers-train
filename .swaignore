@@ -1,0 +1,15 @@
+# Azure Static Web Apps ignore file
+# Exclude migration files and other large assets
+migration-files/
+migration-documents/
+pids/
+node_modules/
+.git/
+.github/
+*.log
+*.zip
+.*
+!.github/workflows/
+!dist/
+src/
+public/

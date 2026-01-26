@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "slug": "azure-stack-hub",
+    "title": "Azure Stack Hub",
+    "subtitle": "Bridge the Gap Between Your Data Center and the Cloud",
+    "description": "The future isn't just cloud or on-premises - it's both. This course transforms you from someone who manages separate worlds into someone who creates seamless hybrid environments where Azure services run in your own data center. You'll master the technology that lets enterprises keep sensitive data on-premises while accessing cloud innovation - the skills that separate hybrid cloud architects from traditional IT administrators.",
+    "category": "Hybrid Cloud",
+    "level": "Advanced",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure Stack Hub", "Hybrid Cloud", "On-premises", "Azure Consistent", "Infrastructure", "Deployment"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) certification",
+      "Experience with Azure IaaS and PaaS services",
+      "Understanding of networking and storage concepts",
+      "Windows Server administration experience",
+      "PowerShell scripting knowledge",
+      "A vision for bridging traditional IT with cloud innovation"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-stack-hub-hero.jpg",
+    "badge": "Hybrid Cloud Architect",
+    "highlights": [
+      "Run Azure services in your own data center",
+      "Bridge legacy systems with cloud innovation",
+      "Maintain compliance while accessing cloud benefits",
+      "Become the expert who modernizes enterprise IT"
+    ]
+  },
+  "overview": {
+    "summary": "The most valuable IT professionals aren't those who choose sides in the cloud vs. on-premises debate - they're the ones who make both worlds work together seamlessly. This course teaches you the Azure Stack Hub skills that separate the hybrid cloud architects who enable digital transformation from those who get left behind. You'll learn to deploy Azure services in your data center, create consistent experiences across environments, and build solutions that respect regulatory requirements while delivering cloud benefits. By the end, you'll have the technical mastery to lead hybrid cloud initiatives and become the architect that enterprises depend on for their most critical workloads.",
+    "objectives": [
+      "Deploy Azure Stack Hub environments that mirror cloud capabilities",
+      "Create hybrid networking solutions that connect disparate environments",
+      "Implement Azure-consistent services in on-premises data centers",
+      "Design disconnected scenarios for air-gapped and regulated environments",
+      "Build monitoring and management systems for hybrid infrastructure",
+      "Architect update and lifecycle management for complex hybrid deployments",
+      "Develop security frameworks that protect hybrid cloud assets"
+    ],
+    "targetAudience": "This course is for the IT leaders ready to become hybrid cloud architects. Whether you're a data center administrator who wants to embrace cloud technologies, a cloud engineer who needs to understand on-premises constraints, or an enterprise architect who must balance innovation with compliance - if you want to build the bridge between traditional IT and cloud innovation, this course will give you the skills and mindset to become the hybrid cloud expert that modern enterprises desperately need."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Stack Hub Architecture and Deployment",
+      "description": "Understand Azure Stack Hub architecture and deployment options",
+      "duration": "6 hours",
+      "objectives": [
+        "Understand Azure Stack Hub architecture",
+        "Plan Azure Stack Hub deployment",
+        "Deploy Azure Stack Hub integrated systems",
+        "Configure Azure Stack Hub Development Kit",
+        "Understand licensing and support options",
+        "Plan for capacity and scaling"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Stack Hub Architecture</h3><p>Azure Stack Hub brings Azure services to your datacenter, providing consistent cloud capabilities whether connected to Azure or operating in disconnected environments.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Key Architecture Components",
+            "items": [
+              "Azure Resource Manager for consistent API",
+              "Azure-consistent IaaS and PaaS services",
+              "Marketplace for app deployment",
+              "Role-based access control (RBAC)",
+              "Azure Monitor integration",
+              "Azure Security Center integration"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure-stack/architecture.jpg",
+            "alt": "Azure Stack Hub Architecture",
+            "caption": "Azure Stack Hub system architecture and components"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Deployment Planning Lab",
+          "description": "Plan and prepare for Azure Stack Hub deployment",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Infrastructure Management",
+      "description": "Manage Azure Stack Hub infrastructure components",
+      "duration": "8 hours",
+      "objectives": [
+        "Manage physical and virtual infrastructure",
+        "Configure networking and storage",
+        "Implement backup and disaster recovery",
+        "Monitor infrastructure health",
+        "Perform maintenance operations",
+        "Troubleshoot infrastructure issues"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Infrastructure Management</h3><p>Learn to manage the underlying infrastructure that supports Azure Stack Hub, including hardware, networking, storage, and system health monitoring.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Infrastructure Components",
+            "items": [
+              "Physical server management",
+              "Network configuration and security",
+              "Storage subsystem management",
+              "Virtual machine management",
+              "System health monitoring",
+              "Capacity planning and optimization"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Infrastructure Management Lab",
+          "description": "Configure and manage Azure Stack Hub infrastructure",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Stack Hub Services and Marketplace",
+      "description": "Manage Azure services and marketplace in Azure Stack Hub",
+      "duration": "6 hours",
+      "objectives": [
+        "Deploy and manage IaaS services",
+        "Configure PaaS services",
+        "Manage marketplace items",
+        "Implement service quotas and limits",
+        "Configure Azure App Service",
+        "Deploy SQL and MySQL databases"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure Stack Hub provides many of the same services as Azure, allowing you to deploy familiar Azure resources in your datacenter environment.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Available Services",
+            "items": [
+              "Virtual Machines (IaaS)",
+              "Azure App Service (PaaS)",
+              "Azure SQL Database",
+              "Azure Storage",
+              "Azure Functions",
+              "Azure Kubernetes Service",
+              "Azure API Management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Services Deployment Lab",
+          "description": "Deploy and configure Azure services on Azure Stack Hub",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Hybrid Cloud Scenarios and Operations",
+      "description": "Implement hybrid cloud solutions and operational practices",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement hybrid networking",
+        "Configure hybrid identity",
+        "Manage connected and disconnected scenarios",
+        "Implement backup and disaster recovery",
+        "Plan for updates and patching",
+        "Monitor and troubleshoot operations"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Hybrid Cloud Operations</h3><p>Master the operational aspects of running Azure Stack Hub in hybrid environments, including connectivity, security, and lifecycle management.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Hybrid Scenarios",
+            "items": [
+              "Connected vs disconnected operations",
+              "Hybrid networking with ExpressRoute",
+              "Azure Arc integration",
+              "Multi-cloud management",
+              "Data sovereignty and compliance",
+              "Edge computing scenarios"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Hybrid Operations Lab",
+          "description": "Implement hybrid cloud scenarios and operations",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1800,
+    "discountedPrice": 1440,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Azure Stack Hub training materials",
+      "Hands-on lab access",
+      "Azure Stack Hub deployment guide",
+      "Infrastructure management toolkit",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure Stack Hub Specialist badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Infrastructure Architect",
+    "bio": "Yaïr is a Principal Cloud Infrastructure Architect specializing in hybrid cloud solutions. He has extensive experience deploying and managing Azure Stack Hub environments for enterprise customers across various industries.",
+    "certifications": [
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Stack Hub Operator",
+      "VMware Certified Professional (VCP)",
+      "Cisco Certified Network Professional (CCNP)",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-07-08",
+        "endDate": "2024-07-11",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Stack Hub Documentation",
+      "url": "https://learn.microsoft.com/en-us/azure-stack/",
+      "description": "Official Azure Stack Hub documentation and guides"
+    },
+    {
+      "type": "video",
+      "title": "Azure Stack Hub Training Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nD",
+      "description": "Video tutorials for Azure Stack Hub deployment and management"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Stack Hub Tools",
+      "url": "https://github.com/Azure/AzureStack-Tools",
+      "description": "PowerShell tools for Azure Stack Hub management"
+    },
+    {
+      "type": "practice",
+      "title": "Azure Stack Hub Labs",
+      "url": "https://learn.microsoft.com/en-us/azure-stack/asdk/",
+      "description": "Azure Stack Development Kit for hands-on practice"
+    }
+  ],
+  "certification": {
+    "name": "Azure Stack Hub Specialist Certification",
+    "code": "AZ-STACK-HUB",
+    "description": "Demonstrate expertise in deploying, managing, and operating Azure Stack Hub environments for hybrid cloud solutions",
+    "examDetails": {
+      "duration": "180 minutes",
+      "questions": 50,
+      "passingScore": 750,
+      "cost": 200,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Azure Stack Hub architecture and deployment (20-25%)",
+      "Infrastructure management (25-30%)",
+      "Azure services on Azure Stack Hub (20-25%)",
+      "Hybrid cloud scenarios and operations (20-25%)",
+      "Security and compliance (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need hardware for this course?",
+      "answer": "No, the course covers both physical deployment concepts and the Azure Stack Development Kit (ASDK) for hands-on practice without requiring physical hardware."
+    },
+    {
+      "question": "Is Azure Stack Hub the same as Azure?",
+      "answer": "Azure Stack Hub provides Azure-consistent services but runs on-premises. Some services may have different versions or limitations compared to Azure public cloud."
+    },
+    {
+      "question": "What PowerShell experience is required?",
+      "answer": "Basic PowerShell knowledge is required. The course covers Azure Stack Hub-specific PowerShell cmdlets and automation scripts."
+    },
+    {
+      "question": "Can Azure Stack Hub work offline?",
+      "answer": "Yes, Azure Stack Hub supports disconnected scenarios, though some features like marketplace syndication require internet connectivity."
+    }
+  ]
+}

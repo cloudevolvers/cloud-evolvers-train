@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 12">
+  <defs>
+    <clipPath id="uk">
+      <rect width="20" height="12"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#uk)">
+    <rect width="20" height="12" fill="#012169"/>
+    <path d="M0,0 L20,12 M20,0 L0,12" stroke="#FFFFFF" stroke-width="1.5"/>
+    <path d="M0,0 L20,12 M20,0 L0,12" stroke="#C8102E" stroke-width="0.8"/>
+    <path d="M10,0 L10,12 M0,6 L20,6" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M10,0 L10,12 M0,6 L20,6" stroke="#C8102E" stroke-width="1.2"/>
+  </g>
+</svg>

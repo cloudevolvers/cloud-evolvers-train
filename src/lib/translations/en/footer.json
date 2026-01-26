@@ -1,0 +1,22 @@
+{
+  "company": "Cloud Evolvers",
+  "description": "Expert-Led Azure Training & Certification Programs. Master Azure and Microsoft 365 with hands-on training from Microsoft Certified Trainers.",
+  "email": "Email:",
+  "quickLinks": "Quick Links",
+  "aboutUs": "About Us",
+  "blog": "Blog",
+  "contact": "Contact",
+  "trainingPrograms": "Training Programs",
+  "legal": "Legal",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "cookiePolicy": "Cookie Policy",
+  "poweredByXEvolve": "Powered by xEvolve Expertise",
+  "xEvolveDescription": "Cloud Evolvers is backed by xEvolve's deep Azure consulting experience and real-world project insights.",
+  "visitXEvolve": "Visit xEvolve for Full Azure Services",
+  "completeAzureServices": "Complete Azure management, monitoring, and optimization",
+  "rights": "All rights reserved.",
+  "madeInNetherlands": "Proudly made in the Netherlands.",
+  "copyright": "© {year} {company}. {rights}",
+  "builtOn": "Built on {date} at {time}"
+}

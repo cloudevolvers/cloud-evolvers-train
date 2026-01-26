@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "slug": "azure-solutions-architect-expert",
+    "title": "Azure Solutions Architect Expert",
+    "subtitle": "Become the Visionary Who Designs Tomorrow's Enterprises",
+    "description": "The world doesn't need more technicians - it needs architects who can see the future and build it. This course transforms you from someone who implements solutions into someone who designs the cloud architectures that power Fortune 500 companies. You'll master the strategic thinking and technical expertise that separate the Solutions Architects who lead digital transformations from those who just follow instructions.",
+    "category": "Cloud Architecture",
+    "level": "Advanced",
+    "duration": "5 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Architecture", "Cloud Computing", "Security", "Networking", "Infrastructure"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) or equivalent experience",
+      "Azure Developer Associate (AZ-204) recommended",
+      "Strong understanding of IT operations and Azure services",
+      "A visionary mindset ready to design systems that change how businesses operate"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-architect-hero.jpg",
+    "badge": "Enterprise Solutions Architect",
+    "highlights": [
+      "Design cloud architectures that power global enterprises",
+      "Lead digital transformation initiatives worth millions",
+      "Master the strategic thinking that C-level executives demand",
+      "Join the elite architects who shape the future of business"
+    ]
+  },
+  "overview": {
+    "summary": "Solutions Architects don't just build systems - they redefine what's possible. This course teaches you the Azure architecture skills that separate the technical leaders who drive innovation from those who maintain the status quo. You'll learn to design cloud solutions that transform businesses, create architectures that scale to millions of users, and implement strategies that deliver competitive advantages. By the end, you'll have the strategic vision and technical mastery to lead enterprise cloud transformations and become the Solutions Architect that boards of directors seek out.",
+    "objectives": [
+      "Design identity and governance frameworks that secure global enterprises",
+      "Architect data storage solutions that handle exabytes of information",
+      "Create business continuity solutions that guarantee 99.999% uptime",
+      "Design infrastructure solutions that automatically adapt to business needs",
+      "Architect migration strategies that minimize risk and maximize ROI",
+      "Develop security architectures that protect against nation-state threats",
+      "Create monitoring solutions that predict and prevent system failures"
+    ],
+    "targetAudience": "This course is for the visionaries ready to become enterprise architects. Whether you're an Azure administrator ready to move into strategic roles, a developer who wants to lead architectural decisions, or an IT leader who wants to master cloud transformation - if you want to design the systems that power the world's largest companies and lead the digital revolutions that define industries, this course will give you the strategic thinking and technical expertise to become the Solutions Architect that changes everything."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Design Identity and Security Solutions",
+      "description": "Design secure identity and access management solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Design Azure Active Directory solutions",
+        "Design authentication and authorization solutions",
+        "Design secure access solutions",
+        "Design governance solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Identity and Access Management</h3><p>Learn to design comprehensive identity solutions that meet enterprise security requirements while enabling seamless user experiences.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Security Design Principles",
+            "items": [
+              "Zero Trust architecture implementation",
+              "Multi-factor authentication design",
+              "Conditional access policies",
+              "Privileged identity management",
+              "Azure AD Connect and synchronization"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Identity Design Lab",
+          "description": "Design and implement Azure identity solutions",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Design Data Storage Solutions",
+      "description": "Design scalable and secure data storage architectures",
+      "duration": "8 hours",
+      "objectives": [
+        "Design Azure SQL Database solutions",
+        "Design Azure Cosmos DB solutions",
+        "Design Azure Storage solutions",
+        "Design data integration solutions",
+        "Design data analytics solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure offers various data storage options. Learn to design the right data architecture for different business requirements and data types.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/data-services.jpg",
+            "alt": "Azure Data Services",
+            "caption": "Azure SQL Database, Cosmos DB, Storage, and Analytics services"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Architecture Lab",
+          "description": "Design comprehensive data storage solutions",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Design Infrastructure Solutions",
+      "description": "Design Azure infrastructure for scalability and performance",
+      "duration": "8 hours",
+      "objectives": [
+        "Design Azure compute solutions",
+        "Design Azure networking solutions",
+        "Design Azure monitoring solutions",
+        "Design Azure migration solutions",
+        "Design hybrid solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Infrastructure Design Patterns</h3><p>Learn to design infrastructure that supports modern application architectures while maintaining cost efficiency and operational excellence.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Infrastructure Design Lab",
+          "description": "Design scalable Azure infrastructure solutions",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Design Business Continuity Solutions",
+      "description": "Design solutions for high availability and disaster recovery",
+      "duration": "6 hours",
+      "objectives": [
+        "Design backup and recovery solutions",
+        "Design high availability solutions",
+        "Design disaster recovery solutions",
+        "Design Azure Site Recovery solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Business continuity is critical for enterprise applications. Learn to design resilient solutions that minimize downtime and data loss.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Business Continuity Lab",
+          "description": "Design and implement business continuity solutions",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2200,
+    "discountedPrice": 1760,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-305 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure Solutions Architect Expert badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect",
+    "bio": "Yaïr is a Principal Cloud Architect with extensive experience in designing enterprise-scale Azure solutions. He has led numerous digital transformation projects and holds multiple Azure certifications.",
+    "certifications": [
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Developer Associate",
+      "AWS Certified Solutions Architect - Professional",
+      "Certified Kubernetes Administrator (CKA)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-04",
+        "endDate": "2024-03-08",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Solutions Architect Expert Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-solutions-architect-expert/",
+      "description": "Official Microsoft learning path for Azure Solutions Architects"
+    },
+    {
+      "type": "video",
+      "title": "Azure Architecture Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nGlrVx8XhVQ8gYQKQFNM",
+      "description": "Azure architecture design patterns and best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-305 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-305",
+      "description": "Official practice tests for AZ-305 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Architecture Center",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/",
+      "description": "Azure architecture guidance and reference architectures"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
+    "code": "AZ-305",
+    "description": "Demonstrate expertise in designing cloud and hybrid solutions that run on Microsoft Azure, including compute, network, storage, and security",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Design identity, governance, and monitoring solutions (25-30%)",
+      "Design data storage solutions (25-30%)",
+      "Design business continuity solutions (10-15%)",
+      "Design infrastructure solutions (25-30%)",
+      "Design migration solutions (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What are the prerequisites for this course?",
+      "answer": "You need AZ-104 (Azure Administrator Associate) certification or equivalent experience. AZ-204 (Azure Developer Associate) is highly recommended."
+    },
+    {
+      "question": "Is this course technical or strategic?",
+      "answer": "This course focuses on design and architecture decisions rather than implementation details. You'll learn to make strategic technology decisions."
+    },
+    {
+      "question": "What Azure services are covered?",
+      "answer": "You'll learn to design solutions using Azure AD, networking, storage, compute, monitoring, security, and migration services."
+    },
+    {
+      "question": "Do I need programming experience?",
+      "answer": "While programming experience is helpful, this course focuses on architecture design rather than coding. Understanding of IT operations is more important."
+    }
+  ]
+}

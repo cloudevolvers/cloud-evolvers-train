@@ -1,0 +1,226 @@
+{
+  "id": "azure-iot-developer",
+  "slug": "azure-iot-developer",
+  "title": "Azure IoT Developer Specialty (AZ-220)",
+  "description": "Develop solutions for Azure IoT services and edge devices",
+  "content": "Master Azure IoT solutions development with comprehensive training on IoT Hub, Edge computing, device management, and data processing. Build enterprise-ready IoT solutions with security and optimization best practices.",
+  "category": "AI & Machine Learning",
+  "subcategory": "IoT",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "prerequisites": [
+    "Software development experience",
+    "Understanding of Azure services",
+    "Knowledge of networking and security concepts",
+    "Experience with programming languages (C#, JavaScript, Python, etc.)"
+  ],
+  "learningObjectives": [
+    {
+      "id": "setup-iot-infrastructure",
+      "title": "Set up the IoT solution infrastructure",
+      "description": "Set up and configure IoT solution infrastructure",
+      "icon": "Lightning"
+    },
+    {
+      "id": "provision-manage-devices",
+      "title": "Provision and manage devices",
+      "description": "Provision and manage IoT devices effectively",
+      "icon": "Cpu"
+    },
+    {
+      "id": "implement-iot-edge",
+      "title": "Implement IoT Edge",
+      "description": "Implement Azure IoT Edge solutions",
+      "icon": "Server"
+    },
+    {
+      "id": "process-manage-data",
+      "title": "Process and manage data",
+      "description": "Process and manage IoT data streams",
+      "icon": "Database"
+    },
+    {
+      "id": "monitor-troubleshoot",
+      "title": "Monitor, troubleshoot, and optimize IoT solutions",
+      "description": "Monitor and optimize IoT solutions performance",
+      "icon": "BarChart"
+    },
+    {
+      "id": "implement-security",
+      "title": "Implement security for IoT solutions",
+      "description": "Implement security best practices for IoT",
+      "icon": "Shield"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced IoT developer with 10+ years in embedded systems, cloud solutions, and edge computing.",
+    "expertise": [
+      "Azure IoT Hub",
+      "IoT Edge",
+      "Device Management",
+      "Stream Processing"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-220",
+      "AZ-104",
+      "AZ-900"
+    ]
+  },
+  "price": {
+    "amount": 1895,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "IoT",
+    "AZ-220",
+    "Edge Computing"
+  ],
+  "featured": false,
+  "certification": {
+    "available": true,
+    "name": "AZ-220",
+    "examCode": "AZ-220",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "icon": "Cpu",
+  "overview": "Master Azure IoT solutions development with comprehensive training on IoT Hub, Edge computing, device management, and data processing. Build enterprise-ready IoT solutions with security and optimization best practices.",
+  "whatYouWillLearn": [
+    {
+      "title": "IoT Solution Infrastructure",
+      "description": "Create IoT hubs, register devices, configure IoT Edge, and set up file uploads"
+    },
+    {
+      "title": "Device Management",
+      "description": "Device provisioning service, lifecycle management, IoT Hub operations, and device communication"
+    },
+    {
+      "title": "IoT Edge Implementation",
+      "description": "Deploy IoT Edge devices, develop modules, configure offline support, and implement security"
+    },
+    {
+      "title": "Data Processing & Security",
+      "description": "Message routing, stream processing, data storage, Time Series Insights, and monitoring"
+    }
+  ],
+  "modules": [
+    {
+      "id": "iot-infrastructure",
+      "title": "IoT Solution Infrastructure",
+      "description": "Set up the IoT solution infrastructure",
+      "icon": "Lightning",
+      "duration": "8 hours",
+      "topics": [
+        "Create and configure an IoT hub",
+        "Register devices",
+        "Configure devices and IoT Edge",
+        "Configure file upload"
+      ]
+    },
+    {
+      "id": "device-management",
+      "title": "Device Management",
+      "description": "Provision and manage devices",
+      "icon": "Cpu",
+      "duration": "8 hours",
+      "topics": [
+        "Set up device provisioning service",
+        "Manage device lifecycle",
+        "Manage IoT devices by using IoT Hub",
+        "Build IoT device communication"
+      ]
+    },
+    {
+      "id": "iot-edge",
+      "title": "IoT Edge Implementation",
+      "description": "Implement IoT Edge solutions",
+      "icon": "Server",
+      "duration": "8 hours",
+      "topics": [
+        "Set up and deploy an IoT Edge device",
+        "Develop IoT Edge modules",
+        "Configure offline support",
+        "Implement security for IoT Edge devices"
+      ]
+    },
+    {
+      "id": "data-processing",
+      "title": "Data Processing & Security",
+      "description": "Process and manage data with security",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Configure message routing in Azure IoT Hub",
+        "Configure stream processing",
+        "Configure data storage and Time Series Insights",
+        "Monitor and optimize IoT solutions"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "iot-hub-setup",
+      "title": "IoT Hub Configuration",
+      "description": "Create and configure Azure IoT Hub for device management",
+      "icon": "Lightning",
+      "duration": "2 hours"
+    },
+    {
+      "id": "device-provisioning",
+      "title": "Device Provisioning Service",
+      "description": "Set up and configure Device Provisioning Service for automated device registration",
+      "icon": "Cpu",
+      "duration": "2 hours"
+    },
+    {
+      "id": "iot-edge-deployment",
+      "title": "IoT Edge Module Development",
+      "description": "Develop and deploy custom IoT Edge modules",
+      "icon": "Server",
+      "duration": "3 hours"
+    },
+    {
+      "id": "stream-processing",
+      "title": "Stream Analytics Configuration",
+      "description": "Configure stream processing for IoT data with Azure Stream Analytics",
+      "icon": "Zap",
+      "duration": "2 hours"
+    },
+    {
+      "id": "security-monitoring",
+      "title": "IoT Security & Monitoring",
+      "description": "Implement security measures and monitoring for IoT solutions",
+      "icon": "Shield",
+      "duration": "1.5 hours"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "4 days intensive",
+    "groupSize": "Max 12 participants",
+    "certification": "AZ-220 Specialty preparation"
+  },
+  "targetAudience": [
+    "IoT developers",
+    "Solution architects focusing on IoT",
+    "Embedded systems developers",
+    "Cloud developers working with IoT"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As a developer who has built dozens of cloud-native applications on Azure, I've made every mistake in the book—and learned from them. From serverless architectures to containerized workloads, I'll show you the development patterns that lead to maintainable, scalable applications. This isn't theory; it's what works in production."
+  }
+}

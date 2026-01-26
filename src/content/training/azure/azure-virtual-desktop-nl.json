@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "slug": "azure-virtual-desktop",
+    "title": "Azure Virtual Desktop Specialty",
+    "subtitle": "Ontgrendel Vrijheid: Werk overal, Altijd",
+    "description": "Word de architect van werkplek vrijheid. Beheers Azure Virtual Desktop en bevrijd je organisatie van de beperkingen van traditionele kantooropstellingen. Creëer flexibele, veilige werkomgevingen die mensen empoweren om overal te werken.",
+    "category": "Virtual Desktop Infrastructure",
+    "level": "Intermediate",
+    "duration": "4 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Virtual Desktop", "VDI", "Windows 365", "Remote Desktop", "Cloud Computing"],
+    "prerequisites": [
+      "Azure Fundamentals kennis (AZ-900)",
+      "Windows Server administratie ervaring",
+      "Begrip van virtualisatie concepten",
+      "Basis kennis van netwerken en beveiliging"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-vdi-hero.jpg",
+    "badge": "Vrijheid Architect",
+    "highlights": [
+      "Bevrijd je workforce van kantoor beperkingen",
+      "Creëer veilige remote werkomgevingen",
+      "Beheers de toekomst van flexibele werkplekken",
+      "Word de held van work-life balance"
+    ]
+  },
+  "overview": {
+    "summary": "Stel je een wereld voor waar je team overal kan werken - strand, bergchalet, of hun favoriete koffietentje. Word de architect die deze visie werkelijkheid maakt. Beheers Azure Virtual Desktop en transformeer hoe je organisatie werk benadert, door mensen de vrijheid te geven die ze verdienen terwijl enterprise-grade beveiliging en performance behouden blijft.",
+    "objectives": [
+      "Word de architect van werkplek vrijheid en flexibiliteit",
+      "Beheers het ontwerp van veilige, schaalbare virtuele desktop omgevingen",
+      "Leer werk ervaringen te creëren die zich aanpassen aan mensenlevens",
+      "Ontwikkel expertise in het beheren van gedistribueerde workforces",
+      "Bouw de skills om future-ready workspace oplossingen te implementeren",
+      "Transformeer traditionele kantoor beperkingen in kansen voor groei"
+    ],
+    "targetAudience": "Visionaire IT professionals klaar om hun organisaties te bevrijden van verouderde werkmodellen. Degenen die de toekomst van werk zien en de architecten willen zijn die het laten gebeuren."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Vrijheid Ontwerpen: Virtual Desktop Architectuur",
+      "description": "Architect werkplekken die bevrijden in plaats van beperken",
+      "duration": "6 uur",
+      "objectives": [
+        "Ontwerp virtuele omgevingen die mensen empoweren",
+        "Plan schaalbare oplossingen voor gedistribueerde workforces",
+        "Creëer veilige fundamenten voor remote werk vrijheid",
+        "Architect disaster recovery die productiviteit beschermt",
+        "Ontwerp gebruikerservaringen die zich aanpassen aan leven",
+        "Bouw infrastructuur die work-life balance ondersteunt"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Het Vrijheid Framework</h3><p>Stop met denken over virtuele desktops als technische infrastructuur. Begin ze te zien als de fundering van werkplek vrijheid. Leer omgevingen te ontwerpen die mensen de kracht geven om te werken waar en wanneer ze hun beste werk doen.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Vrijheid Bouwstenen",
+            "items": [
+              "Host pools die schalen met je gedistribueerde workforce",
+              "Session hosts die consistente ervaringen overal leveren",
+              "Workspaces die productiviteit organiseren, niet alleen applicaties",
+              "FSLogix profielen die gebruikers volgen als trouwe metgezellen",
+              "Veilige netwerken die vrijheid beschermen, niet beperken"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Vrijheid Architectuur Workshop",
+          "description": "Ontwerp virtuele desktop omgevingen die workforce vrijheid en productiviteit maximaliseren",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "De Toekomst van Werk Deployen",
+      "description": "Bouw de infrastructuur die remote werk moeiteloos maakt",
+      "duration": "8 uur",
+      "objectives": [
+        "Deploy omgevingen die voelen als natuurlijke extensies van het kantoor",
+        "Configureer host pools die zich aanpassen aan veranderende workforce behoeften",
+        "Stel session hosts in die consistente ervaringen overal leveren",
+        "Implementeer FSLogix voor naadloze gebruikersprofiel portabiliteit",
+        "Configureer clients die even goed werken als lokale machines",
+        "Creëer deployment strategieën die schalen met je visie"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Van Concept naar Werkelijkheid</h3><p>Transformeer je visie van moderne werkplekken in concrete, werkende oplossingen. Leer Azure Virtual Desktop omgevingen te deployen die niet alleen technisch excellent zijn, maar ook de manier veranderen waarop mensen werken.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Deployment Strategieën",
+            "items": [
+              "Stapsgewijze implementatie voor minimale verstoring",
+              "Pilot programma's om vertrouwen op te bouwen",
+              "Change management voor workforce adoptie",
+              "Security-first aanpak voor enterprise readiness",
+              "Scalability planning voor toekomstige groei",
+              "Monitoring en optimization voor continue verbetering"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Live Deployment Challenge",
+          "description": "Deploy een complete Azure Virtual Desktop omgeving van scratch",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Beveiliging en Toegangsbeheer",
+      "description": "Bescherm vrijheid zonder grenzen te stellen",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer zero-trust security voor remote work",
+        "Configureer conditional access die vrijheid mogelijk maakt",
+        "Beheer identiteiten in gedistribueerde omgevingen",
+        "Monitor en reageer op security threats",
+        "Balance security requirements met user experience",
+        "Ontwikkel incident response voor remote scenarios"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Security als Enabler</h3><p>In een wereld van remote werk is security niet langer een obstakel - het is de enabler van vrijheid. Leer security te implementeren die mensen beschermt terwijl het hun vermogen om overal te werken vergroot.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Security First Principes",
+            "items": [
+              "Multi-factor authenticatie voor alle toegang",
+              "Just-in-time access voor minimale exposure",
+              "Device compliance checking voor enterprise devices",
+              "Network segmentation voor secure isolation",
+              "Continuous monitoring voor threat detection",
+              "Automated response voor incident handling"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Hardening Lab",
+          "description": "Implementeer enterprise-grade security in je virtual desktop omgeving",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "tiers": [
+      {
+        "name": "Individual",
+        "price": 1899,
+        "originalPrice": 2299,
+        "features": [
+          "4-day intensive training",
+          "Digital course materials",
+          "Practice labs access",
+          "AZ-140 certification preparation",
+          "Certificate of completion",
+          "30-day post-training support"
+        ]
+      },
+      {
+        "name": "Team (5+ people)",
+        "price": 1599,
+        "perPerson": true,
+        "features": [
+          "Everything in Individual",
+          "Group discounts applied",
+          "Team collaboration sessions",
+          "Customized learning paths",
+          "Priority support access"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "features": [
+          "Everything in Team",
+          "On-site delivery option",
+          "Custom curriculum development",
+          "Dedicated success manager",
+          "Unlimited post-training support"
+        ]
+      }
+    ]
+  },
+  "certification": {
+    "badge": "Freedom Architect Certified",
+    "description": "Upon completion, receive your Azure Virtual Desktop certification, validating your expertise in designing and implementing workspaces that liberate rather than constrain.",
+    "benefits": [
+      "Industry-recognized certification",
+      "Professional credibility as a freedom architect",
+      "Career advancement in modern workplace design",
+      "Access to cutting-edge remote work opportunities",
+      "Community of forward-thinking IT professionals"
+  ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Virtual Desktop Solutions Architect",
+    "bio": "Yaïr is a Virtual Desktop Solutions Architect specializing in modern workplace solutions. He has extensive experience implementing VDI solutions for large enterprises using Azure and other cloud platforms.",
+    "certifications": [
+      "Microsoft Certified: Azure Virtual Desktop Specialty",
+      "Microsoft Certified: Windows Server Hybrid Administrator",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Citrix Certified Associate (CCA)",
+      "VMware Certified Professional (VCP)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-22",
+        "endDate": "2024-04-25",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  }
+}

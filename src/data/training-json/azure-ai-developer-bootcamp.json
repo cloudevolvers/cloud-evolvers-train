@@ -1,0 +1,210 @@
+{
+  "id": "azure-ai-developer-bootcamp",
+  "slug": "azure-ai-developer-bootcamp",
+  "title": "Azure AI Developer Bootcamp",
+  "subtitle": "Build Intelligent Applications with Azure AI",
+  "description": "Intensive hands-on training for building AI solutions with Azure Cognitive Services",
+  "overview": "Intensive bootcamp for developers looking to build sophisticated AI solutions using Azure Cognitive Services, Machine Learning, and AI services. Focus on practical implementation and real-world scenarios.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Development",
+  "difficulty": "Advanced",
+  "tags": [
+    "Azure",
+    "AI",
+    "Machine Learning",
+    "Cognitive Services",
+    "Computer Vision",
+    "NLP"
+  ],
+  "duration": {
+    "days": 3,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1395,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "cognitive-services",
+      "title": "Azure Cognitive Services Integration",
+      "description": "Build intelligent applications using Azure Cognitive Services APIs and SDKs",
+      "icon": "Brain"
+    },
+    {
+      "id": "computer-vision",
+      "title": "Computer Vision Solutions",
+      "description": "Implement image analysis, object detection, OCR, and custom vision models",
+      "icon": "Eye"
+    },
+    {
+      "id": "language-processing",
+      "title": "Natural Language Processing",
+      "description": "Create solutions for text analytics, sentiment analysis, and language understanding",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "conversational-ai",
+      "title": "Conversational AI and Bots",
+      "description": "Build chatbots and conversational interfaces using Azure Bot Service",
+      "icon": "Bot"
+    },
+    {
+      "id": "ai-deployment",
+      "title": "AI Model Deployment",
+      "description": "Deploy and manage AI models in production environments",
+      "icon": "Rocket"
+    }
+  ],
+  "modules": [
+    {
+      "id": "cognitive-services-overview",
+      "title": "Azure Cognitive Services Overview",
+      "description": "Learn the fundamentals of Azure Cognitive Services architecture and integration",
+      "icon": "Brain",
+      "duration": "4 hours",
+      "topics": [
+        "Cognitive Services architecture",
+        "Service authentication and security",
+        "SDK and REST API integration",
+        "Multi-service resource management",
+        "Cost optimization strategies"
+      ]
+    },
+    {
+      "id": "computer-vision-solutions",
+      "title": "Computer Vision Solutions",
+      "description": "Implement computer vision capabilities in applications",
+      "icon": "Eye",
+      "duration": "6 hours",
+      "topics": [
+        "Image analysis and classification",
+        "Object detection and recognition",
+        "Optical Character Recognition (OCR)",
+        "Face detection and verification",
+        "Custom Vision model training"
+      ]
+    },
+    {
+      "id": "language-speech-processing",
+      "title": "Language and Speech Processing",
+      "description": "Work with natural language and speech services",
+      "icon": "MessageSquare",
+      "duration": "6 hours",
+      "topics": [
+        "Text analytics and sentiment analysis",
+        "Language understanding (LUIS)",
+        "Speech-to-text and text-to-speech",
+        "Translation services",
+        "Custom language models"
+      ]
+    },
+    {
+      "id": "conversational-ai-bots",
+      "title": "Conversational AI and Bots",
+      "description": "Create conversational interfaces and chatbots",
+      "icon": "Bot",
+      "duration": "6 hours",
+      "topics": [
+        "Bot Framework and Azure Bot Service",
+        "QnA Maker integration",
+        "Multi-channel deployment",
+        "Advanced conversation flows",
+        "Bot analytics and optimization"
+      ]
+    },
+    {
+      "id": "production-deployment",
+      "title": "Production Deployment",
+      "description": "Deploy AI solutions to production environments",
+      "icon": "Rocket",
+      "duration": "4 hours",
+      "topics": [
+        "Container deployment strategies",
+        "Monitoring and logging",
+        "Performance optimization",
+        "A/B testing for AI models",
+        "Continuous integration for AI"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "vision-lab",
+      "title": "Computer Vision Implementation",
+      "description": "Build an image analysis application using Azure Computer Vision",
+      "duration": "3 hours",
+      "icon": "Eye"
+    },
+    {
+      "id": "nlp-lab",
+      "title": "Natural Language Processing",
+      "description": "Create a text analysis solution using Azure Text Analytics",
+      "duration": "3 hours",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "bot-lab",
+      "title": "Chatbot Development",
+      "description": "Build and deploy a chatbot using Azure Bot Service",
+      "duration": "3 hours",
+      "icon": "Bot"
+    },
+    {
+      "id": "custom-vision-lab",
+      "title": "Custom Vision Model",
+      "description": "Train and deploy a custom computer vision model",
+      "duration": "3 hours",
+      "icon": "Brain"
+    }
+  ],
+  "prerequisites": [
+    "Programming experience (C#, Python, or JavaScript)",
+    "Basic understanding of machine learning concepts",
+    "Familiarity with Azure services",
+    "Experience with REST APIs"
+  ],
+  "targetAudience": [
+    "Software Developers",
+    "AI/ML Engineers",
+    "Solution Architects",
+    "Data Scientists moving to cloud"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "PhD in Computer Science with 10+ years of experience in AI and machine learning. Microsoft MVP specializing in Azure AI services and cognitive computing solutions.",
+    "expertise": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Azure Cognitive Services"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure AI Engineer Associate",
+      "Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer"
+    ]
+  },
+  "certification": {
+    "available": false,
+    "name": "",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-02-01"
+  },
+  "featured": true,
+  "icon": "Brain",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As a developer who has built dozens of cloud-native applications on Azure, I've made every mistake in the book—and learned from them. From serverless architectures to containerized workloads, I'll show you the development patterns that lead to maintainable, scalable applications. This isn't theory; it's what works in production."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "id": "azure-fundamentals-nl",
+  "slug": "azure-fundamentals",
+  "title": "Azure Fundamentals (AZ-900)",
+  "description": "Bouw fundamentele kennis van Azure cloud services en kernconcepten",
+  "content": "Uitgebreide fundamenten training die Azure kernservices, beveiliging, privacy, compliance en prijsstelling omvat.",
+  "category": "Azure",
+  "subcategory": "Fundamentals",
+  "difficulty": "Beginner",
+  "duration": {
+    "days": 2,
+    "format": "dagen"
+  },
+  "prerequisites": [
+    "Basiskennis van computerconcepten"
+  ],
+  "learningObjectives": [
+    {
+      "id": "cloud-concepts",
+      "title": "Cloud Computing Concepten",
+      "description": "Begrijp cloud computing principes, implementatiemodellen en servicetypes",
+      "icon": "Cloud"
+    },
+    {
+      "id": "azure-services",
+      "title": "Azure Kernservices",
+      "description": "Beschrijf Azure kernservices inclusief compute, netwerken, opslag en databases",
+      "icon": "Server"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Beveiliging & Compliance",
+      "description": "Beschrijf Azure beveiliging, privacy, compliance en vertrouwensfuncties",
+      "icon": "Shield"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Ervaren Microsoft Certified Trainer gespecialiseerd in Azure cloud technologieën en oplossingsarchitectuur.",
+    "expertise": [
+      "Azure Fundamentals",
+      "Cloud Computing",
+      "Azure Solutions"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified Trainer",
+      "Azure Solutions Architect Expert"
+    ]
+  },
+  "price": {
+    "amount": 795,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-01-15"
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Cloud Concepten",
+      "description": "Introductie tot cloud computing, voordelen en servicemodellen",
+      "duration": "2 uur",
+      "topics": [
+        "Wat is cloud computing?",
+        "Voordelen van cloud services",
+        "Cloud servicemodellen (IaaS, PaaS, SaaS)",
+        "Cloud implementatiemodellen"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Kernservices",
+      "description": "Overzicht van Azure compute, netwerk, opslag en database services",
+      "duration": "4 uur",
+      "topics": [
+        "Azure compute services",
+        "Azure netwerk services",
+        "Azure opslag services",
+        "Azure database services"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Beveiliging & Compliance",
+      "description": "Azure beveiliging, privacy en compliance functies",
+      "duration": "2 uur",
+      "topics": [
+        "Azure beveiligingscentrum",
+        "Azure identiteit en toegang",
+        "Azure privacy en compliance",
+        "Azure service level agreements"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Azure Portal Verkenning",
+      "description": "Verken de Azure portal en maak je eerste resources aan",
+      "duration": "1 uur",
+      "icon": "Desktop"
+    },
+    {
+      "id": "lab-2",
+      "title": "Virtual Machine Aanmaken",
+      "description": "Maak en configureer een Azure virtual machine",
+      "duration": "1 uur",
+      "icon": "Server"
+    },
+    {
+      "id": "lab-3",
+      "title": "Storage Account Configuratie",
+      "description": "Stel een Azure storage account in en beheer data",
+      "duration": "1 uur",
+      "icon": "Database"
+    }
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Azure Fundamentals",
+    "examCode": "AZ-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 15,
+  "featured": true,
+  "icon": "Cloud",
+  "tags": [
+    "Azure",
+    "Fundamentals",
+    "Cloud",
+    "Beginner"
+  ],
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Als iemand die met honderden professionals heeft samengewerkt in Azure, heb ik uit eerste hand gezien hoe de juiste basis het verschil maakt. Ik herinner me dat ik werkte met een team van traditionele infrastructuurengineers die sceptisch waren over de cloud. Na deze training migreerden ze met succes hun eerste workloads naar Azure en werden ze cloud-voorstanders. Deze cursus bevat alles wat ik zou willen weten toen ik met Azure begon."
+  }
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "api-dashboard-platform",
+    "title": "Real-Time API Dashboard Platform",
+    "description": "Production-ready Azure Monitor integration with KQL queries, real-time health checks, and comprehensive performance analytics. Built with Next.js 15 and Azure SDK.",
+    "image": "/showcase/api-dashboard.png",
+    "icon": "api",
+    "category": "platform",
+    "url": "/showcase/api-dashboard-platform",
+    "features": ["Azure Monitor integration", "KQL analytics", "Real-time health checks", "Performance insights"],
+    "businessValue": {
+      "apiMonitoring": "Real-time",
+      "healthChecks": "Automated",
+      "performanceInsights": "Live data",
+      "azureIntegration": "Native SDK"
+    },
+    "createdAt": "2025-06-19T10:00:00.000Z",
+    "updatedAt": "2025-06-19T10:00:00.000Z",
+    "order": 1
+  },
+  {
+    "id": "file-management-system",
+    "title": "Enterprise File Management System",
+    "description": "Full-stack file transfer system with Azure Storage integration, real-time monitoring, and multi-protocol support. Handles local uploads, remote transfers, and Azure Blob/File Share operations.",
+    "image": "/showcase/file-transfer.png",
+    "icon": "file-transfer",
+    "category": "file-management",
+    "url": "/showcase/file-management-system",
+    "features": ["Azure Storage integration", "Real-time transfers", "Multi-protocol support", "Progress monitoring"],
+    "businessValue": {
+      "storageTypes": "Blob + File Share",
+      "transferMethods": "Local + Remote",
+      "monitoring": "Real-time progress",
+      "scalability": "Enterprise-ready"
+    },
+    "createdAt": "2025-06-19T10:00:00.000Z",
+    "updatedAt": "2025-06-19T10:00:00.000Z",
+    "order": 2
+  },
+  {
+    "id": "admin-control-panel",
+    "title": "Unified Admin Control Panel",
+    "description": "Comprehensive administrative interface with user management, API configuration, environment settings, and cost monitoring. Built with role-based access control and audit logging.",
+    "image": "/showcase/admin-dashboard.png",
+    "icon": "dashboard",
+    "category": "administration",
+    "url": "/showcase/admin-control-panel",
+    "features": ["User management", "API configuration", "Environment control", "Cost monitoring"],
+    "businessValue": {
+      "userManagement": "RBAC system",
+      "apiConfig": "Dynamic setup",
+      "monitoring": "Real-time costs",
+      "audit": "Complete logging"
+    },
+    "createdAt": "2025-06-19T10:00:00.000Z",
+    "updatedAt": "2025-06-19T10:00:00.000Z",
+    "order": 3
+  },
+  {
+    "id": "azure-infrastructure-monitoring",
+    "title": "Azure Infrastructure Monitoring",
+    "description": "Native Azure resource monitoring with Application Gateway, API Management, and Cosmos DB integration. Features real-time status indicators and comprehensive health diagnostics.",
+    "image": "/showcase/azure-storage.png",
+    "icon": "cloud-storage",
+    "category": "platform",
+    "url": "/showcase/azure-infrastructure-monitoring",
+    "features": ["Native Azure SDK", "Multi-service monitoring", "Health diagnostics", "Resource discovery"],
+    "businessValue": {
+      "services": "App Gateway + APIM + Cosmos",
+      "monitoring": "24/7 automated",
+      "integration": "Native Azure SDK",
+      "discovery": "Auto-detection"
+    },
+    "createdAt": "2025-06-19T10:00:00.000Z",
+    "updatedAt": "2025-06-19T10:00:00.000Z",
+    "order": 4
+  }
+]

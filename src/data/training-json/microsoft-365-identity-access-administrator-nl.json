@@ -1,0 +1,194 @@
+{
+  "id": "microsoft-365-identity-access-administrator-nl",
+  "slug": "microsoft-365-identity-access-administrator",
+  "title": "Microsoft 365 Identity & Access Administrator",
+  "subtitle": "Geavanceerd Identiteitsbeheer",
+  "description": "Beheers identiteit en toegangsbeheer in Microsoft 365 en Azure AD omgevingen",
+  "overview": "Deze geavanceerde 3-daagse cursus behandelt uitgebreid identiteit en toegangsbeheer in Microsoft 365 en Azure AD. Leer veilige identiteitsarchitecturen te ontwerpen, geavanceerde authenticatie oplossingen te implementeren en complexe hybride identiteitsscenario's te beheren.",
+  "category": "Microsoft 365",
+  "subcategory": "Identiteit & Toegang",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1195,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "IdentificationCard",
+  "learningObjectives": [
+    {
+      "id": "identity-architecture",
+      "title": "Ontwerp uitgebreide identiteitsarchitectuur",
+      "description": "Ontwerp schaalbare en veilige identiteitsarchitecturen voor enterprise omgevingen",
+      "icon": "IdentificationCard"
+    },
+    {
+      "id": "advanced-authentication",
+      "title": "Implementeer geavanceerde authenticatie oplossingen",
+      "description": "Configureer geavanceerde authenticatie methoden inclusief MFA en passwordless oplossingen",
+      "icon": "Key"
+    },
+    {
+      "id": "identity-governance",
+      "title": "Configureer identity governance frameworks",
+      "description": "Implementeer identity governance, lifecycle management en access reviews",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "hybrid-identity",
+      "title": "Beheer hybride identiteitsscenario's",
+      "description": "Configureer en beheer hybride identiteitsoplossingen met Azure AD Connect",
+      "icon": "UserCircle"
+    },
+    {
+      "id": "privileged-access",
+      "title": "Beveilig privileged access management",
+      "description": "Implementeer privileged access management en just-in-time toegangscontroles",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "identity-monitoring",
+      "title": "Monitor en audit identiteitsactiviteiten",
+      "description": "Configureer identiteitsmonitoring, auditing en compliance rapportage",
+      "icon": "UserCircle"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 fundamentals kennis",
+    "Azure Active Directory ervaring",
+    "Begrip van identiteitsconcepten",
+    "Basis PowerShell kennis"
+  ],
+  "targetAudience": [
+    "Identiteit en toegang administrators",
+    "Security architecten en engineers",
+    "Microsoft 365 administrators",
+    "IT infrastructuur professionals"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Identity and Access Administrator Associate",
+    "examCode": "SC-300",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft 365",
+    "Identiteit",
+    "Azure AD",
+    "Beveiliging",
+    "Toegangsbeheer"
+  ],
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-10T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior identiteit en toegangsbeheer specialist met uitgebreide ervaring in enterprise identiteitsoplossingen",
+    "experience": "10+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-300",
+      "SC-900",
+      "MS-500",
+      "AZ-104"
+    ]
+  },
+  "modules": [
+    {
+      "id": "identity-architecture-design",
+      "title": "Identiteitsarchitectuur Ontwerp",
+      "description": "Ontwerp uitgebreide identiteitsarchitecturen",
+      "duration": "6 uur",
+      "topics": [
+        "Azure AD architectuur planning",
+        "Multi-tenant identiteitsstrategieën",
+        "Identity governance frameworks",
+        "Directory synchronisatie planning"
+      ],
+      "icon": "IdentificationCard"
+    },
+    {
+      "id": "authentication-authorization",
+      "title": "Authenticatie & Autorisatie",
+      "description": "Implementeer geavanceerde authenticatie en autorisatie",
+      "duration": "6 uur",
+      "topics": [
+        "Geavanceerde MFA configuraties",
+        "Conditional Access policies",
+        "Passwordless authenticatie",
+        "Identity protection features"
+      ],
+      "icon": "Key"
+    },
+    {
+      "id": "privileged-access-management",
+      "title": "Privileged Access Management",
+      "description": "Beveilig privileged access en identiteitsbeheer",
+      "duration": "6 uur",
+      "topics": [
+        "Azure AD Privileged Identity Management",
+        "Just-in-time toegangscontroles",
+        "Access reviews en certificeringen",
+        "Emergency access procedures"
+      ],
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "identity-lifecycle-management",
+      "title": "Identiteit Lifecycle Management",
+      "description": "Beheer identiteit lifecycle en entitlements",
+      "duration": "6 uur",
+      "topics": [
+        "Geautomatiseerde gebruiker provisioning",
+        "Entitlement management",
+        "Guest gebruiker beheer",
+        "Identiteitsmonitoring en rapportage"
+      ],
+      "icon": "UserCircle"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "azure-ad-architecture-lab",
+      "title": "Azure AD Architectuur Ontwerp",
+      "description": "Ontwerp en implementeer Azure AD architectuur voor enterprise scenario's",
+      "duration": "3 uur",
+      "icon": "IdentificationCard"
+    },
+    {
+      "id": "conditional-access-lab",
+      "title": "Conditional Access Policies",
+      "description": "Configureer geavanceerde conditional access policies en MFA",
+      "duration": "3 uur",
+      "icon": "Key"
+    },
+    {
+      "id": "privileged-identity-lab",
+      "title": "Privileged Identity Management",
+      "description": "Implementeer Azure AD Privileged Identity Management",
+      "duration": "3 uur",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "hybrid-identity-lab",
+      "title": "Hybride Identiteit Configuratie",
+      "description": "Configureer Azure AD Connect en hybride identiteitsoplossingen",
+      "duration": "3 uur",
+      "icon": "UserCircle"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Het beheren van Azure op enterprise-schaal vereist meer dan alleen technische kennis—het vereist beproefde strategieën. Ik heb Azure-omgevingen beheerd voor organisaties met duizenden gebruikers, en ik heb geleerd wat wel en niet werkt. In deze training deel ik de praktijkgerichte beheerpatronen die talloze uren hebben bespaard en kritieke problemen hebben voorkomen."
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "id": "azure-security-fundamentals",
+  "slug": "azure-security-fundamentals",
+  "title": "Azure Security Fundamentals",
+  "subtitle": "Foundation in Azure Security",
+  "description": "Master the fundamental security concepts and services in Microsoft Azure",
+  "overview": "This comprehensive 2-day course covers the essential security concepts and services in Microsoft Azure. Learn to implement identity management, network security, data protection, and monitoring solutions to secure your Azure environment.",
+  "category": "Security",
+  "subcategory": "Azure Security",
+  "difficulty": "Beginner",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 795,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "security-architecture",
+      "title": "Understand Azure security architecture",
+      "description": "Learn Azure security principles, frameworks, and architectural concepts",
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-access",
+      "title": "Implement identity and access management",
+      "description": "Configure Azure AD, MFA, conditional access, and RBAC",
+      "icon": "Lock"
+    },
+    {
+      "id": "network-security",
+      "title": "Configure network security controls",
+      "description": "Implement network security groups, firewalls, and secure connectivity",
+      "icon": "Eye"
+    },
+    {
+      "id": "data-protection",
+      "title": "Apply data protection mechanisms",
+      "description": "Implement encryption, key management, and data security controls",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "monitoring-audit",
+      "title": "Monitor and audit security events",
+      "description": "Configure Azure Security Center and monitoring solutions",
+      "icon": "Eye"
+    },
+    {
+      "id": "incident-response",
+      "title": "Respond to security incidents effectively",
+      "description": "Learn incident response procedures and Azure Sentinel basics",
+      "icon": "ShieldCheck"
+    }
+  ],
+  "prerequisites": [
+    "Basic Azure fundamentals knowledge",
+    "Understanding of networking concepts",
+    "Familiarity with cloud computing principles",
+    "Basic knowledge of security concepts"
+  ],
+  "targetAudience": [
+    "Security professionals new to Azure",
+    "IT administrators and engineers",
+    "Cloud architects and consultants",
+    "Compliance and audit professionals"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Azure Security Engineer Associate",
+    "examCode": "AZ-500",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Azure",
+    "Security",
+    "Identity",
+    "Network Security",
+    "Compliance"
+  ],
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-25T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Azure security specialist with extensive experience in cloud security and compliance",
+    "experience": "10+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-500",
+      "AZ-900",
+      "SC-900",
+      "SC-300"
+    ]
+  },
+  "modules": [
+    {
+      "id": "azure-security-architecture",
+      "title": "Azure Security Architecture",
+      "description": "Understanding Azure security principles and frameworks",
+      "duration": "4 hours",
+      "topics": [
+        "Security principles and frameworks",
+        "Shared responsibility model",
+        "Defense in depth strategy",
+        "Zero trust architecture principles"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-access-management",
+      "title": "Identity & Access Management",
+      "description": "Implementing identity and access management solutions",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Active Directory fundamentals",
+        "Multi-factor authentication setup",
+        "Conditional access policies",
+        "Role-based access control (RBAC)"
+      ],
+      "icon": "Lock"
+    },
+    {
+      "id": "network-security-controls",
+      "title": "Network Security Controls",
+      "description": "Configuring network security and connectivity",
+      "duration": "4 hours",
+      "topics": [
+        "Network security groups and rules",
+        "Azure Firewall configuration",
+        "Virtual network security",
+        "VPN and ExpressRoute security"
+      ],
+      "icon": "Eye"
+    },
+    {
+      "id": "security-monitoring-compliance",
+      "title": "Security Monitoring & Compliance",
+      "description": "Monitoring security and ensuring compliance",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Security Center overview",
+        "Azure Sentinel fundamentals",
+        "Compliance frameworks and assessments",
+        "Incident response procedures"
+      ],
+      "icon": "ShieldCheck"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "identity-lab",
+      "title": "Azure AD Configuration",
+      "description": "Configure Azure Active Directory and implement access controls",
+      "duration": "2 hours",
+      "icon": "Lock"
+    },
+    {
+      "id": "network-security-lab",
+      "title": "Network Security Implementation",
+      "description": "Configure network security groups and Azure Firewall",
+      "duration": "2 hours",
+      "icon": "Eye"
+    },
+    {
+      "id": "security-center-lab",
+      "title": "Azure Security Center Setup",
+      "description": "Configure Azure Security Center and security policies",
+      "duration": "2 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "compliance-lab",
+      "title": "Compliance Assessment",
+      "description": "Perform compliance assessments and implement security recommendations",
+      "duration": "2 hours",
+      "icon": "ShieldCheck"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As someone who has guided hundreds of professionals into Azure, I've seen firsthand how the right foundation makes all the difference. I remember working with a team of traditional infrastructure engineers who were skeptical about cloud. After this training, they successfully migrated their first workloads to Azure and became cloud advocates. This course distills everything I wish I knew when I started with Azure."
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "id": "microsoft-365-fundamentals",
+  "slug": "microsoft-365-fundamentals",
+  "title": "Microsoft 365 Fundamentals",
+  "subtitle": "Master Microsoft 365 Cloud Services",
+  "description": "Learn the fundamentals of Microsoft 365 cloud services and productivity solutions",
+  "overview": "Introduction to Microsoft 365 productivity and teamwork solutions. Learn about cloud concepts, core Microsoft 365 services, security, compliance, privacy, and trust in Microsoft 365. Perfect for anyone evaluating cloud services.",
+  "category": "Microsoft 365",
+  "subcategory": "Fundamentals",
+  "difficulty": "Beginner",
+  "tags": [
+    "Microsoft 365",
+    "Office 365",
+    "Cloud Computing",
+    "Productivity",
+    "Collaboration"
+  ],
+  "duration": {
+    "days": 1,
+    "format": "days"
+  },
+  "price": {
+    "amount": 695,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "cloud-concepts",
+      "title": "Cloud Concepts and Core Services",
+      "description": "Understand cloud computing fundamentals and Microsoft 365 core services",
+      "icon": "Cloud"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Security, Compliance, and Trust",
+      "description": "Learn about security, compliance, privacy, and trust in Microsoft 365",
+      "icon": "Shield"
+    },
+    {
+      "id": "pricing-support",
+      "title": "Pricing and Support Options",
+      "description": "Explore Microsoft 365 pricing models and support options",
+      "icon": "DollarSign"
+    },
+    {
+      "id": "productivity-solutions",
+      "title": "Productivity and Teamwork",
+      "description": "Master productivity tools and teamwork solutions in Microsoft 365",
+      "icon": "Users"
+    },
+    {
+      "id": "collaboration-features",
+      "title": "Collaboration and Mobility",
+      "description": "Explore collaboration features and mobile capabilities",
+      "icon": "Smartphone"
+    }
+  ],
+  "modules": [
+    {
+      "id": "productivity-teamwork",
+      "title": "Microsoft 365 Productivity and Teamwork Solutions",
+      "description": "Learn about productivity tools and collaboration features",
+      "icon": "Users",
+      "duration": "2 hours",
+      "topics": [
+        "Microsoft 365 productivity solutions",
+        "Microsoft Office 365 ProPlus",
+        "Collaboration with Microsoft Teams",
+        "Business productivity with SharePoint",
+        "Business intelligence with Power BI"
+      ]
+    },
+    {
+      "id": "business-management",
+      "title": "Microsoft 365 Business Management Solutions",
+      "description": "Explore business management and device management capabilities",
+      "icon": "Briefcase",
+      "duration": "2 hours",
+      "topics": [
+        "Device and app management with Microsoft 365",
+        "Windows 10 in Microsoft 365",
+        "Enterprise mobility and security",
+        "Workplace Analytics insights",
+        "Microsoft 365 Analytics and reporting"
+      ]
+    },
+    {
+      "id": "security-compliance-m365",
+      "title": "Microsoft 365 Security and Compliance",
+      "description": "Understand security and compliance features in Microsoft 365",
+      "icon": "Shield",
+      "duration": "2 hours",
+      "topics": [
+        "Identity and access management",
+        "Threat protection in Microsoft 365",
+        "Cloud security with Azure AD",
+        "Information protection and governance",
+        "Compliance solutions overview"
+      ]
+    },
+    {
+      "id": "pricing-support",
+      "title": "Microsoft 365 Pricing and Support",
+      "description": "Learn about pricing models and support options",
+      "icon": "DollarSign",
+      "duration": "2 hours",
+      "topics": [
+        "Microsoft 365 subscription options",
+        "Licensing and billing models",
+        "Support options and service level agreements",
+        "Microsoft 365 service updates",
+        "Migration and adoption planning"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "teams-lab",
+      "title": "Microsoft Teams Collaboration",
+      "description": "Explore Microsoft Teams for collaboration and communication",
+      "duration": "1 hour",
+      "icon": "Users"
+    },
+    {
+      "id": "sharepoint-lab",
+      "title": "SharePoint Online",
+      "description": "Learn SharePoint Online for document management and collaboration",
+      "duration": "1 hour",
+      "icon": "FileText"
+    },
+    {
+      "id": "security-lab-m365",
+      "title": "Security Features",
+      "description": "Explore security and compliance features in Microsoft 365",
+      "duration": "1 hour",
+      "icon": "Shield"
+    },
+    {
+      "id": "admin-center-lab",
+      "title": "Microsoft 365 Admin Center",
+      "description": "Navigate and configure Microsoft 365 Admin Center",
+      "duration": "1 hour",
+      "icon": "Settings"
+    }
+  ],
+  "prerequisites": [
+    "Basic understanding of IT concepts",
+    "General knowledge of networking concepts",
+    "Familiarity with cloud computing basics",
+    "No prior Microsoft 365 experience required"
+  ],
+  "targetAudience": [
+    "Business decision makers",
+    "IT administrators new to Microsoft 365",
+    "Users wanting to learn about Microsoft 365 features",
+    "Students preparing for MS-900 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with 7+ years of experience in Microsoft 365 implementation and administration. Specializes in helping organizations adopt cloud productivity solutions.",
+    "expertise": [
+      "Microsoft 365 Administration",
+      "Cloud Migration",
+      "Productivity Solutions",
+      "Collaboration Tools",
+      "Security & Compliance"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Enterprise Administrator Expert",
+      "Microsoft Certified Trainer",
+      "Microsoft 365 Certified: Modern Desktop Administrator Associate"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Certified: Fundamentals",
+    "examCode": "MS-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 20,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-12-15"
+  },
+  "featured": false,
+  "icon": "Cloud",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As someone who has guided hundreds of professionals into Azure, I've seen firsthand how the right foundation makes all the difference. I remember working with a team of traditional infrastructure engineers who were skeptical about cloud. After this training, they successfully migrated their first workloads to Azure and became cloud advocates. This course distills everything I wish I knew when I started with Azure."
+  }
+}

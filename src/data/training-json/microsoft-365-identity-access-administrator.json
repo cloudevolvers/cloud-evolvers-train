@@ -1,0 +1,194 @@
+{
+  "id": "microsoft-365-identity-access-administrator",
+  "slug": "microsoft-365-identity-access-administrator",
+  "title": "Microsoft 365 Identity & Access Administrator",
+  "subtitle": "Advanced Identity Management",
+  "description": "Master identity and access management in Microsoft 365 and Azure AD environments",
+  "overview": "This advanced 3-day course covers comprehensive identity and access management in Microsoft 365 and Azure AD. Learn to design secure identity architectures, implement advanced authentication solutions, and manage complex hybrid identity scenarios.",
+  "category": "Microsoft 365",
+  "subcategory": "Identity & Access",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1195,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "IdentificationCard",
+  "learningObjectives": [
+    {
+      "id": "identity-architecture",
+      "title": "Design comprehensive identity architecture",
+      "description": "Design scalable and secure identity architectures for enterprise environments",
+      "icon": "IdentificationCard"
+    },
+    {
+      "id": "advanced-authentication",
+      "title": "Implement advanced authentication solutions",
+      "description": "Configure advanced authentication methods including MFA and passwordless solutions",
+      "icon": "Key"
+    },
+    {
+      "id": "identity-governance",
+      "title": "Configure identity governance frameworks",
+      "description": "Implement identity governance, lifecycle management, and access reviews",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "hybrid-identity",
+      "title": "Manage hybrid identity scenarios",
+      "description": "Configure and manage hybrid identity solutions with Azure AD Connect",
+      "icon": "UserCircle"
+    },
+    {
+      "id": "privileged-access",
+      "title": "Secure privileged access management",
+      "description": "Implement privileged access management and just-in-time access controls",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "identity-monitoring",
+      "title": "Monitor and audit identity activities",
+      "description": "Configure identity monitoring, auditing, and compliance reporting",
+      "icon": "UserCircle"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 fundamentals knowledge",
+    "Azure Active Directory experience",
+    "Understanding of identity concepts",
+    "Basic PowerShell knowledge"
+  ],
+  "targetAudience": [
+    "Identity and access administrators",
+    "Security architects and engineers",
+    "Microsoft 365 administrators",
+    "IT infrastructure professionals"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Identity and Access Administrator Associate",
+    "examCode": "SC-300",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft 365",
+    "Identity",
+    "Azure AD",
+    "Security",
+    "Access Management"
+  ],
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-10T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior identity and access management specialist with extensive experience in enterprise identity solutions",
+    "experience": "10+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-300",
+      "SC-900",
+      "MS-500",
+      "AZ-104"
+    ]
+  },
+  "modules": [
+    {
+      "id": "identity-architecture-design",
+      "title": "Identity Architecture Design",
+      "description": "Designing comprehensive identity architectures",
+      "duration": "6 hours",
+      "topics": [
+        "Azure AD architecture planning",
+        "Multi-tenant identity strategies",
+        "Identity governance frameworks",
+        "Directory synchronization planning"
+      ],
+      "icon": "IdentificationCard"
+    },
+    {
+      "id": "authentication-authorization",
+      "title": "Authentication & Authorization",
+      "description": "Implementing advanced authentication and authorization",
+      "duration": "6 hours",
+      "topics": [
+        "Advanced MFA configurations",
+        "Conditional Access policies",
+        "Passwordless authentication",
+        "Identity protection features"
+      ],
+      "icon": "Key"
+    },
+    {
+      "id": "privileged-access-management",
+      "title": "Privileged Access Management",
+      "description": "Securing privileged access and identity management",
+      "duration": "6 hours",
+      "topics": [
+        "Azure AD Privileged Identity Management",
+        "Just-in-time access controls",
+        "Access reviews and certifications",
+        "Emergency access procedures"
+      ],
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "identity-lifecycle-management",
+      "title": "Identity Lifecycle Management",
+      "description": "Managing identity lifecycle and entitlements",
+      "duration": "6 hours",
+      "topics": [
+        "Automated user provisioning",
+        "Entitlement management",
+        "Guest user management",
+        "Identity monitoring and reporting"
+      ],
+      "icon": "UserCircle"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "azure-ad-architecture-lab",
+      "title": "Azure AD Architecture Design",
+      "description": "Design and implement Azure AD architecture for enterprise scenarios",
+      "duration": "3 hours",
+      "icon": "IdentificationCard"
+    },
+    {
+      "id": "conditional-access-lab",
+      "title": "Conditional Access Policies",
+      "description": "Configure advanced conditional access policies and MFA",
+      "duration": "3 hours",
+      "icon": "Key"
+    },
+    {
+      "id": "privileged-identity-lab",
+      "title": "Privileged Identity Management",
+      "description": "Implement Azure AD Privileged Identity Management",
+      "duration": "3 hours",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "hybrid-identity-lab",
+      "title": "Hybrid Identity Configuration",
+      "description": "Configure Azure AD Connect and hybrid identity solutions",
+      "duration": "3 hours",
+      "icon": "UserCircle"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Managing Azure at enterprise scale requires more than just technical knowledge—it requires battle-tested strategies. I've managed Azure environments for organizations with thousands of users, and I've learned what works and what doesn't. In this training, I share the real-world administrative patterns that have saved countless hours and prevented critical issues."
+  }
+}

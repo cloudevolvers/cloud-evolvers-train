@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "slug": "azure-fundamentals-nl",
+    "title": "Azure Fundamentals",
+    "subtitle": "Jouw Poort naar een Bloeiende Cloud Carrière",
+    "description": "Stel je voor dat je wakker wordt vol enthousiasme over je werk, wetende dat je de toekomst van technologie bouwt. Dat is wat Azure Fundamentals voor je kan doen - het is niet zomaar een cursus, het is je lanceerplatform om een cloud expert te worden waar bedrijven wanhopig naar op zoek zijn.",
+    "category": "azure",
+    "level": "Beginner",
+    "duration": "2 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Cloud Computing", "Fundamentals", "Microsoft", "Carrière Groei"],
+    "prerequisites": [
+      "Een nieuwsgierige geest en bereidheid om te leren",
+      "Basis computer vaardigheden",
+      "Geen voorafgaande cloud ervaring nodig - we beginnen vanaf het allereerste begin"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-fundamentals-hero.jpg",
+    "badge": "Levensveranderende Carrière Vaardigheden",
+    "highlights": [
+      "Echte Azure omgevingen waar je daadwerkelijke cloud oplossingen bouwt",
+      "Persoonlijke mentorship van ervaren cloud architecten",
+      "Vaardigheden die je 3x waardevoller maken op de arbeidsmarkt",
+      "Direct pad naar hoogbetaalde cloud functies"
+    ]
+  },
+  "overview": {
+    "summary": "Denk er eens over na: elk bedrijf ter wereld verhuist momenteel naar de cloud. Van startups tot Fortune 500 bedrijven, ze zoeken allemaal mensen die Azure begrijpen. Dit is niet zomaar een technische cursus - het is je kans om jezelf te positioneren aan de voorhoede van de grootste technologie revolutie sinds het internet. Je loopt niet alleen weg met kennis, maar met het vertrouwen om echte cloud uitdagingen aan te pakken waar bedrijven premium salarissen voor betalen om op te lossen.",
+    "objectives": [
+      "Beheers de cloud concepten die wereldwijd veranderen hoe bedrijven opereren",
+      "Ontdek Azure diensten die je de go-to expert in je organisatie kunnen maken",
+      "Leer praktische vaardigheden die je onmisbaar maken in de huidige arbeidsmarkt",
+      "Bouw een sterke basis voor geavanceerde Azure certificeringen en carrière ontwikkeling",
+      "Verbind met een gemeenschap van cloud professionals die de toekomst vormgeven"
+    ],
+    "targetAudience": "Deze cursus is voor jou als je klaar bent om te stoppen met toekijken vanaf de zijlijn en deel te worden van de cloud revolutie. Of je nu een IT professional bent die je carrière toekomstbestendig wilt maken, een ontwikkelaar die je vaardigheden wilt uitbreiden, of iemand uit een niet-technische achtergrond die de ongelooflijke kansen in cloud computing ziet - deze cursus geeft je de kennis en het vertrouwen om te slagen."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Cloud Computing Fundamentals",
+      "description": "Introductie tot cloud computing concepten en Azure architectuur",
+      "duration": "2 uur",
+      "objectives": [
+        "Definieer cloud computing",
+        "Beschrijf het gedeelde verantwoordelijkheidsmodel",
+        "Definieer cloud modellen (publiek, privaat, hybride)",
+        "Identificeer geschikte use cases voor elk cloud model"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Core Services",
+      "description": "Verken de kern Azure diensten en producten",
+      "duration": "3 uur",
+      "objectives": [
+        "Beschrijf de kern Azure architecturale componenten",
+        "Beschrijf Azure compute en networking diensten",
+        "Beschrijf Azure storage diensten",
+        "Beschrijf Azure identity, access, and security"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Security and Compliance",
+      "description": "Leer over Azure security, compliance, and trust",
+      "duration": "2 uur",
+      "objectives": [
+        "Beschrijf Azure security features",
+        "Beschrijf Azure compliance aanbiedingen",
+        "Beschrijf Azure trust and privacy"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Azure Pricing and Support",
+      "description": "Begrijp Azure pricing and support opties",
+      "duration": "1 uur",
+      "objectives": [
+        "Beschrijf Azure pricing and licensing",
+        "Beschrijf Azure support opties",
+        "Beschrijf Azure service level agreements"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Certification Preparation",
+      "description": "Bereid je voor op het AZ-900 Microsoft Azure Fundamentals certificatie examen",
+      "duration": "2 uur",
+      "objectives": [
+        "Herzie sleutel concepten en examen onderwerpen",
+        "Oefen met voorbeeld vragen",
+        "Begrijp examen format en vereisten"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Azure Portal Navigation",
+      "description": "Leer navigeren in de Azure portal en creëer basis resources",
+      "duration": "1 uur",
+      "objectives": [
+        "Navigeer de Azure portal",
+        "Creëer een resource group",
+        "Creëer basis Azure resources"
+      ]
+    },
+    {
+      "id": "lab-2",
+      "title": "Azure Storage Services",
+      "description": "Hands-on ervaring met Azure storage diensten",
+      "duration": "1 uur",
+      "objectives": [
+        "Creëer storage accounts",
+        "Configureer blob storage",
+        "Stel file shares in"
+      ]
+    },
+    {
+      "id": "lab-3",
+      "title": "Azure Virtual Machines",
+      "description": "Deploy en beheer Azure virtual machines",
+      "duration": "1 uur",
+      "objectives": [
+        "Creëer virtual machines",
+        "Configureer networking",
+        "Beheer VM lifecycle"
+      ]
+    }
+  ],
+  "instructor": {
+    "id": "instructor-1",
+    "name": "Yaïr Knijn",
+    "title": "Senior Cloud Architect",
+    "bio": "Yaïr heeft meer dan 10 jaar ervaring in cloud computing en Azure. Hij heeft honderden professionals geholpen bij hun transitie naar cloud carrière.",
+    "expertise": ["Azure", "Cloud Architecture", "DevOps"],
+    "certifications": ["Azure Solutions Architect Expert", "AWS Certified Solutions Architect"],
+    "image": "/images/instructors/yair-knijn.jpg",
+    "linkedin": "https://linkedin.com/in/yair-knijn-cloud"
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Azure Fundamentals",
+    "examCode": "AZ-900",
+    "provider": "Microsoft",
+    "validity": "Lifetime",
+    "prerequisites": [],
+    "examDetails": {
+      "format": "Multiple choice",
+      "duration": "2 uur",
+      "passingScore": "700/1000",
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"],
+      "cost": "€99"
+    }
+  },
+  "resources": [
+    {
+      "type": "book",
+      "title": "Microsoft Azure Fundamentals Certification Guide",
+      "description": "Uitgebreide studie gids voor AZ-900 certificatie",
+      "url": "https://learn.microsoft.com/en-us/certifications/exams/az-900",
+      "author": "Microsoft",
+      "recommended": true
+    },
+    {
+      "type": "video",
+      "title": "Azure Fundamentals Learning Path",
+      "description": "Gratis video serie die Azure fundamentals behandelt",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+      "author": "Microsoft Learn",
+      "recommended": true
+    },
+    {
+      "type": "tool",
+      "title": "Azure Free Account",
+      "description": "Gratis Azure account met €200 tegoed",
+      "url": "https://azure.microsoft.com/en-us/free/",
+      "author": "Microsoft",
+      "recommended": true
+    }
+  ],
+  "pricing": {
+    "amount": 1200,
+    "currency": "EUR",
+    "discount": {
+      "percentage": 20,
+      "validUntil": "2024-12-31",
+      "description": "Early bird korting voor registraties voor 31 december"
+    },
+    "earlyBird": {
+      "amount": 960,
+      "deadline": "2024-12-31"
+    },
+    "groupDiscount": {
+      "minParticipants": 3,
+      "percentage": 15
+    }
+  },
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-15",
+    "format": "hybrid",
+    "timezone": "CET",
+    "sessions": [
+      {
+        "date": "2024-02-15",
+        "time": "09:00-17:00",
+        "duration": "8 uur",
+        "topic": "Cloud Computing Fundamentals"
+      },
+      {
+        "date": "2024-02-16",
+        "time": "09:00-17:00",
+        "duration": "8 uur",
+        "topic": "Azure Core Services"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik voorafgaande cloud ervaring nodig?",
+      "answer": "Nee, geen voorafgaande cloud ervaring is vereist. Deze cursus is ontworpen voor beginners."
+    },
+    {
+      "question": "Is de certificatie inbegrepen?",
+      "answer": "De cursus bereidt je voor op het AZ-900 certificatie examen, maar de examen kosten zijn niet inbegrepen."
+    },
+    {
+      "question": "Wat als ik een sessie mis?",
+      "answer": "Alle sessies worden opgenomen en zijn beschikbaar voor herziening. Je kunt ook individuele sessies herschikken."
+    }
+  ]
+}

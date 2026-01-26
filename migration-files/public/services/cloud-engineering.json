@@ -1,0 +1,18 @@
+{
+  "id": "cloud-engineering",
+  "title": "Cloud Engineering",
+  "slug": "cloud-engineering",
+  "description": "Expert cloud engineering services to design, build, and optimize your Azure infrastructure.",
+  "icon": "Network",
+  "content": "\n# Cloud Engineering Services\n\nOur expert cloud engineering team designs, builds, and optimizes Azure infrastructure solutions tailored to your unique business requirements.\n\n## Our Cloud Engineering Approach\n\nWe follow a comprehensive, methodical approach to cloud engineering that ensures scalable, secure, and efficient solutions. Our team combines deep Azure technical expertise with strategic business understanding to deliver infrastructure that supports your organization's goals.\n\n## Services We Offer\n\n### Architecture Design\n- **Solution Architecture**: Custom-designed Azure solutions aligned with your business requirements\n- **Reference Architectures**: Proven design patterns adapted to your unique needs\n- **Architecture Reviews**: Expert assessment of existing cloud implementations\n\n### Implementation\n- **Infrastructure Deployment**: Efficient and reliable deployment of Azure resources\n- **Automation**: CI/CD pipeline setup and Infrastructure as Code implementation\n- **Configuration Management**: Consistent, version-controlled configuration practices\n\n### Migration Services\n- **Migration Strategy**: Comprehensive planning for smooth transitions to Azure\n- **Workload Assessment**: Detailed analysis of applications for migration readiness\n- **Migration Execution**: Skilled teams to execute migrations with minimal disruption\n\n### Performance Optimization\n- **Resource Tuning**: Fine-tuning of Azure resources for optimal performance\n- **Cost Optimization**: Strategies to reduce waste and maximize cloud investment value\n- **Monitoring Implementation**: Comprehensive monitoring solutions for visibility and alerts\n\nContact us today to discuss how our Cloud Engineering services can help you build a robust, efficient Azure infrastructure.\n",
+  "features": [
+    "Architecture design",
+    "Implementation",
+    "Migration services",
+    "Performance optimization"
+  ],
+  "isPublished": true,
+  "publishedAt": "2024-01-04T00:00:00Z",
+  "updatedAt": "2024-01-04T00:00:00Z",
+  "order": 4
+}

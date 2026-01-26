@@ -1,0 +1,16 @@
+{
+  "note": "This file is for reference only. Actual secrets are stored in GitHub Secrets.",
+  "properties": {
+    "API_KEY": "@GitHubActions=API_KEY",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "@GitHubActions=APPLICATIONINSIGHTS_CONNECTION_STRING",
+    "AZURE_AD_CLIENT_ID": "@GitHubActions=AZURE_AD_CLIENT_ID",
+    "AZURE_AD_CLIENT_SECRET": "@GitHubActions=AZURE_AD_CLIENT_SECRET",
+    "AZURE_AD_TENANT_ID": "@GitHubActions=AZURE_AD_TENANT_ID",
+    "AZURE_STORAGE_ACCOUNT": "@GitHubActions=AZURE_STORAGE_ACCOUNT",
+    "EMAIL_AZURE_CLIENT_ID": "@GitHubActions=EMAIL_AZURE_CLIENT_ID",
+    "EMAIL_AZURE_CLIENT_SECRET": "@GitHubActions=EMAIL_AZURE_CLIENT_SECRET",
+    "EMAIL_AZURE_TENANT_ID": "@GitHubActions=EMAIL_AZURE_TENANT_ID",
+    "EMAIL_SENDER": "internalautomation@xevolve.io",
+    "PRICING_ADMIN_KEY": "@GitHubActions=PRICING_ADMIN_KEY"
+  }
+}

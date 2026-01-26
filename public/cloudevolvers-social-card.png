@@ -1,0 +1,27 @@
+INSTRUCTIONS FOR CREATING SOCIAL MEDIA CARD IMAGE:
+
+This file should be replaced with a proper 1200x630px PNG image with:
+
+DESIGN REQUIREMENTS:
+- Background: Green gradient (#16a34a to #22c55e to #15803d)
+- Logo: Cloud Evolvers logo (white/light colored)
+- Main text: "Cloud Evolvers" in large, bold white font
+- Subtitle: "Azure Training & Microsoft Stack Excellence" in medium white font
+- Additional text: "Expert-Led Training from Microsoft Certified Trainers" in smaller white font
+- Badge: "MCT Certified" in a rounded rectangle with semi-transparent white background
+
+TECHNICAL SPECS:
+- Dimensions: 1200px x 630px (Facebook/Twitter optimal size)
+- Format: PNG with transparency support
+- Color depth: 24-bit RGB
+- Resolution: 72 DPI (web optimized)
+- File size: Under 1MB for optimal loading
+
+BRANDING:
+- Use Cloud Evolvers brand colors (green tones)
+- Ensure white logo stands out on green background
+- Professional, clean design suitable for LinkedIn, Twitter, Facebook, WhatsApp
+- High contrast for readability
+- Include cloud/tech-related design elements
+
+This placeholder file should be replaced with an actual image file created using design tools like Figma, Adobe Photoshop, or Canva.

@@ -1,0 +1,193 @@
+{
+  "id": "microsoft-365-copilot-mastery",
+  "slug": "microsoft-365-copilot-mastery",
+  "title": "Microsoft 365 Copilot Mastery",
+  "subtitle": "AI-Powered Productivity Training",
+  "description": "Unleash the power of AI in your daily work with Microsoft 365 Copilot",
+  "overview": "This intensive one-day workshop teaches you how to harness the full potential of Microsoft 365 Copilot across all applications. Learn advanced prompt engineering, workflow automation, and AI-driven productivity techniques to transform your work processes.",
+  "category": "Microsoft 365",
+  "subcategory": "Productivity",
+  "difficulty": "Intermediate",
+  "duration": {
+    "days": 1,
+    "hours": 8,
+    "format": "days"
+  },
+  "price": {
+    "amount": 595,
+    "currency": "EUR"
+  },
+  "featured": true,
+  "icon": "Lightning",
+  "learningObjectives": [
+    {
+      "id": "copilot-fundamentals",
+      "title": "Master Copilot across all M365 applications",
+      "description": "Learn to use Copilot effectively in Word, Excel, PowerPoint, Outlook, and Teams",
+      "icon": "Lightning"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Create effective prompts for maximum productivity",
+      "description": "Master prompt engineering techniques to get the best results from Copilot",
+      "icon": "Robot"
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Implement AI-driven workflow automation",
+      "description": "Design and implement automated workflows using Copilot capabilities",
+      "icon": "Sparkle"
+    },
+    {
+      "id": "content-creation",
+      "title": "Optimize content creation and analysis",
+      "description": "Use Copilot for intelligent content creation, editing, and analysis",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "presentation-workflows",
+      "title": "Design intelligent presentation workflows",
+      "description": "Create effective presentation workflows with Copilot assistance",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "ai-ethics",
+      "title": "Apply AI ethics and best practices",
+      "description": "Understand AI ethics, privacy, and best practices when using Copilot",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 experience required",
+    "Basic understanding of AI concepts",
+    "Familiarity with Word, Excel, PowerPoint, Outlook",
+    "Teams collaboration experience"
+  ],
+  "targetAudience": [
+    "Knowledge workers and professionals",
+    "Business analysts and managers",
+    "Content creators and marketers",
+    "Microsoft 365 power users"
+  ],
+  "certification": {
+    "available": false,
+    "name": "Not Applicable",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft 365",
+    "Copilot",
+    "AI",
+    "Productivity",
+    "Automation"
+  ],
+  "maxParticipants": 15,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-10T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "AI productivity specialist focused on Microsoft 365 Copilot implementation and training",
+    "experience": "5+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "MS-900",
+      "MS-500",
+      "MS-700",
+      "AI-900"
+    ]
+  },
+  "modules": [
+    {
+      "id": "copilot-fundamentals",
+      "title": "Copilot Fundamentals",
+      "description": "Understanding AI assistance and Copilot capabilities",
+      "duration": "2 hours",
+      "topics": [
+        "Understanding AI assistance paradigm",
+        "Prompt engineering best practices",
+        "Context and conversation management",
+        "Privacy and security considerations"
+      ],
+      "icon": "Lightning"
+    },
+    {
+      "id": "copilot-office-apps",
+      "title": "Copilot in Office Apps",
+      "description": "Using Copilot across Microsoft Office applications",
+      "duration": "2 hours",
+      "topics": [
+        "Word: Document creation and editing",
+        "Excel: Data analysis and visualization",
+        "PowerPoint: Intelligent presentation design",
+        "Outlook: Email optimization and scheduling"
+      ],
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "advanced-ai-workflows",
+      "title": "Advanced AI Workflows",
+      "description": "Building advanced AI-powered workflows",
+      "duration": "2 hours",
+      "topics": [
+        "Teams meeting summaries and insights",
+        "SharePoint content discovery",
+        "Power Platform integration",
+        "Cross-application workflows"
+      ],
+      "icon": "Robot"
+    },
+    {
+      "id": "productivity-optimization",
+      "title": "Productivity Optimization",
+      "description": "Optimizing productivity with AI tools",
+      "duration": "2 hours",
+      "topics": [
+        "Personal productivity patterns",
+        "Team collaboration enhancement",
+        "Measurement and analytics",
+        "Change management strategies"
+      ],
+      "icon": "Sparkle"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "copilot-word-lab",
+      "title": "Copilot in Word",
+      "description": "Hands-on practice with Copilot in Microsoft Word",
+      "duration": "1 hour",
+      "icon": "Lightning"
+    },
+    {
+      "id": "copilot-excel-lab",
+      "title": "Copilot in Excel",
+      "description": "Data analysis and visualization with Copilot in Excel",
+      "duration": "1 hour",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "copilot-powerpoint-lab",
+      "title": "Copilot in PowerPoint",
+      "description": "Creating presentations with Copilot assistance",
+      "duration": "1 hour",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "workflow-automation-lab",
+      "title": "Workflow Automation",
+      "description": "Building automated workflows with Copilot",
+      "duration": "1 hour",
+      "icon": "Robot"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Microsoft 365 is more than just Office in the cloud. I've deployed M365 for thousands of users, integrated it with custom applications, and optimized collaboration workflows. This training shows you how to leverage M365's full potential based on real deployment experiences."
+  }
+}

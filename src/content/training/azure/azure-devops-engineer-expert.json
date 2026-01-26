@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "slug": "azure-devops-engineer-expert",
+    "title": "Azure DevOps Engineer Expert",
+    "subtitle": "Become the DevOps Architect That Companies Fight For",
+    "description": "The world runs on software, and software gets deployed by DevOps engineers. This course transforms you from someone who deploys code into someone who builds the pipelines that power the world's most critical applications. You'll master the Azure DevOps tools and practices that separate the engineers who get hired from those who don't.",
+    "category": "DevOps",
+    "level": "Advanced",
+    "duration": "5 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "DevOps", "CI/CD", "Infrastructure as Code", "Monitoring", "Security"],
+    "prerequisites": [
+      "Experience with Azure administration or development",
+      "Understanding of agile practices and version control",
+      "Basic knowledge of scripting (PowerShell, Bash, or Python)",
+      "A burning desire to master the deployment pipelines that power the modern world"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-devops-hero.jpg",
+    "badge": "Elite DevOps Architect",
+    "highlights": [
+      "Master the deployment pipelines that power Fortune 500 companies",
+      "Build infrastructure that automatically scales and heals itself",
+      "Learn the security practices that protect billions in revenue",
+      "Join the elite engineers who deploy code that changes the world"
+    ]
+  },
+  "overview": {
+    "summary": "Every great product needs a great DevOps engineer behind it. This course teaches you the Azure DevOps skills that separate the engineers who build deployment pipelines from those who build the systems that power them. You'll learn to create infrastructure that deploys itself, pipelines that catch bugs before they reach production, and monitoring systems that predict failures before they happen. By the end, you'll have the technical mastery and architectural vision to lead DevOps transformations at any organization.",
+    "objectives": [
+      "Master Azure DevOps security and compliance frameworks",
+      "Build infrastructure that deploys and manages itself",
+      "Create CI/CD pipelines that guarantee quality and speed",
+      "Implement monitoring systems that predict and prevent failures",
+      "Design dependency management that eliminates deployment conflicts",
+      "Architect application infrastructure that scales automatically",
+      "Build feedback loops that continuously improve development processes"
+    ],
+    "targetAudience": "This course is for the engineers who are ready to become the architects of deployment. Whether you're a developer who wants to master the deployment side, a sysadmin ready to embrace DevOps culture, or an IT professional who wants to lead digital transformations - if you want to build the systems that make software deployment invisible and flawless, this course will give you the skills and mindset to become the DevOps engineer that companies compete for."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "DevOps Security and Compliance",
+      "description": "Design and implement security and compliance in DevOps",
+      "duration": "8 hours",
+      "objectives": [
+        "Design a security and compliance plan",
+        "Implement authentication and authorization",
+        "Implement secure coding practices",
+        "Manage sensitive information",
+        "Implement security testing"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>DevSecOps Principles</h3><p>Security must be integrated throughout the DevOps lifecycle. Learn to implement security practices that don't slow down development velocity.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Security Best Practices",
+            "items": [
+              "Shift-left security approach",
+              "Automated security testing",
+              "Secrets management",
+              "Compliance as code",
+              "Security monitoring and alerting"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Implementation Lab",
+          "description": "Implement security practices in Azure DevOps pipelines",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Infrastructure as Code",
+      "description": "Implement infrastructure as code using Azure tools",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement infrastructure as code",
+        "Implement Azure Resource Manager templates",
+        "Implement Bicep templates",
+        "Implement Azure CLI and PowerShell",
+        "Implement configuration management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Infrastructure as Code enables consistent and repeatable infrastructure deployment. Learn to use Azure Resource Manager, Bicep, and configuration management tools.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/iac-tools.jpg",
+            "alt": "Infrastructure as Code Tools",
+            "caption": "ARM templates, Bicep, Terraform, and Azure CLI"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "IaC Implementation Lab",
+          "description": "Create and deploy infrastructure using code",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Continuous Integration and Delivery",
+      "description": "Implement CI/CD pipelines with Azure DevOps",
+      "duration": "10 hours",
+      "objectives": [
+        "Implement continuous integration",
+        "Implement continuous delivery",
+        "Implement deployment patterns",
+        "Implement release management",
+        "Implement automated testing"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>CI/CD Pipeline Design</h3><p>Learn to design and implement robust CI/CD pipelines that ensure code quality, automate testing, and enable reliable deployments.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "CI/CD Pipeline Lab",
+          "description": "Build complete CI/CD pipelines for applications",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Application Infrastructure and Monitoring",
+      "description": "Implement application infrastructure and monitoring",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement application infrastructure",
+        "Implement containerization",
+        "Implement application monitoring",
+        "Implement logging",
+        "Implement feedback mechanisms"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Modern applications require robust infrastructure and comprehensive monitoring. Learn to implement containerized applications and set up effective monitoring and logging.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring and Logging Lab",
+          "description": "Implement comprehensive application monitoring",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2100,
+    "discountedPrice": 1680,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-400 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure DevOps Engineer Expert badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "DevOps Engineering Lead",
+    "bio": "Yaïr is a DevOps Engineering Lead with extensive experience in implementing CI/CD pipelines and cloud infrastructure. He has led DevOps transformations at multiple Fortune 500 companies.",
+    "certifications": [
+      "Microsoft Certified: Azure DevOps Engineer Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "AWS Certified DevOps Engineer - Professional",
+      "Certified Kubernetes Administrator (CKA)",
+      "HashiCorp Certified: Terraform Associate"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-18",
+        "endDate": "2024-03-22",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure DevOps Engineer Expert Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-devops-engineer-expert/",
+      "description": "Official Microsoft learning path for Azure DevOps Engineers"
+    },
+    {
+      "type": "video",
+      "title": "Azure DevOps Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nG8QK",
+      "description": "Azure DevOps tutorials and best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-400 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-400",
+      "description": "Official practice tests for AZ-400 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure DevOps",
+      "url": "https://dev.azure.com/",
+      "description": "Azure DevOps services for CI/CD and project management"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure DevOps Engineer Expert",
+    "code": "AZ-400",
+    "description": "Demonstrate skills in designing and implementing DevOps practices for version control, compliance, infrastructure as code, continuous integration, continuous delivery, and monitoring and logging",
+    "examDetails": {
+      "duration": "150 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Develop a security and compliance plan (10-15%)",
+      "Implement infrastructure as code (10-15%)",
+      "Implement continuous integration (20-25%)",
+      "Implement continuous delivery and deployment (10-15%)",
+      "Implement dependency management (5-10%)",
+      "Implement application infrastructure (15-20%)",
+      "Implement continuous feedback (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What are the prerequisites for this course?",
+      "answer": "You should have experience with Azure administration or development, and familiarity with agile practices and version control."
+    },
+    {
+      "question": "Do I need programming experience?",
+      "answer": "Yes, you should be comfortable with scripting languages like PowerShell, Bash, or Python for automation tasks."
+    },
+    {
+      "question": "What tools will I learn?",
+      "answer": "You'll learn Azure DevOps, Azure Resource Manager, Bicep, Azure CLI, Git, and various monitoring tools."
+    },
+    {
+      "question": "Is this course hands-on?",
+      "answer": "Yes, this course includes extensive hands-on labs where you'll build complete CI/CD pipelines and implement DevOps practices."
+    }
+  ]
+}

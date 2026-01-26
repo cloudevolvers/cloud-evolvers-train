@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: cloudevolvers-website
+metadata:
+  template: cloudevolvers-website@0.0.1-beta
+
+# Services configuration
+services:
+  web:
+    project: .
+    language: js
+    host: containerapp
+
+# Hooks for deployment lifecycle
+hooks:
+  preprovision:
+    posix:
+      run: |
+        echo "🚀 Starting Cloud Evolvers deployment..."
+        echo "📋 Checking Azure CLI authentication..."
+        az account show --output table
+    windows:
+      run: |
+        echo "🚀 Starting Cloud Evolvers deployment..."
+        echo "📋 Checking Azure CLI authentication..."
+        az account show --output table
+        
+  postprovision:
+    posix:
+      run: |
+        echo "🔑 Setting up RBAC permissions for SAMI..."
+        echo "📦 Getting managed identity principal ID..."
+        PRINCIPAL_ID=$(az containerapp identity show --name ${AZURE_CONTAINER_APP_NAME} --resource-group $AZURE_RESOURCE_GROUP_NAME --query principalId --output tsv)
+        echo "Principal ID: $PRINCIPAL_ID"
+        
+        echo "🗝️ Assigning Key Vault Secrets User role..."
+        az role assignment create \
+          --assignee $PRINCIPAL_ID \
+          --role "Key Vault Secrets User" \
+          --scope "/subscriptions/4a55c776-9f6b-4966-921e-c9f60e50652f/resourceGroups/$AZURE_RESOURCE_GROUP_NAME/providers/Microsoft.KeyVault/vaults/$AZURE_KEY_VAULT_NAME"
+        
+        echo "💾 Assigning Storage Blob Data Contributor role..."
+        az role assignment create \
+          --assignee $PRINCIPAL_ID \
+          --role "Storage Blob Data Contributor" \
+          --scope "/subscriptions/4a55c776-9f6b-4966-921e-c9f60e50652f/resourceGroups/sc-northeu-sc-apim/providers/Microsoft.Storage/storageAccounts/webxevolvestorage"
+        
+        echo "✅ RBAC permissions configured successfully!"
+    windows:
+      run: |
+        echo "🔑 Setting up RBAC permissions for SAMI..."
+        echo "📦 Getting managed identity principal ID..."
+        for /f "tokens=*" %%i in ('az containerapp identity show --name %AZURE_CONTAINER_APP_NAME% --resource-group %AZURE_RESOURCE_GROUP_NAME% --query principalId --output tsv') do set PRINCIPAL_ID=%%i
+        echo Principal ID: %PRINCIPAL_ID%
+        
+        echo "🗝️ Assigning Key Vault Secrets User role..."
+        az role assignment create --assignee %PRINCIPAL_ID% --role "Key Vault Secrets User" --scope "/subscriptions/4a55c776-9f6b-4966-921e-c9f60e50652f/resourceGroups/%AZURE_RESOURCE_GROUP_NAME%/providers/Microsoft.KeyVault/vaults/%AZURE_KEY_VAULT_NAME%"
+        
+        echo "💾 Assigning Storage Blob Data Contributor role..."
+        az role assignment create --assignee %PRINCIPAL_ID% --role "Storage Blob Data Contributor" --scope "/subscriptions/4a55c776-9f6b-4966-921e-c9f60e50652f/resourceGroups/sc-northeu-sc-apim/providers/Microsoft.Storage/storageAccounts/webxevolvestorage"
+        
+        echo "✅ RBAC permissions configured successfully!"
+
+# Infrastructure configuration
+infra:
+  provider: bicep
+  path: infra
+
+# Environment specific overrides
+environments:
+  cloudevolvers-prod:
+    services:
+      web:
+        env:
+          - AZURE_ENV_NAME=cloudevolvers-prod

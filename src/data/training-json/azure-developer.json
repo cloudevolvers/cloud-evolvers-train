@@ -1,0 +1,210 @@
+{
+  "id": "azure-developer",
+  "slug": "azure-developer",
+  "title": "Azure Developer Associate",
+  "subtitle": "Develop Cloud Solutions with Azure",
+  "description": "Develop cloud solutions with Azure services and tools",
+  "overview": "Comprehensive developer training focusing on building cloud applications and services on Microsoft Azure. Learn to design, build, test, and maintain cloud applications and services, utilizing Azure services for compute, storage, databases, and security.",
+  "category": "Developer Tools",
+  "subcategory": "Azure Development",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Azure",
+    "Development",
+    "Cloud Computing",
+    "APIs",
+    "Security"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "compute-solutions",
+      "title": "Develop Azure Compute Solutions",
+      "description": "Develop Azure compute solutions using Azure Functions, Logic Apps, App Service, containers, and Kubernetes",
+      "icon": "Server"
+    },
+    {
+      "id": "azure-storage",
+      "title": "Develop for Azure Storage",
+      "description": "Develop solutions that use Cosmos DB, relational databases, blob storage, Redis Cache, and Azure Search",
+      "icon": "Database"
+    },
+    {
+      "id": "azure-security",
+      "title": "Implement Azure Security",
+      "description": "Implement authentication, authorization, Key Vault, managed identities, and secure configuration",
+      "icon": "Shield"
+    },
+    {
+      "id": "monitor-optimize",
+      "title": "Monitor and Optimize Solutions",
+      "description": "Monitor applications with Application Insights, optimize performance, and implement caching strategies",
+      "icon": "Activity"
+    },
+    {
+      "id": "connect-services",
+      "title": "Connect to Azure Services",
+      "description": "Connect to and consume Azure services, implement API Management, and integrate third-party services",
+      "icon": "Link"
+    }
+  ],
+  "modules": [
+    {
+      "id": "compute-solutions",
+      "title": "Develop Azure Compute Solutions",
+      "description": "Learn to develop Azure compute solutions using various Azure services",
+      "icon": "Server",
+      "duration": "8 hours",
+      "topics": [
+        "Azure Functions and Logic Apps",
+        "Azure App Service Web Apps",
+        "Container-based solutions",
+        "Azure Kubernetes Service",
+        "Azure Container Instances"
+      ]
+    },
+    {
+      "id": "azure-storage-dev",
+      "title": "Develop for Azure Storage",
+      "description": "Develop solutions using Azure storage services and databases",
+      "icon": "Database",
+      "duration": "8 hours",
+      "topics": [
+        "Cosmos DB development",
+        "Relational database development",
+        "Blob storage solutions",
+        "Azure Redis Cache",
+        "Azure Search integration"
+      ]
+    },
+    {
+      "id": "azure-security-dev",
+      "title": "Implement Azure Security",
+      "description": "Implement security measures in Azure applications",
+      "icon": "Shield",
+      "duration": "6 hours",
+      "topics": [
+        "Authentication and authorization",
+        "Azure Key Vault",
+        "Managed identities",
+        "Microsoft Graph integration",
+        "Secure configuration data"
+      ]
+    },
+    {
+      "id": "monitor-optimize",
+      "title": "Monitor and Optimize Solutions",
+      "description": "Monitor and optimize Azure solutions for performance",
+      "icon": "Activity",
+      "duration": "6 hours",
+      "topics": [
+        "Application Insights",
+        "Azure Monitor and logging",
+        "Performance optimization",
+        "Caching strategies",
+        "CDN implementation"
+      ]
+    },
+    {
+      "id": "connect-services",
+      "title": "Connect to Azure Services",
+      "description": "Connect applications to Azure and third-party services",
+      "icon": "Link",
+      "duration": "6 hours",
+      "topics": [
+        "API Management",
+        "Event-driven architectures",
+        "Message-based solutions",
+        "Third-party service integration",
+        "Notification services"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "functions-lab",
+      "title": "Azure Functions Development",
+      "description": "Build and deploy serverless functions with Azure Functions",
+      "duration": "2 hours",
+      "icon": "Code"
+    },
+    {
+      "id": "cosmosdb-lab",
+      "title": "Cosmos DB Development",
+      "description": "Develop applications using Azure Cosmos DB",
+      "duration": "2 hours",
+      "icon": "Database"
+    },
+    {
+      "id": "security-lab",
+      "title": "Azure Security Implementation",
+      "description": "Implement authentication and authorization in Azure apps",
+      "duration": "2 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "monitoring-lab",
+      "title": "Application Monitoring",
+      "description": "Set up monitoring and logging for Azure applications",
+      "duration": "2 hours",
+      "icon": "Activity"
+    }
+  ],
+  "prerequisites": [
+    "Proficiency in Azure-supported programming language (C#, Python, JavaScript, Java)",
+    "Experience with Azure services and tools",
+    "Understanding of cloud computing concepts",
+    "Basic knowledge of REST APIs and HTTP"
+  ],
+  "targetAudience": [
+    "Cloud Developers",
+    "Software Engineers",
+    "Application Architects",
+    "Full-Stack Developers"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Azure Solutions Architect Expert with 8+ years of experience in cloud development and architecture. Specializes in building scalable cloud applications and implementing DevOps practices.",
+    "expertise": [
+      "Azure Development",
+      "Cloud Architecture",
+      "DevOps",
+      "Microservices",
+      "Serverless Computing"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure Solutions Architect Expert",
+      "Azure Developer Associate",
+      "AWS Solutions Architect"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Developer Associate",
+    "examCode": "AZ-204",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-01-15"
+  },
+  "featured": true,
+  "icon": "Code",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As a developer who has built dozens of cloud-native applications on Azure, I've made every mistake in the book—and learned from them. From serverless architectures to containerized workloads, I'll show you the development patterns that lead to maintainable, scalable applications. This isn't theory; it's what works in production."
+  }
+}

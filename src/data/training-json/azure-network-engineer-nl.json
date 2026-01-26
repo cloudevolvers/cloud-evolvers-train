@@ -1,0 +1,220 @@
+{
+  "id": "azure-network-engineer-nl",
+  "slug": "azure-network-engineer",
+  "title": "Azure Network Engineer Associate (AZ-700)",
+  "description": "Ontwerp, implementeer en onderhoud Azure netwerkoplossingen",
+  "content": "Uitgebreide Azure netwerk training die virtuele netwerken, hybride connectiviteit, verkeersbeheer, netwerkbeveiliging en monitoring behandelt. Essentieel voor netwerk engineers die werken met Azure infrastructuur.",
+  "category": "Infrastructuur",
+  "subcategory": "Netwerken",
+  "difficulty": "Gemiddeld",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "prerequisites": [
+    "Begrip van netwerk fundamentals",
+    "Ervaring met Azure fundamentals",
+    "Kennis van hybride cloud concepten",
+    "Basiskennis van beveiligingsprincipes"
+  ],
+  "learningObjectives": [
+    {
+      "id": "hybrid-networking",
+      "title": "Ontwerp, implementeer en beheer hybride netwerken",
+      "description": "Ontwerp en implementeer hybride netwerkoplossingen",
+      "icon": "Globe"
+    },
+    {
+      "id": "core-networking",
+      "title": "Ontwerp en implementeer core netwerkinfrastructuur",
+      "description": "Ontwerp en implementeer core netwerkinfrastructuur in Azure",
+      "icon": "Network"
+    },
+    {
+      "id": "routing",
+      "title": "Ontwerp en implementeer routing",
+      "description": "Ontwerp en implementeer routing oplossingen voor Azure netwerken",
+      "icon": "Route"
+    },
+    {
+      "id": "secure-monitor",
+      "title": "Beveilig en monitor netwerken",
+      "description": "Beveilig en monitor Azure netwerkinfrastructuur",
+      "icon": "Shield"
+    },
+    {
+      "id": "private-access",
+      "title": "Ontwerp en implementeer private toegang tot Azure Services",
+      "description": "Ontwerp en implementeer private toegang tot Azure services",
+      "icon": "Lock"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Ervaren netwerkprofessional met 10+ jaar ervaring in enterprise netwerken en cloud infrastructuur.",
+    "expertise": [
+      "Azure Netwerken",
+      "Hybride Cloud",
+      "Netwerkbeveiliging",
+      "VPN Oplossingen"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-700",
+      "AZ-104",
+      "AZ-305"
+    ]
+  },
+  "price": {
+    "amount": 1295,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "Netwerken",
+    "AZ-700",
+    "Infrastructuur"
+  ],
+  "featured": false,
+  "certification": {
+    "available": true,
+    "name": "AZ-700",
+    "examCode": "AZ-700",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "icon": "Network",
+  "overview": "Uitgebreide Azure netwerk training die virtuele netwerken, hybride connectiviteit, verkeersbeheer, netwerkbeveiliging en monitoring behandelt. Essentieel voor netwerk engineers die werken met Azure infrastructuur.",
+  "whatYouWillLearn": [
+    {
+      "title": "Virtuele Netwerken & Core Infrastructuur",
+      "description": "Ontwerp en implementeer VNets, IP-adressering, DNS, segmentatie en peering"
+    },
+    {
+      "title": "Hybride Netwerken & Connectiviteit",
+      "description": "VPN-verbindingen, ExpressRoute, Virtual WAN en connectiviteitsdiensten"
+    },
+    {
+      "title": "Routing & Verkeersbeheer",
+      "description": "User-defined routes, Load Balancer, Application Gateway, Traffic Manager"
+    },
+    {
+      "title": "Netwerkbeveiliging & Monitoring",
+      "description": "NSGs, Azure Firewall, private endpoints en netwerkmonitoring"
+    }
+  ],
+  "modules": [
+    {
+      "id": "virtual-networks",
+      "title": "Virtuele Netwerken & Core Infrastructuur",
+      "description": "Ontwerp en implementeer core netwerkinfrastructuur in Azure",
+      "icon": "Network",
+      "duration": "6 uur",
+      "topics": [
+        "Ontwerp en implementeer Virtuele Netwerken (VNets)",
+        "Configureer IP-adressering en DNS",
+        "Implementeer netwerksegmentatie en peering",
+        "Ontwerp en implementeer subnets en netwerkbeleid"
+      ]
+    },
+    {
+      "id": "hybrid-connectivity",
+      "title": "Hybride Netwerken & Connectiviteit",
+      "description": "Ontwerp en implementeer hybride netwerkoplossingen",
+      "icon": "Globe",
+      "duration": "6 uur",
+      "topics": [
+        "Ontwerp en implementeer VPN-verbindingen",
+        "Configureer ExpressRoute connectiviteit",
+        "Implementeer Virtual WAN",
+        "Ontwerp en implementeer netwerkconnectiviteitsdiensten"
+      ]
+    },
+    {
+      "id": "routing-traffic",
+      "title": "Routing & Verkeersbeheer",
+      "description": "Ontwerp en implementeer routing oplossingen",
+      "icon": "Route",
+      "duration": "6 uur",
+      "topics": [
+        "Configureer user-defined routes (UDR)",
+        "Implementeer Azure Load Balancer",
+        "Ontwerp en implementeer Application Gateway",
+        "Configureer Traffic Manager en Front Door"
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Netwerkbeveiliging & Monitoring",
+      "description": "Beveilig en monitor Azure netwerkinfrastructuur",
+      "icon": "Shield",
+      "duration": "6 uur",
+      "topics": [
+        "Implementeer Network Security Groups (NSGs)",
+        "Configureer Azure Firewall en WAF",
+        "Implementeer private endpoints en service endpoints",
+        "Monitor en troubleshoot netwerkconnectiviteit"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "vnet-setup",
+      "title": "Virtueel Netwerk Configuratie",
+      "description": "Creëer en configureer virtuele netwerken, subnets en netwerkbeveiliging",
+      "icon": "Network",
+      "duration": "2 uur"
+    },
+    {
+      "id": "vpn-connection",
+      "title": "VPN Gateway Setup",
+      "description": "Implementeer en configureer VPN-verbindingen voor hybride netwerken",
+      "icon": "Globe",
+      "duration": "2 uur"
+    },
+    {
+      "id": "load-balancer",
+      "title": "Load Balancer Implementatie",
+      "description": "Configureer Azure Load Balancer voor verkeersdistributie",
+      "icon": "Server",
+      "duration": "1,5 uur"
+    },
+    {
+      "id": "network-security",
+      "title": "Network Security Groups",
+      "description": "Implementeer en configureer NSGs voor netwerkbeveiliging",
+      "icon": "Shield",
+      "duration": "1,5 uur"
+    },
+    {
+      "id": "monitoring-troubleshooting",
+      "title": "Netwerkmonitoring",
+      "description": "Monitor netwerkverkeer en troubleshoot connectiviteitsproblemen",
+      "icon": "BarChart",
+      "duration": "1 uur"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "3 dagen intensief",
+    "groupSize": "Max 12 deelnemers",
+    "certification": "AZ-700 Associate voorbereiding"
+  },
+  "targetAudience": [
+    "Netwerk engineers",
+    "Azure infrastructuur specialisten",
+    "Cloud architecten met focus op netwerken",
+    "Systeembeheerders die netwerkinfrastructuur beheren"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Netwerken is vaak het meest verkeerd begrepen aspect van de cloud. Ik heb hybride netwerken ontworpen voor wereldwijde enterprises, complexe connectiviteitsproblemen opgelost en netwerkprestaties geoptimaliseerd. Deze training ontraadselt Azure-netwerken met praktijkscenario's die ik ben tegengekomen."
+  }
+}

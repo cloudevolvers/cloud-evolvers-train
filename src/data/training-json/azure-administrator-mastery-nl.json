@@ -1,0 +1,194 @@
+{
+  "id": "azure-administrator-mastery-nl",
+  "slug": "azure-administrator-mastery",
+  "title": "Azure Administrator Mastery (AZ-104)",
+  "subtitle": "Beheers Geavanceerde Azure Administratie",
+  "description": "Beheers geavanceerde Azure administratie met uitgebreide resource management vaardigheden",
+  "overview": "Deze intensieve 4-daagse cursus behandelt geavanceerde Azure administratieconcepten en bereidt je voor op de AZ-104 certificering. Leer complexe Azure omgevingen te beheren, governance frameworks te implementeren en resource management op schaal te beheersen.",
+  "category": "Azure",
+  "subcategory": "Administratie",
+  "difficulty": "Gemiddeld",
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1495,
+    "currency": "EUR"
+  },
+  "featured": true,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "identity-governance",
+      "title": "Beheers Azure identiteiten en governance frameworks",
+      "description": "Leer geavanceerd identiteitsbeheer en governance implementatie in Azure",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-backup",
+      "title": "Implementeer geavanceerde opslag en backup oplossingen",
+      "description": "Configureer complexe opslag oplossingen en disaster recovery strategieën",
+      "icon": "Database"
+    },
+    {
+      "id": "compute-resources",
+      "title": "Implementeer en beheer complexe compute resources",
+      "description": "Beheers virtuele machines, containers en compute scaling oplossingen",
+      "icon": "Gear"
+    },
+    {
+      "id": "networking-connectivity",
+      "title": "Configureer netwerk en connectiviteit oplossingen",
+      "description": "Implementeer geavanceerde netwerkconfiguraties en beveiliging",
+      "icon": "Network"
+    },
+    {
+      "id": "monitoring-maintenance",
+      "title": "Monitor en onderhoud Azure omgevingen",
+      "description": "Stel uitgebreide monitoring en geautomatiseerd onderhoud op",
+      "icon": "Shield"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Implementeer beveiliging en compliance best practices",
+      "description": "Pas beveiligingsframeworks en compliance standaarden toe in Azure",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "AZ-900 certificering of gelijkwaardige Azure ervaring",
+    "PowerShell en Azure CLI vaardigheid",
+    "Netwerk fundamentals kennis",
+    "Minimaal 6 maanden Azure hands-on ervaring"
+  ],
+  "targetAudience": [
+    "Systeembeheerders",
+    "Infrastructuur engineers",
+    "Cloud administrators",
+    "AZ-104 certificeringskandidaten"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Azure Administrator",
+    "examCode": "AZ-104",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "AZ-104",
+    "Azure",
+    "Administrator",
+    "Infrastructuur",
+    "Governance"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-20T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Azure infrastructuur specialist met uitgebreide ervaring in enterprise cloud implementaties",
+    "experience": "10+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-104",
+      "AZ-305",
+      "AZ-500",
+      "AZ-700"
+    ]
+  },
+  "modules": [
+    {
+      "id": "identity-governance",
+      "title": "Identiteit & Governance",
+      "description": "Beheers Azure identiteitsbeheer en governance frameworks",
+      "duration": "8 uur",
+      "topics": [
+        "Azure Active Directory beheer",
+        "Role-based access control (RBAC)",
+        "Beleidsbeheer en compliance",
+        "Resource groups en subscriptions"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-solutions",
+      "title": "Opslag Oplossingen",
+      "description": "Implementeer geavanceerde opslag en backup oplossingen",
+      "duration": "8 uur",
+      "topics": [
+        "Storage accounts en blob services",
+        "File shares en sync services",
+        "Backup en disaster recovery",
+        "Opslag beveiliging en encryptie"
+      ],
+      "icon": "Database"
+    },
+    {
+      "id": "compute-resources",
+      "title": "Compute Resources",
+      "description": "Implementeer en beheer complexe compute resources",
+      "duration": "8 uur",
+      "topics": [
+        "Virtuele machines en scale sets",
+        "App Service en containers",
+        "Load balancing en verkeersbeheer",
+        "Automatisering en configuratiebeheer"
+      ],
+      "icon": "Gear"
+    },
+    {
+      "id": "networking-monitoring",
+      "title": "Netwerken & Monitoring",
+      "description": "Configureer netwerk en monitoring oplossingen",
+      "duration": "8 uur",
+      "topics": [
+        "Virtuele netwerken en subnets",
+        "Network security groups en firewalls",
+        "Azure Monitor en Log Analytics",
+        "Alerting en geautomatiseerde responses"
+      ],
+      "icon": "Network"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "identity-lab",
+      "title": "Azure AD en RBAC Configuratie",
+      "description": "Configureer Azure Active Directory en implementeer role-based access control",
+      "duration": "4 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-lab",
+      "title": "Geavanceerde Opslag Oplossingen",
+      "description": "Implementeer complexe opslag configuraties en backup strategieën",
+      "duration": "4 uur",
+      "icon": "Database"
+    },
+    {
+      "id": "compute-lab",
+      "title": "Compute Resource Beheer",
+      "description": "Implementeer en beheer virtuele machines en container oplossingen",
+      "duration": "4 uur",
+      "icon": "Gear"
+    },
+    {
+      "id": "networking-lab",
+      "title": "Netwerk Configuratie en Monitoring",
+      "description": "Configureer virtuele netwerken en implementeer monitoring oplossingen",
+      "duration": "4 uur",
+      "icon": "Network"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Het beheren van Azure op enterprise-schaal vereist meer dan alleen technische kennis—het vereist beproefde strategieën. Ik heb Azure-omgevingen beheerd voor organisaties met duizenden gebruikers, en ik heb geleerd wat wel en niet werkt. In deze training deel ik de praktijkgerichte beheerpatronen die talloze uren hebben bespaard en kritieke problemen hebben voorkomen."
+  }
+}

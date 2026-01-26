@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "slug": "azure-iot-developer-nl",
+    "title": "Azure IoT Developer Specialty",
+    "subtitle": "Bouw het Internet of Things Dat Industrieën Verandert",
+    "description": "De toekomst is verbonden, en jij gaat het bouwen. Deze cursus transformeert je van iemand die code schrijft naar iemand die intelligente systemen creëert die de fysieke en digitale wereld verbinden. Je beheerst Azure IoT technologieën die slimme steden, autonome fabrieken en levensreddende medische apparaten aandrijven - de vaardigheden die IoT ontwikkelaars die worden aangenomen scheiden van degenen die dat niet doen.",
+    "category": "IoT & Edge Computing",
+    "level": "Gemiddeld",
+    "duration": "4 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "IoT", "Edge Computing", "Device Management", "Streaming Analytics"],
+    "prerequisites": [
+      "Azure Fundamentals kennis (AZ-900)",
+      "Programmeerervaring in ten minste één taal (C#, Python, of JavaScript)",
+      "Begrip van cloud concepten en Azure diensten",
+      "Een passie voor het bouwen van systemen die de wereld slimmer maken"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-iot-hero.jpg",
+    "badge": "IoT Systems Architect",
+    "highlights": [
+      "Bouw IoT systemen die slimme steden en autonome fabrieken aandrijven",
+      "Beheers edge computing die data in milliseconden verwerkt",
+      "Creëer oplossingen die levens redden door predictive maintenance",
+      "Word lid van de elite ontwikkelaars die de verbonden toekomst bouwen"
+    ]
+  },
+  "overview": {
+    "summary": "IoT gaat niet alleen om apparaten verbinden - het gaat om het creëren van intelligente systemen die veranderen hoe industrieën opereren. Deze cursus leert je de Azure IoT vaardigheden die de ontwikkelaars die verbonden oplossingen bouwen scheiden van degenen die alleen code schrijven. Je leert IoT architecturen te creëren die schalen naar miljoenen apparaten, real-time data te verwerken aan de edge, en systemen te bouwen die storingen voorspellen voordat ze gebeuren. Aan het einde heb je de technische expertise en architecturale visie om IoT initiatieven te leiden die hele industrieën veranderen.",
+    "objectives": [
+      "Ontwerp IoT oplossing infrastructuur die wereldwijd schaalt",
+      "Bouw device management systemen die miljoenen verbonden apparaten afhandelen",
+      "Creëer edge computing oplossingen die data in real-time verwerken",
+      "Implementeer data pipelines die sensordata omzetten in actionable insights",
+      "Ontwikkel monitoring en troubleshooting systemen voor IoT deployments",
+      "Architect veilige IoT oplossingen die kritische infrastructuur beschermen"
+    ],
+    "targetAudience": "Deze cursus is voor ontwikkelaars die klaar zijn om IoT architecten te worden. Of je nu een backend ontwikkelaar bent die IoT expertise wilt toevoegen, een systems engineer die klaar is voor verbonden technologieën, of iemand die de infrastructuur wilt bouwen die slimme steden en autonome industrieën aandrijft - als je systemen wilt creëren die de wereld intelligenter en efficiënter maken, geeft deze cursus je de vaardigheden en mindset om de IoT ontwikkelaar te worden waar bedrijven om strijden."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure IoT Oplossing Architectuur",
+      "description": "Ontwerp en implementeer Azure IoT oplossing infrastructuur",
+      "duration": "6 uur",
+      "objectives": [
+        "Creëer Azure IoT Hub",
+        "Configureer IoT Hub beveiliging",
+        "Implementeer device provisioning",
+        "Stel Azure IoT Central in",
+        "Ontwerp IoT oplossing architectuur"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>IoT Oplossing Fundamentals</h3><p>Azure IoT diensten bieden een uitgebreid platform voor het bouwen van IoT oplossingen. Leer de kern infrastructuur componenten in te stellen en te configureren.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Azure IoT Diensten",
+            "items": [
+              "Azure IoT Hub voor device connectiviteit en management",
+              "Azure IoT Central voor SaaS IoT applicaties",
+              "Azure IoT Edge voor edge computing",
+              "Azure Stream Analytics voor real-time data verwerking",
+              "Azure Digital Twins voor digitale modellering"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "IoT Hub Setup Lab",
+          "description": "Creëer en configureer Azure IoT Hub",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "IoT Device Management",
+      "description": "Implementeer device provisioning en management",
+      "duration": "8 uur",
+      "objectives": [
+        "Implementeer device provisioning",
+        "Beheer device identities",
+        "Configureer device twins",
+        "Implementeer direct methods",
+        "Behandel device-to-cloud messaging"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Effectief device management is cruciaal voor IoT oplossingen. Leer IoT apparaten op schaal te provisionen, configureren en beheren.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/iot-device-management.jpg",
+            "alt": "IoT Device Management",
+            "caption": "Device provisioning, twins, en messaging"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Device Management Lab",
+          "description": "Implementeer device provisioning en management",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure IoT Edge Oplossingen",
+      "description": "Ontwikkel en deploy IoT Edge modules",
+      "duration": "8 uur",
+      "objectives": [
+        "Creëer IoT Edge modules",
+        "Deploy IoT Edge modules",
+        "Implementeer offline capabilities",
+        "Configureer IoT Edge beveiliging",
+        "Monitor IoT Edge deployments"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Edge Computing met Azure IoT Edge</h3><p>Azure IoT Edge maakt intelligentie aan de edge mogelijk. Leer IoT Edge modules te ontwikkelen, deployen en beheren voor het verwerken van data dichter bij de bron.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "IoT Edge Ontwikkeling Lab",
+          "description": "Creëer en deploy IoT Edge modules",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "IoT Data Verwerking en Analytics",
+      "description": "Verwerk en analyseer IoT data streams",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer Azure Stream Analytics",
+        "Verwerk real-time data",
+        "Sla IoT data op",
+        "Implementeer data visualisatie",
+        "Creëer alerts en notificaties"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>IoT genereert enorme hoeveelheden data. Leer IoT data te verwerken, analyseren en visualiseren met Azure diensten.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Analytics Lab",
+          "description": "Verwerk en analyseer IoT data streams",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1950,
+    "discountedPrice": 1560,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursusmaterialen",
+      "Hands-on lab toegang",
+      "AZ-220 examen voucher",
+      "Lunch en verfrissingen",
+      "Cursuscertificaat",
+      "Azure IoT Developer Specialty badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "IoT Solutions Architect",
+    "bio": "Yaïr is een IoT Solutions Architect met uitgebreide ervaring in het bouwen van industriële IoT oplossingen. Hij heeft talloze organisaties geholpen bij het implementeren van IoT projecten met Azure en andere cloud platformen.",
+    "certifications": [
+      "Microsoft Certified: Azure IoT Developer Specialty",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "AWS Certified IoT Specialty",
+      "Certified IoT Professional",
+      "PhD in Computer Engineering"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-08",
+        "endDate": "2024-04-11",
+        "location": "Amsterdam, Nederland",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure IoT Developer Specialty Leerpad",
+      "url": "https://learn.microsoft.com/nl-nl/training/paths/azure-iot-developer-specialty/",
+      "description": "Officiële Microsoft leerpad voor Azure IoT Developers"
+    },
+    {
+      "type": "video",
+      "title": "Azure IoT Ontwikkeling Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nF9QK",
+      "description": "Azure IoT ontwikkeling tutorials en best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-220 Oefentests",
+      "url": "https://practice.microsoft.com/exams/az-220",
+      "description": "Officiële oefentests voor AZ-220 certificering"
+    },
+    {
+      "type": "tool",
+      "title": "Azure IoT Explorer",
+      "url": "https://github.com/Azure/azure-iot-explorer",
+      "description": "Azure IoT Explorer voor device testen en management"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure IoT Developer Specialty",
+    "code": "AZ-220",
+    "description": "Demonstreer vaardigheden in het implementeren van Azure IoT diensten om IoT oplossingen te bouwen die device connectiviteit, data verwerking en visualisatie bevatten",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["Engels", "Spaans", "Frans", "Duits", "Chinees", "Japans"]
+    },
+    "skillsMeasured": [
+      "Stel de IoT oplossing infrastructuur in (15-20%)",
+      "Implementeer IoT device management (20-25%)",
+      "Implementeer IoT Edge oplossingen (20-25%)",
+      "Verwerk en beheer IoT data (15-20%)",
+      "Monitor en troubleshoot IoT oplossingen (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik IoT hardware nodig voor deze cursus?",
+      "answer": "Nee, deze cursus focust op Azure IoT diensten en software ontwikkeling. We gebruiken gesimuleerde apparaten en Azure IoT Explorer voor testen."
+    },
+    {
+      "question": "Welke programmeertalen worden behandeld?",
+      "answer": "De cursus behandelt C#, Python en JavaScript voor IoT ontwikkeling, met focus op Azure SDKs en IoT Edge modules."
+    },
+    {
+      "question": "Is deze cursus praktisch?",
+      "answer": "Ja, uitgebreide hands-on labs waar je complete IoT oplossingen bouwt met Azure IoT Hub, IoT Edge en Stream Analytics."
+    },
+    {
+      "question": "Welke Azure diensten leer ik?",
+      "answer": "Je leert Azure IoT Hub, IoT Central, IoT Edge, Stream Analytics, Digital Twins en gerelateerde Azure diensten."
+    }
+  ]
+}

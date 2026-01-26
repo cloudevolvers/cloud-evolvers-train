@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "slug": "microsoft-365-security-administrator",
+    "title": "Microsoft 365 Security Administrator",
+    "subtitle": "Master Microsoft 365 Security Operations",
+    "description": "Become an expert in Microsoft 365 security administration, mastering threat protection, data governance, and security operations for enterprise environments.",
+    "category": "Microsoft 365",
+    "level": "Advanced",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Microsoft 365", "Security", "Threat Protection", "Compliance", "Data Governance", "Security Operations"],
+    "prerequisites": [
+      "Microsoft 365 Fundamentals or equivalent knowledge",
+      "Understanding of security concepts",
+      "Experience with Windows administration",
+      "Knowledge of networking and cloud security",
+      "Azure AD fundamentals knowledge"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/m365-security-admin-hero.jpg",
+    "badge": "SC-200",
+    "highlights": [
+      "Threat protection expertise",
+      "Security operations mastery",
+      "Data governance",
+      "Compliance management"
+    ]
+  },
+  "overview": {
+    "summary": "Microsoft 365 Security Administrator training prepares you for the SC-200 certification by mastering Microsoft 365 security features, threat protection, data governance, and security operations in enterprise environments.",
+    "objectives": [
+      "Implement threat protection solutions",
+      "Manage security operations",
+      "Configure data loss prevention",
+      "Implement information protection",
+      "Manage compliance features",
+      "Monitor and respond to security incidents"
+    ],
+    "targetAudience": "Security administrators, IT professionals, and compliance officers who manage Microsoft 365 security in enterprise organizations."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Microsoft 365 Threat Protection",
+      "description": "Implement comprehensive threat protection solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure Azure AD Identity Protection",
+        "Implement Azure AD Conditional Access",
+        "Set up Microsoft Defender for Office 365",
+        "Configure Microsoft Defender for Endpoint",
+        "Implement Microsoft Defender for Identity",
+        "Manage threat intelligence"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Comprehensive Threat Protection</h3><p>Microsoft 365 provides integrated threat protection across identity, email, endpoints, and cloud applications to defend against modern cyber threats.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Threat Protection Components",
+            "items": [
+              "Azure AD Identity Protection",
+              "Microsoft Defender for Office 365",
+              "Microsoft Defender for Endpoint",
+              "Microsoft Defender for Identity",
+              "Microsoft Defender for Cloud Apps",
+              "Azure AD Conditional Access"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/m365/threat-protection.jpg",
+            "alt": "Microsoft 365 Threat Protection",
+            "caption": "Integrated Microsoft 365 threat protection architecture"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Threat Protection Lab",
+          "description": "Configure and test Microsoft 365 threat protection features",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Security Operations and Monitoring",
+      "description": "Master security operations and incident response",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure Microsoft 365 security center",
+        "Implement security monitoring",
+        "Set up alerting and automation",
+        "Manage incident response",
+        "Configure audit logging",
+        "Implement security scoring"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Security Operations Center</h3><p>The Microsoft 365 security center provides unified visibility and control over security across all Microsoft 365 services and workloads.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Security Operations Features",
+            "items": [
+              "Unified security dashboard",
+              "Incident management and response",
+              "Automated investigation and remediation",
+              "Threat analytics and reporting",
+              "Security policies and compliance",
+              "Integration with SIEM solutions"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Operations Lab",
+          "description": "Configure security monitoring and incident response",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Data Loss Prevention and Information Protection",
+      "description": "Implement data protection and compliance solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure data loss prevention (DLP) policies",
+        "Implement sensitivity labels",
+        "Set up retention policies",
+        "Configure Azure Information Protection",
+        "Manage encryption and rights management",
+        "Implement compliance policies"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Data loss prevention and information protection are critical for maintaining compliance and protecting sensitive information across Microsoft 365 services.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Data Protection Features",
+            "items": [
+              "Data Loss Prevention (DLP) policies",
+              "Sensitivity labels and classifications",
+              "Retention and deletion policies",
+              "Azure Information Protection",
+              "Rights Management Service (RMS)",
+              "Encryption and access controls"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Protection Lab",
+          "description": "Implement DLP and information protection policies",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Compliance Management and Auditing",
+      "description": "Master compliance features and audit capabilities",
+      "duration": "6 hours",
+      "objectives": [
+        "Configure compliance center",
+        "Implement audit logging",
+        "Set up compliance policies",
+        "Manage eDiscovery and retention",
+        "Configure communication compliance",
+        "Generate compliance reports"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Compliance and Governance</h3><p>Microsoft 365 compliance center provides comprehensive tools for managing regulatory compliance, data governance, and audit requirements.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Compliance Features",
+            "items": [
+              "Compliance Manager and Score",
+              "Audit logs and reporting",
+              "eDiscovery and content search",
+              "Data classification and labeling",
+              "Communication compliance",
+              "Information barriers"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Compliance Lab",
+          "description": "Configure compliance policies and audit features",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1600,
+    "discountedPrice": 1280,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft SC-200 training materials",
+      "Hands-on lab access with Microsoft 365 security features",
+      "Threat protection configuration guide",
+      "Security operations playbook",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Microsoft 365 Security Administrator badge"
+    ]
+  },
+  "instructor": {
+    "name": "Sarah Williams",
+    "title": "Chief Information Security Officer",
+    "bio": "Sarah is a seasoned cybersecurity professional with extensive experience in enterprise security operations and compliance. She has led security teams for multinational corporations and specializes in Microsoft 365 security implementations.",
+    "certifications": [
+      "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+      "Microsoft Certified: Security Administrator Associate",
+      "Certified Information Systems Security Professional (CISSP)",
+      "Certified Ethical Hacker (CEH)",
+      "Certified Information Security Manager (CISM)",
+      "GIAC Security Essentials (GSEC)"
+    ],
+    "image": "/images/instructors/sarah-williams.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-07-15",
+        "endDate": "2024-07-18",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Microsoft Learn - SC-200",
+      "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-security-compliance-and-identity/",
+      "description": "Official Microsoft learning path for SC-200 certification"
+    },
+    {
+      "type": "video",
+      "title": "Microsoft 365 Security Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nA",
+      "description": "Video tutorials for Microsoft 365 security features"
+    },
+    {
+      "type": "tool",
+      "title": "Microsoft 365 Security Center",
+      "url": "https://security.microsoft.com/",
+      "description": "Microsoft 365 security administration portal"
+    },
+    {
+      "type": "practice",
+      "title": "SC-200 Practice Tests",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/security-administrator/practice-assess/",
+      "description": "Official practice tests for SC-200 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Security Administrator Associate",
+    "code": "SC-200",
+    "description": "Demonstrate expertise in implementing, managing, and monitoring security and compliance solutions using Microsoft 365 and Azure AD",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Japanese", "Chinese (Simplified)", "Korean", "German", "French", "Spanish", "Portuguese (Brazil)", "Arabic", "Russian", "Chinese (Traditional)", "Italian", "Indonesian"]
+    },
+    "skillsMeasured": [
+      "Implement and manage threat protection (20-25%)",
+      "Implement and manage compliance and device management (15-20%)",
+      "Implement and manage identity and access management (20-25%)",
+      "Implement and manage security operations (25-30%)",
+      "Implement data loss prevention and information protection (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What Microsoft 365 licenses are required?",
+      "answer": "The course covers features that require Microsoft 365 E5 or equivalent licenses. We provide access to a demo environment for hands-on labs."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a highly technical course covering advanced security concepts and configurations. Prior security or IT administration experience is recommended."
+    },
+    {
+      "question": "What security tools are covered?",
+      "answer": "The course covers Microsoft Defender suite, Azure AD security features, compliance center, and security operations tools."
+    },
+    {
+      "question": "Will I learn about incident response?",
+      "answer": "Yes, incident management and response is a key component of the course, including automated investigation and remediation features."
+    }
+  ]
+}

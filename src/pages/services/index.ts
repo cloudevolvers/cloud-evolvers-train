@@ -1,0 +1,10 @@
+export { default as CloudManagementPage } from './CloudManagementPage';
+export { default as AzureMonitoringPage } from './AzureMonitoringPage';
+export { default as SecurityCompliancePage } from './SecurityCompliancePage';
+export { default as CostOptimizationPage } from './CostOptimizationPage';
+export { default as EnterpriseFileTransferPage } from './EnterpriseFileTransferPage';
+export { default as Microsoft365CopilotPage } from './Microsoft365CopilotPage';
+export { default as CloudEngineeringPage } from './CloudEngineeringPage';
+export { default as InfrastructureAsCodePage } from './InfrastructureAsCodePage';
+export { default as AIEngineeringPage } from './AIEngineeringPage';
+export { default as NetworkEngineeringPage } from './NetworkEngineeringPage';

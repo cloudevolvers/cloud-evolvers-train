@@ -1,0 +1,212 @@
+{
+  "id": "windows-server-hybrid-infrastructure",
+  "slug": "windows-server-hybrid-infrastructure",
+  "title": "Windows Server Hybride Infrastructuur",
+  "subtitle": "Configureer Windows Server Services in Hybride Omgevingen",
+  "description": "Configureer Windows Server services in hybride omgevingen",
+  "overview": "Geavanceerde training gericht op het configureren en beheren van Windows Server hybride infrastructuur. Leer on-premises en hybride oplossingen te implementeren en beheren zoals identiteit, management, compute, netwerken en opslag.",
+  "category": "Infrastructuur",
+  "subcategory": "Windows Server",
+  "difficulty": "Gevorderd",
+  "tags": [
+    "Windows Server",
+    "Hybride",
+    "AZ-801",
+    "Infrastructuur",
+    "Enterprise",
+    "Active Directory"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "hybrid-identity-services",
+      "title": "Hybride Identiteit Services",
+      "description": "Configureer Windows Server in hybride omgevingen met Azure AD integratie",
+      "icon": "Users"
+    },
+    {
+      "id": "compute-storage-hybrid",
+      "title": "Compute en Opslag in Hybride",
+      "description": "Implementeer en beheer compute en opslagoplossingen in hybride scenario's",
+      "icon": "Server"
+    },
+    {
+      "id": "hybrid-networking",
+      "title": "Hybride Netwerken",
+      "description": "Configureer geavanceerde netwerkservices voor hybride omgevingen",
+      "icon": "Network"
+    },
+    {
+      "id": "container-virtual-infrastructure",
+      "title": "Container en Virtuele Infrastructuur",
+      "description": "Beheer containers en virtuele infrastructuur in hybride setups",
+      "icon": "Box"
+    },
+    {
+      "id": "monitoring-maintenance",
+      "title": "Monitoring en Onderhoud",
+      "description": "Monitor en onderhoud hybride infrastructuur oplossingen",
+      "icon": "Activity"
+    }
+  ],
+  "modules": [
+    {
+      "id": "hybrid-identity-services",
+      "title": "Hybride Identiteit Services",
+      "description": "Configureer en beheer identiteitsservices in hybride omgevingen",
+      "icon": "Users",
+      "duration": "8 uur",
+      "topics": [
+        "Azure AD Connect implementatie en configuratie",
+        "Password writeback en self-service wachtwoord reset",
+        "Hybride authenticatie methoden",
+        "Azure AD Connect Health monitoring",
+        "Synchronisatie problemen oplossen"
+      ]
+    },
+    {
+      "id": "compute-storage-hybrid",
+      "title": "Compute en Opslag in Hybride",
+      "description": "Implementeer compute en opslagoplossingen voor hybride omgevingen",
+      "icon": "Server",
+      "duration": "8 uur",
+      "topics": [
+        "Windows Admin Center implementatie",
+        "Azure Arc voor servers",
+        "Storage Spaces Direct configuratie",
+        "Storage Replica implementatie",
+        "Backup en disaster recovery"
+      ]
+    },
+    {
+      "id": "hybrid-networking",
+      "title": "Hybride Netwerken",
+      "description": "Configureer geavanceerde netwerken voor hybride scenario's",
+      "icon": "Network",
+      "duration": "6 uur",
+      "topics": [
+        "DNS in hybride omgevingen",
+        "VPN en ExpressRoute connectiviteit",
+        "Network Load Balancing",
+        "Software Defined Networking",
+        "Netwerkbeveiliging implementatie"
+      ]
+    },
+    {
+      "id": "container-virtual-infrastructure",
+      "title": "Container en Virtuele Infrastructuur",
+      "description": "Beheer containers en virtuele infrastructuur",
+      "icon": "Box",
+      "duration": "6 uur",
+      "topics": [
+        "Windows containers op Server",
+        "Hyper-V configuratie en beheer",
+        "VM migratie strategieën",
+        "Azure Stack HCI integratie",
+        "Kubernetes op Windows Server"
+      ]
+    },
+    {
+      "id": "monitoring-maintenance",
+      "title": "Monitoring en Onderhoud",
+      "description": "Monitor en onderhoud hybride infrastructuur",
+      "icon": "Activity",
+      "duration": "4 uur",
+      "topics": [
+        "Azure Monitor integratie",
+        "Prestatie monitoring en tuning",
+        "Update management strategieën",
+        "Beveiligings compliance monitoring",
+        "Disaster recovery testing"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "aad-connect-lab",
+      "title": "Azure AD Connect Configuratie",
+      "description": "Configureer Azure AD Connect voor hybride identiteit",
+      "duration": "3 uur",
+      "icon": "Users"
+    },
+    {
+      "id": "storage-spaces-lab",
+      "title": "Storage Spaces Direct Setup",
+      "description": "Configureer Storage Spaces Direct voor hybride opslag",
+      "duration": "3 uur",
+      "icon": "Server"
+    },
+    {
+      "id": "hybrid-networking-lab",
+      "title": "Hybride Netwerk Configuratie",
+      "description": "Configureer hybride netwerken met VPN en ExpressRoute",
+      "duration": "3 uur",
+      "icon": "Network"
+    },
+    {
+      "id": "azure-arc-lab",
+      "title": "Azure Arc voor Servers",
+      "description": "Configureer Azure Arc voor hybride server management",
+      "duration": "3 uur",
+      "icon": "Cloud"
+    }
+  ],
+  "prerequisites": [
+    "Aanzienlijke ervaring met Windows Server beheer",
+    "Begrip van netwerk concepten",
+    "Bekendheid met Active Directory en Azure AD",
+    "Kennis van PowerShell scripting"
+  ],
+  "targetAudience": [
+    "Windows Server Beheerders",
+    "Hybride Infrastructuur Engineers",
+    "Systeem Beheerders",
+    "Infrastructuur Architecten"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Infrastructuur architect met 15+ jaar ervaring in Windows Server en hybride oplossingen. Gespecialiseerd in enterprise infrastructuur ontwerp en Azure integratie.",
+    "expertise": [
+      "Windows Server",
+      "Hybride Infrastructuur",
+      "Active Directory",
+      "Azure Integratie",
+      "Infrastructure as Code"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Windows Server Hybrid Administrator Associate",
+      "Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer",
+      "MCSE: Cloud Platform and Infrastructure"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Windows Server Hybrid Administrator Associate",
+    "examCode": "AZ-801",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-02-15"
+  },
+  "featured": false,
+  "icon": "Server",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Zelfs in een cloud-first wereld is Windows Server-expertise belangrijk. Ik heb hybride infrastructuren beheerd waarbij on-premises en Azure-resources naadloos samenwerken. Deze training behandelt de hybride scenario's die ik heb geïmplementeerd voor enterprise-klanten."
+  }
+}

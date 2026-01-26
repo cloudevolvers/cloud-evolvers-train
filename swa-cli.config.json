@@ -1,0 +1,13 @@
+{
+  "configurations": {
+    "app": {
+      "outputLocation": "dist",
+      "apiLocation": "api",
+      "appLocation": ".",
+      "appBuildCommand": "npm run build",
+      "apiBuildCommand": "npm run build --if-present",
+      "run": "npm start",
+      "appDevserverUrl": "http://localhost:5173"
+    }
+  }
+}

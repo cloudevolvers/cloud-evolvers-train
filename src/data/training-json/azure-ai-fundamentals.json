@@ -1,0 +1,207 @@
+{
+  "id": "azure-ai-fundamentals",
+  "slug": "azure-ai-fundamentals",
+  "title": "Azure AI Fundamentals (AI-900)",
+  "subtitle": "Introduction to Artificial Intelligence on Azure",
+  "description": "Learn the fundamentals of artificial intelligence and machine learning with Microsoft Azure AI services",
+  "overview": "This foundational course introduces you to the world of artificial intelligence and machine learning using Microsoft Azure. Perfect for beginners, this training covers AI concepts, Azure AI services, and practical applications without requiring programming experience.",
+  "category": "Azure",
+  "subcategory": "AI & Machine Learning",
+  "difficulty": "Beginner",
+  "tags": [
+    "Azure",
+    "AI",
+    "Machine Learning",
+    "AI-900",
+    "Fundamentals"
+  ],
+  "duration": {
+    "days": 2,
+    "format": "days"
+  },
+  "price": {
+    "amount": 795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-concepts",
+      "title": "AI and ML Concepts",
+      "description": "Understand fundamental AI and machine learning concepts and terminology",
+      "icon": "Brain"
+    },
+    {
+      "id": "azure-ai-services",
+      "title": "Azure AI Services",
+      "description": "Explore Azure Cognitive Services, Machine Learning, and Bot Framework",
+      "icon": "Cloud"
+    },
+    {
+      "id": "computer-vision",
+      "title": "Computer Vision",
+      "description": "Learn image analysis, object detection, and optical character recognition",
+      "icon": "Monitor"
+    },
+    {
+      "id": "nlp-services",
+      "title": "Natural Language Processing",
+      "description": "Discover text analysis, translation, and language understanding services",
+      "icon": "FileText"
+    },
+    {
+      "id": "conversational-ai",
+      "title": "Conversational AI",
+      "description": "Build intelligent bots and virtual assistants using Azure Bot Service",
+      "icon": "User"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Introduction to AI and Machine Learning",
+      "description": "Fundamental concepts, types of AI, and machine learning basics",
+      "icon": "Brain",
+      "duration": "4 hours",
+      "topics": [
+        "What is Artificial Intelligence?",
+        "Machine Learning fundamentals",
+        "Types of machine learning",
+        "AI ethics and responsible AI",
+        "Common AI workloads"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure AI Services Overview",
+      "description": "Introduction to Azure's AI and ML platform and services",
+      "icon": "Cloud",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Machine Learning service",
+        "Azure Cognitive Services overview",
+        "Azure Bot Framework",
+        "AI service pricing and deployment",
+        "Security and compliance in AI"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Computer Vision Workloads",
+      "description": "Image analysis, object detection, and visual recognition services",
+      "icon": "Monitor",
+      "duration": "3 hours",
+      "topics": [
+        "Computer Vision API",
+        "Custom Vision service",
+        "Face API and facial recognition",
+        "Form Recognizer for document processing",
+        "Video analysis capabilities"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Natural Language Processing",
+      "description": "Text analysis, language understanding, and translation services",
+      "icon": "FileText",
+      "duration": "3 hours",
+      "topics": [
+        "Text Analytics API",
+        "Language Understanding (LUIS)",
+        "Translator service",
+        "Speech services",
+        "Content moderation"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Conversational AI and Bots",
+      "description": "Building intelligent chatbots and virtual assistants",
+      "icon": "User",
+      "duration": "2 hours",
+      "topics": [
+        "Azure Bot Service fundamentals",
+        "Bot Framework SDK",
+        "QnA Maker service",
+        "Bot deployment and channels",
+        "Bot testing and analytics"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Exploring Azure Cognitive Services",
+      "description": "Hands-on exploration of Computer Vision and Text Analytics APIs",
+      "duration": "1.5 hours",
+      "icon": "Cloud"
+    },
+    {
+      "id": "lab-2",
+      "title": "Building a Custom Vision Model",
+      "description": "Create and train a custom image classification model",
+      "duration": "1 hour",
+      "icon": "Monitor"
+    },
+    {
+      "id": "lab-3",
+      "title": "Creating a Language Understanding App",
+      "description": "Build a LUIS application for natural language understanding",
+      "duration": "1 hour",
+      "icon": "FileText"
+    },
+    {
+      "id": "lab-4",
+      "title": "Building a Simple Chatbot",
+      "description": "Create and deploy a QnA Maker-powered chatbot",
+      "duration": "1.5 hours",
+      "icon": "User"
+    }
+  ],
+  "prerequisites": [
+    "Basic computer literacy",
+    "Familiarity with cloud computing concepts",
+    "No programming experience required"
+  ],
+  "targetAudience": [
+    "Business stakeholders interested in AI",
+    "Students beginning their AI journey",
+    "IT professionals exploring AI solutions",
+    "Project managers working on AI initiatives",
+    "Anyone seeking AI-900 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Specialized trainer with expertise in Azure AI services and machine learning fundamentals",
+    "expertise": [
+      "Azure AI Services",
+      "Machine Learning",
+      "Cognitive Services"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AI-900",
+      "AI-102",
+      "DP-100"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure AI Fundamentals",
+    "examCode": "AI-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Brain",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2025-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As someone who has guided hundreds of professionals into Azure, I've seen firsthand how the right foundation makes all the difference. I remember working with a team of traditional infrastructure engineers who were skeptical about cloud. After this training, they successfully migrated their first workloads to Azure and became cloud advocates. This course distills everything I wish I knew when I started with Azure."
+  }
+}

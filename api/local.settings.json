@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AZURE_STORAGE_ACCOUNT_NAME": "",
+    "AZURE_STORAGE_TABLE_ENDPOINT": "",
+    "PRICING_ADMIN_KEY": "",
+    "EMAIL_AZURE_TENANT_ID": "",
+    "EMAIL_AZURE_CLIENT_ID": "",
+    "EMAIL_AZURE_CLIENT_SECRET": "",
+    "EMAIL_SENDER": "",
+    "API_KEY": "",
+    "FRONTEND_API_KEY": "",
+    "UNSPLASH_API_KEY": "",
+    "PEXELS_API_KEY": "",
+    "PIXABAY_API_KEY": ""
+  }
+}

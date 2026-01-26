@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "slug": "cloud-management",
+      "id": "cloud-management",
+      "title": "Cloud Management"
+    },
+    {
+      "slug": "security-compliance",
+      "id": "security-compliance"
+    },
+    {
+      "slug": "microsoft-365-copilot",
+      "id": "microsoft-365-copilot"
+    },
+    {
+      "slug": "cloud-engineering",
+      "id": "cloud-engineering"
+    },
+    {
+      "slug": "infrastructure-as-code",
+      "id": "infrastructure-as-code"
+    },
+    {
+      "slug": "ai-engineering",
+      "id": "ai-engineering"
+    },
+    {
+      "slug": "network-engineering",
+      "id": "network-engineering"
+    },
+    {
+      "slug": "cost-optimization",
+      "id": "cost-optimization",
+      "title": "Cost Optimization"
+    }
+  ],
+  "lastUpdated": "2025-06-21T11:00:00Z"
+}

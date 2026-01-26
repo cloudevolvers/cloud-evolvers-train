@@ -1,0 +1,194 @@
+{
+  "id": "teams-advanced-administration",
+  "slug": "teams-advanced-administration",
+  "title": "Teams Advanced Administration",
+  "subtitle": "Enterprise Collaboration Management",
+  "description": "Master advanced Microsoft Teams administration and enterprise deployment",
+  "overview": "This comprehensive 2-day course covers advanced Teams administration, including enterprise architecture design, phone system deployment, meeting solutions, and governance policies. Learn to manage complex Teams environments at scale with best practices for security, compliance, and user adoption.",
+  "category": "Microsoft 365",
+  "subcategory": "Teams Administration",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "ChatCircle",
+  "learningObjectives": [
+    {
+      "id": "enterprise-architecture",
+      "title": "Design enterprise Teams architectures",
+      "description": "Design comprehensive Teams service architectures for enterprise environments",
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "phone-system",
+      "title": "Implement advanced calling solutions",
+      "description": "Deploy Teams Phone system with Direct Routing and Calling Plans",
+      "icon": "Phone"
+    },
+    {
+      "id": "meeting-solutions",
+      "title": "Configure advanced meeting solutions",
+      "description": "Manage Teams Rooms, live events, and meeting policies",
+      "icon": "VideoCamera"
+    },
+    {
+      "id": "governance-policies",
+      "title": "Configure Teams governance policies",
+      "description": "Implement governance policies for teams, channels, and apps",
+      "icon": "Gear"
+    },
+    {
+      "id": "integration-scenarios",
+      "title": "Manage Teams integration scenarios",
+      "description": "Configure integrations with third-party applications and services",
+      "icon": "ArrowRight"
+    },
+    {
+      "id": "performance-monitoring",
+      "title": "Monitor and optimize Teams performance",
+      "description": "Monitor Teams performance and implement optimization strategies",
+      "icon": "CheckCircle"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 administration experience",
+    "Teams basic administration knowledge",
+    "Understanding of networking concepts",
+    "PowerShell experience preferred"
+  ],
+  "targetAudience": [
+    "Teams administrators and specialists",
+    "Microsoft 365 administrators",
+    "Collaboration platform engineers",
+    "IT infrastructure professionals"
+  ],
+  "certification": {
+    "available": true,
+    "name": "MS-700 Managing Microsoft Teams",
+    "examCode": "MS-700",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft Teams",
+    "Collaboration",
+    "Communication",
+    "Enterprise",
+    "Phone System"
+  ],
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-20T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Teams administrator with extensive experience in enterprise collaboration platforms and Microsoft 365 ecosystems",
+    "experience": "8+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "MS-700",
+      "MS-900",
+      "MS-500",
+      "AZ-900"
+    ]
+  },
+  "modules": [
+    {
+      "id": "enterprise-teams-architecture",
+      "title": "Enterprise Teams Architecture",
+      "description": "Designing comprehensive Teams service architectures for enterprise environments",
+      "duration": "4 hours",
+      "topics": [
+        "Teams service architecture overview",
+        "Network planning and optimization",
+        "Security and compliance frameworks",
+        "Multi-geo and data residency"
+      ],
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "teams-phone-system",
+      "title": "Teams Phone System",
+      "description": "Implementing advanced calling solutions and phone system deployment",
+      "duration": "4 hours",
+      "topics": [
+        "Phone system deployment strategies",
+        "Direct Routing and Calling Plans",
+        "Auto attendants and call queues",
+        "Voice routing and policies"
+      ],
+      "icon": "Phone"
+    },
+    {
+      "id": "advanced-meeting-solutions",
+      "title": "Advanced Meeting Solutions",
+      "description": "Managing Teams Rooms, live events, and meeting configurations",
+      "duration": "4 hours",
+      "topics": [
+        "Teams Rooms and devices management",
+        "Live events and webinars",
+        "Meeting policies and configurations",
+        "Cloud Video Interop integration"
+      ],
+      "icon": "VideoCamera"
+    },
+    {
+      "id": "governance-management",
+      "title": "Governance & Management",
+      "description": "Implementing governance policies and management strategies",
+      "duration": "4 hours",
+      "topics": [
+        "Teams and channels governance",
+        "App and custom solution management",
+        "User adoption and change management",
+        "Performance monitoring and analytics"
+      ],
+      "icon": "Gear"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "teams-architecture-lab",
+      "title": "Teams Architecture Design",
+      "description": "Design and configure enterprise Teams architecture with network optimization",
+      "duration": "2 hours",
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "phone-system-lab",
+      "title": "Phone System Deployment",
+      "description": "Configure Teams Phone system with Direct Routing and call routing",
+      "duration": "2 hours",
+      "icon": "Phone"
+    },
+    {
+      "id": "meeting-solutions-lab",
+      "title": "Meeting Solutions Configuration",
+      "description": "Configure Teams Rooms, live events, and meeting policies",
+      "duration": "2 hours",
+      "icon": "VideoCamera"
+    },
+    {
+      "id": "governance-lab",
+      "title": "Governance and Policies",
+      "description": "Implement governance policies and monitor Teams performance",
+      "duration": "2 hours",
+      "icon": "Gear"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Microsoft 365 is more than just Office in the cloud. I've deployed M365 for thousands of users, integrated it with custom applications, and optimized collaboration workflows. This training shows you how to leverage M365's full potential based on real deployment experiences."
+  }
+}

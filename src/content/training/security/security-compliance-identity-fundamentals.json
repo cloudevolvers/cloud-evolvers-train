@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "slug": "security-compliance-identity-fundamentals",
+    "title": "Security, Compliance, and Identity Fundamentals",
+    "subtitle": "Microsoft security fundamentals",
+    "description": "Learn the fundamentals of security, compliance, and identity concepts in Microsoft 365 and Azure. Prepare for the SC-900 certification exam.",
+    "category": "Security Fundamentals",
+    "level": "Beginner",
+    "duration": "3 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Security", "Compliance", "Identity", "Microsoft 365", "Azure", "Fundamentals"],
+    "prerequisites": [
+      "Basic understanding of IT concepts",
+      "No prior security experience required",
+      "Familiarity with Microsoft 365 or Azure (helpful but not required)"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/security-fundamentals-hero.jpg",
+    "badge": "SC-900 Certification",
+    "highlights": [
+      "Security fundamentals",
+      "Compliance concepts",
+      "SC-900 certification preparation"
+    ]
+  },
+  "overview": {
+    "summary": "Security, Compliance, and Identity Fundamentals training introduces you to the core concepts of security, compliance, and identity across Microsoft 365 and Azure. Learn about cybersecurity threats, compliance requirements, and identity management principles.",
+    "objectives": [
+      "Describe security concepts and Microsoft security solutions",
+      "Describe compliance concepts and Microsoft compliance solutions",
+      "Describe identity concepts and Microsoft identity solutions"
+    ],
+    "targetAudience": "Anyone interested in learning about security, compliance, and identity fundamentals in Microsoft 365 and Azure, and preparing for the SC-900 certification exam."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Security Concepts",
+      "description": "Understand core security concepts and threats",
+      "duration": "6 hours",
+      "objectives": [
+        "Define basic security concepts",
+        "Describe types of security threats",
+        "Explain security principles",
+        "Understand encryption and hashing",
+        "Describe zero trust principles"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Security Fundamentals</h3><p>Security is everyone's responsibility. Learn the basic concepts of cybersecurity, common threats, and fundamental security principles that protect organizations.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Core Security Concepts",
+            "items": [
+              "Confidentiality, Integrity, and Availability (CIA triad)",
+              "Authentication, Authorization, and Accounting (AAA)",
+              "Defense in Depth security strategy",
+              "Zero Trust security model",
+              "Shared responsibility in cloud security"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Concepts Lab",
+          "description": "Explore security concepts and identify threats",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Microsoft Security Solutions",
+      "description": "Explore Microsoft security technologies and services",
+      "duration": "6 hours",
+      "objectives": [
+        "Describe Azure security services",
+        "Explain Microsoft 365 security features",
+        "Understand threat protection",
+        "Describe security management",
+        "Explain endpoint security"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Microsoft provides comprehensive security solutions across Azure and Microsoft 365. Learn about the security tools and services that protect organizations.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/microsoft365/security-solutions.jpg",
+            "alt": "Microsoft Security Solutions",
+            "caption": "Azure Security Center, Microsoft Defender, and compliance tools"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Solutions Lab",
+          "description": "Explore Microsoft security services and features",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Compliance Concepts",
+      "description": "Understand compliance requirements and frameworks",
+      "duration": "4 hours",
+      "objectives": [
+        "Define compliance concepts",
+        "Describe regulatory requirements",
+        "Explain data protection",
+        "Understand privacy principles",
+        "Describe compliance management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Compliance and Privacy</h3><p>Organizations must comply with various regulations and protect sensitive data. Learn about compliance frameworks and privacy principles.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Compliance Lab",
+          "description": "Explore compliance tools and data protection features",
+          "duration": "45 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Identity Concepts",
+      "description": "Learn about identity management and access control",
+      "duration": "4 hours",
+      "objectives": [
+        "Define identity concepts",
+        "Describe authentication methods",
+        "Explain authorization principles",
+        "Understand Azure AD",
+        "Describe access management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Identity is the foundation of security. Learn about identity management, authentication, and access control in Microsoft 365 and Azure.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Identity Lab",
+          "description": "Explore Azure AD and identity management features",
+          "duration": "45 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1200,
+    "discountedPrice": 960,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "SC-900 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Security Fundamentals badge"
+    ]
+  },
+  "instructor": {
+    "name": "Carlos Mendoza",
+    "title": "Security Solutions Consultant",
+    "bio": "Carlos is a Security Solutions Consultant with extensive experience in cybersecurity and compliance. He has helped organizations implement security best practices and achieve compliance with various regulatory frameworks.",
+    "certifications": [
+      "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+      "Microsoft Certified: Azure Security Engineer Associate",
+      "Certified Information Systems Security Professional (CISSP)",
+      "Certified Ethical Hacker (CEH)",
+      "Certified Information Security Manager (CISM)"
+    ],
+    "image": "/images/instructors/carlos-mendoza.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-05-06",
+        "endDate": "2024-05-08",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 18,
+        "maxSeats": 20
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Security, Compliance, and Identity Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/security-compliance-identity-fundamentals/",
+      "description": "Official Microsoft learning path for security fundamentals"
+    },
+    {
+      "type": "video",
+      "title": "Security Fundamentals Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nJ9QK",
+      "description": "Security, compliance, and identity tutorials"
+    },
+    {
+      "type": "practice-test",
+      "title": "SC-900 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/sc-900",
+      "description": "Official practice tests for SC-900 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Microsoft Security Documentation",
+      "url": "https://learn.microsoft.com/en-us/security/",
+      "description": "Microsoft security documentation and best practices"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Security, Compliance, and Identity Fundamentals",
+    "code": "SC-900",
+    "description": "Demonstrate foundational knowledge of security, compliance, and identity concepts and related cloud-based Microsoft solutions",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 99,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Describe security concepts and Microsoft security solutions (30-35%)",
+      "Describe compliance concepts and Microsoft compliance solutions (25-30%)",
+      "Describe identity concepts and Microsoft identity solutions (20-25%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need prior security experience?",
+      "answer": "No, this is a fundamentals course designed for beginners. No prior security knowledge is required."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "This course covers concepts and principles rather than deep technical implementation. It's suitable for business users and IT professionals."
+    },
+    {
+      "question": "What Microsoft services are covered?",
+      "answer": "You'll learn about Azure security services, Microsoft 365 security features, Azure AD, and compliance tools."
+    },
+    {
+      "question": "Is this a good starting point?",
+      "answer": "Yes, SC-900 is perfect for anyone new to Microsoft security. It provides the foundation for more advanced security certifications."
+    }
+  ]
+}

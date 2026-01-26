@@ -1,0 +1,209 @@
+{
+  "id": "azure-ai-developer-bootcamp",
+  "slug": "azure-ai-developer-bootcamp",
+  "title": "Azure AI Developer Bootcamp",
+  "subtitle": "Bouw Intelligente Applicaties met Azure AI",
+  "description": "Intensieve hands-on training voor het bouwen van AI-oplossingen met Azure Cognitive Services",
+  "overview": "Intensieve bootcamp voor ontwikkelaars die geavanceerde AI-oplossingen willen bouwen met Azure Cognitive Services, Machine Learning en AI-services. Focus op praktische implementatie en real-world scenario's.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Ontwikkeling",
+  "difficulty": "Gevorderd",
+  "tags": [
+    "Azure",
+    "AI",
+    "Machine Learning",
+    "Cognitive Services",
+    "Computer Vision",
+    "NLP"
+  ],
+  "duration": {
+    "days": 3,
+    "format": "dagen"
+  },
+  "price": {
+    "amount": 1395,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "cognitive-services",
+      "title": "Azure Cognitive Services Integratie",
+      "description": "Bouw intelligente applicaties met Azure Cognitive Services API's en SDK's",
+      "icon": "Brain"
+    },
+    {
+      "id": "computer-vision",
+      "title": "Computer Vision Oplossingen",
+      "description": "Implementeer beeldanalyse, objectdetectie, OCR en aangepaste vision modellen",
+      "icon": "Eye"
+    },
+    {
+      "id": "language-processing",
+      "title": "Natural Language Processing",
+      "description": "Creëer oplossingen voor tekstanalyse, sentimentanalyse en taalbegrip",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "conversational-ai",
+      "title": "Conversational AI en Bots",
+      "description": "Bouw chatbots en conversational interfaces met Azure Bot Service",
+      "icon": "Bot"
+    },
+    {
+      "id": "ai-deployment",
+      "title": "AI Model Deployment",
+      "description": "Deploy en beheer AI-modellen in productieomgevingen",
+      "icon": "Rocket"
+    }
+  ],
+  "modules": [
+    {
+      "id": "cognitive-services-overview",
+      "title": "Azure Cognitive Services Overzicht",
+      "description": "Leer de fundamenten van Azure Cognitive Services architectuur en integratie",
+      "icon": "Brain",
+      "duration": "4 uur",
+      "topics": [
+        "Cognitive Services architectuur",
+        "Service authenticatie en beveiliging",
+        "SDK en REST API integratie",
+        "Multi-service resource management",
+        "Kostenoptimalisatie strategieën"
+      ]
+    },
+    {
+      "id": "computer-vision-solutions",
+      "title": "Computer Vision Oplossingen",
+      "description": "Implementeer computer vision mogelijkheden in applicaties",
+      "icon": "Eye",
+      "duration": "6 uur",
+      "topics": [
+        "Beeldanalyse en classificatie",
+        "Objectdetectie en herkenning",
+        "Optical Character Recognition (OCR)",
+        "Gezichtsdetectie en verificatie",
+        "Custom Vision model training"
+      ]
+    },
+    {
+      "id": "language-speech-processing",
+      "title": "Taal en Spraakverwerking",
+      "description": "Werk met natuurlijke taal en spraakservices",
+      "icon": "MessageSquare",
+      "duration": "6 uur",
+      "topics": [
+        "Tekstanalyse en sentimentanalyse",
+        "Taalbegrip (LUIS)",
+        "Spraak-naar-tekst en tekst-naar-spraak",
+        "Vertaalservices",
+        "Aangepaste taalmodellen"
+      ]
+    },
+    {
+      "id": "conversational-ai-development",
+      "title": "Conversational AI Ontwikkeling",
+      "description": "Bouw geavanceerde chatbots en conversational interfaces",
+      "icon": "Bot",
+      "duration": "4 uur",
+      "topics": [
+        "Azure Bot Service fundamenten",
+        "Conversational flow ontwerp",
+        "Multi-turn gesprekken",
+        "Bot testing en deployment",
+        "Analytics en monitoring"
+      ]
+    },
+    {
+      "id": "ai-model-management",
+      "title": "AI Model Management",
+      "description": "Deploy, monitor en beheer AI-modellen in productie",
+      "icon": "Rocket",
+      "duration": "4 uur",
+      "topics": [
+        "Model deployment strategieën",
+        "Container-based deployment",
+        "API management en beveiliging",
+        "Performance monitoring",
+        "Model versioning en updates"
+      ]
+    }
+  ],
+  "prerequisites": [
+    "Azure fundamenten kennis vereist",
+    "Programmeerervaring (Python/C#/.NET)",
+    "REST API integratie ervaring",
+    "Basis machine learning concepten"
+  ],
+  "targetAudience": [
+    "Software ontwikkelaars",
+    "AI/ML engineers",
+    "Cloud architects",
+    "Solution developers"
+  ],
+  "certificationInfo": {
+    "available": true,
+    "description": "Certificaat van deelname en competentie",
+    "validityPeriod": "2 jaar"
+  },
+  "whatsIncluded": [
+    "3 dagen intensieve training",
+    "Hands-on labs en projecten",
+    "Azure credits voor labs",
+    "Digitale materialen en resources",
+    "Certificaat van deelname",
+    "30 dagen email support na training"
+  ],
+  "deliveryOptions": [
+    {
+      "type": "in-person",
+      "title": "Klassikaal",
+      "description": "Op locatie training met directe interactie",
+      "available": true
+    },
+    {
+      "type": "virtual",
+      "title": "Virtueel",
+      "description": "Live online training met hands-on labs",
+      "available": true
+    },
+    {
+      "type": "hybrid",
+      "title": "Hybride",
+      "description": "Combinatie van klassikaal en virtueel",
+      "available": true
+    }
+  ],
+  "schedule": [
+    {
+      "day": 1,
+      "title": "AI Fundamenten en Computer Vision",
+      "sessions": [
+        "Azure Cognitive Services Overview",
+        "Hands-on: Computer Vision implementatie",
+        "Custom Vision model training"
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Taal en Spraakverwerking",
+      "sessions": [
+        "Natural Language Processing",
+        "Speech Services integratie",
+        "Hands-on: Tekstanalyse applicatie"
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Conversational AI en Deployment",
+      "sessions": [
+        "Bot Framework en Azure Bot Service",
+        "AI Model deployment strategieën",
+        "Capstone project en review"
+      ]
+    }
+  ],
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Als ontwikkelaar die tientallen cloud-native applicaties op Azure heeft gebouwd, heb ik elke fout gemaakt die mogelijk is—en ervan geleerd. Van serverless architecturen tot gecontaineriseerde workloads, ik laat je de ontwikkelpatronen zien die leiden tot onderhoudbare, schaalbare applicaties. Dit is geen theorie; dit is wat werkt in productie."
+  }
+}

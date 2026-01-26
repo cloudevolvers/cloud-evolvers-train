@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "slug": "azure-ai-engineer-associate",
+    "title": "Azure AI Engineer Associate",
+    "subtitle": "Design AI Systems That Scale to Millions",
+    "description": "Stop building AI toys. Learn to architect AI solutions that enterprises depend on. This course transforms you from someone who can use AI APIs to the engineer who designs, deploys, and maintains AI systems that power real businesses at massive scale.",
+    "category": "AI & Machine Learning",
+    "level": "Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "AI", "Machine Learning", "Cognitive Services", "Bot Framework", "Natural Language Processing", "System Architecture", "Scalability"],
+    "prerequisites": [
+      "The ability to think like an engineer, not just a developer",
+      "Basic understanding of cloud architecture",
+      "A desire to build systems that don't break under pressure"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-ai-hero.jpg",
+    "badge": "Enterprise AI Architecture",
+    "highlights": [
+      "Design AI systems that handle millions of users",
+      "Master the engineering principles behind scalable AI",
+      "Build production-ready AI that enterprises can trust",
+      "Lead AI implementation projects worth millions"
+    ]
+  },
+  "overview": {
+    "summary": "Most AI courses teach you how to call APIs. This course teaches you how to build AI systems that enterprises bet their business on. You'll learn the engineering principles that separate the AI solutions that work from those that fail spectacularly. From designing scalable architectures to implementing robust monitoring, you'll master the skills that make you the go-to person when companies need AI that actually works in production.",
+    "objectives": [
+      "Architect AI solutions that scale from prototype to enterprise",
+      "Design robust AI systems with proper error handling and monitoring",
+      "Implement security and compliance in AI deployments",
+      "Optimize AI performance and cost at massive scale",
+      "Build resilient AI pipelines that handle real-world challenges",
+      "Lead cross-functional teams in AI implementation projects"
+    ],
+    "targetAudience": "This course is for engineers who want to be the architects of AI systems, not just the people who use them. If you're tired of building AI demos and want to create AI solutions that power real businesses, if you want to lead AI initiatives that drive millions in revenue, if you're ready to move from AI consumer to AI producer - this course will give you the engineering mindset and technical skills to make it happen."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure AI Fundamentals and Planning",
+      "description": "Understand Azure AI services and plan AI solutions",
+      "duration": "6 hours",
+      "objectives": [
+        "Understand Azure AI services and capabilities",
+        "Plan Azure AI solutions",
+        "Manage Azure AI resources",
+        "Implement responsible AI practices"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure AI Platform Overview</h3><p>Azure provides a comprehensive suite of AI services. Learn to choose the right service for different AI scenarios and implement responsible AI practices.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Azure AI Services",
+            "items": [
+              "Azure Cognitive Services for pre-built AI capabilities",
+              "Azure Machine Learning for custom AI models",
+              "Azure Bot Services for conversational AI",
+              "Azure OpenAI Service for generative AI",
+              "Azure AI Search for intelligent search"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "AI Services Setup Lab",
+          "description": "Set up and configure Azure AI services",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure AI Vision Solutions",
+      "description": "Implement computer vision solutions with Azure",
+      "duration": "8 hours",
+      "objectives": [
+        "Analyze images with Azure AI Vision",
+        "Classify images with custom models",
+        "Detect objects in images",
+        "Extract text from images",
+        "Implement facial recognition solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure AI Vision services enable you to extract insights from images and videos. Learn to implement various computer vision scenarios.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/ai-vision.jpg",
+            "alt": "Azure AI Vision Services",
+            "caption": "Computer Vision, Custom Vision, and Face services"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Computer Vision Lab",
+          "description": "Build applications using Azure AI Vision services",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure AI Language Solutions",
+      "description": "Implement natural language processing solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Analyze text with Azure AI Language",
+        "Implement conversational language understanding",
+        "Build question answering solutions",
+        "Implement text analytics",
+        "Create custom language models"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Natural Language Processing</h3><p>Azure AI Language services help you understand and process natural language. Learn to implement text analysis, conversation understanding, and question answering.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Language Services Lab",
+          "description": "Implement NLP solutions using Azure AI Language",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Azure AI Speech Solutions",
+      "description": "Implement speech recognition and synthesis",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement speech recognition",
+        "Implement speech synthesis",
+        "Translate speech to text",
+        "Implement real-time speech translation",
+        "Create custom speech models"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure AI Speech services enable voice-enabled applications. Learn to implement speech-to-text, text-to-speech, and speech translation capabilities.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Speech Services Lab",
+          "description": "Build speech-enabled applications",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1900,
+    "discountedPrice": 1520,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AI-102 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure AI Engineer Associate badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "AI Solutions Architect",
+    "bio": "Yaïr is an AI Solutions Architect with deep expertise in machine learning and cognitive services. He has helped organizations implement AI solutions across various industries and holds multiple AI certifications.",
+    "certifications": [
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "Microsoft Certified: Azure Data Scientist Associate",
+      "AWS Certified Machine Learning - Specialty",
+      "Google Cloud Professional ML Engineer",
+      "PhD in Computer Science"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-11",
+        "endDate": "2024-03-14",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure AI Engineer Associate Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-ai-engineer-associate/",
+      "description": "Official Microsoft learning path for Azure AI Engineers"
+    },
+    {
+      "type": "video",
+      "title": "Azure AI Development Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nF8QK",
+      "description": "Azure AI services tutorials and demos"
+    },
+    {
+      "type": "practice-test",
+      "title": "AI-102 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/ai-102",
+      "description": "Official practice tests for AI-102 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure AI Studio",
+      "url": "https://ai.azure.com/",
+      "description": "Azure AI Studio for building AI applications"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
+    "code": "AI-102",
+    "description": "Demonstrate skills in using Azure AI services to build intelligent applications that use AI to enhance user experiences and solve business problems",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Plan and manage Azure AI solutions (15-20%)",
+      "Implement Azure AI Vision solutions (15-20%)",
+      "Implement Azure AI Language solutions (20-25%)",
+      "Implement Azure AI Speech solutions (10-15%)",
+      "Implement Azure AI Search solutions (10-15%)",
+      "Implement Azure OpenAI Service solutions (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need machine learning experience?",
+      "answer": "No, this course covers both pre-built AI services and custom model development. Basic programming knowledge is sufficient."
+    },
+    {
+      "question": "What programming languages are used?",
+      "answer": "The course uses Python, C#, and REST APIs. You'll work with Azure SDKs and the Azure portal."
+    },
+    {
+      "question": "Can I use Azure OpenAI Service?",
+      "answer": "Yes, the course includes Azure OpenAI Service implementation for generative AI scenarios."
+    },
+    {
+      "question": "Are there hands-on labs?",
+      "answer": "Yes, extensive hands-on labs where you'll build AI-powered applications using real Azure services."
+    }
+  ]
+}

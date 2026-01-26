@@ -1,0 +1,40 @@
+[
+  {
+    "id": "api-dashboard-platform",
+    "title": "Real-Time API Dashboard Platform",
+    "description": "Productierijp Azure Monitor integratie met KQL queries, real-time statuscontroles en uitgebreide performance analytics. Gebouwd met Next.js 15 en Azure SDK.",
+    "image": "/showcase/api-dashboard.png",
+    "icon": "api",
+    "category": "platform",
+    "url": "/showcase/api-dashboard-platform",
+    "features": ["Azure Monitor integratie", "KQL analytics", "Real-time statuscontroles", "Performance inzichten"],
+    "businessValue": {
+      "apiMonitoring": "Real-time",
+      "healthChecks": "Geautomatiseerd",
+      "performanceInsights": "Live data",
+      "azureIntegration": "Native SDK"
+    },
+    "createdAt": "2025-06-19T10:00:00.000Z",
+    "updatedAt": "2025-06-19T10:00:00.000Z",
+    "order": 1
+  },
+  {
+    "id": "file-management-system",
+    "title": "Enterprise Bestandsbeheersysteem",
+    "description": "Full-stack bestandsoverdrachtsysteem met Azure Storage integratie, real-time monitoring en multi-protocol ondersteuning. Verwerkt lokale uploads, externe overdrachten en Azure Blob/File Share operaties.",
+    "image": "/showcase/file-transfer.png",
+    "icon": "file-transfer",
+    "category": "file-management",
+    "url": "/showcase/file-management-system",
+    "features": ["Azure Storage integratie", "Real-time overdrachten", "Multi-protocol ondersteuning", "Voortgang monitoring"],
+    "businessValue": {
+      "storageTypes": "Blob + File Share",
+      "transferMethods": "Lokaal + Extern",
+      "monitoring": "Real-time voortgang",
+      "scalability": "Enterprise-klaar"
+    },
+    "createdAt": "2025-06-19T10:00:00.000Z",
+    "updatedAt": "2025-06-19T10:00:00.000Z",
+    "order": 2
+  }
+]

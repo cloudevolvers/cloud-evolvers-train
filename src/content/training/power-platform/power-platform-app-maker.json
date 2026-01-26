@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "slug": "power-platform-app-maker",
+    "title": "Power Platform App Maker Associate",
+    "subtitle": "Build apps with Microsoft Power Platform",
+    "description": "Master Power Apps, Power Automate, and Power BI for creating business applications. Prepare for the PL-100 certification exam.",
+    "category": "Low-Code Development",
+    "level": "Beginner to Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Power Platform", "Power Apps", "Power Automate", "Low-Code", "Business Applications"],
+    "prerequisites": [
+      "Basic understanding of business processes",
+      "Familiarity with Microsoft 365",
+      "No programming experience required",
+      "Understanding of data concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/power-platform-hero.jpg",
+    "badge": "PL-100 Certification",
+    "highlights": [
+      "No-code/low-code development",
+      "Power Apps and Automate",
+      "PL-100 certification preparation"
+    ]
+  },
+  "overview": {
+    "summary": "Power Platform App Maker Associate training teaches you to create business applications using Microsoft Power Platform. Learn to build canvas apps, model-driven apps, automate workflows, and create business intelligence solutions.",
+    "objectives": [
+      "Design business solutions",
+      "Create Power Apps",
+      "Create Power Automate",
+      "Analyze data with Power BI",
+      "Implement security and governance"
+    ],
+    "targetAudience": "Business analysts, developers, and IT professionals who want to create business applications using Microsoft Power Platform and prepare for the PL-100 certification exam."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Power Platform Fundamentals",
+      "description": "Understand Power Platform components and capabilities",
+      "duration": "6 hours",
+      "objectives": [
+        "Identify Power Platform components",
+        "Connect to data sources",
+        "Create basic apps and flows",
+        "Understand licensing and security",
+        "Plan Power Platform solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Microsoft Power Platform Overview</h3><p>Power Platform enables anyone to create business applications without extensive coding. Learn the core components and how they work together.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Power Platform Components",
+            "items": [
+              "Power Apps for building custom applications",
+              "Power Automate for workflow automation",
+              "Power BI for data analysis and visualization",
+              "Power Pages for creating websites",
+              "Dataverse for data storage and management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Platform Overview Lab",
+          "description": "Explore Power Platform components and create your first app",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Power Apps Development",
+      "description": "Create canvas and model-driven apps",
+      "duration": "10 hours",
+      "objectives": [
+        "Create canvas apps",
+        "Design model-driven apps",
+        "Connect to data sources",
+        "Implement app logic",
+        "Customize user interfaces"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Power Apps allows you to build professional applications quickly. Learn to create both canvas apps (pixel-perfect designs) and model-driven apps (data-focused).</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/powerplatform/power-apps.jpg",
+            "alt": "Power Apps Development",
+            "caption": "Canvas apps, model-driven apps, and data connections"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "App Development Lab",
+          "description": "Build canvas and model-driven applications",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Power Automate Workflows",
+      "description": "Create automated workflows and business processes",
+      "duration": "8 hours",
+      "objectives": [
+        "Create cloud flows",
+        "Build desktop flows",
+        "Connect to services and APIs",
+        "Implement approval processes",
+        "Monitor and troubleshoot flows"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Workflow Automation</h3><p>Power Automate enables you to automate repetitive tasks and business processes. Learn to create flows that connect different services and applications.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Automation Lab",
+          "description": "Create automated workflows and business processes",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Power BI Integration",
+      "description": "Create reports and dashboards with Power BI",
+      "duration": "6 hours",
+      "objectives": [
+        "Connect to data sources",
+        "Create basic reports",
+        "Design dashboards",
+        "Share and collaborate",
+        "Implement security"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Power BI integrates seamlessly with Power Apps and Power Automate. Learn to create compelling data visualizations and reports.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Power BI Lab",
+          "description": "Create reports and dashboards",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1650,
+    "discountedPrice": 1320,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "PL-100 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Power Platform App Maker Associate badge"
+    ]
+  },
+  "instructor": {
+    "name": "Anna Kowalski",
+    "title": "Power Platform Solutions Architect",
+    "bio": "Anna is a Power Platform Solutions Architect with extensive experience in low-code development and business process automation. She has helped organizations transform their operations using Microsoft Power Platform.",
+    "certifications": [
+      "Microsoft Certified: Power Platform App Maker Associate",
+      "Microsoft Certified: Power Platform Solution Architect Expert",
+      "Microsoft Certified: Power BI Data Analyst Associate",
+      "Certified Scrum Master (CSM)",
+      "MBA in Information Technology"
+    ],
+    "image": "/images/instructors/anna-kowalski.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-29",
+        "endDate": "2024-05-02",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 15,
+        "maxSeats": 18
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Power Platform App Maker Associate Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/power-platform-app-maker-associate/",
+      "description": "Official Microsoft learning path for Power Platform App Makers"
+    },
+    {
+      "type": "video",
+      "title": "Power Platform Development Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nI9QK",
+      "description": "Power Apps, Power Automate, and Power BI tutorials"
+    },
+    {
+      "type": "practice-test",
+      "title": "PL-100 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/pl-100",
+      "description": "Official practice tests for PL-100 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Power Platform Admin Center",
+      "url": "https://admin.powerplatform.microsoft.com/",
+      "description": "Power Platform administration and management portal"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Power Platform App Maker Associate",
+    "code": "PL-100",
+    "description": "Demonstrate skills in designing, creating, and managing business solutions using Microsoft Power Platform",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Design business solutions (15-20%)",
+      "Create Power Apps (40-45%)",
+      "Create Power Automate (15-20%)",
+      "Analyze data with Power BI (5-10%)",
+      "Implement security and governance (5-10%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need programming experience?",
+      "answer": "No, Power Platform is designed for low-code/no-code development. Basic Excel skills and understanding of business processes are helpful."
+    },
+    {
+      "question": "What Microsoft 365 license do I need?",
+      "answer": "You'll need a Microsoft 365 license with Power Apps and Power Automate included. Power BI Pro may be needed for advanced features."
+    },
+    {
+      "question": "Can I build mobile apps?",
+      "answer": "Yes, Power Apps can create responsive applications that work on phones, tablets, and desktops. You'll learn to design for multiple devices."
+    },
+    {
+      "question": "Is this course hands-on?",
+      "answer": "Yes, extensive hands-on labs where you'll build complete business applications, automated workflows, and data visualizations."
+    }
+  ]
+}

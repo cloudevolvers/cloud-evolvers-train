@@ -1,0 +1,194 @@
+{
+  "id": "microsoft-365-security-administrator-nl",
+  "slug": "microsoft-365-security-administrator",
+  "title": "Microsoft 365 Security Administrator",
+  "subtitle": "Geavanceerde Beveiliging en Compliance",
+  "description": "Beveilig Microsoft 365 omgevingen met geavanceerde beveiligingscontroles en compliance",
+  "overview": "Deze geavanceerde 3-daagse cursus behandelt uitgebreide Microsoft 365 beveiligingsadministratie. Leer geavanceerde threat protection te implementeren, security en compliance centers te configureren, information protection policies te beheren en effectief te reageren op beveiligingsincidenten.",
+  "category": "Beveiliging",
+  "subcategory": "Microsoft 365 Beveiliging",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1195,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "security-architecture",
+      "title": "Ontwerp uitgebreide beveiligingsarchitecturen",
+      "description": "Ontwerp veilige Microsoft 365 omgevingen met uitgebreide beveiligingsarchitecturen",
+      "icon": "Shield"
+    },
+    {
+      "id": "threat-protection",
+      "title": "Implementeer geavanceerde threat protection",
+      "description": "Configureer Microsoft Defender voor Office 365 en geavanceerde threat protection features",
+      "icon": "Warning"
+    },
+    {
+      "id": "security-compliance-centers",
+      "title": "Configureer security en compliance centers",
+      "description": "Configureer Microsoft 365 Defender portal en security compliance centers",
+      "icon": "Lock"
+    },
+    {
+      "id": "information-protection",
+      "title": "Beheer information protection policies",
+      "description": "Implementeer data loss prevention en information protection policies",
+      "icon": "Lock"
+    },
+    {
+      "id": "insider-risk-management",
+      "title": "Implementeer insider risk management",
+      "description": "Configureer insider risk management en communication compliance",
+      "icon": "Eye"
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Monitor en reageer op beveiligingsincidenten",
+      "description": "Monitor beveiligingsevents en reageer op incidenten met Microsoft 365 Defender",
+      "icon": "Eye"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 fundamentals kennis",
+    "Beveiligingsconcepten begrip",
+    "Azure Active Directory ervaring",
+    "Compliance framework bewustzijn"
+  ],
+  "targetAudience": [
+    "Beveiligingsadministrators en engineers",
+    "Compliance en risk professionals",
+    "Microsoft 365 administrators",
+    "Information security specialists"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Security Administrator Associate",
+    "examCode": "MS-500",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft 365",
+    "Beveiliging",
+    "Compliance",
+    "Threat Protection",
+    "Risk Management"
+  ],
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-15T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Microsoft 365 beveiligingsspecialist met uitgebreide ervaring in enterprise beveiliging en compliance",
+    "experience": "12+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "MS-500",
+      "SC-300",
+      "SC-900",
+      "AZ-500"
+    ]
+  },
+  "modules": [
+    {
+      "id": "security-architecture-strategy",
+      "title": "Beveiligingsarchitectuur & Strategie",
+      "description": "Ontwerp uitgebreide beveiligingsarchitecturen en strategieën",
+      "duration": "6 uur",
+      "topics": [
+        "M365 security posture assessment",
+        "Zero trust beveiligingsmodel",
+        "Security baseline configuratie",
+        "Risk management frameworks"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "advanced-threat-protection",
+      "title": "Geavanceerde Threat Protection",
+      "description": "Implementeer geavanceerde threat protection oplossingen",
+      "duration": "6 uur",
+      "topics": [
+        "Microsoft Defender voor Office 365",
+        "Safe Attachments en Safe Links",
+        "Anti-phishing en anti-spam policies",
+        "Threat hunting en onderzoek"
+      ],
+      "icon": "Warning"
+    },
+    {
+      "id": "information-protection-governance",
+      "title": "Information Protection & Governance",
+      "description": "Beheer information protection en governance",
+      "duration": "6 uur",
+      "topics": [
+        "Data Loss Prevention (DLP) policies",
+        "Sensitivity labels en protection",
+        "Retention policies en labels",
+        "Records management lifecycle"
+      ],
+      "icon": "Lock"
+    },
+    {
+      "id": "security-monitoring-compliance",
+      "title": "Beveiligingsmonitoring & Compliance",
+      "description": "Monitor beveiliging en zorg voor compliance",
+      "duration": "6 uur",
+      "topics": [
+        "Microsoft 365 Defender portal",
+        "Insider risk management",
+        "Communication compliance",
+        "Audit log analyse en rapportage"
+      ],
+      "icon": "Eye"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "defender-office-lab",
+      "title": "Microsoft Defender voor Office 365",
+      "description": "Configureer Microsoft Defender voor Office 365 en beveiligingsbeleid",
+      "duration": "3 uur",
+      "icon": "Warning"
+    },
+    {
+      "id": "dlp-policies-lab",
+      "title": "Data Loss Prevention Policies",
+      "description": "Implementeer en configureer DLP policies voor databescherming",
+      "duration": "3 uur",
+      "icon": "Lock"
+    },
+    {
+      "id": "defender-portal-lab",
+      "title": "Microsoft 365 Defender Portal",
+      "description": "Configureer en gebruik Microsoft 365 Defender portal voor beveiligingsmonitoring",
+      "duration": "3 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "compliance-center-lab",
+      "title": "Security & Compliance Center",
+      "description": "Configureer security en compliance center features",
+      "duration": "3 uur",
+      "icon": "Eye"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Het beheren van Azure op enterprise-schaal vereist meer dan alleen technische kennis—het vereist beproefde strategieën. Ik heb Azure-omgevingen beheerd voor organisaties met duizenden gebruikers, en ik heb geleerd wat wel en niet werkt. In deze training deel ik de praktijkgerichte beheerpatronen die talloze uren hebben bespaard en kritieke problemen hebben voorkomen."
+  }
+}

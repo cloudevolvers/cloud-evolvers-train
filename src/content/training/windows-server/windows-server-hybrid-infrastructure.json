@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "slug": "windows-server-hybrid-infrastructure",
+    "title": "Windows Server Hybrid Infrastructure",
+    "subtitle": "Master Hybrid Infrastructure Management",
+    "description": "Become an expert in Windows Server hybrid infrastructure, mastering high availability, disaster recovery, migration, and advanced infrastructure management in hybrid environments.",
+    "category": "Windows Server",
+    "level": "Advanced",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Windows Server", "Hybrid", "Infrastructure", "High Availability", "Disaster Recovery", "Migration", "Clustering"],
+    "prerequisites": [
+      "Windows Server administration experience",
+      "Understanding of virtualization",
+      "Knowledge of networking and storage",
+      "Experience with PowerShell",
+      "Basic Azure knowledge",
+      "Understanding of high availability concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/windows-server-infrastructure-hero.jpg",
+    "badge": "AZ-801",
+    "highlights": [
+      "High availability solutions",
+      "Disaster recovery",
+      "Infrastructure migration",
+      "Hybrid monitoring"
+    ]
+  },
+  "overview": {
+    "summary": "Windows Server Hybrid Infrastructure training prepares you for the AZ-801 certification by mastering hybrid infrastructure management, including high availability, disaster recovery, migration, and advanced Windows Server features.",
+    "objectives": [
+      "Implement high availability solutions",
+      "Configure disaster recovery",
+      "Plan and implement migration",
+      "Monitor hybrid infrastructure",
+      "Implement security solutions",
+      "Manage hybrid storage and compute"
+    ],
+    "targetAudience": "Infrastructure administrators, system engineers, and IT professionals who manage Windows Server hybrid infrastructures in enterprise environments."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "High Availability Solutions",
+      "description": "Implement Windows Server high availability",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure Windows Server failover clustering",
+        "Implement Network Load Balancing (NLB)",
+        "Set up Hyper-V high availability",
+        "Configure Storage Spaces Direct",
+        "Implement stretched clustering",
+        "Manage cluster resources"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>High Availability Architecture</h3><p>High availability ensures business continuity by implementing redundant systems and automatic failover capabilities for critical Windows Server workloads.</p>"
+          },
+          {
+            "type": "list",
+            "title": "High Availability Technologies",
+            "items": [
+              "Windows Server Failover Clustering",
+              "Network Load Balancing (NLB)",
+              "Hyper-V Replica and clustering",
+              "Storage Spaces Direct (S2D)",
+              "Stretched cluster configurations",
+              "Azure Site Recovery integration"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/windows-server/high-availability.jpg",
+            "alt": "High Availability Architecture",
+            "caption": "Windows Server high availability solutions"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "High Availability Lab",
+          "description": "Configure Windows Server high availability solutions",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Disaster Recovery and Backup",
+      "description": "Implement comprehensive disaster recovery solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure Azure Backup for Windows Server",
+        "Implement Azure Site Recovery",
+        "Set up Hyper-V Replica",
+        "Configure backup policies",
+        "Implement disaster recovery testing",
+        "Manage recovery plans"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Disaster Recovery Strategy</h3><p>Comprehensive disaster recovery ensures data protection and business continuity through backup, replication, and recovery solutions integrated with Azure.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Disaster Recovery Solutions",
+            "items": [
+              "Azure Backup for comprehensive protection",
+              "Azure Site Recovery for failover",
+              "Hyper-V Replica for VM replication",
+              "Windows Server Backup integration",
+              "Disaster recovery testing procedures",
+              "Recovery plan management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Disaster Recovery Lab",
+          "description": "Configure disaster recovery and backup solutions",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Infrastructure Migration and Modernization",
+      "description": "Plan and implement infrastructure migration",
+      "duration": "8 hours",
+      "objectives": [
+        "Assess migration readiness",
+        "Plan migration strategies",
+        "Implement Storage Migration Service",
+        "Configure Windows Server Migration Tools",
+        "Migrate to Azure",
+        "Modernize legacy applications"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Infrastructure migration enables organizations to modernize their Windows Server environments while maintaining business continuity and optimizing costs.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Migration Strategies",
+            "items": [
+              "Assessment and planning methodologies",
+              "Storage Migration Service implementation",
+              "Windows Server Migration Tools",
+              "Azure Migrate for assessment",
+              "Lift and shift migrations",
+              "Application modernization approaches"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Migration Lab",
+          "description": "Plan and execute infrastructure migration",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Hybrid Monitoring and Security",
+      "description": "Implement hybrid monitoring and security solutions",
+      "duration": "6 hours",
+      "objectives": [
+        "Configure Azure Monitor for Windows Server",
+        "Implement Azure Security Center",
+        "Set up Log Analytics integration",
+        "Configure Windows Defender",
+        "Implement security baselines",
+        "Monitor hybrid performance"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Hybrid Monitoring</h3><p>Hybrid monitoring provides unified visibility and security management across on-premises and Azure environments using integrated monitoring and security tools.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Monitoring and Security",
+            "items": [
+              "Azure Monitor integration",
+              "Azure Security Center for servers",
+              "Log Analytics workspace configuration",
+              "Windows Defender ATP integration",
+              "Security baseline implementation",
+              "Performance monitoring and alerting"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring Lab",
+          "description": "Configure hybrid monitoring and security",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1400,
+    "discountedPrice": 1120,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft AZ-801 training materials",
+      "Hands-on lab access with hybrid infrastructure",
+      "Azure subscription credits for labs",
+      "Infrastructure management guide",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Windows Server Hybrid Infrastructure badge"
+    ]
+  },
+  "instructor": {
+    "name": "Lisa Thompson",
+    "title": "Principal Infrastructure Architect",
+    "bio": "Lisa is a Principal Infrastructure Architect specializing in Windows Server hybrid deployments and enterprise infrastructure modernization. She has led numerous large-scale Windows Server migration projects and disaster recovery implementations.",
+    "certifications": [
+      "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "VMware Certified Professional (VCP)",
+      "Cisco Certified Network Professional (CCNP)",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/lisa-thompson.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-09-09",
+        "endDate": "2024-09-12",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Windows Server Infrastructure Documentation",
+      "url": "https://learn.microsoft.com/en-us/windows-server/",
+      "description": "Official Windows Server infrastructure documentation"
+    },
+    {
+      "type": "video",
+      "title": "Windows Server Infrastructure Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nG",
+      "description": "Video tutorials for Windows Server infrastructure"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Migrate",
+      "url": "https://learn.microsoft.com/en-us/azure/migrate/",
+      "description": "Azure Migrate documentation and tools"
+    },
+    {
+      "type": "practice",
+      "title": "AZ-801 Practice Tests",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/windows-server-hybrid-administrator-associate/practice-assess/",
+      "description": "Official practice tests for AZ-801 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+    "code": "AZ-801",
+    "description": "Demonstrate expertise in implementing and managing hybrid solutions using Windows Server and Azure technologies",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Japanese", "Chinese (Simplified)", "Korean", "German", "French", "Spanish", "Portuguese (Brazil)", "Arabic", "Russian", "Chinese (Traditional)", "Italian", "Indonesian"]
+    },
+    "skillsMeasured": [
+      "Secure Windows Server on-premises and hybrid infrastructures (25-30%)",
+      "Implement and manage Windows Server high availability (20-25%)",
+      "Implement disaster recovery (15-20%)",
+      "Migrate servers and workloads (20-25%)",
+      "Monitor and troubleshoot Windows Server environments (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need physical servers for labs?",
+      "answer": "No, all labs are conducted in virtual environments. We provide access to Azure VMs and on-premises virtual labs for hands-on practice."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a highly technical course requiring Windows Server administration experience and understanding of infrastructure concepts."
+    },
+    {
+      "question": "What clustering technologies are covered?",
+      "answer": "The course covers Windows Server Failover Clustering, Network Load Balancing, Storage Spaces Direct, and stretched cluster configurations."
+    },
+    {
+      "question": "Will I learn about Azure migration tools?",
+      "answer": "Yes, the course includes Azure Migrate, Azure Site Recovery, and various migration tools for moving Windows Server workloads to Azure."
+    }
+  ]
+}

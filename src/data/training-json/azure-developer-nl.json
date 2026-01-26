@@ -1,0 +1,205 @@
+{
+  "id": "azure-developer",
+  "slug": "azure-developer",
+  "title": "Azure Developer Associate",
+  "subtitle": "Ontwikkel Cloud Oplossingen met Azure",
+  "description": "Ontwikkel cloud oplossingen met Azure services en tools",
+  "overview": "Uitgebreide developer training gericht op het bouwen van cloud applicaties en services op Microsoft Azure. Leer het ontwerpen, bouwen, testen en onderhouden van cloud applicaties en services, gebruikmakend van Azure services voor compute, storage, databases en beveiliging.",
+  "category": "Developer Tools",
+  "subcategory": "Azure Ontwikkeling",
+  "difficulty": "Gemiddeld",
+  "tags": [
+    "Azure",
+    "Ontwikkeling",
+    "Cloud Computing",
+    "APIs",
+    "Beveiliging"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "dagen"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "compute-solutions",
+      "title": "Ontwikkel Azure Compute Oplossingen",
+      "description": "Ontwikkel Azure compute oplossingen met Azure Functions, Logic Apps, App Service, containers en Kubernetes",
+      "icon": "Server"
+    },
+    {
+      "id": "storage-solutions",
+      "title": "Implementeer Azure Storage Oplossingen",
+      "description": "Werk met Azure Storage accounts, Blob storage, Cosmos DB en andere dataservices",
+      "icon": "Database"
+    },
+    {
+      "id": "security-authentication",
+      "title": "Implementeer Authenticatie en Beveiliging",
+      "description": "Secure applicaties met Azure Active Directory, Key Vault en managed identities",
+      "icon": "Shield"
+    },
+    {
+      "id": "monitoring-optimization",
+      "title": "Monitor en Optimaliseer Oplossingen",
+      "description": "Implementeer monitoring, logging en performance optimalisatie voor Azure applicaties",
+      "icon": "Chart"
+    },
+    {
+      "id": "integration-solutions",
+      "title": "Ontwikkel Integratie Oplossingen",
+      "description": "Bouw API Management, Event Grid, Service Bus en andere integratie services",
+      "icon": "Link"
+    }
+  ],
+  "modules": [
+    {
+      "id": "azure-compute-services",
+      "title": "Azure Compute Services",
+      "description": "Leer werken met Azure App Service, Functions, Container Instances en AKS",
+      "icon": "Server",
+      "duration": "8 uur",
+      "topics": [
+        "Azure App Service web apps en API apps",
+        "Azure Functions serverless computing",
+        "Container development met Azure Container Instances",
+        "Kubernetes en Azure Kubernetes Service (AKS)",
+        "Azure Logic Apps voor workflow automatisering"
+      ]
+    },
+    {
+      "id": "azure-storage-data",
+      "title": "Azure Storage en Data Services",
+      "description": "Werk met verschillende Azure data storage en database oplossingen",
+      "icon": "Database",
+      "duration": "8 uur",
+      "topics": [
+        "Azure Storage accounts en Blob storage",
+        "Azure Cosmos DB NoSQL database",
+        "Azure SQL Database relational data",
+        "Azure Cache for Redis",
+        "Data access patterns en best practices"
+      ]
+    },
+    {
+      "id": "security-authentication",
+      "title": "Beveiliging en Authenticatie",
+      "description": "Implementeer enterprise-grade beveiliging in Azure applicaties",
+      "icon": "Shield",
+      "duration": "6 uur",
+      "topics": [
+        "Azure Active Directory integratie",
+        "Managed identities voor Azure resources",
+        "Azure Key Vault voor secrets management",
+        "Application security en RBAC",
+        "Secure coding practices"
+      ]
+    },
+    {
+      "id": "monitoring-diagnostics",
+      "title": "Monitoring en Diagnostics",
+      "description": "Monitor applicatie prestaties en implementeer logging",
+      "icon": "Chart",
+      "duration": "4 uur",
+      "topics": [
+        "Azure Application Insights",
+        "Azure Monitor en Log Analytics",
+        "Custom metrics en dashboards",
+        "Troubleshooting en debugging",
+        "Performance optimalisatie"
+      ]
+    }
+  ],
+  "prerequisites": [
+    "Programmeerervaring in C#, Python, JavaScript of Java",
+    "Basis kennis van REST APIs en web development",
+    "Fundamentele kennis van cloud computing concepten",
+    "Azure fundamentals kennis aanbevolen"
+  ],
+  "targetAudience": [
+    "Software ontwikkelaars",
+    "Application developers",
+    "Cloud developers",
+    "DevOps engineers"
+  ],
+  "certificationInfo": {
+    "available": true,
+    "examCode": "AZ-204",
+    "examName": "Developing Solutions for Microsoft Azure",
+    "description": "Bereid je voor op het AZ-204 examen en word Azure Developer Associate",
+    "validityPeriod": "2 jaar"
+  },
+  "whatsIncluded": [
+    "4 dagen intensieve training",
+    "Hands-on labs en practical exercises",
+    "Azure credits voor labs",
+    "Officiële Microsoft courseware",
+    "Certificering exam voucher",
+    "30 dagen post-training support"
+  ],
+  "deliveryOptions": [
+    {
+      "type": "in-person",
+      "title": "Klassikaal",
+      "description": "Op locatie training met directe begeleiding",
+      "available": true
+    },
+    {
+      "type": "virtual",
+      "title": "Virtueel",
+      "description": "Live online training met hands-on labs",
+      "available": true
+    },
+    {
+      "type": "hybrid",
+      "title": "Hybride",
+      "description": "Combinatie van klassikaal en virtueel",
+      "available": true
+    }
+  ],
+  "schedule": [
+    {
+      "day": 1,
+      "title": "Azure Compute Solutions",
+      "sessions": [
+        "Azure App Service configuratie",
+        "Azure Functions development",
+        "Container-based solutions"
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Storage en Data Services",
+      "sessions": [
+        "Azure Storage en Blob services",
+        "Cosmos DB development",
+        "SQL Database integratie"
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Beveiliging en Authenticatie",
+      "sessions": [
+        "Azure AD integratie",
+        "Key Vault en managed identities",
+        "Secure coding practices"
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Monitoring en Deployment",
+      "sessions": [
+        "Application Insights setup",
+        "CI/CD pipeline development",
+        "Performance monitoring"
+      ]
+    }
+  ],
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Als ontwikkelaar die tientallen cloud-native applicaties op Azure heeft gebouwd, heb ik elke fout gemaakt die mogelijk is—en ervan geleerd. Van serverless architecturen tot gecontaineriseerde workloads, ik laat je de ontwikkelpatronen zien die leiden tot onderhoudbare, schaalbare applicaties. Dit is geen theorie; dit is wat werkt in productie."
+  }
+}

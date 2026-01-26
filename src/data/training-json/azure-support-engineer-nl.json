@@ -1,0 +1,193 @@
+{
+  "id": "azure-support-engineer-nl",
+  "slug": "azure-support-engineer",
+  "title": "Azure Support Engineer Excellence",
+  "subtitle": "Technische Support en Troubleshooting",
+  "description": "Beheers Azure technische support en troubleshooting methodologieën",
+  "overview": "Deze uitgebreide 2-daagse cursus richt zich op het ontwikkelen van geavanceerde Azure support vaardigheden. Leer systematische troubleshooting benaderingen, diagnostische tools en klantenservice excellence om een expert Azure support engineer te worden.",
+  "category": "Azure Support",
+  "subcategory": "Support Engineering",
+  "difficulty": "Gemiddeld",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Headset",
+  "learningObjectives": [
+    {
+      "id": "troubleshooting-methodologies",
+      "title": "Beheers Azure troubleshooting methodologieën",
+      "description": "Leer systematische benaderingen voor Azure probleemoplossing",
+      "icon": "Headset"
+    },
+    {
+      "id": "problem-resolution",
+      "title": "Implementeer systematische probleemoplossing",
+      "description": "Pas gestructureerde methoden toe voor het oplossen van complexe Azure problemen",
+      "icon": "Wrench"
+    },
+    {
+      "id": "diagnostic-tools",
+      "title": "Gebruik geavanceerde diagnostische tools effectief",
+      "description": "Beheers Azure diagnostische tools en monitoring oplossingen",
+      "icon": "Bug"
+    },
+    {
+      "id": "customer-escalations",
+      "title": "Behandel complexe klant escalaties",
+      "description": "Beheer hoge prioriteit klant problemen en escalaties",
+      "icon": "Headset"
+    },
+    {
+      "id": "root-cause-analysis",
+      "title": "Pas root cause analyse technieken toe",
+      "description": "Voer grondige root cause analyse uit voor Azure problemen",
+      "icon": "Bug"
+    },
+    {
+      "id": "knowledge-sharing",
+      "title": "Documenteer en deel kennis effectief",
+      "description": "Creëer documentatie en deel kennis met teams",
+      "icon": "ChartLineUp"
+    }
+  ],
+  "prerequisites": [
+    "Azure fundamentals certificering (AZ-900)",
+    "Basis Azure administratie ervaring",
+    "Klantenservice of support ervaring",
+    "Begrip van IT service management"
+  ],
+  "targetAudience": [
+    "Technische support engineers",
+    "Azure support specialisten",
+    "IT help desk professionals",
+    "Cloud support consultants"
+  ],
+  "certification": {
+    "available": false,
+    "name": "Niet van toepassing",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Azure",
+    "Support",
+    "Troubleshooting",
+    "Klantenservice",
+    "Probleemoplossing"
+  ],
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-05T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Ervaren Azure support engineer met diepgaande expertise in troubleshooting en klantenservice",
+    "experience": "8+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-104",
+      "AZ-303",
+      "AZ-304",
+      "ITIL"
+    ]
+  },
+  "modules": [
+    {
+      "id": "support-fundamentals",
+      "title": "Support Fundamentals",
+      "description": "Begrijp Azure support ecosysteem en best practices",
+      "duration": "4 uur",
+      "topics": [
+        "Azure support ecosysteem overzicht",
+        "Klantcommunicatie best practices",
+        "Incident management procedures",
+        "Escalatie paden en protocollen"
+      ],
+      "icon": "Headset"
+    },
+    {
+      "id": "diagnostic-tools-techniques",
+      "title": "Diagnostische Tools & Technieken",
+      "description": "Beheers Azure diagnostische en monitoring tools",
+      "duration": "4 uur",
+      "topics": [
+        "Azure Monitor en Log Analytics",
+        "Resource Health en Service Health",
+        "Azure Resource Graph queries",
+        "PowerShell en CLI diagnostics"
+      ],
+      "icon": "Wrench"
+    },
+    {
+      "id": "problem-resolution-methodologies",
+      "title": "Probleemoplossing Methodologieën",
+      "description": "Systematische benaderingen voor probleemoplossing",
+      "duration": "4 uur",
+      "topics": [
+        "Systematische troubleshooting benadering",
+        "Root cause analyse technieken",
+        "Service-specifieke troubleshooting",
+        "Prestatie optimalisatie strategieën"
+      ],
+      "icon": "Bug"
+    },
+    {
+      "id": "knowledge-management-excellence",
+      "title": "Kennisbeheer & Excellence",
+      "description": "Documentatie en continue verbetering",
+      "duration": "4 uur",
+      "topics": [
+        "Documentatie en kennis vastleggen",
+        "Case study analyse en delen",
+        "Continue verbeterprocessen",
+        "Team samenwerking en mentoring"
+      ],
+      "icon": "ChartLineUp"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "diagnostic-tools-lab",
+      "title": "Azure Diagnostische Tools",
+      "description": "Hands-on oefening met Azure Monitor en diagnostische tools",
+      "duration": "2 uur",
+      "icon": "Wrench"
+    },
+    {
+      "id": "troubleshooting-lab",
+      "title": "Systematische Troubleshooting",
+      "description": "Pas systematische troubleshooting toe op echte Azure scenario's",
+      "duration": "2 uur",
+      "icon": "Bug"
+    },
+    {
+      "id": "case-studies-lab",
+      "title": "Case Study Analyse",
+      "description": "Analyseer echte Azure support cases en oplossingen",
+      "duration": "2 uur",
+      "icon": "Headset"
+    },
+    {
+      "id": "escalation-lab",
+      "title": "Escalatie Management",
+      "description": "Oefen met het behandelen van klant escalaties en communicatie",
+      "duration": "2 uur",
+      "icon": "ChartLineUp"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Gedurende mijn carrière als Microsoft Certified Trainer heb ik het voorrecht gehad om duizenden professionals te onderwijzen. Elke training die ik geef wordt verrijkt door praktijkimplementaties en praktische ervaring. Ik leer niet alleen concepten—ik deel wat daadwerkelijk werkt in productieomgevingen."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "id": "azure-ai-fundamentals-nl",
+  "slug": "azure-ai-fundamentals",
+  "title": "Azure AI Fundamentals (AI-900)",
+  "subtitle": "Introductie tot Kunstmatige Intelligentie op Azure",
+  "description": "Leer de fundamentals van kunstmatige intelligentie en machine learning met Microsoft Azure AI services",
+  "overview": "Deze fundamentele cursus introduceert je in de wereld van kunstmatige intelligentie en machine learning met Microsoft Azure. Perfect voor beginners, deze training behandelt AI concepten, Azure AI services en praktische toepassingen zonder programmeerervaring te vereisen.",
+  "category": "Azure",
+  "subcategory": "AI & Machine Learning",
+  "difficulty": "Beginner",
+  "tags": [
+    "Azure",
+    "AI",
+    "Machine Learning",
+    "AI-900",
+    "Fundamentals"
+  ],
+  "duration": {
+    "days": 2,
+    "format": "days"
+  },
+  "price": {
+    "amount": 795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-concepts",
+      "title": "AI en ML Concepten",
+      "description": "Begrijp fundamentele AI en machine learning concepten en terminologie",
+      "icon": "Brain"
+    },
+    {
+      "id": "azure-ai-services",
+      "title": "Azure AI Services",
+      "description": "Ontdek Azure Cognitive Services, Machine Learning en Bot Framework",
+      "icon": "Cloud"
+    },
+    {
+      "id": "computer-vision",
+      "title": "Computer Vision",
+      "description": "Leer beeldanalyse, objectdetectie en optische tekenherkenning",
+      "icon": "Monitor"
+    },
+    {
+      "id": "nlp-services",
+      "title": "Natural Language Processing",
+      "description": "Ontdek tekstanalyse, vertaling en taalbegrip services",
+      "icon": "FileText"
+    },
+    {
+      "id": "conversational-ai",
+      "title": "Conversational AI",
+      "description": "Bouw intelligente bots en virtuele assistenten met Azure Bot Service",
+      "icon": "User"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Introductie tot AI en Machine Learning",
+      "description": "Fundamentele concepten, types AI en machine learning basics",
+      "icon": "Brain",
+      "duration": "4 uur",
+      "topics": [
+        "Wat is Kunstmatige Intelligentie?",
+        "Machine Learning fundamentals",
+        "Types machine learning",
+        "AI ethiek en verantwoorde AI",
+        "Veelvoorkomende AI workloads"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure AI Services Overzicht",
+      "description": "Introductie tot Azure's AI en ML platform en services",
+      "icon": "Cloud",
+      "duration": "4 uur",
+      "topics": [
+        "Azure Machine Learning service",
+        "Azure Cognitive Services overzicht",
+        "Azure Bot Framework",
+        "AI service pricing en deployment",
+        "Beveiliging en compliance in AI"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Computer Vision Workloads",
+      "description": "Beeldanalyse, objectdetectie en visuele herkenningsservices",
+      "icon": "Monitor",
+      "duration": "3 uur",
+      "topics": [
+        "Computer Vision API",
+        "Custom Vision service",
+        "Face API en gezichtsherkenning",
+        "Form Recognizer voor documentverwerking",
+        "Video analyse mogelijkheden"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Natural Language Processing",
+      "description": "Tekstanalyse, taalbegrip en vertaalservices",
+      "icon": "FileText",
+      "duration": "3 uur",
+      "topics": [
+        "Text Analytics API",
+        "Language Understanding (LUIS)",
+        "Translator service",
+        "Speech services",
+        "Content moderation"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Conversational AI en Bots",
+      "description": "Bouw intelligente chatbots en virtuele assistenten",
+      "icon": "User",
+      "duration": "2 uur",
+      "topics": [
+        "Azure Bot Service fundamentals",
+        "Bot Framework SDK",
+        "QnA Maker service",
+        "Bot deployment en channels",
+        "Bot testen en analytics"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Azure Cognitive Services Verkennen",
+      "description": "Hands-on verkenning van Computer Vision en Text Analytics APIs",
+      "duration": "1,5 uur",
+      "icon": "Cloud"
+    },
+    {
+      "id": "lab-2",
+      "title": "Custom Vision Model Bouwen",
+      "description": "Creëer en train een custom beeldclassificatie model",
+      "duration": "1 uur",
+      "icon": "Monitor"
+    },
+    {
+      "id": "lab-3",
+      "title": "Language Understanding App Creëren",
+      "description": "Bouw een LUIS applicatie voor natural language understanding",
+      "duration": "1 uur",
+      "icon": "FileText"
+    },
+    {
+      "id": "lab-4",
+      "title": "Eenvoudige Chatbot Bouwen",
+      "description": "Creëer en implementeer een QnA Maker-powered chatbot",
+      "duration": "1,5 uur",
+      "icon": "User"
+    }
+  ],
+  "prerequisites": [
+    "Basis computervaardigheden",
+    "Bekendheid met cloud computing concepten",
+    "Geen programmeerervaring vereist"
+  ],
+  "targetAudience": [
+    "Business stakeholders geïnteresseerd in AI",
+    "Professionals die in de IT beginnen of beginnen met AI",
+    "IT professionals die AI oplossingen verkennen",
+    "Projectmanagers die werken aan AI initiatieven",
+    "Iedereen die AI-900 certificering zoekt"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Gespecialiseerde trainer met expertise in Azure AI services en machine learning fundamentals",
+    "expertise": [
+      "Azure AI Services",
+      "Machine Learning",
+      "Cognitive Services"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AI-900",
+      "AI-102",
+      "DP-100"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure AI Fundamentals",
+    "examCode": "AI-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Brain",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2025-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Als iemand die met honderden professionals heeft samengewerkt in Azure, heb ik uit eerste hand gezien hoe de juiste basis het verschil maakt. Ik herinner me dat ik werkte met een team van traditionele infrastructuurengineers die sceptisch waren over de cloud. Na deze training migreerden ze met succes hun eerste workloads naar Azure en werden ze cloud-voorstanders. Deze cursus bevat alles wat ik zou willen weten toen ik met Azure begon."
+  }
+}

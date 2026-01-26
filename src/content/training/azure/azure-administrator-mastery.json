@@ -1,0 +1,285 @@
+{
+  "metadata": {
+    "slug": "azure-administrator-mastery",
+    "title": "Azure Administrator Mastery",
+    "subtitle": "Advanced Azure administration skills",
+    "description": "Master advanced Azure administration techniques including automation, security, and optimization. Take your Azure skills to the expert level.",
+    "category": "Cloud Administration",
+    "level": "Advanced",
+    "duration": "5 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Administration", "Automation", "Security", "Optimization", "PowerShell", "CLI"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) certification",
+      "Experience with Azure administration",
+      "PowerShell or Azure CLI experience",
+      "Understanding of Azure networking and security concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-admin-mastery-hero.jpg",
+    "badge": "Advanced Azure Admin",
+    "highlights": [
+      "Advanced administration techniques",
+      "Automation and scripting",
+      "Enterprise Azure management"
+    ]
+  },
+  "overview": {
+    "summary": "Azure Administrator Mastery training takes your Azure administration skills to the expert level. Learn advanced techniques for managing complex Azure environments, implementing automation, and optimizing performance.",
+    "objectives": [
+      "Implement advanced Azure infrastructure solutions",
+      "Manage Azure resources at scale",
+      "Implement automation and DevOps practices",
+      "Optimize Azure costs and performance",
+      "Implement advanced security and compliance"
+    ],
+    "targetAudience": "Azure administrators who have AZ-104 certification and want to master advanced Azure administration techniques for enterprise environments."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Advanced Azure Resource Management",
+      "description": "Master advanced resource management techniques",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement Azure Resource Manager templates",
+        "Manage Azure subscriptions and governance",
+        "Implement Azure Policy and RBAC",
+        "Manage Azure resources at scale",
+        "Implement Azure Blueprints"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Enterprise Resource Management</h3><p>Learn advanced techniques for managing Azure resources in large-scale enterprise environments with proper governance and automation.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Advanced Management Tools",
+            "items": [
+              "Azure Resource Manager (ARM) templates",
+              "Azure Bicep for infrastructure as code",
+              "Azure Policy for compliance",
+              "Azure Blueprints for environment standardization",
+              "Azure Management Groups for hierarchy"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Advanced Resource Management Lab",
+          "description": "Implement enterprise-scale resource management",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Automation and DevOps",
+      "description": "Implement automation and DevOps practices",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement Azure Automation",
+        "Create PowerShell and Azure CLI scripts",
+        "Implement Azure DevOps pipelines",
+        "Configure Azure Monitor and alerts",
+        "Implement configuration management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Automation is key to efficient Azure administration. Learn to automate routine tasks and implement DevOps practices for infrastructure management.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/automation.jpg",
+            "alt": "Azure Automation",
+            "caption": "Azure Automation, PowerShell, and DevOps integration"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Automation Lab",
+          "description": "Implement comprehensive automation solutions",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Security and Compliance",
+      "description": "Implement advanced security and compliance",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement Azure Security Center",
+        "Configure Azure Sentinel",
+        "Implement Azure Key Vault",
+        "Manage Azure AD security",
+        "Implement compliance solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Advanced Security Implementation</h3><p>Security is critical in enterprise environments. Learn to implement comprehensive security controls and compliance frameworks.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Implementation Lab",
+          "description": "Implement advanced security and compliance solutions",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Azure Performance and Cost Optimization",
+      "description": "Optimize Azure performance and costs",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement Azure Cost Management",
+        "Optimize Azure performance",
+        "Configure Azure Advisor",
+        "Implement Azure Backup and DR",
+        "Monitor and troubleshoot Azure resources"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Effective cost and performance management is essential for enterprise Azure deployments. Learn to optimize your Azure environment for both performance and cost efficiency.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Optimization Lab",
+          "description": "Optimize Azure costs and performance",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2400,
+    "discountedPrice": 1920,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "Advanced Azure administration guide",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure Administrator Mastery badge"
+    ]
+  },
+  "instructor": {
+    "name": "Thomas Anderson",
+    "title": "Principal Azure Architect",
+    "bio": "Thomas is a Principal Azure Architect with extensive experience in enterprise Azure deployments and automation. He has led numerous large-scale Azure migrations and implementations.",
+    "certifications": [
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure DevOps Engineer Expert",
+      "AWS Certified Solutions Architect - Professional",
+      "Certified Kubernetes Administrator (CKA)"
+    ],
+    "image": "/images/instructors/thomas-anderson.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-05-13",
+        "endDate": "2024-05-17",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Administration Best Practices",
+      "url": "https://learn.microsoft.com/en-us/azure/",
+      "description": "Comprehensive Azure administration documentation"
+    },
+    {
+      "type": "video",
+      "title": "Advanced Azure Administration Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nG9QK",
+      "description": "Advanced Azure administration techniques"
+    },
+    {
+      "type": "tool",
+      "title": "Azure PowerShell",
+      "url": "https://learn.microsoft.com/en-us/powershell/azure/",
+      "description": "Azure PowerShell documentation and cmdlets"
+    },
+    {
+      "type": "tool",
+      "title": "Azure CLI",
+      "url": "https://learn.microsoft.com/en-us/cli/azure/",
+      "description": "Azure CLI documentation and commands"
+    }
+  ],
+  "certification": {
+    "name": "Azure Administrator Mastery Certification",
+    "code": "AZ-ADM-MASTERY",
+    "description": "Demonstrate mastery of advanced Azure administration techniques, automation, and enterprise-scale management",
+    "examDetails": {
+      "duration": "180 minutes",
+      "questions": 50,
+      "passingScore": 750,
+      "cost": 250,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Advanced Azure resource management (25-30%)",
+      "Azure automation and DevOps (25-30%)",
+      "Azure security and compliance (20-25%)",
+      "Azure performance and cost optimization (20-25%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need AZ-104 certification?",
+      "answer": "Yes, this is an advanced course that requires AZ-104 certification and practical Azure administration experience."
+    },
+    {
+      "question": "What scripting languages are covered?",
+      "answer": "The course covers PowerShell, Azure CLI, and Azure Resource Manager templates extensively."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a highly technical course focused on advanced Azure administration techniques and automation."
+    },
+    {
+      "question": "What Azure services will I learn?",
+      "answer": "You'll learn advanced usage of Azure Resource Manager, Azure Automation, Azure Security Center, Azure Monitor, and many other services."
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "slug": "azure-virtual-desktop",
+    "title": "Azure Virtual Desktop Specialty",
+    "subtitle": "Unlock Freedom: Work from Anywhere, Anytime",
+    "description": "Become the architect of workplace freedom. Master Azure Virtual Desktop and liberate your organization from the constraints of traditional office setups. Create flexible, secure work environments that empower people to work from anywhere.",
+    "category": "Virtual Desktop Infrastructure",
+    "level": "Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Virtual Desktop", "VDI", "Windows 365", "Remote Desktop", "Cloud Computing"],
+    "prerequisites": [
+      "Azure Fundamentals knowledge (AZ-900)",
+      "Windows Server administration experience",
+      "Understanding of virtualization concepts",
+      "Basic knowledge of networking and security"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-vdi-hero.jpg",
+    "badge": "Freedom Architect",
+    "highlights": [
+      "Liberate your workforce from office constraints",
+      "Create secure remote work environments",
+      "Master the future of flexible workspaces",
+      "Become the hero of work-life balance"
+    ]
+  },
+  "overview": {
+    "summary": "Imagine a world where your team can work from anywhere - beach, mountain cabin, or their favorite coffee shop. Become the architect who makes this vision reality. Master Azure Virtual Desktop and transform how your organization approaches work, giving people the freedom they deserve while maintaining enterprise-grade security and performance.",
+    "objectives": [
+      "Become the architect of workplace freedom and flexibility",
+      "Master the design of secure, scalable virtual desktop environments",
+      "Learn to create work experiences that adapt to people's lives",
+      "Develop expertise in managing distributed workforces",
+      "Build the skills to implement future-ready workspace solutions",
+      "Transform traditional office constraints into opportunities for growth"
+    ],
+    "targetAudience": "Visionary IT professionals ready to liberate their organizations from outdated work models. Those who see the future of work and want to be the architects who make it happen."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Designing Freedom: Virtual Desktop Architecture",
+      "description": "Architect workspaces that liberate rather than constrain",
+      "duration": "6 hours",
+      "objectives": [
+        "Design virtual environments that empower people",
+        "Plan scalable solutions for distributed workforces",
+        "Create secure foundations for remote work freedom",
+        "Architect disaster recovery that protects productivity",
+        "Design user experiences that adapt to life",
+        "Build infrastructure that supports work-life balance"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>The Freedom Framework</h3><p>Stop thinking about virtual desktops as technical infrastructure. Start seeing them as the foundation of workplace freedom. Learn to design environments that give people the power to work where and when they do their best work.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Freedom Building Blocks",
+            "items": [
+              "Host pools that scale with your distributed workforce",
+              "Session hosts that deliver consistent experiences anywhere",
+              "Workspaces that organize productivity, not just applications",
+              "FSLogix profiles that follow users like faithful companions",
+              "Secure networks that protect freedom, not restrict it"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Freedom Architecture Workshop",
+          "description": "Design virtual desktop environments that maximize workforce freedom and productivity",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Deploying the Future of Work",
+      "description": "Build the infrastructure that makes remote work effortless",
+      "duration": "8 hours",
+      "objectives": [
+        "Deploy environments that feel like natural extensions of the office",
+        "Configure host pools that adapt to changing workforce needs",
+        "Set up session hosts that deliver consistent experiences everywhere",
+        "Implement FSLogix for seamless user profile portability",
+        "Configure clients that work as well as local machines",
+        "Create deployment strategies that scale with your vision"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Deploy Azure Virtual Desktop environments that meet organizational requirements. Learn to configure host pools, session hosts, and user environments.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/avd-deployment.jpg",
+            "alt": "Azure Virtual Desktop Deployment",
+            "caption": "Host pools, session hosts, and FSLogix configuration"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Deployment Lab",
+          "description": "Deploy Azure Virtual Desktop infrastructure",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Access and Security Management",
+      "description": "Manage access and security for Azure Virtual Desktop",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure Azure AD integration",
+        "Implement conditional access",
+        "Configure Azure Virtual Desktop security",
+        "Manage user authentication",
+        "Implement endpoint security"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Secure Virtual Desktop Access</h3><p>Azure Virtual Desktop integrates with Azure AD and Microsoft 365 for secure access. Learn to implement comprehensive security controls.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Configuration Lab",
+          "description": "Configure security and access management",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Monitoring and Optimization",
+      "description": "Monitor and optimize Azure Virtual Desktop environments",
+      "duration": "6 hours",
+      "objectives": [
+        "Monitor Azure Virtual Desktop performance",
+        "Configure Azure Monitor",
+        "Optimize session host performance",
+        "Implement autoscaling",
+        "Troubleshoot common issues"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Effective monitoring and optimization are essential for maintaining Azure Virtual Desktop performance and user experience.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring Lab",
+          "description": "Monitor and optimize Azure Virtual Desktop",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1850,
+    "discountedPrice": 1480,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-140 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure Virtual Desktop Specialty badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Virtual Desktop Solutions Architect",
+    "bio": "Yaïr is a Virtual Desktop Solutions Architect specializing in modern workplace solutions. He has extensive experience implementing VDI solutions for large enterprises using Azure and other cloud platforms.",
+    "certifications": [
+      "Microsoft Certified: Azure Virtual Desktop Specialty",
+      "Microsoft Certified: Windows Server Hybrid Administrator",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Citrix Certified Associate (CCA)",
+      "VMware Certified Professional (VCP)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-22",
+        "endDate": "2024-04-25",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Virtual Desktop Specialty Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-virtual-desktop-specialty/",
+      "description": "Official Microsoft learning path for Azure Virtual Desktop"
+    },
+    {
+      "type": "video",
+      "title": "Azure Virtual Desktop Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nH9QK",
+      "description": "Azure Virtual Desktop deployment and management tutorials"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-140 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-140",
+      "description": "Official practice tests for AZ-140 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Virtual Desktop Documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/virtual-desktop/",
+      "description": "Complete Azure Virtual Desktop documentation and guides"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Virtual Desktop Specialty",
+    "code": "AZ-140",
+    "description": "Demonstrate skills in planning, implementing, and managing Azure Virtual Desktop environments, including host pools, session hosts, user environments, and security",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Plan an Azure Virtual Desktop architecture (15-20%)",
+      "Implement an Azure Virtual Desktop infrastructure (20-25%)",
+      "Manage access and security (15-20%)",
+      "Manage user environments and apps (20-25%)",
+      "Monitor and maintain an Azure Virtual Desktop infrastructure (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need Windows Server experience?",
+      "answer": "Yes, experience with Windows Server administration is required. This course builds on Windows Server knowledge for virtual desktop environments."
+    },
+    {
+      "question": "What about Windows 365?",
+      "answer": "Windows 365 is covered as part of Azure Virtual Desktop. You'll learn to implement cloud PCs and manage Windows 365 environments."
+    },
+    {
+      "question": "Is this course hands-on?",
+      "answer": "Yes, extensive hands-on labs where you'll deploy complete Azure Virtual Desktop environments and configure all components."
+    },
+    {
+      "question": "What Azure services will I learn?",
+      "answer": "You'll learn Azure Virtual Desktop, Azure AD, Azure Virtual Network, Azure Monitor, and related Azure services for VDI solutions."
+    }
+  ]
+}

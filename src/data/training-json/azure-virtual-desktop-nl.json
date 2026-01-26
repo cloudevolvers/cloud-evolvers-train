@@ -1,0 +1,226 @@
+{
+  "id": "azure-virtual-desktop-nl",
+  "slug": "azure-virtual-desktop",
+  "title": "Azure Virtual Desktop Specialty (AZ-140)",
+  "description": "Beheers Azure Virtual Desktop voor moderne thuiswerk oplossingen",
+  "content": "Beheers Azure Virtual Desktop (AVD) voor enterprise thuiswerk oplossingen. Leer plannen, implementeren, beheren en optimaliseren van virtuele desktop infrastructuur voor moderne hybride werkomgevingen.",
+  "category": "Infrastructuur",
+  "subcategory": "Virtual Desktop",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "prerequisites": [
+    "AZ-104 of gelijkwaardige Azure ervaring",
+    "Windows Server kennis",
+    "Begrip van virtualisatie concepten",
+    "Basis netwerk en beveiligingsconcepten"
+  ],
+  "learningObjectives": [
+    {
+      "id": "plan-deploy-avd",
+      "title": "Plan en implementeer Azure Virtual Desktop infrastructuur",
+      "description": "Plan en implementeer AVD infrastructuur componenten",
+      "icon": "Desktop"
+    },
+    {
+      "id": "manage-host-pools",
+      "title": "Beheer host pools en session hosts",
+      "description": "Beheer host pools en session hosts effectief",
+      "icon": "Server"
+    },
+    {
+      "id": "configure-profiles",
+      "title": "Configureer en beheer gebruikersprofielen en data",
+      "description": "Configureer gebruikersprofielen en databeheer",
+      "icon": "User"
+    },
+    {
+      "id": "secure-avd",
+      "title": "Beveilig Azure Virtual Desktop implementaties",
+      "description": "Beveilig AVD implementaties met best practices",
+      "icon": "Shield"
+    },
+    {
+      "id": "monitor-maintain",
+      "title": "Monitor en onderhoud Azure Virtual Desktop",
+      "description": "Monitor en onderhoud AVD infrastructuur",
+      "icon": "BarChart"
+    },
+    {
+      "id": "optimize-experience",
+      "title": "Optimaliseer gebruikerservaring en prestaties",
+      "description": "Optimaliseer gebruikerservaring en prestaties",
+      "icon": "Zap"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Ervaren virtualisatie professional met 8+ jaar ervaring in enterprise desktop infrastructuur en thuiswerk oplossingen.",
+    "expertise": [
+      "Azure Virtual Desktop",
+      "Windows Server",
+      "Virtualisatie",
+      "Remote Desktop Services"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-140",
+      "AZ-104",
+      "AZ-305"
+    ]
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "Virtual Desktop",
+    "AZ-140",
+    "Thuiswerken"
+  ],
+  "featured": false,
+  "certification": {
+    "available": true,
+    "name": "AZ-140",
+    "examCode": "AZ-140",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "icon": "Desktop",
+  "overview": "Beheers Azure Virtual Desktop (AVD) voor enterprise thuiswerk oplossingen. Leer plannen, implementeren, beheren en optimaliseren van virtuele desktop infrastructuur voor moderne hybride werkomgevingen.",
+  "whatYouWillLearn": [
+    {
+      "title": "AVD Architectuur & Planning",
+      "description": "Azure Virtual Desktop architectuur, capaciteitsplanning, netwerkvereisten en identiteitsstrategieën"
+    },
+    {
+      "title": "Host Pools & Session Hosts",
+      "description": "Creëer host pools, implementeer session hosts, configureer desktops en implementeer custom images"
+    },
+    {
+      "title": "Gebruikersprofielen & Applicaties",
+      "description": "FSLogix configuratie, applicatiegroepen, gebruikerstoewijzingen en workspace management"
+    },
+    {
+      "title": "Beveiliging & Monitoring",
+      "description": "Beveiligings best practices, conditional access, prestatie monitoring en troubleshooting"
+    }
+  ],
+  "modules": [
+    {
+      "id": "avd-architecture",
+      "title": "AVD Architectuur & Planning",
+      "description": "Plan en implementeer Azure Virtual Desktop infrastructuur",
+      "icon": "Desktop",
+      "duration": "6 uur",
+      "topics": [
+        "Azure Virtual Desktop architectuur en componenten",
+        "Capaciteitsplanning en sizing overwegingen",
+        "Netwerkvereisten en connectiviteit",
+        "Identiteit en authenticatie strategieën"
+      ]
+    },
+    {
+      "id": "host-pools-sessions",
+      "title": "Host Pools & Session Hosts",
+      "description": "Beheer host pools en session hosts effectief",
+      "icon": "Monitor",
+      "duration": "6 uur",
+      "topics": [
+        "Creëer en configureer host pools",
+        "Implementeer en beheer session hosts",
+        "Configureer persoonlijke en pooled desktops",
+        "Implementeer custom images en golden images"
+      ]
+    },
+    {
+      "id": "user-profiles-apps",
+      "title": "Gebruikersprofielen & Applicatiebeheer",
+      "description": "Configureer en beheer gebruikersprofielen en data",
+      "icon": "Users",
+      "duration": "6 uur",
+      "topics": [
+        "Configureer FSLogix voor profielbeheer",
+        "Implementeer applicatiegroepen en RemoteApps",
+        "Beheer gebruikerstoewijzingen en toegang",
+        "Configureer workspace en gebruikerservaring"
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Beveiliging & Monitoring",
+      "description": "Beveilig en monitor Azure Virtual Desktop implementaties",
+      "icon": "Shield",
+      "duration": "6 uur",
+      "topics": [
+        "Implementeer beveiligings best practices",
+        "Configureer conditional access policies",
+        "Monitor prestaties en gebruik",
+        "Troubleshooting en optimalisatietechnieken"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "avd-deployment",
+      "title": "AVD Infrastructuur Implementatie",
+      "description": "Implementeer Azure Virtual Desktop infrastructuur en configureer host pools",
+      "icon": "Desktop",
+      "duration": "2 uur"
+    },
+    {
+      "id": "session-hosts",
+      "title": "Session Host Configuratie",
+      "description": "Configureer en beheer session hosts met custom images",
+      "icon": "Monitor",
+      "duration": "2 uur"
+    },
+    {
+      "id": "fslogix-setup",
+      "title": "FSLogix Profielbeheer",
+      "description": "Implementeer FSLogix voor gebruikersprofielbeheer",
+      "icon": "User",
+      "duration": "1,5 uur"
+    },
+    {
+      "id": "application-groups",
+      "title": "Applicatiegroep Configuratie",
+      "description": "Creëer en beheer applicatiegroepen en RemoteApps",
+      "icon": "Grid",
+      "duration": "1,5 uur"
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Beveiliging en Monitoring Setup",
+      "description": "Configureer beveiligingsbeleid en monitoring voor AVD",
+      "icon": "Shield",
+      "duration": "1 uur"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "3 dagen intensief",
+    "groupSize": "Max 12 deelnemers",
+    "certification": "AZ-140 Specialty voorbereiding"
+  },
+  "targetAudience": [
+    "Azure administrators",
+    "Desktop administrators",
+    "Infrastructuur architecten",
+    "IT professionals die thuiswerk oplossingen beheren"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Gedurende mijn carrière als Microsoft Certified Trainer heb ik het voorrecht gehad om duizenden professionals te onderwijzen. Elke training die ik geef wordt verrijkt door praktijkimplementaties en praktische ervaring. Ik leer niet alleen concepten—ik deel wat daadwerkelijk werkt in productieomgevingen."
+  }
+}

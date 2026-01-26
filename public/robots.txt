@@ -1,0 +1,15 @@
+# Cloud Evolvers - Robots.txt
+# https://cloudevolvers.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cloudevolvers.com/sitemap.xml
+
+# Crawl-delay (optional, be polite to search engines)
+Crawl-delay: 1
+
+# Disallow admin/api paths
+Disallow: /api/
+Disallow: /.well-known/

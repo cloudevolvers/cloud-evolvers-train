@@ -1,0 +1,41 @@
+{
+  "categories": {
+    "azure": [
+      "azure-fundamentals",
+      "azure-administrator",
+      "azure-developer-associate",
+      "azure-solutions-architect-expert",
+      "azure-ai-engineer-associate",
+      "azure-devops-engineer-expert",
+      "azure-iot-developer",
+      "azure-network-engineer",
+      "azure-virtual-desktop",
+      "azure-administrator-mastery",
+      "azure-ai-fundamentals",
+      "azure-ai-developer-bootcamp",
+      "azure-stack-hub",
+      "azure-support-engineer"
+    ],
+    "microsoft365": [
+      "microsoft-365-fundamentals",
+      "microsoft-365-enterprise-administrator",
+      "microsoft-365-identity-access-administrator",
+      "microsoft-365-security-administrator",
+      "microsoft-365-copilot-mastery",
+      "teams-advanced-administration"
+    ],
+    "power-platform": [
+      "power-platform-fundamentals",
+      "power-platform-automation",
+      "power-bi-data-analyst-associate"
+    ],
+    "security": [
+      "azure-security-fundamentals",
+      "security-compliance-identity-fundamentals"
+    ],
+    "windows-server": [
+      "windows-server-hybrid-administrator",
+      "windows-server-hybrid-infrastructure"
+    ]
+  }
+}

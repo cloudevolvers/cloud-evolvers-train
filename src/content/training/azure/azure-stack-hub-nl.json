@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "slug": "azure-stack-hub-nl",
+    "title": "Azure Stack Hub",
+    "subtitle": "Overbrug de Kloof Tussen Je Data Center en de Cloud",
+    "description": "De toekomst is niet alleen cloud of on-premises - het is beide. Deze cursus transformeert je van iemand die aparte werelden beheert naar iemand die naadloze hybride omgevingen creëert waar Azure diensten draaien in je eigen data center. Je beheerst de technologie die ondernemingen gevoelige data on-premises laat houden terwijl cloud innovatie wordt geopend - de vaardigheden die hybride cloud architecten scheiden van traditionele IT beheerders.",
+    "category": "Hybrid Cloud",
+    "level": "Gevorderd",
+    "duration": "4 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure Stack Hub", "Hybrid Cloud", "On-premises", "Azure Consistent", "Infrastructure", "Deployment"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) certificering",
+      "Ervaring met Azure IaaS en PaaS diensten",
+      "Begrip van netwerken en storage concepten",
+      "Windows Server beheerervaring",
+      "PowerShell scripting kennis",
+      "Een visie voor het overbruggen van traditionele IT met cloud innovatie"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-stack-hub-hero.jpg",
+    "badge": "Hybrid Cloud Architect",
+    "highlights": [
+      "Draai Azure diensten in je eigen data center",
+      "Overbrug legacy systemen met cloud innovatie",
+      "Behoud compliance terwijl cloud voordelen worden benut",
+      "Word de expert die enterprise IT moderniseert"
+    ]
+  },
+  "overview": {
+    "summary": "De meest waardevolle IT professionals zijn niet degenen die kiezen in het cloud vs. on-premises debat - het zijn degenen die beide werelden naadloos laten samenwerken. Deze cursus leert je de Azure Stack Hub vaardigheden die hybride cloud architecten die digitale transformatie mogelijk maken scheiden van degenen die achterblijven. Je leert Azure diensten te deployen in je data center, consistente ervaringen te creëren over omgevingen heen, en oplossingen te bouwen die regulatorische vereisten respecteren terwijl cloud voordelen worden geleverd. Aan het einde heb je de technische beheersing om hybride cloud initiatieven te leiden en de architect te worden waar ondernemingen afhankelijk van zijn voor hun meest kritische workloads.",
+    "objectives": [
+      "Deploy Azure Stack Hub omgevingen die cloud capabilities spiegelen",
+      "Creëer hybride netwerken oplossingen die verschillende omgevingen verbinden",
+      "Implementeer Azure-consistente diensten in on-premises data centers",
+      "Ontwerp disconnected scenario's voor air-gapped en gereguleerde omgevingen",
+      "Bouw monitoring en management systemen voor hybride infrastructuur",
+      "Architect update en lifecycle management voor complexe hybride deployments",
+      "Ontwikkel beveiligingsframeworks die hybride cloud activa beschermen"
+    ],
+    "targetAudience": "Deze cursus is voor de IT leiders die klaar zijn om hybride cloud architecten te worden. Of je nu een data center beheerder bent die cloud technologieën wilt omarmen, een cloud engineer die on-premises constraints moet begrijpen, of een enterprise architect die innovatie moet balanceren met compliance - als je de brug wilt bouwen tussen traditionele IT en cloud innovatie, geeft deze cursus je de vaardigheden en mindset om de hybride cloud expert te worden die moderne ondernemingen wanhopig nodig hebben."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Stack Hub Architectuur en Deployment",
+      "description": "Begrijp Azure Stack Hub architectuur en deployment opties",
+      "duration": "6 uur",
+      "objectives": [
+        "Begrijp Azure Stack Hub architectuur",
+        "Plan Azure Stack Hub deployment",
+        "Deploy Azure Stack Hub geïntegreerde systemen",
+        "Configureer Azure Stack Hub Development Kit",
+        "Begrijp licentie en support opties",
+        "Plan voor capaciteit en schaling"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Stack Hub Architectuur</h3><p>Azure Stack Hub brengt Azure diensten naar je datacenter, consistente cloud capabilities biedend of verbonden met Azure of opererend in disconnected omgevingen.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Belangrijke Architectuur Componenten",
+            "items": [
+              "Azure Resource Manager voor consistente API",
+              "Azure-consistente IaaS en PaaS diensten",
+              "Marketplace voor app deployment",
+              "Role-based access control (RBAC)",
+              "Azure Monitor integratie",
+              "Azure Security Center integratie"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure-stack/architecture.jpg",
+            "alt": "Azure Stack Hub Architecture",
+            "caption": "Azure Stack Hub systeem architectuur en componenten"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Deployment Planning Lab",
+          "description": "Plan en bereid voor op Azure Stack Hub deployment",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Infrastructuur Management",
+      "description": "Beheer Azure Stack Hub infrastructuur componenten",
+      "duration": "8 uur",
+      "objectives": [
+        "Beheer fysieke en virtuele infrastructuur",
+        "Configureer netwerken en storage",
+        "Implementeer backup en disaster recovery",
+        "Monitor infrastructuur gezondheid",
+        "Voer onderhoudsoperaties uit",
+        "Troubleshoot infrastructuur problemen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Infrastructuur Management</h3><p>Leer de onderliggende infrastructuur te beheren die Azure Stack Hub ondersteunt, inclusief hardware, netwerken, storage, en systeem gezondheid monitoring.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Infrastructuur Componenten",
+            "items": [
+              "Fysieke server management",
+              "Netwerk configuratie en beveiliging",
+              "Storage subsysteem management",
+              "Virtuele machine management",
+              "Systeem gezondheid monitoring",
+              "Capaciteit planning en optimalisatie"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Infrastructuur Management Lab",
+          "description": "Configureer en beheer Azure Stack Hub infrastructuur",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Stack Hub Diensten en Marketplace",
+      "description": "Beheer Azure diensten en marketplace in Azure Stack Hub",
+      "duration": "6 uur",
+      "objectives": [
+        "Deploy en beheer IaaS diensten",
+        "Configureer PaaS diensten",
+        "Beheer marketplace items",
+        "Implementeer service quotas en limits",
+        "Configureer Azure App Service",
+        "Deploy SQL en MySQL databases"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure Stack Hub biedt veel van dezelfde diensten als Azure, waardoor je vertrouwde Azure resources kunt deployen in je datacenter omgeving.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Beschikbare Diensten",
+            "items": [
+              "Virtual Machines (IaaS)",
+              "Azure App Service (PaaS)",
+              "Azure SQL Database",
+              "Azure Storage",
+              "Azure Functions",
+              "Azure Kubernetes Service",
+              "Azure API Management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Diensten Deployment Lab",
+          "description": "Deploy en configureer Azure diensten op Azure Stack Hub",
+          "duration": "150 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Hybride Cloud Scenario's en Operaties",
+      "description": "Implementeer hybride cloud oplossingen en operationele practices",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer hybride netwerken",
+        "Configureer hybride identity",
+        "Beheer connected en disconnected scenario's",
+        "Implementeer backup en disaster recovery",
+        "Plan voor updates en patching",
+        "Monitor en troubleshoot operaties"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Hybride Cloud Operaties</h3><p>Beheers de operationele aspecten van Azure Stack Hub draaien in hybride omgevingen, inclusief connectiviteit, beveiliging, en lifecycle management.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Hybride Scenario's",
+            "items": [
+              "Connected vs disconnected operaties",
+              "Hybride netwerken met ExpressRoute",
+              "Azure Arc integratie",
+              "Multi-cloud management",
+              "Data sovereignty en compliance",
+              "Edge computing scenario's"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Hybride Operaties Lab",
+          "description": "Implementeer hybride cloud scenario's en operaties",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1800,
+    "discountedPrice": 1440,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële Azure Stack Hub trainingsmaterialen",
+      "Hands-on lab toegang",
+      "Azure Stack Hub deployment guide",
+      "Infrastructuur management toolkit",
+      "Lunch en verfrissingen",
+      "Cursuscertificaat",
+      "Azure Stack Hub Specialist badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Infrastructure Architect",
+    "bio": "Yaïr is een Principal Cloud Infrastructure Architect gespecialiseerd in hybride cloud oplossingen. Hij heeft uitgebreide ervaring met deployen en beheren van Azure Stack Hub omgevingen voor enterprise klanten in verschillende industrieën.",
+    "certifications": [
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Stack Hub Operator",
+      "VMware Certified Professional (VCP)",
+      "Cisco Certified Network Professional (CCNP)",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-07-08",
+        "endDate": "2024-07-11",
+        "location": "Amsterdam, Nederland",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Stack Hub Documentatie",
+      "url": "https://learn.microsoft.com/nl-nl/azure-stack/",
+      "description": "Officiële Azure Stack Hub documentatie en guides"
+    },
+    {
+      "type": "video",
+      "title": "Azure Stack Hub Training Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nD",
+      "description": "Video tutorials voor Azure Stack Hub deployment en management"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Stack Hub Tools",
+      "url": "https://github.com/Azure/AzureStack-Tools",
+      "description": "PowerShell tools voor Azure Stack Hub management"
+    },
+    {
+      "type": "practice",
+      "title": "Azure Stack Hub Labs",
+      "url": "https://learn.microsoft.com/nl-nl/azure-stack/asdk/",
+      "description": "Azure Stack Development Kit voor hands-on practice"
+    }
+  ],
+  "certification": {
+    "name": "Azure Stack Hub Specialist Certificering",
+    "code": "AZ-STACK-HUB",
+    "description": "Demonstreer expertise in deployen, beheren, en opereren van Azure Stack Hub omgevingen voor hybride cloud oplossingen",
+    "examDetails": {
+      "duration": "180 minuten",
+      "questions": 50,
+      "passingScore": 750,
+      "cost": 200,
+      "languages": ["Engels"]
+    },
+    "skillsMeasured": [
+      "Azure Stack Hub architectuur en deployment (20-25%)",
+      "Infrastructuur management (25-30%)",
+      "Azure diensten op Azure Stack Hub (20-25%)",
+      "Hybride cloud scenario's en operaties (20-25%)",
+      "Beveiliging en compliance (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik hardware nodig voor deze cursus?",
+      "answer": "Nee, de cursus behandelt zowel fysieke deployment concepten als de Azure Stack Development Kit (ASDK) voor hands-on practice zonder fysieke hardware te vereisen."
+    },
+    {
+      "question": "Is Azure Stack Hub hetzelfde als Azure?",
+      "answer": "Azure Stack Hub biedt Azure-consistente diensten maar draait on-premises. Sommige diensten kunnen verschillende versies of beperkingen hebben vergeleken met Azure public cloud."
+    },
+    {
+      "question": "Welke PowerShell ervaring is vereist?",
+      "answer": "Basis PowerShell kennis is vereist. De cursus behandelt Azure Stack Hub-specifieke PowerShell cmdlets en automatisering scripts."
+    },
+    {
+      "question": "Kan Azure Stack Hub offline werken?",
+      "answer": "Ja, Azure Stack Hub ondersteunt disconnected scenario's, hoewel sommige features zoals marketplace syndication internet connectiviteit vereisen."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "microsoft-365-security-administrator",
+  "slug": "microsoft-365-security-administrator",
+  "title": "Microsoft 365 Security Administrator",
+  "subtitle": "Advanced Security and Compliance",
+  "description": "Secure Microsoft 365 environments with advanced security controls and compliance",
+  "overview": "This advanced 3-day course covers comprehensive Microsoft 365 security administration. Learn to implement advanced threat protection, configure security and compliance centers, manage information protection policies, and respond to security incidents effectively.",
+  "category": "Security",
+  "subcategory": "Microsoft 365 Security",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1195,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "security-architecture",
+      "title": "Design comprehensive security architectures",
+      "description": "Design secure Microsoft 365 environments with comprehensive security architectures",
+      "icon": "Shield"
+    },
+    {
+      "id": "threat-protection",
+      "title": "Implement advanced threat protection",
+      "description": "Configure Microsoft Defender for Office 365 and advanced threat protection features",
+      "icon": "Warning"
+    },
+    {
+      "id": "security-compliance-centers",
+      "title": "Configure security and compliance centers",
+      "description": "Configure Microsoft 365 Defender portal and security compliance centers",
+      "icon": "Lock"
+    },
+    {
+      "id": "information-protection",
+      "title": "Manage information protection policies",
+      "description": "Implement data loss prevention and information protection policies",
+      "icon": "Lock"
+    },
+    {
+      "id": "insider-risk-management",
+      "title": "Deploy insider risk management",
+      "description": "Configure insider risk management and communication compliance",
+      "icon": "Eye"
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Monitor and respond to security incidents",
+      "description": "Monitor security events and respond to incidents using Microsoft 365 Defender",
+      "icon": "Eye"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 fundamentals knowledge",
+    "Security concepts understanding",
+    "Azure Active Directory experience",
+    "Compliance framework awareness"
+  ],
+  "targetAudience": [
+    "Security administrators and engineers",
+    "Compliance and risk professionals",
+    "Microsoft 365 administrators",
+    "Information security specialists"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Security Administrator Associate",
+    "examCode": "MS-500",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft 365",
+    "Security",
+    "Compliance",
+    "Threat Protection",
+    "Risk Management"
+  ],
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-15T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Microsoft 365 security specialist with extensive experience in enterprise security and compliance",
+    "experience": "12+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "MS-500",
+      "SC-300",
+      "SC-900",
+      "AZ-500"
+    ]
+  },
+  "modules": [
+    {
+      "id": "security-architecture-strategy",
+      "title": "Security Architecture & Strategy",
+      "description": "Designing comprehensive security architectures and strategies",
+      "duration": "6 hours",
+      "topics": [
+        "M365 security posture assessment",
+        "Zero trust security model",
+        "Security baseline configuration",
+        "Risk management frameworks"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "advanced-threat-protection",
+      "title": "Advanced Threat Protection",
+      "description": "Implementing advanced threat protection solutions",
+      "duration": "6 hours",
+      "topics": [
+        "Microsoft Defender for Office 365",
+        "Safe Attachments and Safe Links",
+        "Anti-phishing and anti-spam policies",
+        "Threat hunting and investigation"
+      ],
+      "icon": "Warning"
+    },
+    {
+      "id": "information-protection-governance",
+      "title": "Information Protection & Governance",
+      "description": "Managing information protection and governance",
+      "duration": "6 hours",
+      "topics": [
+        "Data Loss Prevention (DLP) policies",
+        "Sensitivity labels and protection",
+        "Retention policies and labels",
+        "Records management lifecycle"
+      ],
+      "icon": "Lock"
+    },
+    {
+      "id": "security-monitoring-compliance",
+      "title": "Security Monitoring & Compliance",
+      "description": "Monitoring security and ensuring compliance",
+      "duration": "6 hours",
+      "topics": [
+        "Microsoft 365 Defender portal",
+        "Insider risk management",
+        "Communication compliance",
+        "Audit log analysis and reporting"
+      ],
+      "icon": "Eye"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "defender-office-lab",
+      "title": "Microsoft Defender for Office 365",
+      "description": "Configure Microsoft Defender for Office 365 and security policies",
+      "duration": "3 hours",
+      "icon": "Warning"
+    },
+    {
+      "id": "dlp-policies-lab",
+      "title": "Data Loss Prevention Policies",
+      "description": "Implement and configure DLP policies for data protection",
+      "duration": "3 hours",
+      "icon": "Lock"
+    },
+    {
+      "id": "defender-portal-lab",
+      "title": "Microsoft 365 Defender Portal",
+      "description": "Configure and use Microsoft 365 Defender portal for security monitoring",
+      "duration": "3 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "compliance-center-lab",
+      "title": "Security & Compliance Center",
+      "description": "Configure security and compliance center features",
+      "duration": "3 hours",
+      "icon": "Eye"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Managing Azure at enterprise scale requires more than just technical knowledge—it requires battle-tested strategies. I've managed Azure environments for organizations with thousands of users, and I've learned what works and what doesn't. In this training, I share the real-world administrative patterns that have saved countless hours and prevented critical issues."
+  }
+}

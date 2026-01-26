@@ -1,0 +1,48 @@
+/* Performance-focused CSS rules */
+
+/* GPU acceleration for key animated elements */
+.header-animated,
+.scrolling-container,
+.animated-card {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduce composite operations for gradients */
+.reduced-paint {
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* Content visibility optimization */
+.offscreen-content {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+  contain: layout style paint;
+}
+
+/* Optimize large lists rendering */
+.optimized-list {
+  content-visibility: auto;
+  contain: layout style paint;
+}
+
+/* Optimize image rendering */
+img.optimized {
+  image-rendering: high-quality;
+  object-fit: cover;
+}
+
+/* Simplified shadows for better performance */
+.perf-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Optimize backdrop blur effects */
+@supports (backdrop-filter: blur(12px)) {
+  .optimized-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}

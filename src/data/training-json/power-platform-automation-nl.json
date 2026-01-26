@@ -1,0 +1,226 @@
+{
+  "id": "power-platform-automation",
+  "slug": "power-platform-automation",
+  "title": "Power Platform Automatisering Bootcamp",
+  "description": "Ontsluit de kracht van low-code automatisering met Microsoft Power Platform",
+  "content": "Ontsluit de kracht van low-code automatisering met Microsoft Power Platform. Beheers Power Apps, Power Automate en Power BI om geavanceerde zakelijke oplossingen te bouwen zonder traditionele programmering.",
+  "category": "Microsoft 365",
+  "subcategory": "Power Platform",
+  "difficulty": "Gemiddeld",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "prerequisites": [
+    "Basis Microsoft 365 kennis",
+    "Begrip van bedrijfsprocessen",
+    "Bekendheid met data concepten",
+    "Basis begrip van workflow automatisering"
+  ],
+  "learningObjectives": [
+    {
+      "id": "power-apps",
+      "title": "Bouw krachtige apps zonder traditionele codering",
+      "description": "Bouw krachtige apps zonder traditionele codering",
+      "icon": "Smartphone"
+    },
+    {
+      "id": "automate-processes",
+      "title": "Automatiseer complexe bedrijfsprocessen",
+      "description": "Automatiseer complexe bedrijfsprocessen",
+      "icon": "Repeat"
+    },
+    {
+      "id": "data-visualizations",
+      "title": "Creëer verbluffende data visualisaties",
+      "description": "Creëer verbluffende data visualisaties",
+      "icon": "ChartBar"
+    },
+    {
+      "id": "m365-integration",
+      "title": "Integreer naadloos met Microsoft 365",
+      "description": "Integreer naadloos met Microsoft 365",
+      "icon": "Cloud"
+    },
+    {
+      "id": "design-solutions",
+      "title": "Ontwerp en implementeer Power Platform oplossingen",
+      "description": "Ontwerp en implementeer Power Platform oplossingen",
+      "icon": "Settings"
+    },
+    {
+      "id": "governance-security",
+      "title": "Pas governance en beveiligings best practices toe",
+      "description": "Pas governance en beveiligings best practices toe",
+      "icon": "Shield"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Ervaren Power Platform specialist met 6+ jaar ervaring in low-code ontwikkeling en bedrijfsproces automatisering.",
+    "expertise": [
+      "Power Apps",
+      "Power Automate",
+      "Power BI",
+      "Low-Code Ontwikkeling"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "PL-900",
+      "PL-200",
+      "PL-400"
+    ]
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Power Platform",
+    "Power Apps",
+    "Power Automate",
+    "Power BI",
+    "Low-Code"
+  ],
+  "featured": true,
+  "certification": {
+    "available": false,
+    "name": "Bootcamp Certificaat",
+    "provider": "Cloud Evolvers"
+  },
+  "maxParticipants": 12,
+  "icon": "Lightning",
+  "overview": "Ontsluit de kracht van low-code automatisering met Microsoft Power Platform. Beheers Power Apps, Power Automate en Power BI om geavanceerde zakelijke oplossingen te bouwen zonder traditionele programmering.",
+  "whatYouWillLearn": [
+    {
+      "title": "Power Apps Ontwikkeling",
+      "description": "Canvas apps, model-driven apps, databronnen, connectors, UI design en formules"
+    },
+    {
+      "title": "Power Automate Workflows",
+      "description": "Flow triggers, bedrijfsproces automatisering, approval workflows en foutafhandeling"
+    },
+    {
+      "title": "Power BI Analytics",
+      "description": "Data modellering, interactieve dashboards, DAX formules en samenwerking"
+    },
+    {
+      "title": "Integratie & Best Practices",
+      "description": "Microsoft 365 integratie, governance, beveiliging en prestatie optimalisatie"
+    }
+  ],
+  "modules": [
+    {
+      "id": "power-apps-dev",
+      "title": "Power Apps Ontwikkeling",
+      "description": "Bouw krachtige apps zonder traditionele codering",
+      "icon": "Smartphone",
+      "duration": "4 uur",
+      "topics": [
+        "Canvas apps en model-driven apps",
+        "Databronnen en connectors",
+        "Gebruikersinterface ontwerp en controls",
+        "Formules en expressies"
+      ]
+    },
+    {
+      "id": "power-automate",
+      "title": "Power Automate Workflows",
+      "description": "Automatiseer complexe bedrijfsprocessen",
+      "icon": "Repeat",
+      "duration": "4 uur",
+      "topics": [
+        "Flow triggers en acties",
+        "Bedrijfsproces automatisering",
+        "Approval workflows en notificaties",
+        "Foutafhandeling en monitoring"
+      ]
+    },
+    {
+      "id": "power-bi",
+      "title": "Power BI Analytics",
+      "description": "Creëer verbluffende data visualisaties",
+      "icon": "ChartBar",
+      "duration": "4 uur",
+      "topics": [
+        "Data modellering en relaties",
+        "Interactieve dashboards en rapporten",
+        "DAX formules en berekeningen",
+        "Delen en samenwerking"
+      ]
+    },
+    {
+      "id": "integration-practices",
+      "title": "Integratie & Best Practices",
+      "description": "Pas governance en beveiligings best practices toe",
+      "icon": "Shield",
+      "duration": "4 uur",
+      "topics": [
+        "Microsoft 365 integratie",
+        "Governance en beveiliging",
+        "Oplossing lifecycle management",
+        "Prestatie optimalisatie"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "canvas-app",
+      "title": "Canvas App Ontwikkeling",
+      "description": "Bouw een complete canvas app met data verbindingen en gebruikersinterface",
+      "icon": "Smartphone",
+      "duration": "2 uur"
+    },
+    {
+      "id": "automated-workflow",
+      "title": "Bedrijfsproces Automatisering",
+      "description": "Creëer geautomatiseerde workflows voor bedrijfsprocessen met Power Automate",
+      "icon": "Repeat",
+      "duration": "2 uur"
+    },
+    {
+      "id": "power-bi-dashboard",
+      "title": "Power BI Dashboard Creatie",
+      "description": "Bouw interactieve dashboards en rapporten met Power BI",
+      "icon": "ChartBar",
+      "duration": "2 uur"
+    },
+    {
+      "id": "m365-integration",
+      "title": "Microsoft 365 Integratie",
+      "description": "Integreer Power Platform oplossingen met Microsoft 365 services",
+      "icon": "Cloud",
+      "duration": "1.5 uur"
+    },
+    {
+      "id": "governance-setup",
+      "title": "Governance en Beveiliging",
+      "description": "Implementeer governance beleid en beveiligingsmaatregelen voor Power Platform",
+      "icon": "Shield",
+      "duration": "1 uur"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "2 dagen intensieve bootcamp",
+    "groupSize": "Max 12 deelnemers",
+    "certification": "Bootcamp voltooiing certificaat"
+  },
+  "targetAudience": [
+    "Business analisten",
+    "Power users en citizen developers",
+    "IT professionals",
+    "Proces verbetering specialisten"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Power Platform democratiseert applicatieontwikkeling. Ik heb zakelijke gebruikers oplossingen zien bouwen die traditioneel maanden hadden geduurd om te ontwikkelen. Ik heb ook gezien wat er gebeurt wanneer governance ontbreekt. Deze training balanceert empowerment met best practices."
+  }
+}

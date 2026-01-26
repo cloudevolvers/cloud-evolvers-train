@@ -1,0 +1,193 @@
+{
+  "id": "azure-support-engineer",
+  "slug": "azure-support-engineer",
+  "title": "Azure Support Engineer Excellence",
+  "subtitle": "Technical Support and Troubleshooting",
+  "description": "Master Azure technical support and troubleshooting methodologies",
+  "overview": "This comprehensive 2-day course focuses on developing advanced Azure support skills. Learn systematic troubleshooting approaches, diagnostic tools, and customer service excellence to become an expert Azure support engineer.",
+  "category": "Azure Support",
+  "subcategory": "Support Engineering",
+  "difficulty": "Intermediate",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Headset",
+  "learningObjectives": [
+    {
+      "id": "troubleshooting-methodologies",
+      "title": "Master Azure troubleshooting methodologies",
+      "description": "Learn systematic approaches to Azure problem resolution",
+      "icon": "Headset"
+    },
+    {
+      "id": "problem-resolution",
+      "title": "Implement systematic problem resolution",
+      "description": "Apply structured methods for resolving complex Azure issues",
+      "icon": "Wrench"
+    },
+    {
+      "id": "diagnostic-tools",
+      "title": "Use advanced diagnostic tools effectively",
+      "description": "Master Azure diagnostic tools and monitoring solutions",
+      "icon": "Bug"
+    },
+    {
+      "id": "customer-escalations",
+      "title": "Handle complex customer escalations",
+      "description": "Manage high-priority customer issues and escalations",
+      "icon": "Headset"
+    },
+    {
+      "id": "root-cause-analysis",
+      "title": "Apply root cause analysis techniques",
+      "description": "Perform thorough root cause analysis for Azure issues",
+      "icon": "Bug"
+    },
+    {
+      "id": "knowledge-sharing",
+      "title": "Document and share knowledge effectively",
+      "description": "Create documentation and share knowledge with teams",
+      "icon": "ChartLineUp"
+    }
+  ],
+  "prerequisites": [
+    "Azure fundamentals certification (AZ-900)",
+    "Basic Azure administration experience",
+    "Customer service or support experience",
+    "Understanding of IT service management"
+  ],
+  "targetAudience": [
+    "Technical support engineers",
+    "Azure support specialists",
+    "IT help desk professionals",
+    "Cloud support consultants"
+  ],
+  "certification": {
+    "available": false,
+    "name": "Not Applicable",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Azure",
+    "Support",
+    "Troubleshooting",
+    "Customer Service",
+    "Problem Resolution"
+  ],
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-05T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced Azure support engineer with deep expertise in troubleshooting and customer service",
+    "experience": "8+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-104",
+      "AZ-303",
+      "AZ-304",
+      "ITIL"
+    ]
+  },
+  "modules": [
+    {
+      "id": "support-fundamentals",
+      "title": "Support Fundamentals",
+      "description": "Understanding Azure support ecosystem and best practices",
+      "duration": "4 hours",
+      "topics": [
+        "Azure support ecosystem overview",
+        "Customer communication best practices",
+        "Incident management procedures",
+        "Escalation pathways and protocols"
+      ],
+      "icon": "Headset"
+    },
+    {
+      "id": "diagnostic-tools-techniques",
+      "title": "Diagnostic Tools & Techniques",
+      "description": "Mastering Azure diagnostic and monitoring tools",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Monitor and Log Analytics",
+        "Resource Health and Service Health",
+        "Azure Resource Graph queries",
+        "PowerShell and CLI diagnostics"
+      ],
+      "icon": "Wrench"
+    },
+    {
+      "id": "problem-resolution-methodologies",
+      "title": "Problem Resolution Methodologies",
+      "description": "Systematic approaches to problem resolution",
+      "duration": "4 hours",
+      "topics": [
+        "Systematic troubleshooting approach",
+        "Root cause analysis techniques",
+        "Service-specific troubleshooting",
+        "Performance optimization strategies"
+      ],
+      "icon": "Bug"
+    },
+    {
+      "id": "knowledge-management-excellence",
+      "title": "Knowledge Management & Excellence",
+      "description": "Documentation and continuous improvement",
+      "duration": "4 hours",
+      "topics": [
+        "Documentation and knowledge capture",
+        "Case study analysis and sharing",
+        "Continuous improvement processes",
+        "Team collaboration and mentoring"
+      ],
+      "icon": "ChartLineUp"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "diagnostic-tools-lab",
+      "title": "Azure Diagnostic Tools",
+      "description": "Hands-on practice with Azure Monitor and diagnostic tools",
+      "duration": "2 hours",
+      "icon": "Wrench"
+    },
+    {
+      "id": "troubleshooting-lab",
+      "title": "Systematic Troubleshooting",
+      "description": "Apply systematic troubleshooting to real Azure scenarios",
+      "duration": "2 hours",
+      "icon": "Bug"
+    },
+    {
+      "id": "case-studies-lab",
+      "title": "Case Study Analysis",
+      "description": "Analyze real-world Azure support cases and solutions",
+      "duration": "2 hours",
+      "icon": "Headset"
+    },
+    {
+      "id": "escalation-lab",
+      "title": "Escalation Management",
+      "description": "Practice handling customer escalations and communication",
+      "duration": "2 hours",
+      "icon": "ChartLineUp"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Throughout my career as a Microsoft Certified Trainer, I've had the privilege of teaching thousands of professionals. Every training I deliver is enriched by real-world implementations and practical experience. I don't just teach concepts—I share what actually works in production environments."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "azure-network-engineer",
+  "slug": "azure-network-engineer",
+  "title": "Azure Network Engineer Associate (AZ-700)",
+  "description": "Design, implement, and maintain Azure networking solutions",
+  "content": "Comprehensive Azure networking training covering virtual networks, hybrid connectivity, traffic management, network security, and monitoring. Essential for network engineers working with Azure infrastructure.",
+  "category": "Infrastructure",
+  "subcategory": "Networking",
+  "difficulty": "Intermediate",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "prerequisites": [
+    "Understanding of networking fundamentals",
+    "Experience with Azure fundamentals",
+    "Knowledge of hybrid cloud concepts",
+    "Basic understanding of security principles"
+  ],
+  "learningObjectives": [
+    {
+      "id": "hybrid-networking",
+      "title": "Design, implement, and manage hybrid networking",
+      "description": "Design and implement hybrid networking solutions",
+      "icon": "Globe"
+    },
+    {
+      "id": "core-networking",
+      "title": "Design and implement core networking infrastructure",
+      "description": "Design and implement core networking infrastructure in Azure",
+      "icon": "Network"
+    },
+    {
+      "id": "routing",
+      "title": "Design and implement routing",
+      "description": "Design and implement routing solutions for Azure networks",
+      "icon": "Route"
+    },
+    {
+      "id": "secure-monitor",
+      "title": "Secure and monitor networks",
+      "description": "Secure and monitor Azure network infrastructure",
+      "icon": "Shield"
+    },
+    {
+      "id": "private-access",
+      "title": "Design and implement private access to Azure Services",
+      "description": "Design and implement private access to Azure services",
+      "icon": "Lock"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced network professional with 10+ years in enterprise networking and cloud infrastructure.",
+    "expertise": [
+      "Azure Networking",
+      "Hybrid Cloud",
+      "Network Security",
+      "VPN Solutions"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-700",
+      "AZ-104",
+      "AZ-305"
+    ]
+  },
+  "price": {
+    "amount": 1295,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "Networking",
+    "AZ-700",
+    "Infrastructure"
+  ],
+  "featured": false,
+  "certification": {
+    "available": true,
+    "name": "AZ-700",
+    "examCode": "AZ-700",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "icon": "Network",
+  "overview": "Comprehensive Azure networking training covering virtual networks, hybrid connectivity, traffic management, network security, and monitoring. Essential for network engineers working with Azure infrastructure.",
+  "whatYouWillLearn": [
+    {
+      "title": "Virtual Networks & Core Infrastructure",
+      "description": "Design and implement VNets, IP addressing, DNS, segmentation, and peering"
+    },
+    {
+      "title": "Hybrid Networking & Connectivity",
+      "description": "VPN connections, ExpressRoute, Virtual WAN, and connectivity services"
+    },
+    {
+      "title": "Routing & Traffic Management",
+      "description": "User-defined routes, Load Balancer, Application Gateway, Traffic Manager"
+    },
+    {
+      "title": "Network Security & Monitoring",
+      "description": "NSGs, Azure Firewall, private endpoints, and network monitoring"
+    }
+  ],
+  "modules": [
+    {
+      "id": "virtual-networks",
+      "title": "Virtual Networks & Core Infrastructure",
+      "description": "Design and implement core networking infrastructure in Azure",
+      "icon": "Network",
+      "duration": "6 hours",
+      "topics": [
+        "Design and implement Virtual Networks (VNets)",
+        "Configure IP addressing and DNS",
+        "Implement network segmentation and peering",
+        "Design and implement subnets and network policies"
+      ]
+    },
+    {
+      "id": "hybrid-connectivity",
+      "title": "Hybrid Networking & Connectivity",
+      "description": "Design and implement hybrid networking solutions",
+      "icon": "Globe",
+      "duration": "6 hours",
+      "topics": [
+        "Design and implement VPN connections",
+        "Configure ExpressRoute connectivity",
+        "Implement Virtual WAN",
+        "Design and implement network connectivity services"
+      ]
+    },
+    {
+      "id": "routing-traffic",
+      "title": "Routing & Traffic Management",
+      "description": "Design and implement routing solutions",
+      "icon": "Route",
+      "duration": "6 hours",
+      "topics": [
+        "Configure user-defined routes (UDR)",
+        "Implement Azure Load Balancer",
+        "Design and implement Application Gateway",
+        "Configure Traffic Manager and Front Door"
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Network Security & Monitoring",
+      "description": "Secure and monitor Azure network infrastructure",
+      "icon": "Shield",
+      "duration": "6 hours",
+      "topics": [
+        "Implement Network Security Groups (NSGs)",
+        "Configure Azure Firewall and WAF",
+        "Implement private endpoints and service endpoints",
+        "Monitor and troubleshoot network connectivity"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "vnet-setup",
+      "title": "Virtual Network Configuration",
+      "description": "Create and configure virtual networks, subnets, and network security",
+      "icon": "Network",
+      "duration": "2 hours"
+    },
+    {
+      "id": "vpn-connection",
+      "title": "VPN Gateway Setup",
+      "description": "Implement and configure VPN connections for hybrid networking",
+      "icon": "Globe",
+      "duration": "2 hours"
+    },
+    {
+      "id": "load-balancer",
+      "title": "Load Balancer Implementation",
+      "description": "Configure Azure Load Balancer for traffic distribution",
+      "icon": "Server",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": "network-security",
+      "title": "Network Security Groups",
+      "description": "Implement and configure NSGs for network security",
+      "icon": "Shield",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": "monitoring-troubleshooting",
+      "title": "Network Monitoring",
+      "description": "Monitor network traffic and troubleshoot connectivity issues",
+      "icon": "BarChart",
+      "duration": "1 hour"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "3 days intensive",
+    "groupSize": "Max 12 participants",
+    "certification": "AZ-700 Associate preparation"
+  },
+  "targetAudience": [
+    "Network engineers",
+    "Azure infrastructure specialists",
+    "Cloud architects focusing on networking",
+    "System administrators managing network infrastructure"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Networking is often the most misunderstood aspect of cloud. I've designed hybrid networks for global enterprises, troubleshot complex connectivity issues, and optimized network performance. This training demystifies Azure networking with real-world scenarios I've encountered."
+  }
+}

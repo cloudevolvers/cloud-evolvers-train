@@ -1,0 +1,66 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#bg-gradient)" rx="16"/>
+  
+  <!-- Code brackets background -->
+  <g opacity="0.1">
+    <text x="20" y="40" fill="url(#icon-gradient)" font-family="monospace" font-size="24" font-weight="bold">&lt;/&gt;</text>
+    <text x="150" y="170" fill="url(#icon-gradient)" font-family="monospace" font-size="24" font-weight="bold">&lt;/&gt;</text>
+  </g>
+  
+  <!-- Main infrastructure icons -->
+  <g transform="translate(100, 100)">
+    <!-- Cloud infrastructure -->
+    <g transform="translate(-60, -30)">
+      <path d="M-20 -10 Q-20 -20 -10 -20 Q0 -30 15 -25 Q25 -30 35 -20 Q45 -20 45 -10 Q45 0 35 0 L-10 0 Q-20 0 -20 -10 Z" fill="url(#icon-gradient)" opacity="0.8"/>
+      <circle cx="0" cy="8" r="3" fill="url(#accent-gradient)"/>
+      <circle cx="15" cy="8" r="3" fill="url(#accent-gradient)"/>
+      <circle cx="30" cy="8" r="3" fill="url(#accent-gradient)"/>
+    </g>
+    
+    <!-- Server racks -->
+    <g transform="translate(20, -35)">
+      <rect x="0" y="0" width="30" height="40" fill="url(#icon-gradient)" opacity="0.7" rx="4"/>
+      <rect x="5" y="5" width="20" height="6" fill="url(#accent-gradient)" opacity="0.8"/>
+      <rect x="5" y="15" width="20" height="6" fill="url(#accent-gradient)" opacity="0.8"/>
+      <rect x="5" y="25" width="20" height="6" fill="url(#accent-gradient)" opacity="0.8"/>
+    </g>
+    
+    <!-- Terraform/IaC symbol -->
+    <g transform="translate(-30, 20)">
+      <polygon points="0,0 20,10 0,20 -20,10" fill="url(#icon-gradient)" opacity="0.9"/>
+      <text x="0" y="8" fill="white" font-family="monospace" font-size="8" text-anchor="middle" font-weight="bold">T</text>
+    </g>
+    
+    <!-- Connection lines -->
+    <line x1="-40" y1="-15" x2="-20" y2="25" stroke="url(#accent-gradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="5" y1="-15" x2="35" y2="-15" stroke="url(#accent-gradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="35" y1="-15" x2="10" y2="25" stroke="url(#accent-gradient)" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="30" cy="30" r="2" fill="url(#accent-gradient)" opacity="0.5"/>
+  <circle cx="170" cy="40" r="2" fill="url(#accent-gradient)" opacity="0.5"/>
+  <circle cx="40" cy="160" r="2" fill="url(#accent-gradient)" opacity="0.5"/>
+  <circle cx="160" cy="170" r="2" fill="url(#accent-gradient)" opacity="0.5"/>
+  
+  <!-- Title area -->
+  <rect x="0" y="160" width="200" height="40" fill="rgba(16, 185, 129, 0.1)" rx="0 0 16 16"/>
+  <text x="100" y="185" fill="url(#icon-gradient)" font-family="system-ui" font-size="14" font-weight="bold" text-anchor="middle">Infrastructure as Code</text>
+</svg>

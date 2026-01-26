@@ -1,0 +1,216 @@
+{
+  "id": "power-platform-fundamentals",
+  "slug": "power-platform-fundamentals",
+  "title": "Microsoft Power Platform Fundamentals",
+  "subtitle": "Build Low-Code Solutions with Power Platform",
+  "description": "Learn the business value and capabilities of Power Platform solutions",
+  "overview": "Introduction to Microsoft Power Platform including Power Apps, Power Automate, Power BI, and Power Virtual Agents. Learn how to build simple applications, automate workflows, analyze data, and create chatbots without extensive coding.",
+  "category": "Power Platform",
+  "subcategory": "Fundamentals",
+  "difficulty": "Beginner",
+  "tags": [
+    "Power Platform",
+    "Low-Code",
+    "Power Apps",
+    "Power Automate",
+    "Power BI",
+    "Power Virtual Agents"
+  ],
+  "duration": {
+    "days": 1,
+    "format": "days"
+  },
+  "price": {
+    "amount": 695,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "power-platform-value",
+      "title": "Power Platform Business Value",
+      "description": "Understand the business value and capabilities of Microsoft Power Platform",
+      "icon": "Zap"
+    },
+    {
+      "id": "power-platform-components",
+      "title": "Core Components",
+      "description": "Identify and understand core components of Power Platform",
+      "icon": "Layers"
+    },
+    {
+      "id": "power-bi-capabilities",
+      "title": "Power BI Capabilities",
+      "description": "Demonstrate data analysis and visualization capabilities of Power BI",
+      "icon": "BarChart"
+    },
+    {
+      "id": "power-apps-capabilities",
+      "title": "Power Apps Capabilities",
+      "description": "Learn to build applications with Power Apps",
+      "icon": "Smartphone"
+    },
+    {
+      "id": "power-automate-capabilities",
+      "title": "Power Automate Capabilities",
+      "description": "Automate workflows and processes with Power Automate",
+      "icon": "Workflow"
+    },
+    {
+      "id": "power-virtual-agents",
+      "title": "Power Virtual Agents",
+      "description": "Create chatbots and conversational AI with Power Virtual Agents",
+      "icon": "Bot"
+    }
+  ],
+  "modules": [
+    {
+      "id": "power-platform-intro",
+      "title": "Introduction to Microsoft Power Platform",
+      "description": "Learn the fundamentals of Power Platform and its components",
+      "icon": "Zap",
+      "duration": "2 hours",
+      "topics": [
+        "Power Platform overview and business value",
+        "Power Platform components and architecture",
+        "Licensing and pricing models",
+        "Integration with Microsoft 365",
+        "Security and governance"
+      ]
+    },
+    {
+      "id": "power-bi-fundamentals",
+      "title": "Power BI Fundamentals",
+      "description": "Master data analysis and visualization with Power BI",
+      "icon": "BarChart",
+      "duration": "2 hours",
+      "topics": [
+        "Power BI Desktop and Service",
+        "Data modeling and relationships",
+        "Creating visualizations and dashboards",
+        "Power Query for data transformation",
+        "Sharing and collaboration features"
+      ]
+    },
+    {
+      "id": "power-apps-development",
+      "title": "Power Apps Development",
+      "description": "Build applications with Power Apps",
+      "icon": "Smartphone",
+      "duration": "2 hours",
+      "topics": [
+        "Canvas apps vs Model-driven apps",
+        "Power Apps Studio interface",
+        "Working with data sources",
+        "Building forms and screens",
+        "Publishing and sharing apps"
+      ]
+    },
+    {
+      "id": "power-automate-workflows",
+      "title": "Power Automate Workflows",
+      "description": "Automate business processes with Power Automate",
+      "icon": "Workflow",
+      "duration": "2 hours",
+      "topics": [
+        "Cloud flows vs Desktop flows",
+        "Connectors and triggers",
+        "Building automated workflows",
+        "Approval processes",
+        "Integration with other services"
+      ]
+    },
+    {
+      "id": "power-virtual-agents",
+      "title": "Power Virtual Agents",
+      "description": "Create conversational AI solutions",
+      "icon": "Bot",
+      "duration": "2 hours",
+      "topics": [
+        "Creating chatbots without coding",
+        "Natural language understanding",
+        "Integration with other Power Platform tools",
+        "Publishing and deployment",
+        "Analytics and optimization"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "power-bi-lab",
+      "title": "Power BI Dashboard Creation",
+      "description": "Create a Power BI dashboard with visualizations",
+      "duration": "1 hour",
+      "icon": "BarChart"
+    },
+    {
+      "id": "power-apps-lab",
+      "title": "Power Apps Development",
+      "description": "Build a simple Power App from scratch",
+      "duration": "1 hour",
+      "icon": "Smartphone"
+    },
+    {
+      "id": "power-automate-lab",
+      "title": "Workflow Automation",
+      "description": "Create an automated workflow in Power Automate",
+      "duration": "1 hour",
+      "icon": "Workflow"
+    },
+    {
+      "id": "power-virtual-agents-lab",
+      "title": "Chatbot Creation",
+      "description": "Build a simple chatbot with Power Virtual Agents",
+      "duration": "1 hour",
+      "icon": "Bot"
+    }
+  ],
+  "prerequisites": [
+    "Basic understanding of data and business processes",
+    "Familiarity with Microsoft 365 applications",
+    "No coding experience required"
+  ],
+  "targetAudience": [
+    "Business professionals and analysts",
+    "Citizen developers",
+    "IT professionals evaluating Power Platform",
+    "Students preparing for PL-900 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with 6+ years of experience in Power Platform implementation. Specializes in low-code solutions and business process automation.",
+    "expertise": [
+      "Power Platform",
+      "Low-Code Development",
+      "Business Process Automation",
+      "Data Analytics",
+      "Citizen Development"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified: Power Platform Solution Architect Expert",
+      "Microsoft Certified Trainer",
+      "Microsoft Certified: Power BI Data Analyst Associate"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Power Platform Fundamentals",
+    "examCode": "PL-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 20,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-12-20"
+  },
+  "featured": false,
+  "icon": "Zap",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As someone who has guided hundreds of professionals into Azure, I've seen firsthand how the right foundation makes all the difference. I remember working with a team of traditional infrastructure engineers who were skeptical about cloud. After this training, they successfully migrated their first workloads to Azure and became cloud advocates. This course distills everything I wish I knew when I started with Azure."
+  }
+}

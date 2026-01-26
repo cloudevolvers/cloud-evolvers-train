@@ -1,0 +1,212 @@
+{
+  "id": "windows-server-hybrid-infrastructure",
+  "slug": "windows-server-hybrid-infrastructure",
+  "title": "Windows Server Hybrid Infrastructure",
+  "subtitle": "Configure Windows Server Services in Hybrid Environments",
+  "description": "Configure Windows Server services in hybrid environments",
+  "overview": "Advanced training focusing on configuring and managing Windows Server hybrid infrastructure. Learn to implement and manage on-premises and hybrid solutions such as identity, management, compute, networking, and storage.",
+  "category": "Infrastructure",
+  "subcategory": "Windows Server",
+  "difficulty": "Advanced",
+  "tags": [
+    "Windows Server",
+    "Hybrid",
+    "AZ-801",
+    "Infrastructure",
+    "Enterprise",
+    "Active Directory"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "hybrid-identity-services",
+      "title": "Hybrid Identity Services",
+      "description": "Configure Windows Server in hybrid environments with Azure AD integration",
+      "icon": "Users"
+    },
+    {
+      "id": "compute-storage-hybrid",
+      "title": "Compute and Storage in Hybrid",
+      "description": "Implement and manage compute and storage solutions in hybrid scenarios",
+      "icon": "Server"
+    },
+    {
+      "id": "hybrid-networking",
+      "title": "Hybrid Networking",
+      "description": "Configure advanced networking services for hybrid environments",
+      "icon": "Network"
+    },
+    {
+      "id": "container-virtual-infrastructure",
+      "title": "Container and Virtual Infrastructure",
+      "description": "Manage containers and virtual infrastructure in hybrid setups",
+      "icon": "Box"
+    },
+    {
+      "id": "monitoring-maintenance",
+      "title": "Monitoring and Maintenance",
+      "description": "Monitor and maintain hybrid infrastructure solutions",
+      "icon": "Activity"
+    }
+  ],
+  "modules": [
+    {
+      "id": "hybrid-identity-services",
+      "title": "Hybrid Identity Services",
+      "description": "Configure and manage identity services in hybrid environments",
+      "icon": "Users",
+      "duration": "8 hours",
+      "topics": [
+        "Azure AD Connect deployment and configuration",
+        "Password writeback and self-service password reset",
+        "Hybrid authentication methods",
+        "Azure AD Connect Health monitoring",
+        "Troubleshooting synchronization issues"
+      ]
+    },
+    {
+      "id": "compute-storage-hybrid",
+      "title": "Compute and Storage in Hybrid",
+      "description": "Implement compute and storage solutions for hybrid environments",
+      "icon": "Server",
+      "duration": "8 hours",
+      "topics": [
+        "Windows Admin Center deployment",
+        "Azure Arc for servers",
+        "Storage Spaces Direct configuration",
+        "Storage Replica implementation",
+        "Backup and disaster recovery"
+      ]
+    },
+    {
+      "id": "hybrid-networking",
+      "title": "Hybrid Networking",
+      "description": "Configure advanced networking for hybrid scenarios",
+      "icon": "Network",
+      "duration": "6 hours",
+      "topics": [
+        "DNS in hybrid environments",
+        "VPN and ExpressRoute connectivity",
+        "Network Load Balancing",
+        "Software Defined Networking",
+        "Network security implementation"
+      ]
+    },
+    {
+      "id": "container-virtual-infrastructure",
+      "title": "Container and Virtual Infrastructure",
+      "description": "Manage containers and virtual infrastructure",
+      "icon": "Box",
+      "duration": "6 hours",
+      "topics": [
+        "Windows containers on Server",
+        "Hyper-V configuration and management",
+        "VM migration strategies",
+        "Azure Stack HCI integration",
+        "Kubernetes on Windows Server"
+      ]
+    },
+    {
+      "id": "monitoring-maintenance",
+      "title": "Monitoring and Maintenance",
+      "description": "Monitor and maintain hybrid infrastructure",
+      "icon": "Activity",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Monitor integration",
+        "Performance monitoring and tuning",
+        "Update management strategies",
+        "Security compliance monitoring",
+        "Disaster recovery testing"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "aad-connect-lab",
+      "title": "Azure AD Connect Configuration",
+      "description": "Configure Azure AD Connect for hybrid identity",
+      "duration": "3 hours",
+      "icon": "Users"
+    },
+    {
+      "id": "storage-spaces-lab",
+      "title": "Storage Spaces Direct Setup",
+      "description": "Configure Storage Spaces Direct for hybrid storage",
+      "duration": "3 hours",
+      "icon": "Server"
+    },
+    {
+      "id": "hybrid-networking-lab",
+      "title": "Hybrid Network Configuration",
+      "description": "Configure hybrid networking with VPN and ExpressRoute",
+      "duration": "3 hours",
+      "icon": "Network"
+    },
+    {
+      "id": "azure-arc-lab",
+      "title": "Azure Arc for Servers",
+      "description": "Configure Azure Arc for hybrid server management",
+      "duration": "3 hours",
+      "icon": "Cloud"
+    }
+  ],
+  "prerequisites": [
+    "Significant experience with Windows Server administration",
+    "Understanding of networking concepts",
+    "Familiarity with Active Directory and Azure AD",
+    "Knowledge of PowerShell scripting"
+  ],
+  "targetAudience": [
+    "Windows Server Administrators",
+    "Hybrid Infrastructure Engineers",
+    "System Administrators",
+    "Infrastructure Architects"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Infrastructure architect with 15+ years in Windows Server and hybrid solutions. Specializes in enterprise infrastructure design and Azure integration.",
+    "expertise": [
+      "Windows Server",
+      "Hybrid Infrastructure",
+      "Active Directory",
+      "Azure Integration",
+      "Infrastructure as Code"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Windows Server Hybrid Administrator Associate",
+      "Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer",
+      "MCSE: Cloud Platform and Infrastructure"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Windows Server Hybrid Administrator Associate",
+    "examCode": "AZ-801",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-02-15"
+  },
+  "featured": false,
+  "icon": "Server",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Even in a cloud-first world, Windows Server expertise matters. I've managed hybrid infrastructures where on-premises and Azure resources work seamlessly together. This training covers the hybrid scenarios I've implemented for enterprise clients."
+  }
+}

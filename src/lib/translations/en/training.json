@@ -1,0 +1,67 @@
+{
+  "title": "Microsoft Training Courses",
+  "subtitle": "Expert-designed training for career advancement",
+  "popular": {
+    "title": "Popular Courses",
+    "badge": "Most Popular",
+    "courses": [
+      { 
+        "code": "AZ-104", 
+        "name": "Azure Administrator Associate", 
+        "level": "Intermediate", 
+        "duration": "4 days",
+        "description": "Master Azure administration and resource management",
+        "highlights": ["Virtual machines", "Storage accounts", "Azure networking", "Monitoring & backup"]
+      },
+      { 
+        "code": "AZ-900", 
+        "name": "Azure Fundamentals", 
+        "level": "Beginner", 
+        "duration": "2 days",
+        "description": "Perfect introduction to Azure cloud concepts",
+        "highlights": ["Cloud basics", "Core services", "Security & compliance", "Pricing models"]
+      },
+      { 
+        "code": "AZ-305", 
+        "name": "Azure Solutions Architect", 
+        "level": "Advanced", 
+        "duration": "5 days",
+        "description": "Design scalable and secure Azure solutions",
+        "highlights": ["Solution design", "Security architecture", "Cost optimization", "Migration strategies"]
+      },
+      { 
+        "code": "MS-102", 
+        "name": "Microsoft 365 Administrator", 
+        "level": "Advanced", 
+        "duration": "5 days",
+        "description": "Complete M365 administration and security",
+        "highlights": ["Identity management", "Teams administration", "Security & compliance", "Device management"]
+      }
+    ]
+  },
+  "azure": {
+    "title": "Azure Certifications",
+    "subtitle": "Complete Azure learning path",
+    "courses": [
+      { "code": "AZ-900", "name": "Azure Fundamentals", "level": "Beginner" },
+      { "code": "AZ-104", "name": "Azure Administrator", "level": "Intermediate" },
+      { "code": "AZ-305", "name": "Azure Solutions Architect", "level": "Advanced" },
+      { "code": "AZ-500", "name": "Azure Security Engineer", "level": "Advanced" },
+      { "code": "AZ-204", "name": "Azure Developer", "level": "Intermediate" },
+      { "code": "AZ-400", "name": "Azure DevOps Engineer", "level": "Advanced" }
+    ],
+    "moreText": "+8 more certifications"
+  },
+  "microsoft365": {
+    "title": "Microsoft 365 & AI",
+    "subtitle": "AI-powered productivity",
+    "courses": [
+      { "code": "MS-900", "name": "Microsoft 365 Fundamentals", "level": "Beginner" },
+      { "code": "MS-102", "name": "Microsoft 365 Administrator Expert", "level": "Advanced" },
+      { "code": "Custom", "name": "Microsoft 365 Copilot Mastery", "level": "Intermediate" },
+      { "code": "MS-700", "name": "Teams Advanced Administration", "level": "Advanced" },
+      { "code": "PL-900", "name": "Power Platform Fundamentals", "level": "Beginner" },
+      { "code": "Custom", "name": "Power Platform Automation Bootcamp", "level": "Intermediate" }
+    ]
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "slug": "azure-ai-developer-bootcamp-nl",
+    "title": "Azure AI Developer Bootcamp",
+    "subtitle": "5 Dagen Die Je Carrière Voor Altijd Zullen Transformeren",
+    "description": "Dit is niet zomaar een cursus - het is een carrière accelerator. In slechts 5 intense dagen ga je van AI nieuwsgierig naar AI expert, en bouw je de vaardigheden die je de meest gewilde developer in de industrie maken. Bedrijven zijn wanhopig op zoek naar developers die AI ideeën in werkelijkheid kunnen omzetten, en deze bootcamp zal jou die developer maken.",
+    "category": "AI & Machine Learning",
+    "level": "Advanced",
+    "duration": "5 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "AI", "Machine Learning", "Development", "Bootcamp", "Python", "Azure ML", "Cognitive Services", "Carrière Transformatie"],
+    "prerequisites": [
+      "Een brandende wens om AI developer te worden",
+      "Basis programmeervaardigheden (wij leren je de rest)",
+      "De moed om door 5 intense dagen van leren heen te komen"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-ai-bootcamp-hero.jpg",
+    "badge": "Elite AI Developer Training",
+    "highlights": [
+      "Bouw 5 productie-klaar AI applicaties in 5 dagen",
+      "Beheers de AI vaardigheden die €150k+ per jaar betalen",
+      "Word lid van een exclusieve gemeenschap van AI innovators",
+      "Word aangenomen door top tech bedrijven wereldwijd"
+    ]
+  },
+  "overview": {
+    "summary": "Stel je voor dat je een sollicitatiegesprek binnenloopt en vol vertrouwen zegt 'Ik bouwde 5 AI applicaties vorige week.' Dat is de werkelijkheid van deze bootcamp. We zijn hier niet om je theorie te leren - we zijn hier om je te transformeren tot de AI developer waar bedrijven om vechten. Je codeert van 9 uur 's ochtends tot 9 uur 's avonds, doorbreekt mentale barrières, en komt naar voren als iemand die elk AI idee in werkende software kan omzetten. Dit is geen comfortabel leren - dit is de intense, levensveranderende ervaring die de AI developers die worden aangenomen scheidt van degenen die dat niet doen.",
+    "objectives": [
+      "Beheers elke Azure AI dienst en wanneer je elk moet gebruiken",
+      "Bouw custom machine learning modellen vanaf nul",
+      "Deploy AI oplossingen die miljoenen gebruikers aankunnen",
+      "Creëer computer vision systemen die commerciële producten evenaren",
+      "Ontwikkel NLP applicaties die menselijke intentie begrijpen",
+      "Lanceer een portfolio van AI projecten die je werk bezorgen"
+    ],
+    "targetAudience": "Deze bootcamp is voor developers die serieus zijn over het worden van AI experts. Als je moe bent van het zijn van een junior developer en wilt worden de persoon die AI initiatieven leidt, als je zescijferige salarissen wilt commanderen en wilt werken aan cutting-edge projecten, als je klaar bent om door ongemak heen te pushen om buitengewone resultaten te bereiken - deze bootcamp zal je leven veranderen. Geen 'ik wou dat ik AI kon bouwen' meer - je doet het daadwerkelijk."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure AI Services Deep Dive",
+      "description": "Beheers Azure Cognitive Services en AI APIs",
+      "duration": "8 uur",
+      "objectives": [
+        "Implementeer Azure Computer Vision oplossingen",
+        "Bouw NLP applicaties met Azure Language",
+        "Creëer conversationele AI met Azure Bot Service",
+        "Integreer Azure OpenAI Service",
+        "Behandel authenticatie en beveiliging",
+        "Optimaliseer API gebruik en kosten"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure AI Services Architectuur</h3><p>Leer de architectuur en mogelijkheden van Azure AI diensten, inclusief Cognitive Services, Azure OpenAI, en Azure AI platform componenten.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Belangrijke AI Diensten",
+            "items": [
+              "Azure Computer Vision voor beeld analyse",
+              "Azure Language voor tekst verwerking",
+              "Azure OpenAI voor generatieve AI",
+              "Azure Speech voor spraak applicaties",
+              "Azure Bot Service voor conversationele AI",
+              "Azure Form Recognizer voor document verwerking"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/ai-services-architecture.jpg",
+            "alt": "Azure AI Services Architectuur",
+            "caption": "Uitgebreide Azure AI diensten ecosystem"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "AI Services Integration Lab",
+          "description": "Bouw applicaties met meerdere Azure AI diensten",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Custom Machine Learning with Azure ML",
+      "description": "Bouw en deploy custom ML modellen",
+      "duration": "10 uur",
+      "objectives": [
+        "Stel Azure Machine Learning workspace in",
+        "Bouw en train custom ML modellen",
+        "Deploy modellen naar productie",
+        "Implementeer MLOps praktijken",
+        "Monitor model prestaties",
+        "Automatiseer ML pipelines"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Machine Learning Platform</h3><p>Master the Azure ML platform for building, training, and deploying custom machine learning models at scale.</p>"
+          },
+          {
+            "type": "list",
+            "title": "ML Development Workflow",
+            "items": [
+              "Data preparation and feature engineering",
+              "Model training and hyperparameter tuning",
+              "Model evaluation and validation",
+              "Model deployment and serving",
+              "Continuous model monitoring",
+              "Model retraining and updates"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Custom ML Model Development Lab",
+          "description": "Build and deploy a complete ML pipeline",
+          "duration": "240 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Advanced Computer Vision",
+      "description": "Advanced computer vision development techniques",
+      "duration": "8 uur",
+      "objectives": [
+        "Bouw custom computer vision modellen",
+        "Implementeer object detectie en tracking",
+        "Ontwikkel beeld segmentatie systemen",
+        "Creëer gezichtsherkenning applicaties",
+        "Implementeer real-time video analyse",
+        "Optimaliseer CV modellen voor productie"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Geavanceerde computer vision technieken voor het bouwen van intelligente beeldverwerking applicaties, van basis classificatie tot complexe object detectie en tracking.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Computer Vision Technieken",
+            "items": [
+              "Custom beeld classificatie",
+              "Object detectie en lokalisatie",
+              "Beeld segmentatie",
+              "Gezichtsherkenning systemen",
+              "Optische karakter herkenning",
+              "Real-time video analyse"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Computer Vision Project Lab",
+          "description": "Bouw een complete computer vision applicatie",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Natural Language Processing and Generative AI",
+      "description": "Geavanceerde NLP en generatieve AI development",
+      "duration": "8 uur",
+      "objectives": [
+        "Implementeer custom NLP modellen",
+        "Bouw generatieve AI applicaties",
+        "Creëer chatbots en virtuele assistenten",
+        "Ontwikkel tekst analyse systemen",
+        "Implementeer taal vertaling",
+        "Behandel meertalige applicaties"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>NLP en Generatieve AI</h3><p>Beheers geavanceerde natuurlijke taal verwerking technieken en bouw applicaties met generatieve AI modellen en Azure OpenAI Service.</p>"
+          },
+          {
+            "type": "list",
+            "title": "NLP en Generatieve AI Technieken",
+            "items": [
+              "Tekst classificatie en sentiment analyse",
+              "Named entity recognition",
+              "Question answering systemen",
+              "Conversational AI development",
+              "Generatieve tekst creatie",
+              "Meertalige model implementatie"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "NLP and Generative AI Lab",
+          "description": "Build advanced NLP and generative AI applications",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Production Deployment and MLOps",
+      "description": "Deploy AI solutions to production with MLOps",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer CI/CD voor AI modellen",
+        "Stel model monitoring in",
+        "Behandel model drift en retraining",
+        "Implementeer A/B testing voor modellen",
+        "Beveilig AI deployments",
+        "Optimaliseer model prestaties en kosten"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>MLOps en Productie Deployment</h3><p>Leer hoe je AI modellen naar productie brengt met robuuste MLOps praktijken, monitoring, en onderhoud.</p>"
+          },
+          {
+            "type": "list",
+            "title": "MLOps Best Practices",
+            "items": [
+              "Automated model training pipelines",
+              "Model versioning and registry",
+              "Continuous model monitoring",
+              "Automated retraining workflows",
+              "Model performance tracking",
+              "Security and compliance in production"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "MLOps Pipeline Lab",
+          "description": "Build a complete MLOps pipeline for AI deployment",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2500,
+    "discountedPrice": 2000,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-05-01"
+    },
+    "includes": [
+      "Intensieve 5-daagse training",
+      "Alle cursus materialen en code samples",
+      "Azure credits voor hands-on oefeningen",
+      "Bootcamp certificaat",
+      "Toegang tot alumni community",
+      "Job placement ondersteuning",
+      "Lunch en verfrissingen elke dag"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Chief AI Architect",
+    "bio": "Yaïr is a world-renowned AI architect who has led AI transformations at Fortune 500 companies. He holds multiple AI patents and has published extensively on machine learning and AI ethics.",
+    "certifications": [
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "AWS Certified Machine Learning - Specialty",
+      "Google Cloud Professional ML Engineer",
+      "Certified Kubernetes Administrator",
+      "PhD in Artificial Intelligence"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-06-10",
+        "endDate": "2024-06-14",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 8,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure AI Developer Documentatie",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
+      "description": "Uitgebreide Azure AI diensten documentatie"
+    },
+    {
+      "type": "video",
+      "title": "Azure AI Development Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nE",
+      "description": "Geavanceerde Azure AI development tutorials"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Machine Learning Studio",
+      "url": "https://ml.azure.com/",
+      "description": "Azure ML development omgeving"
+    },
+    {
+      "type": "code",
+      "title": "Azure AI Samples Repository",
+      "url": "https://github.com/Azure-Samples/azure-ai",
+      "description": "Code samples voor Azure AI development"
+    }
+  ],
+  "certification": {
+    "name": "Azure AI Developer Bootcamp Certificaat",
+    "code": "AZ-AI-BOOTCAMP",
+    "description": "Demonstreer beheersing van Azure AI development, custom ML model building, en productie deployment van AI oplossingen",
+    "examDetails": {
+      "duration": "240 minuten",
+      "questions": 60,
+      "passingScore": 750,
+      "cost": 250,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Azure AI services implementatie (20-25%)",
+      "Custom machine learning development (25-30%)",
+      "Computer vision applicaties (15-20%)",
+      "Natural language processing (15-20%)",
+      "Production deployment en MLOps (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Welke programmeertalen worden gebruikt?",
+      "answer": "De bootcamp gebruikt voornamelijk Python voor AI development, met wat JavaScript voor web integratie. Alle code samples en labs worden verstrekt."
+    },
+    {
+      "question": "Heb ik mijn eigen Azure subscription nodig?",
+      "answer": "Hoewel het hebben van je eigen subscription gunstig is voor voortgezet leren, bieden we Azure credits voor alle lab oefeningen tijdens de bootcamp."
+    },
+    {
+      "question": "Is deze bootcamp technisch?",
+      "answer": "Ja, dit is een hoogtechnische bootcamp die programmeervaardigheden en AI kennis vereist. Het is ontworpen voor developers die productie AI systemen willen bouwen."
+    },
+    {
+      "question": "Welke projecten zal ik bouwen?",
+      "answer": "Je bouwt meerdere projecten inclusief een computer vision applicatie, NLP chatbot, custom ML model, en een complete AI-powered web applicatie."
+    }
+  ]
+}

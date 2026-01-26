@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "slug": "microsoft-365-fundamentals",
+    "title": "Microsoft 365 Fundamentals",
+    "subtitle": "Master Microsoft 365 productivity and collaboration tools",
+    "description": "Learn the fundamentals of Microsoft 365 including Office apps, Teams, SharePoint, and Exchange Online. Prepare for the MS-900 certification.",
+    "category": "microsoft365",
+    "level": "Beginner",
+    "duration": "1.5 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Microsoft 365", "Office 365", "Productivity", "Collaboration"],
+    "prerequisites": [
+      "Basic computer skills",
+      "Understanding of Microsoft Windows",
+      "No prior Microsoft 365 experience required"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/m365-fundamentals-hero.jpg",
+    "badge": "Microsoft 365 Certified",
+    "highlights": [
+      "Complete Microsoft 365 overview",
+      "Hands-on with all major apps",
+      "MS-900 certification preparation"
+    ]
+  },
+  "overview": {
+    "summary": "Microsoft 365 Fundamentals provides a comprehensive introduction to Microsoft's productivity suite. Learn how to leverage Office apps, Teams, SharePoint, and other Microsoft 365 services to enhance productivity and collaboration.",
+    "objectives": [
+      "Understand Microsoft 365 core services and products",
+      "Learn Office 365 application fundamentals",
+      "Explore Microsoft 365 security and compliance",
+      "Understand licensing and pricing options",
+      "Prepare for MS-900 certification exam"
+    ],
+    "targetAudience": "IT professionals, administrators, and end-users who want to understand Microsoft 365 services and prepare for the MS-900 certification."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Microsoft 365 Overview",
+      "description": "Introduction to Microsoft 365 services and cloud concepts",
+      "duration": "1.5 hours",
+      "objectives": [
+        "Describe Microsoft 365 services",
+        "Understand cloud concepts in Microsoft 365",
+        "Identify Microsoft 365 productivity apps",
+        "Explore Microsoft 365 security features"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Microsoft 365 is a complete, intelligent solution that includes Office 365, Windows 10/11, and Enterprise Mobility + Security, delivering a complete, intelligent, and secure productivity solution.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Core Microsoft 365 Services",
+            "items": [
+              "Exchange Online - Email and calendar services",
+              "SharePoint Online - Document management and collaboration",
+              "Microsoft Teams - Chat, meetings, and collaboration",
+              "OneDrive for Business - Personal cloud storage",
+              "Office Online - Web-based Office applications"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Microsoft 365 Admin Center Tour",
+          "description": "Navigate the Microsoft 365 admin center",
+          "duration": "30 minutes",
+          "type": "guided",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Office 365 Applications",
+      "description": "Deep dive into Office 365 productivity applications",
+      "duration": "2 hours",
+      "objectives": [
+        "Master Word, Excel, PowerPoint online features",
+        "Learn Outlook and Exchange Online",
+        "Understand OneDrive and SharePoint integration",
+        "Explore Microsoft Teams collaboration features"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Office Online Applications</h3><p>Office Online provides web-based versions of familiar Office applications with real-time collaboration features.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/m365/office-online-apps.jpg",
+            "alt": "Office Online Applications",
+            "caption": "Word, Excel, PowerPoint, and OneNote Online"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Collaborative Document Editing",
+          "description": "Practice real-time collaboration in Office Online",
+          "duration": "45 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 800,
+    "discountedPrice": 650,
+    "earlyBirdDiscount": {
+      "percentage": 15,
+      "deadline": "2024-02-01"
+    },
+    "groupDiscounts": [
+      {
+        "minParticipants": 3,
+        "percentage": 10
+      },
+      {
+        "minParticipants": 5,
+        "percentage": 20
+      }
+    ],
+    "includes": [
+      "Official course materials",
+      "Microsoft 365 trial access",
+      "Certification exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate"
+    ]
+  },
+  "instructor": {
+    "name": "Michael Chen",
+    "title": "Microsoft 365 Certified Trainer",
+    "bio": "Michael is a Microsoft Certified Trainer with extensive experience in Microsoft 365 deployment and administration. He has helped hundreds of organizations successfully adopt Microsoft 365 solutions.",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Enterprise Administrator Expert",
+      "Microsoft Certified: Modern Desktop Administrator Associate",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/michael-chen.jpg",
+    "social": {
+      "linkedin": "https://linkedin.com/in/michael-chen-m365",
+      "twitter": "@michaelm365"
+    }
+  },
+  "schedule": {
+    "format": "virtual",
+    "dates": [
+      {
+        "startDate": "2024-02-20",
+        "endDate": "2024-02-21",
+        "location": "Virtual Classroom",
+        "availableSeats": 18,
+        "maxSeats": 20
+      },
+      {
+        "startDate": "2024-03-15",
+        "endDate": "2024-03-16",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 8,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET",
+    "dailySchedule": [
+      {
+        "day": 1,
+        "startTime": "09:00",
+        "endTime": "16:00",
+        "breaks": [
+          { "type": "lunch", "startTime": "12:00", "endTime": "13:00" }
+        ]
+      },
+      {
+        "day": 2,
+        "startTime": "09:00",
+        "endTime": "15:00",
+        "breaks": [
+          { "type": "lunch", "startTime": "12:00", "endTime": "13:00" }
+        ]
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Microsoft 365 Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-365-fundamentals/",
+      "description": "Official Microsoft learning path for Microsoft 365 Fundamentals"
+    },
+    {
+      "type": "video",
+      "title": "Microsoft 365 Training Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nGlV8fqnwG5vHgK4QNuQ",
+      "description": "Comprehensive video training for Microsoft 365"
+    },
+    {
+      "type": "practice-test",
+      "title": "MS-900 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/ms-900",
+      "description": "Official practice tests for MS-900 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft 365 Certified: Fundamentals",
+    "code": "MS-900",
+    "description": "Demonstrate foundational knowledge of Microsoft 365 cloud service offerings",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 99,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Describe Microsoft 365 core services and concepts (35-40%)",
+      "Describe security, compliance, privacy, and trust in Microsoft 365 (30-35%)",
+      "Describe Microsoft 365 pricing and support (25-30%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What's the difference between Microsoft 365 and Office 365?",
+      "answer": "Microsoft 365 includes Office 365 plus Windows 10/11 Pro licenses and advanced security features, while Office 365 focuses primarily on the productivity applications."
+    },
+    {
+      "question": "Do I need a Microsoft 365 subscription for this course?",
+      "answer": "No, we provide trial access during the course. However, having a Microsoft 365 account will help you practice the concepts after the training."
+    },
+    {
+      "question": "Is this course suitable for complete beginners?",
+      "answer": "Yes, this course is designed for beginners and assumes no prior knowledge of Microsoft 365 or cloud services."
+    }
+  ]
+}

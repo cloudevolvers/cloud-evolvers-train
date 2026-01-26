@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "generated": "2025-09-25T19:06:12Z",
+    "totalImages": 0,
+    "services": {
+      "unsplash": { "count": 0, "description": "High-quality photography platform - Commercial use allowed" },
+      "pexels": { "count": 0, "description": "Free stock photos and videos - CC0 license" },
+      "pixabay": { "count": 0, "description": "Free images, vectors, and illustrations - Pixabay license" }
+    },
+    "categories": {
+      "cloud-computing": "Azure, AWS, cloud infrastructure, serverless computing",
+      "devops-automation": "CI/CD pipelines, Docker, Kubernetes, infrastructure as code",
+      "business-training": "Corporate workshops, professional development, leadership",
+      "data-analytics": "Power BI, SQL databases, business intelligence, data visualization",
+      "security-compliance": "Zero trust, IAM, threat detection, governance, audit",
+      "ai-machine-learning": "Artificial intelligence, neural networks, automation, robotics",
+      "modern-workplace": "Hybrid work, remote collaboration, digital transformation",
+      "software-development": "Programming, coding workspaces, tech innovation, development"
+    }
+  },
+  "images": [

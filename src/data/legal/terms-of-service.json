@@ -1,0 +1,114 @@
+{
+  "en": {
+    "title": "Terms of Service",
+    "lastUpdated": "2025-10-23",
+    "sections": [
+      {
+        "id": "acceptance",
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing and using Cloud Evolvers services (operated by Spot Cloud B.V.), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use our services."
+      },
+      {
+        "id": "services",
+        "title": "2. Description of Services",
+        "content": "Spot Cloud B.V., operating under the Cloud Evolvers brand, provides Azure training, Microsoft 365 training, and cloud consulting services. Our services include but are not limited to Microsoft Certified Training (MCT), end-to-end implementations, automation solutions, and strategic consulting."
+      },
+      {
+        "id": "user-obligations",
+        "title": "3. User Obligations",
+        "content": "You agree to provide accurate, current, and complete information as required for using our services. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account."
+      },
+      {
+        "id": "intellectual-property",
+        "title": "4. Intellectual Property Rights",
+        "content": "All content, features, and functionality within the Cloud Evolvers services, including but not limited to text, graphics, logos, and course materials are the exclusive property of Spot Cloud B.V. or its licensors and are protected by copyright, trademark, and other intellectual property laws."
+      },
+      {
+        "id": "data-protection",
+        "title": "5. Data Protection and GDPR Compliance",
+        "content": "We are committed to protecting your personal data in accordance with applicable data protection laws, including the General Data Protection Regulation (GDPR). For details on how we collect, use, and protect your data, please refer to our Privacy Policy."
+      },
+      {
+        "id": "data-rights",
+        "title": "6. Right to Access and Data Portability",
+        "content": "In accordance with GDPR, you have the right to access, correct, or delete your personal data that we process. You may also request to receive your personal data in a structured, commonly used, machine-readable format."
+      },
+      {
+        "id": "liability",
+        "title": "7. Limitation of Liability",
+        "content": "To the fullest extent permitted by applicable law, Spot Cloud B.V. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, resulting from your use of our services."
+      },
+      {
+        "id": "changes",
+        "title": "8. Changes to Terms",
+        "content": "We reserve the right to modify these Terms of Service at any time. We will provide notice of any material changes through our website or by other means. Your continued use of our services after such modifications constitutes acceptance of the updated terms."
+      },
+      {
+        "id": "governing-law",
+        "title": "9. Governing Law",
+        "content": "These Terms of Service are governed by and construed in accordance with the laws of the Netherlands, without regard to its conflict of law principles."
+      },
+      {
+        "id": "contact",
+        "title": "10. Contact Us",
+        "content": "If you have any questions about these Terms of Service, please contact us at legal@cloudevolvers.com."
+      }
+    ]
+  },
+  "nl": {
+    "title": "Gebruiksvoorwaarden",
+    "lastUpdated": "2025-10-23",
+    "sections": [
+      {
+        "id": "acceptance",
+        "title": "1. Acceptatie van de Voorwaarden",
+        "content": "Door toegang te krijgen tot en gebruik te maken van Cloud Evolvers-diensten (uitgevoerd door Spot Cloud B.V.), erkent u dat u deze Gebruiksvoorwaarden hebt gelezen, begrepen en ermee instemt gebonden te zijn. Als u niet akkoord gaat met deze voorwaarden, gebruik dan onze diensten niet."
+      },
+      {
+        "id": "services",
+        "title": "2. Beschrijving van Diensten",
+        "content": "Spot Cloud B.V., opererend onder het merk Cloud Evolvers, biedt Azure-training, Microsoft 365-training en cloudconsultingdiensten. Onze diensten omvatten maar zijn niet beperkt tot Microsoft Certified Training (MCT), end-to-end implementaties, automatiseringsoplossingen en strategisch advies."
+      },
+      {
+        "id": "user-obligations",
+        "title": "3. Verplichtingen van Gebruikers",
+        "content": "U gaat ermee akkoord om nauwkeurige, actuele en volledige informatie te verstrekken zoals vereist voor het gebruik van onze diensten. U bent verantwoordelijk voor het handhaven van de vertrouwelijkheid van uw accountreferenties en voor alle activiteiten die onder uw account plaatsvinden."
+      },
+      {
+        "id": "intellectual-property",
+        "title": "4. Intellectuele Eigendomsrechten",
+        "content": "Alle inhoud, functies en functionaliteit binnen de Cloud Evolvers-diensten, inclusief maar niet beperkt tot tekst, graphics, logo's en cursusmateriaal, zijn het exclusieve eigendom van Spot Cloud B.V. of haar licentiegevers en zijn beschermd door auteursrecht, handelsmerk en andere intellectuele eigendomswetten."
+      },
+      {
+        "id": "data-protection",
+        "title": "5. Gegevensbescherming en AVG-naleving",
+        "content": "We zijn toegewijd aan het beschermen van uw persoonlijke gegevens in overeenstemming met toepasselijke wetgeving inzake gegevensbescherming, waaronder de Algemene Verordening Gegevensbescherming (AVG). Voor details over hoe we uw gegevens verzamelen, gebruiken en beschermen, raadpleeg ons Privacybeleid."
+      },
+      {
+        "id": "data-rights",
+        "title": "6. Recht op Toegang en Gegevensoverdraagbaarheid",
+        "content": "In overeenstemming met de AVG heeft u het recht om toegang te krijgen tot, te corrigeren of te verwijderen van uw persoonlijke gegevens die wij verwerken. U kunt ook verzoeken om uw persoonlijke gegevens te ontvangen in een gestructureerd, algemeen gebruikt, machineleesbaar formaat."
+      },
+      {
+        "id": "liability",
+        "title": "7. Beperking van Aansprakelijkheid",
+        "content": "Voor zover toegestaan door het toepasselijke recht, is Spot Cloud B.V. niet aansprakelijk voor indirecte, incidentele, speciale, gevolgschade of bestraffende schade, inclusief verlies van winst, gegevens of zakelijke kansen, voortvloeiend uit uw gebruik van onze diensten."
+      },
+      {
+        "id": "changes",
+        "title": "8. Wijzigingen in de Voorwaarden",
+        "content": "We behouden ons het recht voor om deze Gebruiksvoorwaarden op elk moment te wijzigen. We zullen u op de hoogte stellen van belangrijke wijzigingen via onze website of op andere manieren. Uw voortgezette gebruik van onze diensten na dergelijke wijzigingen betekent acceptatie van de bijgewerkte voorwaarden."
+      },
+      {
+        "id": "governing-law",
+        "title": "9. Toepasselijk Recht",
+        "content": "Deze Gebruiksvoorwaarden worden beheerst door en geïnterpreteerd in overeenstemming met de wetten van Nederland, zonder rekening te houden met conflicterende rechtsbeginselen."
+      },
+      {
+        "id": "contact",
+        "title": "10. Contact Opnemen",
+        "content": "Als u vragen heeft over deze Gebruiksvoorwaarden, neem dan contact met ons op via legal@cloudevolvers.com."
+      }
+    ]
+  }
+}

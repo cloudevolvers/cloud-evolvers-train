@@ -1,0 +1,34 @@
+{
+  "id": "azure-ai-developer",
+  "slug": "azure-ai-developer",
+  "title": "Azure AI Developer",
+  "description": "Bouw AI-gestuurde applicaties met Azure AI services en machine learning",
+  "overview": "Intensieve training voor ontwikkelaars om productieklare AI-applicaties te bouwen met Azure Cognitive Services, Azure Machine Learning en conversatie-AI.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Ontwikkeling",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1695,
+    "currency": "EUR"
+  },
+  "tags": ["Azure","AI","Machine Learning","Cognitive Services"],
+  "featured": true,
+  "icon": "Brain",
+  "personalStory": {
+    "title": "Een AI die echt ons bedrijf begrijpt",
+    "story": "Ons customer support-team verzond dagelijks meer dan 1.200 tickets. We probeerden outsourcing en extra personeel, maar de volumes groeiden. Management wilde een AI-chatbot, maar eerdere ervaringen met 'domme' bots deden ons twijfelen. De Azure AI Developer training veranderde dat. We leerden Azure OpenAI, Cognitive Services en hoe we modellen konden fine-tunen voor onze domeinspecifieke data.\n\nWe bouwden een conversatie-AI die gekoppeld is aan onze kennisbank via Azure Cognitive Search, gebruikte Form Recognizer om documenten te ontleden en Language Understanding voor intent-onderscheiding. Cruciaal was het trainen met duizenden echte, opgeloste tickets zodat de AI onze taal en processtromen leerde.\n\nHet resultaat: de AI lost nu 68% van de inkomende tickets automatisch op met 92% klanttevredenheid. De responstijd voor veelgestelde vragen ging van 24 uur naar direct. Medewerkers richten zich nu op complexe cases. De training bewees dat AI geen luxe is voor PhD's, maar een praktische tool voor productteams wanneer je focust op businessproblemen en domeinspecifieke training.",
+    "author": "Cloud Evolvers Trainer",
+    "scenario": "Customer support overspoeld met 1.200 tickets/dag, zoekt intelligente automatisering",
+    "challenge": "Nodig: intelligente automatisering die echt de bedrijfscontext begrijpt, geen generieke chatbot",
+    "solution": "Maatwerk AI met Azure OpenAI en Cognitive Services, getraind op eigen data en geïntegreerd met search en document extraction",
+    "outcome": "68% tickets geautomatiseerd, 92% tevredenheid, snellere responstijden, focus op complexe issues",
+    "lessonLearned": "Effectieve AI-oplossingen vereisen domeinkennis en goede trainingsdata; begin met concrete bedrijfsproblemen en meet impact." 
+  },
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z"
+}

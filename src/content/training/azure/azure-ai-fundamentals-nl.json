@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "slug": "azure-ai-fundamentals-nl",
+    "title": "Azure AI Fundamentals",
+    "subtitle": "Jouw Poort naar de AI Revolutie",
+    "description": "AI is niet langer science fiction - het is het concurrentievoordeel dat industrieleiders scheidt van iedereen anders. Deze cursus geeft je de kennis om AI technologieën te begrijpen, evalueren en te benutten die elke business op de planeet transformeren.",
+    "category": "AI & Machine Learning",
+    "level": "Beginner",
+    "duration": "2 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "AI", "Machine Learning", "Cognitive Services", "Azure AI", "Fundamentals", "Toekomst van Werk", "Digitale Transformatie"],
+    "prerequisites": [
+      "Een open geest en nieuwsgierigheid naar technologie",
+      "Basis computer geletterdheid",
+      "Nul AI ervaring vereist - we beginnen vanaf het aller-allereerste begin"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-ai-fundamentals-hero.jpg",
+    "badge": "Future-Proof Je Carrière",
+    "highlights": [
+      "Begrijp de AI technologieën die elke industrie ontwrichten",
+      "Leer AI oplossingen te evalueren en implementeren",
+      "Beheers de fundamenten waar AI experts op bouwen",
+      "Positioneer jezelf voor de hoogstbetaalde tech functies"
+    ]
+  },
+  "overview": {
+    "summary": "Bedrijven racen om AI te adopteren, maar de meeste mensen begrijpen niet eens wat het kan doen. Deze cursus verandert dat. Je leert de fundamentele concepten die alles aandrijven van ChatGPT tot zelfrijdende auto's, en je begrijpt hoe Azure AI diensten kunnen worden toegepast op echte zakelijke problemen. Aan het einde spreek je vloeiend de taal van AI en begrijp je hoe je deze technologieën kunt benutten om concurrentievoordelen te creëren.",
+    "objectives": [
+      "Demystificeer AI en begrijp wat het kan (en niet kan) doen voor je business",
+      "Beheers de kern concepten achter machine learning en neural networks",
+      "Verken Azure's AI toolkit en wanneer je elke dienst moet gebruiken",
+      "Leer AI kansen in je huidige rol te identificeren",
+      "Begrijp ethische AI praktijken en verantwoordelijke implementatie",
+      "Bouw een basis voor geavanceerde AI certificeringen en functies"
+    ],
+    "targetAudience": "Deze cursus is voor iedereen die de AI revolutie wil begrijpen die nu gebeurt. Of je nu een business leider bent die AI adoptie navigeert, een professional die je carrière toekomstbestendig wilt maken, of iemand die de technologie wil begrijpen die onze wereld herschept - als je deel wilt zijn van het AI gesprek in plaats van het alleen maar te bekijken, dan geeft deze cursus je de kennis en het vertrouwen om betekenisvol deel te nemen."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Introduction to AI and Azure AI Services",
+      "description": "Leer de basics van AI en verken Azure AI diensten",
+      "duration": "4 uur",
+      "objectives": [
+        "Definieer AI en begrijp zijn toepassingen",
+        "Verken Azure AI diensten en mogelijkheden",
+        "Begrijp machine learning concepten",
+        "Leer over verantwoordelijk AI",
+        "Ontdek Azure AI platform componenten"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Wat is AI?</h3><p>Kunstmatige Intelligentie (AI) is het vermogen van machines om taken uit te voeren die normaal gesproken menselijke intelligentie vereisen. Leer over verschillende soorten AI en hoe ze worden toegepast in de echte wereld.</p>"
+          },
+          {
+            "type": "list",
+            "title": "AI Types en Toepassingen",
+            "items": [
+              "Machine Learning - Systemen die leren van data",
+              "Computer Vision - Machines die kunnen zien en interpreteren",
+              "Natural Language Processing - Taalbegrip en generatie",
+              "Conversational AI - Chatbots en virtuele assistenten",
+              "Predictive Analytics - Voorspellingen en inzichten"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Portal en AI Services Introductie",
+          "description": "Ontdek de Azure portal en AI diensten",
+          "duration": "60 minuten",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Computer Vision Fundamentals",
+      "description": "Ontdek hoe machines beelden kunnen zien en begrijpen",
+      "duration": "4 uur",
+      "objectives": [
+        "Begrijp computer vision concepten",
+        "Verken Azure Computer Vision service",
+        "Leer over beeld analyse en classificatie",
+        "Ontdek gezichtsdetectie en herkenning"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Computer vision stelt machines in staat om visuele informatie van de wereld te interpreteren en te begrijpen. Leer hoe Azure Computer Vision beelden kan analyseren en betekenisvolle inzichten kan extraheren.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Computer Vision Mogelijkheden",
+            "items": [
+              "Beeld classificatie en tagging",
+              "Object detectie",
+              "Optische karakter herkenning (OCR)",
+              "Gezichtsdetectie en herkenning",
+              "Beeld analyse en beschrijving",
+              "Thumbnail generatie"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Computer Vision Lab",
+          "description": "Analyseer beelden met Azure Computer Vision",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Natural Language Processing and Conversational AI",
+      "description": "Verken taal begrip en conversationele AI",
+      "duration": "4 uur",
+      "objectives": [
+        "Begrijp natural language processing (NLP)",
+        "Verken Azure Language service",
+        "Leer over tekst analytics en sentiment analyse",
+        "Begrijp conversationele AI met Azure Bot Service",
+        "Verken Azure OpenAI Service"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Natural Language Processing</h3><p>NLP stelt computers in staat om menselijke taal te begrijpen, interpreteren en te genereren. Leer hoe Azure diensten tekst kunnen verwerken en conversationele interacties kunnen mogelijk maken.</p>"
+          },
+          {
+            "type": "list",
+            "title": "NLP en Conversationele AI",
+            "items": [
+              "Tekst analyse en sentiment analyse",
+              "Taal detectie en vertaling",
+              "Named entity recognition",
+              "Question answering",
+              "Conversational AI en chatbots",
+              "Azure OpenAI Service voor generatieve AI"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "NLP Lab",
+          "description": "Verwerk tekst en bouw conversationele AI met Azure",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Responsible AI and Ethics",
+      "description": "Leer over verantwoordelijk AI gebruik en ethische overwegingen",
+      "duration": "2 uur",
+      "objectives": [
+        "Begrijp verantwoordelijk AI principes",
+        "Leer over AI ethiek en bias",
+        "Ontdek AI governance en compliance",
+        "Verken Azure's verantwoordelijk AI tools"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Verantwoordelijk AI</h3><p>AI heeft enorme kracht, maar moet verantwoordelijk worden gebruikt. Leer over de ethische overwegingen, bias mitigation, en governance principes die nodig zijn voor verantwoord AI implementatie.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Verantwoordelijk AI Principes",
+            "items": [
+              "Fairness - Behandel iedereen gelijk",
+              "Reliability - AI systemen moeten betrouwbaar zijn",
+              "Safety - Bescherm gebruikers en systemen",
+              "Privacy - Bescherm persoonlijke data",
+              "Transparency - Maak AI beslissingen begrijpelijk",
+              "Accountability - Neem verantwoordelijkheid voor AI uitkomsten"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Responsible AI Lab",
+          "description": "Verken verantwoordelijk AI tools en praktijken",
+          "duration": "60 minuten",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "AI in Business and Career Opportunities",
+      "description": "Ontdek hoe AI businesses transformeert en carrière kansen creëert",
+      "duration": "2 uur",
+      "objectives": [
+        "Begrijp AI's impact op businesses",
+        "Leer AI use cases in verschillende industrieën",
+        "Ontdek carrière paden in AI",
+        "Plan je AI leerreis"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>AI in de Zakelijke Wereld</h3><p>AI transformeert elke industrie. Leer hoe AI wordt gebruikt in healthcare, finance, retail, manufacturing, en meer. Ontdek carrière kansen en hoe je kunt beginnen met AI in je huidige rol.</p>"
+          },
+          {
+            "type": "list",
+            "title": "AI Carrière Paden",
+            "items": [
+              "AI Engineer - Bouw AI systemen",
+              "Data Scientist - Analyseer data en bouw modellen",
+              "ML Engineer - Deploy en onderhoud ML modellen",
+              "AI Ethics Officer - Zorg voor verantwoordelijk AI",
+              "AI Product Manager - Leid AI product development",
+              "AI Consultant - Adviseer bedrijven over AI adoptie"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "AI Business Case Lab",
+          "description": "Ontwikkel een AI business case voor een fictief bedrijf",
+          "duration": "60 minuten",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1200,
+    "discountedPrice": 960,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursus materialen",
+      "Hands-on AI labs",
+      "AI-900 examen voucher",
+      "Azure AI credits voor praktijk",
+      "Lunch en verfrissingen",
+      "Cursus voltooiings certificaat"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "AI Researcher and Educator",
+    "bio": "Yaïr is een vooraanstaande AI onderzoeker en educator met meer dan 12 jaar ervaring in AI development en onderwijs. Hij heeft AI geïmplementeerd bij Fortune 500 bedrijven en heeft uitgebreid gepubliceerd over AI ethiek en verantwoordelijk gebruik.",
+    "certifications": [
+      "Microsoft Certified: Azure AI Fundamentals",
+      "AWS Certified Machine Learning - Specialty",
+      "Google Cloud Professional ML Engineer",
+      "Certified AI Ethics Professional",
+      "PhD in Artificial Intelligence"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-02-05",
+        "endDate": "2024-02-06",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 15,
+        "maxSeats": 20
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure AI Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-ai-fundamentals/",
+      "description": "Officiële Microsoft leerroute voor Azure AI Fundamentals"
+    },
+    {
+      "type": "video",
+      "title": "AI Fundamentals Video Series",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nEDd",
+      "description": "Video tutorials over AI fundamentals"
+    },
+    {
+      "type": "practice-test",
+      "title": "AI-900 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/ai-900",
+      "description": "Officiële oefentests voor AI-900 certificatie"
+    },
+    {
+      "type": "tool",
+      "title": "Azure AI Studio",
+      "url": "https://ai.azure.com/",
+      "description": "Azure AI Studio voor AI experimenten"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure AI Fundamentals",
+    "code": "AI-900",
+    "description": "Demonstreer fundamentele kennis van machine learning en AI concepten, en Azure AI diensten",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 99,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "AI fundamentals and concepts (15-20%)",
+      "Machine learning fundamentals (20-25%)",
+      "Azure AI services and capabilities (25-30%)",
+      "Computer vision and NLP (15-20%)",
+      "Responsible AI (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik programmeer ervaring nodig?",
+      "answer": "Nee, deze cursus is voor beginners. We gebruiken de Azure portal en geen programmeerkennis is vereist."
+    },
+    {
+      "question": "Wat is het verschil tussen AI-900 en AI-102?",
+      "answer": "AI-900 is voor beginners die de fundamentals willen begrijpen. AI-102 is voor developers die AI applicaties willen bouwen."
+    },
+    {
+      "question": "Kan ik deze cursus online volgen?",
+      "answer": "Momenteel bieden we deze cursus alleen in-person aan, maar online opties kunnen in de toekomst beschikbaar zijn."
+    },
+    {
+      "question": "Wat als ik de cursus niet begrijp?",
+      "answer": "Onze instructeurs zijn ervaren educators die complexe concepten eenvoudig uitleggen. We bieden ook extra ondersteuning tijdens en na de cursus."
+    }
+  ]
+}

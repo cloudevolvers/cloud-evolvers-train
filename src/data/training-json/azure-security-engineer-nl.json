@@ -1,0 +1,190 @@
+{
+  "id": "azure-security-engineer",
+  "slug": "azure-security-engineer",
+  "title": "Azure Security Engineer Associate",
+  "subtitle": "Implementeer Security Controls en Threat Protection",
+  "description": "Implementeer security controls en threat protection op Azure",
+  "overview": "Uitgebreide security training gericht op het implementeren van security controls en threat protection, beheren van identity en access, en het beveiligen van data, applicaties en netwerken in Azure.",
+  "category": "Security & Compliance",
+  "subcategory": "Cloud Security",
+  "difficulty": "Gemiddeld",
+  "tags": [
+    "Azure",
+    "Beveiliging",
+    "AZ-500",
+    "Compliance",
+    "Identity",
+    "Threat Protection"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "dagen"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "manage-identity-access",
+      "title": "Beheer Identity en Access",
+      "description": "Implementeer en beheer identity en access oplossingen in Azure",
+      "icon": "Shield"
+    },
+    {
+      "id": "platform-protection",
+      "title": "Implementeer Platform Protection",
+      "description": "Implementeer platform protection maatregelen en security controls",
+      "icon": "Lock"
+    },
+    {
+      "id": "secure-data-apps",
+      "title": "Beveilig Data en Applicaties",
+      "description": "Beveilig data en applicaties in Azure omgevingen",
+      "icon": "Database"
+    },
+    {
+      "id": "security-operations",
+      "title": "Beheer Security Operations",
+      "description": "Beheer security operaties en incident response",
+      "icon": "Activity"
+    }
+  ],
+  "modules": [
+    {
+      "id": "identity-access-management",
+      "title": "Identity en Access Management",
+      "description": "Implementeer Azure AD en access management oplossingen",
+      "icon": "Shield",
+      "duration": "8 uur",
+      "topics": [
+        "Azure Active Directory configuratie",
+        "Multi-factor authentication",
+        "Conditional access policies",
+        "Privileged Identity Management",
+        "Identity protection en monitoring"
+      ]
+    },
+    {
+      "id": "platform-security",
+      "title": "Platform Security",
+      "description": "Beveilig Azure platform resources en services",
+      "icon": "Lock",
+      "duration": "8 uur",
+      "topics": [
+        "Network security groups en firewalls",
+        "Key Vault en secret management",
+        "Storage account security",
+        "Virtual machine security",
+        "Container en Kubernetes security"
+      ]
+    },
+    {
+      "id": "data-application-security",
+      "title": "Data en Application Security",
+      "description": "Implementeer data en applicatie beveiliging",
+      "icon": "Database",
+      "duration": "8 uur",
+      "topics": [
+        "SQL Database security",
+        "Application security practices",
+        "Data encryption en classification",
+        "API security en protection",
+        "DevSecOps practices"
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Security Monitoring en Operations",
+      "description": "Implementeer security monitoring en incident response",
+      "icon": "Activity",
+      "duration": "8 uur",
+      "topics": [
+        "Azure Security Center configuratie",
+        "Azure Sentinel SIEM",
+        "Log analytics en monitoring",
+        "Threat detection en response",
+        "Security compliance en auditing"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "azure-ad-setup",
+      "title": "Azure AD Security Setup",
+      "description": "Configureer Azure AD met MFA en conditional access",
+      "duration": "3 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "network-security",
+      "title": "Network Security Implementation",
+      "description": "Implementeer network security controls en monitoring",
+      "duration": "3 uur",
+      "icon": "Lock"
+    },
+    {
+      "id": "security-center",
+      "title": "Security Center en Sentinel",
+      "description": "Configureer Security Center en Sentinel voor monitoring",
+      "duration": "4 uur",
+      "icon": "Activity"
+    },
+    {
+      "id": "incident-response",
+      "title": "Incident Response Simulation",
+      "description": "Simuleer security incident response procedures",
+      "duration": "3 uur",
+      "icon": "AlertTriangle"
+    }
+  ],
+  "prerequisites": [
+    "Azure fundamentals kennis",
+    "Basis security en networking concepten",
+    "Ervaring met Azure services",
+    "Begrip van identity management"
+  ],
+  "targetAudience": [
+    "Security Engineers",
+    "Cloud Security Architects",
+    "IT Security Professionals",
+    "Systems Administrators",
+    "Compliance Officers"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Gecertificeerde Security Engineer met specialisatie in cloud security en threat protection",
+    "expertise": [
+      "Azure Security",
+      "Identity Management",
+      "Threat Protection",
+      "Compliance"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure Security Engineer Associate",
+      "Azure Solutions Architect Expert"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Security Engineer Associate",
+    "examCode": "AZ-500",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "Beschikbaar op aanvraag"
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Beveiliging is niet alleen een vinkje—het is een mentaliteit. Ik heb gereageerd op beveiligingsincidenten, zero-trust architecturen geïmplementeerd en organisaties geholpen om aan compliance-eisen te voldoen. Elk beveiligingsprincipe in deze training komt uit echte incidenten en hun oplossingen. Ik leer je denken als zowel een aanvaller als een verdediger."
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "slug": "power-platform-fundamentals",
+    "title": "Power Platform Fundamentals",
+    "subtitle": "Build low-code solutions with Microsoft Power Platform",
+    "description": "Learn to create business solutions using Power BI, Power Apps, Power Automate, and Power Virtual Agents. No coding experience required.",
+    "category": "Power Platform",
+    "level": "Beginner",
+    "duration": "2 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Power Platform", "Low-Code", "Power BI", "Power Apps", "Power Automate", "No-Code"],
+    "prerequisites": [
+      "Basic computer skills",
+      "Understanding of business processes",
+      "No programming experience required"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/power-platform-hero.jpg",
+    "badge": "PL-900 Certification",
+    "highlights": [
+      "No coding experience required",
+      "Create business solutions quickly",
+      "Microsoft certification included"
+    ]
+  },
+  "overview": {
+    "summary": "Power Platform Fundamentals introduces you to the capabilities of Microsoft Power Platform. Learn to build apps, automate workflows, analyze data, and create chatbots without writing code.",
+    "objectives": [
+      "Understand Power Platform components and capabilities",
+      "Create canvas and model-driven apps with Power Apps",
+      "Build automated workflows with Power Automate",
+      "Create data visualizations with Power BI",
+      "Develop chatbots with Power Virtual Agents",
+      "Connect to various data sources"
+    ],
+    "targetAudience": "Business analysts, IT professionals, and business users who want to create solutions using Microsoft Power Platform and prepare for the PL-900 certification."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Power Platform Overview",
+      "description": "Introduction to Power Platform components and capabilities",
+      "duration": "2 hours",
+      "objectives": [
+        "Describe Power Platform components",
+        "Understand licensing and security",
+        "Identify use cases for each component",
+        "Navigate Power Platform admin center"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Microsoft Power Platform is a suite of low-code tools that empowers everyone to analyze data, build solutions, automate processes, and create virtual agents.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Power Platform Components",
+            "items": [
+              "Power BI - Business intelligence and data visualization",
+              "Power Apps - Application development without code",
+              "Power Automate - Workflow automation",
+              "Power Virtual Agents - Chatbot creation",
+              "Dataverse - Secure data storage and management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Power Platform Navigation",
+          "description": "Explore Power Platform interface and components",
+          "duration": "45 minutes",
+          "type": "guided",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Power Apps Development",
+      "description": "Create applications using Power Apps",
+      "duration": "3 hours",
+      "objectives": [
+        "Create canvas apps",
+        "Design model-driven apps",
+        "Connect to data sources",
+        "Implement app logic and formulas"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Canvas vs Model-Driven Apps</h3><p>Canvas apps provide pixel-perfect control over the user interface, while model-driven apps are built on data and provide consistent user experiences.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Build Your First App",
+          "description": "Create a simple canvas app from scratch",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 900,
+    "discountedPrice": 720,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Power Platform trial access",
+      "PL-900 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate"
+    ]
+  },
+  "instructor": {
+    "name": "Lisa Chen",
+    "title": "Power Platform Solution Architect",
+    "bio": "Lisa specializes in low-code solutions and has helped numerous organizations transform their business processes using Microsoft Power Platform.",
+    "certifications": [
+      "Microsoft Certified: Power Platform Solution Architect Expert",
+      "Microsoft Certified: Power Apps + Dynamics 365 Developer Associate",
+      "Microsoft Certified Trainer (MCT)"
+    ],
+    "image": "/images/instructors/lisa-chen.jpg"
+  },
+  "schedule": {
+    "format": "virtual",
+    "dates": [
+      {
+        "startDate": "2024-03-05",
+        "endDate": "2024-03-06",
+        "location": "Virtual Classroom",
+        "availableSeats": 20,
+        "maxSeats": 25
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Power Platform Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/power-plat-fundamentals/",
+      "description": "Official Microsoft learning path for Power Platform fundamentals"
+    },
+    {
+      "type": "video",
+      "title": "Power Platform YouTube Channel",
+      "url": "https://youtube.com/microsoftpowerplatform",
+      "description": "Official Power Platform video tutorials and demos"
+    },
+    {
+      "type": "practice-test",
+      "title": "PL-900 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/pl-900",
+      "description": "Official practice tests for PL-900 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Power Platform Fundamentals",
+    "code": "PL-900",
+    "description": "Demonstrate foundational knowledge of Power Platform capabilities",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 99,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Describe Power Platform components (20-25%)",
+      "Identify common Power Platform components (20-25%)",
+      "Demonstrate Power BI capabilities (20-25%)",
+      "Demonstrate Power Apps capabilities (20-25%)",
+      "Demonstrate Power Automate capabilities (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need programming experience?",
+      "answer": "No, Power Platform is designed for users without programming experience. You'll learn visual development techniques."
+    },
+    {
+      "question": "What can I build with Power Platform?",
+      "answer": "You can build mobile apps, automate business processes, create data visualizations, and develop chatbots."
+    },
+    {
+      "question": "Is Power Platform included in Microsoft 365?",
+      "answer": "Basic Power Platform capabilities are included in some Microsoft 365 licenses, but advanced features require separate licensing."
+    }
+  ]
+}

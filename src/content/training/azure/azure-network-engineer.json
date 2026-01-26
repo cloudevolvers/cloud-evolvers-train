@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "slug": "azure-network-engineer",
+    "title": "Azure Network Engineer Associate",
+    "subtitle": "Build the Networks That Power the World's Cloud Infrastructure",
+    "description": "Every cloud application depends on a network that just works. This course transforms you from a network administrator into a cloud network architect who designs the invisible infrastructure that billions of users rely on every day. You'll master Azure networking that scales globally, secures critical data, and connects the world's most demanding applications - the skills that separate network engineers who get hired from those who don't.",
+    "category": "Networking",
+    "level": "Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Networking", "Virtual Networks", "Load Balancing", "VPN", "Security"],
+    "prerequisites": [
+      "Azure Fundamentals knowledge (AZ-900)",
+      "Understanding of networking concepts",
+      "Basic knowledge of on-premises networking, routing, and firewalls",
+      "A desire to build networks that never fail and always perform"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-network-hero.jpg",
+    "badge": "Cloud Network Architect",
+    "highlights": [
+      "Design networks that handle billions of connections daily",
+      "Build security that protects the world's most valuable data",
+      "Master global load balancing for instant worldwide access",
+      "Join the elite engineers who keep the internet running"
+    ]
+  },
+  "overview": {
+    "summary": "In the cloud era, networks are the invisible foundation that everything else depends on. This course teaches you the Azure networking skills that separate the network engineers who design resilient, scalable infrastructure from those who just configure routers. You'll learn to build virtual networks that span continents, implement security that protects against nation-state attacks, and create load balancing solutions that handle millions of users simultaneously. By the end, you'll have the technical mastery and architectural vision to lead cloud networking initiatives at any global organization.",
+    "objectives": [
+      "Design virtual network architectures that scale infinitely",
+      "Implement routing solutions that optimize global traffic flow",
+      "Build network security that protects critical business assets",
+      "Create monitoring systems that predict and prevent network failures",
+      "Architect private connectivity solutions for hybrid cloud environments",
+      "Design network integrations that connect legacy systems to the cloud"
+    ],
+    "targetAudience": "This course is for network engineers ready to become cloud architects. Whether you're a traditional network admin wanting to add cloud expertise, a systems engineer ready to embrace cloud networking, or someone who wants to build the infrastructure that powers global applications - if you want to design networks that never fail and always perform, this course will give you the skills and mindset to become the network engineer that companies compete for."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Virtual Networks",
+      "description": "Design and implement Azure virtual networks",
+      "duration": "8 hours",
+      "objectives": [
+        "Create virtual networks",
+        "Configure subnets",
+        "Implement network security groups",
+        "Configure Azure Firewall",
+        "Implement Azure Bastion"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Virtual Network Fundamentals</h3><p>Azure Virtual Networks provide the foundation for your cloud networking. Learn to design and implement secure, scalable virtual networks.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Virtual Network Components",
+            "items": [
+              "Virtual network address spaces and subnets",
+              "Network security groups (NSGs)",
+              "Azure Firewall for advanced security",
+              "Azure Bastion for secure RDP/SSH access",
+              "User-defined routes (UDRs)"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Virtual Network Setup Lab",
+          "description": "Create and configure Azure virtual networks",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Network Connectivity",
+      "description": "Implement network connectivity solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement VNet peering",
+        "Configure VPN Gateway",
+        "Implement Azure ExpressRoute",
+        "Configure Azure DNS",
+        "Implement network routing"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Connect Azure resources to each other and to on-premises networks. Learn to implement various connectivity options for different scenarios.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/network-connectivity.jpg",
+            "alt": "Azure Network Connectivity",
+            "caption": "VNet peering, VPN Gateway, and ExpressRoute"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Network Connectivity Lab",
+          "description": "Implement VNet peering and VPN connectivity",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Load Balancing and Traffic Management",
+      "description": "Implement load balancing and traffic distribution",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement Azure Load Balancer",
+        "Configure Azure Application Gateway",
+        "Implement Azure Front Door",
+        "Configure Azure Traffic Manager",
+        "Implement Azure CDN"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Traffic Distribution</h3><p>Azure provides various load balancing and traffic management services. Learn to distribute traffic efficiently and securely across your applications.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Load Balancing Lab",
+          "description": "Configure Azure Load Balancer and Application Gateway",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Network Security and Monitoring",
+      "description": "Secure and monitor Azure networks",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement Azure DDoS Protection",
+        "Configure Azure Firewall",
+        "Implement Azure Web Application Firewall",
+        "Monitor network traffic",
+        "Configure network logging and diagnostics"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Network security is critical in cloud environments. Learn to implement comprehensive security controls and monitoring for your Azure networks.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Network Security Lab",
+          "description": "Implement network security and monitoring",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1750,
+    "discountedPrice": 1400,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-700 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure Network Engineer Associate badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Network Solutions Architect",
+    "bio": "Yaïr is a Network Solutions Architect with extensive experience in enterprise networking and cloud migrations. He has designed and implemented complex network architectures for Fortune 500 companies.",
+    "certifications": [
+      "Microsoft Certified: Azure Network Engineer Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Cisco Certified Network Professional (CCNP)",
+      "AWS Certified Advanced Networking Specialty",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-15",
+        "endDate": "2024-04-18",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 15,
+        "maxSeats": 18
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Network Engineer Associate Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-network-engineer-associate/",
+      "description": "Official Microsoft learning path for Azure Network Engineers"
+    },
+    {
+      "type": "video",
+      "title": "Azure Networking Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nG9QK",
+      "description": "Azure networking tutorials and best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-700 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-700",
+      "description": "Official practice tests for AZ-700 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Network Watcher",
+      "url": "https://learn.microsoft.com/en-us/azure/network-watcher/",
+      "description": "Azure Network Watcher for network monitoring and diagnostics"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Network Engineer Associate",
+    "code": "AZ-700",
+    "description": "Demonstrate skills in designing and implementing Azure networking solutions, including hybrid networking, connectivity, routing, security, and private access to Azure services",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Design and implement core networking infrastructure (20-25%)",
+      "Design and implement routing (25-30%)",
+      "Secure and monitor networks (15-20%)",
+      "Design and implement Private access to Azure Services (10-15%)",
+      "Design and implement network integrations (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need networking experience?",
+      "answer": "Yes, you should have basic networking knowledge including TCP/IP, routing, and firewalls. This course builds on those fundamentals."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this course is very technical and focuses on implementing Azure networking solutions. You'll work extensively with Azure portal and CLI."
+    },
+    {
+      "question": "What Azure services will I learn?",
+      "answer": "You'll learn Virtual Networks, VPN Gateway, ExpressRoute, Load Balancer, Application Gateway, Azure Firewall, and network monitoring tools."
+    },
+    {
+      "question": "Are there hands-on labs?",
+      "answer": "Yes, extensive hands-on labs where you'll build complete Azure networking solutions and troubleshoot network issues."
+    }
+  ]
+}

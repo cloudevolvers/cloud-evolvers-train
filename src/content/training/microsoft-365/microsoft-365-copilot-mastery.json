@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "slug": "microsoft-365-copilot-mastery",
+    "title": "Microsoft 365 Copilot Mastery",
+    "subtitle": "Master AI-Powered Productivity with Microsoft 365 Copilot",
+    "description": "Become a Copilot expert and transform your productivity with AI-powered tools across Microsoft 365 applications including Word, Excel, PowerPoint, Teams, and Outlook.",
+    "category": "Microsoft 365",
+    "level": "Advanced",
+    "duration": "3 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Microsoft 365", "Copilot", "AI", "Productivity", "Office 365", "Teams", "Word", "Excel", "PowerPoint", "Outlook"],
+    "prerequisites": [
+      "Microsoft 365 Fundamentals certification or equivalent experience",
+      "Proficiency with Microsoft Office applications",
+      "Understanding of AI concepts",
+      "Active Microsoft 365 subscription"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/m365-copilot-mastery-hero.jpg",
+    "badge": "Copilot Expert",
+    "highlights": [
+      "Advanced Copilot techniques",
+      "AI-powered productivity",
+      "Custom Copilot solutions",
+      "Enterprise deployment"
+    ]
+  },
+  "overview": {
+    "summary": "Microsoft 365 Copilot Mastery training equips you with advanced skills to leverage AI-powered productivity tools across the Microsoft 365 suite. Learn to maximize efficiency and create innovative solutions using Copilot in Word, Excel, PowerPoint, Teams, and Outlook.",
+    "objectives": [
+      "Master Copilot features across Microsoft 365 applications",
+      "Implement advanced productivity workflows",
+      "Create custom Copilot solutions and prompts",
+      "Deploy Copilot at enterprise scale",
+      "Understand Copilot security and compliance",
+      "Optimize Copilot for specific business scenarios"
+    ],
+    "targetAudience": "Microsoft 365 users, administrators, and power users who want to master AI-powered productivity tools and implement Copilot solutions in their organizations."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Copilot Fundamentals and Core Concepts",
+      "description": "Master the fundamentals of Microsoft 365 Copilot",
+      "duration": "6 hours",
+      "objectives": [
+        "Understand Copilot architecture and capabilities",
+        "Learn Copilot integration across Microsoft 365",
+        "Master prompt engineering techniques",
+        "Explore Copilot in Word, Excel, and PowerPoint",
+        "Understand data privacy and security considerations"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Copilot Architecture</h3><p>Microsoft 365 Copilot combines the power of large language models with your Microsoft 365 data to provide contextual assistance across applications.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Copilot Core Features",
+            "items": [
+              "Contextual content generation",
+              "Intelligent data analysis",
+              "Automated task completion",
+              "Cross-application integration",
+              "Natural language processing",
+              "Personalized assistance"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/m365/copilot-architecture.jpg",
+            "alt": "Copilot Architecture",
+            "caption": "How Copilot integrates with Microsoft 365 applications"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Copilot Fundamentals Lab",
+          "description": "Explore Copilot features in Microsoft 365 applications",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Advanced Copilot in Office Applications",
+      "description": "Master advanced Copilot features in Word, Excel, and PowerPoint",
+      "duration": "6 hours",
+      "objectives": [
+        "Master Copilot in Microsoft Word",
+        "Leverage Copilot for Excel data analysis",
+        "Create presentations with Copilot in PowerPoint",
+        "Implement advanced prompt techniques",
+        "Customize Copilot for specific workflows"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Office Applications Integration</h3><p>Copilot transforms how you work with familiar Office applications by providing intelligent assistance for content creation, data analysis, and presentation design.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Advanced Copilot Techniques",
+            "items": [
+              "Content generation and editing",
+              "Data visualization and analysis",
+              "Presentation design and enhancement",
+              "Document summarization",
+              "Email composition and management",
+              "Meeting facilitation"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Office Copilot Lab",
+          "description": "Advanced Copilot usage in Office applications",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Copilot in Teams and Outlook",
+      "description": "Master Copilot in communication and collaboration tools",
+      "duration": "4 hours",
+      "objectives": [
+        "Implement Copilot in Microsoft Teams",
+        "Leverage Copilot for email management in Outlook",
+        "Create intelligent meeting summaries",
+        "Automate communication workflows",
+        "Enhance collaboration with AI assistance"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Copilot enhances communication and collaboration by providing intelligent assistance for meetings, emails, and team interactions.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Communication Features",
+            "items": [
+              "Meeting summaries and action items",
+              "Intelligent email composition",
+              "Chat assistance and responses",
+              "Meeting facilitation",
+              "Content sharing and collaboration",
+              "Project management assistance"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Communication Copilot Lab",
+          "description": "Implement Copilot in Teams and Outlook workflows",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Enterprise Copilot Deployment and Management",
+      "description": "Deploy and manage Copilot at enterprise scale",
+      "duration": "4 hours",
+      "objectives": [
+        "Plan Copilot deployment strategies",
+        "Configure Copilot settings and policies",
+        "Manage Copilot licensing and access",
+        "Implement security and compliance measures",
+        "Monitor Copilot usage and adoption",
+        "Troubleshoot Copilot issues"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Enterprise Deployment</h3><p>Successfully deploying Copilot across an organization requires careful planning, configuration, and ongoing management to ensure security, compliance, and user adoption.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Deployment Considerations",
+            "items": [
+              "Licensing requirements and management",
+              "Security and compliance configuration",
+              "User training and adoption strategies",
+              "Integration with existing workflows",
+              "Performance monitoring and optimization",
+              "Change management and governance"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Enterprise Deployment Lab",
+          "description": "Plan and configure Copilot for enterprise deployment",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1200,
+    "discountedPrice": 960,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft Copilot training materials",
+      "Hands-on lab access with Microsoft 365 Copilot",
+      "Advanced Copilot techniques guide",
+      "Custom prompt templates and examples",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Microsoft 365 Copilot Mastery badge"
+    ]
+  },
+  "instructor": {
+    "name": "Marcus Rodriguez",
+    "title": "Microsoft 365 Productivity Expert",
+    "bio": "Marcus is a Microsoft 365 Productivity Expert specializing in AI-powered workplace solutions. He has helped numerous organizations transform their productivity through Microsoft 365 Copilot and has extensive experience in enterprise deployment and user adoption strategies.",
+    "certifications": [
+      "Microsoft Certified: Microsoft 365 Enterprise Administrator Expert",
+      "Microsoft Certified: Microsoft 365 Fundamentals",
+      "Microsoft Certified: Teams Administrator Associate",
+      "Certified AI Productivity Specialist",
+      "Microsoft MVP - Microsoft 365"
+    ],
+    "image": "/images/instructors/marcus-rodriguez.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-15",
+        "endDate": "2024-04-17",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Microsoft 365 Copilot Documentation",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/",
+      "description": "Official Microsoft documentation for Copilot"
+    },
+    {
+      "type": "video",
+      "title": "Copilot Training Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nF",
+      "description": "Video tutorials and demonstrations"
+    },
+    {
+      "type": "tool",
+      "title": "Copilot Lab Resources",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/microsoft-365-copilot-setup",
+      "description": "Copilot setup and configuration guides"
+    },
+    {
+      "type": "practice",
+      "title": "Copilot Prompt Library",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365-copilot/prompt-library",
+      "description": "Collection of effective Copilot prompts"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft 365 Copilot Mastery Certification",
+    "code": "MS-700-COPILOT",
+    "description": "Demonstrate mastery of Microsoft 365 Copilot features, advanced techniques, and enterprise deployment strategies",
+    "examDetails": {
+      "duration": "180 minutes",
+      "questions": 50,
+      "passingScore": 750,
+      "cost": 150,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Copilot fundamentals and architecture (20-25%)",
+      "Advanced Copilot in Office applications (25-30%)",
+      "Copilot in Teams and Outlook (20-25%)",
+      "Enterprise deployment and management (20-25%)",
+      "Security, compliance, and best practices (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need a Copilot license?",
+      "answer": "Yes, you need an active Microsoft 365 Copilot license to participate in the hands-on labs and fully experience the features covered in this course."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "This course focuses on practical usage and productivity techniques rather than deep technical implementation. However, it does cover enterprise deployment concepts."
+    },
+    {
+      "question": "What Microsoft 365 applications are covered?",
+      "answer": "The course covers Copilot in Word, Excel, PowerPoint, Teams, Outlook, and other Microsoft 365 applications."
+    },
+    {
+      "question": "Will I learn prompt engineering?",
+      "answer": "Yes, prompt engineering is a key component of the course, teaching you how to create effective prompts for various scenarios and applications."
+    }
+  ]
+}

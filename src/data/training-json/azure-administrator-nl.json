@@ -1,0 +1,215 @@
+{
+  "id": "azure-administrator-nl",
+  "slug": "azure-administrator",
+  "title": "Azure Administrator Associate (AZ-104)",
+  "subtitle": "Beheers Azure Administratie Vaardigheden",
+  "description": "Beheers Azure administratie vaardigheden voor het beheren van cloud infrastructuur en resources",
+  "overview": "Deze intensieve Azure Administrator Associate training bereidt je voor op het AZ-104 certificatie examen. Leer Azure subscripties beheren, identiteiten beveiligen, infrastructuur administreren, virtuele netwerken configureren en bedrijfscontinuïteit waarborgen door uitgebreide hands-on labs.",
+  "category": "Azure",
+  "subcategory": "Administratie",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Azure",
+    "Administrator",
+    "AZ-104",
+    "Infrastructure",
+    "Cloud"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "dagen"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "identity-governance",
+      "title": "Identiteit en Governance",
+      "description": "Beheer Azure AD, RBAC, policies en resource organisatie",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-solutions",
+      "title": "Storage Oplossingen",
+      "description": "Configureer storage accounts, implementeer data bescherming en disaster recovery",
+      "icon": "Database"
+    },
+    {
+      "id": "compute-resources",
+      "title": "Compute Resources",
+      "description": "Deploy en beheer VMs, containers en App Services",
+      "icon": "Settings"
+    },
+    {
+      "id": "virtual-networking",
+      "title": "Virtuele Netwerken",
+      "description": "Implementeer VNets, load balancers en hybride connectiviteit",
+      "icon": "Network"
+    },
+    {
+      "id": "monitoring-backup",
+      "title": "Monitoring en Backup",
+      "description": "Configureer monitoring, alerting en backup oplossingen",
+      "icon": "Monitor"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Beheer Azure Identiteiten en Governance",
+      "description": "Azure Active Directory, gebruikers, groepen, RBAC en Azure Policy implementatie",
+      "icon": "Shield",
+      "duration": "8 uur",
+      "topics": [
+        "Azure Active Directory fundamenten",
+        "Gebruiker en groep beheer",
+        "Role-based access control (RBAC)",
+        "Azure Policy implementatie",
+        "Resource organisatie en tagging"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Implementeer en Beheer Storage",
+      "description": "Storage accounts, blob storage, file shares en data bescherming strategieën",
+      "icon": "Database",
+      "duration": "6 uur",
+      "topics": [
+        "Storage account configuratie",
+        "Blob storage beheer",
+        "Azure Files en file shares",
+        "Data bescherming en backup",
+        "Storage beveiliging en toegangscontrole"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Deploy en Beheer Azure Compute Resources",
+      "description": "Virtuele machines, containers, App Services en scaling strategieën",
+      "icon": "Settings",
+      "duration": "8 uur",
+      "topics": [
+        "Virtual machine deployment en beheer",
+        "Container services en Azure Container Instances",
+        "Azure App Service configuratie",
+        "Auto-scaling en load balancing",
+        "High availability en disaster recovery"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Configureer en Beheer Virtuele Netwerken",
+      "description": "VNets, subnets, routing, load balancing en hybride connectiviteit",
+      "icon": "Network",
+      "duration": "6 uur",
+      "topics": [
+        "Virtual network creatie en configuratie",
+        "Subnet beheer en routing",
+        "Network security groups en firewalls",
+        "Load balancing en traffic beheer",
+        "Hybride connectiviteit met VPN en ExpressRoute"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Monitor en Backup Azure Resources",
+      "description": "Azure Monitor, Log Analytics, backup oplossingen en disaster recovery",
+      "icon": "Monitor",
+      "duration": "4 uur",
+      "topics": [
+        "Azure Monitor setup en configuratie",
+        "Log Analytics en KQL queries",
+        "Backup en restore strategieën",
+        "Disaster recovery planning",
+        "Performance monitoring en alerts"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Azure AD setup en RBAC implementatie",
+      "description": "Praktische implementatie van identiteit en toegangsbeheer",
+      "duration": "2 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "lab-2",
+      "title": "Virtual machines deployen en configureren",
+      "description": "Complete VM lifecycle beheer en configuratie",
+      "duration": "2 uur",
+      "icon": "Settings"
+    },
+    {
+      "id": "lab-3",
+      "title": "Storage oplossingen creëren en beheren",
+      "description": "Storage account setup, blob beheer en backup configuratie",
+      "duration": "1.5 uur",
+      "icon": "Database"
+    },
+    {
+      "id": "lab-4",
+      "title": "Virtuele netwerken en hybride connectiviteit implementeren",
+      "description": "VNet creatie, peering en VPN gateway configuratie",
+      "duration": "2 uur",
+      "icon": "Network"
+    },
+    {
+      "id": "lab-5",
+      "title": "Monitoring en backup strategieën configureren",
+      "description": "Azure Monitor setup, alerting en backup implementatie",
+      "duration": "1.5 uur",
+      "icon": "Monitor"
+    }
+  ],
+  "prerequisites": [
+    "Azure Fundamentals kennis",
+    "Basis netwerk en security concepten",
+    "Ervaring met PowerShell of Azure CLI",
+    "Begrip van virtualisatie concepten"
+  ],
+  "targetAudience": [
+    "Azure Administrators",
+    "System Administrators die naar cloud overstappen",
+    "IT professionals die AZ-104 certificering nastreven",
+    "Infrastructure engineers",
+    "Cloud architecten"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Expert Azure trainer met 10+ jaar cloud infrastructuur ervaring",
+    "expertise": [
+      "Azure Administration",
+      "Cloud Architecture",
+      "Infrastructure Management"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-104",
+      "AZ-305",
+      "AZ-500"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Administrator Associate",
+    "examCode": "AZ-104",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Settings",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2025-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Het beheren van Azure op enterprise-schaal vereist meer dan alleen technische kennis—het vereist beproefde strategieën. Ik heb Azure-omgevingen beheerd voor organisaties met duizenden gebruikers, en ik heb geleerd wat wel en niet werkt. In deze training deel ik de praktijkgerichte beheerpatronen die talloze uren hebben bespaard en kritieke problemen hebben voorkomen."
+  }
+}

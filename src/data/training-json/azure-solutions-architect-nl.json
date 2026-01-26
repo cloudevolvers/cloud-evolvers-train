@@ -1,0 +1,196 @@
+{
+  "id": "azure-solutions-architect",
+  "slug": "azure-solutions-architect",
+  "title": "Azure Solutions Architect Expert",
+  "subtitle": "Ontwerp Enterprise-Scale Oplossingen op Azure",
+  "description": "Ontwerp enterprise-scale oplossingen op Microsoft Azure",
+  "overview": "Geavanceerde architectuur training voor het ontwerpen en implementeren van oplossingen op Microsoft Azure. Leer stakeholders te adviseren en business requirements te vertalen naar veilige, schaalbare en betrouwbare cloud oplossingen.",
+  "category": "Azure Architecture",
+  "subcategory": "Solutions Architecture",
+  "difficulty": "Gevorderd",
+  "tags": [
+    "Azure",
+    "Architectuur",
+    "Oplossingen",
+    "Enterprise",
+    "Ontwerp",
+    "Cloud"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "dagen"
+  },
+  "price": {
+    "amount": 1795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "design-monitoring",
+      "title": "Ontwerp Monitoring Oplossingen",
+      "description": "Ontwerp uitgebreide monitoring oplossingen voor Azure omgevingen",
+      "icon": "Activity"
+    },
+    {
+      "id": "design-identity",
+      "title": "Ontwerp Identity en Access Oplossingen",
+      "description": "Ontwerp veilige identity en access management oplossingen",
+      "icon": "Shield"
+    },
+    {
+      "id": "design-storage",
+      "title": "Ontwerp Data Storage Oplossingen",
+      "description": "Ontwerp schaalbare en veilige data storage architecturen",
+      "icon": "Database"
+    },
+    {
+      "id": "design-business-continuity",
+      "title": "Ontwerp Business Continuity Oplossingen",
+      "description": "Ontwerp backup, disaster recovery en high availability oplossingen",
+      "icon": "Shield"
+    },
+    {
+      "id": "design-infrastructure",
+      "title": "Ontwerp Infrastructuur Oplossingen",
+      "description": "Ontwerp compute, netwerk en infrastructuur oplossingen",
+      "icon": "Server"
+    }
+  ],
+  "modules": [
+    {
+      "id": "governance-security",
+      "title": "Governance en Security",
+      "description": "Implementeer governance en security frameworks voor Azure",
+      "icon": "Shield",
+      "duration": "8 uur",
+      "topics": [
+        "Azure Policy en Blueprints",
+        "Role-based access control (RBAC)",
+        "Security Center en Sentinel",
+        "Compliance en auditing",
+        "Resource management en tagging"
+      ]
+    },
+    {
+      "id": "compute-networking",
+      "title": "Compute en Networking",
+      "description": "Ontwerp compute en networking oplossingen",
+      "icon": "Server",
+      "duration": "8 uur",
+      "topics": [
+        "Virtual machines en scale sets",
+        "Container services en Kubernetes",
+        "App Service en serverless computing",
+        "Virtual networks en connectivity",
+        "Load balancing en traffic management"
+      ]
+    },
+    {
+      "id": "data-storage",
+      "title": "Data en Storage",
+      "description": "Architectuur voor data en storage oplossingen",
+      "icon": "Database",
+      "duration": "8 uur",
+      "topics": [
+        "Azure SQL en database services",
+        "Storage accounts en data lakes",
+        "Data integration en analytics",
+        "Backup en archiving strategieën",
+        "Data security en compliance"
+      ]
+    },
+    {
+      "id": "migration-modernization",
+      "title": "Migration en Modernization",
+      "description": "Plan en implementeer migration en modernization strategieën",
+      "icon": "CloudArrowUp",
+      "duration": "8 uur",
+      "topics": [
+        "Assessment en migration planning",
+        "Azure Migrate en migration tools",
+        "Application modernization patterns",
+        "Hybrid en multi-cloud architectures",
+        "Cost optimization strategieën"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "architecture-design",
+      "title": "Architectuur Design Workshop",
+      "description": "Ontwerp een complete enterprise architectuur voor een case study",
+      "duration": "4 uur",
+      "icon": "Clipboard"
+    },
+    {
+      "id": "governance-implementation",
+      "title": "Governance Implementatie",
+      "description": "Implementeer governance policies en security frameworks",
+      "duration": "3 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "hybrid-connectivity",
+      "title": "Hybrid Connectivity Setup",
+      "description": "Configureer hybrid connectivity met ExpressRoute en VPN",
+      "duration": "3 uur",
+      "icon": "Link"
+    },
+    {
+      "id": "disaster-recovery",
+      "title": "Disaster Recovery Planning",
+      "description": "Ontwerp en implementeer een disaster recovery oplossing",
+      "duration": "4 uur",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "Azure Administrator Associate certificering",
+    "Ervaring met Azure infrastructuur en services",
+    "Kennis van enterprise architectuur principes",
+    "Begrip van networking en security concepten"
+  ],
+  "targetAudience": [
+    "Solutions Architects",
+    "Cloud Architects",
+    "Technical Leads",
+    "Senior Engineers",
+    "IT Consultants"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Gecertificeerde Solutions Architect met uitgebreide ervaring in enterprise cloud transformaties",
+    "expertise": [
+      "Azure Architecture",
+      "Enterprise Design",
+      "Cloud Migration",
+      "Governance"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure Solutions Architect Expert",
+      "Azure Security Engineer Associate"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Solutions Architect Expert",
+    "examCode": "AZ-305",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "Beschikbaar op aanvraag"
+  },
+  "featured": true,
+  "icon": "Sitemap",
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Architectuurbeslissingen hebben langetermijngevolgen. Ik heb Azure-oplossingen ontworpen voor organisaties in verschillende sectoren, waarbij ik heb geleerd wat schaalt en wat niet. Van microservices tot dataplatforms, deze training deelt de architectuurpatronen die ik gebruik bij het ontwerpen van enterprise-oplossingen."
+  }
+}

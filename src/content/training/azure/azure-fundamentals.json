@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "slug": "azure-fundamentals",
+    "title": "Azure Fundamentals",
+    "subtitle": "Your Gateway to a Thriving Cloud Career",
+    "description": "Imagine waking up excited about your work, knowing you're building the future of technology. That's what Azure Fundamentals can do for you - it's not just a course, it's your launchpad to becoming a cloud expert who companies desperately need.",
+    "category": "azure",
+    "level": "Beginner",
+    "duration": "2 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Cloud Computing", "Fundamentals", "Microsoft", "Career Growth"],
+    "prerequisites": [
+      "A curious mind and willingness to learn",
+      "Basic computer skills",
+      "No prior cloud experience needed - we start from the very beginning"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-fundamentals-hero.jpg",
+    "badge": "Life-Changing Career Skills",
+    "highlights": [
+      "Real Azure environments where you'll build actual cloud solutions",
+      "Personal mentorship from experienced cloud architects",
+      "Skills that will make you 3x more valuable in the job market",
+      "Direct path to high-paying cloud roles"
+    ]
+  },
+  "overview": {
+    "summary": "Think about it: every single company is moving to the cloud right now. From startups to Fortune 500 companies, they're all looking for people who understand Azure. This isn't just another technical course - it's your opportunity to position yourself at the forefront of the biggest technology revolution since the internet. You'll walk away not just with knowledge, but with the confidence to tackle real-world cloud challenges that businesses are paying premium salaries to solve.",
+    "objectives": [
+      "Master the cloud concepts that are transforming how businesses operate worldwide",
+      "Discover Azure services that can make you the go-to expert in your organization",
+      "Learn practical skills that will make you indispensable in today's job market",
+      "Build a strong foundation for advanced Azure certifications and career advancement",
+      "Connect with a community of cloud professionals who are shaping the future"
+    ],
+    "targetAudience": "This course is for you if you're ready to stop watching from the sidelines and start being part of the cloud revolution. Whether you're an IT professional looking to future-proof your career, a developer wanting to expand your skills, or someone from a non-technical background who sees the incredible opportunities in cloud computing - this course will give you the knowledge and confidence to succeed."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Cloud Computing Fundamentals",
+      "description": "Introduction to cloud computing concepts and Azure architecture",
+      "duration": "2 hours",
+      "objectives": [
+        "Define cloud computing",
+        "Describe the shared responsibility model",
+        "Define cloud models (public, private, hybrid)",
+        "Identify appropriate use cases for each cloud model"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet (\"the cloud\") to offer faster innovation, flexible resources, and economies of scale.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Key Cloud Computing Benefits",
+            "items": [
+              "Cost-effective - Pay only for what you use",
+              "Scalable - Scale resources up or down as needed",
+              "Reliable - High availability and disaster recovery",
+              "Secure - Enterprise-grade security features",
+              "Global - Access from anywhere in the world"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Portal Navigation",
+          "description": "Learn to navigate the Azure portal and understand the interface",
+          "duration": "30 minutes",
+          "type": "guided",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Core Services",
+      "description": "Explore Azure's core compute, storage, and networking services",
+      "duration": "3 hours",
+      "objectives": [
+        "Describe Azure regions, region pairs, and geographies",
+        "Describe Azure availability zones",
+        "Describe Azure resource groups",
+        "Describe Azure subscriptions",
+        "Describe Azure management groups"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Global Infrastructure</h3><p>Azure has more global regions than any other cloud provider, offering you the ability to bring applications closer to your users around the world.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/global-infrastructure.jpg",
+            "alt": "Azure Global Infrastructure Map",
+            "caption": "Azure's worldwide presence with 60+ regions"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Create Resource Groups",
+          "description": "Practice creating and managing Azure resource groups",
+          "duration": "45 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        },
+        {
+          "title": "Azure Storage Account Setup",
+          "description": "Create and configure Azure storage accounts",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1200,
+    "discountedPrice": 950,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "groupDiscounts": [
+      {
+        "minParticipants": 3,
+        "percentage": 15
+      },
+      {
+        "minParticipants": 5,
+        "percentage": 25
+      }
+    ],
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "Certification exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Azure Solutions Architect Expert",
+    "bio": "Yaïr is a Microsoft Certified Azure Solutions Architect Expert with over 8 years of experience in cloud architecture and implementation. He has helped numerous organizations migrate to Azure and optimize their cloud infrastructure.",
+    "certifications": [
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "AWS Certified Solutions Architect",
+      "Certified Kubernetes Administrator"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg",
+    "social": {
+      "linkedin": "https://linkedin.com/in/yair-knijn-azure",
+      "twitter": "@yairazure"
+    }
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-02-15",
+        "endDate": "2024-02-16",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      },
+      {
+        "startDate": "2024-03-10",
+        "endDate": "2024-03-11",
+        "location": "Virtual Classroom",
+        "availableSeats": 20,
+        "maxSeats": 25
+      }
+    ],
+    "timeZone": "CET",
+    "dailySchedule": [
+      {
+        "day": 1,
+        "startTime": "09:00",
+        "endTime": "17:00",
+        "breaks": [
+          { "type": "lunch", "startTime": "12:00", "endTime": "13:00" }
+        ]
+      },
+      {
+        "day": 2,
+        "startTime": "09:00",
+        "endTime": "17:00",
+        "breaks": [
+          { "type": "lunch", "startTime": "12:00", "endTime": "13:00" }
+        ]
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/",
+      "description": "Official Microsoft learning path for Azure Fundamentals"
+    },
+    {
+      "type": "video",
+      "title": "Azure Fundamentals Playlist",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nED0_vbTic6i0hB9YVXSg5",
+      "description": "Comprehensive video series covering Azure basics"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-900 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-900",
+      "description": "Official practice tests for AZ-900 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Pricing Calculator",
+      "url": "https://azure.microsoft.com/en-us/pricing/calculator/",
+      "description": "Calculate costs for Azure services"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Fundamentals",
+    "code": "AZ-900",
+    "description": "Demonstrate foundational knowledge of cloud services and Azure platform",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 99,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Describe cloud concepts (25-30%)",
+      "Describe Azure architecture and services (35-40%)",
+      "Describe Azure management and governance (30-35%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need prior cloud experience?",
+      "answer": "No prior cloud experience is required. This course is designed for beginners and covers all fundamental concepts from the ground up."
+    },
+    {
+      "question": "Is the certification exam included?",
+      "answer": "Yes, the course includes an official Microsoft certification exam voucher for the AZ-900 exam."
+    },
+    {
+      "question": "What if I can't attend in person?",
+      "answer": "We offer virtual classroom options for all our courses, allowing you to participate remotely with the same quality instruction."
+    },
+    {
+      "question": "Will I receive a certificate?",
+      "answer": "Yes, you'll receive both a course completion certificate and Microsoft certification upon passing the exam."
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "id": "power-platform-automation",
+  "slug": "power-platform-automation",
+  "title": "Power Platform Automation Bootcamp",
+  "description": "Unlock the power of low-code automation with Microsoft Power Platform",
+  "content": "Unlock the power of low-code automation with Microsoft Power Platform. Master Power Apps, Power Automate, and Power BI to build sophisticated business solutions without traditional programming.",
+  "category": "Microsoft 365",
+  "subcategory": "Power Platform",
+  "difficulty": "Intermediate",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "prerequisites": [
+    "Basic Microsoft 365 knowledge",
+    "Understanding of business processes",
+    "Familiarity with data concepts",
+    "Basic understanding of workflow automation"
+  ],
+  "learningObjectives": [
+    {
+      "id": "power-apps",
+      "title": "Build powerful apps without traditional coding",
+      "description": "Build powerful apps without traditional coding",
+      "icon": "Smartphone"
+    },
+    {
+      "id": "automate-processes",
+      "title": "Automate complex business processes",
+      "description": "Automate complex business processes",
+      "icon": "Repeat"
+    },
+    {
+      "id": "data-visualizations",
+      "title": "Create stunning data visualizations",
+      "description": "Create stunning data visualizations",
+      "icon": "ChartBar"
+    },
+    {
+      "id": "m365-integration",
+      "title": "Integrate seamlessly with Microsoft 365",
+      "description": "Integrate seamlessly with Microsoft 365",
+      "icon": "Cloud"
+    },
+    {
+      "id": "design-solutions",
+      "title": "Design and implement Power Platform solutions",
+      "description": "Design and implement Power Platform solutions",
+      "icon": "Settings"
+    },
+    {
+      "id": "governance-security",
+      "title": "Apply governance and security best practices",
+      "description": "Apply governance and security best practices",
+      "icon": "Shield"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced Power Platform specialist with 6+ years in low-code development and business process automation.",
+    "expertise": [
+      "Power Apps",
+      "Power Automate",
+      "Power BI",
+      "Low-Code Development"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "PL-900",
+      "PL-200",
+      "PL-400"
+    ]
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Power Platform",
+    "Power Apps",
+    "Power Automate",
+    "Power BI",
+    "Low-Code"
+  ],
+  "featured": true,
+  "certification": {
+    "available": false,
+    "name": "Bootcamp Certificate",
+    "provider": "Cloud Evolvers"
+  },
+  "maxParticipants": 12,
+  "icon": "Lightning",
+  "overview": "Unlock the power of low-code automation with Microsoft Power Platform. Master Power Apps, Power Automate, and Power BI to build sophisticated business solutions without traditional programming.",
+  "whatYouWillLearn": [
+    {
+      "title": "Power Apps Development",
+      "description": "Canvas apps, model-driven apps, data sources, connectors, UI design, and formulas"
+    },
+    {
+      "title": "Power Automate Workflows",
+      "description": "Flow triggers, business process automation, approval workflows, and error handling"
+    },
+    {
+      "title": "Power BI Analytics",
+      "description": "Data modeling, interactive dashboards, DAX formulas, and collaboration"
+    },
+    {
+      "title": "Integration & Best Practices",
+      "description": "Microsoft 365 integration, governance, security, and performance optimization"
+    }
+  ],
+  "modules": [
+    {
+      "id": "power-apps-dev",
+      "title": "Power Apps Development",
+      "description": "Build powerful apps without traditional coding",
+      "icon": "Smartphone",
+      "duration": "4 hours",
+      "topics": [
+        "Canvas apps and model-driven apps",
+        "Data sources and connectors",
+        "User interface design and controls",
+        "Formulas and expressions"
+      ]
+    },
+    {
+      "id": "power-automate",
+      "title": "Power Automate Workflows",
+      "description": "Automate complex business processes",
+      "icon": "Repeat",
+      "duration": "4 hours",
+      "topics": [
+        "Flow triggers and actions",
+        "Business process automation",
+        "Approval workflows and notifications",
+        "Error handling and monitoring"
+      ]
+    },
+    {
+      "id": "power-bi",
+      "title": "Power BI Analytics",
+      "description": "Create stunning data visualizations",
+      "icon": "ChartBar",
+      "duration": "4 hours",
+      "topics": [
+        "Data modeling and relationships",
+        "Interactive dashboards and reports",
+        "DAX formulas and calculations",
+        "Sharing and collaboration"
+      ]
+    },
+    {
+      "id": "integration-practices",
+      "title": "Integration & Best Practices",
+      "description": "Apply governance and security best practices",
+      "icon": "Shield",
+      "duration": "4 hours",
+      "topics": [
+        "Microsoft 365 integration",
+        "Governance and security",
+        "Solution lifecycle management",
+        "Performance optimization"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "canvas-app",
+      "title": "Canvas App Development",
+      "description": "Build a complete canvas app with data connections and user interface",
+      "icon": "Smartphone",
+      "duration": "2 hours"
+    },
+    {
+      "id": "automated-workflow",
+      "title": "Business Process Automation",
+      "description": "Create automated workflows for business processes using Power Automate",
+      "icon": "Repeat",
+      "duration": "2 hours"
+    },
+    {
+      "id": "power-bi-dashboard",
+      "title": "Power BI Dashboard Creation",
+      "description": "Build interactive dashboards and reports with Power BI",
+      "icon": "ChartBar",
+      "duration": "2 hours"
+    },
+    {
+      "id": "m365-integration",
+      "title": "Microsoft 365 Integration",
+      "description": "Integrate Power Platform solutions with Microsoft 365 services",
+      "icon": "Cloud",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": "governance-setup",
+      "title": "Governance and Security",
+      "description": "Implement governance policies and security measures for Power Platform",
+      "icon": "Shield",
+      "duration": "1 hour"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "2 days intensive bootcamp",
+    "groupSize": "Max 12 participants",
+    "certification": "Bootcamp completion certificate"
+  },
+  "targetAudience": [
+    "Business analysts",
+    "Power users and citizen developers",
+    "IT professionals",
+    "Process improvement specialists"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Power Platform democratizes application development. I've seen business users build solutions that would have taken months to develop traditionally. I've also seen what happens when governance is missing. This training balances empowerment with best practices."
+  }
+}

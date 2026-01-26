@@ -1,0 +1,208 @@
+{
+  "deployments": {
+    "dev": {
+      "name": "Development Environment",
+      "description": "Local development environment for Cloud Evolvers Vite app",
+      "environment": "development",
+      "deploymentType": "local",
+      "branding": {
+        "name": "Cloud Evolvers - Dev",
+        "theme": "emerald",
+        "envVar": "VITE_CLOUD_EVOLVERS=1"
+      },
+      "buildSettings": {
+        "nodeVersion": "22.x",
+        "buildCommand": "npm run build:dev",
+        "outputDir": "dist",
+        "framework": "vite"
+      },
+      "environmentVariables": {
+        "VITE_ENVIRONMENT": "development",
+        "VITE_APP_ENV": "development",
+        "VITE_APP_NAME": "Cloud Evolvers Training - Development",
+        "VITE_SHOW_CONSTRUCTION_BANNER": "true",
+        "VITE_BLOG_UNDER_CONSTRUCTION": "true",
+        "VITE_DEBUG": "true"
+      }
+    },
+    "staging": {
+      "name": "Staging Environment", 
+      "description": "Staging environment for testing new features with dedicated Key Vault",
+      "environment": "staging",
+      "deploymentType": "staticwebapp",
+      "azure": {
+        "appName": "cloudevolvers-website-swa",
+        "staticWebAppName": "cloudevolvers-website-swa",
+        "resourceGroup": "xevolve-dta-rg",
+        "subscriptionId": "4a55c776-9f6b-4966-921e-c9f60e50652f",
+        "location": "westeurope",
+        "defaultHostname": "witty-desert-0f02b4903.2.azurestaticapps.net",
+        "clientId": "1f29ef36-137d-47f6-bbab-7b85b50a8567",
+        "tenantId": "34dd9821-1508-4858-974c-e5fd1493a58f",
+        "sku": "Standard",
+        "keyVaultName": "cloudevolvers-staging-kv"
+      },
+      "branding": {
+        "name": "Cloud Evolvers - Staging",
+        "theme": "emerald", 
+        "envVar": "VITE_CLOUD_EVOLVERS=1"
+      },
+      "buildSettings": {
+        "nodeVersion": "22.x",
+        "buildCommand": "npm run build:staging",
+        "outputDir": "dist",
+        "framework": "vite"
+      },
+      "environmentVariables": {
+        "VITE_ENVIRONMENT": "staging",
+        "VITE_APP_ENV": "staging",
+        "VITE_APP_NAME": "Cloud Evolvers Training - Staging",
+        "VITE_SHOW_CONSTRUCTION_BANNER": "false",
+        "VITE_BLOG_UNDER_CONSTRUCTION": "true",
+        "VITE_BLOG_CONSTRUCTION_MESSAGE": "📝 Blog Section - Testing New Features 📝",
+        "VITE_AZURE_AD_CLIENT_ID": "e66fa949-5dad-4067-b01b-587088d16796",
+        "VITE_AZURE_AD_TENANT_ID": "34dd9821-1508-4858-974c-e5fd1493a58f",
+        "VITE_API_URL": "https://cloudevolvers-staging-api.azurestaticapps.net",
+        "VITE_KEY_VAULT_URL": "https://cloudevolvers-staging-kv.vault.azure.net/",
+        "VITE_DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    },
+    "dta": {
+      "name": "DTA Environment",
+      "description": "Development/Testing environment for Cloud Evolvers Vite app",
+      "environment": "dta",
+      "deploymentType": "staticwebapp",
+      "azure": {
+        "appName": "cloudevolvers-website-swa",
+        "staticWebAppName": "cloudevolvers-website-swa",
+        "resourceGroup": "xevolve-dta-rg",
+        "subscriptionId": "4a55c776-9f6b-4966-921e-c9f60e50652f",
+        "location": "westeurope",
+        "defaultHostname": "witty-desert-0f02b4903.2.azurestaticapps.net",
+        "clientId": "1f29ef36-137d-47f6-bbab-7b85b50a8567",
+        "tenantId": "34dd9821-1508-4858-974c-e5fd1493a58f",
+        "sku": "Standard"
+      },
+      "branding": {
+        "name": "Cloud Evolvers",
+        "theme": "emerald",
+        "envVar": "VITE_CLOUD_EVOLVERS=1"
+      },
+      "buildSettings": {
+        "nodeVersion": "22.x",
+        "buildCommand": "npm run build",
+        "outputDir": "dist",
+        "framework": "vite"
+      },
+      "environmentVariables": {
+        "VITE_ENVIRONMENT": "dta",
+        "VITE_APP_ENV": "dta", 
+        "VITE_APP_NAME": "Cloud Evolvers Training - DTA",
+        "VITE_CLOUD_EVOLVERS": "1",
+        "VITE_SHOW_CONSTRUCTION_BANNER": "true",
+        "VITE_BLOG_UNDER_CONSTRUCTION": "true",
+        "VITE_BLOG_CONSTRUCTION_MESSAGE": "📝 Blog Section Coming Soon - We're preparing amazing content about Azure training and cloud technologies",
+        "VITE_AZURE_AD_CLIENT_ID": "e66fa949-5dad-4067-b01b-587088d16796",
+        "VITE_AZURE_AD_TENANT_ID": "34dd9821-1508-4858-974c-e5fd1493a58f",
+        "VITE_API_URL": "https://yellow-sand-086679203.2.azurestaticapps.net",
+        "VITE_DEBUG": "true",
+        "NODE_ENV": "production"
+      },
+      "deploymentModes": ["BuildAndDeploy", "UpdateEnvAndDeploy", "UpdateEnvOnly", "DeployOnly"],
+      "triggers": {
+        "branches": ["main", "develop"],
+        "paths": ["src/**", "public/**", "index.html", "vite.config.ts", "package.json"]
+      }
+    },
+    "prod": {
+      "name": "Production Environment", 
+      "description": "Production environment for Cloud Evolvers",
+      "environment": "prod",
+      "deploymentType": "staticwebapp",
+      "azure": {
+        "appName": "cloudevolvers-website-swa",
+        "staticWebAppName": "cloudevolvers-website-swa",
+        "resourceGroup": "xevolve-dta-rg",
+        "subscriptionId": "4a55c776-9f6b-4966-921e-c9f60e50652f",
+        "location": "westeurope",
+        "defaultHostname": "witty-desert-0f02b4903.2.azurestaticapps.net",
+        "clientId": "1f29ef36-137d-47f6-bbab-7b85b50a8567",
+        "tenantId": "34dd9821-1508-4858-974c-e5fd1493a58f",
+        "sku": "Standard",
+        "keyVaultName": "cloudevolvers-prod-kv"
+      },
+      "branding": {
+        "name": "Cloud Evolvers",
+        "theme": "emerald",
+        "envVar": "VITE_CLOUD_EVOLVERS=1"
+      },
+      "buildSettings": {
+        "nodeVersion": "22.x",
+        "buildCommand": "npm run build",
+        "outputDir": "dist",
+        "framework": "vite"
+      },
+      "environmentVariables": {
+        "VITE_ENVIRONMENT": "production",
+        "VITE_APP_ENV": "production",
+        "VITE_APP_NAME": "Cloud Evolvers Training",
+        "VITE_CLOUD_EVOLVERS": "1",
+        "VITE_SHOW_CONSTRUCTION_BANNER": "false",
+        "VITE_BLOG_UNDER_CONSTRUCTION": "true",
+        "VITE_BLOG_CONSTRUCTION_MESSAGE": "📝 Blog Section Coming Soon - We're preparing amazing content about Azure training and cloud technologies",
+        "VITE_AZURE_AD_CLIENT_ID": "e66fa949-5dad-4067-b01b-587088d16796",
+        "VITE_AZURE_AD_TENANT_ID": "34dd9821-1508-4858-974c-e5fd1493a58f",
+        "VITE_API_URL": "https://cloudevolvers-api.azurestaticapps.net",
+        "VITE_KEY_VAULT_URL": "https://cloudevolvers-prod-kv.vault.azure.net/",
+        "VITE_DEBUG": "false",
+        "NODE_ENV": "production"
+      },
+      "deploymentModes": ["BuildAndDeploy", "UpdateEnvAndDeploy", "UpdateEnvOnly", "DeployOnly"],
+      "triggers": {
+        "branches": ["main"],
+        "paths": ["src/**", "public/**", "index.html", "vite.config.ts", "package.json"]
+      }
+    }
+  },
+  "shared": {
+    "secrets": {
+      "required": [
+        "AZURE_CLIENT_SECRET"
+      ],
+      "optional": [
+        "BACKUP_AZURE_CLIENT_ID",
+        "BACKUP_AZURE_CLIENT_SECRET", 
+        "BACKUP_AZURE_SUBSCRIPTION_ID",
+        "BACKUP_AZURE_TENANT_ID"
+      ]
+    },
+    "notifications": {
+      "slack": {
+        "enabled": false,
+        "webhook": ""
+      },
+      "email": {
+        "enabled": false,
+        "recipients": []
+      }
+    },
+    "backup": {
+      "enabled": true,
+      "storageAccount": "cloudevolversbackup",
+      "containerName": "deployments"
+    },
+    "monitoring": {
+      "healthCheck": {
+        "enabled": true,
+        "endpoint": "/health",
+        "timeout": 30
+      },
+      "warmup": {
+        "enabled": true,
+        "requests": 3,
+        "interval": 10
+      }
+    }
+  }
+}

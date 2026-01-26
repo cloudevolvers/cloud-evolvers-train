@@ -1,0 +1,175 @@
+{
+  "id": "azure-fundamentals",
+  "slug": "azure-fundamentals",
+  "title": "Azure Fundamentals (AZ-900)",
+  "description": "Build foundational knowledge of Azure cloud services and core concepts",
+  "content": "Comprehensive fundamentals training covering Azure core services, security, privacy, compliance, and pricing.",
+  "category": "Azure",
+  "subcategory": "Fundamentals",
+  "difficulty": "Beginner",
+  "duration": {
+    "days": 2,
+    "format": "days"
+  },
+  "prerequisites": [
+    "Basic knowledge of computing concepts"
+  ],
+  "learningObjectives": [
+    {
+      "id": "cloud-concepts",
+      "title": "Cloud Computing Concepts",
+      "description": "Understand cloud computing principles, deployment models, and service types",
+      "icon": "Cloud"
+    },
+    {
+      "id": "azure-services",
+      "title": "Azure Core Services",
+      "description": "Describe Azure core services including compute, networking, storage, and databases",
+      "icon": "Server"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Security & Compliance",
+      "description": "Describe Azure security, privacy, compliance, and trust features",
+      "icon": "Shield"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced Microsoft Certified Trainer specializing in Azure cloud technologies and solutions architecture.",
+    "expertise": [
+      "Azure Fundamentals",
+      "Cloud Computing",
+      "Azure Solutions"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified Trainer",
+      "Azure Solutions Architect Expert"
+    ]
+  },
+  "price": {
+    "amount": 795,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "Fundamentals",
+    "Cloud",
+    "AZ-900"
+  ],
+  "featured": true,
+  "certification": {
+    "available": true,
+    "name": "AZ-900",
+    "examCode": "AZ-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 15,
+  "icon": "Cloud",
+  "overview": "This comprehensive Azure Fundamentals training provides a solid foundation for understanding Microsoft Azure cloud services. Designed for beginners, this course covers all the essential concepts needed to start working with Azure confidently.",
+  "whatYouWillLearn": [
+    {
+      "title": "Azure Core Services",
+      "description": "Compute, networking, storage, and databases"
+    },
+    {
+      "title": "Azure Solutions",
+      "description": "IoT, AI, machine learning, and serverless computing"
+    },
+    {
+      "title": "Azure Management Tools",
+      "description": "Portal, CLI, PowerShell, and ARM templates"
+    },
+    {
+      "title": "Security & Compliance",
+      "description": "Identity management, security center, and governance"
+    },
+    {
+      "title": "Pricing & Support",
+      "description": "Cost management, service level agreements, and support options"
+    }
+  ],
+  "modules": [
+    {
+      "id": "cloud-concepts",
+      "title": "Module 1: Cloud Concepts",
+      "description": "Understanding cloud computing principles, deployment models, and service types",
+      "icon": "Cloud",
+      "duration": "4 hours"
+    },
+    {
+      "id": "core-services",
+      "title": "Module 2: Core Azure Services",
+      "description": "Compute, networking, storage, and database services overview",
+      "icon": "Server",
+      "duration": "4 hours"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Module 3: Security & Compliance",
+      "description": "Azure security features, identity management, and compliance frameworks",
+      "icon": "Shield",
+      "duration": "4 hours"
+    },
+    {
+      "id": "pricing-support",
+      "title": "Module 4: Pricing & Support",
+      "description": "Cost management, pricing models, and Azure support options",
+      "icon": "DollarSign",
+      "duration": "4 hours"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "portal-navigation",
+      "title": "Azure Portal Navigation",
+      "description": "Navigate and explore the Azure portal interface",
+      "icon": "Monitor",
+      "duration": "30 minutes"
+    },
+    {
+      "id": "resource-groups",
+      "title": "Resource Group Management",
+      "description": "Create and manage resource groups in Azure",
+      "icon": "Folder",
+      "duration": "45 minutes"
+    },
+    {
+      "id": "vm-deployment",
+      "title": "Virtual Machine Deployment",
+      "description": "Deploy a basic virtual machine and explore compute options",
+      "icon": "Server",
+      "duration": "1 hour"
+    },
+    {
+      "id": "storage-setup",
+      "title": "Storage Account Setup",
+      "description": "Create storage accounts and understand storage services",
+      "icon": "HardDrive",
+      "duration": "45 minutes"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "2 days intensive",
+    "groupSize": "Max 15 participants",
+    "certification": "AZ-900 preparation"
+  },
+  "targetAudience": [
+    "IT professionals new to cloud computing",
+    "Business decision makers evaluating Azure",
+    "Students preparing for cloud careers",
+    "Developers learning Azure fundamentals"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As someone who has guided hundreds of professionals into Azure, I've seen firsthand how the right foundation makes all the difference. I remember working with a team of traditional infrastructure engineers who were skeptical about cloud. After this training, they successfully migrated their first workloads to Azure and became cloud advocates. This course distills everything I wish I knew when I started with Azure."
+  }
+}

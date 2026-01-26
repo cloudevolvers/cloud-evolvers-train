@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "slug": "azure-developer-associate",
+    "title": "Azure Developer Associate",
+    "subtitle": "Build the Future of Software Development",
+    "description": "Traditional development is dying. Cloud-native development is the future. This course transforms you from someone who builds applications into someone who builds scalable, resilient systems that millions of users depend on every day.",
+    "category": "Developer Tools",
+    "level": "Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Development", "Cloud Computing", "APIs", "Security", ".NET", "JavaScript", "Serverless", "Microservices"],
+    "prerequisites": [
+      "Experience coding in at least one programming language",
+      "Basic understanding of cloud concepts",
+      "A desire to build applications that scale"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-developer-hero.jpg",
+    "badge": "Elite Cloud Developer",
+    "highlights": [
+      "Master the cloud development skills that top companies demand",
+      "Build applications that automatically scale to millions of users",
+      "Learn the architecture patterns that power modern software",
+      "Join the elite group of developers who build the cloud"
+    ]
+  },
+  "overview": {
+    "summary": "The best developers don't just write code - they build systems that change how people live and work. This course teaches you the Azure development skills that separate the developers who get hired from those who don't. You'll learn to build applications that are secure by default, scale automatically, and integrate seamlessly with the entire Azure ecosystem. By the end, you'll have the technical skills and architectural knowledge to lead development teams and build the next generation of cloud applications.",
+    "objectives": [
+      "Master Azure compute services and serverless architectures",
+      "Build secure, scalable applications with Azure storage and databases",
+      "Implement authentication, authorization, and security best practices",
+      "Design and implement monitoring and troubleshooting solutions",
+      "Create APIs and integrate with third-party services",
+      "Deploy and manage applications in production environments"
+    ],
+    "targetAudience": "This course is for developers who are ready to level up their skills and become the cloud architects that companies compete for. Whether you're a backend developer looking to add cloud expertise, a full-stack developer wanting to master scalable architectures, or someone ready to transition into cloud-native development - if you want to build applications that power the modern world, this course will give you the skills and mindset to make it happen."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Development Environment Setup",
+      "description": "Configure development environments for Azure development",
+      "duration": "6 hours",
+      "objectives": [
+        "Set up Azure development environment",
+        "Configure Azure CLI and PowerShell",
+        "Use Azure SDKs and development tools",
+        "Implement Azure authentication and authorization"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Setting up a proper development environment is crucial for efficient Azure development. You'll learn to configure your local environment and connect to Azure services securely.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Development Tools Covered",
+            "items": [
+              "Azure CLI for command-line operations",
+              "Azure PowerShell for automation",
+              "Visual Studio and VS Code with Azure extensions",
+              "Azure SDKs for multiple programming languages",
+              "REST APIs and Azure Resource Manager templates"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Environment Setup Lab",
+          "description": "Configure your development environment for Azure",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Compute Solutions",
+      "description": "Develop solutions using Azure compute services",
+      "duration": "8 hours",
+      "objectives": [
+        "Create Azure App Service web apps",
+        "Develop Azure Functions",
+        "Implement Azure Container Instances",
+        "Use Azure Kubernetes Service",
+        "Implement API Management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Compute Services</h3><p>Azure provides various compute options for different application requirements. Learn to choose the right compute service and implement it effectively.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/compute-services.jpg",
+            "alt": "Azure Compute Services",
+            "caption": "Azure App Service, Functions, Container Instances, and AKS"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "App Service Development",
+          "description": "Build and deploy web applications using Azure App Service",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        },
+        {
+          "title": "Serverless Functions",
+          "description": "Create and deploy Azure Functions",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Storage Solutions",
+      "description": "Implement Azure storage solutions for applications",
+      "duration": "6 hours",
+      "objectives": [
+        "Develop solutions using Azure Storage",
+        "Implement Azure SQL Database",
+        "Implement Azure Cosmos DB",
+        "Implement Azure Blob storage",
+        "Implement Azure Table storage"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure offers various storage options for different data types and access patterns. Learn to implement the right storage solution for your application needs.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Storage Solutions Lab",
+          "description": "Implement various Azure storage solutions",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Azure Security Implementation",
+      "description": "Implement security in Azure applications",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement Azure Key Vault",
+        "Implement managed identities",
+        "Implement Azure Active Directory authentication",
+        "Implement access control",
+        "Implement secure cloud solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Security Best Practices</h3><p>Security is paramount in cloud development. Learn to implement authentication, authorization, and secure communication in your Azure applications.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Implementation Lab",
+          "description": "Implement security features in Azure applications",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1800,
+    "discountedPrice": 1440,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-204 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Azure Solutions Architect Expert",
+    "bio": "Yaïr is a seasoned Azure developer and architect with extensive experience in building cloud-native applications. He has helped numerous teams successfully migrate and modernize their applications on Azure.",
+    "certifications": [
+      "Microsoft Certified: Azure Developer Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer (MCT)",
+      "AWS Certified Solutions Architect"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-02-26",
+        "endDate": "2024-02-29",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Developer Associate Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-developer/",
+      "description": "Official Microsoft learning path for Azure developers"
+    },
+    {
+      "type": "video",
+      "title": "Azure Development Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nED0_vbTic6i0hB9YVXSg5",
+      "description": "Azure development tutorials and best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-204 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-204",
+      "description": "Official practice tests for AZ-204 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure SDKs",
+      "url": "https://azure.microsoft.com/en-us/downloads/",
+      "description": "Download Azure SDKs for your preferred programming language"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Developer Associate",
+    "code": "AZ-204",
+    "description": "Demonstrate skills in designing, building, testing, and maintaining cloud applications and services on Microsoft Azure",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Develop Azure compute solutions (25-30%)",
+      "Develop Azure storage solutions (15-20%)",
+      "Implement Azure security (20-25%)",
+      "Monitor, troubleshoot, and optimize Azure solutions (15-20%)",
+      "Connect to and consume Azure services and third-party services (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What programming languages are covered?",
+      "answer": "The course covers C#, JavaScript/TypeScript, Python, and Java. You'll learn to use Azure SDKs for these languages."
+    },
+    {
+      "question": "Do I need prior Azure experience?",
+      "answer": "Yes, AZ-900 (Azure Fundamentals) is a prerequisite. Basic programming experience is also required."
+    },
+    {
+      "question": "What Azure services will I learn?",
+      "answer": "You'll learn Azure App Service, Functions, Storage, SQL Database, Cosmos DB, Key Vault, API Management, and more."
+    },
+    {
+      "question": "Is this course hands-on?",
+      "answer": "Yes, this course includes extensive hands-on labs where you'll build real Azure applications and services."
+    }
+  ]
+}

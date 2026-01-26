@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "slug": "azure-ai-engineer-associate-nl",
+    "title": "Azure AI Engineer Associate",
+    "subtitle": "Ontwerp AI Systemen Die Schalen naar Miljoenen",
+    "description": "Stop met het bouwen van AI speeltjes. Leer AI oplossingen te architectureren waar ondernemingen van afhankelijk zijn. Deze cursus transformeert je van iemand die AI APIs kan gebruiken naar de engineer die AI systemen ontwerpt, deployt en onderhoudt die echte bedrijven op enorme schaal aandrijven.",
+    "category": "AI & Machine Learning",
+    "level": "Intermediate",
+    "duration": "4 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "AI", "Machine Learning", "Cognitive Services", "Bot Framework", "Natural Language Processing", "System Architecture", "Scalability"],
+    "prerequisites": [
+      "Het vermogen om als een engineer te denken, niet alleen als een developer",
+      "Basis begrip van cloud architectuur",
+      "Een verlangen om systemen te bouwen die niet breken onder druk"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-ai-hero.jpg",
+    "badge": "Enterprise AI Architectuur",
+    "highlights": [
+      "Ontwerp AI systemen die miljoenen gebruikers aankunnen",
+      "Beheers de engineering principes achter schaalbare AI",
+      "Bouw productie-klaar AI waar ondernemingen op kunnen vertrouwen",
+      "Leid AI implementatie projecten ter waarde van miljoenen"
+    ]
+  },
+  "overview": {
+    "summary": "De meeste AI cursussen leren je hoe je APIs kunt aanroepen. Deze cursus leert je hoe je AI systemen bouwt waar ondernemingen hun bedrijf op inzetten. Je leert de engineering principes die de AI oplossingen die werken scheiden van diegenen die spectaculair falen. Van het ontwerpen van schaalbare architecturen tot het implementeren van robuuste monitoring, je beheert de vaardigheden die je de go-to persoon maken wanneer bedrijven AI nodig hebben die daadwerkelijk werkt in productie.",
+    "objectives": [
+      "Architectureer AI oplossingen die schalen van prototype naar onderneming",
+      "Ontwerp robuuste AI systemen met proper error handling en monitoring",
+      "Implementeer beveiliging en compliance in AI deployments",
+      "Optimaliseer AI prestaties en kosten op enorme schaal",
+      "Bouw veerkrachtige AI pipelines die echte wereld uitdagingen aankunnen",
+      "Leid cross-functionele teams in AI implementatie projecten"
+    ],
+    "targetAudience": "Deze cursus is voor engineers die de architecten van AI systemen willen zijn, niet alleen de mensen die ze gebruiken. Als je moe bent van het bouwen van AI demos en AI oplossingen wilt creëren die echte bedrijven aandrijven, als je AI initiatieven wilt leiden die miljoenen in omzet genereren, als je klaar bent om van AI consument naar AI producent te gaan - deze cursus geeft je de engineering mindset en technische vaardigheden om dat te laten gebeuren."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure AI Fundamentals and Planning",
+      "description": "Begrijp Azure AI diensten en plan AI oplossingen",
+      "duration": "6 uur",
+      "objectives": [
+        "Begrijp Azure AI diensten en mogelijkheden",
+        "Plan Azure AI oplossingen",
+        "Beheer Azure AI resources",
+        "Implementeer verantwoordelijke AI praktijken"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure AI Platform Overzicht</h3><p>Leer de architectuur en mogelijkheden van Azure AI diensten, inclusief Cognitive Services, Azure OpenAI, en Azure AI platform componenten.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Azure AI Diensten",
+            "items": [
+              "Azure Cognitive Services voor vooraf gebouwde AI mogelijkheden",
+              "Azure Machine Learning voor custom AI modellen",
+              "Azure Bot Services voor conversationele AI",
+              "Azure OpenAI Service voor generatieve AI",
+              "Azure AI Search voor intelligente zoekopdrachten"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "AI Services Setup Lab",
+          "description": "Stel Azure AI diensten in en configureer ze",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure AI Vision Solutions",
+      "description": "Implementeer computer vision oplossingen met Azure",
+      "duration": "8 uur",
+      "objectives": [
+        "Analyseer beelden met Azure AI Vision",
+        "Classificeer beelden met custom modellen",
+        "Detecteer objecten in beelden",
+        "Haal tekst uit beelden",
+        "Implementeer gezichtsherkenning oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure AI Vision diensten stellen je in staat om inzichten uit beelden en video's te halen. Leer verschillende computer vision scenario's te implementeren.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/ai-vision.jpg",
+            "alt": "Azure AI Vision Diensten",
+            "caption": "Computer Vision, Custom Vision, en Face diensten"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Computer Vision Lab",
+          "description": "Bouw applicaties met Azure AI Vision diensten",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure AI Language Solutions",
+      "description": "Implementeer natuurlijke taal verwerking oplossingen",
+      "duration": "8 uur",
+      "objectives": [
+        "Analyseer tekst met Azure AI Language",
+        "Implementeer conversationeel taal begrip",
+        "Bouw question answering oplossingen",
+        "Implementeer tekst analytics",
+        "Creëer custom taal modellen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Natuurlijke Taal Verwerking</h3><p>Azure AI Language diensten helpen je natuurlijke taal te begrijpen en te verwerken. Leer tekst analyse, conversationeel begrip, en question answering te implementeren.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Language Services Lab",
+          "description": "Implementeer NLP oplossingen met Azure AI Language",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Azure AI Speech Solutions",
+      "description": "Implementeer spraak AI oplossingen",
+      "duration": "6 uur",
+      "objectives": [
+        "Converteer spraak naar tekst",
+        "Synthetiseer tekst naar spraak",
+        "Implementeer spraak vertaling",
+        "Creëer conversationele voice assistants",
+        "Behandel meertalige spraak scenario's"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure AI Speech diensten bieden geavanceerde spraakmogelijkheden voor je applicaties. Leer spraakherkenning, tekst-naar-spraak, en spraakvertaling te implementeren.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Speech Services Lab",
+          "description": "Bouw spraak-enabled applicaties met Azure AI Speech",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Azure AI Search and OpenAI Solutions",
+      "description": "Implementeer intelligente zoek en generatieve AI oplossingen",
+      "duration": "6 uur",
+      "objectives": [
+        "Creëer intelligente zoekoplossingen",
+        "Implementeer Azure OpenAI Service",
+        "Bouw generatieve AI applicaties",
+        "Integreer AI met zoekfunctionaliteit",
+        "Optimaliseer zoek prestaties"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Intelligente Zoek en Generatieve AI</h3><p>Leer hoe je Azure AI Search en Azure OpenAI Service kunt gebruiken om intelligente zoekoplossingen en generatieve AI applicaties te bouwen.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Search and OpenAI Lab",
+          "description": "Bouw intelligente zoek en generatieve AI applicaties",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2000,
+    "discountedPrice": 1600,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-15"
+    },
+    "includes": [
+      "Officiële cursus materialen",
+      "Hands-on AI development labs",
+      "AI-102 examen voucher",
+      "Azure AI credits voor praktijk",
+      "Lunch en verfrissingen",
+      "Cursus voltooiings certificaat"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Principal AI Engineer",
+    "bio": "Yaïr is een Principal AI Engineer bij Microsoft met meer dan 15 jaar ervaring in AI development. Hij heeft AI oplossingen gebouwd voor Fortune 500 bedrijven en startups.",
+    "certifications": [
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "Microsoft Certified: Azure Data Scientist Associate",
+      "AWS Certified Machine Learning - Specialty",
+      "Google Cloud Professional ML Engineer",
+      "PhD in Computer Science"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-11",
+        "endDate": "2024-03-14",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure AI Engineer Associate Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-ai-engineer-associate/",
+      "description": "Officiële Microsoft leerroute voor Azure AI Engineers"
+    },
+    {
+      "type": "video",
+      "title": "Azure AI Development Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nF8QK",
+      "description": "Azure AI diensten tutorials en demos"
+    },
+    {
+      "type": "practice-test",
+      "title": "AI-102 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/ai-102",
+      "description": "Officiële oefentests voor AI-102 certificatie"
+    },
+    {
+      "type": "tool",
+      "title": "Azure AI Studio",
+      "url": "https://ai.azure.com/",
+      "description": "Azure AI Studio voor het bouwen van AI applicaties"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
+    "code": "AI-102",
+    "description": "Demonstreer vaardigheden in het gebruik van Azure AI diensten om intelligente applicaties te bouwen die AI gebruiken om gebruikerservaringen te verbeteren en zakelijke problemen op te lossen",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Plan and manage Azure AI solutions (15-20%)",
+      "Implement Azure AI Vision solutions (15-20%)",
+      "Implement Azure AI Language solutions (20-25%)",
+      "Implement Azure AI Speech solutions (10-15%)",
+      "Implement Azure AI Search solutions (10-15%)",
+      "Implement Azure OpenAI Service solutions (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik machine learning ervaring nodig?",
+      "answer": "Nee, deze cursus behandelt zowel vooraf gebouwde AI diensten als custom model development. Basis programmeerkennis is voldoende."
+    },
+    {
+      "question": "Welke programmeertalen worden gebruikt?",
+      "answer": "De cursus gebruikt Python, C# en REST APIs. Je werkt met Azure SDKs en de Azure portal."
+    },
+    {
+      "question": "Kan ik Azure OpenAI Service gebruiken?",
+      "answer": "Ja, de cursus bevat Azure OpenAI Service implementatie voor generatieve AI scenario's."
+    },
+    {
+      "question": "Zijn er hands-on labs?",
+      "answer": "Ja, uitgebreide hands-on labs waar je AI-powered applicaties bouwt met echte Azure diensten."
+    }
+  ]
+}

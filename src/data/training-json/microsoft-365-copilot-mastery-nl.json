@@ -1,0 +1,193 @@
+{
+  "id": "microsoft-365-copilot-mastery-nl",
+  "slug": "microsoft-365-copilot-mastery",
+  "title": "Microsoft 365 Copilot Mastery",
+  "subtitle": "AI-Gedreven Productiviteit Training",
+  "description": "Ontsluit de kracht van AI in je dagelijkse werk met Microsoft 365 Copilot",
+  "overview": "Deze intensieve één-daagse workshop leert je hoe je het volledige potentieel van Microsoft 365 Copilot kunt benutten in alle applicaties. Leer geavanceerde prompt engineering, workflow automatisering en AI-gedreven productiviteitstechnieken om je werkprocessen te transformeren.",
+  "category": "Microsoft 365",
+  "subcategory": "Productiviteit",
+  "difficulty": "Gemiddeld",
+  "duration": {
+    "days": 1,
+    "hours": 8,
+    "format": "days"
+  },
+  "price": {
+    "amount": 595,
+    "currency": "EUR"
+  },
+  "featured": true,
+  "icon": "Lightning",
+  "learningObjectives": [
+    {
+      "id": "copilot-fundamentals",
+      "title": "Beheers Copilot in alle M365 applicaties",
+      "description": "Leer Copilot effectief te gebruiken in Word, Excel, PowerPoint, Outlook en Teams",
+      "icon": "Lightning"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Creëer effectieve prompts voor maximale productiviteit",
+      "description": "Beheers prompt engineering technieken om de beste resultaten uit Copilot te halen",
+      "icon": "Robot"
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Implementeer AI-gedreven workflow automatisering",
+      "description": "Ontwerp en implementeer geautomatiseerde workflows met Copilot mogelijkheden",
+      "icon": "Sparkle"
+    },
+    {
+      "id": "content-creation",
+      "title": "Optimaliseer content creatie en analyse",
+      "description": "Gebruik Copilot voor intelligente content creatie, bewerking en analyse",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "presentation-workflows",
+      "title": "Ontwerp intelligente presentatie workflows",
+      "description": "Creëer effectieve presentatie workflows met Copilot ondersteuning",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "ai-ethics",
+      "title": "Pas AI ethiek en best practices toe",
+      "description": "Begrijp AI ethiek, privacy en best practices bij het gebruik van Copilot",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 ervaring vereist",
+    "Basis begrip van AI concepten",
+    "Bekendheid met Word, Excel, PowerPoint, Outlook",
+    "Teams samenwerking ervaring"
+  ],
+  "targetAudience": [
+    "Kenniswerkers en professionals",
+    "Business analisten en managers",
+    "Content creators en marketeers",
+    "Microsoft 365 power users"
+  ],
+  "certification": {
+    "available": false,
+    "name": "Niet van toepassing",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft 365",
+    "Copilot",
+    "AI",
+    "Productiviteit",
+    "Automatisering"
+  ],
+  "maxParticipants": 15,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-10T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "AI productiviteit specialist gericht op Microsoft 365 Copilot implementatie en training",
+    "experience": "5+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "MS-900",
+      "MS-500",
+      "MS-700",
+      "AI-900"
+    ]
+  },
+  "modules": [
+    {
+      "id": "copilot-fundamentals",
+      "title": "Copilot Fundamentals",
+      "description": "Begrijp AI ondersteuning en Copilot mogelijkheden",
+      "duration": "2 uur",
+      "topics": [
+        "Begrijp AI ondersteunings paradigma",
+        "Prompt engineering best practices",
+        "Context en gespreksbeheer",
+        "Privacy en beveiligingsoverwegingen"
+      ],
+      "icon": "Lightning"
+    },
+    {
+      "id": "copilot-office-apps",
+      "title": "Copilot in Office Apps",
+      "description": "Gebruik Copilot in Microsoft Office applicaties",
+      "duration": "2 uur",
+      "topics": [
+        "Word: Document creatie en bewerking",
+        "Excel: Data analyse en visualisatie",
+        "PowerPoint: Intelligente presentatie ontwerp",
+        "Outlook: Email optimalisatie en planning"
+      ],
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "advanced-ai-workflows",
+      "title": "Geavanceerde AI Workflows",
+      "description": "Bouw geavanceerde AI-gedreven workflows",
+      "duration": "2 uur",
+      "topics": [
+        "Teams meeting samenvattingen en inzichten",
+        "SharePoint content ontdekking",
+        "Power Platform integratie",
+        "Cross-applicatie workflows"
+      ],
+      "icon": "Robot"
+    },
+    {
+      "id": "productivity-optimization",
+      "title": "Productiviteit Optimalisatie",
+      "description": "Optimaliseer productiviteit met AI tools",
+      "duration": "2 uur",
+      "topics": [
+        "Persoonlijke productiviteitspatronen",
+        "Team samenwerking verbetering",
+        "Meting en analytics",
+        "Change management strategieën"
+      ],
+      "icon": "Sparkle"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "copilot-word-lab",
+      "title": "Copilot in Word",
+      "description": "Hands-on oefening met Copilot in Microsoft Word",
+      "duration": "1 uur",
+      "icon": "Lightning"
+    },
+    {
+      "id": "copilot-excel-lab",
+      "title": "Copilot in Excel",
+      "description": "Data analyse en visualisatie met Copilot in Excel",
+      "duration": "1 uur",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "copilot-powerpoint-lab",
+      "title": "Copilot in PowerPoint",
+      "description": "Creëer presentaties met Copilot ondersteuning",
+      "duration": "1 uur",
+      "icon": "PresentationChart"
+    },
+    {
+      "id": "workflow-automation-lab",
+      "title": "Workflow Automatisering",
+      "description": "Bouw geautomatiseerde workflows met Copilot",
+      "duration": "1 uur",
+      "icon": "Robot"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Microsoft 365 is meer dan alleen Office in de cloud. Ik heb M365 geïmplementeerd voor duizenden gebruikers, het geïntegreerd met aangepaste applicaties en samenwerkingsworkflows geoptimaliseerd. Deze training laat je zien hoe je het volledige potentieel van M365 benut op basis van echte deployment-ervaringen."
+  }
+}

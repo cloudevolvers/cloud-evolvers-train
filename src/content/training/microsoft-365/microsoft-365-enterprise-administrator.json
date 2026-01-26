@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "slug": "microsoft-365-enterprise-administrator",
+    "title": "Microsoft 365 Enterprise Administrator",
+    "subtitle": "Manage Microsoft 365 enterprise environments",
+    "description": "Master Microsoft 365 administration including Exchange, SharePoint, Teams, and security. Prepare for the MS-102 certification exam.",
+    "category": "Microsoft 365",
+    "level": "Advanced",
+    "duration": "5 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Microsoft 365", "Administration", "Exchange", "SharePoint", "Teams", "Security", "Compliance"],
+    "prerequisites": [
+      "Microsoft 365 Fundamentals (MS-900) certification",
+      "Microsoft 365 Certified: Enterprise Administrator Associate (MS-100 and MS-101)",
+      "Experience with Windows Server administration",
+      "Understanding of networking and Active Directory concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/microsoft-365-admin-hero.jpg",
+    "badge": "MS-102 Certification",
+    "highlights": [
+      "Complete Microsoft 365 administration",
+      "Enterprise security and compliance",
+      "MS-102 certification preparation"
+    ]
+  },
+  "overview": {
+    "summary": "Microsoft 365 Enterprise Administrator Expert training teaches you to design, implement, and manage Microsoft 365 services for enterprise organizations. Learn to optimize Microsoft 365 environments for security, compliance, and productivity.",
+    "objectives": [
+      "Design and implement Microsoft 365 services",
+      "Manage Microsoft 365 security and compliance",
+      "Manage Microsoft 365 governance and reporting",
+      "Monitor and troubleshoot Microsoft 365 services"
+    ],
+    "targetAudience": "IT professionals who have Microsoft 365 Enterprise Administrator Associate certification and want to advance to Expert level and prepare for the MS-102 certification exam."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Microsoft 365 Service Design and Implementation",
+      "description": "Design and implement Microsoft 365 services architecture",
+      "duration": "8 hours",
+      "objectives": [
+        "Design Microsoft 365 service architecture",
+        "Implement Microsoft 365 tenant configuration",
+        "Configure Microsoft 365 services",
+        "Implement hybrid infrastructure",
+        "Manage Microsoft 365 licensing"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Enterprise Architecture Design</h3><p>Learn to design comprehensive Microsoft 365 architectures that meet enterprise requirements for scalability, security, and compliance.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Microsoft 365 Services",
+            "items": [
+              "Exchange Online for enterprise email",
+              "SharePoint Online for collaboration",
+              "Microsoft Teams for communication",
+              "OneDrive for Business for file storage",
+              "Azure AD for identity management",
+              "Intune for device management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Tenant Configuration Lab",
+          "description": "Configure and optimize Microsoft 365 tenant settings",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Microsoft 365 Security Management",
+      "description": "Implement comprehensive security solutions",
+      "duration": "10 hours",
+      "objectives": [
+        "Implement Azure AD security",
+        "Configure conditional access policies",
+        "Implement data loss prevention",
+        "Manage Microsoft Defender",
+        "Implement threat protection",
+        "Configure security monitoring"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Security is paramount in Microsoft 365 environments. Learn to implement layered security controls and threat protection mechanisms.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/microsoft365/security-services.jpg",
+            "alt": "Microsoft 365 Security Services",
+            "caption": "Azure AD, Defender, DLP, and compliance tools"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Implementation Lab",
+          "description": "Implement comprehensive security solutions",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Microsoft 365 Compliance and Governance",
+      "description": "Implement compliance and governance solutions",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement compliance solutions",
+        "Configure audit and reporting",
+        "Manage data governance",
+        "Implement retention policies",
+        "Configure eDiscovery",
+        "Manage insider risk"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Compliance Framework</h3><p>Learn to implement compliance solutions that meet regulatory requirements while maintaining productivity and collaboration.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Compliance Configuration Lab",
+          "description": "Configure compliance and governance policies",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Microsoft 365 Monitoring and Troubleshooting",
+      "description": "Monitor and troubleshoot Microsoft 365 services",
+      "duration": "8 hours",
+      "objectives": [
+        "Monitor Microsoft 365 services",
+        "Troubleshoot service issues",
+        "Implement health monitoring",
+        "Configure alerting",
+        "Perform performance optimization",
+        "Manage service requests"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Effective monitoring and troubleshooting are essential for maintaining Microsoft 365 service availability and performance.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring and Troubleshooting Lab",
+          "description": "Monitor and troubleshoot Microsoft 365 services",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2000,
+    "discountedPrice": 1600,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "MS-102 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Microsoft 365 Enterprise Administrator Expert badge"
+    ]
+  },
+  "instructor": {
+    "name": "Lisa Thompson",
+    "title": "Microsoft 365 Solutions Architect",
+    "bio": "Lisa is a Microsoft 365 Solutions Architect with extensive experience in enterprise deployments and migrations. She has led numerous Microsoft 365 transformation projects for large organizations.",
+    "certifications": [
+      "Microsoft Certified: Microsoft 365 Enterprise Administrator Expert",
+      "Microsoft Certified: Microsoft 365 Enterprise Administrator Associate",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified Trainer (MCT)",
+      "ITIL Foundation Certification"
+    ],
+    "image": "/images/instructors/lisa-thompson.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-25",
+        "endDate": "2024-03-29",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Microsoft 365 Enterprise Administrator Expert Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-365-enterprise-administrator-expert/",
+      "description": "Official Microsoft learning path for Microsoft 365 Enterprise Administrators"
+    },
+    {
+      "type": "video",
+      "title": "Microsoft 365 Administration Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nH8QK",
+      "description": "Microsoft 365 administration tutorials and best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "MS-102 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/ms-102",
+      "description": "Official practice tests for MS-102 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Microsoft 365 Admin Center",
+      "url": "https://admin.microsoft.com/",
+      "description": "Microsoft 365 admin portal for service management"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Microsoft 365 Enterprise Administrator Expert",
+    "code": "MS-102",
+    "description": "Demonstrate skills in designing, implementing, and managing Microsoft 365 services for enterprise organizations",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Design and implement Microsoft 365 services (25-30%)",
+      "Manage Microsoft 365 security and compliance (30-35%)",
+      "Manage Microsoft 365 governance and reporting (15-20%)",
+      "Monitor and troubleshoot Microsoft 365 services (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What are the prerequisites for this course?",
+      "answer": "You must have Microsoft 365 Enterprise Administrator Associate certification (MS-100 and MS-101) or equivalent experience."
+    },
+    {
+      "question": "What Microsoft 365 services are covered?",
+      "answer": "You'll learn to manage Exchange Online, SharePoint Online, Teams, OneDrive, Azure AD, Intune, and security services."
+    },
+    {
+      "question": "Is this course technical or strategic?",
+      "answer": "This course covers both technical implementation and strategic design decisions for enterprise Microsoft 365 deployments."
+    },
+    {
+      "question": "Do I need Windows Server experience?",
+      "answer": "Yes, experience with Windows Server administration and Active Directory concepts is required for this advanced course."
+    }
+  ]
+}

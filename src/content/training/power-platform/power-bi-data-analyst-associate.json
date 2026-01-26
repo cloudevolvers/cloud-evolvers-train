@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "slug": "power-bi-data-analyst-associate",
+    "title": "Power BI Data Analyst Associate",
+    "subtitle": "Master data analysis with Power BI",
+    "description": "Learn to connect, transform, and visualize data using Power BI. Prepare for the PL-300 certification exam.",
+    "category": "Business Intelligence",
+    "level": "Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Power BI", "Data Analysis", "Business Intelligence", "Data Visualization", "DAX", "Power Query"],
+    "prerequisites": [
+      "Basic understanding of data concepts",
+      "Familiarity with Microsoft Excel",
+      "Basic knowledge of database concepts",
+      "Understanding of business intelligence concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/power-bi-hero.jpg",
+    "badge": "PL-300 Certification",
+    "highlights": [
+      "Data modeling and visualization",
+      "Power BI advanced features",
+      "PL-300 certification preparation"
+    ]
+  },
+  "overview": {
+    "summary": "Power BI Data Analyst Associate training teaches you to implement and maintain the data models and reports that organizational users will use in their decision-making processes. Learn to connect to data sources, transform data, and create compelling visualizations.",
+    "objectives": [
+      "Prepare the data",
+      "Model the data",
+      "Visualize and analyze the data",
+      "Deploy and maintain assets"
+    ],
+    "targetAudience": "Data analysts who want to learn how to use Power BI to perform data analysis and create compelling visualizations and prepare for the PL-300 certification exam."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Data Preparation with Power Query",
+      "description": "Connect to and transform data sources",
+      "duration": "8 hours",
+      "objectives": [
+        "Get data from various sources",
+        "Clean and transform data",
+        "Create data connections",
+        "Implement data profiling",
+        "Handle data refresh scenarios"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Data Acquisition and Transformation</h3><p>Power BI can connect to hundreds of data sources. Learn to efficiently extract, transform, and load data for analysis.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Data Sources",
+            "items": [
+              "Excel and CSV files",
+              "SQL Server and Azure SQL Database",
+              "Azure services (Blob Storage, Data Lake)",
+              "SharePoint and OneDrive",
+              "Web APIs and OData feeds",
+              "On-premises data sources"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Connection Lab",
+          "description": "Connect to multiple data sources and perform transformations",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Data Modeling with Power BI",
+      "description": "Create and optimize data models",
+      "duration": "8 hours",
+      "objectives": [
+        "Design data models",
+        "Create relationships",
+        "Implement DAX calculations",
+        "Optimize model performance",
+        "Implement row-level security"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Data modeling is the foundation of effective Power BI solutions. Learn to create efficient data models that support complex analysis and reporting.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/powerbi/data-modeling.jpg",
+            "alt": "Power BI Data Modeling",
+            "caption": "Relationships, DAX formulas, and model optimization"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Modeling Lab",
+          "description": "Create complex data models with relationships and DAX",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Data Visualization and Analysis",
+      "description": "Create compelling visualizations and perform analysis",
+      "duration": "8 hours",
+      "objectives": [
+        "Create reports and dashboards",
+        "Implement advanced visualizations",
+        "Apply conditional formatting",
+        "Create custom visuals",
+        "Implement drill-through and drill-down",
+        "Use AI-powered insights"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Advanced Visualization Techniques</h3><p>Learn to create visually appealing and interactive reports that effectively communicate insights to stakeholders.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Visualization Lab",
+          "description": "Create comprehensive dashboards and reports",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Power BI Deployment and Administration",
+      "description": "Deploy and manage Power BI assets",
+      "duration": "6 hours",
+      "objectives": [
+        "Publish reports to Power BI Service",
+        "Configure data refresh",
+        "Implement security and sharing",
+        "Monitor performance",
+        "Manage workspaces and apps"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Learn to deploy Power BI solutions to production and manage them effectively in enterprise environments.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Deployment Lab",
+          "description": "Publish and manage Power BI reports in the service",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1600,
+    "discountedPrice": 1280,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "PL-300 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Power BI Data Analyst Associate badge"
+    ]
+  },
+  "instructor": {
+    "name": "David Kim",
+    "title": "Business Intelligence Solutions Architect",
+    "bio": "David is a Business Intelligence Solutions Architect with extensive experience in data analytics and visualization. He has helped organizations transform their data into actionable insights using Power BI and other BI tools.",
+    "certifications": [
+      "Microsoft Certified: Power BI Data Analyst Associate",
+      "Microsoft Certified: Azure Data Engineer Associate",
+      "Tableau Desktop Certified Associate",
+      "SQL Server certifications",
+      "MBA in Information Systems"
+    ],
+    "image": "/images/instructors/david-kim.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-01",
+        "endDate": "2024-04-04",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 15,
+        "maxSeats": 18
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Power BI Data Analyst Associate Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/power-bi-data-analyst-associate/",
+      "description": "Official Microsoft learning path for Power BI Data Analysts"
+    },
+    {
+      "type": "video",
+      "title": "Power BI Tutorials and Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nE8QK",
+      "description": "Power BI tutorials and advanced techniques"
+    },
+    {
+      "type": "practice-test",
+      "title": "PL-300 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/pl-300",
+      "description": "Official practice tests for PL-300 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Power BI Desktop",
+      "url": "https://powerbi.microsoft.com/en-us/desktop/",
+      "description": "Download Power BI Desktop for report development"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Power BI Data Analyst Associate",
+    "code": "PL-300",
+    "description": "Demonstrate skills in preparing data, modeling data, visualizing and analyzing data, and deploying and maintaining assets",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Prepare the data (15-20%)",
+      "Model the data (30-35%)",
+      "Visualize and analyze the data (25-30%)",
+      "Deploy and maintain assets (20-25%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need programming experience?",
+      "answer": "No, this course focuses on Power BI's visual interface. However, you'll learn DAX formulas and Power Query M language."
+    },
+    {
+      "question": "What data sources can Power BI connect to?",
+      "answer": "Power BI can connect to hundreds of data sources including Excel, SQL databases, Azure services, web APIs, and more."
+    },
+    {
+      "question": "Is this course hands-on?",
+      "answer": "Yes, extensive hands-on labs where you'll build real Power BI reports and dashboards from start to finish."
+    },
+    {
+      "question": "Do I need a Power BI license?",
+      "answer": "For the labs, you'll use a free Power BI Desktop license. Some advanced features may require Power BI Pro."
+    }
+  ]
+}

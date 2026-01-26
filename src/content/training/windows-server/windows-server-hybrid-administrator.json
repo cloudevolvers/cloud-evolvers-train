@@ -1,0 +1,333 @@
+{
+  "metadata": {
+    "slug": "windows-server-hybrid-administrator",
+    "title": "Windows Server Hybrid Administrator",
+    "subtitle": "Master Hybrid Windows Server Administration",
+    "description": "Become an expert in hybrid Windows Server administration, mastering Azure integration, hybrid identity, storage, and compute management for modern enterprise environments.",
+    "category": "Windows Server",
+    "level": "Advanced",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Windows Server", "Hybrid", "Azure", "Active Directory", "Storage", "Compute", "Administration"],
+    "prerequisites": [
+      "Windows Server administration experience",
+      "Understanding of Active Directory",
+      "Basic Azure knowledge",
+      "Experience with PowerShell",
+      "Knowledge of networking concepts",
+      "Understanding of virtualization"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/windows-server-hybrid-hero.jpg",
+    "badge": "AZ-800",
+    "highlights": [
+      "Hybrid identity management",
+      "Azure Arc integration",
+      "Hybrid storage solutions",
+      "Windows Server security"
+    ]
+  },
+  "overview": {
+    "summary": "Windows Server Hybrid Administrator training prepares you for the AZ-800 certification by mastering hybrid Windows Server administration, including Azure integration, hybrid identity, and modern infrastructure management.",
+    "objectives": [
+      "Implement and manage hybrid identity",
+      "Deploy and manage Azure Arc",
+      "Configure hybrid storage solutions",
+      "Implement hybrid networking",
+      "Manage Windows Server in hybrid environments",
+      "Implement security and compliance"
+    ],
+    "targetAudience": "Windows Server administrators, IT professionals, and system administrators who need to manage hybrid Windows Server environments with Azure integration."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Hybrid Identity Management",
+      "description": "Master hybrid identity solutions with Azure AD",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement Azure AD Connect",
+        "Configure directory synchronization",
+        "Manage hybrid authentication",
+        "Implement Azure AD Domain Services",
+        "Configure Azure AD Connect Health",
+        "Manage identity protection"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Hybrid Identity Architecture</h3><p>Hybrid identity enables seamless integration between on-premises Active Directory and Azure Active Directory, providing unified authentication and authorization.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Identity Management Components",
+            "items": [
+              "Azure AD Connect configuration",
+              "Directory synchronization options",
+              "Password hash synchronization",
+              "Pass-through authentication",
+              "Federation with AD FS",
+              "Azure AD Domain Services"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/windows-server/hybrid-identity.jpg",
+            "alt": "Hybrid Identity Architecture",
+            "caption": "Windows Server hybrid identity with Azure AD"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Hybrid Identity Lab",
+          "description": "Configure and manage hybrid identity solutions",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Arc and Hybrid Management",
+      "description": "Implement Azure Arc for hybrid server management",
+      "duration": "8 hours",
+      "objectives": [
+        "Deploy Azure Arc-enabled servers",
+        "Configure Azure Arc policies",
+        "Implement Azure Arc-enabled Kubernetes",
+        "Manage hybrid resources with Azure Arc",
+        "Configure Azure Monitor integration",
+        "Implement Azure Arc security"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Arc for Servers</h3><p>Azure Arc extends Azure management and services to any infrastructure, enabling unified management of hybrid and multi-cloud environments.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Azure Arc Features",
+            "items": [
+              "Azure Arc-enabled servers",
+              "Azure Arc-enabled Kubernetes",
+              "Azure Policy integration",
+              "Azure Monitor and Log Analytics",
+              "Azure Security Center integration",
+              "Azure Update Management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Arc Lab",
+          "description": "Deploy and manage Azure Arc-enabled servers",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Hybrid Storage Solutions",
+      "description": "Implement hybrid storage with Azure integration",
+      "duration": "8 hours",
+      "objectives": [
+        "Configure Azure File Sync",
+        "Implement Storage Migration Service",
+        "Set up Azure Backup for Windows Server",
+        "Configure Azure Site Recovery",
+        "Implement hybrid storage solutions",
+        "Manage storage replication"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Hybrid storage solutions enable seamless integration between on-premises storage and Azure storage services, providing flexibility and scalability.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Storage Solutions",
+            "items": [
+              "Azure File Sync for file synchronization",
+              "Storage Migration Service for migration",
+              "Azure Backup for data protection",
+              "Azure Site Recovery for disaster recovery",
+              "Hybrid cloud storage options",
+              "Storage Spaces Direct integration"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Hybrid Storage Lab",
+          "description": "Configure hybrid storage solutions",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Hybrid Networking and Security",
+      "description": "Implement hybrid networking and security",
+      "duration": "6 hours",
+      "objectives": [
+        "Configure hybrid networking",
+        "Implement Azure Network Adapter",
+        "Set up VPN and ExpressRoute",
+        "Configure Windows Defender",
+        "Implement Azure Security Center",
+        "Manage hybrid security policies"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Hybrid Networking</h3><p>Hybrid networking enables secure connectivity between on-premises networks and Azure, supporting various connectivity options and security requirements.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Networking and Security",
+            "items": [
+              "Azure Network Adapter configuration",
+              "VPN and ExpressRoute setup",
+              "Windows Defender integration",
+              "Azure Security Center for servers",
+              "Hybrid firewall management",
+              "Network security policies"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Hybrid Networking Lab",
+          "description": "Configure hybrid networking and security",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1400,
+    "discountedPrice": 1120,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft AZ-800 training materials",
+      "Hands-on lab access with hybrid environment",
+      "Azure subscription credits for labs",
+      "Hybrid administration guide",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Windows Server Hybrid Administrator badge"
+    ]
+  },
+  "instructor": {
+    "name": "Robert Martinez",
+    "title": "Senior Windows Server Architect",
+    "bio": "Robert is a Senior Windows Server Architect with extensive experience in enterprise Windows Server deployments and Azure hybrid integrations. He has led numerous Windows Server migration projects and specializes in hybrid cloud architectures.",
+    "certifications": [
+      "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "VMware Certified Professional (VCP)",
+      "Cisco Certified Network Professional (CCNP)",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/robert-martinez.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-08-12",
+        "endDate": "2024-08-15",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Windows Server Hybrid Documentation",
+      "url": "https://learn.microsoft.com/en-us/windows-server/",
+      "description": "Official Windows Server hybrid administration documentation"
+    },
+    {
+      "type": "video",
+      "title": "Windows Server Hybrid Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nF",
+      "description": "Video tutorials for Windows Server hybrid administration"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Arc",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-arc/",
+      "description": "Azure Arc documentation and tools"
+    },
+    {
+      "type": "practice",
+      "title": "AZ-800 Practice Tests",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/windows-server-hybrid-administrator-associate/practice-assess/",
+      "description": "Official practice tests for AZ-800 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+    "code": "AZ-800",
+    "description": "Demonstrate expertise in implementing and managing hybrid solutions using Windows Server and Azure technologies",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Japanese", "Chinese (Simplified)", "Korean", "German", "French", "Spanish", "Portuguese (Brazil)", "Arabic", "Russian", "Chinese (Traditional)", "Italian", "Indonesian"]
+    },
+    "skillsMeasured": [
+      "Deploy and manage Active Directory Domain Services (AD DS) in on-premises and cloud environments (20-25%)",
+      "Manage Windows Servers and workloads in a hybrid environment (20-25%)",
+      "Manage virtual machines and containers (15-20%)",
+      "Implement and manage an on-premises and hybrid networking infrastructure (15-20%)",
+      "Manage storage and file services (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need an Azure subscription?",
+      "answer": "Yes, hands-on labs require an Azure subscription. We provide credits for lab exercises, but having your own subscription is beneficial for continued learning."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a highly technical course requiring Windows Server administration experience and PowerShell knowledge. Prior IT infrastructure experience is essential."
+    },
+    {
+      "question": "What Windows Server versions are covered?",
+      "answer": "The course covers Windows Server 2022, 2019, and hybrid scenarios with Azure integration. Legacy versions are covered for migration scenarios."
+    },
+    {
+      "question": "Will I learn about Azure Arc?",
+      "answer": "Yes, Azure Arc is a major component of the course, covering server management, Kubernetes integration, and hybrid resource management."
+    }
+  ]
+}

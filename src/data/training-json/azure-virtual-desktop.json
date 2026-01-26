@@ -1,0 +1,226 @@
+{
+  "id": "azure-virtual-desktop",
+  "slug": "azure-virtual-desktop",
+  "title": "Azure Virtual Desktop Specialty (AZ-140)",
+  "description": "Master Azure Virtual Desktop for modern remote work solutions",
+  "content": "Master Azure Virtual Desktop (AVD) for enterprise remote work solutions. Learn to plan, deploy, manage, and optimize virtual desktop infrastructure for modern hybrid work environments.",
+  "category": "Infrastructure",
+  "subcategory": "Virtual Desktop",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "prerequisites": [
+    "AZ-104 or equivalent Azure experience",
+    "Windows Server knowledge",
+    "Understanding of virtualization concepts",
+    "Basic networking and security concepts"
+  ],
+  "learningObjectives": [
+    {
+      "id": "plan-deploy-avd",
+      "title": "Plan and deploy Azure Virtual Desktop infrastructure",
+      "description": "Plan and deploy AVD infrastructure components",
+      "icon": "Desktop"
+    },
+    {
+      "id": "manage-host-pools",
+      "title": "Manage host pools and session hosts",
+      "description": "Manage host pools and session hosts effectively",
+      "icon": "Server"
+    },
+    {
+      "id": "configure-profiles",
+      "title": "Configure and manage user profiles and data",
+      "description": "Configure user profiles and data management",
+      "icon": "User"
+    },
+    {
+      "id": "secure-avd",
+      "title": "Secure Azure Virtual Desktop deployments",
+      "description": "Secure AVD deployments with best practices",
+      "icon": "Shield"
+    },
+    {
+      "id": "monitor-maintain",
+      "title": "Monitor and maintain Azure Virtual Desktop",
+      "description": "Monitor and maintain AVD infrastructure",
+      "icon": "BarChart"
+    },
+    {
+      "id": "optimize-experience",
+      "title": "Optimize user experience and performance",
+      "description": "Optimize user experience and performance",
+      "icon": "Zap"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced virtualization professional with 8+ years in enterprise desktop infrastructure and remote work solutions.",
+    "expertise": [
+      "Azure Virtual Desktop",
+      "Windows Server",
+      "Virtualization",
+      "Remote Desktop Services"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-140",
+      "AZ-104",
+      "AZ-305"
+    ]
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "Virtual Desktop",
+    "AZ-140",
+    "Remote Work"
+  ],
+  "featured": false,
+  "certification": {
+    "available": true,
+    "name": "AZ-140",
+    "examCode": "AZ-140",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "icon": "Desktop",
+  "overview": "Master Azure Virtual Desktop (AVD) for enterprise remote work solutions. Learn to plan, deploy, manage, and optimize virtual desktop infrastructure for modern hybrid work environments.",
+  "whatYouWillLearn": [
+    {
+      "title": "AVD Architecture & Planning",
+      "description": "Azure Virtual Desktop architecture, capacity planning, network requirements, and identity strategies"
+    },
+    {
+      "title": "Host Pools & Session Hosts",
+      "description": "Create host pools, deploy session hosts, configure desktops, and implement custom images"
+    },
+    {
+      "title": "User Profiles & Applications",
+      "description": "FSLogix configuration, application groups, user assignments, and workspace management"
+    },
+    {
+      "title": "Security & Monitoring",
+      "description": "Security best practices, conditional access, performance monitoring, and troubleshooting"
+    }
+  ],
+  "modules": [
+    {
+      "id": "avd-architecture",
+      "title": "AVD Architecture & Planning",
+      "description": "Plan and deploy Azure Virtual Desktop infrastructure",
+      "icon": "Desktop",
+      "duration": "6 hours",
+      "topics": [
+        "Azure Virtual Desktop architecture and components",
+        "Capacity planning and sizing considerations",
+        "Network requirements and connectivity",
+        "Identity and authentication strategies"
+      ]
+    },
+    {
+      "id": "host-pools-sessions",
+      "title": "Host Pools & Session Hosts",
+      "description": "Manage host pools and session hosts effectively",
+      "icon": "Monitor",
+      "duration": "6 hours",
+      "topics": [
+        "Create and configure host pools",
+        "Deploy and manage session hosts",
+        "Configure personal and pooled desktops",
+        "Implement custom images and golden images"
+      ]
+    },
+    {
+      "id": "user-profiles-apps",
+      "title": "User Profiles & Application Management",
+      "description": "Configure and manage user profiles and data",
+      "icon": "Users",
+      "duration": "6 hours",
+      "topics": [
+        "Configure FSLogix for profile management",
+        "Implement application groups and RemoteApps",
+        "Manage user assignments and access",
+        "Configure workspace and user experience"
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Security & Monitoring",
+      "description": "Secure and monitor Azure Virtual Desktop deployments",
+      "icon": "Shield",
+      "duration": "6 hours",
+      "topics": [
+        "Implement security best practices",
+        "Configure conditional access policies",
+        "Monitor performance and usage",
+        "Troubleshooting and optimization techniques"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "avd-deployment",
+      "title": "AVD Infrastructure Deployment",
+      "description": "Deploy Azure Virtual Desktop infrastructure and configure host pools",
+      "icon": "Desktop",
+      "duration": "2 hours"
+    },
+    {
+      "id": "session-hosts",
+      "title": "Session Host Configuration",
+      "description": "Configure and manage session hosts with custom images",
+      "icon": "Monitor",
+      "duration": "2 hours"
+    },
+    {
+      "id": "fslogix-setup",
+      "title": "FSLogix Profile Management",
+      "description": "Implement FSLogix for user profile management",
+      "icon": "User",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": "application-groups",
+      "title": "Application Group Configuration",
+      "description": "Create and manage application groups and RemoteApps",
+      "icon": "Grid",
+      "duration": "1.5 hours"
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Security and Monitoring Setup",
+      "description": "Configure security policies and monitoring for AVD",
+      "icon": "Shield",
+      "duration": "1 hour"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "3 days intensive",
+    "groupSize": "Max 12 participants",
+    "certification": "AZ-140 Specialty preparation"
+  },
+  "targetAudience": [
+    "Azure administrators",
+    "Desktop administrators",
+    "Infrastructure architects",
+    "IT professionals managing remote work solutions"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Throughout my career as a Microsoft Certified Trainer, I've had the privilege of teaching thousands of professionals. Every training I deliver is enriched by real-world implementations and practical experience. I don't just teach concepts—I share what actually works in production environments."
+  }
+}

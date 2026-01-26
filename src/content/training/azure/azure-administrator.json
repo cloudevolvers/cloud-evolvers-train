@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "slug": "azure-administrator",
+    "title": "Azure Administrator",
+    "subtitle": "Become the Cloud Hero Your Company Needs",
+    "description": "Stop being just another IT admin. Become the Azure expert who can build, secure, and optimize cloud infrastructure that drives business success. This isn't just about managing servers - it's about becoming the strategic cloud leader who transforms how your organization operates in the digital age.",
+    "category": "Azure Administration",
+    "level": "Intermediate",
+    "duration": "3 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Administration", "Virtual Machines", "Storage", "Networking", "Security", "Career Advancement"],
+    "prerequisites": [
+      "A passion for technology and problem-solving",
+      "Basic Azure knowledge (or willingness to learn quickly)",
+      "Experience with any IT administration (Windows, Linux, or cloud)"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-admin-hero.jpg",
+    "badge": "Transform Your IT Career",
+    "highlights": [
+      "Master the cloud infrastructure that powers modern businesses",
+      "Become the Azure expert companies compete to hire",
+      "Build scalable, secure systems that drive real business value",
+      "Lead cloud transformation initiatives in your organization"
+    ]
+  },
+  "overview": {
+    "summary": "Imagine being the person everyone turns to when cloud decisions need to be made. The Azure Administrator who doesn't just maintain systems, but designs and implements cloud solutions that save money, improve security, and accelerate business growth. This course isn't about memorizing commands - it's about developing the strategic thinking and technical expertise to become an indispensable cloud leader in your organization.",
+    "objectives": [
+      "Master Azure infrastructure design and deployment strategies",
+      "Build bulletproof security and compliance frameworks",
+      "Optimize cloud costs while maximizing performance",
+      "Lead digital transformation initiatives with confidence",
+      "Become the go-to expert for cloud architecture decisions",
+      "Create scalable solutions that grow with your business"
+    ],
+    "targetAudience": "This course is for IT professionals who are ready to stop reacting to technology and start shaping it. Whether you're an experienced sysadmin looking to future-proof your career, or someone ready to take the next step in cloud leadership - if you want to be the person who designs and manages the cloud infrastructure that powers successful businesses, this course will give you the skills and mindset to make it happen."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Administration Fundamentals",
+      "description": "Core concepts of Azure administration and resource management",
+      "duration": "4 hours",
+      "objectives": [
+        "Manage Azure subscriptions and accounts",
+        "Configure Azure policies and role-based access control",
+        "Monitor Azure resources and costs",
+        "Use Azure Resource Manager templates"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure administration involves managing subscriptions, resources, and access controls to ensure efficient and secure cloud operations.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Portal Administration",
+          "description": "Practice managing Azure resources through the portal",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1500,
+    "discountedPrice": 1200,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-104 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Azure Solutions Architect",
+    "bio": "Yaïr is a certified Azure Solutions Architect with extensive experience in enterprise Azure deployments and administration.",
+    "certifications": [
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer (MCT)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-02-20",
+        "endDate": "2024-02-22",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Administrator Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-administrator/",
+      "description": "Official Microsoft learning path for Azure administrators"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-104 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-104",
+      "description": "Official practice tests for AZ-104 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Administrator Associate",
+    "code": "AZ-104",
+    "description": "Demonstrate skills in implementing, managing, and monitoring Azure environment",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Manage Azure identities and governance (15-20%)",
+      "Implement and manage storage (15-20%)",
+      "Deploy and manage Azure compute resources (20-25%)",
+      "Configure and manage virtual networking (20-25%)",
+      "Monitor and maintain Azure resources (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need AZ-900 before taking this course?",
+      "answer": "Yes, AZ-900 (Azure Fundamentals) is a prerequisite for this course."
+    },
+    {
+      "question": "What Azure services will I learn to manage?",
+      "answer": "You'll learn to manage virtual machines, storage accounts, virtual networks, Azure AD, and monitoring solutions."
+    }
+  ]
+}

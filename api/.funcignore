@@ -1,0 +1,28 @@
+# Azure Functions Ignore File
+# Exclude these files from deployment to reduce package size
+
+# Development tools (CRITICAL: azure-functions-core-tools is 1GB+!)
+node_modules/azure-functions-core-tools/
+
+# Development files
+*.local.settings.json
+local.settings.json
+.vscode/
+.git/
+.gitignore
+*.log
+*.pid
+
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Documentation
+README.md
+*.md
+
+# Environment files (secrets handled via Azure App Settings)
+.env
+.env.*

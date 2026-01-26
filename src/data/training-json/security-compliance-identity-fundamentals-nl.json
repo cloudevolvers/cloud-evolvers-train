@@ -1,0 +1,187 @@
+{
+  "id": "security-compliance-identity-fundamentals",
+  "slug": "security-compliance-identity-fundamentals",
+  "title": "Beveiliging, Compliance & Identiteit Fundamentals",
+  "subtitle": "Beheers Microsoft Beveiligingsoplossingen",
+  "description": "Beheers de fundamenten van Microsoft beveiliging, compliance en identiteitsoplossingen",
+  "overview": "Deze uitgebreide training behandelt de essentiële concepten van Microsoft beveiliging, compliance en identiteitsbeheer. Leer Zero Trust principes te implementeren, identiteitsbescherming te configureren en begrijp Microsoft's beveiligingsoplossingen portfolio.",
+  "category": "Beveiliging",
+  "subcategory": "Fundamentals",
+  "difficulty": "Beginner",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "featured": true,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "security-concepts",
+      "title": "Begrijp beveiliging, compliance en identiteitsconcepten",
+      "description": "Leer fundamentele beveiligingsconcepten inclusief gedeelde verantwoordelijkheid, defense in depth en Zero Trust principes",
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-management",
+      "title": "Verken Microsoft identiteit en toegangsbeheer oplossingen",
+      "description": "Ontdek Microsoft Entra ID fundamentals, authenticatie, autorisatie en toegangsbeheer",
+      "icon": "UserCheck"
+    },
+    {
+      "id": "security-solutions",
+      "title": "Leer over Microsoft beveiligingsoplossingen en mogelijkheden",
+      "description": "Verken Microsoft Defender suite, Microsoft Sentinel en Azure Security Center",
+      "icon": "Lock"
+    },
+    {
+      "id": "compliance-solutions",
+      "title": "Ontdek Microsoft compliance oplossingen en functies",
+      "description": "Begrijp Microsoft Purview compliance, data loss prevention en informatie governance",
+      "icon": "Certificate"
+    },
+    {
+      "id": "zero-trust",
+      "title": "Implementeer Zero Trust beveiligingsmodel",
+      "description": "Leer Zero Trust principes te implementeren voor uitgebreide beveiliging",
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-governance",
+      "title": "Configureer identiteitsgovernance en bescherming",
+      "description": "Configureer conditional access beleid en identiteitsbescherming functies",
+      "icon": "UserCheck"
+    }
+  ],
+  "prerequisites": [
+    "Basis begrip van cloud computing",
+    "Algemene bekendheid met Microsoft services",
+    "Begrip van netwerk concepten",
+    "Bewustzijn van cybersecurity fundamentals"
+  ],
+  "targetAudience": [
+    "IT professionals nieuw in beveiliging",
+    "Business stakeholders",
+    "IT besluitvormers",
+    "Security analisten en beheerders"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Security, Compliance, and Identity Fundamentals",
+    "examCode": "SC-900",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "SC-900",
+    "Beveiliging",
+    "Compliance",
+    "Identiteit",
+    "Zero Trust"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-15T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Ervaren beveiligingsprofessional met diepe expertise in Microsoft beveiligingsoplossingen",
+    "experience": "8+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-900",
+      "SC-200",
+      "SC-300",
+      "SC-400"
+    ]
+  },
+  "modules": [
+    {
+      "id": "security-concepts-methodologies",
+      "title": "Beveiligingsconcepten & Methodologieën",
+      "description": "Leer fundamentele beveiligingsconcepten en methodologieën",
+      "duration": "4 uur",
+      "topics": [
+        "Gedeelde verantwoordelijkheidsmodel",
+        "Defense in depth strategie",
+        "Zero Trust beveiligingsmodel",
+        "Encryptie en sleutelbeheer"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-access-management",
+      "title": "Identiteit & Toegangsbeheer",
+      "description": "Verken Microsoft identiteit en toegangsbeheer oplossingen",
+      "duration": "4 uur",
+      "topics": [
+        "Microsoft Entra ID fundamentals",
+        "Authenticatie en autorisatie",
+        "Multi-factor authenticatie",
+        "Conditional access beleid"
+      ],
+      "icon": "UserCheck"
+    },
+    {
+      "id": "microsoft-security-solutions",
+      "title": "Microsoft Beveiligingsoplossingen",
+      "description": "Leer over Microsoft beveiligingsoplossingen en mogelijkheden",
+      "duration": "4 uur",
+      "topics": [
+        "Microsoft Defender suite",
+        "Microsoft Sentinel SIEM",
+        "Azure Security Center",
+        "Threat intelligence en hunting"
+      ],
+      "icon": "Lock"
+    },
+    {
+      "id": "compliance-governance",
+      "title": "Compliance & Governance",
+      "description": "Ontdek Microsoft compliance oplossingen en functies",
+      "duration": "4 uur",
+      "topics": [
+        "Microsoft Purview compliance",
+        "Data loss prevention (DLP)",
+        "Informatie governance",
+        "Insider risk management"
+      ],
+      "icon": "Certificate"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "security-center-lab",
+      "title": "Azure Security Center Configuratie",
+      "description": "Configureer Azure Security Center en implementeer beveiligingsbeleid",
+      "duration": "2 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "entra-id-lab",
+      "title": "Microsoft Entra ID Setup",
+      "description": "Stel Microsoft Entra ID in en configureer basis authenticatie",
+      "duration": "2 uur",
+      "icon": "UserCheck"
+    },
+    {
+      "id": "compliance-lab",
+      "title": "Compliance Center Verkenning",
+      "description": "Verken Microsoft Purview compliance center en configureer DLP beleid",
+      "duration": "2 uur",
+      "icon": "Certificate"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Als iemand die met honderden professionals heeft samengewerkt in Azure, heb ik uit eerste hand gezien hoe de juiste basis het verschil maakt. Ik herinner me dat ik werkte met een team van traditionele infrastructuurengineers die sceptisch waren over de cloud. Na deze training migreerden ze met succes hun eerste workloads naar Azure en werden ze cloud-voorstanders. Deze cursus bevat alles wat ik zou willen weten toen ik met Azure begon."
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "id": "azure-stack-hub",
+  "slug": "azure-stack-hub",
+  "title": "Azure Stack Hub Administration",
+  "subtitle": "Hybrid Cloud Infrastructure Management",
+  "description": "Master hybrid cloud infrastructure with Azure Stack Hub deployment and management",
+  "overview": "This comprehensive 3-day course covers Azure Stack Hub deployment, configuration, and management. Learn to operate Azure services on-premises, manage hybrid environments, and implement enterprise-grade infrastructure solutions.",
+  "category": "Azure Infrastructure",
+  "subcategory": "Hybrid Cloud",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1295,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Stack",
+  "learningObjectives": [
+    {
+      "id": "stack-hub-deployment",
+      "title": "Deploy and configure Azure Stack Hub",
+      "description": "Learn to deploy and configure Azure Stack Hub infrastructure",
+      "icon": "Stack"
+    },
+    {
+      "id": "hybrid-identity",
+      "title": "Manage identity and access in hybrid environments",
+      "description": "Configure identity management and access controls in hybrid scenarios",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-networking",
+      "title": "Implement network connectivity and security",
+      "description": "Configure networking, connectivity, and security in hybrid environments",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "hybrid-storage",
+      "title": "Configure storage and backup solutions",
+      "description": "Implement storage solutions and backup strategies for hybrid infrastructure",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "stack-monitoring",
+      "title": "Monitor and maintain Azure Stack Hub systems",
+      "description": "Set up monitoring, maintenance, and performance optimization",
+      "icon": "Gear"
+    },
+    {
+      "id": "stack-troubleshooting",
+      "title": "Troubleshoot common operational issues",
+      "description": "Learn troubleshooting techniques for Azure Stack Hub operations",
+      "icon": "Gear"
+    }
+  ],
+  "prerequisites": [
+    "Azure Administrator certification (AZ-104)",
+    "Windows Server administration experience",
+    "Hyper-V and virtualization knowledge",
+    "PowerShell scripting experience"
+  ],
+  "targetAudience": [
+    "Infrastructure administrators",
+    "Hybrid cloud architects",
+    "System administrators",
+    "DevOps engineers with infrastructure focus"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Azure Stack Hub Operator Associate",
+    "examCode": "AZ-600",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Azure",
+    "Stack Hub",
+    "Hybrid Cloud",
+    "Infrastructure",
+    "Enterprise"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-01T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior infrastructure specialist with extensive experience in hybrid cloud deployments and Azure Stack Hub operations",
+    "experience": "12+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-600",
+      "AZ-104",
+      "AZ-900",
+      "MCSE"
+    ]
+  },
+  "modules": [
+    {
+      "id": "stack-hub-overview",
+      "title": "Azure Stack Hub Overview",
+      "description": "Understanding Azure Stack Hub architecture and components",
+      "duration": "6 hours",
+      "topics": [
+        "Architecture and components",
+        "Deployment models and scenarios",
+        "Hardware and capacity planning",
+        "Licensing and cost considerations"
+      ],
+      "icon": "Stack"
+    },
+    {
+      "id": "installation-configuration",
+      "title": "Installation & Configuration",
+      "description": "Deploying and configuring Azure Stack Hub",
+      "duration": "6 hours",
+      "topics": [
+        "Pre-deployment validation",
+        "Azure Stack Hub deployment",
+        "Post-deployment configuration",
+        "Azure registration and marketplace"
+      ],
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "infrastructure-management",
+      "title": "Infrastructure Management",
+      "description": "Managing Azure Stack Hub infrastructure components",
+      "duration": "6 hours",
+      "topics": [
+        "Region and quota management",
+        "Plan, offer, and subscription setup",
+        "Resource provider management",
+        "Network infrastructure configuration"
+      ],
+      "icon": "HardDrives"
+    },
+    {
+      "id": "operations-maintenance",
+      "title": "Operations & Maintenance",
+      "description": "Operating and maintaining Azure Stack Hub systems",
+      "duration": "6 hours",
+      "topics": [
+        "System monitoring and alerting",
+        "Update and patch management",
+        "Backup and disaster recovery",
+        "Performance tuning and optimization"
+      ],
+      "icon": "Gear"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "stack-deployment-lab",
+      "title": "Azure Stack Hub Deployment",
+      "description": "Hands-on deployment of Azure Stack Hub infrastructure",
+      "duration": "4 hours",
+      "icon": "Stack"
+    },
+    {
+      "id": "infrastructure-config-lab",
+      "title": "Infrastructure Configuration",
+      "description": "Configure regions, quotas, and resource providers",
+      "duration": "4 hours",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "networking-lab",
+      "title": "Network Configuration",
+      "description": "Configure networking and connectivity in Azure Stack Hub",
+      "duration": "4 hours",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "monitoring-lab",
+      "title": "Monitoring and Maintenance",
+      "description": "Set up monitoring and perform maintenance tasks",
+      "duration": "4 hours",
+      "icon": "Gear"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Throughout my career as a Microsoft Certified Trainer, I've had the privilege of teaching thousands of professionals. Every training I deliver is enriched by real-world implementations and practical experience. I don't just teach concepts—I share what actually works in production environments."
+  }
+}

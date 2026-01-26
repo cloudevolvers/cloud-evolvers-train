@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*-dist
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.env
+**/agent-eval-report*
+packages
+.file-manifest
+
+# Large migration files
+migration-files/
+migration-documents-backup/
+migration-files-backup/
+
+# Large backup files
+*.zip
+app-logs.zip
+webapp-logs.zip
+.devcontainer/
+
+.spark-workbench-id
+
+# Sensitive files - never commit secrets
+*.local.settings.json
+local.settings.json
+.env.local
+.env.*.local
+**/secrets.json
+**/credentials.json
+GRAPH_API_CONFIG_COMPLETE.md

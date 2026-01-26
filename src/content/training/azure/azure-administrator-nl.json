@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "slug": "azure-administrator-nl",
+    "title": "Azure Administrator",
+    "subtitle": "Word de Cloud Held die Je Bedrijf Nodig Heeft",
+    "description": "Stop met het zijn van zomaar een IT beheerder. Word de Azure expert die cloud infrastructuur kan bouwen, beveiligen en optimaliseren die bedrijfsucces drijft. Dit gaat niet alleen over het beheren van servers - het gaat over het worden van de strategische cloud leider die transformeert hoe je organisatie opereert in het digitale tijdperk.",
+    "category": "Azure Administration",
+    "level": "Intermediate",
+    "duration": "3 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Administration", "Virtual Machines", "Storage", "Networking", "Security", "Carrière Ontwikkeling"],
+    "prerequisites": [
+      "Een passie voor technologie en probleemoplossing",
+      "Basis Azure kennis (of bereidheid om snel te leren)",
+      "Ervaring met IT beheer (Windows, Linux, of cloud)"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-admin-hero.jpg",
+    "badge": "Transformeer Je IT Carrière",
+    "highlights": [
+      "Beheers de cloud infrastructuur die moderne bedrijven aandrijft",
+      "Word de Azure expert waar bedrijven om vechten om in te huren",
+      "Bouw schaalbare, veilige systemen die echte bedrijfswaarde leveren",
+      "Leid cloud transformatie initiatieven in je organisatie"
+    ]
+  },
+  "overview": {
+    "summary": "Stel je voor dat je de persoon bent waar iedereen naartoe gaat wanneer cloud beslissingen genomen moeten worden. De Azure Administrator die niet alleen systemen onderhoudt, maar cloud oplossingen ontwerpt en implementeert die geld besparen, beveiliging verbeteren en bedrijfsgroei versnellen. Deze cursus gaat niet over het memoriseren van commando's - het gaat over het ontwikkelen van strategisch denken en technische expertise om een onmisbare cloud leider in je organisatie te worden.",
+    "objectives": [
+      "Beheers Azure infrastructuur ontwerp en deployment strategieën",
+      "Bouw kogelvrije beveiliging en compliance frameworks",
+      "Optimaliseer cloud kosten terwijl prestaties worden gemaximaliseerd",
+      "Leid digitale transformatie initiatieven met vertrouwen",
+      "Word de go-to expert voor cloud architectuur beslissingen",
+      "Creëer schaalbare oplossingen die meegroeien met je bedrijf"
+    ],
+    "targetAudience": "Deze cursus is voor IT professionals die klaar zijn om te stoppen met reageren op technologie en het te gaan vormgeven. Of je nu een ervaren sysadmin bent die je carrière toekomstbestendig wilt maken, of iemand die klaar is voor de volgende stap in cloud leiderschap - als je de persoon wilt zijn die de cloud infrastructuur ontwerpt en beheert die succesvolle bedrijven aandrijft, dan geeft deze cursus je de vaardigheden en mindset om dat te laten gebeuren."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Administration Fundamentals",
+      "description": "Kern concepten van Azure beheer en resource management",
+      "duration": "4 uur",
+      "objectives": [
+        "Beheer Azure subscriptions en accounts",
+        "Configureer Azure policies en role-based access control",
+        "Monitor Azure resources en kosten",
+        "Gebruik Azure Resource Manager templates"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure beheer omvat het beheren van subscriptions, resources en toegangscontroles om efficiënte en veilige cloud operaties te garanderen.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Portal Administration",
+          "description": "Oefen met het beheren van Azure resources via de portal",
+          "duration": "60 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1500,
+    "discountedPrice": 1200,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursus materialen",
+      "Hands-on lab toegang",
+      "AZ-104 examen voucher",
+      "Lunch en verfrissingen",
+      "Cursus voltooiings certificaat"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Azure Solutions Architect",
+    "bio": "Yaïr is een gecertificeerde Azure Solutions Architect met uitgebreide ervaring in enterprise Azure deployments en beheer.",
+    "certifications": [
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer (MCT)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-02-20",
+        "endDate": "2024-02-22",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 10,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Administrator Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-administrator/",
+      "description": "Officiële Microsoft leerroute voor Azure beheerders"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-104 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-104",
+      "description": "Officiële oefentests voor AZ-104 certificatie"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Administrator Associate",
+    "code": "AZ-104",
+    "description": "Demonstreer vaardigheden in het implementeren, beheren en monitoren van Azure omgeving",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Manage Azure identities and governance (15-20%)",
+      "Implement and manage storage (15-20%)",
+      "Deploy and manage Azure compute resources (20-25%)",
+      "Configure and manage virtual networking (20-25%)",
+      "Monitor and maintain Azure resources (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik AZ-900 nodig voordat ik deze cursus volg?",
+      "answer": "Ja, AZ-900 (Azure Fundamentals) is een vereiste voor deze cursus."
+    },
+    {
+      "question": "Welke Azure diensten zal ik leren beheren?",
+      "answer": "Je leert virtuele machines, storage accounts, virtuele netwerken, Azure AD en monitoring oplossingen te beheren."
+    }
+  ]
+}

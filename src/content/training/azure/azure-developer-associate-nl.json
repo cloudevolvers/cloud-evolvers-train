@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "slug": "azure-developer-associate-nl",
+    "title": "Azure Developer Associate",
+    "subtitle": "Bouw de Toekomst van Softwareontwikkeling",
+    "description": "Traditionele ontwikkeling sterft uit. Cloud-native ontwikkeling is de toekomst. Deze cursus transformeert je van iemand die applicaties bouwt naar iemand die schaalbare, veerkrachtige systemen bouwt waar miljoenen gebruikers dagelijks op vertrouwen.",
+    "category": "Ontwikkelhulpmiddelen",
+    "level": "Gemiddeld",
+    "duration": "4 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Ontwikkeling", "Cloud Computing", "APIs", "Beveiliging", ".NET", "JavaScript", "Serverless", "Microservices"],
+    "prerequisites": [
+      "Ervaring met programmeren in ten minste één programmeertaal",
+      "Basisbegrip van cloudconcepten",
+      "De wens om applicaties te bouwen die schalen"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-developer-hero.jpg",
+    "badge": "Elite Cloud Ontwikkelaar",
+    "highlights": [
+      "Beheers de cloud ontwikkelingsvaardigheden waar topbedrijven om vragen",
+      "Bouw applicaties die automatisch schalen naar miljoenen gebruikers",
+      "Leer de architectuurpatronen die moderne software aandrijven",
+      "Word lid van de elitegroep ontwikkelaars die de cloud bouwen"
+    ]
+  },
+  "overview": {
+    "summary": "De beste ontwikkelaars schrijven niet alleen code - ze bouwen systemen die veranderen hoe mensen leven en werken. Deze cursus leert je de Azure ontwikkelingsvaardigheden die de ontwikkelaars die worden aangenomen scheiden van degenen die dat niet doen. Je leert applicaties te bouwen die standaard veilig zijn, automatisch schalen en naadloos integreren met het hele Azure ecosysteem. Aan het einde heb je de technische vaardigheden en architectuurkennis om ontwikkelteams te leiden en de volgende generatie cloudapplicaties te bouwen.",
+    "objectives": [
+      "Beheers Azure compute services en serverless architecturen",
+      "Bouw veilige, schaalbare applicaties met Azure storage en databases",
+      "Implementeer authenticatie, autorisatie en beveiligingsbest practices",
+      "Ontwerp en implementeer monitoring en troubleshooting oplossingen",
+      "Creëer APIs en integreer met diensten van derden",
+      "Deploy en beheer applicaties in productieomgevingen"
+    ],
+    "targetAudience": "Deze cursus is voor ontwikkelaars die klaar zijn om hun vaardigheden naar een hoger niveau te tillen en de cloud architecten te worden waar bedrijven om strijden. Of je nu een backend ontwikkelaar bent die cloud expertise wilt toevoegen, een full-stack ontwikkelaar die schaalbare architecturen wilt beheersen, of iemand die klaar is voor de overgang naar cloud-native ontwikkeling - als je applicaties wilt bouwen die de moderne wereld aandrijven, geeft deze cursus je de vaardigheden en mindset om dat te laten gebeuren."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Ontwikkelomgeving Setup",
+      "description": "Configureer ontwikkelomgevingen voor Azure ontwikkeling",
+      "duration": "6 uur",
+      "objectives": [
+        "Stel Azure ontwikkelomgeving in",
+        "Configureer Azure CLI en PowerShell",
+        "Gebruik Azure SDKs en ontwikkelhulpmiddelen",
+        "Implementeer Azure authenticatie en autorisatie"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Het opzetten van een goede ontwikkelomgeving is cruciaal voor efficiënte Azure ontwikkeling. Je leert je lokale omgeving te configureren en veilig verbinding te maken met Azure diensten.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Ontwikkelhulpmiddelen Gedekt",
+            "items": [
+              "Azure CLI voor command-line operaties",
+              "Azure PowerShell voor automatisering",
+              "Visual Studio en VS Code met Azure extensies",
+              "Azure SDKs voor meerdere programmeertalen",
+              "REST APIs en Azure Resource Manager templates"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Omgevingsopstelling Lab",
+          "description": "Configureer je ontwikkelomgeving voor Azure",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Azure Compute Oplossingen",
+      "description": "Ontwikkel oplossingen met Azure compute services",
+      "duration": "8 uur",
+      "objectives": [
+        "Creëer Azure App Service web apps",
+        "Ontwikkel Azure Functions",
+        "Implementeer Azure Container Instances",
+        "Gebruik Azure Kubernetes Service",
+        "Implementeer API Management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Compute Services</h3><p>Azure biedt verschillende compute opties voor verschillende applicatievereisten. Leer de juiste compute service te kiezen en deze effectief te implementeren.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/compute-services.jpg",
+            "alt": "Azure Compute Services",
+            "caption": "Azure App Service, Functions, Container Instances, en AKS"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "App Service Ontwikkeling",
+          "description": "Bouw en deploy webapplicaties met Azure App Service",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        },
+        {
+          "title": "Serverless Functies",
+          "description": "Creëer en deploy Azure Functions",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure Storage Oplossingen",
+      "description": "Implementeer Azure storage oplossingen voor applicaties",
+      "duration": "6 uur",
+      "objectives": [
+        "Ontwikkel oplossingen met Azure Storage",
+        "Implementeer Azure SQL Database",
+        "Implementeer Azure Cosmos DB",
+        "Implementeer Azure Blob storage",
+        "Implementeer Azure Table storage"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure biedt verschillende storage opties voor verschillende gegevenstypen en toegangspatronen. Leer de juiste storage oplossing te implementeren voor je applicatiebehoeften.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Storage Oplossingen Lab",
+          "description": "Implementeer verschillende Azure storage oplossingen",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Azure Beveiliging Implementatie",
+      "description": "Implementeer beveiliging in Azure applicaties",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer Azure Key Vault",
+        "Implementeer managed identities",
+        "Implementeer Azure Active Directory authenticatie",
+        "Implementeer access control",
+        "Implementeer veilige cloud oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Beveiligingsbest Practices</h3><p>Beveiliging is van het grootste belang in cloud ontwikkeling. Leer authenticatie, autorisatie en veilige communicatie te implementeren in je Azure applicaties.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Beveiliging Implementatie Lab",
+          "description": "Implementeer beveiligingsfuncties in Azure applicaties",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1800,
+    "discountedPrice": 1440,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursusmaterialen",
+      "Hands-on lab toegang",
+      "AZ-204 examen voucher",
+      "Lunch en verfrissingen",
+      "Cursuscertificaat"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Azure Solutions Architect Expert",
+    "bio": "Yaïr is een ervaren Azure ontwikkelaar en architect met uitgebreide ervaring in het bouwen van cloud-native applicaties. Hij heeft talloze teams geholpen om succesvol hun applicaties te migreren en te moderniseren op Azure.",
+    "certifications": [
+      "Microsoft Certified: Azure Developer Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified Trainer (MCT)",
+      "AWS Certified Solutions Architect"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-02-26",
+        "endDate": "2024-02-29",
+        "location": "Amsterdam, Nederland",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Developer Associate Leerpad",
+      "url": "https://learn.microsoft.com/nl-nl/training/paths/azure-developer/",
+      "description": "Officiële Microsoft leerpad voor Azure ontwikkelaars"
+    },
+    {
+      "type": "video",
+      "title": "Azure Ontwikkeling Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nED0_vbTic6i0hB9YVXSg5",
+      "description": "Azure ontwikkeling tutorials en best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-204 Oefentests",
+      "url": "https://practice.microsoft.com/exams/az-204",
+      "description": "Officiële oefentests voor AZ-204 certificering"
+    },
+    {
+      "type": "tool",
+      "title": "Azure SDKs",
+      "url": "https://azure.microsoft.com/nl-nl/downloads/",
+      "description": "Download Azure SDKs voor je favoriete programmeertaal"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Developer Associate",
+    "code": "AZ-204",
+    "description": "Demonstreer vaardigheden in het ontwerpen, bouwen, testen en onderhouden van cloud applicaties en diensten op Microsoft Azure",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["Engels", "Spaans", "Frans", "Duits", "Chinees", "Japans"]
+    },
+    "skillsMeasured": [
+      "Ontwikkel Azure compute oplossingen (25-30%)",
+      "Ontwikkel Azure storage oplossingen (15-20%)",
+      "Implementeer Azure beveiliging (20-25%)",
+      "Monitor, troubleshoot en optimaliseer Azure oplossingen (15-20%)",
+      "Verbind met en consumeer Azure diensten en diensten van derden (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Welke programmeertalen worden behandeld?",
+      "answer": "De cursus behandelt C#, JavaScript/TypeScript, Python en Java. Je leert Azure SDKs te gebruiken voor deze talen."
+    },
+    {
+      "question": "Heb ik voorafgaande Azure ervaring nodig?",
+      "answer": "Ja, AZ-900 (Azure Fundamentals) is een vereiste. Basis programmeerervaring is ook vereist."
+    },
+    {
+      "question": "Welke Azure diensten leer ik?",
+      "answer": "Je leert Azure App Service, Functions, Storage, SQL Database, Cosmos DB, Key Vault, API Management en meer."
+    },
+    {
+      "question": "Is deze cursus praktisch?",
+      "answer": "Ja, deze cursus bevat uitgebreide hands-on labs waar je echte Azure applicaties en diensten bouwt."
+    }
+  ]
+}

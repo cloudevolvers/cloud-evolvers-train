@@ -1,0 +1,194 @@
+{
+  "id": "teams-advanced-administration",
+  "slug": "teams-advanced-administration",
+  "title": "Teams Geavanceerd Beheer",
+  "subtitle": "Enterprise Samenwerking Management",
+  "description": "Beheers geavanceerd Microsoft Teams beheer en enterprise implementatie",
+  "overview": "Deze uitgebreide 2-daagse cursus behandelt geavanceerd Teams beheer, inclusief enterprise architectuur ontwerp, telefoonysteem implementatie, vergaderoplossingen en governance beleid. Leer complexe Teams omgevingen op schaal te beheren met best practices voor beveiliging, compliance en gebruikersadoptie.",
+  "category": "Microsoft 365",
+  "subcategory": "Teams Beheer",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "ChatCircle",
+  "learningObjectives": [
+    {
+      "id": "enterprise-architecture",
+      "title": "Ontwerp enterprise Teams architecturen",
+      "description": "Ontwerp uitgebreide Teams service architecturen voor enterprise omgevingen",
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "phone-system",
+      "title": "Implementeer geavanceerde beloplossingen",
+      "description": "Implementeer Teams Phone systeem met Direct Routing en Belplannen",
+      "icon": "Phone"
+    },
+    {
+      "id": "meeting-solutions",
+      "title": "Configureer geavanceerde vergaderoplossingen",
+      "description": "Beheer Teams Rooms, live events en vergaderbeleid",
+      "icon": "VideoCamera"
+    },
+    {
+      "id": "governance-policies",
+      "title": "Configureer Teams governance beleid",
+      "description": "Implementeer governance beleid voor teams, kanalen en apps",
+      "icon": "Gear"
+    },
+    {
+      "id": "integration-scenarios",
+      "title": "Beheer Teams integratie scenario's",
+      "description": "Configureer integraties met applicaties en services van derden",
+      "icon": "ArrowRight"
+    },
+    {
+      "id": "performance-monitoring",
+      "title": "Monitor en optimaliseer Teams prestaties",
+      "description": "Monitor Teams prestaties en implementeer optimalisatie strategieën",
+      "icon": "CheckCircle"
+    }
+  ],
+  "prerequisites": [
+    "Microsoft 365 beheer ervaring",
+    "Teams basis beheer kennis",
+    "Begrip van netwerk concepten",
+    "PowerShell ervaring bij voorkeur"
+  ],
+  "targetAudience": [
+    "Teams beheerders en specialisten",
+    "Microsoft 365 beheerders",
+    "Samenwerkingsplatform engineers",
+    "IT infrastructuur professionals"
+  ],
+  "certification": {
+    "available": true,
+    "name": "MS-700 Managing Microsoft Teams",
+    "examCode": "MS-700",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Microsoft Teams",
+    "Samenwerking",
+    "Communicatie",
+    "Enterprise",
+    "Telefoonsysteem"
+  ],
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-20T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Teams beheerder met uitgebreide ervaring in enterprise samenwerkingsplatforms en Microsoft 365 ecosystemen",
+    "experience": "8+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "MS-700",
+      "MS-900",
+      "MS-500",
+      "AZ-900"
+    ]
+  },
+  "modules": [
+    {
+      "id": "enterprise-teams-architecture",
+      "title": "Enterprise Teams Architectuur",
+      "description": "Ontwerpen van uitgebreide Teams service architecturen voor enterprise omgevingen",
+      "duration": "4 uur",
+      "topics": [
+        "Teams service architectuur overzicht",
+        "Netwerkplanning en optimalisatie",
+        "Beveiliging en compliance frameworks",
+        "Multi-geo en data residency"
+      ],
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "teams-phone-system",
+      "title": "Teams Telefoonsysteem",
+      "description": "Implementeren van geavanceerde beloplossingen en telefoonsysteem implementatie",
+      "duration": "4 uur",
+      "topics": [
+        "Telefoonsysteem implementatie strategieën",
+        "Direct Routing en Belplannen",
+        "Automatische telefoniste en belwachtrijen",
+        "Spraakrouting en beleid"
+      ],
+      "icon": "Phone"
+    },
+    {
+      "id": "advanced-meeting-solutions",
+      "title": "Geavanceerde Vergaderoplossingen",
+      "description": "Beheren van Teams Rooms, live events en vergaderconfiguraties",
+      "duration": "4 uur",
+      "topics": [
+        "Teams Rooms en apparaten beheer",
+        "Live events en webinars",
+        "Vergaderbeleid en configuraties",
+        "Cloud Video Interop integratie"
+      ],
+      "icon": "VideoCamera"
+    },
+    {
+      "id": "governance-management",
+      "title": "Governance & Beheer",
+      "description": "Implementeren van governance beleid en beheerstrategieën",
+      "duration": "4 uur",
+      "topics": [
+        "Teams en kanalen governance",
+        "App en aangepaste oplossingen beheer",
+        "Gebruikersadoptie en change management",
+        "Prestaties monitoring en analytics"
+      ],
+      "icon": "Gear"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "teams-architecture-lab",
+      "title": "Teams Architectuur Ontwerp",
+      "description": "Ontwerp en configureer enterprise Teams architectuur met netwerkoptimalisatie",
+      "duration": "2 uur",
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "phone-system-lab",
+      "title": "Telefoonsysteem Implementatie",
+      "description": "Configureer Teams Phone systeem met Direct Routing en belrouting",
+      "duration": "2 uur",
+      "icon": "Phone"
+    },
+    {
+      "id": "meeting-solutions-lab",
+      "title": "Vergaderoplossingen Configuratie",
+      "description": "Configureer Teams Rooms, live events en vergaderbeleid",
+      "duration": "2 uur",
+      "icon": "VideoCamera"
+    },
+    {
+      "id": "governance-lab",
+      "title": "Governance en Beleid",
+      "description": "Implementeer governance beleid en monitor Teams prestaties",
+      "duration": "2 uur",
+      "icon": "Gear"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Microsoft 365 is meer dan alleen Office in de cloud. Ik heb M365 geïmplementeerd voor duizenden gebruikers, het geïntegreerd met aangepaste applicaties en samenwerkingsworkflows geoptimaliseerd. Deze training laat je zien hoe je het volledige potentieel van M365 benut op basis van echte deployment-ervaringen."
+  }
+}

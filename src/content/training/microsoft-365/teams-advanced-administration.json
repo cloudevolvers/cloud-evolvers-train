@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "slug": "teams-advanced-administration",
+    "title": "Teams Advanced Administration",
+    "subtitle": "Master Microsoft Teams Enterprise Management",
+    "description": "Become an expert in Microsoft Teams administration, mastering advanced governance, security, compliance, and enterprise deployment features for large organizations.",
+    "category": "Microsoft 365",
+    "level": "Advanced",
+    "duration": "3 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Microsoft Teams", "Administration", "Governance", "Security", "Compliance", "Enterprise", "Collaboration"],
+    "prerequisites": [
+      "Microsoft 365 Fundamentals knowledge",
+      "Basic Teams administration experience",
+      "Understanding of Microsoft 365 security concepts",
+      "Experience with PowerShell scripting",
+      "Knowledge of networking and telephony concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/teams-admin-hero.jpg",
+    "badge": "Teams Expert",
+    "highlights": [
+      "Advanced Teams governance",
+      "Enterprise security",
+      "Compliance management",
+      "Advanced telephony"
+    ]
+  },
+  "overview": {
+    "summary": "Teams Advanced Administration training equips you with expert-level skills for managing Microsoft Teams in large enterprise environments, including advanced governance, security, compliance, and telephony features.",
+    "objectives": [
+      "Implement advanced Teams governance",
+      "Configure enterprise security features",
+      "Manage compliance and data retention",
+      "Deploy advanced telephony solutions",
+      "Implement Teams lifecycle management",
+      "Monitor and optimize Teams performance"
+    ],
+    "targetAudience": "Teams administrators, IT professionals, and collaboration specialists who manage Microsoft Teams in enterprise organizations."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Advanced Teams Governance",
+      "description": "Master advanced governance and lifecycle management",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement Teams governance policies",
+        "Configure team creation and management",
+        "Set up information barriers",
+        "Manage guest access policies",
+        "Configure team archiving and retention",
+        "Implement Teams templates"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Enterprise Governance</h3><p>Advanced governance ensures Teams environments remain organized, secure, and compliant with organizational policies and regulatory requirements.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Governance Features",
+            "items": [
+              "Team creation policies and approval workflows",
+              "Information barriers for compliance",
+              "Guest access management",
+              "Team lifecycle management",
+              "Custom Teams templates",
+              "Org-wide settings and policies"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/teams/governance.jpg",
+            "alt": "Teams Governance",
+            "caption": "Advanced Teams governance architecture"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Governance Lab",
+          "description": "Configure advanced Teams governance policies",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Teams Security and Compliance",
+      "description": "Implement comprehensive security and compliance features",
+      "duration": "6 hours",
+      "objectives": [
+        "Configure Teams security settings",
+        "Implement data loss prevention (DLP)",
+        "Set up compliance recording",
+        "Manage encryption and access controls",
+        "Configure audit logging",
+        "Implement conditional access for Teams"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Security and Compliance</h3><p>Teams integrates with Microsoft 365 security and compliance features to protect sensitive information and ensure regulatory compliance.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Security Features",
+            "items": [
+              "Data Loss Prevention (DLP) policies",
+              "Compliance recording and eDiscovery",
+              "Message encryption and access controls",
+              "Audit logs and reporting",
+              "Conditional access integration",
+              "Information protection labels"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Security Lab",
+          "description": "Implement Teams security and compliance features",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Advanced Telephony and Meetings",
+      "description": "Master advanced telephony and meeting features",
+      "duration": "6 hours",
+      "objectives": [
+        "Configure Teams Phone",
+        "Implement calling policies",
+        "Set up audio conferencing",
+        "Configure meeting policies",
+        "Implement live events",
+        "Manage device policies"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Advanced telephony and meeting features enable enterprise-grade communication capabilities with comprehensive management and security controls.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Telephony Features",
+            "items": [
+              "Teams Phone system configuration",
+              "Calling policies and routing",
+              "Audio conferencing setup",
+              "Meeting policies and controls",
+              "Live events management",
+              "Device management and policies"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Telephony Lab",
+          "description": "Configure advanced Teams telephony and meetings",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Teams Monitoring and Optimization",
+      "description": "Monitor and optimize Teams performance",
+      "duration": "4 hours",
+      "objectives": [
+        "Configure Teams analytics",
+        "Monitor Teams usage and adoption",
+        "Implement performance optimization",
+        "Set up alerting and reporting",
+        "Troubleshoot Teams issues",
+        "Plan for Teams upgrades"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Performance and Monitoring</h3><p>Effective monitoring and optimization ensure Teams performs optimally and provides valuable insights into usage and adoption.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Monitoring Tools",
+            "items": [
+              "Teams admin center analytics",
+              "Call Quality Dashboard (CQD)",
+              "Teams usage reports",
+              "Performance monitoring",
+              "User adoption metrics",
+              "Troubleshooting tools"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring Lab",
+          "description": "Configure Teams monitoring and optimization",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1200,
+    "discountedPrice": 960,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft Teams administration materials",
+      "Hands-on lab access with Teams tenant",
+      "Advanced governance guide",
+      "Security and compliance templates",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Teams Advanced Administrator badge"
+    ]
+  },
+  "instructor": {
+    "name": "David Chen",
+    "title": "Principal Collaboration Architect",
+    "bio": "David is a Principal Collaboration Architect specializing in Microsoft Teams and Microsoft 365 collaboration solutions. He has designed and implemented Teams solutions for large enterprises and has extensive experience in governance and security.",
+    "certifications": [
+      "Microsoft Certified: Teams Administrator Associate",
+      "Microsoft Certified: Microsoft 365 Enterprise Administrator Expert",
+      "Microsoft Certified: Modern Desktop Administrator Associate",
+      "Certified Information Technology Professional (CITP)",
+      "Project Management Professional (PMP)",
+      "ITIL Foundation Certification"
+    ],
+    "image": "/images/instructors/david-chen.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-29",
+        "endDate": "2024-05-01",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Teams Admin Documentation",
+      "url": "https://learn.microsoft.com/en-us/microsoftteams/",
+      "description": "Official Microsoft Teams administration documentation"
+    },
+    {
+      "type": "video",
+      "title": "Teams Administration Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nE",
+      "description": "Video tutorials for Teams administration"
+    },
+    {
+      "type": "tool",
+      "title": "Teams Admin Center",
+      "url": "https://admin.teams.microsoft.com/",
+      "description": "Microsoft Teams administration portal"
+    },
+    {
+      "type": "practice",
+      "title": "Teams Admin Labs",
+      "url": "https://learn.microsoft.com/en-us/microsoftteams/tutorial-teams-in-a-box",
+      "description": "Hands-on Teams administration labs"
+    }
+  ],
+  "certification": {
+    "name": "Teams Advanced Administration Certification",
+    "code": "MS-700-ADV",
+    "description": "Demonstrate expertise in advanced Microsoft Teams administration, governance, security, and enterprise deployment",
+    "examDetails": {
+      "duration": "180 minutes",
+      "questions": 50,
+      "passingScore": 750,
+      "cost": 150,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Advanced Teams governance (20-25%)",
+      "Teams security and compliance (25-30%)",
+      "Advanced telephony and meetings (20-25%)",
+      "Teams monitoring and optimization (15-20%)",
+      "Enterprise deployment and management (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need Teams Phone licensing?",
+      "answer": "While Teams Phone licensing is beneficial for telephony labs, the course covers both licensed and unlicensed scenarios. We provide demo environments for hands-on practice."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a technical course covering advanced Teams administration. Basic Teams knowledge and PowerShell experience are recommended."
+    },
+    {
+      "question": "What governance features are covered?",
+      "answer": "The course covers information barriers, team creation policies, guest access management, compliance recording, and advanced lifecycle management."
+    },
+    {
+      "question": "Will I learn about Teams security?",
+      "answer": "Yes, security is a major component including DLP policies, conditional access, audit logging, and integration with Microsoft 365 security features."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "security-compliance",
+  "title": "Security & Compliance",
+  "slug": "security-compliance",
+  "description": "Comprehensive security management and compliance monitoring for your Azure environment.",
+  "icon": "Shield",
+  "content": "\n# Security & Compliance Services\n\nProtect your Azure infrastructure with our comprehensive security and compliance solutions.\n\n## Our Approach\n\nWe help organizations implement robust security practices and maintain compliance with industry standards and regulations. Our security experts conduct thorough assessments, implement protective measures, and provide continuous monitoring to safeguard your cloud environment.\n\n## Key Services\n\n- **Threat Detection and Response**: Advanced monitoring and swift response to security incidents\n- **Compliance Management**: Implementation and maintenance of compliance frameworks\n- **Security Assessments**: Regular evaluation of your security posture\n- **Zero Trust Architecture**: Implementation of modern security principles\n\nSecure your Azure environment today with our expert security services.\n",
+  "features": [
+    "Threat detection",
+    "Compliance frameworks",
+    "Security assessments",
+    "Zero Trust implementation"
+  ],
+  "isPublished": true,
+  "publishedAt": "2024-01-02T00:00:00Z",
+  "updatedAt": "2024-01-02T00:00:00Z",
+  "order": 2
+}

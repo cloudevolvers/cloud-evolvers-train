@@ -1,0 +1,215 @@
+{
+  "id": "azure-administrator",
+  "slug": "azure-administrator",
+  "title": "Azure Administrator Associate (AZ-104)",
+  "subtitle": "Master Azure Administration Skills",
+  "description": "Master Azure administration skills for managing cloud infrastructure and resources",
+  "overview": "This intensive Azure Administrator Associate training prepares you for the AZ-104 certification exam. Learn to manage Azure subscriptions, secure identities, administer infrastructure, configure virtual networking, and ensure business continuity through comprehensive hands-on labs.",
+  "category": "Azure",
+  "subcategory": "Administration",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Azure",
+    "Administrator",
+    "AZ-104",
+    "Infrastructure",
+    "Cloud"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "identity-governance",
+      "title": "Identity and Governance",
+      "description": "Manage Azure AD, RBAC, policies, and resource organization",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-solutions",
+      "title": "Storage Solutions",
+      "description": "Configure storage accounts, implement data protection and disaster recovery",
+      "icon": "Database"
+    },
+    {
+      "id": "compute-resources",
+      "title": "Compute Resources",
+      "description": "Deploy and manage VMs, containers, and App Services",
+      "icon": "Settings"
+    },
+    {
+      "id": "virtual-networking",
+      "title": "Virtual Networking",
+      "description": "Implement VNets, load balancers, and hybrid connectivity",
+      "icon": "Network"
+    },
+    {
+      "id": "monitoring-backup",
+      "title": "Monitoring and Backup",
+      "description": "Configure monitoring, alerting, and backup solutions",
+      "icon": "Monitor"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Manage Azure Identities and Governance",
+      "description": "Azure Active Directory, users, groups, RBAC, and Azure Policy implementation",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Azure Active Directory fundamentals",
+        "User and group management",
+        "Role-based access control (RBAC)",
+        "Azure Policy implementation",
+        "Resource organization and tagging"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Implement and Manage Storage",
+      "description": "Storage accounts, blob storage, file shares, and data protection strategies",
+      "icon": "Database",
+      "duration": "6 hours",
+      "topics": [
+        "Storage account configuration",
+        "Blob storage management",
+        "Azure Files and file shares",
+        "Data protection and backup",
+        "Storage security and access control"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Deploy and Manage Azure Compute Resources",
+      "description": "Virtual machines, containers, App Services, and scaling strategies",
+      "icon": "Settings",
+      "duration": "8 hours",
+      "topics": [
+        "Virtual machine deployment and management",
+        "Container services and Azure Container Instances",
+        "Azure App Service configuration",
+        "Auto-scaling and load balancing",
+        "High availability and disaster recovery"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Configure and Manage Virtual Networking",
+      "description": "VNets, subnets, routing, load balancing, and hybrid connectivity",
+      "icon": "Network",
+      "duration": "6 hours",
+      "topics": [
+        "Virtual network creation and configuration",
+        "Subnet management and routing",
+        "Network security groups and firewalls",
+        "Load balancing and traffic management",
+        "Hybrid connectivity with VPN and ExpressRoute"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Monitor and Back Up Azure Resources",
+      "description": "Azure Monitor, Log Analytics, backup solutions, and disaster recovery",
+      "icon": "Monitor",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Monitor setup and configuration",
+        "Log Analytics and KQL queries",
+        "Backup and restore strategies",
+        "Disaster recovery planning",
+        "Performance monitoring and alerts"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Setting up Azure AD and implementing RBAC",
+      "description": "Practical implementation of identity and access management",
+      "duration": "2 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "lab-2",
+      "title": "Deploying and configuring virtual machines",
+      "description": "Complete VM lifecycle management and configuration",
+      "duration": "2 hours",
+      "icon": "Settings"
+    },
+    {
+      "id": "lab-3",
+      "title": "Creating and managing storage solutions",
+      "description": "Storage account setup, blob management, and backup configuration",
+      "duration": "1.5 hours",
+      "icon": "Database"
+    },
+    {
+      "id": "lab-4",
+      "title": "Implementing virtual networking and hybrid connectivity",
+      "description": "VNet creation, peering, and VPN gateway configuration",
+      "duration": "2 hours",
+      "icon": "Network"
+    },
+    {
+      "id": "lab-5",
+      "title": "Configuring monitoring and backup strategies",
+      "description": "Azure Monitor setup, alerting, and backup implementation",
+      "duration": "1.5 hours",
+      "icon": "Monitor"
+    }
+  ],
+  "prerequisites": [
+    "Azure Fundamentals knowledge",
+    "Basic networking and security concepts",
+    "Experience with PowerShell or Azure CLI",
+    "Understanding of virtualization concepts"
+  ],
+  "targetAudience": [
+    "Azure Administrators",
+    "System Administrators transitioning to cloud",
+    "IT professionals seeking AZ-104 certification",
+    "Infrastructure engineers",
+    "Cloud architects"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Expert Azure trainer with 10+ years of cloud infrastructure experience",
+    "expertise": [
+      "Azure Administration",
+      "Cloud Architecture",
+      "Infrastructure Management"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-104",
+      "AZ-305",
+      "AZ-500"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Administrator Associate",
+    "examCode": "AZ-104",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Settings",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2025-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Managing Azure at enterprise scale requires more than just technical knowledge—it requires battle-tested strategies. I've managed Azure environments for organizations with thousands of users, and I've learned what works and what doesn't. In this training, I share the real-world administrative patterns that have saved countless hours and prevented critical issues."
+  }
+}

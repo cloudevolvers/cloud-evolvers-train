@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "slug": "azure-security-fundamentals",
+    "title": "Azure Security Fundamentals",
+    "subtitle": "Secure your Azure environment and protect against threats",
+    "description": "Learn Azure security concepts, best practices, and tools to protect your cloud infrastructure. Prepare for the AZ-500 certification.",
+    "category": "Security & Compliance",
+    "level": "Intermediate",
+    "duration": "2 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Security", "Compliance", "Threat Protection", "Identity", "Governance"],
+    "prerequisites": [
+      "Azure Fundamentals knowledge (AZ-900)",
+      "Basic understanding of security concepts",
+      "Experience with Azure administration (recommended)"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-security-hero.jpg",
+    "badge": "AZ-500 Certification",
+    "highlights": [
+      "Comprehensive security training",
+      "Hands-on security scenarios",
+      "Industry best practices"
+    ]
+  },
+  "overview": {
+    "summary": "Azure Security Fundamentals provides essential knowledge for securing Azure environments. Learn to implement security controls, manage identities, protect against threats, and ensure compliance.",
+    "objectives": [
+      "Understand Azure security concepts and services",
+      "Implement identity and access management",
+      "Configure platform protection features",
+      "Manage security operations",
+      "Ensure data and application security"
+    ],
+    "targetAudience": "Security professionals, IT administrators, and Azure users who want to secure Azure resources and prepare for the AZ-500 certification."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Security Concepts",
+      "description": "Core security concepts and Azure security services",
+      "duration": "3 hours",
+      "objectives": [
+        "Understand Azure security concepts",
+        "Identify Azure security services",
+        "Implement security best practices",
+        "Configure Azure security center"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure provides comprehensive security capabilities to protect your applications, data, and infrastructure from modern threats and attacks.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Azure Security Pillars",
+            "items": [
+              "Identity and Access Management",
+              "Network Security",
+              "Data Protection",
+              "Threat Protection",
+              "Security Monitoring",
+              "Compliance Management"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Security Center Setup",
+          "description": "Configure and use Azure Security Center",
+          "duration": "45 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Identity and Access Management",
+      "description": "Manage identities and control access to Azure resources",
+      "duration": "3 hours",
+      "objectives": [
+        "Configure Azure Active Directory",
+        "Implement role-based access control",
+        "Manage Azure AD identities",
+        "Configure conditional access policies"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Zero Trust Security Model</h3><p>Azure implements a Zero Trust approach where no user or device is automatically trusted, and verification is required from everyone trying to access resources.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure AD Configuration",
+          "description": "Configure Azure Active Directory and access policies",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1300,
+    "discountedPrice": 1040,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-500 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate"
+    ]
+  },
+  "instructor": {
+    "name": "David Rodriguez",
+    "title": "Azure Security Engineer",
+    "bio": "David is a certified Azure security expert with extensive experience in enterprise security implementations and threat protection strategies.",
+    "certifications": [
+      "Microsoft Certified: Azure Security Engineer Associate",
+      "Certified Information Systems Security Professional (CISSP)",
+      "Certified Ethical Hacker (CEH)",
+      "Microsoft Certified Trainer (MCT)"
+    ],
+    "image": "/images/instructors/david-rodriguez.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-12",
+        "endDate": "2024-03-13",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Security Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-security-fundamentals/",
+      "description": "Official Microsoft learning path for Azure security"
+    },
+    {
+      "type": "video",
+      "title": "Azure Security Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nED0_vbTic6i0hB9YVXSg5",
+      "description": "Azure security implementation videos"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-500 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-500",
+      "description": "Official practice tests for AZ-500 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Security Engineer Associate",
+    "code": "AZ-500",
+    "description": "Demonstrate skills in implementing security controls and threat protection",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Manage identity and access (20-25%)",
+      "Implement platform protection (15-20%)",
+      "Manage security operations (15-20%)",
+      "Secure data and applications (20-25%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What Azure security services will I learn?",
+      "answer": "You'll learn about Azure Security Center, Azure AD, Key Vault, Security Information and Event Management (SIEM), and threat protection services."
+    },
+    {
+      "question": "Do I need security experience?",
+      "answer": "Basic security knowledge is helpful but not required. The course covers security fundamentals and builds from there."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a technical course covering implementation of security controls and best practices in Azure."
+    }
+  ]
+}

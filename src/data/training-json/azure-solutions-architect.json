@@ -1,0 +1,211 @@
+{
+  "id": "azure-solutions-architect",
+  "slug": "azure-solutions-architect",
+  "title": "Azure Solutions Architect Expert",
+  "subtitle": "Design Enterprise-Scale Solutions on Azure",
+  "description": "Design enterprise-scale solutions on Microsoft Azure",
+  "overview": "Advanced architecture training for designing and implementing solutions on Microsoft Azure. Learn to advise stakeholders and translate business requirements into secure, scalable, and reliable cloud solutions.",
+  "category": "Azure Architecture",
+  "subcategory": "Solutions Architecture",
+  "difficulty": "Advanced",
+  "tags": [
+    "Azure",
+    "Architecture",
+    "Solutions",
+    "Enterprise",
+    "Design",
+    "Cloud"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "design-monitoring",
+      "title": "Design Monitoring Solutions",
+      "description": "Design comprehensive monitoring solutions for Azure environments",
+      "icon": "Activity"
+    },
+    {
+      "id": "design-identity",
+      "title": "Design Identity and Access Solutions",
+      "description": "Design secure identity and access management solutions",
+      "icon": "Shield"
+    },
+    {
+      "id": "design-storage",
+      "title": "Design Data Storage Solutions",
+      "description": "Design scalable and secure data storage architectures",
+      "icon": "Database"
+    },
+    {
+      "id": "design-continuity",
+      "title": "Design Business Continuity Solutions",
+      "description": "Design high availability and disaster recovery solutions",
+      "icon": "RefreshCw"
+    },
+    {
+      "id": "design-infrastructure",
+      "title": "Design Infrastructure Solutions",
+      "description": "Design scalable and resilient infrastructure solutions",
+      "icon": "Server"
+    }
+  ],
+  "modules": [
+    {
+      "id": "identity-access-solutions",
+      "title": "Design Identity and Access Solutions",
+      "description": "Learn to design comprehensive identity and access management solutions",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Identity and access management",
+        "Multi-factor authentication",
+        "Hybrid identity solutions",
+        "Privileged identity management",
+        "Azure AD B2B and B2C"
+      ]
+    },
+    {
+      "id": "data-storage-solutions",
+      "title": "Design Data Storage Solutions",
+      "description": "Design scalable and secure data storage architectures",
+      "icon": "Database",
+      "duration": "8 hours",
+      "topics": [
+        "Storage account strategies",
+        "Database solutions",
+        "Data integration patterns",
+        "Non-relational data stores",
+        "Data archiving and retention"
+      ]
+    },
+    {
+      "id": "business-continuity-solutions",
+      "title": "Design Business Continuity Solutions",
+      "description": "Design high availability and disaster recovery solutions",
+      "icon": "RefreshCw",
+      "duration": "6 hours",
+      "topics": [
+        "Backup and recovery strategies",
+        "Site recovery planning",
+        "High availability design",
+        "Disaster recovery testing",
+        "Azure regions and availability zones"
+      ]
+    },
+    {
+      "id": "infrastructure-solutions",
+      "title": "Design Infrastructure Solutions",
+      "description": "Design scalable and resilient infrastructure solutions",
+      "icon": "Server",
+      "duration": "6 hours",
+      "topics": [
+        "Compute provisioning strategies",
+        "Application architecture patterns",
+        "Migration strategies",
+        "Network topology design",
+        "Hybrid connectivity"
+      ]
+    },
+    {
+      "id": "monitoring-solutions",
+      "title": "Design Monitoring Solutions",
+      "description": "Design comprehensive monitoring and management solutions",
+      "icon": "Activity",
+      "duration": "4 hours",
+      "topics": [
+        "Azure Monitor and Log Analytics",
+        "Application Insights",
+        "Performance monitoring",
+        "Cost management and optimization",
+        "Security monitoring"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "architecture-design-lab",
+      "title": "Enterprise Architecture Design",
+      "description": "Design a complete enterprise solution architecture",
+      "duration": "4 hours",
+      "icon": "Layout"
+    },
+    {
+      "id": "identity-design-lab",
+      "title": "Identity and Access Design",
+      "description": "Design a comprehensive identity management solution",
+      "duration": "3 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-design-lab",
+      "title": "Data Storage Architecture",
+      "description": "Design a scalable data storage solution",
+      "duration": "3 hours",
+      "icon": "Database"
+    },
+    {
+      "id": "continuity-design-lab",
+      "title": "Business Continuity Design",
+      "description": "Design disaster recovery and high availability solutions",
+      "duration": "3 hours",
+      "icon": "RefreshCw"
+    }
+  ],
+  "prerequisites": [
+    "AZ-104 certification or equivalent experience",
+    "Experience with Azure administration",
+    "Understanding of governance, security, and compliance",
+    "Knowledge of business continuity and disaster recovery"
+  ],
+  "targetAudience": [
+    "Solutions Architects",
+    "Cloud Architects",
+    "Technical Leads",
+    "Senior Infrastructure Engineers"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer (MCT) with extensive experience in Azure architecture and enterprise cloud solutions. Specialized in designing scalable, secure, and cost-effective cloud infrastructures.",
+    "expertise": [
+      "Cloud Architecture",
+      "Enterprise Solutions",
+      "Azure Platform",
+      "Migration Strategies",
+      "Cost Optimization"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure Solutions Architect Expert",
+      "Azure DevOps Engineer Expert",
+      "Multiple Azure Certifications"
+    ]
+  },
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As a Principal Cloud Architect, I've designed and implemented Azure solutions for organizations ranging from startups to Fortune 500 companies. One of my most rewarding projects involved migrating a global enterprise's entire infrastructure to Azure, resulting in 40% cost savings and 99.99% uptime. In this training, I'll share the real-world architectural patterns and best practices that have proven successful across hundreds of Azure implementations."
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Solutions Architect Expert",
+    "examCode": "AZ-305",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-01-20"
+  },
+  "featured": true,
+  "icon": "Layout",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z"
+}

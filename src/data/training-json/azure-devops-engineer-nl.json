@@ -1,0 +1,201 @@
+{
+  "id": "azure-devops-engineer",
+  "slug": "azure-devops-engineer",
+  "title": "Azure DevOps Engineer Expert (AZ-400)",
+  "subtitle": "Ontwerp en Implementeer DevOps Praktijken",
+  "description": "Ontwerp en implementeer DevOps praktijken voor continue integratie en levering",
+  "overview": "Geavanceerde DevOps training over CI/CD pipeline ontwerp, source control strategieën, dependency management, applicatie infrastructuur en continue feedback. Beheers enterprise DevOps praktijken met Azure.",
+  "category": "Developer Tools",
+  "subcategory": "DevOps",
+  "difficulty": "Gevorderd",
+  "tags": [
+    "Azure",
+    "DevOps",
+    "CI/CD",
+    "Automatisering",
+    "Infrastructuur"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "dagen"
+  },
+  "price": {
+    "amount": 1795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "processes-communication",
+      "title": "Configureer processen en communicatie",
+      "description": "Ontwerp en implementeer processen en communicatie voor DevOps praktijken",
+      "icon": "Users"
+    },
+    {
+      "id": "source-control",
+      "title": "Ontwerp en implementeer source control",
+      "description": "Ontwerp en implementeer source control management strategie",
+      "icon": "GitBranch"
+    },
+    {
+      "id": "build-release",
+      "title": "Ontwerp en implementeer build en release pipelines",
+      "description": "Ontwerp en implementeer build en release pipelines",
+      "icon": "Rocket"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Ontwikkel een beveiligings- en compliance plan",
+      "description": "Ontwikkel een beveiligings- en compliance plan",
+      "icon": "Shield"
+    },
+    {
+      "id": "continuous-feedback",
+      "title": "Implementeer continue feedback",
+      "description": "Implementeer continue feedback mechanismen",
+      "icon": "BarChart"
+    },
+    {
+      "id": "application-infrastructure",
+      "title": "Beheer applicatie infrastructuur",
+      "description": "Ontwerp en implementeer applicatie infrastructuur management",
+      "icon": "Server"
+    }
+  ],
+  "modules": [
+    {
+      "id": "devops-strategy",
+      "title": "DevOps Strategie en Planning",
+      "description": "Plan en ontwerp DevOps strategieën voor organisatorische transformatie",
+      "icon": "Strategy",
+      "duration": "8 uur",
+      "topics": [
+        "DevOps transformatie strategie",
+        "Team structuren en samenwerking",
+        "Source control strategieën",
+        "Werk planning en tracking",
+        "DevOps metrics en KPI's"
+      ]
+    },
+    {
+      "id": "ci-cd-pipelines",
+      "title": "CI/CD Pipeline Ontwerp",
+      "description": "Ontwerp en implementeer continue integratie en levering pipelines",
+      "icon": "Rocket",
+      "duration": "8 uur",
+      "topics": [
+        "Build automatisering strategieën",
+        "Release pipeline ontwerp",
+        "Deployment patronen en strategieën",
+        "Pipeline beveiliging en compliance",
+        "Multi-stage omgevingen"
+      ]
+    },
+    {
+      "id": "infrastructure-code",
+      "title": "Infrastructure as Code",
+      "description": "Implementeer infrastructure as code en configuratie management",
+      "icon": "Server",
+      "duration": "8 uur",
+      "topics": [
+        "ARM Templates en Bicep",
+        "Terraform voor Azure",
+        "Configuratie management",
+        "Omgeving provisioning",
+        "Infrastructuur testing"
+      ]
+    },
+    {
+      "id": "monitoring-feedback",
+      "title": "Monitoring en Continue Feedback",
+      "description": "Implementeer monitoring, logging en feedback mechanismen",
+      "icon": "BarChart",
+      "duration": "8 uur",
+      "topics": [
+        "Applicatie prestatie monitoring",
+        "Log analytics en monitoring",
+        "Alerting en notificaties",
+        "Gebruiker feedback integratie",
+        "Continue verbetering processen"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "azure-devops-setup",
+      "title": "Azure DevOps Organisatie Setup",
+      "description": "Zet Azure DevOps organisatie en projecten op en configureer ze",
+      "duration": "2 uur",
+      "icon": "Settings"
+    },
+    {
+      "id": "build-pipeline",
+      "title": "Build Pipeline Implementatie",
+      "description": "Creëer en configureer build pipelines voor verschillende technologieën",
+      "duration": "3 uur",
+      "icon": "Build"
+    },
+    {
+      "id": "release-pipeline",
+      "title": "Release Pipeline Ontwerp",
+      "description": "Ontwerp en implementeer multi-stage release pipelines",
+      "duration": "3 uur",
+      "icon": "Rocket"
+    },
+    {
+      "id": "infrastructure-deployment",
+      "title": "Infrastructure as Code Deployment",
+      "description": "Deploy infrastructuur met ARM templates en Terraform",
+      "duration": "4 uur",
+      "icon": "CloudArrowUp"
+    }
+  ],
+  "prerequisites": [
+    "Azure Administrator of Developer Associate certificering",
+    "Ervaring met Azure DevOps of vergelijkbare tools",
+    "Begrip van ontwikkelings- en deployment processen",
+    "Kennis van infrastructure as code concepten"
+  ],
+  "targetAudience": [
+    "DevOps Engineers",
+    "Release Engineers",
+    "Site Reliability Engineers",
+    "Cloud Engineers",
+    "Development Team Leads"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Gecertificeerde DevOps Engineer met uitgebreide ervaring in enterprise DevOps transformaties",
+    "expertise": [
+      "Azure DevOps",
+      "CI/CD",
+      "Infrastructure as Code",
+      "Monitoring"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure DevOps Engineer Expert",
+      "Azure Solutions Architect Expert"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure DevOps Engineer Expert",
+    "examCode": "AZ-400",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 16,
+  "schedule": {
+    "available": true,
+    "nextSession": "Beschikbaar op aanvraag"
+  },
+  "featured": true,
+  "icon": "GitBranch",
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "DevOps heeft getransformeerd hoe ik software bouw en deploy. Ik heb CI/CD-pipelines geïmplementeerd voor teams variërend van startups tot enterprises, waarbij deploymenttijden werden teruggebracht van dagen naar minuten. Deze training behandelt de automatiseringsstrategieën die succesvol zijn gebleken bij honderden Azure-deployments."
+  }
+}

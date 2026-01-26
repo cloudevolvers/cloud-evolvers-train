@@ -1,0 +1,187 @@
+{
+  "id": "security-compliance-identity-fundamentals",
+  "slug": "security-compliance-identity-fundamentals",
+  "title": "Security, Compliance & Identity Fundamentals",
+  "subtitle": "Master Microsoft Security Solutions",
+  "description": "Master the fundamentals of Microsoft security, compliance, and identity solutions",
+  "overview": "This comprehensive training covers the essential concepts of Microsoft security, compliance, and identity management. Learn to implement Zero Trust principles, configure identity protection, and understand Microsoft's security solutions portfolio.",
+  "category": "Security",
+  "subcategory": "Fundamentals",
+  "difficulty": "Beginner",
+  "duration": {
+    "days": 2,
+    "hours": 16,
+    "format": "days"
+  },
+  "price": {
+    "amount": 895,
+    "currency": "EUR"
+  },
+  "featured": true,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "security-concepts",
+      "title": "Understand security, compliance, and identity concepts",
+      "description": "Learn fundamental security concepts including shared responsibility, defense in depth, and Zero Trust principles",
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-management",
+      "title": "Explore Microsoft identity and access management solutions",
+      "description": "Discover Microsoft Entra ID fundamentals, authentication, authorization, and access management",
+      "icon": "UserCheck"
+    },
+    {
+      "id": "security-solutions",
+      "title": "Learn about Microsoft security solutions and capabilities",
+      "description": "Explore Microsoft Defender suite, Microsoft Sentinel, and Azure Security Center",
+      "icon": "Lock"
+    },
+    {
+      "id": "compliance-solutions",
+      "title": "Discover Microsoft compliance solutions and features",
+      "description": "Understand Microsoft Purview compliance, data loss prevention, and information governance",
+      "icon": "Certificate"
+    },
+    {
+      "id": "zero-trust",
+      "title": "Implement Zero Trust security model",
+      "description": "Learn to implement Zero Trust principles for comprehensive security",
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-governance",
+      "title": "Configure identity governance and protection",
+      "description": "Configure conditional access policies and identity protection features",
+      "icon": "UserCheck"
+    }
+  ],
+  "prerequisites": [
+    "Basic understanding of cloud computing",
+    "General familiarity with Microsoft services",
+    "Understanding of networking concepts",
+    "Awareness of cybersecurity fundamentals"
+  ],
+  "targetAudience": [
+    "IT professionals new to security",
+    "Business stakeholders",
+    "IT decision makers",
+    "Security analysts and administrators"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Security, Compliance, and Identity Fundamentals",
+    "examCode": "SC-900",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "SC-900",
+    "Security",
+    "Compliance",
+    "Identity",
+    "Zero Trust"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-15T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced security professional with deep expertise in Microsoft security solutions",
+    "experience": "8+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-900",
+      "SC-200",
+      "SC-300",
+      "SC-400"
+    ]
+  },
+  "modules": [
+    {
+      "id": "security-concepts-methodologies",
+      "title": "Security Concepts & Methodologies",
+      "description": "Learn fundamental security concepts and methodologies",
+      "duration": "4 hours",
+      "topics": [
+        "Shared responsibility model",
+        "Defense in depth strategy",
+        "Zero Trust security model",
+        "Encryption and key management"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "identity-access-management",
+      "title": "Identity & Access Management",
+      "description": "Explore Microsoft identity and access management solutions",
+      "duration": "4 hours",
+      "topics": [
+        "Microsoft Entra ID fundamentals",
+        "Authentication and authorization",
+        "Multi-factor authentication",
+        "Conditional access policies"
+      ],
+      "icon": "UserCheck"
+    },
+    {
+      "id": "microsoft-security-solutions",
+      "title": "Microsoft Security Solutions",
+      "description": "Learn about Microsoft security solutions and capabilities",
+      "duration": "4 hours",
+      "topics": [
+        "Microsoft Defender suite",
+        "Microsoft Sentinel SIEM",
+        "Azure Security Center",
+        "Threat intelligence and hunting"
+      ],
+      "icon": "Lock"
+    },
+    {
+      "id": "compliance-governance",
+      "title": "Compliance & Governance",
+      "description": "Discover Microsoft compliance solutions and features",
+      "duration": "4 hours",
+      "topics": [
+        "Microsoft Purview compliance",
+        "Data loss prevention (DLP)",
+        "Information governance",
+        "Insider risk management"
+      ],
+      "icon": "Certificate"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "security-center-lab",
+      "title": "Azure Security Center Configuration",
+      "description": "Configure Azure Security Center and implement security policies",
+      "duration": "2 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "entra-id-lab",
+      "title": "Microsoft Entra ID Setup",
+      "description": "Set up Microsoft Entra ID and configure basic authentication",
+      "duration": "2 hours",
+      "icon": "UserCheck"
+    },
+    {
+      "id": "compliance-lab",
+      "title": "Compliance Center Exploration",
+      "description": "Explore Microsoft Purview compliance center and configure DLP policies",
+      "duration": "2 hours",
+      "icon": "Certificate"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "As someone who has guided hundreds of professionals into Azure, I've seen firsthand how the right foundation makes all the difference. I remember working with a team of traditional infrastructure engineers who were skeptical about cloud. After this training, they successfully migrated their first workloads to Azure and became cloud advocates. This course distills everything I wish I knew when I started with Azure."
+  }
+}

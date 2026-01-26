@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "services": [
+    {
+      "id": "cloud-management",
+      "title": "Cloud Management",
+      "slug": "cloud-management",
+      "description": "Expert management of your Azure infrastructure with 24/7 monitoring and support.",
+      "features": ["Resource optimization", "Cost monitoring", "Performance tuning", "Infrastructure as Code"],
+      "icon": "cloud",
+      "isPublished": true,
+      "order": 1
+    },
+
+    {
+      "id": "microsoft-365-copilot",
+      "title": "Microsoft 365 Copilot",
+      "slug": "microsoft-365-copilot",
+      "description": "Maximize productivity with AI-powered assistance.",
+      "features": ["Deployment planning", "User training", "Custom solutions", "Workflow automation"],
+      "icon": "bot",
+      "isPublished": true,
+      "order": 3
+    },
+
+    {
+      "id": "infrastructure-modernization",
+      "title": "Infrastructure Modernization",
+      "slug": "infrastructure-modernization",
+      "description": "Transform your legacy infrastructure into a modern cloud architecture.",
+      "features": ["Cloud migration", "Containerization", "Serverless architecture", "Application modernization"],
+      "icon": "server",
+      "isPublished": true,
+      "order": 5
+    },
+    {
+      "id": "devops-services",
+      "title": "DevOps Services",
+      "slug": "devops-services",
+      "description": "Implement DevOps practices to accelerate your development lifecycle.",
+      "features": ["CI/CD pipeline setup", "Infrastructure as Code", "Automated testing", "Monitoring and logging"],
+      "icon": "code",
+      "isPublished": true,
+      "order": 6
+    },
+    {
+      "id": "data-analytics",
+      "title": "Data & Analytics",
+      "slug": "data-analytics",
+      "description": "Unlock the value of your data with advanced analytics and AI.",
+      "features": ["Data warehouse design", "BI solutions", "AI/ML implementation", "Real-time analytics"],
+      "icon": "database",
+      "isPublished": true,
+      "order": 7
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "slug": "azure-support-engineer",
+    "title": "Azure Support Engineer",
+    "subtitle": "Word de Held die Azure Omgevingen Redt",
+    "description": "Transformeer in de Azure Support Held die bedrijven wanhopig nodig hebben. Beheers de kunst van crisisbeheer, incidentoplossing en klantensupport die ondernemingen soepel laat draaien in de cloud.",
+    "category": "Support & Operations",
+    "level": "Intermediate",
+    "duration": "3 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Support", "Troubleshooting", "Customer Support", "Operations", "Monitoring", "Incident Management"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) of gelijkwaardige ervaring",
+      "Basisbegrip van Azure diensten",
+      "Bekendheid met IT support processen",
+      "Ervaring met Windows/Linux systemen",
+      "Begrip van netwerkconcepten"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-support-engineer-hero.jpg",
+    "badge": "Azure Support Held",
+    "highlights": [
+      "Wees de held die kritieke systemen redt",
+      "Beheers crisisbeheer in de cloud",
+      "Word de vertrouwde adviseur waar ondernemingen op rekenen",
+      "Verander chaos in kalmte met expert troubleshooting"
+    ]
+  },
+  "overview": {
+    "summary": "Word de Azure Support Held die ondernemingen wanhopig nodig hebben. Wanneer systemen falen en bedrijven in gevaar zijn, ben jij degene die ze bellen. Beheers de kunst van crisisbeheer, expert troubleshooting en klantensupport die de digitale wereld soepel laat draaien.",
+    "objectives": [
+      "Transformeer in de held die kritieke Azure omgevingen redt",
+      "Beheers crisisbeheer en incidentoplossing onder druk",
+      "Word de vertrouwde adviseur waar klanten op rekenen tijdens chaos",
+      "Ontwikkel superheld-niveau troubleshooting en diagnostic skills",
+      "Leer systeemfalen om te zetten in kansen voor uitmuntendheid",
+      "Bouw het vertrouwen op om elke Azure uitdaging aan te gaan"
+    ],
+    "targetAudience": "Aspirerende helden die degenen willen zijn die bedrijven bellen wanneer alles misgaat. IT professionals klaar om op te levelen van reactieve support naar proactieve probleemoplossing uitmuntendheid."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "De Support Held Worden",
+      "description": "Transformeer van reactieve support naar proactieve held status",
+      "duration": "6 uur",
+      "objectives": [
+        "Beheers de helden mindset voor Azure support",
+        "Leer met vertrouwen communiceren tijdens crises",
+        "Ontwikkel superheld-niveau klantrelatie skills",
+        "Begrijp wanneer te escaleren en wanneer zelf de dag te redden",
+        "Bouw het vertrouwen dat klanten op je laat rekenen",
+        "Beheers de kunst om problemen om te zetten in kansen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Je Helden Toolkit</h3><p>Elke held heeft de juiste tools nodig. Leer Azure's uitgebreide support ecosysteem te gebruiken als een meester, waardoor potentiële rampen demonstraties van je expertise worden.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Helden Support Arsenal",
+            "items": [
+              "Azure's enorme kennisbank - je geheime wapen",
+              "Community forums waar helden strijdverhalen delen",
+              "Professionele support plannen voor wanneer je backup nodig hebt",
+              "Real-time Azure health dashboards om bedreigingen te anticiperen",
+              "Azure Advisor - je vertrouwde sidekick voor best practices",
+              "Microsoft Learn - je trainingsveld voor continue verbetering"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/support-structure.jpg",
+            "alt": "Azure Support Structuur",
+            "caption": "Je roadmap om een Azure Support Held te worden"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Helden Trainingsveld",
+          "description": "Stap in echte crisis scenario's en oefen de held te zijn die klanten nodig hebben",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Superheld Troubleshooting Krachten",
+      "description": "Ontwikkel de diagnostic superkrachten die je onstuitbaar maken",
+      "duration": "8 uur",
+      "objectives": [
+        "Beheers de systematische aanpak van de held voor probleemoplossing",
+        "Leer Azure's vitale functies te lezen als een medische expert",
+        "Ontwikkel röntgenzicht voor het spotten van verborgen problemen",
+        "Bouw het vertrouwen om elke technische uitdaging aan te gaan",
+        "Leer problemen te voorspellen voordat ze crises worden",
+        "Beheers de kunst om complexe problemen om te zetten in eenvoudige oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Je Superheld Diagnostic Arsenal</h3><p>Helden raden niet - ze onderzoeken. Leer de systematische aanpak die je transformeert van reactieve supporter naar proactieve probleemoplosser die problemen anticipeert en voorkomt.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Helden Diagnostic Tools",
+            "items": [
+              "Azure Portal - je commandocentrum voor real-time diagnostics",
+              "Azure Monitor & Application Insights - je vroege waarschuwingssysteem",
+              "Network Watcher - je netwerk onderzoek toolkit",
+              "Azure Resource Health - ken de pols van elke service",
+              "Azure Advisor - je vertrouwde adviseur voor optimalisatie",
+              "Log Analytics - onthul het verhaal achter elk probleem"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Superheld Crisis Simulatie",
+          "description": "Confronteer complexe Azure rampen en kom zegevierend tevoorschijn met je nieuwe diagnostic krachten",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Crisis Management Meesterschap",
+      "description": "Leer door chaos te leiden en rampen om te zetten in triomfen",
+      "duration": "6 uur",
+      "objectives": [
+        "Beheers de kunst van crisis leadership en incident command",
+        "Leer coördineren met Microsoft support als een pro",
+        "Ontwikkel de communicatieskills om stakeholders kalm te houden",
+        "Bouw post-incident review processen die toekomstige crises voorkomen",
+        "Leer falen om te zetten in leerkansen",
+        "Ontwikkel de veerkracht om elke emergency met gratie te hanteren"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Incident Command Center</h3><p>Wanneer de alarmen afgaan, ben jij de leider die het team coördineert. Leer incident management frameworks die je in staat stellen chaos om te zetten in gecontroleerde actie.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Crisis Management Tools",
+            "items": [
+              "Incident response playbooks voor snelle actie",
+              "Stakeholder communication templates",
+              "Microsoft support escalation procedures",
+              "Post-mortem analysis frameworks",
+              "Continuous improvement methodologies",
+              "Crisis leadership communication skills"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Crisis Leadership Simulatie",
+          "description": "leid een incident response team door een volledige crisis lifecycle",
+          "duration": "150 minuten",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "tiers": [
+      {
+        "name": "Individual",
+        "price": 1499,
+        "originalPrice": 1899,
+        "features": [
+          "3-day intensive training",
+          "Digital course materials",
+          "Practice labs access",
+          "Certificate of completion",
+          "30-day post-training support"
+        ]
+      },
+      {
+        "name": "Team (5+ people)",
+        "price": 1299,
+        "perPerson": true,
+        "features": [
+          "Everything in Individual",
+          "Group discounts applied",
+          "Team collaboration sessions",
+          "Customized learning paths",
+          "Priority support access"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "features": [
+          "Everything in Team",
+          "On-site delivery option",
+          "Custom curriculum development",
+          "Dedicated success manager",
+          "Unlimited post-training support"
+        ]
+      }
+    ]
+  },
+  "certification": {
+    "badge": "Azure Support Engineer Certified",
+    "description": "Upon completion, receive your Azure Support Engineer certification, validating your hero-level skills in Azure support, troubleshooting, and incident management.",
+    "benefits": [
+      "Industry-recognized certification",
+      "Professional credibility boost",
+      "Career advancement opportunities",
+      "Access to hero-level support roles",
+      "Continuous learning community access"
+    ]
+  }
+}

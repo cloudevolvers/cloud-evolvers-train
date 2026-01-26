@@ -1,0 +1,18 @@
+{
+  "id": "network-engineering",
+  "title": "Azure Network Engineering",
+  "slug": "network-engineering",
+  "description": "Design and implement robust networking solutions in Azure.",
+  "icon": "Globe",
+  "content": "\n# Azure Network Engineering Services\n\nCreate secure, high-performance, and resilient network architectures tailored to your Azure environment.\n\n## Our Network Engineering Expertise\n\nOur Azure network engineers design and implement sophisticated networking solutions that form the backbone of your cloud infrastructure. We focus on security, performance, and reliability while ensuring your network architecture aligns with your business requirements and technical constraints.\n\n## Core Network Services\n\n### Network Architecture Design\n- **Hub-and-Spoke Topology**: Design efficient hub-and-spoke network architectures\n- **Landing Zone Implementation**: Create secure and compliant Azure landing zones\n- **Hybrid Connectivity**: Establish reliable connections between on-premises and Azure environments\n- **Multi-Region Networks**: Design resilient architectures across Azure regions\n\n### Connectivity Solutions\n- **Azure ExpressRoute**: Implement private, high-bandwidth connections to Azure\n- **VPN Configuration**: Set up site-to-site and point-to-site VPN solutions\n- **Virtual WAN**: Configure global transit networks for distributed environments\n- **Azure Front Door**: Implement global load balancing and application acceleration\n\n### Network Security\n- **Network Security Groups**: Configure and manage NSG rules and policies\n- **Azure Firewall**: Deploy and configure Azure Firewall for enhanced network protection\n- **DDoS Protection**: Implement Azure DDoS Protection for network layer defense\n- **Private Link**: Secure access to PaaS services through private endpoints\n\n### Performance Optimization\n- **Load Balancing**: Configure Azure Load Balancer for optimal traffic distribution\n- **Application Gateway**: Implement layer 7 load balancing with WAF capabilities\n- **Traffic Manager**: Optimize global traffic routing for multi-region applications\n- **Network Monitoring**: Set up comprehensive network monitoring and alerting\n\n## Benefits of Our Network Engineering Services\n\n- **Security-First Approach**: Networks designed with security as a foundational principle\n- **Scalability**: Infrastructure that grows with your business needs\n- **Performance**: Optimized throughput and reduced latency\n- **Cost Efficiency**: Balanced designs that control costs without compromising quality\n- **Operational Excellence**: Well-documented and maintainable network architectures\n\nContact us today to discuss your Azure networking needs.\n",
+  "features": [
+    "Network design",
+    "Implementation",
+    "Security management",
+    "Performance optimization"
+  ],
+  "isPublished": true,
+  "publishedAt": "2024-01-07T00:00:00Z",
+  "updatedAt": "2024-01-07T00:00:00Z",
+  "order": 7
+}

@@ -1,0 +1,194 @@
+{
+  "id": "windows-server-hybrid-administrator",
+  "slug": "windows-server-hybrid-administrator",
+  "title": "Windows Server Hybrid Beheerder",
+  "subtitle": "Hybrid Cloud Infrastructuur Management",
+  "description": "Beheers hybride Windows Server omgevingen met Azure integratie",
+  "overview": "Deze uitgebreide 3-daagse cursus behandelt hybride Windows Server beheer, inclusief Azure Arc integratie, hybride identiteitsoplossingen, opslagbeheer en moderne infrastructuur operaties. Leer hybride omgevingen te ontwerpen en beheren die on-premises en cloud resources naadloos integreren.",
+  "category": "Windows Server",
+  "subcategory": "Hybrid Beheer",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1095,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Desktop",
+  "learningObjectives": [
+    {
+      "id": "hybrid-architecture",
+      "title": "Ontwerp hybride Windows Server architecturen",
+      "description": "Ontwerp uitgebreide hybride cloud architectuur patronen voor Windows Server omgevingen",
+      "icon": "Desktop"
+    },
+    {
+      "id": "azure-arc-integration",
+      "title": "Implementeer Azure Arc voor server management",
+      "description": "Configureer Azure Arc-enabled servers voor unified management en monitoring",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-identity",
+      "title": "Configureer hybride identiteitsoplossingen",
+      "description": "Implementeer hybride identiteitsoplossingen met Azure AD en Windows Server",
+      "icon": "Users"
+    },
+    {
+      "id": "hybrid-storage",
+      "title": "Beheer hybride opslag en backup",
+      "description": "Configureer hybride opslagoplossingen inclusief Azure File Sync en backup strategieën",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "azure-services-onprem",
+      "title": "Implementeer Azure services on-premises",
+      "description": "Implementeer en beheer Azure services in on-premises omgevingen",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-monitoring",
+      "title": "Monitor hybride server omgevingen",
+      "description": "Monitor en optimaliseer prestaties in hybride Windows Server omgevingen",
+      "icon": "Gear"
+    }
+  ],
+  "prerequisites": [
+    "Windows Server beheer ervaring",
+    "Active Directory kennis",
+    "Basis Azure begrip",
+    "PowerShell scripting vaardigheden"
+  ],
+  "targetAudience": [
+    "Windows Server beheerders",
+    "Hybride cloud engineers",
+    "Systeem beheerders",
+    "Infrastructuur architecten"
+  ],
+  "certification": {
+    "available": true,
+    "name": "AZ-800 Administering Windows Server Hybrid Core Infrastructure",
+    "examCode": "AZ-800",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Windows Server",
+    "Hybride Cloud",
+    "Azure Arc",
+    "Infrastructuur",
+    "Beheer"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-25T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Windows Server specialist met uitgebreide ervaring in hybride cloud architecturen en enterprise infrastructuur management",
+    "experience": "15+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-800",
+      "AZ-801",
+      "AZ-104",
+      "MCSE"
+    ]
+  },
+  "modules": [
+    {
+      "id": "hybrid-architecture-design",
+      "title": "Hybride Architectuur Ontwerp",
+      "description": "Ontwerpen van hybride cloud architectuur patronen en integratie strategieën",
+      "duration": "6 uur",
+      "topics": [
+        "Hybride cloud architectuur patronen",
+        "On-premises en cloud integratie",
+        "Netwerk connectiviteitsplanning",
+        "Beveiligingsgrens ontwerp"
+      ],
+      "icon": "Desktop"
+    },
+    {
+      "id": "azure-arc-integration",
+      "title": "Azure Arc Integratie",
+      "description": "Implementeren van Azure Arc voor unified server management en monitoring",
+      "duration": "6 uur",
+      "topics": [
+        "Azure Arc-enabled servers setup",
+        "Beleid en configuratie management",
+        "Monitoring en insights",
+        "Beveiliging en compliance"
+      ],
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-storage-solutions",
+      "title": "Hybride Opslagoplossingen",
+      "description": "Beheren van hybride opslagoplossingen en backup strategieën",
+      "duration": "6 uur",
+      "topics": [
+        "Azure File Sync implementatie",
+        "Storage Spaces Direct met Azure",
+        "Hybride backup strategieën",
+        "Disaster recovery planning"
+      ],
+      "icon": "HardDrives"
+    },
+    {
+      "id": "management-operations",
+      "title": "Management & Operaties",
+      "description": "Implementeren van management en operationele strategieën voor hybride omgevingen",
+      "duration": "6 uur",
+      "topics": [
+        "Windows Admin Center implementatie",
+        "PowerShell DSC en automatisering",
+        "Update management strategieën",
+        "Prestatie monitoring en optimalisatie"
+      ],
+      "icon": "Gear"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "hybrid-architecture-lab",
+      "title": "Hybride Architectuur Ontwerp",
+      "description": "Ontwerp en implementeer hybride cloud architectuur patronen",
+      "duration": "3 uur",
+      "icon": "Desktop"
+    },
+    {
+      "id": "azure-arc-lab",
+      "title": "Azure Arc Configuratie",
+      "description": "Configureer Azure Arc-enabled servers en management beleid",
+      "duration": "3 uur",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-storage-lab",
+      "title": "Hybride Opslag Setup",
+      "description": "Implementeer Azure File Sync en hybride opslagoplossingen",
+      "duration": "3 uur",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "management-automation-lab",
+      "title": "Management en Automatisering",
+      "description": "Configureer Windows Admin Center en automatiseringsoplossingen",
+      "duration": "3 uur",
+      "icon": "Gear"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Het beheren van Azure op enterprise-schaal vereist meer dan alleen technische kennis—het vereist beproefde strategieën. Ik heb Azure-omgevingen beheerd voor organisaties met duizenden gebruikers, en ik heb geleerd wat wel en niet werkt. In deze training deel ik de praktijkgerichte beheerpatronen die talloze uren hebben bespaard en kritieke problemen hebben voorkomen."
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "id": "azure-security-engineer",
+  "slug": "azure-security-engineer",
+  "title": "Azure Security Engineer Associate",
+  "subtitle": "Implement Security Controls and Threat Protection",
+  "description": "Implement security controls and threat protection on Azure",
+  "overview": "Comprehensive security training focusing on implementing security controls and threat protection, managing identity and access, and securing data, applications, and networks in Azure.",
+  "category": "Security & Compliance",
+  "subcategory": "Cloud Security",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Azure",
+    "Security",
+    "AZ-500",
+    "Compliance",
+    "Identity",
+    "Threat Protection"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1595,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "manage-identity-access",
+      "title": "Manage Identity and Access",
+      "description": "Implement and manage identity and access solutions in Azure",
+      "icon": "Shield"
+    },
+    {
+      "id": "platform-protection",
+      "title": "Implement Platform Protection",
+      "description": "Implement platform protection measures and security controls",
+      "icon": "Lock"
+    },
+    {
+      "id": "secure-data-apps",
+      "title": "Secure Data and Applications",
+      "description": "Secure data and applications in Azure environments",
+      "icon": "Database"
+    },
+    {
+      "id": "manage-security-ops",
+      "title": "Manage Security Operations",
+      "description": "Manage security operations and monitoring in Azure",
+      "icon": "Activity"
+    }
+  ],
+  "modules": [
+    {
+      "id": "identity-access-management",
+      "title": "Manage Identity and Access",
+      "description": "Implement comprehensive identity and access management solutions",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Azure Active Directory",
+        "Multi-factor authentication",
+        "Privileged Identity Management",
+        "Conditional Access",
+        "Identity Protection"
+      ]
+    },
+    {
+      "id": "platform-protection",
+      "title": "Implement Platform Protection",
+      "description": "Implement platform-level security controls and protection",
+      "icon": "Lock",
+      "duration": "8 hours",
+      "topics": [
+        "Perimeter security",
+        "Network security",
+        "Host security",
+        "Container security",
+        "Key Vault management"
+      ]
+    },
+    {
+      "id": "data-application-security",
+      "title": "Secure Data and Applications",
+      "description": "Secure data and applications in Azure",
+      "icon": "Database",
+      "duration": "6 hours",
+      "topics": [
+        "Data classification and protection",
+        "Application security",
+        "Storage security",
+        "Database security",
+        "Key management"
+      ]
+    },
+    {
+      "id": "security-operations",
+      "title": "Manage Security Operations",
+      "description": "Manage security operations and monitoring",
+      "icon": "Activity",
+      "duration": "6 hours",
+      "topics": [
+        "Azure Security Center",
+        "Azure Sentinel",
+        "Threat intelligence",
+        "Incident response",
+        "Security monitoring"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "identity-lab",
+      "title": "Identity and Access Management",
+      "description": "Configure Azure AD, MFA, and Conditional Access policies",
+      "duration": "3 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "network-security-lab",
+      "title": "Network Security Implementation",
+      "description": "Implement network security groups, firewalls, and VPNs",
+      "duration": "3 hours",
+      "icon": "Network"
+    },
+    {
+      "id": "data-protection-lab",
+      "title": "Data Protection and Encryption",
+      "description": "Configure data encryption, Key Vault, and access policies",
+      "duration": "3 hours",
+      "icon": "Database"
+    },
+    {
+      "id": "threat-detection-lab",
+      "title": "Threat Detection and Response",
+      "description": "Configure Azure Security Center and Azure Sentinel",
+      "duration": "3 hours",
+      "icon": "Activity"
+    }
+  ],
+  "prerequisites": [
+    "AZ-104 certification or equivalent experience",
+    "Experience with security best practices",
+    "Understanding of Azure services",
+    "Knowledge of PowerShell and Azure CLI"
+  ],
+  "targetAudience": [
+    "Security Engineers",
+    "Cloud Security Specialists",
+    "Compliance Officers",
+    "Risk Management Professionals"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Cybersecurity expert with 12+ years in cloud security and compliance. Specializes in Azure security implementations and threat protection strategies.",
+    "expertise": [
+      "Cloud Security",
+      "Identity Management",
+      "Compliance Frameworks",
+      "Threat Detection",
+      "Security Operations"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure Security Engineer Associate",
+      "CISSP",
+      "CISM",
+      "Certified Ethical Hacker",
+      "Microsoft Certified Trainer"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure Security Engineer Associate",
+    "examCode": "AZ-500",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-01-10"
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-12-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Security isn't just a checkbox—it's a mindset. I've responded to security incidents, implemented zero-trust architectures, and helped organizations meet compliance requirements. Every security principle in this training comes from real incidents and their solutions. I'll teach you to think like both an attacker and a defender."
+  }
+}

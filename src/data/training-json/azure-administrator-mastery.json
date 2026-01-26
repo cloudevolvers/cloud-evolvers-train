@@ -1,0 +1,194 @@
+{
+  "id": "azure-administrator-mastery",
+  "slug": "azure-administrator-mastery",
+  "title": "Azure Administrator Mastery (AZ-104)",
+  "subtitle": "Master Advanced Azure Administration",
+  "description": "Master advanced Azure administration with comprehensive resource management skills",
+  "overview": "This intensive 4-day course covers advanced Azure administration concepts and prepares you for the AZ-104 certification. Learn to manage complex Azure environments, implement governance frameworks, and master resource management at scale.",
+  "category": "Azure",
+  "subcategory": "Administration",
+  "difficulty": "Intermediate",
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1495,
+    "currency": "EUR"
+  },
+  "featured": true,
+  "icon": "Shield",
+  "learningObjectives": [
+    {
+      "id": "identity-governance",
+      "title": "Master Azure identities and governance frameworks",
+      "description": "Learn advanced identity management and governance implementation in Azure",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-backup",
+      "title": "Implement advanced storage and backup solutions",
+      "description": "Configure complex storage solutions and disaster recovery strategies",
+      "icon": "Database"
+    },
+    {
+      "id": "compute-resources",
+      "title": "Deploy and manage complex compute resources",
+      "description": "Master virtual machines, containers, and compute scaling solutions",
+      "icon": "Gear"
+    },
+    {
+      "id": "networking-connectivity",
+      "title": "Configure networking and connectivity solutions",
+      "description": "Implement advanced networking configurations and security",
+      "icon": "Network"
+    },
+    {
+      "id": "monitoring-maintenance",
+      "title": "Monitor and maintain Azure environments",
+      "description": "Set up comprehensive monitoring and automated maintenance",
+      "icon": "Shield"
+    },
+    {
+      "id": "security-compliance",
+      "title": "Implement security and compliance best practices",
+      "description": "Apply security frameworks and compliance standards in Azure",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "AZ-900 certification or equivalent Azure experience",
+    "PowerShell and Azure CLI proficiency",
+    "Networking fundamentals knowledge",
+    "Minimum 6 months Azure hands-on experience"
+  ],
+  "targetAudience": [
+    "System administrators",
+    "Infrastructure engineers",
+    "Cloud administrators",
+    "AZ-104 certification candidates"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Azure Administrator",
+    "examCode": "AZ-104",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "AZ-104",
+    "Azure",
+    "Administrator",
+    "Infrastructure",
+    "Governance"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-02-20T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Azure infrastructure specialist with extensive experience in enterprise cloud deployments",
+    "experience": "10+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-104",
+      "AZ-305",
+      "AZ-500",
+      "AZ-700"
+    ]
+  },
+  "modules": [
+    {
+      "id": "identity-governance",
+      "title": "Identity & Governance",
+      "description": "Master Azure identity management and governance frameworks",
+      "duration": "8 hours",
+      "topics": [
+        "Azure Active Directory management",
+        "Role-based access control (RBAC)",
+        "Policy management and compliance",
+        "Resource groups and subscriptions"
+      ],
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-solutions",
+      "title": "Storage Solutions",
+      "description": "Implement advanced storage and backup solutions",
+      "duration": "8 hours",
+      "topics": [
+        "Storage accounts and blob services",
+        "File shares and sync services",
+        "Backup and disaster recovery",
+        "Storage security and encryption"
+      ],
+      "icon": "Database"
+    },
+    {
+      "id": "compute-resources",
+      "title": "Compute Resources",
+      "description": "Deploy and manage complex compute resources",
+      "duration": "8 hours",
+      "topics": [
+        "Virtual machines and scale sets",
+        "App Service and containers",
+        "Load balancing and traffic management",
+        "Automation and configuration management"
+      ],
+      "icon": "Gear"
+    },
+    {
+      "id": "networking-monitoring",
+      "title": "Networking & Monitoring",
+      "description": "Configure networking and monitoring solutions",
+      "duration": "8 hours",
+      "topics": [
+        "Virtual networks and subnets",
+        "Network security groups and firewalls",
+        "Azure Monitor and Log Analytics",
+        "Alerting and automated responses"
+      ],
+      "icon": "Network"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "identity-lab",
+      "title": "Azure AD and RBAC Configuration",
+      "description": "Configure Azure Active Directory and implement role-based access control",
+      "duration": "4 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "storage-lab",
+      "title": "Advanced Storage Solutions",
+      "description": "Implement complex storage configurations and backup strategies",
+      "duration": "4 hours",
+      "icon": "Database"
+    },
+    {
+      "id": "compute-lab",
+      "title": "Compute Resource Management",
+      "description": "Deploy and manage virtual machines and container solutions",
+      "duration": "4 hours",
+      "icon": "Gear"
+    },
+    {
+      "id": "networking-lab",
+      "title": "Network Configuration and Monitoring",
+      "description": "Configure virtual networks and implement monitoring solutions",
+      "duration": "4 hours",
+      "icon": "Network"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Managing Azure at enterprise scale requires more than just technical knowledge—it requires battle-tested strategies. I've managed Azure environments for organizations with thousands of users, and I've learned what works and what doesn't. In this training, I share the real-world administrative patterns that have saved countless hours and prevented critical issues."
+  }
+}

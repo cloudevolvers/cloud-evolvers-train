@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "slug": "azure-iot-developer",
+    "title": "Azure IoT Developer Specialty",
+    "subtitle": "Build the Internet of Things That Changes Industries",
+    "description": "The future is connected, and you're going to build it. This course transforms you from someone who writes code into someone who creates intelligent systems that connect the physical and digital worlds. You'll master Azure IoT technologies that power smart cities, autonomous factories, and life-saving medical devices - the skills that separate IoT developers who get hired from those who don't.",
+    "category": "IoT & Edge Computing",
+    "level": "Intermediate",
+    "duration": "4 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "IoT", "Edge Computing", "Device Management", "Streaming Analytics"],
+    "prerequisites": [
+      "Azure Fundamentals knowledge (AZ-900)",
+      "Programming experience in at least one language (C#, Python, or JavaScript)",
+      "Understanding of cloud concepts and Azure services",
+      "A passion for building systems that make the world smarter"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-iot-hero.jpg",
+    "badge": "IoT Systems Architect",
+    "highlights": [
+      "Build IoT systems that power smart cities and autonomous factories",
+      "Master edge computing that processes data in milliseconds",
+      "Create solutions that save lives through predictive maintenance",
+      "Join the elite developers building the connected future"
+    ]
+  },
+  "overview": {
+    "summary": "IoT isn't just about connecting devices - it's about creating intelligent systems that transform how industries operate. This course teaches you the Azure IoT skills that separate the developers who build connected solutions from those who just write code. You'll learn to create IoT architectures that scale to millions of devices, process real-time data at the edge, and build systems that predict failures before they happen. By the end, you'll have the technical expertise and architectural vision to lead IoT initiatives that change entire industries.",
+    "objectives": [
+      "Design IoT solution infrastructure that scales globally",
+      "Build device management systems that handle millions of connected devices",
+      "Create edge computing solutions that process data in real-time",
+      "Implement data pipelines that turn sensor data into actionable insights",
+      "Develop monitoring and troubleshooting systems for IoT deployments",
+      "Architect secure IoT solutions that protect critical infrastructure"
+    ],
+    "targetAudience": "This course is for developers ready to become IoT architects. Whether you're a backend developer wanting to add IoT expertise, a systems engineer ready to embrace connected technologies, or someone who wants to build the infrastructure that powers smart cities and autonomous industries - if you want to create systems that make the world more intelligent and efficient, this course will give you the skills and mindset to become the IoT developer that companies compete for."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure IoT Solution Architecture",
+      "description": "Design and implement Azure IoT solution infrastructure",
+      "duration": "6 hours",
+      "objectives": [
+        "Create Azure IoT Hub",
+        "Configure IoT Hub security",
+        "Implement device provisioning",
+        "Set up Azure IoT Central",
+        "Design IoT solution architecture"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>IoT Solution Fundamentals</h3><p>Azure IoT services provide a comprehensive platform for building IoT solutions. Learn to set up and configure the core infrastructure components.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Azure IoT Services",
+            "items": [
+              "Azure IoT Hub for device connectivity and management",
+              "Azure IoT Central for SaaS IoT applications",
+              "Azure IoT Edge for edge computing",
+              "Azure Stream Analytics for real-time data processing",
+              "Azure Digital Twins for digital modeling"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "IoT Hub Setup Lab",
+          "description": "Create and configure Azure IoT Hub",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "IoT Device Management",
+      "description": "Implement device provisioning and management",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement device provisioning",
+        "Manage device identities",
+        "Configure device twins",
+        "Implement direct methods",
+        "Handle device-to-cloud messaging"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Effective device management is crucial for IoT solutions. Learn to provision, configure, and manage IoT devices at scale.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/iot-device-management.jpg",
+            "alt": "IoT Device Management",
+            "caption": "Device provisioning, twins, and messaging"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Device Management Lab",
+          "description": "Implement device provisioning and management",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Azure IoT Edge Solutions",
+      "description": "Develop and deploy IoT Edge modules",
+      "duration": "8 hours",
+      "objectives": [
+        "Create IoT Edge modules",
+        "Deploy IoT Edge modules",
+        "Implement offline capabilities",
+        "Configure IoT Edge security",
+        "Monitor IoT Edge deployments"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Edge Computing with Azure IoT Edge</h3><p>Azure IoT Edge enables intelligence at the edge. Learn to develop, deploy, and manage IoT Edge modules for processing data closer to the source.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "IoT Edge Development Lab",
+          "description": "Create and deploy IoT Edge modules",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "IoT Data Processing and Analytics",
+      "description": "Process and analyze IoT data streams",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement Azure Stream Analytics",
+        "Process real-time data",
+        "Store IoT data",
+        "Implement data visualization",
+        "Create alerts and notifications"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>IoT generates massive amounts of data. Learn to process, analyze, and visualize IoT data using Azure services.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Analytics Lab",
+          "description": "Process and analyze IoT data streams",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1950,
+    "discountedPrice": 1560,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official course materials",
+      "Hands-on lab access",
+      "AZ-220 exam voucher",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure IoT Developer Specialty badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "IoT Solutions Architect",
+    "bio": "Yaïr is an IoT Solutions Architect with extensive experience in building industrial IoT solutions. He has helped numerous organizations implement IoT projects using Azure and other cloud platforms.",
+    "certifications": [
+      "Microsoft Certified: Azure IoT Developer Specialty",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "AWS Certified IoT Specialty",
+      "Certified IoT Professional",
+      "PhD in Computer Engineering"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-08",
+        "endDate": "2024-04-11",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure IoT Developer Specialty Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-iot-developer-specialty/",
+      "description": "Official Microsoft learning path for Azure IoT Developers"
+    },
+    {
+      "type": "video",
+      "title": "Azure IoT Development Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nF9QK",
+      "description": "Azure IoT development tutorials and best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-220 Practice Tests",
+      "url": "https://practice.microsoft.com/exams/az-220",
+      "description": "Official practice tests for AZ-220 certification"
+    },
+    {
+      "type": "tool",
+      "title": "Azure IoT Explorer",
+      "url": "https://github.com/Azure/azure-iot-explorer",
+      "description": "Azure IoT Explorer for device testing and management"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure IoT Developer Specialty",
+    "code": "AZ-220",
+    "description": "Demonstrate skills in implementing Azure IoT services to build IoT solutions that include device connectivity, data processing, and visualization",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["English", "Spanish", "French", "German", "Chinese", "Japanese"]
+    },
+    "skillsMeasured": [
+      "Set up the IoT solution infrastructure (15-20%)",
+      "Implement IoT device management (20-25%)",
+      "Implement IoT Edge solutions (20-25%)",
+      "Process and manage IoT data (15-20%)",
+      "Monitor and troubleshoot IoT solutions (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need IoT hardware for this course?",
+      "answer": "No, this course focuses on Azure IoT services and software development. We'll use simulated devices and Azure IoT Explorer for testing."
+    },
+    {
+      "question": "What programming languages are covered?",
+      "answer": "The course covers C#, Python, and JavaScript for IoT development, with a focus on Azure SDKs and IoT Edge modules."
+    },
+    {
+      "question": "Is this course hands-on?",
+      "answer": "Yes, extensive hands-on labs where you'll build complete IoT solutions using Azure IoT Hub, IoT Edge, and Stream Analytics."
+    },
+    {
+      "question": "What Azure services will I learn?",
+      "answer": "You'll learn Azure IoT Hub, IoT Central, IoT Edge, Stream Analytics, Digital Twins, and related Azure services."
+    }
+  ]
+}

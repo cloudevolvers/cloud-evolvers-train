@@ -1,0 +1,322 @@
+{
+  "en": {
+    "title": "Privacy Policy",
+    "lastUpdated": "2025-10-23",
+    "sections": [
+      {
+        "id": "commitment",
+        "title": "Our Commitment to Your Privacy",
+        "content": "At Cloud Evolvers (Spot Cloud B.V.), we believe that **everyone has a right to privacy online**. Unlike many companies, we don't track your behavior across the web, we don't sell your data to third parties, and we don't use invasive analytics to profile you. We only collect what we absolutely need to provide you with excellent training and services."
+      },
+      {
+        "id": "what-we-collect",
+        "title": "1. What We Collect (and Why)",
+        "content": "We believe in radical transparency. Here's exactly what we collect and why:",
+        "subsections": [
+          {
+            "title": "Information You Give Us:",
+            "items": [
+              "**Contact Information** - Your name, email address, and phone number when you register for training or contact us. We need this to communicate with you about your courses and respond to your inquiries.",
+              "**Company Information** - Your company name and role (optional) to better tailor our training to your needs.",
+              "**Payment Information** - Processed securely through our payment provider. We never store your full credit card details on our servers."
+            ]
+          },
+          {
+            "title": "Information We Don't Collect:",
+            "items": [
+              "❌ We don't use tracking pixels or behavioral analytics",
+              "❌ We don't track you across other websites",
+              "❌ We don't build advertising profiles",
+              "❌ We don't sell your data to anyone, ever",
+              "❌ We don't use third-party advertising networks"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "how-we-use",
+        "title": "2. How We Use Your Information",
+        "content": "We use your information solely for these purposes:",
+        "items": [
+          "**Providing Training Services** - To register you for courses, send course materials, and communicate about your training",
+          "**Customer Support** - To respond to your questions and help resolve any issues",
+          "**Course Improvements** - To understand which topics interest our students and improve our curriculum",
+          "**Legal Obligations** - To comply with applicable laws and regulations (e.g., accounting, tax requirements)"
+        ],
+        "footer": "That's it. We don't use your data for marketing to third parties, we don't share it with data brokers, and we don't analyze it for purposes beyond improving your learning experience."
+      },
+      {
+        "id": "cookies",
+        "title": "3. Cookies and Tracking",
+        "content": "We use cookies, but not the creepy kind:",
+        "subsections": [
+          {
+            "title": "We Use:",
+            "items": [
+              "**Essential Cookies** - Required for the website to function (like keeping you logged in)",
+              "**Preference Cookies** - To remember your language choice and dark/light mode preference"
+            ]
+          },
+          {
+            "title": "We do NOT use:",
+            "items": [
+              "❌ Advertising cookies",
+              "❌ Cross-site tracking cookies",
+              "❌ Social media tracking pixels",
+              "❌ Third-party analytics that track individual users"
+            ]
+          }
+        ],
+        "footer": "We use privacy-focused, aggregated analytics to understand basic usage patterns (like which pages are most popular), but this is anonymized and doesn't identify individual users."
+      },
+      {
+        "id": "data-sharing",
+        "title": "4. Data Sharing",
+        "content": "We share your data only when absolutely necessary:",
+        "items": [
+          "**Microsoft** - As a Microsoft Certified Training partner, we share attendance records with Microsoft for certification purposes (required by partnership agreement)",
+          "**Payment Processors** - Secure payment handling (they only see what's needed to process your payment)",
+          "**Cloud Hosting** - We use Microsoft Azure to host our services. Your data is stored in European data centers and protected by Azure's enterprise-grade security",
+          "**Legal Requirements** - If required by law or to protect rights and safety"
+        ],
+        "subsections": [
+          {
+            "title": "We will NEVER:",
+            "items": [
+              "❌ Sell your personal data to anyone",
+              "❌ Share it with advertisers or data brokers",
+              "❌ Use it for purposes you didn't explicitly agree to"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "5. Data Security",
+        "content": "We take security seriously:",
+        "items": [
+          "All data transmitted to and from our website is encrypted using HTTPS/TLS",
+          "We use Microsoft Azure's enterprise-grade security infrastructure",
+          "Access to personal data is strictly limited to authorized personnel only",
+          "We regularly review and update our security practices",
+          "We perform regular security assessments and updates"
+        ]
+      },
+      {
+        "id": "your-rights",
+        "title": "6. Your Rights (GDPR Compliance)",
+        "content": "Under GDPR, you have these rights, and we respect them fully:",
+        "items": [
+          "**Right to Access** - Request a copy of all data we have about you",
+          "**Right to Rectification** - Correct any inaccurate data",
+          "**Right to Erasure** - Request deletion of your data (subject to legal obligations)",
+          "**Right to Portability** - Get your data in a machine-readable format",
+          "**Right to Object** - Object to processing of your data",
+          "**Right to Withdraw Consent** - Withdraw consent at any time"
+        ],
+        "footer": "To exercise any of these rights, simply email us at privacy@cloudevolvers.com. We'll respond within 30 days (usually much faster)."
+      },
+      {
+        "id": "retention",
+        "title": "7. Data Retention",
+        "content": "We keep your data only as long as necessary:",
+        "items": [
+          "**Course Data** - Kept for 7 years after course completion (required by Dutch accounting law)",
+          "**Communication Records** - Kept for 2 years after last contact",
+          "**Marketing Preferences** - Until you unsubscribe or request deletion"
+        ],
+        "footer": "After these periods, we securely delete your data unless we have a legal obligation to retain it longer."
+      },
+      {
+        "id": "international-transfers",
+        "title": "8. International Data Transfers",
+        "content": "Your data is primarily stored in Microsoft Azure data centers in the European Union (West Europe region - Netherlands). If we ever need to transfer data outside the EU, we use Standard Contractual Clauses approved by the European Commission to ensure your data remains protected."
+      },
+      {
+        "id": "childrens-privacy",
+        "title": "9. Children's Privacy",
+        "content": "Our services are intended for professionals and adults. We do not knowingly collect data from children under 16. If you believe we have inadvertently collected such data, please contact us immediately at privacy@cloudevolvers.com."
+      },
+      {
+        "id": "changes",
+        "title": "10. Changes to This Policy",
+        "content": "We may update this policy occasionally to reflect changes in our practices or legal requirements. We'll notify you of significant changes via email or a prominent notice on our website. The \"last updated\" date at the top shows when changes were made."
+      },
+      {
+        "id": "contact",
+        "title": "11. Contact Us",
+        "content": "Questions? Concerns? We're here to help:",
+        "items": [
+          "**Email**: privacy@cloudevolvers.com",
+          "**General Inquiries**: info@cloudevolvers.com",
+          "**Company**: Spot Cloud B.V. (operating as Cloud Evolvers)",
+          "**Location**: The Netherlands"
+        ]
+      }
+    ],
+    "promise": {
+      "title": "Our Promise",
+      "content": "We're committed to protecting your privacy because we believe it's a fundamental right. If you ever have concerns about how we handle your data, please don't hesitate to reach out. We're not perfect, but we're always working to do better."
+    }
+  },
+  "nl": {
+    "title": "Privacybeleid",
+    "lastUpdated": "2025-10-23",
+    "sections": [
+      {
+        "id": "commitment",
+        "title": "Onze Toewijding aan Uw Privacy",
+        "content": "Bij Cloud Evolvers (Spot Cloud B.V.) geloven we dat **iedereen recht heeft op privacy online**. In tegenstelling tot veel bedrijven volgen we uw gedrag niet op het web, verkopen we uw gegevens niet aan derden en gebruiken we geen invasieve analytics om u te profileren. We verzamelen alleen wat absoluut noodzakelijk is om u uitstekende training en diensten te bieden."
+      },
+      {
+        "id": "what-we-collect",
+        "title": "1. Wat We Verzamelen (en Waarom)",
+        "content": "We geloven in radicale transparantie. Hier is precies wat we verzamelen en waarom:",
+        "subsections": [
+          {
+            "title": "Informatie Die U Ons Geeft:",
+            "items": [
+              "**Contactgegevens** - Uw naam, e-mailadres en telefoonnummer wanneer u zich registreert voor training of contact met ons opneemt. We hebben dit nodig om met u te communiceren over uw cursussen en uw vragen te beantwoorden.",
+              "**Bedrijfsinformatie** - Uw bedrijfsnaam en functie (optioneel) om onze training beter af te stemmen op uw behoeften.",
+              "**Betalingsinformatie** - Veilig verwerkt via onze betalingsprovider. We slaan nooit uw volledige creditcardgegevens op onze servers op."
+            ]
+          },
+          {
+            "title": "Informatie Die We Niet Verzamelen:",
+            "items": [
+              "❌ We gebruiken geen tracking pixels of gedragsanalyse",
+              "❌ We volgen u niet over andere websites",
+              "❌ We bouwen geen advertentieprofielen",
+              "❌ We verkopen uw gegevens nooit aan wie dan ook",
+              "❌ We gebruiken geen externe advertentienetwerken"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "how-we-use",
+        "title": "2. Hoe We Uw Informatie Gebruiken",
+        "content": "We gebruiken uw informatie uitsluitend voor deze doeleinden:",
+        "items": [
+          "**Trainingsdiensten Verlenen** - Om u te registreren voor cursussen, cursusmateriaal te versturen en te communiceren over uw training",
+          "**Klantenondersteuning** - Om uw vragen te beantwoorden en problemen op te lossen",
+          "**Cursusverbeteringen** - Om te begrijpen welke onderwerpen onze cursisten interesseren en ons curriculum te verbeteren",
+          "**Wettelijke Verplichtingen** - Om te voldoen aan toepasselijke wet- en regelgeving (bijv. boekhouding, belastingvereisten)"
+        ],
+        "footer": "Dat is alles. We gebruiken uw gegevens niet voor marketing naar derden, we delen ze niet met databrokers en we analyseren ze niet voor doeleinden die verder gaan dan het verbeteren van uw leerervaring."
+      },
+      {
+        "id": "cookies",
+        "title": "3. Cookies en Tracking",
+        "content": "We gebruiken cookies, maar niet de enge soort:",
+        "subsections": [
+          {
+            "title": "We Gebruiken:",
+            "items": [
+              "**Essentiële Cookies** - Noodzakelijk voor de werking van de website (zoals u ingelogd houden)",
+              "**Voorkeurscookies** - Om uw taalkeuze en donkere/lichte modus te onthouden"
+            ]
+          },
+          {
+            "title": "We gebruiken NIET:",
+            "items": [
+              "❌ Advertentiecookies",
+              "❌ Cross-site tracking cookies",
+              "❌ Social media tracking pixels",
+              "❌ Externe analytics die individuele gebruikers volgen"
+            ]
+          }
+        ],
+        "footer": "We gebruiken privacygerichte, geaggregeerde analytics om basisgebruikspatronen te begrijpen (zoals welke pagina's het populairst zijn), maar dit is geanonimiseerd en identificeert geen individuele gebruikers."
+      },
+      {
+        "id": "data-sharing",
+        "title": "4. Gegevensdeling",
+        "content": "We delen uw gegevens alleen wanneer absoluut noodzakelijk:",
+        "items": [
+          "**Microsoft** - Als Microsoft Certified Training partner delen we aanwezigheidsregistraties met Microsoft voor certificeringsdoeleinden (vereist door partnerschapsovereenkomst)",
+          "**Betalingsverwerkers** - Veilige betalingsverwerking (ze zien alleen wat nodig is om uw betaling te verwerken)",
+          "**Cloud Hosting** - We gebruiken Microsoft Azure voor het hosten van onze diensten. Uw gegevens worden opgeslagen in Europese datacenters en beschermd door de enterprise-grade beveiliging van Azure",
+          "**Wettelijke Vereisten** - Indien vereist door de wet of om rechten en veiligheid te beschermen"
+        ],
+        "subsections": [
+          {
+            "title": "We zullen NOOIT:",
+            "items": [
+              "❌ Uw persoonlijke gegevens aan iemand verkopen",
+              "❌ Deze delen met adverteerders of databrokers",
+              "❌ Deze gebruiken voor doeleinden waarmee u niet expliciet heeft ingestemd"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "security",
+        "title": "5. Gegevensbeveiliging",
+        "content": "We nemen beveiliging serieus:",
+        "items": [
+          "Alle gegevens die naar en van onze website worden verzonden, zijn versleuteld met HTTPS/TLS",
+          "We gebruiken de enterprise-grade beveiligingsinfrastructuur van Microsoft Azure",
+          "Toegang tot persoonlijke gegevens is strikt beperkt tot alleen geautoriseerd personeel",
+          "We beoordelen en actualiseren regelmatig onze beveiligingspraktijken",
+          "We voeren regelmatig beveiligingsbeoordelingen en updates uit"
+        ]
+      },
+      {
+        "id": "your-rights",
+        "title": "6. Uw Rechten (AVG-naleving)",
+        "content": "Onder de AVG heeft u deze rechten, en we respecteren ze volledig:",
+        "items": [
+          "**Recht op Toegang** - Vraag een kopie aan van alle gegevens die we over u hebben",
+          "**Recht op Rectificatie** - Corrigeer onjuiste gegevens",
+          "**Recht op Wissing** - Vraag verwijdering van uw gegevens (onder voorbehoud van wettelijke verplichtingen)",
+          "**Recht op Overdraagbaarheid** - Ontvang uw gegevens in een machine-leesbaar formaat",
+          "**Recht van Bezwaar** - Bezwaar maken tegen de verwerking van uw gegevens",
+          "**Recht om Toestemming In te Trekken** - Toestemming op elk moment intrekken"
+        ],
+        "footer": "Om een van deze rechten uit te oefenen, stuur ons eenvoudig een e-mail op privacy@cloudevolvers.com. We reageren binnen 30 dagen (meestal veel sneller)."
+      },
+      {
+        "id": "retention",
+        "title": "7. Gegevensbewaring",
+        "content": "We bewaren uw gegevens alleen zo lang als nodig:",
+        "items": [
+          "**Cursusgegevens** - Bewaard gedurende 7 jaar na voltooiing van de cursus (vereist door Nederlandse boekhoudwetgeving)",
+          "**Communicatiegegevens** - Bewaard gedurende 2 jaar na laatste contact",
+          "**Marketingvoorkeuren** - Tot u zich afmeldt of verwijdering aanvraagt"
+        ],
+        "footer": "Na deze periodes verwijderen we uw gegevens veilig, tenzij we een wettelijke verplichting hebben om ze langer te bewaren."
+      },
+      {
+        "id": "international-transfers",
+        "title": "8. Internationale Gegevensoverdrachten",
+        "content": "Uw gegevens worden voornamelijk opgeslagen in Microsoft Azure-datacenters in de Europese Unie (regio West-Europa - Nederland). Als we ooit gegevens buiten de EU moeten overdragen, gebruiken we Standaard Contractuele Clausules goedgekeurd door de Europese Commissie om ervoor te zorgen dat uw gegevens beschermd blijven."
+      },
+      {
+        "id": "childrens-privacy",
+        "title": "9. Privacy van Kinderen",
+        "content": "Onze diensten zijn bedoeld voor professionals en volwassenen. We verzamelen bewust geen gegevens van kinderen onder de 16 jaar. Als u denkt dat we per ongeluk dergelijke gegevens hebben verzameld, neem dan onmiddellijk contact met ons op via privacy@cloudevolvers.com."
+      },
+      {
+        "id": "changes",
+        "title": "10. Wijzigingen in Dit Beleid",
+        "content": "We kunnen dit beleid af en toe bijwerken om veranderingen in onze praktijken of wettelijke vereisten weer te geven. We zullen u op de hoogte stellen van belangrijke wijzigingen via e-mail of een prominente melding op onze website. De datum \"laatst bijgewerkt\" bovenaan toont wanneer wijzigingen zijn aangebracht."
+      },
+      {
+        "id": "contact",
+        "title": "11. Neem Contact Op",
+        "content": "Vragen? Zorgen? We zijn hier om te helpen:",
+        "items": [
+          "**E-mail**: privacy@cloudevolvers.com",
+          "**Algemene Vragen**: info@cloudevolvers.com",
+          "**Bedrijf**: Spot Cloud B.V. (opererend als Cloud Evolvers)",
+          "**Locatie**: Nederland"
+        ]
+      }
+    ],
+    "promise": {
+      "title": "Onze Belofte",
+      "content": "We zijn toegewijd aan het beschermen van uw privacy omdat we geloven dat het een fundamenteel recht is. Als u ooit zorgen heeft over hoe we met uw gegevens omgaan, aarzel dan niet om contact op te nemen. We zijn niet perfect, maar we werken altijd aan verbetering."
+    }
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "metadata": {
+    "slug": "azure-support-engineer",
+    "title": "Azure Support Engineer",
+    "subtitle": "Become the Hero Who Saves Azure Environments",
+    "description": "Transform into the Azure Support Hero that businesses desperately need. Master the art of troubleshooting, incident management, and customer support that keeps enterprises running smoothly in the cloud.",
+    "category": "Support & Operations",
+    "level": "Intermediate",
+    "duration": "3 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Support", "Troubleshooting", "Customer Support", "Operations", "Monitoring", "Incident Management"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) or equivalent experience",
+      "Basic understanding of Azure services",
+      "Familiarity with IT support processes",
+      "Experience with Windows/Linux systems",
+      "Understanding of networking concepts"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-support-engineer-hero.jpg",
+    "badge": "Azure Support Hero",
+    "highlights": [
+      "Be the hero who saves critical systems",
+      "Master crisis management in the cloud",
+      "Become the trusted advisor enterprises rely on",
+      "Turn chaos into calm with expert troubleshooting"
+    ]
+  },
+  "overview": {
+    "summary": "Become the Azure Support Hero that enterprises desperately need. When systems fail and businesses are at risk, you're the one they call. Master the art of crisis management, expert troubleshooting, and customer support that keeps the digital world running smoothly.",
+    "objectives": [
+      "Transform into the hero who saves critical Azure environments",
+      "Master crisis management and incident resolution under pressure",
+      "Become the trusted advisor that customers rely on during chaos",
+      "Develop superhero-level troubleshooting and diagnostic skills",
+      "Learn to turn system failures into opportunities for excellence",
+      "Build the confidence to handle any Azure challenge that comes your way"
+    ],
+    "targetAudience": "Aspiring heroes who want to be the ones businesses call when everything goes wrong. IT professionals ready to level up from reactive support to proactive problem-solving excellence."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Becoming the Support Hero",
+      "description": "Transform from reactive support to proactive hero status",
+      "duration": "6 hours",
+      "objectives": [
+        "Master the hero's mindset for Azure support",
+        "Learn to communicate with confidence during crises",
+        "Develop superhero-level customer relationship skills",
+        "Understand when to escalate and when to save the day yourself",
+        "Build the trust that makes customers rely on you",
+        "Master the art of turning problems into opportunities"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Your Hero's Toolkit</h3><p>Every hero needs the right tools. Learn to wield Azure's comprehensive support ecosystem like a master, turning potential disasters into demonstrations of your expertise.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Hero's Support Arsenal",
+            "items": [
+              "Azure's vast knowledge base - your secret weapon",
+              "Community forums where heroes share battle stories",
+              "Professional support plans for when you need backup",
+              "Real-time Azure health dashboards to anticipate threats",
+              "Azure Advisor - your trusted sidekick for best practices",
+              "Microsoft Learn - your training ground for continuous improvement"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/support-structure.jpg",
+            "alt": "Azure Support Structure",
+            "caption": "Your roadmap to becoming an Azure Support Hero"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Hero Training Ground",
+          "description": "Step into real crisis scenarios and practice being the hero customers need",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Superhero Troubleshooting Powers",
+      "description": "Develop the diagnostic superpowers that make you unstoppable",
+      "duration": "8 hours",
+      "objectives": [
+        "Master the hero's systematic approach to problem-solving",
+        "Learn to read Azure's vital signs like a medical expert",
+        "Develop x-ray vision for spotting hidden issues",
+        "Build the confidence to tackle any technical challenge",
+        "Learn to predict problems before they become crises",
+        "Master the art of turning complex issues into simple solutions"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Your Superhero Diagnostic Arsenal</h3><p>Heroes don't guess - they investigate. Learn the systematic approach that turns you from a reactive supporter into a proactive problem-solver who anticipates and prevents issues.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Hero's Diagnostic Tools",
+            "items": [
+              "Azure Portal - your command center for real-time diagnostics",
+              "Azure Monitor & Application Insights - your early warning system",
+              "Network Watcher - your network investigation toolkit",
+              "Azure Resource Health - know the pulse of every service",
+              "Azure Advisor - your trusted advisor for optimization",
+              "Log Analytics - uncover the story behind every issue"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Superhero Crisis Simulation",
+          "description": "Face complex Azure disasters and emerge victorious using your new diagnostic powers",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Crisis Management Mastery",
+      "description": "Learn to lead through chaos and turn disasters into triumphs",
+      "duration": "6 hours",
+      "objectives": [
+        "Master the art of crisis leadership and incident command",
+        "Learn to coordinate with Microsoft support like a pro",
+        "Develop the communication skills to keep stakeholders calm",
+        "Build post-incident review processes that prevent future crises",
+        "Learn to turn failures into learning opportunities",
+        "Develop the resilience to handle any emergency with grace"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Incident management is critical for maintaining service availability and customer trust. Learn to handle incidents systematically and communicate effectively throughout the process.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Incident Management Process",
+            "items": [
+              "Incident detection and classification",
+              "Initial assessment and prioritization",
+              "Escalation procedures and communication",
+              "Root cause analysis and resolution",
+              "Post-incident documentation",
+              "Continuous improvement implementation"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Incident Management Lab",
+          "description": "Manage and resolve simulated Azure incidents",
+          "duration": "150 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Performance Optimization and Monitoring",
+      "description": "Implement proactive monitoring and performance optimization",
+      "duration": "4 hours",
+      "objectives": [
+        "Set up comprehensive Azure monitoring",
+        "Implement performance baselines",
+        "Configure alerting and notifications",
+        "Optimize Azure resource performance",
+        "Implement cost optimization strategies",
+        "Create support documentation"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Proactive Support</h3><p>Effective support goes beyond reactive troubleshooting. Learn to implement proactive monitoring, performance optimization, and preventive maintenance strategies.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Monitoring and Optimization",
+            "items": [
+              "Azure Monitor dashboard configuration",
+              "Performance metrics and KPIs",
+              "Alert rules and action groups",
+              "Log Analytics workspace setup",
+              "Azure Advisor implementation",
+              "Cost optimization recommendations"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring and Optimization Lab",
+          "description": "Implement comprehensive Azure monitoring and optimization",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1200,
+    "discountedPrice": 960,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Azure support training materials",
+      "Hands-on troubleshooting labs",
+      "Azure diagnostic tools guide",
+      "Incident management templates",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure Support Engineer badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Senior Azure Support Engineer",
+    "bio": "Yaïr is a Senior Azure Support Engineer with extensive experience in enterprise Azure support and troubleshooting. He has helped resolve thousands of complex Azure issues and mentored numerous support engineers.",
+    "certifications": [
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Support Engineer Expert",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "ITIL Foundation Certification",
+      "Certified Scrum Master (CSM)",
+      "CompTIA Security+"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-05-20",
+        "endDate": "2024-05-22",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 12,
+        "maxSeats": 15
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Troubleshooting Guide",
+      "url": "https://learn.microsoft.com/en-us/azure/troubleshoot/",
+      "description": "Comprehensive Azure troubleshooting documentation"
+    },
+    {
+      "type": "video",
+      "title": "Azure Support Training Videos",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nC",
+      "description": "Video tutorials for Azure support and troubleshooting"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Diagnostic Tools",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/",
+      "description": "Azure Monitor and diagnostic tools documentation"
+    },
+    {
+      "type": "practice",
+      "title": "Azure Support Scenarios",
+      "url": "https://learn.microsoft.com/en-us/azure/support/",
+      "description": "Azure support resources and best practices"
+    }
+  ],
+  "certification": {
+    "name": "Azure Support Engineer Certification",
+    "code": "AZ-SUPPORT-ENG",
+    "description": "Demonstrate expertise in Azure support, troubleshooting, incident management, and customer support best practices",
+    "examDetails": {
+      "duration": "150 minutes",
+      "questions": 45,
+      "passingScore": 700,
+      "cost": 150,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Azure support fundamentals (20-25%)",
+      "Troubleshooting methodology (25-30%)",
+      "Incident management and resolution (20-25%)",
+      "Performance optimization and monitoring (20-25%)",
+      "Customer communication and documentation (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need customer support experience?",
+      "answer": "While helpful, it's not required. The course covers both technical Azure knowledge and customer support best practices."
+    },
+    {
+      "question": "What Azure services are covered?",
+      "answer": "The course covers troubleshooting for all major Azure services including VMs, networking, storage, databases, and PaaS services."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "Yes, this is a technical course focused on Azure troubleshooting and support. You should have basic Azure administration knowledge."
+    },
+    {
+      "question": "Will I learn about Microsoft support?",
+      "answer": "Yes, the course covers how to work with Microsoft support, understand support plans, and coordinate incident resolution effectively."
+    }
+  ]
+}

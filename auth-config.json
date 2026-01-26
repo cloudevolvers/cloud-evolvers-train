@@ -1,0 +1,28 @@
+{
+  "globalValidation": {
+    "requireAuthentication": true,
+    "unauthenticatedClientAction": "Return401"
+  },
+  "identityProviders": {
+    "azureActiveDirectory": {
+      "enabled": true,
+      "registration": {
+        "clientId": "e53039e6-4244-43b5-b527-27f1a1b8a428",
+        "openIdIssuer": "https://login.microsoftonline.com/34dd9821-1508-4858-974c-e5fd1493a58f/v2.0"
+      },
+      "validation": {
+        "defaultAuthorizationPolicy": {
+          "allowedPrincipals": {
+            "identities": [
+              "403592bc-7b14-47aa-9cb1-f5133b1976d5",
+              "bb55b729-8c1f-4703-bbce-84980989401d"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "platform": {
+    "enabled": true
+  }
+}

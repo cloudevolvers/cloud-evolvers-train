@@ -1,0 +1,194 @@
+{
+  "id": "windows-server-hybrid-administrator",
+  "slug": "windows-server-hybrid-administrator",
+  "title": "Windows Server Hybrid Administrator",
+  "subtitle": "Hybrid Cloud Infrastructure Management",
+  "description": "Master hybrid Windows Server environments with Azure integration",
+  "overview": "This comprehensive 3-day course covers hybrid Windows Server administration, including Azure Arc integration, hybrid identity solutions, storage management, and modern infrastructure operations. Learn to design and manage hybrid environments that seamlessly integrate on-premises and cloud resources.",
+  "category": "Windows Server",
+  "subcategory": "Hybrid Administration",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1095,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Desktop",
+  "learningObjectives": [
+    {
+      "id": "hybrid-architecture",
+      "title": "Design hybrid Windows Server architectures",
+      "description": "Design comprehensive hybrid cloud architecture patterns for Windows Server environments",
+      "icon": "Desktop"
+    },
+    {
+      "id": "azure-arc-integration",
+      "title": "Implement Azure Arc for server management",
+      "description": "Configure Azure Arc-enabled servers for unified management and monitoring",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-identity",
+      "title": "Configure hybrid identity solutions",
+      "description": "Implement hybrid identity solutions with Azure AD and Windows Server",
+      "icon": "Users"
+    },
+    {
+      "id": "hybrid-storage",
+      "title": "Manage hybrid storage and backup",
+      "description": "Configure hybrid storage solutions including Azure File Sync and backup strategies",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "azure-services-onprem",
+      "title": "Deploy Azure services on-premises",
+      "description": "Deploy and manage Azure services in on-premises environments",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-monitoring",
+      "title": "Monitor hybrid server environments",
+      "description": "Monitor and optimize performance in hybrid Windows Server environments",
+      "icon": "Gear"
+    }
+  ],
+  "prerequisites": [
+    "Windows Server administration experience",
+    "Active Directory knowledge",
+    "Basic Azure understanding",
+    "PowerShell scripting skills"
+  ],
+  "targetAudience": [
+    "Windows Server administrators",
+    "Hybrid cloud engineers",
+    "System administrators",
+    "Infrastructure architects"
+  ],
+  "certification": {
+    "available": true,
+    "name": "AZ-800 Administering Windows Server Hybrid Core Infrastructure",
+    "examCode": "AZ-800",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Windows Server",
+    "Hybrid Cloud",
+    "Azure Arc",
+    "Infrastructure",
+    "Administration"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-25T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior Windows Server specialist with extensive experience in hybrid cloud architectures and enterprise infrastructure management",
+    "experience": "15+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-800",
+      "AZ-801",
+      "AZ-104",
+      "MCSE"
+    ]
+  },
+  "modules": [
+    {
+      "id": "hybrid-architecture-design",
+      "title": "Hybrid Architecture Design",
+      "description": "Designing hybrid cloud architecture patterns and integration strategies",
+      "duration": "6 hours",
+      "topics": [
+        "Hybrid cloud architecture patterns",
+        "On-premises and cloud integration",
+        "Network connectivity planning",
+        "Security boundary design"
+      ],
+      "icon": "Desktop"
+    },
+    {
+      "id": "azure-arc-integration",
+      "title": "Azure Arc Integration",
+      "description": "Implementing Azure Arc for unified server management and monitoring",
+      "duration": "6 hours",
+      "topics": [
+        "Azure Arc-enabled servers setup",
+        "Policy and configuration management",
+        "Monitoring and insights",
+        "Security and compliance"
+      ],
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-storage-solutions",
+      "title": "Hybrid Storage Solutions",
+      "description": "Managing hybrid storage solutions and backup strategies",
+      "duration": "6 hours",
+      "topics": [
+        "Azure File Sync deployment",
+        "Storage Spaces Direct with Azure",
+        "Hybrid backup strategies",
+        "Disaster recovery planning"
+      ],
+      "icon": "HardDrives"
+    },
+    {
+      "id": "management-operations",
+      "title": "Management & Operations",
+      "description": "Implementing management and operational strategies for hybrid environments",
+      "duration": "6 hours",
+      "topics": [
+        "Windows Admin Center deployment",
+        "PowerShell DSC and automation",
+        "Update management strategies",
+        "Performance monitoring and optimization"
+      ],
+      "icon": "Gear"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "hybrid-architecture-lab",
+      "title": "Hybrid Architecture Design",
+      "description": "Design and implement hybrid cloud architecture patterns",
+      "duration": "3 hours",
+      "icon": "Desktop"
+    },
+    {
+      "id": "azure-arc-lab",
+      "title": "Azure Arc Configuration",
+      "description": "Configure Azure Arc-enabled servers and management policies",
+      "duration": "3 hours",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-storage-lab",
+      "title": "Hybrid Storage Setup",
+      "description": "Implement Azure File Sync and hybrid storage solutions",
+      "duration": "3 hours",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "management-automation-lab",
+      "title": "Management and Automation",
+      "description": "Configure Windows Admin Center and automation solutions",
+      "duration": "3 hours",
+      "icon": "Gear"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Managing Azure at enterprise scale requires more than just technical knowledge—it requires battle-tested strategies. I've managed Azure environments for organizations with thousands of users, and I've learned what works and what doesn't. In this training, I share the real-world administrative patterns that have saved countless hours and prevented critical issues."
+  }
+}

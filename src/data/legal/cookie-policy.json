@@ -1,0 +1,240 @@
+{
+  "en": {
+    "title": "Cookie Policy",
+    "lastUpdated": "2025-10-23",
+    "intro": "This Cookie Policy explains how Cloud Evolvers (Spot Cloud B.V.) uses cookies and similar technologies on our website. We believe in transparency and giving you control over your data.",
+    "sections": [
+      {
+        "id": "what-are-cookies",
+        "title": "1. What Are Cookies?",
+        "content": "Cookies are small text files that are stored on your device when you visit a website. They help websites remember your preferences and understand how you use the site."
+      },
+      {
+        "id": "cookies-we-use",
+        "title": "2. Cookies We Use",
+        "content": "We use a minimal set of cookies to provide you with the best experience:",
+        "subsections": [
+          {
+            "title": "Essential Cookies (Required)",
+            "items": [
+              "**Session Cookies** - Keep you logged in while you navigate our website",
+              "**Security Cookies** - Protect against fraudulent activity and ensure secure connections",
+              "**Load Balancing** - Distribute traffic across our servers for optimal performance"
+            ],
+            "footer": "These cookies are necessary for the website to function and cannot be disabled."
+          },
+          {
+            "title": "Preference Cookies (Optional)",
+            "items": [
+              "**Language Selection** - Remember your preferred language (English/Dutch)",
+              "**Theme Preference** - Save your dark/light mode choice",
+              "**Cookie Consent** - Remember your cookie preferences"
+            ],
+            "footer": "These cookies enhance your experience but are not strictly necessary. You can disable them, but some features may not work as smoothly."
+          }
+        ]
+      },
+      {
+        "id": "cookies-we-dont-use",
+        "title": "3. What We DON'T Use",
+        "content": "We believe in respecting your privacy. Here's what we explicitly DON'T use:",
+        "items": [
+          "❌ **Advertising Cookies** - We don't track you for advertising purposes",
+          "❌ **Third-Party Tracking** - No Facebook Pixel, Google Ads, or similar tracking",
+          "❌ **Cross-Site Tracking** - We don't follow you around the web",
+          "❌ **Behavioral Profiling** - We don't build profiles of your browsing habits",
+          "❌ **Social Media Tracking Pixels** - We don't use tracking from social media platforms"
+        ]
+      },
+      {
+        "id": "analytics",
+        "title": "4. Analytics",
+        "content": "We use privacy-focused, aggregated analytics to understand basic usage patterns (like which pages are most popular). This data is:",
+        "items": [
+          "**Anonymized** - No personal identification",
+          "**Aggregated** - Grouped statistics only, not individual tracking",
+          "**Privacy-First** - Designed to respect your privacy",
+          "**Non-Invasive** - No behavioral profiling or cross-site tracking"
+        ]
+      },
+      {
+        "id": "managing-cookies",
+        "title": "5. Managing Your Cookies",
+        "content": "You have full control over cookies:",
+        "subsections": [
+          {
+            "title": "Browser Settings",
+            "content": "Most browsers allow you to:",
+            "items": [
+              "View and delete cookies",
+              "Block cookies from specific websites",
+              "Block all third-party cookies",
+              "Clear all cookies when you close your browser"
+            ]
+          },
+          {
+            "title": "Our Cookie Banner",
+            "content": "When you first visit our site, we'll ask for your cookie preferences. You can change these at any time by clicking the cookie settings link in the footer."
+          }
+        ]
+      },
+      {
+        "id": "third-party-services",
+        "title": "6. Third-Party Services",
+        "content": "We integrate with a few trusted third-party services that may set their own cookies:",
+        "items": [
+          "**Microsoft Azure** - For hosting and security (essential for site operation)",
+          "**Payment Processors** - When processing payments (essential for transactions)"
+        ],
+        "footer": "These services have their own privacy policies and cookie practices. We only work with providers that respect user privacy."
+      },
+      {
+        "id": "cookie-lifespan",
+        "title": "7. How Long Do Cookies Last?",
+        "content": "Different cookies have different lifespans:",
+        "items": [
+          "**Session Cookies** - Deleted when you close your browser",
+          "**Preference Cookies** - Last up to 1 year",
+          "**Consent Cookies** - Last up to 1 year"
+        ]
+      },
+      {
+        "id": "updates",
+        "title": "8. Updates to This Policy",
+        "content": "We may update this Cookie Policy from time to time. We'll notify you of significant changes by updating the \"Last Updated\" date at the top of this policy."
+      },
+      {
+        "id": "contact",
+        "title": "9. Questions?",
+        "content": "If you have questions about our use of cookies, please contact us:",
+        "items": [
+          "**Email**: privacy@cloudevolvers.com",
+          "**General**: info@cloudevolvers.com"
+        ]
+      }
+    ],
+    "promise": {
+      "title": "Our Cookie Promise",
+      "content": "We use the bare minimum of cookies needed to make our website work well for you. We don't sell cookie data, we don't track you across websites, and we don't use cookies for advertising. Your privacy matters to us."
+    }
+  },
+  "nl": {
+    "title": "Cookiebeleid",
+    "lastUpdated": "2025-10-23",
+    "intro": "Dit Cookiebeleid legt uit hoe Cloud Evolvers (Spot Cloud B.V.) cookies en vergelijkbare technologieën gebruikt op onze website. We geloven in transparantie en geven u controle over uw gegevens.",
+    "sections": [
+      {
+        "id": "what-are-cookies",
+        "title": "1. Wat Zijn Cookies?",
+        "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u een website bezoekt. Ze helpen websites om uw voorkeuren te onthouden en te begrijpen hoe u de site gebruikt."
+      },
+      {
+        "id": "cookies-we-use",
+        "title": "2. Cookies Die We Gebruiken",
+        "content": "We gebruiken een minimale set cookies om u de beste ervaring te bieden:",
+        "subsections": [
+          {
+            "title": "Essentiële Cookies (Vereist)",
+            "items": [
+              "**Sessiecookies** - Houden u ingelogd terwijl u door onze website navigeert",
+              "**Beveiligingscookies** - Beschermen tegen frauduleuze activiteiten en zorgen voor veilige verbindingen",
+              "**Load Balancing** - Verdelen verkeer over onze servers voor optimale prestaties"
+            ],
+            "footer": "Deze cookies zijn noodzakelijk voor het functioneren van de website en kunnen niet worden uitgeschakeld."
+          },
+          {
+            "title": "Voorkeurscookies (Optioneel)",
+            "items": [
+              "**Taalkeuze** - Onthouden van uw voorkeurstaal (Engels/Nederlands)",
+              "**Themavoorkeur** - Opslaan van uw keuze voor donkere/lichte modus",
+              "**Cookietoestemming** - Onthouden van uw cookievoorkeuren"
+            ],
+            "footer": "Deze cookies verbeteren uw ervaring maar zijn niet strikt noodzakelijk. U kunt ze uitschakelen, maar sommige functies werken mogelijk niet zo soepel."
+          }
+        ]
+      },
+      {
+        "id": "cookies-we-dont-use",
+        "title": "3. Wat We NIET Gebruiken",
+        "content": "We geloven in het respecteren van uw privacy. Dit is wat we expliciet NIET gebruiken:",
+        "items": [
+          "❌ **Advertentiecookies** - We volgen u niet voor advertentiedoeleinden",
+          "❌ **Tracking van Derden** - Geen Facebook Pixel, Google Ads of vergelijkbare tracking",
+          "❌ **Cross-site Tracking** - We volgen u niet op het web",
+          "❌ **Gedragsprofilering** - We bouwen geen profielen van uw surfgedrag",
+          "❌ **Social Media Tracking Pixels** - We gebruiken geen tracking van sociale mediaplatforms"
+        ]
+      },
+      {
+        "id": "analytics",
+        "title": "4. Analytische Gegevens",
+        "content": "We gebruiken privacygerichte, geaggregeerde analytics om basisgebruikspatronen te begrijpen (zoals welke pagina's het populairst zijn). Deze gegevens zijn:",
+        "items": [
+          "**Geanonimiseerd** - Geen persoonlijke identificatie",
+          "**Geaggregeerd** - Alleen gegroepeerde statistieken, geen individuele tracking",
+          "**Privacy-First** - Ontworpen om uw privacy te respecteren",
+          "**Niet-Invasief** - Geen gedragsprofilering of cross-site tracking"
+        ]
+      },
+      {
+        "id": "managing-cookies",
+        "title": "5. Beheer van Uw Cookies",
+        "content": "U heeft volledige controle over cookies:",
+        "subsections": [
+          {
+            "title": "Browserinstellingen",
+            "content": "De meeste browsers stellen u in staat om:",
+            "items": [
+              "Cookies te bekijken en te verwijderen",
+              "Cookies van specifieke websites te blokkeren",
+              "Alle cookies van derden te blokkeren",
+              "Alle cookies te wissen wanneer u uw browser sluit"
+            ]
+          },
+          {
+            "title": "Onze Cookiebanner",
+            "content": "Wanneer u onze site voor het eerst bezoekt, vragen we naar uw cookievoorkeuren. U kunt deze op elk moment wijzigen door op de link voor cookie-instellingen in de footer te klikken."
+          }
+        ]
+      },
+      {
+        "id": "third-party-services",
+        "title": "6. Services van Derden",
+        "content": "We integreren met een paar vertrouwde services van derden die hun eigen cookies kunnen instellen:",
+        "items": [
+          "**Microsoft Azure** - Voor hosting en beveiliging (essentieel voor site-werking)",
+          "**Betalingsverwerkers** - Bij het verwerken van betalingen (essentieel voor transacties)"
+        ],
+        "footer": "Deze services hebben hun eigen privacybeleid en cookiepraktijken. We werken alleen met providers die gebruikersprivacy respecteren."
+      },
+      {
+        "id": "cookie-lifespan",
+        "title": "7. Hoe Lang Blijven Cookies Geldig?",
+        "content": "Verschillende cookies hebben verschillende levensduren:",
+        "items": [
+          "**Sessiecookies** - Verwijderd wanneer u uw browser sluit",
+          "**Voorkeurscookies** - Tot 1 jaar geldig",
+          "**Toestemmingscookies** - Tot 1 jaar geldig"
+        ]
+      },
+      {
+        "id": "updates",
+        "title": "8. Updates van Dit Beleid",
+        "content": "We kunnen dit Cookiebeleid van tijd tot tijd bijwerken. We zullen u op de hoogte stellen van belangrijke wijzigingen door de datum \"Laatst bijgewerkt\" bovenaan dit beleid bij te werken."
+      },
+      {
+        "id": "contact",
+        "title": "9. Vragen?",
+        "content": "Als u vragen heeft over ons gebruik van cookies, neem dan contact met ons op:",
+        "items": [
+          "**E-mail**: privacy@cloudevolvers.com",
+          "**Algemeen**: info@cloudevolvers.com"
+        ]
+      }
+    ],
+    "promise": {
+      "title": "Onze Cookiebelofte",
+      "content": "We gebruiken het absolute minimum aan cookies dat nodig is om onze website goed voor u te laten werken. We verkopen geen cookiegegevens, we volgen u niet over websites heen en we gebruiken geen cookies voor advertenties. Uw privacy is belangrijk voor ons."
+    }
+  }
+}

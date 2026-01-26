@@ -1,0 +1,108 @@
+[
+    {
+      "title": "Cloud Management",
+      "icon": "Cloud",
+      "description": "Complete visibility and control over your environment.",
+      "content": "<p>Our Cloud Management services provide complete visibility and control over your environment, helping you optimize costs, enhance security, and improve performance across your entire cloud estate.</p>",
+      "slug": "cloud-management",
+      "features": [
+        "24/7 monitoring and support",
+        "Cost optimization and analysis",
+        "Security compliance management",
+        "Performance optimization"
+      ]
+    },
+
+    {
+      "title": "Microsoft 365 Copilot",
+      "icon": "Bot",
+      "description": "Maximize productivity with AI-powered assistance across Microsoft 365.",
+      "content": "<p>Our Microsoft 365 Copilot services help you implement, optimize, and maximize the value of this powerful AI assistant across your organization.</p>",
+      "slug": "microsoft-365-copilot",
+      "features": [
+        "AI-powered assistance",
+        "Productivity optimization",
+        "Integration with Microsoft 365",
+        "User training and support"
+      ]
+    },
+    {
+      "title": "Cloud Engineering",
+      "icon": "Network",
+      "description": "Expert cloud engineering services for your infrastructure.",
+      "content": "<p>Our Cloud Engineering services help you design, build and optimize your infrastructure for maximum performance, reliability and cost-efficiency.</p>",
+      "slug": "cloud-engineering",
+      "features": [
+        "Infrastructure design",
+        "Performance optimization",
+        "Reliability engineering",
+        "Cost-efficiency analysis"
+      ]
+    },
+    {
+      "title": "AI Engineering & Consultancy",
+      "icon": "Cpu",
+      "description": "Build and deploy advanced AI solutions in your environment.",
+      "content": "<p>Our AI Engineering services help you leverage the latest AI technologies to drive innovation and business value in your organization.</p>",
+      "slug": "ai-engineering",
+      "features": [
+        "AI solution design",
+        "Model development",
+        "Deployment and monitoring",
+        "Business value analysis"
+      ]
+    },
+    {
+      "title": "Infrastructure as Code",
+      "icon": "Code",
+      "description": "Automate infrastructure provisioning and management with code.",
+      "content": "<p>Our Infrastructure as Code services help you automate the provisioning and management of your cloud infrastructure, increasing efficiency and reducing human error.</p>",
+      "slug": "infrastructure-as-code",
+      "features": [
+        "Automated provisioning",
+        "Configuration management",
+        "Version control",
+        "Error reduction"
+      ]
+    },
+    {
+      "title": "Network Engineering",
+      "icon": "Globe",
+      "description": "Design and implement robust networking solutions.",
+      "content": "<p>Our Network Engineering services help you design, implement and manage secure, reliable and high-performance networks.</p>",
+      "slug": "network-engineering",
+      "features": [
+        "Network design",
+        "Implementation",
+        "Security management",
+        "Performance optimization"
+      ]
+    },
+    {
+      "title": "Azure API Monitoring",
+      "icon": "LineChart",
+      "description": "Real-time visibility into your Azure resources with custom dashboards and alerts.",
+      "content": "<p>Our Azure API Monitoring services provide real-time visibility into your Azure infrastructure with custom dashboards and alerts, helping you ensure optimal performance and prevent issues before they impact your operations.</p>",
+      "slug": "azure-monitoring",
+      "features": [
+        "24/7 resource monitoring",
+        "Custom alert configurations",
+        "Performance analytics",
+        "Resource usage trends"
+      ]
+    },
+    {
+      "title": "Enterprise File Transfer",
+      "icon": "FileTransfer",
+      "description": "Secure, reliable file sharing for businesses with advanced security and controls.",
+      "content": "<p>Our Enterprise File Transfer solution provides secure, reliable, and efficient file sharing capabilities for businesses of all sizes with advanced security features and robust controls.</p>",
+      "slug": "enterprise-file-transfer",
+      "features": [
+        "End-to-end encryption",
+        "Granular access controls",
+        "Transfer automation",
+        "Detailed audit logs"
+      ]
+    },
+
+  ]

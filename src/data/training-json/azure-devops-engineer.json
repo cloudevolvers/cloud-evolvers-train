@@ -1,0 +1,235 @@
+{
+  "id": "azure-devops-engineer",
+  "slug": "azure-devops-engineer",
+  "title": "Azure DevOps Engineer Expert (AZ-400)",
+  "description": "Master Azure DevOps practices for modern software delivery",
+  "content": "Comprehensive training on Azure DevOps practices, covering CI/CD pipelines, infrastructure as code, monitoring, and feedback mechanisms. Perfect for teams adopting DevOps methodologies in Azure environments.",
+  "category": "Development",
+  "subcategory": "DevOps",
+  "difficulty": "Advanced",
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "prerequisites": [
+    "AZ-104 or equivalent Azure experience",
+    "Experience with version control systems",
+    "Understanding of software development lifecycle",
+    "Basic knowledge of containerization"
+  ],
+  "learningObjectives": [
+    {
+      "id": "devops-planning",
+      "title": "Configure processes and communications",
+      "description": "Learn to configure processes and communications for DevOps transformation",
+      "icon": "Strategy"
+    },
+    {
+      "id": "source-control",
+      "title": "Design and implement source control",
+      "description": "Design and implement source control strategies",
+      "icon": "GitBranch"
+    },
+    {
+      "id": "build-release",
+      "title": "Design and implement build and release pipelines",
+      "description": "Create robust CI/CD pipelines for application delivery",
+      "icon": "Pipeline"
+    },
+    {
+      "id": "dependency-management",
+      "title": "Develop a security and compliance plan",
+      "description": "Implement security and compliance in DevOps workflows",
+      "icon": "Shield"
+    },
+    {
+      "id": "feedback-mechanisms",
+      "title": "Implement an instrumentation strategy",
+      "description": "Implement monitoring and feedback mechanisms",
+      "icon": "BarChart"
+    }
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Experienced DevOps professional with 8+ years in enterprise software delivery and cloud-native development.",
+    "expertise": [
+      "Azure DevOps",
+      "CI/CD",
+      "Infrastructure as Code",
+      "Container Orchestration"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-400",
+      "AZ-104",
+      "AZ-305"
+    ]
+  },
+  "price": {
+    "amount": 1795,
+    "currency": "EUR"
+  },
+  "schedule": {
+    "available": true
+  },
+  "tags": [
+    "Azure",
+    "DevOps",
+    "AZ-400",
+    "CI/CD"
+  ],
+  "featured": true,
+  "certification": {
+    "available": true,
+    "name": "AZ-400",
+    "examCode": "AZ-400",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "icon": "Pipeline",
+  "overview": "Comprehensive training on Azure DevOps practices, covering CI/CD pipelines, infrastructure as code, monitoring, and feedback mechanisms. Perfect for teams adopting DevOps methodologies in Azure environments.",
+  "whatYouWillLearn": [
+    {
+      "title": "DevOps Strategy & Planning",
+      "description": "Configure DevOps processes, communications, and transformation strategies"
+    },
+    {
+      "title": "Source Control & Branching",
+      "description": "Design and implement effective source control and branching strategies"
+    },
+    {
+      "title": "CI/CD Pipeline Design",
+      "description": "Build robust continuous integration and deployment pipelines"
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Implement and manage infrastructure using code and automation"
+    },
+    {
+      "title": "Security & Compliance",
+      "description": "Integrate security and compliance practices into DevOps workflows"
+    },
+    {
+      "title": "Monitoring & Feedback",
+      "description": "Implement comprehensive monitoring and feedback mechanisms"
+    }
+  ],
+  "modules": [
+    {
+      "id": "devops-planning",
+      "title": "DevOps Planning & Strategy",
+      "description": "Configure processes and communications for DevOps transformation",
+      "icon": "Strategy",
+      "duration": "8 hours",
+      "topics": [
+        "DevOps transformation planning",
+        "Communication and collaboration strategies",
+        "Agile planning and project management",
+        "Team structures and responsibilities"
+      ]
+    },
+    {
+      "id": "source-control",
+      "title": "Source Control & Version Management",
+      "description": "Design and implement source control strategies",
+      "icon": "GitBranch",
+      "duration": "8 hours",
+      "topics": [
+        "Git workflow strategies",
+        "Branching and merging strategies",
+        "Pull request workflows",
+        "Version control best practices"
+      ]
+    },
+    {
+      "id": "build-release",
+      "title": "Build & Release Management",
+      "description": "Create robust CI/CD pipelines for application delivery",
+      "icon": "Pipeline",
+      "duration": "8 hours",
+      "topics": [
+        "Azure Pipelines configuration",
+        "Build automation strategies",
+        "Release management practices",
+        "Deployment strategies and patterns"
+      ]
+    },
+    {
+      "id": "infrastructure-security",
+      "title": "Infrastructure & Security",
+      "description": "Implement infrastructure as code and security practices",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Infrastructure as Code with ARM/Bicep",
+        "Security scanning and compliance",
+        "Secret management practices",
+        "Container security and governance"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "azure-devops-setup",
+      "title": "Azure DevOps Organization Setup",
+      "description": "Set up Azure DevOps organization and configure initial projects",
+      "icon": "Settings",
+      "duration": "2 hours"
+    },
+    {
+      "id": "git-workflow",
+      "title": "Git Workflow Implementation",
+      "description": "Implement Git branching strategies and pull request workflows",
+      "icon": "GitBranch",
+      "duration": "2 hours"
+    },
+    {
+      "id": "ci-pipeline",
+      "title": "CI Pipeline Development",
+      "description": "Build and configure continuous integration pipelines",
+      "icon": "Pipeline",
+      "duration": "3 hours"
+    },
+    {
+      "id": "cd-pipeline",
+      "title": "CD Pipeline Implementation",
+      "description": "Implement continuous deployment with multiple environments",
+      "icon": "CloudUpload",
+      "duration": "3 hours"
+    },
+    {
+      "id": "infrastructure-code",
+      "title": "Infrastructure as Code",
+      "description": "Deploy infrastructure using ARM templates and Azure Pipelines",
+      "icon": "Code",
+      "duration": "2 hours"
+    },
+    {
+      "id": "monitoring-setup",
+      "title": "Application Monitoring",
+      "description": "Configure Application Insights and Azure Monitor for DevOps",
+      "icon": "BarChart",
+      "duration": "2 hours"
+    }
+  ],
+  "trainingFormat": {
+    "duration": "4 days intensive",
+    "groupSize": "Max 12 participants",
+    "certification": "AZ-400 Expert preparation"
+  },
+  "targetAudience": [
+    "DevOps engineers",
+    "Software developers",
+    "Release managers",
+    "System administrators transitioning to DevOps"
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-09-01T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "DevOps transformed how I build and deploy software. I've implemented CI/CD pipelines for teams ranging from startups to enterprises, reducing deployment times from days to minutes. This training covers the automation strategies that have proven successful across hundreds of Azure deployments."
+  }
+}

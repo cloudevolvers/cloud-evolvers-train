@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "slug": "azure-devops-engineer-expert-nl",
+    "title": "Azure DevOps Engineer Expert",
+    "subtitle": "Word de DevOps Architect Waar Bedrijven Om Vechten",
+    "description": "De wereld draait op software, en software wordt uitgerold door DevOps engineers. Deze cursus transformeert je van iemand die code uitrolt naar iemand die de pipelines bouwt die de meest kritische applicaties ter wereld aandrijven. Je beheerst de Azure DevOps tools en practices die de engineers die worden aangenomen scheiden van degenen die dat niet doen.",
+    "category": "DevOps",
+    "level": "Gevorderd",
+    "duration": "5 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "DevOps", "CI/CD", "Infrastructure as Code", "Monitoring", "Security"],
+    "prerequisites": [
+      "Ervaring met Azure administratie of ontwikkeling",
+      "Begrip van agile practices en versiebeheer",
+      "Basis kennis van scripting (PowerShell, Bash, of Python)",
+      "Een brandend verlangen om de deployment pipelines te beheersen die de moderne wereld aandrijven"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-devops-hero.jpg",
+    "badge": "Elite DevOps Architect",
+    "highlights": [
+      "Beheers de deployment pipelines die Fortune 500 bedrijven aandrijven",
+      "Bouw infrastructuur die automatisch schaalt en zichzelf geneest",
+      "Leer de beveiligingspractices die miljarden aan omzet beschermen",
+      "Word lid van de elite engineers die code uitrollen die de wereld verandert"
+    ]
+  },
+  "overview": {
+    "summary": "Elk geweldig product heeft een geweldige DevOps engineer erachter nodig. Deze cursus leert je de Azure DevOps vaardigheden die de engineers die deployment pipelines bouwen scheiden van degenen die de systemen bouwen die ze aandrijven. Je leert infrastructuur te creëren die zichzelf uitrolt, pipelines die bugs vangen voordat ze productie bereiken, en monitoring systemen die storingen voorspellen voordat ze gebeuren. Aan het einde heb je de technische beheersing en architecturale visie om DevOps transformaties bij elke organisatie te leiden.",
+    "objectives": [
+      "Beheers Azure DevOps beveiligings- en compliance frameworks",
+      "Bouw infrastructuur die zichzelf uitrolt en beheert",
+      "Creëer CI/CD pipelines die kwaliteit en snelheid garanderen",
+      "Implementeer monitoring systemen die storingen voorspellen en voorkomen",
+      "Ontwerp dependency management dat deployment conflicten elimineert",
+      "Architect applicatie-infrastructuur die automatisch schaalt",
+      "Bouw feedback loops die ontwikkelprocessen continu verbeteren"
+    ],
+    "targetAudience": "Deze cursus is voor de engineers die klaar zijn om de architecten van deployment te worden. Of je nu een ontwikkelaar bent die de deployment kant wilt beheersen, een sysadmin die klaar is voor DevOps cultuur, of een IT professional die digitale transformaties wilt leiden - als je de systemen wilt bouwen die software deployment onzichtbaar en perfect maken, geeft deze cursus je de vaardigheden en mindset om de DevOps engineer te worden waar bedrijven om strijden."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "DevOps Beveiliging en Compliance",
+      "description": "Ontwerp en implementeer beveiliging en compliance in DevOps",
+      "duration": "8 uur",
+      "objectives": [
+        "Ontwerp een beveiligings- en compliance plan",
+        "Implementeer authenticatie en autorisatie",
+        "Implementeer veilige codeerpractices",
+        "Beheer gevoelige informatie",
+        "Implementeer beveiligingstesten"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>DevSecOps Principes</h3><p>Beveiliging moet geïntegreerd worden in de gehele DevOps lifecycle. Leer beveiligingspractices te implementeren die de ontwikkelsnelheid niet vertragen.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Beveiligingsbest Practices",
+            "items": [
+              "Shift-left beveiligingsaanpak",
+              "Geautomatiseerde beveiligingstesten",
+              "Secrets management",
+              "Compliance as code",
+              "Beveiligingsmonitoring en alerting"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Beveiliging Implementatie Lab",
+          "description": "Implementeer beveiligingspractices in Azure DevOps pipelines",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Infrastructure as Code",
+      "description": "Implementeer infrastructure as code met Azure tools",
+      "duration": "8 uur",
+      "objectives": [
+        "Implementeer infrastructure as code",
+        "Implementeer Azure Resource Manager templates",
+        "Implementeer Bicep templates",
+        "Implementeer Azure CLI en PowerShell",
+        "Implementeer configuration management"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Infrastructure as Code maakt consistente en herhaalbare infrastructuur deployment mogelijk. Leer Azure Resource Manager, Bicep en configuration management tools te gebruiken.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/iac-tools.jpg",
+            "alt": "Infrastructure as Code Tools",
+            "caption": "ARM templates, Bicep, Terraform, en Azure CLI"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "IaC Implementatie Lab",
+          "description": "Creëer en deploy infrastructuur met code",
+          "duration": "150 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Continuous Integration en Delivery",
+      "description": "Implementeer CI/CD pipelines met Azure DevOps",
+      "duration": "10 uur",
+      "objectives": [
+        "Implementeer continuous integration",
+        "Implementeer continuous delivery",
+        "Implementeer deployment patronen",
+        "Implementeer release management",
+        "Implementeer geautomatiseerde testen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>CI/CD Pipeline Ontwerp</h3><p>Leer robuuste CI/CD pipelines te ontwerpen en implementeren die code kwaliteit verzekeren, testen automatiseren en betrouwbare deployments mogelijk maken.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "CI/CD Pipeline Lab",
+          "description": "Bouw complete CI/CD pipelines voor applicaties",
+          "duration": "180 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Applicatie Infrastructuur en Monitoring",
+      "description": "Implementeer applicatie infrastructuur en monitoring",
+      "duration": "8 uur",
+      "objectives": [
+        "Implementeer applicatie infrastructuur",
+        "Implementeer containerisatie",
+        "Implementeer applicatie monitoring",
+        "Implementeer logging",
+        "Implementeer feedback mechanismen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Moderne applicaties vereisen robuuste infrastructuur en uitgebreide monitoring. Leer gecontaineriseerde applicaties te implementeren en effectieve monitoring en logging in te stellen.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Monitoring en Logging Lab",
+          "description": "Implementeer uitgebreide applicatie monitoring",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2100,
+    "discountedPrice": 1680,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursusmaterialen",
+      "Hands-on lab toegang",
+      "AZ-400 examen voucher",
+      "Lunch en verfrissingen",
+      "Cursuscertificaat",
+      "Azure DevOps Engineer Expert badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "DevOps Engineering Lead",
+    "bio": "Yaïr is een DevOps Engineering Lead met uitgebreide ervaring in het implementeren van CI/CD pipelines en cloud infrastructuur. Hij heeft DevOps transformaties geleid bij meerdere Fortune 500 bedrijven.",
+    "certifications": [
+      "Microsoft Certified: Azure DevOps Engineer Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "AWS Certified DevOps Engineer - Professional",
+      "Certified Kubernetes Administrator (CKA)",
+      "HashiCorp Certified: Terraform Associate"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-18",
+        "endDate": "2024-03-22",
+        "location": "Amsterdam, Nederland",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure DevOps Engineer Expert Leerpad",
+      "url": "https://learn.microsoft.com/nl-nl/training/paths/azure-devops-engineer-expert/",
+      "description": "Officiële Microsoft leerpad voor Azure DevOps Engineers"
+    },
+    {
+      "type": "video",
+      "title": "Azure DevOps Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nG8QK",
+      "description": "Azure DevOps tutorials en best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-400 Oefentests",
+      "url": "https://practice.microsoft.com/exams/az-400",
+      "description": "Officiële oefentests voor AZ-400 certificering"
+    },
+    {
+      "type": "tool",
+      "title": "Azure DevOps",
+      "url": "https://dev.azure.com/",
+      "description": "Azure DevOps diensten voor CI/CD en project management"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure DevOps Engineer Expert",
+    "code": "AZ-400",
+    "description": "Demonstreer vaardigheden in het ontwerpen en implementeren van DevOps practices voor versiebeheer, compliance, infrastructure as code, continuous integration, continuous delivery, en monitoring en logging",
+    "examDetails": {
+      "duration": "150 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["Engels", "Spaans", "Frans", "Duits", "Chinees", "Japans"]
+    },
+    "skillsMeasured": [
+      "Ontwikkel een beveiligings- en compliance plan (10-15%)",
+      "Implementeer infrastructure as code (10-15%)",
+      "Implementeer continuous integration (20-25%)",
+      "Implementeer continuous delivery en deployment (10-15%)",
+      "Implementeer dependency management (5-10%)",
+      "Implementeer applicatie infrastructuur (15-20%)",
+      "Implementeer continuous feedback (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Wat zijn de vereisten voor deze cursus?",
+      "answer": "Je moet ervaring hebben met Azure administratie of ontwikkeling, en vertrouwd zijn met agile practices en versiebeheer."
+    },
+    {
+      "question": "Heb ik programmeerervaring nodig?",
+      "answer": "Ja, je moet comfortabel zijn met scripttalen zoals PowerShell, Bash of Python voor automatiserings taken."
+    },
+    {
+      "question": "Welke tools leer ik?",
+      "answer": "Je leert Azure DevOps, Azure Resource Manager, Bicep, Azure CLI, Git en verschillende monitoring tools."
+    },
+    {
+      "question": "Is deze cursus praktisch?",
+      "answer": "Ja, deze cursus bevat uitgebreide hands-on labs waar je complete CI/CD pipelines bouwt en DevOps practices implementeert."
+    }
+  ]
+}

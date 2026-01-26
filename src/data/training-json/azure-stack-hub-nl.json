@@ -1,0 +1,194 @@
+{
+  "id": "azure-stack-hub-nl",
+  "slug": "azure-stack-hub",
+  "title": "Azure Stack Hub Administratie",
+  "subtitle": "Hybride Cloud Infrastructuur Management",
+  "description": "Beheers hybride cloud infrastructuur met Azure Stack Hub implementatie en beheer",
+  "overview": "Deze uitgebreide 3-daagse cursus behandelt Azure Stack Hub implementatie, configuratie en beheer. Leer Azure services on-premises te beheren, hybride omgevingen te managen en enterprise-grade infrastructuur oplossingen te implementeren.",
+  "category": "Azure Infrastructuur",
+  "subcategory": "Hybride Cloud",
+  "difficulty": "Gevorderd",
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1295,
+    "currency": "EUR"
+  },
+  "featured": false,
+  "icon": "Stack",
+  "learningObjectives": [
+    {
+      "id": "stack-hub-deployment",
+      "title": "Implementeer en configureer Azure Stack Hub",
+      "description": "Leer Azure Stack Hub infrastructuur te implementeren en configureren",
+      "icon": "Stack"
+    },
+    {
+      "id": "hybrid-identity",
+      "title": "Beheer identiteit en toegang in hybride omgevingen",
+      "description": "Configureer identiteitsbeheer en toegangscontroles in hybride scenario's",
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "hybrid-networking",
+      "title": "Implementeer netwerkconnectiviteit en beveiliging",
+      "description": "Configureer netwerken, connectiviteit en beveiliging in hybride omgevingen",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "hybrid-storage",
+      "title": "Configureer opslag en backup oplossingen",
+      "description": "Implementeer opslag oplossingen en backup strategieën voor hybride infrastructuur",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "stack-monitoring",
+      "title": "Monitor en onderhoud Azure Stack Hub systemen",
+      "description": "Stel monitoring, onderhoud en prestatie optimalisatie op",
+      "icon": "Gear"
+    },
+    {
+      "id": "stack-troubleshooting",
+      "title": "Troubleshoot veelvoorkomende operationele problemen",
+      "description": "Leer troubleshooting technieken voor Azure Stack Hub operaties",
+      "icon": "Gear"
+    }
+  ],
+  "prerequisites": [
+    "Azure Administrator certificering (AZ-104)",
+    "Windows Server administratie ervaring",
+    "Hyper-V en virtualisatie kennis",
+    "PowerShell scripting ervaring"
+  ],
+  "targetAudience": [
+    "Infrastructuur administrators",
+    "Hybride cloud architecten",
+    "Systeembeheerders",
+    "DevOps engineers met infrastructuur focus"
+  ],
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Azure Stack Hub Operator Associate",
+    "examCode": "AZ-600",
+    "provider": "Microsoft"
+  },
+  "tags": [
+    "Azure",
+    "Stack Hub",
+    "Hybride Cloud",
+    "Infrastructuur",
+    "Enterprise"
+  ],
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true,
+    "nextSession": "2024-03-01T09:00:00Z"
+  },
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Senior infrastructuur specialist met uitgebreide ervaring in hybride cloud implementaties en Azure Stack Hub operaties",
+    "experience": "12+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AZ-600",
+      "AZ-104",
+      "AZ-900",
+      "MCSE"
+    ]
+  },
+  "modules": [
+    {
+      "id": "stack-hub-overview",
+      "title": "Azure Stack Hub Overzicht",
+      "description": "Begrijp Azure Stack Hub architectuur en componenten",
+      "duration": "6 uur",
+      "topics": [
+        "Architectuur en componenten",
+        "Implementatie modellen en scenario's",
+        "Hardware en capaciteitsplanning",
+        "Licenties en kosten overwegingen"
+      ],
+      "icon": "Stack"
+    },
+    {
+      "id": "installation-configuration",
+      "title": "Installatie & Configuratie",
+      "description": "Implementeren en configureren van Azure Stack Hub",
+      "duration": "6 uur",
+      "topics": [
+        "Pre-implementatie validatie",
+        "Azure Stack Hub implementatie",
+        "Post-implementatie configuratie",
+        "Azure registratie en marketplace"
+      ],
+      "icon": "CloudArrowUp"
+    },
+    {
+      "id": "infrastructure-management",
+      "title": "Infrastructuur Management",
+      "description": "Beheer Azure Stack Hub infrastructuur componenten",
+      "duration": "6 uur",
+      "topics": [
+        "Regio en quota management",
+        "Plan, offer en subscription setup",
+        "Resource provider management",
+        "Netwerkinfrastructuur configuratie"
+      ],
+      "icon": "HardDrives"
+    },
+    {
+      "id": "operations-maintenance",
+      "title": "Operaties & Onderhoud",
+      "description": "Beheer en onderhoud Azure Stack Hub systemen",
+      "duration": "6 uur",
+      "topics": [
+        "Systeem monitoring en alerting",
+        "Update en patch management",
+        "Backup en disaster recovery",
+        "Prestatie tuning en optimalisatie"
+      ],
+      "icon": "Gear"
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "stack-deployment-lab",
+      "title": "Azure Stack Hub Implementatie",
+      "description": "Hands-on implementatie van Azure Stack Hub infrastructuur",
+      "duration": "4 uur",
+      "icon": "Stack"
+    },
+    {
+      "id": "infrastructure-config-lab",
+      "title": "Infrastructuur Configuratie",
+      "description": "Configureer regio's, quota's en resource providers",
+      "duration": "4 uur",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "networking-lab",
+      "title": "Netwerk Configuratie",
+      "description": "Configureer netwerken en connectiviteit in Azure Stack Hub",
+      "duration": "4 uur",
+      "icon": "HardDrives"
+    },
+    {
+      "id": "monitoring-lab",
+      "title": "Monitoring en Onderhoud",
+      "description": "Stel monitoring op en voer onderhouds taken uit",
+      "duration": "4 uur",
+      "icon": "Gear"
+    }
+  ],
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Gedurende mijn carrière als Microsoft Certified Trainer heb ik het voorrecht gehad om duizenden professionals te onderwijzen. Elke training die ik geef wordt verrijkt door praktijkimplementaties en praktische ervaring. Ik leer niet alleen concepten—ik deel wat daadwerkelijk werkt in productieomgevingen."
+  }
+}

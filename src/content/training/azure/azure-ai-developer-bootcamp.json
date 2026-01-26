@@ -1,0 +1,373 @@
+{
+  "metadata": {
+    "slug": "azure-ai-developer-bootcamp",
+    "title": "Azure AI Developer Bootcamp",
+    "subtitle": "5 Days That Will Transform Your Career Forever",
+    "description": "This isn't just a course - it's a career accelerator. In just 5 intense days, you'll go from AI curious to AI expert, building the skills that will make you the most sought-after developer in the industry. Companies are desperate for developers who can turn AI ideas into reality, and this bootcamp will make you that developer.",
+    "category": "AI & Machine Learning",
+    "level": "Advanced",
+    "duration": "5 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "AI", "Machine Learning", "Development", "Bootcamp", "Python", "Azure ML", "Cognitive Services", "Career Transformation"],
+    "prerequisites": [
+      "A burning desire to become an AI developer",
+      "Basic programming skills (we'll teach you the rest)",
+      "The courage to push through 5 intense days of learning"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-ai-bootcamp-hero.jpg",
+    "badge": "Elite AI Developer Training",
+    "highlights": [
+      "Build 5 production-ready AI applications in 5 days",
+      "Master the AI skills that pay $150k+ annually",
+      "Join an exclusive community of AI innovators",
+      "Get hired by top tech companies worldwide"
+    ]
+  },
+  "overview": {
+    "summary": "Imagine walking into a job interview and confidently saying 'I built 5 AI applications last week.' That's the reality of this bootcamp. We're not here to teach you theory - we're here to transform you into the AI developer that companies are fighting over. You'll code from 9 AM to 9 PM, break through mental barriers, and emerge as someone who can turn any AI idea into working software. This isn't comfortable learning - this is the intense, life-changing experience that separates the AI developers who get hired from those who don't.",
+    "objectives": [
+      "Master every Azure AI service and when to use each one",
+      "Build custom machine learning models from scratch",
+      "Deploy AI solutions that can handle millions of users",
+      "Create computer vision systems that rival commercial products",
+      "Develop NLP applications that understand human intent",
+      "Launch a portfolio of AI projects that will get you hired"
+    ],
+    "targetAudience": "This bootcamp is for developers who are serious about becoming AI experts. If you're tired of being a junior developer and want to become the person who leads AI initiatives, if you want to command six-figure salaries and work on cutting-edge projects, if you're ready to push through discomfort to achieve extraordinary results - this bootcamp will change your life. No more 'I wish I could build AI' - you'll actually do it."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure AI Services Deep Dive",
+      "description": "Master Azure Cognitive Services and AI APIs",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement Azure Computer Vision solutions",
+        "Build NLP applications with Azure Language",
+        "Create conversational AI with Azure Bot Service",
+        "Integrate Azure OpenAI Service",
+        "Handle authentication and security",
+        "Optimize API usage and costs"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure AI Services Architecture</h3><p>Learn the architecture and capabilities of Azure AI services, including Cognitive Services, Azure OpenAI, and Azure AI platform components.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Key AI Services",
+            "items": [
+              "Azure Computer Vision for image analysis",
+              "Azure Language for text processing",
+              "Azure OpenAI for generative AI",
+              "Azure Speech for voice applications",
+              "Azure Bot Service for conversational AI",
+              "Azure Form Recognizer for document processing"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/ai-services-architecture.jpg",
+            "alt": "Azure AI Services Architecture",
+            "caption": "Comprehensive Azure AI services ecosystem"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "AI Services Integration Lab",
+          "description": "Build applications using multiple Azure AI services",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Custom Machine Learning with Azure ML",
+      "description": "Build and deploy custom ML models",
+      "duration": "10 hours",
+      "objectives": [
+        "Set up Azure Machine Learning workspace",
+        "Prepare and process data for ML",
+        "Train and evaluate ML models",
+        "Implement automated ML",
+        "Deploy models to production",
+        "Monitor and retrain models"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Azure Machine Learning Workflow</h3><p>Master the complete ML lifecycle using Azure Machine Learning, from data preparation to model deployment and monitoring.</p>"
+          },
+          {
+            "type": "list",
+            "title": "ML Development Process",
+            "items": [
+              "Data ingestion and preparation",
+              "Feature engineering and selection",
+              "Model training and validation",
+              "Hyperparameter tuning",
+              "Model deployment and serving",
+              "Performance monitoring and A/B testing"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Custom ML Model Development Lab",
+          "description": "Build and deploy a complete ML solution",
+          "duration": "240 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Computer Vision and Image Processing",
+      "description": "Advanced computer vision development",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement custom vision models",
+        "Process real-time video streams",
+        "Build image classification systems",
+        "Develop object detection solutions",
+        "Handle image preprocessing and augmentation",
+        "Optimize models for edge deployment"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Advanced computer vision techniques for building intelligent image processing applications, from basic classification to complex object detection and tracking.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Computer Vision Techniques",
+            "items": [
+              "Custom image classification",
+              "Object detection and localization",
+              "Image segmentation",
+              "Facial recognition systems",
+              "Optical character recognition",
+              "Real-time video analysis"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Computer Vision Project Lab",
+          "description": "Build a complete computer vision application",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Natural Language Processing and Generative AI",
+      "description": "Advanced NLP and generative AI development",
+      "duration": "8 hours",
+      "objectives": [
+        "Implement custom NLP models",
+        "Build generative AI applications",
+        "Create chatbots and virtual assistants",
+        "Develop text analysis systems",
+        "Implement language translation",
+        "Handle multilingual applications"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>NLP and Generative AI</h3><p>Master advanced natural language processing techniques and build applications using generative AI models and Azure OpenAI Service.</p>"
+          },
+          {
+            "type": "list",
+            "title": "NLP Applications",
+            "items": [
+              "Sentiment analysis and emotion detection",
+              "Named entity recognition",
+              "Text summarization and generation",
+              "Language translation and localization",
+              "Conversational AI and chatbots",
+              "Document processing and understanding"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "NLP and Generative AI Lab",
+          "description": "Build advanced NLP and generative AI applications",
+          "duration": "180 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Production Deployment and MLOps",
+      "description": "Deploy AI solutions to production",
+      "duration": "6 hours",
+      "objectives": [
+        "Implement MLOps practices",
+        "Deploy models to production environments",
+        "Set up CI/CD pipelines for ML",
+        "Implement model monitoring and logging",
+        "Handle model versioning and rollback",
+        "Scale AI applications"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>MLOps practices for deploying and maintaining AI solutions in production environments, ensuring reliability, scalability, and continuous improvement.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Production Deployment",
+            "items": [
+              "Model containerization and deployment",
+              "API development and management",
+              "Performance monitoring and alerting",
+              "A/B testing and model comparison",
+              "Automated retraining pipelines",
+              "Security and compliance considerations"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Production Deployment Lab",
+          "description": "Deploy and monitor AI applications in production",
+          "duration": "120 minutes",
+          "type": "hands-on",
+          "difficulty": "advanced"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2500,
+    "discountedPrice": 2000,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Intensive bootcamp materials",
+      "Azure subscription credits for labs",
+      "Access to Azure AI development environment",
+      "Code samples and project templates",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure AI Developer Bootcamp badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Principal AI Architect",
+    "bio": "Yaïr is a Principal AI Architect with extensive experience in building production AI systems. He has led numerous AI projects from concept to deployment and specializes in Azure AI platform and MLOps practices.",
+    "certifications": [
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "PhD in Artificial Intelligence",
+      "Certified Kubernetes Administrator (CKA)",
+      "AWS Certified Machine Learning - Specialty",
+      "Google Cloud Professional ML Engineer"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-06-10",
+        "endDate": "2024-06-14",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 8,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure AI Developer Documentation",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/",
+      "description": "Comprehensive Azure AI services documentation"
+    },
+    {
+      "type": "video",
+      "title": "Azure AI Development Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nE",
+      "description": "Advanced Azure AI development tutorials"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Machine Learning Studio",
+      "url": "https://ml.azure.com/",
+      "description": "Azure ML development environment"
+    },
+    {
+      "type": "code",
+      "title": "Azure AI Samples Repository",
+      "url": "https://github.com/Azure-Samples/azure-ai",
+      "description": "Code samples for Azure AI development"
+    }
+  ],
+  "certification": {
+    "name": "Azure AI Developer Bootcamp Certification",
+    "code": "AZ-AI-BOOTCAMP",
+    "description": "Demonstrate mastery of Azure AI development, custom ML model building, and production deployment of AI solutions",
+    "examDetails": {
+      "duration": "240 minutes",
+      "questions": 60,
+      "passingScore": 750,
+      "cost": 250,
+      "languages": ["English"]
+    },
+    "skillsMeasured": [
+      "Azure AI services implementation (20-25%)",
+      "Custom machine learning development (25-30%)",
+      "Computer vision applications (15-20%)",
+      "Natural language processing (15-20%)",
+      "Production deployment and MLOps (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "What programming languages are used?",
+      "answer": "The bootcamp primarily uses Python for AI development, with some JavaScript for web integration. All code samples and labs are provided."
+    },
+    {
+      "question": "Do I need my own Azure subscription?",
+      "answer": "While having your own subscription is beneficial for continued learning, we provide Azure credits for all lab exercises during the bootcamp."
+    },
+    {
+      "question": "Is this bootcamp technical?",
+      "answer": "Yes, this is a highly technical bootcamp requiring programming skills and AI knowledge. It's designed for developers who want to build production AI systems."
+    },
+    {
+      "question": "What projects will I build?",
+      "answer": "You'll build multiple projects including a computer vision application, NLP chatbot, custom ML model, and a complete AI-powered web application."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Deployment Trigger
+
+This file is used to trigger fresh deployments when needed.
+
+Last triggered: 2025-08-30T22:12:00Z
+Reason: Fix production deployment stuck on wrong branch - force deploy from main branch with proper RBAC permissions
+Target: Production environment should deploy from main, not feature/fix-azure-functions-structure

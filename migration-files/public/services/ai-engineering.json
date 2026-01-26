@@ -1,0 +1,18 @@
+{
+  "id": "ai-engineering",
+  "title": "AI Engineering & Consultancy",
+  "slug": "ai-engineering",
+  "description": "Build and deploy advanced AI solutions in your Azure environment.",
+  "icon": "Cpu",
+  "content": "\n# AI Engineering & Consultancy Services\n\nHarness the power of artificial intelligence within your Azure environment with our comprehensive AI engineering and consultancy services.\n\n## Our AI Expertise\n\nWe specialize in helping organizations implement practical AI solutions that solve real business problems. Our team combines deep technical knowledge of Azure AI services with business acumen to ensure your AI investments deliver meaningful returns.\n\n## Key Service Areas\n\n### Azure OpenAI Integration\n- **Custom GPT Implementation**: Develop tailored solutions using Azure OpenAI\n- **Prompt Engineering**: Create effective prompts for optimal AI responses\n- **Content Filtering**: Implement appropriate content controls\n- **Integration Architecture**: Design robust, scalable systems that incorporate Azure OpenAI\n\n### Custom AI Models\n- **Machine Learning Solutions**: Develop custom machine learning models for your specific needs\n- **Model Training**: Train models on your business data for specialized tasks\n- **Performance Optimization**: Fine-tune models for speed and accuracy\n- **Azure ML Pipeline Development**: Create end-to-end ML pipelines for continuous training\n\n### AI-Powered Analytics\n- **Predictive Analytics**: Implement forecasting and trend analysis\n- **Text Analytics**: Extract insights from unstructured text data\n- **Computer Vision Solutions**: Process and analyze images and video\n- **Anomaly Detection**: Identify patterns and outliers in your data\n\n### Responsible AI Implementation\n- **Ethical AI Guidelines**: Develop frameworks for responsible AI use\n- **Bias Detection**: Identify and mitigate bias in AI systems\n- **Transparency Tools**: Implement solutions for AI explainability\n- **Governance Frameworks**: Create processes for ongoing AI governance\n\n## Why Choose Our AI Services\n\n- **Pragmatic Approach**: Focus on practical solutions that deliver measurable business value\n- **Azure-Native Expertise**: Deep expertise in Azure's AI services and platform capabilities\n- **Cross-Domain Knowledge**: Industry experience across healthcare, finance, manufacturing, and more\n- **End-to-End Support**: From strategy and planning to implementation and ongoing management\n\nContact us today to explore how AI can transform your business processes and create new opportunities.\n",
+  "features": [
+    "AI solution design",
+    "Model development",
+    "Deployment and monitoring",
+    "Business value analysis"
+  ],
+  "isPublished": true,
+  "publishedAt": "2024-01-06T00:00:00Z",
+  "updatedAt": "2024-01-06T00:00:00Z",
+  "order": 6
+}

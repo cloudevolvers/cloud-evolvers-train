@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "slug": "azure-network-engineer-nl",
+    "title": "Azure Network Engineer Associate",
+    "subtitle": "Bouw de Netwerken Die de Wereldwijde Cloud Infrastructuur Aandrijven",
+    "description": "Elke cloud applicatie hangt af van een netwerk dat gewoon werkt. Deze cursus transformeert je van een netwerkbeheerder naar een cloud netwerkarchitect die de onzichtbare infrastructuur ontwerpt waar miljarden gebruikers dagelijks op vertrouwen. Je beheerst Azure netwerken die wereldwijd schalen, kritische data beveiligen, en de meest veeleisende applicaties ter wereld verbinden - de vaardigheden die netwerk engineers die worden aangenomen scheiden van degenen die dat niet doen.",
+    "category": "Networking",
+    "level": "Gemiddeld",
+    "duration": "4 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Networking", "Virtual Networks", "Load Balancing", "VPN", "Security"],
+    "prerequisites": [
+      "Azure Fundamentals kennis (AZ-900)",
+      "Begrip van netwerkconcepten",
+      "Basis kennis van on-premises netwerken, routing en firewalls",
+      "Een verlangen om netwerken te bouwen die nooit falen en altijd presteren"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-network-hero.jpg",
+    "badge": "Cloud Network Architect",
+    "highlights": [
+      "Ontwerp netwerken die dagelijks miljarden verbindingen afhandelen",
+      "Bouw beveiliging die de meest waardevolle data ter wereld beschermt",
+      "Beheers wereldwijde load balancing voor directe wereldwijde toegang",
+      "Word lid van de elite engineers die het internet draaiende houden"
+    ]
+  },
+  "overview": {
+    "summary": "In het cloud tijdperk zijn netwerken de onzichtbare fundering waar alles anders van afhangt. Deze cursus leert je de Azure netwerkvaardigheden die de netwerk engineers die veerkrachtige, schaalbare infrastructuur ontwerpen scheiden van degenen die alleen routers configureren. Je leert virtuele netwerken te bouwen die continenten overspannen, beveiliging te implementeren die beschermt tegen staat-aanvallen, en load balancing oplossingen te creëren die miljoenen gebruikers tegelijkertijd afhandelen. Aan het einde heb je de technische beheersing en architecturale visie om cloud networking initiatieven bij elke wereldwijde organisatie te leiden.",
+    "objectives": [
+      "Ontwerp virtuele netwerkarchitecturen die oneindig schalen",
+      "Implementeer routing oplossingen die wereldwijde traffic flow optimaliseren",
+      "Bouw netwerkbeveiliging die kritische bedrijfsactiva beschermt",
+      "Creëer monitoring systemen die netwerkstoringen voorspellen en voorkomen",
+      "Architect private connectiviteitsoplossingen voor hybride cloud omgevingen",
+      "Ontwerp netwerk integraties die legacy systemen verbinden met de cloud"
+    ],
+    "targetAudience": "Deze cursus is voor netwerk engineers die klaar zijn om cloud architecten te worden. Of je nu een traditionele netwerkbeheerder bent die cloud expertise wilt toevoegen, een systems engineer die klaar is voor cloud netwerken, of iemand die de infrastructuur wilt bouwen die wereldwijde applicaties aandrijft - als je netwerken wilt ontwerpen die nooit falen en altijd presteren, geeft deze cursus je de vaardigheden en mindset om de netwerk engineer te worden waar bedrijven om strijden."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure Virtuele Netwerken",
+      "description": "Ontwerp en implementeer Azure virtuele netwerken",
+      "duration": "8 uur",
+      "objectives": [
+        "Creëer virtuele netwerken",
+        "Configureer subnets",
+        "Implementeer network security groups",
+        "Configureer Azure Firewall",
+        "Implementeer Azure Bastion"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Virtuele Netwerk Fundamentals</h3><p>Azure Virtuele Netwerken bieden de fundering voor je cloud netwerken. Leer veilige, schaalbare virtuele netwerken te ontwerpen en implementeren.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Virtuele Netwerk Componenten",
+            "items": [
+              "Virtuele netwerk adresruimten en subnets",
+              "Network security groups (NSGs)",
+              "Azure Firewall voor geavanceerde beveiliging",
+              "Azure Bastion voor veilige RDP/SSH toegang",
+              "User-defined routes (UDRs)"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Virtuele Netwerk Setup Lab",
+          "description": "Creëer en configureer Azure virtuele netwerken",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Netwerk Connectiviteit",
+      "description": "Implementeer netwerk connectiviteitsoplossingen",
+      "duration": "8 uur",
+      "objectives": [
+        "Implementeer VNet peering",
+        "Configureer VPN Gateway",
+        "Implementeer Azure ExpressRoute",
+        "Configureer Azure DNS",
+        "Implementeer netwerk routing"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Verbind Azure resources met elkaar en met on-premises netwerken. Leer verschillende connectiviteitsopties te implementeren voor verschillende scenario's.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/network-connectivity.jpg",
+            "alt": "Azure Network Connectivity",
+            "caption": "VNet peering, VPN Gateway, en ExpressRoute"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Netwerk Connectiviteit Lab",
+          "description": "Implementeer VNet peering en VPN connectiviteit",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Load Balancing en Traffic Management",
+      "description": "Implementeer load balancing en traffic distributie",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer Azure Load Balancer",
+        "Configureer Azure Application Gateway",
+        "Implementeer Azure Front Door",
+        "Configureer Azure Traffic Manager",
+        "Implementeer Azure CDN"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Traffic Distributie</h3><p>Azure biedt verschillende load balancing en traffic management diensten. Leer traffic efficiënt en veilig te distribueren over je applicaties.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Load Balancing Lab",
+          "description": "Configureer Azure Load Balancer en Application Gateway",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Netwerk Beveiliging en Monitoring",
+      "description": "Beveilig en monitor Azure netwerken",
+      "duration": "6 uur",
+      "objectives": [
+        "Implementeer Azure DDoS Protection",
+        "Configureer Azure Firewall",
+        "Implementeer Azure Web Application Firewall",
+        "Monitor netwerk traffic",
+        "Configureer netwerk logging en diagnostics"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Netwerkbeveiliging is kritisch in cloud omgevingen. Leer uitgebreide beveiligingscontroles en monitoring te implementeren voor je Azure netwerken.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Netwerk Beveiliging Lab",
+          "description": "Implementeer netwerkbeveiliging en monitoring",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gemiddeld"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 1750,
+    "discountedPrice": 1400,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursusmaterialen",
+      "Hands-on lab toegang",
+      "AZ-700 examen voucher",
+      "Lunch en verfrissingen",
+      "Cursuscertificaat",
+      "Azure Network Engineer Associate badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Network Solutions Architect",
+    "bio": "Yaïr is een Network Solutions Architect met uitgebreide ervaring in enterprise netwerken en cloud migraties. Hij heeft complexe netwerkarchitecturen ontworpen en geïmplementeerd voor Fortune 500 bedrijven.",
+    "certifications": [
+      "Microsoft Certified: Azure Network Engineer Associate",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Cisco Certified Network Professional (CCNP)",
+      "AWS Certified Advanced Networking Specialty",
+      "Certified Information Systems Security Professional (CISSP)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-04-15",
+        "endDate": "2024-04-18",
+        "location": "Amsterdam, Nederland",
+        "availableSeats": 15,
+        "maxSeats": 18
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Network Engineer Associate Leerpad",
+      "url": "https://learn.microsoft.com/nl-nl/training/paths/azure-network-engineer-associate/",
+      "description": "Officiële Microsoft leerpad voor Azure Network Engineers"
+    },
+    {
+      "type": "video",
+      "title": "Azure Networking Tutorials",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nG9QK",
+      "description": "Azure networking tutorials en best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-700 Oefentests",
+      "url": "https://practice.microsoft.com/exams/az-700",
+      "description": "Officiële oefentests voor AZ-700 certificering"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Network Watcher",
+      "url": "https://learn.microsoft.com/nl-nl/azure/network-watcher/",
+      "description": "Azure Network Watcher voor netwerk monitoring en diagnostics"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Network Engineer Associate",
+    "code": "AZ-700",
+    "description": "Demonstreer vaardigheden in het ontwerpen en implementeren van Azure networking oplossingen, inclusief hybride netwerken, connectiviteit, routing, beveiliging, en private toegang tot Azure diensten",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["Engels", "Spaans", "Frans", "Duits", "Chinees", "Japans"]
+    },
+    "skillsMeasured": [
+      "Ontwerp en implementeer kern netwerk infrastructuur (20-25%)",
+      "Ontwerp en implementeer routing (25-30%)",
+      "Beveilig en monitor netwerken (15-20%)",
+      "Ontwerp en implementeer private toegang tot Azure diensten (10-15%)",
+      "Ontwerp en implementeer netwerk integraties (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Heb ik netwerkervaring nodig?",
+      "answer": "Ja, je moet basis netwerkkennis hebben inclusief TCP/IP, routing en firewalls. Deze cursus bouwt voort op die fundamenten."
+    },
+    {
+      "question": "Is deze cursus technisch?",
+      "answer": "Ja, deze cursus is zeer technisch en focust op het implementeren van Azure networking oplossingen. Je werkt uitgebreid met Azure portal en CLI."
+    },
+    {
+      "question": "Welke Azure diensten leer ik?",
+      "answer": "Je leert Virtual Networks, VPN Gateway, ExpressRoute, Load Balancer, Application Gateway, Azure Firewall en netwerk monitoring tools."
+    },
+    {
+      "question": "Zijn er hands-on labs?",
+      "answer": "Ja, uitgebreide hands-on labs waar je complete Azure networking oplossingen bouwt en netwerkproblemen oplost."
+    }
+  ]
+}

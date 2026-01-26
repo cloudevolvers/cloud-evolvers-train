@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "slug": "azure-solutions-architect-expert-nl",
+    "title": "Azure Solutions Architect Expert",
+    "subtitle": "Word de Visionair Die de Ondernemingen van Morgen Ontwerpt",
+    "description": "De wereld heeft geen behoefte aan meer technici - het heeft architecten nodig die de toekomst kunnen zien en die kunnen bouwen. Deze cursus transformeert je van iemand die oplossingen implementeert naar iemand die de cloud architecturen ontwerpt die Fortune 500 bedrijven aandrijven. Je beheerst het strategische denken en de technische expertise die de Solutions Architects die digitale transformaties leiden scheiden van degenen die alleen instructies volgen.",
+    "category": "Cloud Architecture",
+    "level": "Gevorderd",
+    "duration": "5 dagen",
+    "language": "nl",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "Architecture", "Cloud Computing", "Security", "Networking", "Infrastructure"],
+    "prerequisites": [
+      "Azure Administrator Associate (AZ-104) of equivalente ervaring",
+      "Azure Developer Associate (AZ-204) aanbevolen",
+      "Sterk begrip van IT operaties en Azure diensten",
+      "Een visionaire mindset klaar om systemen te ontwerpen die veranderen hoe bedrijven opereren"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-architect-hero.jpg",
+    "badge": "Enterprise Solutions Architect",
+    "highlights": [
+      "Ontwerp cloud architecturen die wereldwijde ondernemingen aandrijven",
+      "leid digitale transformatie initiatieven ter waarde van miljoenen",
+      "Beheers het strategische denken waar C-level executives om vragen",
+      "Word lid van de elite architecten die de toekomst van business vormgeven"
+    ]
+  },
+  "overview": {
+    "summary": "Solutions Architects bouwen niet alleen systemen - ze herdefiniëren wat mogelijk is. Deze cursus leert je de Azure architectuurvaardigheden die de technische leiders die innovatie aandrijven scheiden van degenen die de status quo onderhouden. Je leert cloud oplossingen te ontwerpen die bedrijven transformeren, architecturen te creëren die schalen naar miljoenen gebruikers, en strategieën te implementeren die concurrentievoordelen opleveren. Aan het einde heb je de strategische visie en technische beheersing om enterprise cloud transformaties te leiden en de Solutions Architect te worden waar raden van bestuur naar op zoek zijn.",
+    "objectives": [
+      "Ontwerp identity en governance frameworks die wereldwijde ondernemingen beveiligen",
+      "Architect data storage oplossingen die exabytes aan informatie afhandelen",
+      "Creëer business continuity oplossingen die 99.999% uptime garanderen",
+      "Ontwerp infrastructuur oplossingen die automatisch aanpassen aan business behoeften",
+      "Architect migratie strategieën die risico minimaliseren en ROI maximaliseren",
+      "Ontwikkel beveiligingsarchitecturen die beschermen tegen staat-aanvallen",
+      "Creëer monitoring oplossingen die systeemstoringen voorspellen en voorkomen"
+    ],
+    "targetAudience": "Deze cursus is voor de visionairs die klaar zijn om enterprise architecten te worden. Of je nu een Azure beheerder bent die klaar is voor strategische rollen, een ontwikkelaar die architecturale beslissingen wilt leiden, of een IT leider die cloud transformatie wilt beheersen - als je de systemen wilt ontwerpen die de grootste bedrijven ter wereld aandrijven en de digitale revoluties wilt leiden die industrieën definiëren, geeft deze cursus je het strategische denken en de technische expertise om de Solutions Architect te worden die alles verandert."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Ontwerp Identity en Security Oplossingen",
+      "description": "Ontwerp veilige identity en access management oplossingen",
+      "duration": "8 uur",
+      "objectives": [
+        "Ontwerp Azure Active Directory oplossingen",
+        "Ontwerp authenticatie en autorisatie oplossingen",
+        "Ontwerp veilige toegang oplossingen",
+        "Ontwerp governance oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Identity en Access Management</h3><p>Leer uitgebreide identity oplossingen te ontwerpen die voldoen aan enterprise beveiligingseisen terwijl naadloze gebruikerservaringen mogelijk worden gemaakt.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Security Design Principes",
+            "items": [
+              "Zero Trust architectuur implementatie",
+              "Multi-factor authenticatie ontwerp",
+              "Conditional access policies",
+              "Privileged identity management",
+              "Azure AD Connect en synchronisatie"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Identity Design Lab",
+          "description": "Ontwerp en implementeer Azure identity oplossingen",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Ontwerp Data Storage Oplossingen",
+      "description": "Ontwerp schaalbare en veilige data storage architecturen",
+      "duration": "8 uur",
+      "objectives": [
+        "Ontwerp Azure SQL Database oplossingen",
+        "Ontwerp Azure Cosmos DB oplossingen",
+        "Ontwerp Azure Storage oplossingen",
+        "Ontwerp data integratie oplossingen",
+        "Ontwerp data analytics oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Azure biedt verschillende data storage opties. Leer de juiste data architectuur te ontwerpen voor verschillende business vereisten en data typen.</p>"
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/data-services.jpg",
+            "alt": "Azure Data Services",
+            "caption": "Azure SQL Database, Cosmos DB, Storage, en Analytics diensten"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Data Architecture Lab",
+          "description": "Ontwerp uitgebreide data storage oplossingen",
+          "duration": "150 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Ontwerp Infrastructuur Oplossingen",
+      "description": "Ontwerp Azure infrastructuur voor schaalbaarheid en performance",
+      "duration": "8 uur",
+      "objectives": [
+        "Ontwerp Azure compute oplossingen",
+        "Ontwerp Azure networking oplossingen",
+        "Ontwerp Azure monitoring oplossingen",
+        "Ontwerp Azure migratie oplossingen",
+        "Ontwerp hybride oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Infrastructure Design Patterns</h3><p>Leer infrastructuur te ontwerpen die moderne applicatie architecturen ondersteunt terwijl kostenefficiëntie en operationele uitmuntendheid worden gehandhaafd.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Infrastructure Design Lab",
+          "description": "Ontwerp schaalbare Azure infrastructuur oplossingen",
+          "duration": "120 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Ontwerp Business Continuity Oplossingen",
+      "description": "Ontwerp oplossingen voor hoge beschikbaarheid en disaster recovery",
+      "duration": "6 uur",
+      "objectives": [
+        "Ontwerp backup en recovery oplossingen",
+        "Ontwerp hoge beschikbaarheid oplossingen",
+        "Ontwerp disaster recovery oplossingen",
+        "Ontwerp Azure Site Recovery oplossingen"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Business continuity is kritisch voor enterprise applicaties. Leer veerkrachtige oplossingen te ontwerpen die downtime en data verlies minimaliseren.</p>"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Business Continuity Lab",
+          "description": "Ontwerp en implementeer business continuity oplossingen",
+          "duration": "90 minuten",
+          "type": "hands-on",
+          "difficulty": "gevorderd"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 2200,
+    "discountedPrice": 1760,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Officiële cursusmaterialen",
+      "Hands-on lab toegang",
+      "AZ-305 examen voucher",
+      "Lunch en verfrissingen",
+      "Cursuscertificaat",
+      "Azure Solutions Architect Expert badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect",
+    "bio": "Yaïr is een Principal Cloud Architect met uitgebreide ervaring in het ontwerpen van enterprise-schaal Azure oplossingen. Hij heeft talloze digitale transformatie projecten geleid en heeft meerdere Azure certificeringen.",
+    "certifications": [
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Administrator Associate",
+      "Microsoft Certified: Azure Developer Associate",
+      "AWS Certified Solutions Architect - Professional",
+      "Certified Kubernetes Administrator (CKA)"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-04",
+        "endDate": "2024-03-08",
+        "location": "Amsterdam, Nederland",
+        "availableSeats": 10,
+        "maxSeats": 12
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure Solutions Architect Expert Leerpad",
+      "url": "https://learn.microsoft.com/nl-nl/training/paths/azure-solutions-architect-expert/",
+      "description": "Officiële Microsoft leerpad voor Azure Solutions Architects"
+    },
+    {
+      "type": "video",
+      "title": "Azure Architecture Best Practices",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nGlrVx8XhVQ8gYQKQFNM",
+      "description": "Azure architecture design patterns en best practices"
+    },
+    {
+      "type": "practice-test",
+      "title": "AZ-305 Oefentests",
+      "url": "https://practice.microsoft.com/exams/az-305",
+      "description": "Officiële oefentests voor AZ-305 certificering"
+    },
+    {
+      "type": "tool",
+      "title": "Azure Architecture Center",
+      "url": "https://learn.microsoft.com/nl-nl/azure/architecture/",
+      "description": "Azure architecture guidance en reference architecturen"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
+    "code": "AZ-305",
+    "description": "Demonstreer expertise in het ontwerpen van cloud en hybride oplossingen die draaien op Microsoft Azure, inclusief compute, network, storage, en security",
+    "examDetails": {
+      "duration": "120 minuten",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 165,
+      "languages": ["Engels", "Spaans", "Frans", "Duits", "Chinees", "Japans"]
+    },
+    "skillsMeasured": [
+      "Ontwerp identity, governance, en monitoring oplossingen (25-30%)",
+      "Ontwerp data storage oplossingen (25-30%)",
+      "Ontwerp business continuity oplossingen (10-15%)",
+      "Ontwerp infrastructuur oplossingen (25-30%)",
+      "Ontwerp migratie oplossingen (10-15%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Wat zijn de vereisten voor deze cursus?",
+      "answer": "Je hebt AZ-104 (Azure Administrator Associate) certificering of equivalente ervaring nodig. AZ-204 (Azure Developer Associate) wordt sterk aanbevolen."
+    },
+    {
+      "question": "Is deze cursus technisch of strategisch?",
+      "answer": "Deze cursus focust op ontwerp en architectuur beslissingen in plaats van implementatie details. Je leert strategische technologie beslissingen te nemen."
+    },
+    {
+      "question": "Welke Azure diensten worden behandeld?",
+      "answer": "Je leert oplossingen te ontwerpen met Azure AD, netwerken, storage, compute, monitoring, beveiliging, en migratie diensten."
+    },
+    {
+      "question": "Heb ik programmeerervaring nodig?",
+      "answer": "Hoewel programmeerervaring nuttig is, focust deze cursus op architectuur ontwerp in plaats van coderen. Begrip van IT operaties is belangrijker."
+    }
+  ]
+}

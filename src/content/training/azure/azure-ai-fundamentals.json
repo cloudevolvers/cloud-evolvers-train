@@ -1,0 +1,324 @@
+{
+  "metadata": {
+    "slug": "azure-ai-fundamentals",
+    "title": "Azure AI Fundamentals",
+    "subtitle": "Your Gateway to the AI Revolution",
+    "description": "AI isn't science fiction anymore - it's the competitive advantage that separates industry leaders from everyone else. This course gives you the knowledge to understand, evaluate, and leverage AI technologies that are transforming every business on the planet.",
+    "category": "AI & Machine Learning",
+    "level": "Beginner",
+    "duration": "2 days",
+    "language": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15",
+    "tags": ["Azure", "AI", "Machine Learning", "Cognitive Services", "Azure AI", "Fundamentals", "Future of Work", "Digital Transformation"],
+    "prerequisites": [
+      "An open mind and curiosity about technology",
+      "Basic computer literacy",
+      "Zero AI experience required - we start from the very beginning"
+    ]
+  },
+  "hero": {
+    "image": "/images/training/azure-ai-fundamentals-hero.jpg",
+    "badge": "Future-Proof Your Career",
+    "highlights": [
+      "Understand the AI technologies disrupting every industry",
+      "Learn to evaluate and implement AI solutions",
+      "Master the fundamentals that AI experts build upon",
+      "Position yourself for the highest-paying tech roles"
+    ]
+  },
+  "overview": {
+    "summary": "Companies are racing to adopt AI, but most people don't even understand what it can do. This course changes that. You'll learn the fundamental concepts that power everything from ChatGPT to self-driving cars, and you'll understand how Azure AI services can be applied to real business problems. By the end, you'll speak the language of AI fluently and understand how to leverage these technologies to create competitive advantages.",
+    "objectives": [
+      "Demystify AI and understand what it can (and can't) do for your business",
+      "Master the core concepts behind machine learning and neural networks",
+      "Explore Azure's AI toolkit and when to use each service",
+      "Learn to identify AI opportunities in your current role",
+      "Understand ethical AI practices and responsible implementation",
+      "Build a foundation for advanced AI certifications and roles"
+    ],
+    "targetAudience": "This course is for anyone who wants to understand the AI revolution happening right now. Whether you're a business leader trying to navigate AI adoption, a professional looking to future-proof your career, or someone who wants to understand the technology that's reshaping our world - if you want to be part of the AI conversation rather than just watching it happen, this course will give you the knowledge and confidence to participate meaningfully."
+  },
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Introduction to AI and Azure AI Services",
+      "description": "Learn the basics of AI and explore Azure AI services",
+      "duration": "4 hours",
+      "objectives": [
+        "Define AI and understand its applications",
+        "Explore Azure AI services and capabilities",
+        "Understand machine learning concepts",
+        "Learn about Azure Machine Learning",
+        "Explore Azure Cognitive Services"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>What is Artificial Intelligence?</h3><p>AI is the simulation of human intelligence in machines that are programmed to think and learn like humans. Learn about different types of AI and their applications in business and technology.</p>"
+          },
+          {
+            "type": "list",
+            "title": "AI Applications",
+            "items": [
+              "Computer vision for image analysis",
+              "Natural language processing for text understanding",
+              "Speech recognition and synthesis",
+              "Recommendation systems",
+              "Predictive analytics",
+              "Autonomous systems"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/azure/ai-services-overview.jpg",
+            "alt": "Azure AI Services Overview",
+            "caption": "Overview of Azure AI services and capabilities"
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure AI Services Exploration",
+          "description": "Explore Azure AI services in the portal",
+          "duration": "60 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Computer Vision and Image Analysis",
+      "description": "Learn about computer vision capabilities in Azure",
+      "duration": "4 hours",
+      "objectives": [
+        "Understand computer vision concepts",
+        "Explore Azure Computer Vision service",
+        "Learn about image analysis and processing",
+        "Understand optical character recognition (OCR)",
+        "Explore face detection and recognition"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Computer vision enables machines to interpret and understand visual information from the world. Learn how Azure Computer Vision can analyze images and extract meaningful insights.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Computer Vision Capabilities",
+            "items": [
+              "Image classification and tagging",
+              "Object detection",
+              "Optical character recognition (OCR)",
+              "Face detection and recognition",
+              "Image analysis and description",
+              "Thumbnail generation"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Computer Vision Lab",
+          "description": "Analyze images using Azure Computer Vision",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Natural Language Processing and Conversational AI",
+      "description": "Explore language understanding and conversational AI",
+      "duration": "4 hours",
+      "objectives": [
+        "Understand natural language processing (NLP)",
+        "Explore Azure Language service",
+        "Learn about text analytics and sentiment analysis",
+        "Understand conversational AI with Azure Bot Service",
+        "Explore Azure OpenAI Service"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<h3>Natural Language Processing</h3><p>NLP enables computers to understand, interpret, and generate human language. Learn how Azure services can process text and enable conversational interactions.</p>"
+          },
+          {
+            "type": "list",
+            "title": "NLP Capabilities",
+            "items": [
+              "Text analytics and sentiment analysis",
+              "Language detection",
+              "Key phrase extraction",
+              "Entity recognition",
+              "Question answering",
+              "Conversational AI with bots"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "NLP and Chatbot Lab",
+          "description": "Build a simple chatbot using Azure Bot Service",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "beginner"
+        }
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Machine Learning and Azure Machine Learning",
+      "description": "Introduction to machine learning concepts and Azure ML",
+      "duration": "4 hours",
+      "objectives": [
+        "Understand machine learning fundamentals",
+        "Explore Azure Machine Learning",
+        "Learn about automated ML",
+        "Understand ML model deployment",
+        "Explore responsible AI practices"
+      ],
+      "content": {
+        "sections": [
+          {
+            "type": "text",
+            "content": "<p>Machine learning is a subset of AI that enables systems to learn from data and improve performance over time. Learn the basics of ML and how Azure Machine Learning simplifies the ML process.</p>"
+          },
+          {
+            "type": "list",
+            "title": "Machine Learning Concepts",
+            "items": [
+              "Supervised vs unsupervised learning",
+              "Regression and classification",
+              "Training and testing data",
+              "Model evaluation and deployment",
+              "Automated machine learning",
+              "Responsible AI considerations"
+            ]
+          }
+        ]
+      },
+      "labs": [
+        {
+          "title": "Azure Machine Learning Lab",
+          "description": "Create and deploy a simple ML model",
+          "duration": "90 minutes",
+          "type": "hands-on",
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ],
+  "pricing": {
+    "currency": "EUR",
+    "basePrice": 800,
+    "discountedPrice": 640,
+    "earlyBirdDiscount": {
+      "percentage": 20,
+      "deadline": "2024-02-01"
+    },
+    "includes": [
+      "Official Microsoft course materials",
+      "Hands-on lab access",
+      "Azure AI Fundamentals study guide",
+      "Lunch and refreshments",
+      "Course completion certificate",
+      "Azure AI Fundamentals badge"
+    ]
+  },
+  "instructor": {
+    "name": "Yaïr Knijn",
+    "title": "AI Research Scientist",
+    "bio": "Yaïr is an AI Research Scientist with extensive experience in machine learning and Azure AI services. He has helped numerous organizations implement AI solutions and has published research in AI ethics and responsible AI practices.",
+    "certifications": [
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "Microsoft Certified: Azure AI Fundamentals",
+      "PhD in Computer Science (AI focus)",
+      "Certified AI Ethics Professional",
+      "Azure Machine Learning Certified"
+    ],
+    "image": "/images/instructors/yair-knijn.jpg"
+  },
+  "schedule": {
+    "format": "in-person",
+    "dates": [
+      {
+        "startDate": "2024-03-18",
+        "endDate": "2024-03-19",
+        "location": "Amsterdam, Netherlands",
+        "availableSeats": 15,
+        "maxSeats": 20
+      }
+    ],
+    "timeZone": "CET"
+  },
+  "resources": [
+    {
+      "type": "documentation",
+      "title": "Azure AI Fundamentals Learning Path",
+      "url": "https://learn.microsoft.com/en-us/training/paths/get-started-with-artificial-intelligence-on-azure/",
+      "description": "Official Microsoft learning path for Azure AI Fundamentals"
+    },
+    {
+      "type": "video",
+      "title": "Azure AI Services Overview",
+      "url": "https://youtube.com/playlist?list=PLlVtbbG169nED",
+      "description": "Video tutorials on Azure AI services"
+    },
+    {
+      "type": "tool",
+      "title": "Azure AI Studio",
+      "url": "https://ai.azure.com/",
+      "description": "Azure AI Studio for building AI applications"
+    },
+    {
+      "type": "practice",
+      "title": "Azure AI Fundamentals Practice Tests",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/practice-assess/",
+      "description": "Official practice tests for AI-900 certification"
+    }
+  ],
+  "certification": {
+    "name": "Microsoft Certified: Azure AI Fundamentals",
+    "code": "AI-900",
+    "description": "Demonstrate foundational knowledge of machine learning and artificial intelligence concepts, and related Azure services",
+    "examDetails": {
+      "duration": "120 minutes",
+      "questions": 40,
+      "passingScore": 700,
+      "cost": 99,
+      "languages": ["English", "Japanese", "Chinese (Simplified)", "Korean", "German", "French", "Spanish", "Portuguese (Brazil)", "Arabic", "Russian", "Chinese (Traditional)", "Italian", "Indonesian"]
+    },
+    "skillsMeasured": [
+      "Describe AI workloads and considerations (15-20%)",
+      "Describe fundamental principles of machine learning on Azure (20-25%)",
+      "Describe features of computer vision workloads on Azure (15-20%)",
+      "Describe features of Natural Language Processing (NLP) workloads on Azure (15-20%)",
+      "Describe features of generative AI workloads on Azure (15-20%)"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do I need programming experience?",
+      "answer": "No, this course is designed for beginners and doesn't require programming experience. However, basic computer skills are helpful."
+    },
+    {
+      "question": "What Azure services will I learn about?",
+      "answer": "You'll learn about Azure Cognitive Services, Azure Machine Learning, Azure Bot Service, Azure Computer Vision, and Azure Language services."
+    },
+    {
+      "question": "Is this course technical?",
+      "answer": "This is a foundational course that covers concepts and services at a high level. It's suitable for both technical and non-technical audiences."
+    },
+    {
+      "question": "Will I be able to build AI applications after this course?",
+      "answer": "You'll understand the fundamentals and be able to use Azure AI services, but for building complex AI applications, you may want to take more advanced courses like Azure AI Engineer Associate."
+    }
+  ]
+}
