@@ -13,7 +13,7 @@ export const flexConsumptionPost: BlogPost = {
   date: '2025-12-02',
   author: 'Falk Krahl',
   tags: ['Azure Functions', 'Serverless', 'Flex Consumption', 'VNet', 'Scaling'],
-  image: '/images/unsplash/serverless-computing-cloud.jpg',
+  image: '/images/pexels/pexels-serverless-computing.jpg',
   excerpt: {
     en: 'Azure Functions Flex Consumption is the recommended serverless hosting plan, offering VNet support, reduced cold starts, and up to 1000 instance scale-out while maintaining pay-per-use billing.',
     nl: 'Azure Functions Flex Consumption is het aanbevolen serverless hosting plan, met VNet-ondersteuning, verminderde cold starts en tot 1000 instance scale-out terwijl pay-per-use facturering behouden blijft.'

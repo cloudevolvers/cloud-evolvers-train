@@ -13,7 +13,7 @@ export const aksNetworkPoliciesPost: BlogPost = {
   date: '2025-12-03',
   author: 'Falk Krahl',
   tags: ['AKS', 'Kubernetes', 'Security', 'Cilium', 'Zero Trust', 'Networking'],
-  image: '/images/pexels/pexels-kubernetes-containers.jpg',
+  image: '/images/unsplash/cloud-infrastructure-network.jpg',
   excerpt: {
     en: 'Kubernetes allows all pod-to-pod traffic by default. Learn how to implement Zero Trust network security in AKS using advanced network policies with Cilium for Layer 7 protection.',
     nl: 'Kubernetes staat standaard al het pod-to-pod verkeer toe. Leer hoe je Zero Trust netwerkbeveiliging implementeert in AKS met geavanceerde network policies met Cilium voor Layer 7 bescherming.'

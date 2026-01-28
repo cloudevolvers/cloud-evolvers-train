@@ -13,7 +13,7 @@ export const passwordlessAuthenticationPost: BlogPost = {
   date: '2025-12-05',
   author: 'Falk Krahl',
   tags: ['Microsoft Entra', 'Security', 'Passwordless', 'FIDO2', 'Zero Trust'],
-  image: '/images/unsplash/security-key-visualization.jpg',
+  image: '/images/unsplash/zero-trust-security-model.jpg',
   excerpt: {
     en: 'Passwords are the weakest link in your security chain. Learn how to deploy phishing-resistant passwordless authentication with FIDO2, passkeys, and Windows Hello for Business.',
     nl: 'Wachtwoorden zijn de zwakste schakel in je beveiligingsketen. Leer hoe je phishing-bestendige passwordless authenticatie deployt met FIDO2, passkeys en Windows Hello for Business.'

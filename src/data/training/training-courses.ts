@@ -140,11 +140,18 @@ function convertTrainingJSON(jsonTraining: TrainingJSON): Training {
   };
 }
 
-// Export all training courses converted from both metadata and JSON
-export const trainingCourses: Training[] = [
-  ...getAllTrainings().map(convertTrainingMetadata),
-  ...getAllJSONTrainings().map(convertTrainingJSON)
-];
+// Export all training courses - JSON files take priority, deduplicate by slug
+export const trainingCourses: Training[] = (() => {
+  const jsonCourses = getAllJSONTrainings().map(convertTrainingJSON);
+  const jsonSlugs = new Set(jsonCourses.map(c => c.slug));
+
+  // Only add metadata courses that don't exist in JSON
+  const metadataCourses = getAllTrainings()
+    .map(convertTrainingMetadata)
+    .filter(c => !jsonSlugs.has(c.slug));
+
+  return [...jsonCourses, ...metadataCourses];
+})();
 
 // Export specific trainings for backward compatibility
 export const azureFundamentalsTraining = trainingCourses.find(course => course.slug === 'azure-fundamentals');
