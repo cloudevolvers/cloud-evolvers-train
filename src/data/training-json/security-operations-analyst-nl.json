@@ -1,0 +1,239 @@
+{
+  "id": "security-operations-analyst",
+  "slug": "security-operations-analyst",
+  "title": "Microsoft Security Operations Analyst (SC-200)",
+  "subtitle": "Onderzoek en Reageer op Bedreigingen met Microsoft Security Oplossingen",
+  "description": "Beheers threat detection, investigation en response met Microsoft Sentinel, Defender XDR en Defender for Cloud",
+  "overview": "Deze intensieve cursus bereidt je voor om te werken als Security Operations Center (SOC) analist met Microsoft's uitgebreide security platform. Je leert bedreigingen onderzoeken en erop reageren met Microsoft Sentinel SIEM/SOAR, Microsoft Defender XDR en Microsoft Defender for Cloud. Beheers de vaardigheden om je organisatie te beschermen tegen moderne cyberdreigingen.",
+  "category": "Security",
+  "subcategory": "Security Operations",
+  "difficulty": "Advanced",
+  "tags": [
+    "Security",
+    "SC-200",
+    "Microsoft Sentinel",
+    "Defender XDR",
+    "SOC",
+    "SIEM",
+    "Threat Hunting",
+    "Incident Response"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1895,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "defender-xdr",
+      "title": "Microsoft Defender XDR",
+      "description": "Mitigeer bedreigingen met Microsoft Defender voor Endpoint, Identity, Office 365 en Cloud Apps",
+      "icon": "Shield"
+    },
+    {
+      "id": "sentinel-config",
+      "title": "Configureer Microsoft Sentinel",
+      "description": "Stel workspace in, verbind databronnen en configureer analytics rules",
+      "icon": "Settings"
+    },
+    {
+      "id": "threat-detection",
+      "title": "Threat Detection",
+      "description": "Maak detection rules, workbooks en geautomatiseerde playbooks",
+      "icon": "AlertTriangle"
+    },
+    {
+      "id": "incident-response",
+      "title": "Incident Onderzoek",
+      "description": "Onderzoek incidenten, hunt naar bedreigingen en reageer op aanvallen",
+      "icon": "Search"
+    },
+    {
+      "id": "defender-cloud",
+      "title": "Defender for Cloud",
+      "description": "Bescherm multicloud en hybride workloads met Defender for Cloud",
+      "icon": "Cloud"
+    },
+    {
+      "id": "kql-queries",
+      "title": "KQL Beheersing",
+      "description": "Schrijf geavanceerde Kusto Query Language queries voor threat hunting",
+      "icon": "Code"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Microsoft Defender XDR Fundamentals",
+      "description": "Unified threat protection over endpoints, identity, email en apps",
+      "icon": "Shield",
+      "duration": "6 uur",
+      "topics": [
+        "Microsoft Defender XDR portal overzicht",
+        "Defender for Endpoint protection en EDR",
+        "Defender for Identity threat detection",
+        "Defender for Office 365 email security",
+        "Defender for Cloud Apps (CASB)"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Threat Investigation met Defender XDR",
+      "description": "Onderzoek en reageer op incidenten over de kill chain",
+      "icon": "Search",
+      "duration": "6 uur",
+      "topics": [
+        "Incident investigation workflow",
+        "Attack story en evidence analysis",
+        "Automated investigation and response",
+        "Advanced hunting met KQL",
+        "Custom detection rules"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Microsoft Sentinel Configuratie",
+      "description": "Deploy en configureer je cloud-native SIEM",
+      "icon": "Settings",
+      "duration": "5 uur",
+      "topics": [
+        "Sentinel workspace architectuur",
+        "Data connectors en ingestion",
+        "Content hub en solutions",
+        "Analytics rules configuratie",
+        "Kostenoptimalisatie strategieën"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Threat Detection en Hunting",
+      "description": "Maak detecties en hunt proactief naar bedreigingen",
+      "icon": "AlertTriangle",
+      "duration": "6 uur",
+      "topics": [
+        "Scheduled analytics rules",
+        "Near real-time (NRT) rules",
+        "Threat intelligence integratie",
+        "Hunting queries en bookmarks",
+        "User and entity behavior analytics (UEBA)"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Incident Response en Automatisering",
+      "description": "Reageer op incidenten met automatisering en playbooks",
+      "icon": "Zap",
+      "duration": "5 uur",
+      "topics": [
+        "Incident management workflow",
+        "Automation rules",
+        "Logic Apps playbooks",
+        "SOAR integratie patronen",
+        "Case management en samenwerking"
+      ]
+    },
+    {
+      "id": "module-6",
+      "title": "Microsoft Defender for Cloud",
+      "description": "Bescherm cloud workloads over Azure, AWS en GCP",
+      "icon": "Cloud",
+      "duration": "4 uur",
+      "topics": [
+        "Cloud Security Posture Management (CSPM)",
+        "Cloud Workload Protection (CWP)",
+        "Security aanbevelingen en secure score",
+        "Regulatory compliance monitoring",
+        "Multi-cloud security"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Een Aanval Onderzoeken met Defender XDR",
+      "description": "Doorloop een compleet aanval onderzoeksscenario",
+      "duration": "2 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "lab-2",
+      "title": "Microsoft Sentinel Deployen",
+      "description": "Configureer workspace, verbind bronnen en maak rules",
+      "duration": "2 uur",
+      "icon": "Settings"
+    },
+    {
+      "id": "lab-3",
+      "title": "Threat Hunting met KQL",
+      "description": "Schrijf geavanceerde hunting queries om bedreigingen te detecteren",
+      "duration": "2,5 uur",
+      "icon": "Code"
+    },
+    {
+      "id": "lab-4",
+      "title": "Geautomatiseerde Playbooks Bouwen",
+      "description": "Maak SOAR playbooks voor automatische response",
+      "duration": "2 uur",
+      "icon": "Zap"
+    },
+    {
+      "id": "lab-5",
+      "title": "Incident Response Simulatie",
+      "description": "Reageer op een gesimuleerd security incident end-to-end",
+      "duration": "2 uur",
+      "icon": "AlertTriangle"
+    }
+  ],
+  "prerequisites": [
+    "Basiskennis van Microsoft 365 en Azure",
+    "Bekendheid met security concepten en terminologie",
+    "Ervaring met de Azure portal",
+    "SC-900 certificering aanbevolen"
+  ],
+  "targetAudience": [
+    "Security Operations Center (SOC) analisten",
+    "Security engineers die SIEM/SOAR implementeren",
+    "Incident responders en threat hunters",
+    "IT-professionals die overstappen naar security rollen",
+    "Professionals die SC-200 certificering nastreven"
+  ],
+  "instructor": {
+    "id": "falk-krahl",
+    "name": "Falk Krahl",
+    "title": "Principal Cloud Security Architect",
+    "bio": "Ervaren security professional gespecialiseerd in Microsoft security oplossingen en SOC operations",
+    "expertise": [
+      "Microsoft Sentinel",
+      "Defender XDR",
+      "Threat Hunting",
+      "Incident Response"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-200",
+      "SC-100",
+      "AZ-500"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Security Operations Analyst",
+    "examCode": "SC-200",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-01-28T00:00:00Z",
+  "personalStory": {
+    "instructor": "Falk Krahl",
+    "story": "Werken in security operations is zowel uitdagend als belonend. Ik heb organisaties geholpen hun SOC-capaciteiten vanaf de grond op te bouwen met Microsoft's security stack. De integratie tussen Sentinel en Defender XDR creëert een krachtig platform voor het detecteren en reageren op bedreigingen. Deze cursus leert je de real-world vaardigheden die SOC-analisten elke dag gebruiken om hun organisaties te beschermen."
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "id": "azure-ai-engineer",
+  "slug": "azure-ai-engineer",
+  "title": "Azure AI Engineer Associate (AI-102)",
+  "subtitle": "Ontwerp en Implementeer Azure AI Oplossingen",
+  "description": "Bouw, beheer en deploy AI-oplossingen met Azure Cognitive Services, Azure AI Search en Azure OpenAI",
+  "overview": "Deze gevorderde cursus bereidt je voor op het ontwerpen en implementeren van AI-oplossingen op Microsoft Azure. Je leert intelligente applicaties bouwen met Azure Cognitive Services, knowledge mining implementeren met Azure AI Search, en generatieve AI-oplossingen creëren met Azure OpenAI Service. Perfect voor developers die AI willen integreren in real-world applicaties.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Engineering",
+  "difficulty": "Advanced",
+  "tags": [
+    "Azure",
+    "AI",
+    "AI-102",
+    "Cognitive Services",
+    "Azure OpenAI",
+    "Machine Learning",
+    "Computer Vision",
+    "NLP"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1895,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-solution-planning",
+      "title": "Plan Azure AI Oplossingen",
+      "description": "Plan en beheer Azure AI-oplossingen inclusief responsible AI-principes en security",
+      "icon": "Target"
+    },
+    {
+      "id": "computer-vision",
+      "title": "Implementeer Computer Vision",
+      "description": "Bouw image analysis, custom vision en video analysis oplossingen",
+      "icon": "Eye"
+    },
+    {
+      "id": "nlp-solutions",
+      "title": "Natural Language Processing",
+      "description": "Implementeer text analytics, language understanding en translation services",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "knowledge-mining",
+      "title": "Knowledge Mining",
+      "description": "Implementeer Azure AI Search-oplossingen met custom skills en knowledge stores",
+      "icon": "Search"
+    },
+    {
+      "id": "document-intelligence",
+      "title": "Document Intelligence",
+      "description": "Extraheer informatie uit documenten met Azure AI Document Intelligence",
+      "icon": "FileText"
+    },
+    {
+      "id": "generative-ai",
+      "title": "Generatieve AI Oplossingen",
+      "description": "Bouw applicaties met Azure OpenAI Service en prompt engineering",
+      "icon": "Sparkles"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Azure AI Oplossingen Plannen",
+      "description": "Azure AI platform overzicht, solution design en responsible AI",
+      "icon": "Target",
+      "duration": "4 uur",
+      "topics": [
+        "Azure AI services overzicht en selectie",
+        "Responsible AI-principes en richtlijnen",
+        "Security en compliance voor AI-oplossingen",
+        "Kostenoptimalisatie en resource planning",
+        "AI solution architecture patterns"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Computer Vision Oplossingen",
+      "description": "Image analysis, custom vision modellen en video analytics",
+      "icon": "Eye",
+      "duration": "6 uur",
+      "topics": [
+        "Azure AI Vision en Image Analysis API",
+        "Custom Vision voor image classification",
+        "Object detection en spatial analysis",
+        "Face API en gezichtsherkenning",
+        "Video Indexer voor video-analyse"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Natural Language Processing",
+      "description": "Text analytics, language understanding en speech services",
+      "icon": "MessageSquare",
+      "duration": "6 uur",
+      "topics": [
+        "Azure AI Language service mogelijkheden",
+        "Custom text classification en NER",
+        "Conversational Language Understanding (CLU)",
+        "Question Answering en custom QnA",
+        "Speech-to-text en text-to-speech"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Knowledge Mining met AI Search",
+      "description": "Azure AI Search, skillsets en knowledge stores",
+      "icon": "Search",
+      "duration": "6 uur",
+      "topics": [
+        "Azure AI Search fundamentals",
+        "Indexers en data sources",
+        "Built-in en custom skillsets",
+        "Knowledge stores en projecties",
+        "Semantic search en vector search"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Document Intelligence",
+      "description": "Extraheer en verwerk informatie uit documenten",
+      "icon": "FileText",
+      "duration": "4 uur",
+      "topics": [
+        "Azure AI Document Intelligence overzicht",
+        "Prebuilt modellen voor veelvoorkomende documenten",
+        "Custom document modellen",
+        "Composed modellen en model management",
+        "Integratie met workflows"
+      ]
+    },
+    {
+      "id": "module-6",
+      "title": "Azure OpenAI en Generatieve AI",
+      "description": "Bouw generatieve AI-oplossingen met Azure OpenAI",
+      "icon": "Sparkles",
+      "duration": "6 uur",
+      "topics": [
+        "Azure OpenAI Service fundamentals",
+        "GPT-modellen en mogelijkheden",
+        "Prompt engineering technieken",
+        "Retrieval Augmented Generation (RAG)",
+        "Responsible AI voor generatieve modellen"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Een Computer Vision Oplossing Bouwen",
+      "description": "Maak een image analysis applicatie met custom vision",
+      "duration": "2 uur",
+      "icon": "Eye"
+    },
+    {
+      "id": "lab-2",
+      "title": "Language Understanding Implementeren",
+      "description": "Bouw conversational AI met CLU en custom intents",
+      "duration": "2 uur",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "lab-3",
+      "title": "Een AI Search Oplossing Maken",
+      "description": "Implementeer knowledge mining met custom skillsets",
+      "duration": "2,5 uur",
+      "icon": "Search"
+    },
+    {
+      "id": "lab-4",
+      "title": "Document Processing Pipeline",
+      "description": "Bouw een geautomatiseerde document processing oplossing",
+      "duration": "1,5 uur",
+      "icon": "FileText"
+    },
+    {
+      "id": "lab-5",
+      "title": "Een RAG Applicatie Bouwen",
+      "description": "Maak een generatieve AI-app met Azure OpenAI en AI Search",
+      "duration": "2,5 uur",
+      "icon": "Sparkles"
+    }
+  ],
+  "prerequisites": [
+    "Ervaring met Azure portal en Azure CLI",
+    "Programmeerervaring (Python of C#)",
+    "Begrip van REST API's en JSON",
+    "Bekendheid met AI en ML concepten (AI-900 aanbevolen)"
+  ],
+  "targetAudience": [
+    "Software developers die AI-applicaties bouwen",
+    "AI/ML engineers die Azure-oplossingen implementeren",
+    "Solution architects die AI-systemen ontwerpen",
+    "Data scientists die modellen naar productie deployen",
+    "Professionals die AI-102 certificering nastreven"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Expert in Azure AI services met uitgebreide ervaring in het bouwen van enterprise AI-oplossingen",
+    "expertise": [
+      "Azure OpenAI",
+      "Cognitive Services",
+      "AI Search",
+      "Machine Learning"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AI-102",
+      "AI-900",
+      "AZ-305"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure AI Engineer Associate",
+    "examCode": "AI-102",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Brain",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-01-28T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Azure AI heeft de manier waarop we intelligente applicaties bouwen getransformeerd. Ik heb teams geholpen bij het implementeren van alles, van document processing pipelines tot geavanceerde RAG-systemen met Azure OpenAI. De combinatie van Azure's AI-services met de juiste architectuurpatronen maakt oplossingen mogelijk die nog maar een paar jaar geleden science fiction leken. Deze cursus geeft je de praktische vaardigheden om deze oplossingen in jouw organisatie te bouwen."
+  }
+}

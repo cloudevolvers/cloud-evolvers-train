@@ -1,0 +1,239 @@
+{
+  "id": "azure-ai-engineer",
+  "slug": "azure-ai-engineer",
+  "title": "Azure AI Engineer Associate (AI-102)",
+  "subtitle": "Design and Implement Azure AI Solutions",
+  "description": "Build, manage, and deploy AI solutions using Azure Cognitive Services, Azure AI Search, and Azure OpenAI",
+  "overview": "This advanced course prepares you to design and implement AI solutions on Microsoft Azure. You'll learn to build intelligent applications using Azure Cognitive Services, implement knowledge mining with Azure AI Search, and create generative AI solutions with Azure OpenAI Service. Perfect for developers ready to integrate AI into real-world applications.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Engineering",
+  "difficulty": "Advanced",
+  "tags": [
+    "Azure",
+    "AI",
+    "AI-102",
+    "Cognitive Services",
+    "Azure OpenAI",
+    "Machine Learning",
+    "Computer Vision",
+    "NLP"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1895,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-solution-planning",
+      "title": "Plan Azure AI Solutions",
+      "description": "Plan and manage Azure AI solutions including responsible AI principles and security",
+      "icon": "Target"
+    },
+    {
+      "id": "computer-vision",
+      "title": "Implement Computer Vision",
+      "description": "Build image analysis, custom vision, and video analysis solutions",
+      "icon": "Eye"
+    },
+    {
+      "id": "nlp-solutions",
+      "title": "Natural Language Processing",
+      "description": "Implement text analytics, language understanding, and translation services",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "knowledge-mining",
+      "title": "Knowledge Mining",
+      "description": "Implement Azure AI Search solutions with custom skills and knowledge stores",
+      "icon": "Search"
+    },
+    {
+      "id": "document-intelligence",
+      "title": "Document Intelligence",
+      "description": "Extract information from documents using Azure AI Document Intelligence",
+      "icon": "FileText"
+    },
+    {
+      "id": "generative-ai",
+      "title": "Generative AI Solutions",
+      "description": "Build applications using Azure OpenAI Service with prompt engineering",
+      "icon": "Sparkles"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Planning Azure AI Solutions",
+      "description": "Azure AI platform overview, solution design, and responsible AI",
+      "icon": "Target",
+      "duration": "4 hours",
+      "topics": [
+        "Azure AI services overview and selection",
+        "Responsible AI principles and guidelines",
+        "Security and compliance for AI solutions",
+        "Cost optimization and resource planning",
+        "AI solution architecture patterns"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Computer Vision Solutions",
+      "description": "Image analysis, custom vision models, and video analytics",
+      "icon": "Eye",
+      "duration": "6 hours",
+      "topics": [
+        "Azure AI Vision and Image Analysis API",
+        "Custom Vision for image classification",
+        "Object detection and spatial analysis",
+        "Face API and facial recognition",
+        "Video Indexer for video analysis"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Natural Language Processing",
+      "description": "Text analytics, language understanding, and speech services",
+      "icon": "MessageSquare",
+      "duration": "6 hours",
+      "topics": [
+        "Azure AI Language service capabilities",
+        "Custom text classification and NER",
+        "Conversational Language Understanding (CLU)",
+        "Question Answering and custom QnA",
+        "Speech-to-text and text-to-speech"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Knowledge Mining with AI Search",
+      "description": "Azure AI Search, skillsets, and knowledge stores",
+      "icon": "Search",
+      "duration": "6 hours",
+      "topics": [
+        "Azure AI Search fundamentals",
+        "Indexers and data sources",
+        "Built-in and custom skillsets",
+        "Knowledge stores and projections",
+        "Semantic search and vector search"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Document Intelligence",
+      "description": "Extract and process information from documents",
+      "icon": "FileText",
+      "duration": "4 hours",
+      "topics": [
+        "Azure AI Document Intelligence overview",
+        "Prebuilt models for common documents",
+        "Custom document models",
+        "Composed models and model management",
+        "Integration with workflows"
+      ]
+    },
+    {
+      "id": "module-6",
+      "title": "Azure OpenAI and Generative AI",
+      "description": "Build generative AI solutions with Azure OpenAI",
+      "icon": "Sparkles",
+      "duration": "6 hours",
+      "topics": [
+        "Azure OpenAI Service fundamentals",
+        "GPT models and capabilities",
+        "Prompt engineering techniques",
+        "Retrieval Augmented Generation (RAG)",
+        "Responsible AI for generative models"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Building a Computer Vision Solution",
+      "description": "Create an image analysis application with custom vision",
+      "duration": "2 hours",
+      "icon": "Eye"
+    },
+    {
+      "id": "lab-2",
+      "title": "Implementing Language Understanding",
+      "description": "Build a conversational AI with CLU and custom intents",
+      "duration": "2 hours",
+      "icon": "MessageSquare"
+    },
+    {
+      "id": "lab-3",
+      "title": "Creating an AI Search Solution",
+      "description": "Implement knowledge mining with custom skillsets",
+      "duration": "2.5 hours",
+      "icon": "Search"
+    },
+    {
+      "id": "lab-4",
+      "title": "Document Processing Pipeline",
+      "description": "Build an automated document processing solution",
+      "duration": "1.5 hours",
+      "icon": "FileText"
+    },
+    {
+      "id": "lab-5",
+      "title": "Building a RAG Application",
+      "description": "Create a generative AI app with Azure OpenAI and AI Search",
+      "duration": "2.5 hours",
+      "icon": "Sparkles"
+    }
+  ],
+  "prerequisites": [
+    "Experience with Azure portal and Azure CLI",
+    "Programming experience (Python or C#)",
+    "Understanding of REST APIs and JSON",
+    "Familiarity with AI and ML concepts (AI-900 recommended)"
+  ],
+  "targetAudience": [
+    "Software developers building AI applications",
+    "AI/ML engineers implementing Azure solutions",
+    "Solution architects designing AI systems",
+    "Data scientists deploying models to production",
+    "Developers seeking AI-102 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Expert in Azure AI services with extensive experience building enterprise AI solutions",
+    "expertise": [
+      "Azure OpenAI",
+      "Cognitive Services",
+      "AI Search",
+      "Machine Learning"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "AI-102",
+      "AI-900",
+      "AZ-305"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Azure AI Engineer Associate",
+    "examCode": "AI-102",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Brain",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-01-28T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Azure AI has transformed how we build intelligent applications. I've helped teams implement everything from document processing pipelines to sophisticated RAG systems with Azure OpenAI. The combination of Azure's AI services with proper architecture patterns enables solutions that seemed like science fiction just a few years ago. This course gives you the practical skills to build these solutions in your organization."
+  }
+}

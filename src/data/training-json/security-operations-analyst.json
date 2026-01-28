@@ -1,0 +1,239 @@
+{
+  "id": "security-operations-analyst",
+  "slug": "security-operations-analyst",
+  "title": "Microsoft Security Operations Analyst (SC-200)",
+  "subtitle": "Investigate and Respond to Threats with Microsoft Security Solutions",
+  "description": "Master threat detection, investigation, and response using Microsoft Sentinel, Defender XDR, and Defender for Cloud",
+  "overview": "This intensive course prepares you to work as a Security Operations Center (SOC) analyst using Microsoft's comprehensive security platform. You'll learn to investigate and respond to threats using Microsoft Sentinel SIEM/SOAR, Microsoft Defender XDR, and Microsoft Defender for Cloud. Master the skills to protect your organization against modern cyber threats.",
+  "category": "Security",
+  "subcategory": "Security Operations",
+  "difficulty": "Advanced",
+  "tags": [
+    "Security",
+    "SC-200",
+    "Microsoft Sentinel",
+    "Defender XDR",
+    "SOC",
+    "SIEM",
+    "Threat Hunting",
+    "Incident Response"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1895,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "defender-xdr",
+      "title": "Microsoft Defender XDR",
+      "description": "Mitigate threats using Microsoft Defender for Endpoint, Identity, Office 365, and Cloud Apps",
+      "icon": "Shield"
+    },
+    {
+      "id": "sentinel-config",
+      "title": "Configure Microsoft Sentinel",
+      "description": "Set up workspace, connect data sources, and configure analytics rules",
+      "icon": "Settings"
+    },
+    {
+      "id": "threat-detection",
+      "title": "Threat Detection",
+      "description": "Create detection rules, workbooks, and automated playbooks",
+      "icon": "AlertTriangle"
+    },
+    {
+      "id": "incident-response",
+      "title": "Incident Investigation",
+      "description": "Investigate incidents, hunt for threats, and respond to attacks",
+      "icon": "Search"
+    },
+    {
+      "id": "defender-cloud",
+      "title": "Defender for Cloud",
+      "description": "Protect multicloud and hybrid workloads with Defender for Cloud",
+      "icon": "Cloud"
+    },
+    {
+      "id": "kql-queries",
+      "title": "KQL Mastery",
+      "description": "Write advanced Kusto Query Language queries for threat hunting",
+      "icon": "Code"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Microsoft Defender XDR Fundamentals",
+      "description": "Unified threat protection across endpoints, identity, email, and apps",
+      "icon": "Shield",
+      "duration": "6 hours",
+      "topics": [
+        "Microsoft Defender XDR portal overview",
+        "Defender for Endpoint protection and EDR",
+        "Defender for Identity threat detection",
+        "Defender for Office 365 email security",
+        "Defender for Cloud Apps (CASB)"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Threat Investigation with Defender XDR",
+      "description": "Investigate and respond to incidents across the kill chain",
+      "icon": "Search",
+      "duration": "6 hours",
+      "topics": [
+        "Incident investigation workflow",
+        "Attack story and evidence analysis",
+        "Automated investigation and response",
+        "Advanced hunting with KQL",
+        "Custom detection rules"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Microsoft Sentinel Configuration",
+      "description": "Deploy and configure your cloud-native SIEM",
+      "icon": "Settings",
+      "duration": "5 hours",
+      "topics": [
+        "Sentinel workspace architecture",
+        "Data connectors and ingestion",
+        "Content hub and solutions",
+        "Analytics rules configuration",
+        "Cost optimization strategies"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Threat Detection and Hunting",
+      "description": "Create detections and proactively hunt for threats",
+      "icon": "AlertTriangle",
+      "duration": "6 hours",
+      "topics": [
+        "Scheduled analytics rules",
+        "Near real-time (NRT) rules",
+        "Threat intelligence integration",
+        "Hunting queries and bookmarks",
+        "User and entity behavior analytics (UEBA)"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Incident Response and Automation",
+      "description": "Respond to incidents with automation and playbooks",
+      "icon": "Zap",
+      "duration": "5 hours",
+      "topics": [
+        "Incident management workflow",
+        "Automation rules",
+        "Logic Apps playbooks",
+        "SOAR integration patterns",
+        "Case management and collaboration"
+      ]
+    },
+    {
+      "id": "module-6",
+      "title": "Microsoft Defender for Cloud",
+      "description": "Protect cloud workloads across Azure, AWS, and GCP",
+      "icon": "Cloud",
+      "duration": "4 hours",
+      "topics": [
+        "Cloud Security Posture Management (CSPM)",
+        "Cloud Workload Protection (CWP)",
+        "Security recommendations and secure score",
+        "Regulatory compliance monitoring",
+        "Multi-cloud security"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Investigating an Attack with Defender XDR",
+      "description": "Walk through a complete attack investigation scenario",
+      "duration": "2 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "lab-2",
+      "title": "Deploying Microsoft Sentinel",
+      "description": "Configure workspace, connect sources, and create rules",
+      "duration": "2 hours",
+      "icon": "Settings"
+    },
+    {
+      "id": "lab-3",
+      "title": "Threat Hunting with KQL",
+      "description": "Write advanced hunting queries to detect threats",
+      "duration": "2.5 hours",
+      "icon": "Code"
+    },
+    {
+      "id": "lab-4",
+      "title": "Building Automated Playbooks",
+      "description": "Create SOAR playbooks for automated response",
+      "duration": "2 hours",
+      "icon": "Zap"
+    },
+    {
+      "id": "lab-5",
+      "title": "Incident Response Simulation",
+      "description": "Respond to a simulated security incident end-to-end",
+      "duration": "2 hours",
+      "icon": "AlertTriangle"
+    }
+  ],
+  "prerequisites": [
+    "Basic understanding of Microsoft 365 and Azure",
+    "Familiarity with security concepts and terminology",
+    "Experience with the Azure portal",
+    "SC-900 certification recommended"
+  ],
+  "targetAudience": [
+    "Security Operations Center (SOC) analysts",
+    "Security engineers implementing SIEM/SOAR",
+    "Incident responders and threat hunters",
+    "IT professionals moving into security roles",
+    "Professionals seeking SC-200 certification"
+  ],
+  "instructor": {
+    "id": "falk-krahl",
+    "name": "Falk Krahl",
+    "title": "Principal Cloud Security Architect",
+    "bio": "Experienced security professional specializing in Microsoft security solutions and SOC operations",
+    "expertise": [
+      "Microsoft Sentinel",
+      "Defender XDR",
+      "Threat Hunting",
+      "Incident Response"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-200",
+      "SC-100",
+      "AZ-500"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Security Operations Analyst",
+    "examCode": "SC-200",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-01-28T00:00:00Z",
+  "personalStory": {
+    "instructor": "Falk Krahl",
+    "story": "Working in security operations is both challenging and rewarding. I've helped organizations build their SOC capabilities from the ground up using Microsoft's security stack. The integration between Sentinel and Defender XDR creates a powerful platform for detecting and responding to threats. This course teaches you the real-world skills that SOC analysts use every day to protect their organizations."
+  }
+}

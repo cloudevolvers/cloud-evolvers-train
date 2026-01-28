@@ -26,6 +26,9 @@ import azureSolutionsArchitectData from './azure-solutions-architect.json';
 import azureSecurityEngineerData from './azure-security-engineer.json';
 import windowsServerHybridInfrastructureData from './windows-server-hybrid-infrastructure.json';
 import windowsServerHybridAdministrator from './windows-server-hybrid-administrator.json';
+import azureAIEngineerData from './azure-ai-engineer.json';
+import securityOperationsAnalystData from './security-operations-analyst.json';
+import cybersecurityArchitectData from './cybersecurity-architect.json';
 
 // Training data registry
 const trainingRegistry: Record<string, TrainingJSON> = {
@@ -54,6 +57,9 @@ const trainingRegistry: Record<string, TrainingJSON> = {
   'power-platform-fundamentals': powerPlatformFundamentalsData as TrainingJSON,
   'windows-server-hybrid-infrastructure': windowsServerHybridInfrastructureData as TrainingJSON,
   'windows-server-hybrid-administrator': windowsServerHybridAdministrator as TrainingJSON,
+  'azure-ai-engineer': azureAIEngineerData as TrainingJSON,
+  'security-operations-analyst': securityOperationsAnalystData as TrainingJSON,
+  'cybersecurity-architect': cybersecurityArchitectData as TrainingJSON,
 };
 
 // Function to get training by slug

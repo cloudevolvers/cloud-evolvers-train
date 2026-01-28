@@ -1,0 +1,241 @@
+{
+  "id": "cybersecurity-architect",
+  "slug": "cybersecurity-architect",
+  "title": "Microsoft Cybersecurity Architect (SC-100)",
+  "subtitle": "Ontwerp Zero Trust Security Architectuur over Microsoft Platforms",
+  "description": "Ontwerp uitgebreide cybersecurity strategieën met Zero Trust principes over Microsoft security, compliance en identity oplossingen",
+  "overview": "Deze expert-level cursus bereidt je voor om cybersecurity strategie en architectuur te ontwerpen met Microsoft's uitgebreide security portfolio. Je leert business requirements te vertalen naar Zero Trust security oplossingen, security te ontwerpen voor infrastructuur, applicaties, data en identiteit. Deze cursus is ideaal voor senior security professionals die klaar zijn voor architectuurrollen.",
+  "category": "Security",
+  "subcategory": "Security Architecture",
+  "difficulty": "Expert",
+  "tags": [
+    "Security",
+    "SC-100",
+    "Zero Trust",
+    "Architecture",
+    "Cybersecurity",
+    "Microsoft Entra",
+    "Defender",
+    "Compliance"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 2195,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "zero-trust",
+      "title": "Zero Trust Strategie",
+      "description": "Ontwerp Zero Trust security strategie afgestemd op business requirements",
+      "icon": "Shield"
+    },
+    {
+      "id": "security-operations",
+      "title": "Security Operations Architectuur",
+      "description": "Ontwerp security operations, identity en access management strategieën",
+      "icon": "Settings"
+    },
+    {
+      "id": "infrastructure-security",
+      "title": "Infrastructuur Security",
+      "description": "Ontwerp security voor hybride en multicloud infrastructuur",
+      "icon": "Server"
+    },
+    {
+      "id": "data-security",
+      "title": "Data en Applicatie Security",
+      "description": "Ontwerp strategieën voor het beveiligen van data en applicaties",
+      "icon": "Lock"
+    },
+    {
+      "id": "governance",
+      "title": "Security Governance",
+      "description": "Ontwerp governance, risk en compliance strategieën",
+      "icon": "FileCheck"
+    },
+    {
+      "id": "posture-management",
+      "title": "Security Posture",
+      "description": "Evalueer en verbeter organisatorische security posture",
+      "icon": "TrendingUp"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Zero Trust en Security Strategie",
+      "description": "Ontwerp uitgebreide security strategie met Zero Trust principes",
+      "icon": "Shield",
+      "duration": "5 uur",
+      "topics": [
+        "Zero Trust architectuur principes",
+        "Microsoft Zero Trust deployment model",
+        "Business requirements naar security design",
+        "Security strategie documentatie",
+        "Resilience en recovery strategieën"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Identity en Access Architectuur",
+      "description": "Ontwerp identity security met Microsoft Entra",
+      "icon": "Users",
+      "duration": "6 uur",
+      "topics": [
+        "Microsoft Entra ID architectuur",
+        "Privileged Identity Management (PIM)",
+        "Conditional Access strategie",
+        "External identity en B2B/B2C",
+        "Identity governance en lifecycle"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Security Operations Design",
+      "description": "Ontwerp SecOps strategie met Microsoft security oplossingen",
+      "icon": "AlertTriangle",
+      "duration": "5 uur",
+      "topics": [
+        "Microsoft Defender XDR architectuur",
+        "Microsoft Sentinel design patterns",
+        "Threat intelligence strategie",
+        "Incident response procedures",
+        "Security automatisering design"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Infrastructuur Security Architectuur",
+      "description": "Beveilig hybride en multicloud infrastructuur",
+      "icon": "Server",
+      "duration": "6 uur",
+      "topics": [
+        "Azure security architectuur",
+        "Hybride en multicloud security",
+        "Netwerk security design",
+        "Endpoint security strategie",
+        "Server en container security"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Data en Applicatie Security",
+      "description": "Ontwerp data protection en applicatie security strategieën",
+      "icon": "Lock",
+      "duration": "5 uur",
+      "topics": [
+        "Microsoft Purview information protection",
+        "Data Loss Prevention (DLP) strategie",
+        "Applicatie security patterns",
+        "DevSecOps integratie",
+        "API security design"
+      ]
+    },
+    {
+      "id": "module-6",
+      "title": "Governance, Risk en Compliance",
+      "description": "Ontwerp GRC strategie met Microsoft oplossingen",
+      "icon": "FileCheck",
+      "duration": "5 uur",
+      "topics": [
+        "Microsoft Purview compliance",
+        "Regulatory compliance frameworks",
+        "Risk management strategie",
+        "Audit en reporting design",
+        "Security posture management"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Zero Trust Architectuur Design",
+      "description": "Ontwerp een Zero Trust architectuur voor een case study organisatie",
+      "duration": "2,5 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "lab-2",
+      "title": "Identity Security Design",
+      "description": "Maak identity architectuur met Entra ID en governance",
+      "duration": "2 uur",
+      "icon": "Users"
+    },
+    {
+      "id": "lab-3",
+      "title": "SecOps Architectuur Workshop",
+      "description": "Ontwerp security operations voor een enterprise scenario",
+      "duration": "2 uur",
+      "icon": "AlertTriangle"
+    },
+    {
+      "id": "lab-4",
+      "title": "Data Protection Strategie",
+      "description": "Ontwerp data classification en protection architectuur",
+      "duration": "2 uur",
+      "icon": "Lock"
+    },
+    {
+      "id": "lab-5",
+      "title": "Compliance Architectuur Review",
+      "description": "Evalueer en verbeter een security architectuur voor compliance",
+      "duration": "2 uur",
+      "icon": "FileCheck"
+    }
+  ],
+  "prerequisites": [
+    "Ervaring met Microsoft security oplossingen",
+    "Begrip van identity en access management",
+    "Kennis van networking en infrastructuur security",
+    "SC-200 of SC-300 certificering aanbevolen",
+    "3+ jaar security ervaring"
+  ],
+  "targetAudience": [
+    "Senior security engineers die overstappen naar architectuur",
+    "Security architects die enterprise oplossingen ontwerpen",
+    "IT-architects die security specialisatie toevoegen",
+    "Security consultants die organisaties adviseren",
+    "Professionals die SC-100 certificering nastreven"
+  ],
+  "instructor": {
+    "id": "falk-krahl",
+    "name": "Falk Krahl",
+    "title": "Principal Cloud Security Architect",
+    "bio": "Enterprise security architect met uitgebreide ervaring in het ontwerpen van Zero Trust architecturen voor grote organisaties",
+    "expertise": [
+      "Zero Trust Architecture",
+      "Microsoft Security",
+      "Identity & Access",
+      "Compliance"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-100",
+      "SC-200",
+      "SC-300",
+      "AZ-500"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Cybersecurity Architect",
+    "examCode": "SC-100",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-01-28T00:00:00Z",
+  "personalStory": {
+    "instructor": "Falk Krahl",
+    "story": "Security architectuur draait om de juiste beslissingen nemen die een organisatie beschermen zonder de business te belemmeren. Ik heb security architecturen ontworpen voor organisaties in diverse industrieën, van financiële dienstverlening tot gezondheidszorg. Het Zero Trust model, gecombineerd met Microsoft's geïntegreerde security platform, biedt een krachtig framework voor moderne security. Deze cursus leert je te denken als een security architect en oplossingen te ontwerpen die echt beschermen."
+  }
+}

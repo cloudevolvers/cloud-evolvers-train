@@ -1,0 +1,241 @@
+{
+  "id": "cybersecurity-architect",
+  "slug": "cybersecurity-architect",
+  "title": "Microsoft Cybersecurity Architect (SC-100)",
+  "subtitle": "Design Zero Trust Security Architecture Across Microsoft Platforms",
+  "description": "Design comprehensive cybersecurity strategies using Zero Trust principles across Microsoft security, compliance, and identity solutions",
+  "overview": "This expert-level course prepares you to design cybersecurity strategy and architecture using Microsoft's comprehensive security portfolio. You'll learn to translate business requirements into Zero Trust security solutions, design security for infrastructure, applications, data, and identity. This course is ideal for senior security professionals ready to take on architecture roles.",
+  "category": "Security",
+  "subcategory": "Security Architecture",
+  "difficulty": "Expert",
+  "tags": [
+    "Security",
+    "SC-100",
+    "Zero Trust",
+    "Architecture",
+    "Cybersecurity",
+    "Microsoft Entra",
+    "Defender",
+    "Compliance"
+  ],
+  "duration": {
+    "days": 4,
+    "format": "days"
+  },
+  "price": {
+    "amount": 2195,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "zero-trust",
+      "title": "Zero Trust Strategy",
+      "description": "Design Zero Trust security strategy aligned with business requirements",
+      "icon": "Shield"
+    },
+    {
+      "id": "security-operations",
+      "title": "Security Operations Architecture",
+      "description": "Design security operations, identity, and access management strategies",
+      "icon": "Settings"
+    },
+    {
+      "id": "infrastructure-security",
+      "title": "Infrastructure Security",
+      "description": "Design security for hybrid and multicloud infrastructure",
+      "icon": "Server"
+    },
+    {
+      "id": "data-security",
+      "title": "Data and Application Security",
+      "description": "Design strategies for securing data and applications",
+      "icon": "Lock"
+    },
+    {
+      "id": "governance",
+      "title": "Security Governance",
+      "description": "Design governance, risk, and compliance strategies",
+      "icon": "FileCheck"
+    },
+    {
+      "id": "posture-management",
+      "title": "Security Posture",
+      "description": "Evaluate and improve organizational security posture",
+      "icon": "TrendingUp"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Zero Trust and Security Strategy",
+      "description": "Design comprehensive security strategy using Zero Trust principles",
+      "icon": "Shield",
+      "duration": "5 hours",
+      "topics": [
+        "Zero Trust architecture principles",
+        "Microsoft Zero Trust deployment model",
+        "Business requirements to security design",
+        "Security strategy documentation",
+        "Resilience and recovery strategies"
+      ]
+    },
+    {
+      "id": "module-2",
+      "title": "Identity and Access Architecture",
+      "description": "Design identity security with Microsoft Entra",
+      "icon": "Users",
+      "duration": "6 hours",
+      "topics": [
+        "Microsoft Entra ID architecture",
+        "Privileged Identity Management (PIM)",
+        "Conditional Access strategy",
+        "External identity and B2B/B2C",
+        "Identity governance and lifecycle"
+      ]
+    },
+    {
+      "id": "module-3",
+      "title": "Security Operations Design",
+      "description": "Design SecOps strategy with Microsoft security solutions",
+      "icon": "AlertTriangle",
+      "duration": "5 hours",
+      "topics": [
+        "Microsoft Defender XDR architecture",
+        "Microsoft Sentinel design patterns",
+        "Threat intelligence strategy",
+        "Incident response procedures",
+        "Security automation design"
+      ]
+    },
+    {
+      "id": "module-4",
+      "title": "Infrastructure Security Architecture",
+      "description": "Secure hybrid and multicloud infrastructure",
+      "icon": "Server",
+      "duration": "6 hours",
+      "topics": [
+        "Azure security architecture",
+        "Hybrid and multicloud security",
+        "Network security design",
+        "Endpoint security strategy",
+        "Server and container security"
+      ]
+    },
+    {
+      "id": "module-5",
+      "title": "Data and Application Security",
+      "description": "Design data protection and application security strategies",
+      "icon": "Lock",
+      "duration": "5 hours",
+      "topics": [
+        "Microsoft Purview information protection",
+        "Data Loss Prevention (DLP) strategy",
+        "Application security patterns",
+        "DevSecOps integration",
+        "API security design"
+      ]
+    },
+    {
+      "id": "module-6",
+      "title": "Governance, Risk, and Compliance",
+      "description": "Design GRC strategy using Microsoft solutions",
+      "icon": "FileCheck",
+      "duration": "5 hours",
+      "topics": [
+        "Microsoft Purview compliance",
+        "Regulatory compliance frameworks",
+        "Risk management strategy",
+        "Audit and reporting design",
+        "Security posture management"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "lab-1",
+      "title": "Zero Trust Architecture Design",
+      "description": "Design a Zero Trust architecture for a case study organization",
+      "duration": "2.5 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "lab-2",
+      "title": "Identity Security Design",
+      "description": "Create identity architecture with Entra ID and governance",
+      "duration": "2 hours",
+      "icon": "Users"
+    },
+    {
+      "id": "lab-3",
+      "title": "SecOps Architecture Workshop",
+      "description": "Design security operations for an enterprise scenario",
+      "duration": "2 hours",
+      "icon": "AlertTriangle"
+    },
+    {
+      "id": "lab-4",
+      "title": "Data Protection Strategy",
+      "description": "Design data classification and protection architecture",
+      "duration": "2 hours",
+      "icon": "Lock"
+    },
+    {
+      "id": "lab-5",
+      "title": "Compliance Architecture Review",
+      "description": "Evaluate and improve a security architecture for compliance",
+      "duration": "2 hours",
+      "icon": "FileCheck"
+    }
+  ],
+  "prerequisites": [
+    "Experience with Microsoft security solutions",
+    "Understanding of identity and access management",
+    "Knowledge of networking and infrastructure security",
+    "SC-200 or SC-300 certification recommended",
+    "3+ years of security experience"
+  ],
+  "targetAudience": [
+    "Senior security engineers moving to architecture",
+    "Security architects designing enterprise solutions",
+    "IT architects adding security specialization",
+    "Security consultants advising organizations",
+    "Professionals seeking SC-100 certification"
+  ],
+  "instructor": {
+    "id": "falk-krahl",
+    "name": "Falk Krahl",
+    "title": "Principal Cloud Security Architect",
+    "bio": "Enterprise security architect with extensive experience designing Zero Trust architectures for large organizations",
+    "expertise": [
+      "Zero Trust Architecture",
+      "Microsoft Security",
+      "Identity & Access",
+      "Compliance"
+    ],
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "SC-100",
+      "SC-200",
+      "SC-300",
+      "AZ-500"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Cybersecurity Architect",
+    "examCode": "SC-100",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 12,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2026-01-28T00:00:00Z",
+  "personalStory": {
+    "instructor": "Falk Krahl",
+    "story": "Security architecture is about making the right decisions that protect an organization without impeding business. I've designed security architectures for organizations across industries, from financial services to healthcare. The Zero Trust model, combined with Microsoft's integrated security platform, provides a powerful framework for modern security. This course teaches you to think like a security architect and design solutions that truly protect."
+  }
+}
