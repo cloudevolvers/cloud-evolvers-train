@@ -1,0 +1,4 @@
+# Cloudflare Pages SPA routing
+# All routes that don't match a file should go to index.html
+
+/*    /index.html   200
