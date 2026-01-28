@@ -2,7 +2,6 @@ import { TrainingJSON } from './types';
 
 // Import all training JSON files
 import azureAdministratorData from './azure-administrator.json';
-import azureAIDeveloperData from './azure-ai-developer.json';
 import azureAIFundamentalsData from './azure-ai-fundamentals.json';
 import azureDeveloperData from './azure-developer.json';
 import azureAIDeveloperBootcampData from './azure-ai-developer-bootcamp.json';
@@ -31,7 +30,6 @@ import windowsServerHybridAdministrator from './windows-server-hybrid-administra
 // Training data registry
 const trainingRegistry: Record<string, TrainingJSON> = {
   'azure-administrator': azureAdministratorData as TrainingJSON,
-  'azure-ai-developer': azureAIDeveloperData as TrainingJSON,
   'azure-ai-developer-bootcamp': azureAIDeveloperBootcampData as TrainingJSON,
   'azure-ai-fundamentals': azureAIFundamentalsData as TrainingJSON,
   'azure-developer': azureDeveloperData as TrainingJSON,
