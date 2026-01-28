@@ -9,7 +9,6 @@ import { trainingMetadata as azureSecurityEngineerMetadata } from './AzureSecuri
 import { trainingMetadata as microsoft365FundamentalsMetadata } from './Microsoft365FundamentalsContent';
 import { trainingMetadata as powerPlatformFundamentalsMetadata } from './PowerPlatformFundamentalsContent';
 import { trainingMetadata as azureIoTDeveloperMetadata } from './AzureIoTDeveloperContent';
-import { trainingMetadata as azureAIDeveloperMetadata } from './AzureAIDeveloperContent';
 import { trainingMetadata as azureDevOpsEngineerMetadata } from './AzureDevOpsEngineerContent';
 import { trainingMetadata as azureNetworkEngineerMetadata } from './AzureNetworkEngineerContent';
 import { trainingMetadata as azureVirtualDesktopMetadata } from './AzureVirtualDesktopContent';
@@ -39,7 +38,6 @@ const AzureSecurityEngineerContent = React.lazy(() => import('./AzureSecurityEng
 const Microsoft365FundamentalsContent = React.lazy(() => import('./Microsoft365FundamentalsContent'));
 const PowerPlatformFundamentalsContent = React.lazy(() => import('./PowerPlatformFundamentalsContent'));
 const AzureIoTDeveloperContent = React.lazy(() => import('./AzureIoTDeveloperContent'));
-const AzureAIDeveloperContent = React.lazy(() => import('./AzureAIDeveloperContent'));
 const AzureDevOpsEngineerContent = React.lazy(() => import('./AzureDevOpsEngineerContent'));
 const AzureNetworkEngineerContent = React.lazy(() => import('./AzureNetworkEngineerContent'));
 const AzureVirtualDesktopContent = React.lazy(() => import('./AzureVirtualDesktopContent'));
@@ -133,7 +131,6 @@ export function getAllTrainings(): TrainingMetadata[] {
     microsoft365FundamentalsMetadata,
     powerPlatformFundamentalsMetadata,
     azureIoTDeveloperMetadata,
-    azureAIDeveloperMetadata,
     azureDevOpsEngineerMetadata,
     azureNetworkEngineerMetadata,
     azureVirtualDesktopMetadata,
