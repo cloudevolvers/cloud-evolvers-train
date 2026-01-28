@@ -10,10 +10,16 @@ NODE_ENV = "production"
 VITE_ENVIRONMENT = "production"
 VITE_SHOW_CONSTRUCTION_BANNER = "false"
 
-# Preview environment (for PRs and branches)
+# Preview/Test environment (for PRs and branches)
+# URL: test.cloudevolvers.com (via branch deployments)
 [env.preview]
-vars = { VITE_ENVIRONMENT = "preview" }
+vars = { VITE_ENVIRONMENT = "preview", VITE_SITE_URL = "https://test.cloudevolvers.com" }
 
-# Production environment (main branch - poc.cloudevolvers.com)
+# Production environment (main branch)
+# URL: cloudevolvers.com / www.cloudevolvers.com
 [env.production]
-vars = { VITE_ENVIRONMENT = "production" }
+vars = { VITE_ENVIRONMENT = "production", VITE_SITE_URL = "https://cloudevolvers.com" }
+
+# Custom domains configuration
+# Production: cloudevolvers.com, www.cloudevolvers.com
+# Preview/Test: test.cloudevolvers.com (branch deployments)

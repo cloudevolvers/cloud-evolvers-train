@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    /* Premium Light Mode - Clean white with subtle blue tints */
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* Premium Light Mode - Clean white with subtle warm tints */
+    --background: 220 20% 97%;
+    --foreground: 224 71% 4%;
 
-    /* Cards - Pure white for contrast */
+    /* Cards - Pure white with subtle warmth */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 224 71% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 224 71% 4%;
 
-    /* Vibrant blue primary */
-    --primary: 221 83% 53%;
+    /* Vibrant blue primary - slightly more saturated for light mode */
+    --primary: 221 83% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Cool gray secondary */
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    /* Warm gray secondary for better contrast */
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 224 71% 4%;
 
-    /* Refined muted tones */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Refined muted tones - better contrast */
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 9% 40%;
 
     /* Subtle accent */
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 220 14% 94%;
+    --accent-foreground: 224 71% 4%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Clean borders */
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    /* More visible borders for light mode */
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 221 83% 50%;
 
     --radius: 0.5rem;
 
-    /* Light mode shadows - more visible depth */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+    /* Light mode shadows - enhanced depth */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.06);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.08);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.08);
   }
 
   .dark {
@@ -88,10 +88,9 @@
   }
 }
 
-/* Light mode enhancements */
+/* Light mode gradient enhancements */
 :root {
-  /* Gradient backgrounds for light mode */
-  --gradient-subtle: linear-gradient(135deg, hsl(220 20% 97%) 0%, hsl(220 25% 95%) 100%);
+  --gradient-subtle: linear-gradient(135deg, hsl(220 20% 97%) 0%, hsl(220 18% 95%) 100%);
   --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
 }
 

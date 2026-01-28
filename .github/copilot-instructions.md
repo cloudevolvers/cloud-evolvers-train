@@ -341,6 +341,51 @@ max-w-[80rem]: 1280px  /* Secondary content */
 9. **Fake Statistics**: No fake ratings, enrollment numbers, or social proof
 10. **Poor Readability**: Avoid scrollbars and ensure proper alignment and spacing
 
+## ☁️ **Cloudflare Deployment & Infrastructure**
+
+### **Cloudflare MCP Tools Available**
+This project has **Cloudflare MCP (Model Context Protocol)** tools configured and ready to use:
+- **DNS Management**: Create, update, and delete DNS records
+- **Cloudflare Pages**: Deploy and manage deployments
+- **Workers**: Manage serverless functions
+- **Custom Domains**: Configure domain routing
+
+Cloudflare API tokens are configured via environment variables (IP-whitelisted for security).
+See `.env.example` for required environment variables.
+
+### **Deployment Environments**
+| Environment | URL | Branch |
+|-------------|-----|--------|
+| **Production** | `cloudevolvers.com` / `www.cloudevolvers.com` | `main` |
+| **Test/Preview** | `test.cloudevolvers.com` | PR branches |
+
+### **DNS Configuration**
+Custom domains are managed via Cloudflare DNS:
+- Production: `cloudevolvers.com` (A/CNAME records)
+- Test: `test.cloudevolvers.com` (CNAME)
+
+### **Environment Variables**
+```bash
+# Copy .env.example to .env for local development
+# Production secrets are managed in Cloudflare dashboard
+
+# Required tokens (never commit actual values!)
+CLOUDFLARE_DNS_TOKEN=       # For DNS operations
+CLOUDFLARE_API_TOKEN=       # For general API access
+```
+
+### **Deployment Commands**
+```bash
+# Deploy to preview
+wrangler pages deploy dist --env preview
+
+# Deploy to staging
+wrangler pages deploy dist --env staging
+
+# Deploy to production
+wrangler pages deploy dist --env production
+```
+
 ## 💡 **Pro Tips for This Project**
 
 1. **Data First**: Always ask "Is this data real?" before displaying anything
