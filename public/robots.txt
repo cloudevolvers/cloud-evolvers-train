@@ -1,15 +1,24 @@
-# Cloud Evolvers - Robots.txt
+# Cloud Evolvers - Azure Training Platform
 # https://cloudevolvers.com
 
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://cloudevolvers.com/sitemap.xml
 
-# Crawl-delay (optional, be polite to search engines)
+# Crawl-delay for politeness
 Crawl-delay: 1
 
-# Disallow admin/api paths
+# Block unnecessary paths
 Disallow: /api/
-Disallow: /.well-known/
+Disallow: /_spark/
+Disallow: /*.json$
+
+# Allow all assets
+Allow: /assets/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
