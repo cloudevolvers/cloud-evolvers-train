@@ -8,18 +8,19 @@ import { Link } from "react-router-dom";
 
 export function Hero() {
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-background dark:via-background dark:to-background">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-slate-50/50 to-white dark:from-background dark:via-background dark:to-background">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
+                {/* Clean geometric pattern for light mode */}
                 <DotPattern
-                    className="[mask-image:radial-gradient(800px_circle_at_center,white,transparent)] text-slate-300 dark:text-blue-500/20"
-                    opacity={0.4}
+                    className="[mask-image:radial-gradient(900px_circle_at_center,white,transparent)] text-slate-200 dark:text-blue-500/20"
+                    opacity={0.5}
                 />
 
-                {/* Gradient Spotlights - Light mode optimized */}
-                <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-200/40 dark:bg-blue-500/10 rounded-full blur-[100px] animate-pulse" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-200/30 dark:bg-indigo-500/10 rounded-full blur-[100px] animate-pulse delay-1000" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-100/50 dark:from-blue-500/5 to-transparent rounded-full" />
+                {/* Subtle gradient orbs - refined for light mode */}
+                <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-100/60 to-transparent dark:from-blue-500/10 dark:to-transparent rounded-full blur-[80px]" />
+                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-indigo-100/50 to-transparent dark:from-indigo-500/10 dark:to-transparent rounded-full blur-[80px]" />
+                <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-sky-100/40 to-transparent dark:from-sky-500/5 dark:to-transparent rounded-full blur-[60px]" />
             </div>
 
             <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -100,57 +101,58 @@ export function Hero() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
+                            className="relative"
                         >
                             <TerminalWindow className="w-full shadow-2xl shadow-slate-900/10 dark:shadow-[0_0_50px_-10px_rgba(59,130,246,0.2)]" />
-                        </motion.div>
 
-                        {/* Decorative floating elements */}
-                        <motion.div
-                            animate={{ y: [0, -20, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="absolute -top-10 -right-10 bg-white dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-4 rounded-xl shadow-lg dark:shadow-xl hidden xl:block"
-                        >
-                            <div className="flex items-center gap-3">
-                                <div className="bg-emerald-100 dark:bg-green-500/20 p-2 rounded-lg">
-                                    <ShieldCheck className="w-6 h-6 text-emerald-600 dark:text-green-500" />
+                            {/* Floating certification badges - positioned relative to terminal */}
+                            <motion.div
+                                animate={{ y: [0, -12, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                className="absolute -top-4 -right-4 xl:-top-6 xl:-right-6 bg-white dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/80 dark:border-slate-700/50 p-3 rounded-xl shadow-lg shadow-slate-200/50 dark:shadow-black/20 hidden lg:block"
+                            >
+                                <div className="flex items-center gap-2.5">
+                                    <div className="bg-emerald-100 dark:bg-emerald-500/20 p-2 rounded-lg">
+                                        <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Certification</div>
+                                        <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-104</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className="text-xs text-slate-500 dark:text-gray-400">Certification</div>
-                                    <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-104 Admin</div>
-                                </div>
-                            </div>
-                        </motion.div>
+                            </motion.div>
 
-                        <motion.div
-                            animate={{ y: [0, 15, 0] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                            className="absolute top-1/2 -right-16 bg-white dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-4 rounded-xl shadow-lg dark:shadow-xl hidden xl:block"
-                        >
-                            <div className="flex items-center gap-3">
-                                <div className="bg-blue-100 dark:bg-blue-500/20 p-2 rounded-lg">
-                                    <ShieldCheck className="w-6 h-6 text-blue-600 dark:text-blue-500" />
+                            <motion.div
+                                animate={{ y: [0, 10, 0] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                                className="absolute top-1/2 -translate-y-1/2 -right-4 xl:-right-8 bg-white dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/80 dark:border-slate-700/50 p-3 rounded-xl shadow-lg shadow-slate-200/50 dark:shadow-black/20 hidden xl:block"
+                            >
+                                <div className="flex items-center gap-2.5">
+                                    <div className="bg-blue-100 dark:bg-blue-500/20 p-2 rounded-lg">
+                                        <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Certification</div>
+                                        <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-305</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className="text-xs text-slate-500 dark:text-gray-400">Certification</div>
-                                    <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-305 Expert</div>
-                                </div>
-                            </div>
-                        </motion.div>
+                            </motion.div>
 
-                        <motion.div
-                            animate={{ y: [0, -15, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                            className="absolute -bottom-8 -left-8 bg-white dark:bg-black/40 backdrop-blur-md border border-slate-200 dark:border-white/10 p-4 rounded-xl shadow-lg dark:shadow-xl hidden xl:block"
-                        >
-                            <div className="flex items-center gap-3">
-                                <div className="bg-amber-100 dark:bg-amber-500/20 p-2 rounded-lg">
-                                    <ShieldCheck className="w-6 h-6 text-amber-600 dark:text-amber-500" />
+                            <motion.div
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                                className="absolute -bottom-4 -left-4 xl:-bottom-6 xl:-left-6 bg-white dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/80 dark:border-slate-700/50 p-3 rounded-xl shadow-lg shadow-slate-200/50 dark:shadow-black/20 hidden lg:block"
+                            >
+                                <div className="flex items-center gap-2.5">
+                                    <div className="bg-amber-100 dark:bg-amber-500/20 p-2 rounded-lg">
+                                        <ShieldCheck className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Certification</div>
+                                        <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-500</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className="text-xs text-slate-500 dark:text-gray-400">Certification</div>
-                                    <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-500 Security</div>
-                                </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </div>
 

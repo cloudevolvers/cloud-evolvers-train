@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    /* Premium Light Mode - Subtle warmth with blue accents */
-    --background: 220 20% 97%;
-    --foreground: 224 71% 4%;
+    /* Premium Light Mode - Clean white with subtle blue tints */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
 
-    /* Cards with subtle depth */
+    /* Cards - Pure white for contrast */
     --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
+    --popover-foreground: 222 47% 11%;
 
     /* Vibrant blue primary */
     --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Soft blue-gray secondary */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 9% 46%;
+    /* Cool gray secondary */
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
 
     /* Refined muted tones */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
     /* Subtle accent */
-    --accent: 220 14% 96%;
-    --accent-foreground: 224 71% 4%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* Refined borders - slightly more visible */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
+    /* Clean borders */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
     --ring: 221 83% 53%;
 
     --radius: 0.5rem;
 
-    /* Light mode specific shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+    /* Light mode shadows - more visible depth */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
   }
 
   .dark {
