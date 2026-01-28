@@ -50,3 +50,4 @@ local.settings.json
 **/secrets.json
 **/credentials.json
 GRAPH_API_CONFIG_COMPLETE.md
+.serena/
