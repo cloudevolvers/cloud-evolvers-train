@@ -209,7 +209,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
                       <tr>
                         <td align="center" style="padding-top:8px;">
                           <a href="mailto:${body.email}?subject=Re: ${encodeURIComponent(body.training)}" style="display:inline-block;background:#0f172a;color:#fff;text-decoration:none;padding:14px 32px;border-radius:8px;font-size:14px;font-weight:bold;">
-                            ${isNL ? 'Beantwoorden' : 'Reply to ${body.name.split(' ')[0]}'}
+                            ${isNL ? 'Beantwoorden' : `Reply to ${body.name.split(' ')[0]}`}
                           </a>
                         </td>
                       </tr>
