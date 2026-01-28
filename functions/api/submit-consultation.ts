@@ -9,7 +9,9 @@ interface Env {
   API_KEY: string;
   AZURE_AD_CLIENT_ID: string;
   AZURE_AD_TENANT_ID: string;
+  EMAIL_AZURE_CLIENT_ID: string;
   EMAIL_AZURE_CLIENT_SECRET: string;
+  EMAIL_SENDER: string;
 }
 
 interface ContactFormData {
@@ -66,14 +68,17 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
-    // Get Microsoft Graph access token
+    // Get Microsoft Graph access token using dedicated email service principal
+    const emailClientId = env.EMAIL_AZURE_CLIENT_ID || env.AZURE_AD_CLIENT_ID;
+    const emailSender = env.EMAIL_SENDER || 'training@cloudevolvers.com';
+
     const tokenResponse = await fetch(
       `https://login.microsoftonline.com/${env.AZURE_AD_TENANT_ID}/oauth2/v2.0/token`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
-          client_id: env.AZURE_AD_CLIENT_ID,
+          client_id: emailClientId,
           client_secret: env.EMAIL_AZURE_CLIENT_SECRET,
           scope: 'https://graph.microsoft.com/.default',
           grant_type: 'client_credentials',
@@ -159,9 +164,9 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 </body>
 </html>`;
 
-    // Send email via Microsoft Graph
+    // Send email via Microsoft Graph using the configured sender
     const sendEmailResponse = await fetch(
-      'https://graph.microsoft.com/v1.0/users/training@cloudevolvers.com/sendMail',
+      `https://graph.microsoft.com/v1.0/users/${emailSender}/sendMail`,
       {
         method: 'POST',
         headers: {
@@ -177,6 +182,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             },
             toRecipients: [
               { emailAddress: { address: 'training@cloudevolvers.com' } },
+              { emailAddress: { address: 'yair@cloudevolvers.com' } },
             ],
             replyTo: [
               { emailAddress: { address: body.email, name: body.name } },

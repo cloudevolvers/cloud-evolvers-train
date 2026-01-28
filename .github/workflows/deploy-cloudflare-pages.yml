@@ -93,7 +93,9 @@ jobs:
           echo "${{ secrets.API_KEY }}" | wrangler pages secret put API_KEY --project-name=cloud-evolvers-train 2>/dev/null || true
           echo "${{ secrets.AZURE_AD_CLIENT_ID }}" | wrangler pages secret put AZURE_AD_CLIENT_ID --project-name=cloud-evolvers-train 2>/dev/null || true
           echo "${{ secrets.AZURE_AD_TENANT_ID }}" | wrangler pages secret put AZURE_AD_TENANT_ID --project-name=cloud-evolvers-train 2>/dev/null || true
+          echo "${{ secrets.EMAIL_AZURE_CLIENT_ID }}" | wrangler pages secret put EMAIL_AZURE_CLIENT_ID --project-name=cloud-evolvers-train 2>/dev/null || true
           echo "${{ secrets.EMAIL_AZURE_CLIENT_SECRET }}" | wrangler pages secret put EMAIL_AZURE_CLIENT_SECRET --project-name=cloud-evolvers-train 2>/dev/null || true
+          echo "${{ secrets.EMAIL_SENDER }}" | wrangler pages secret put EMAIL_SENDER --project-name=cloud-evolvers-train 2>/dev/null || true
           echo "${{ secrets.ADMIN_PASSWORD }}" | wrangler pages secret put ADMIN_PASSWORD --project-name=cloud-evolvers-train 2>/dev/null || true
 
           echo "✅ Secrets configured"
