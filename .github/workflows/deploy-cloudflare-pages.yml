@@ -64,12 +64,14 @@ jobs:
           EMAIL_AZURE_CLIENT_SECRET: ${{ secrets.EMAIL_AZURE_CLIENT_SECRET }}
           API_KEY: ${{ secrets.API_KEY }}
 
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=cloud-evolvers-train --branch=${{ github.ref_name }}
+        run: wrangler pages deploy dist --project-name=cloud-evolvers-train --branch=${{ github.ref_name }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
       - name: Deployment Success
         if: success()
