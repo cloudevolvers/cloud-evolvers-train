@@ -87,9 +87,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
 
     if (!tokenResponse.ok) {
-      console.error('Failed to get access token:', await tokenResponse.text());
+      const errorText = await tokenResponse.text();
+      console.error('Failed to get access token:', errorText);
       return new Response(
-        JSON.stringify({ error: 'Internal Server Error', details: 'Authentication failed' }),
+        JSON.stringify({
+          error: 'Authentication Error',
+          details: 'Failed to authenticate with Microsoft Graph',
+          debug: {
+            status: tokenResponse.status,
+            clientId: emailClientId?.substring(0, 8) + '...',
+            tenantId: env.AZURE_AD_TENANT_ID?.substring(0, 8) + '...',
+          }
+        }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
@@ -196,7 +205,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       const errorText = await sendEmailResponse.text();
       console.error('Failed to send email:', errorText);
       return new Response(
-        JSON.stringify({ error: 'Failed to send email', details: 'Please try again later' }),
+        JSON.stringify({
+          error: 'Email Send Error',
+          details: 'Failed to send email via Microsoft Graph',
+          debug: {
+            status: sendEmailResponse.status,
+            sender: emailSender,
+            graphError: errorText.substring(0, 200),
+          }
+        }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
