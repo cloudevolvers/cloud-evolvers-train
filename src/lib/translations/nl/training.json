@@ -1,67 +1,67 @@
 {
-  "title": "Microsoft Trainingen",
-  "subtitle": "Expert-ontworpen training voor carrièreontwikkeling",
+  "title": "Microsoft-trainingen",
+  "subtitle": "Trainingen ontworpen door experts voor uw carrièreontwikkeling",
   "popular": {
-    "title": "Professionele Trainingen",
-    "badge": "Meest Populair",
+    "title": "Professionele trainingen",
+    "badge": "Populairste keuze",
     "courses": [
-      { 
-        "code": "AZ-104", 
-        "name": "Azure Administrator Associate", 
-        "level": "Gemiddeld", 
+      {
+        "code": "AZ-104",
+        "name": "Azure Administrator Associate",
+        "level": "Gevorderd",
         "duration": "4 dagen",
-        "description": "Beheers Azure administratie en resource management",
-        "highlights": ["Virtuele machines", "Opslag accounts", "Azure netwerken", "Monitoring & backup"]
+        "description": "Beheers Azure-administratie en resourcebeheer",
+        "highlights": ["Virtuele machines", "Opslagaccounts", "Azure-netwerken", "Monitoring & back-up"]
       },
-      { 
-        "code": "AZ-900", 
-        "name": "Azure Fundamentals", 
-        "level": "Beginner", 
+      {
+        "code": "AZ-900",
+        "name": "Azure Fundamentals",
+        "level": "Beginner",
         "duration": "2 dagen",
-        "description": "Perfecte introductie tot Azure cloud concepten",
-        "highlights": ["Cloud basics", "Core diensten", "Beveiliging & compliance", "Prijzen modellen"]
+        "description": "De perfecte introductie tot Azure-cloudconcepten",
+        "highlights": ["Cloudbasis", "Kerndiensten", "Beveiliging & compliance", "Prijsmodellen"]
       },
-      { 
-        "code": "AZ-305", 
-        "name": "Azure Solutions Architect", 
-        "level": "Gevorderd", 
+      {
+        "code": "AZ-305",
+        "name": "Azure Solutions Architect",
+        "level": "Expert",
         "duration": "5 dagen",
-        "description": "Ontwerp schaalbare en veilige Azure oplossingen",
-        "highlights": ["Oplossing ontwerp", "Beveiligingsarchitectuur", "Kostenoptimalisatie", "Migratie strategieën"]
+        "description": "Ontwerp schaalbare en veilige Azure-oplossingen",
+        "highlights": ["Oplossingsontwerp", "Beveiligingsarchitectuur", "Kostenoptimalisatie", "Migratiestrategieën"]
       },
-      { 
-        "code": "MS-102", 
-        "name": "Microsoft 365 Administrator", 
-        "level": "Gevorderd", 
+      {
+        "code": "MS-102",
+        "name": "Microsoft 365 Administrator",
+        "level": "Expert",
         "duration": "5 dagen",
-        "description": "Complete M365 administratie en beveiliging",
-        "highlights": ["Identiteitsbeheer", "Teams administratie", "Beveiliging & compliance", "Apparaatbeheer"]
+        "description": "Complete M365-administratie en -beveiliging",
+        "highlights": ["Identiteitsbeheer", "Teams-administratie", "Beveiliging & compliance", "Apparaatbeheer"]
       }
     ]
   },
   "azure": {
-    "title": "Azure Certificeringen",
-    "subtitle": "Complete Azure leerpad",
+    "title": "Azure-certificeringen",
+    "subtitle": "Volledig Azure-leerpad",
     "courses": [
       { "code": "AZ-900", "name": "Azure Fundamentals", "level": "Beginner" },
-      { "code": "AZ-104", "name": "Azure Administrator", "level": "Gemiddeld" },
-      { "code": "AZ-305", "name": "Azure Solutions Architect", "level": "Gevorderd" },
+      { "code": "AZ-104", "name": "Azure Administrator", "level": "Gevorderd" },
+      { "code": "AZ-305", "name": "Azure Solutions Architect", "level": "Expert" },
       { "code": "AZ-500", "name": "Azure Security Engineer", "level": "Gevorderd" },
-      { "code": "AZ-204", "name": "Azure Developer", "level": "Gemiddeld" },
-      { "code": "AZ-400", "name": "Azure DevOps Engineer", "level": "Gevorderd" }
+      { "code": "AZ-204", "name": "Azure Developer", "level": "Gevorderd" },
+      { "code": "AZ-400", "name": "Azure DevOps Engineer", "level": "Expert" }
     ],
     "moreText": "+8 meer certificeringen"
   },
   "microsoft365": {
     "title": "Microsoft 365 & AI",
-    "subtitle": "AI-gedreven productiviteit",
+    "subtitle": "AI-gestuurde productiviteit",
     "courses": [
       { "code": "MS-900", "name": "Microsoft 365 Fundamentals", "level": "Beginner" },
-      { "code": "MS-102", "name": "Microsoft 365 Administrator Expert", "level": "Gevorderd" },
-      { "code": "Custom", "name": "Microsoft 365 Copilot Mastery", "level": "Gemiddeld" },
+      { "code": "MS-102", "name": "Microsoft 365 Administrator Expert", "level": "Expert" },
+      { "code": "Custom", "name": "Microsoft 365 Copilot Mastery", "level": "Gevorderd" },
       { "code": "MS-700", "name": "Teams Advanced Administration", "level": "Gevorderd" },
       { "code": "PL-900", "name": "Power Platform Fundamentals", "level": "Beginner" },
-      { "code": "Custom", "name": "Power Platform Automation Bootcamp", "level": "Gemiddeld" }
+      { "code": "Custom", "name": "Power Platform Automation Bootcamp", "level": "Gevorderd" }
     ]
   }
 }

@@ -191,6 +191,43 @@ export function BentoFeatures() {
                         className="xl:col-span-1"
                     />
 
+                    {/* MCT Trainer Card with Founder Photo */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-blue-900/20 p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all"
+                    >
+                        <div className="flex flex-col sm:flex-row gap-6 items-center">
+                            <div className="relative">
+                                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-lg shadow-blue-500/10">
+                                    <img
+                                        src="/1625557501943.jpg"
+                                        alt="Yaïr Knijn - Microsoft Certified Trainer"
+                                        className="w-full h-full object-cover object-[center_20%]"
+                                    />
+                                </div>
+                                <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg">
+                                    MCT
+                                </div>
+                            </div>
+                            <div className="flex-1 text-center sm:text-left">
+                                <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
+                                    <Shield className="w-4 h-4 text-blue-400" />
+                                    <span className="text-xs text-blue-400 font-medium uppercase tracking-wider">Microsoft Certified Trainer</span>
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-1">Yaïr Knijn</h3>
+                                <p className="text-sm text-gray-400 mb-3">15+ years of Microsoft & Azure expertise, delivering hands-on training with real-world project experience.</p>
+                                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                                    <span className="text-[10px] px-2 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400">Azure Expert</span>
+                                    <span className="text-[10px] px-2 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">Cloud Architect</span>
+                                    <span className="text-[10px] px-2 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400">Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+
                 </div>
             </div>
         </section>
