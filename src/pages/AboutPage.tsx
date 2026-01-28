@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Users, Target, Wrench } from "@phosphor-icons/react";
 import { useTranslations } from "@/hooks/use-translations";
 import { BackgroundIcons } from "@/components/BackgroundIcons";
+import { SEO, PAGE_SEO } from "@/components/SEO";
 
 export function AboutPage() {
   const { t, language } = useTranslations();
@@ -14,6 +15,7 @@ export function AboutPage() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-950 dark:via-slate-900/20 dark:to-slate-950 pt-24 md:pt-28 pb-12 md:pb-16">
+      <SEO {...PAGE_SEO.about} />
       {/* Background with floating icons */}
       <div className="absolute inset-0">
         <div className="from-blue-100/20 via-slate-50/15 to-blue-100/20 dark:from-slate-900/20 dark:via-slate-900/25 dark:to-slate-800/20 absolute inset-0 bg-gradient-to-br" />

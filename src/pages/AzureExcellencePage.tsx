@@ -1,9 +1,11 @@
 import { AzureExcellence } from "@/components/Sections/AzureExcellence";
 import { motion } from "framer-motion";
+import { SEO, PAGE_SEO } from "@/components/SEO";
 
 export function AzureExcellencePage() {
   return (
     <div className="min-h-screen pt-28 md:pt-32 bg-background">
+      <SEO {...PAGE_SEO.azureExcellence} />
       {/* Hero Section for Azure Excellence Page */}
       <section className="py-12 xl:py-16 2xl:py-20 bg-background relative overflow-hidden">
         {/* Background with subtle gradients */}

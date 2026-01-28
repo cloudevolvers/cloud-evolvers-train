@@ -15,6 +15,7 @@ import {
   type FilterState
 } from '@/components/training/overview';
 import { DotPattern } from "@/components/ui/dot-pattern";
+import { SEO, PAGE_SEO } from '@/components/SEO';
 
 const TrainingOverviewPage: React.FC = () => {
   const [filterState, setFilterState] = useState<FilterState>({
@@ -119,6 +120,7 @@ const TrainingOverviewPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
+      <SEO {...PAGE_SEO.training} />
       {/* Background matching home page */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <DotPattern className="opacity-15 text-primary/20" />

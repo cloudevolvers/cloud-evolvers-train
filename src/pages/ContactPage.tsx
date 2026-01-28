@@ -6,6 +6,7 @@ import { useLanguage } from '@/hooks/use-language';
 import { useTranslation } from '@/hooks/use-translation';
 import TrainingConsultationForm from '@/components/TrainingConsultationForm';
 import { DotPattern } from "@/components/ui/dot-pattern";
+import { SEO, PAGE_SEO } from '@/components/SEO';
 
 export default function ContactPage() {
   const [searchParams] = useSearchParams();
@@ -62,6 +63,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-blue-500/30 relative overflow-hidden">
+      <SEO {...PAGE_SEO.contact} />
       {/* Ambient Background */}
       <div className="absolute inset-0 pointer-events-none">
         <DotPattern className="opacity-10 text-blue-500/20" />

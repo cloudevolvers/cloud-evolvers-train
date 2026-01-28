@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
   <url>
     <loc>https://cloudevolvers.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/"/>
@@ -8,6 +9,8 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Training Pages -->
   <url>
     <loc>https://cloudevolvers.com/training</loc>
     <changefreq>weekly</changefreq>
@@ -39,17 +42,63 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cloudevolvers.com/training/azure-devops</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Azure Excellence -->
+  <url>
     <loc>https://cloudevolvers.com/azure-excellence</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Services Hub -->
   <url>
     <loc>https://cloudevolvers.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Individual Service Pages -->
   <url>
     <loc>https://cloudevolvers.com/services/cloud-engineering</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/cloud-management</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/azure-monitoring</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/security-compliance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/cost-optimization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/enterprise-file-transfer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/microsoft-365-copilot</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/services/infrastructure-as-code</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -59,10 +108,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cloudevolvers.com/services/security-compliance</loc>
+    <loc>https://cloudevolvers.com/services/network-engineering</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Other Pages -->
   <url>
     <loc>https://cloudevolvers.com/about</loc>
     <changefreq>monthly</changefreq>
@@ -78,6 +129,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Legal Pages -->
   <url>
     <loc>https://cloudevolvers.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>

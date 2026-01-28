@@ -14,6 +14,7 @@ import {
   EnvelopeSimple
 } from '@phosphor-icons/react';
 import { getServiceIcon } from '@/utils/service-icons';
+import { SEO, PAGE_SEO } from '@/components/SEO';
 
 export default function ServicesPage() {
   const { language } = useTranslations();
@@ -22,6 +23,7 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 relative overflow-hidden bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-950 dark:via-slate-900/20 dark:to-slate-950">
+      <SEO {...PAGE_SEO.services} />
       {/* Global Background Effects - Matching Frontpage */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Primary animated background effects */}
