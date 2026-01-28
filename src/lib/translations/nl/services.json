@@ -1,59 +1,59 @@
 {
-  "title": "Uitgebreide Azure Diensten",
-  "subtitle": "Naast training bieden we full-spectrum Azure consulting en management diensten",
+  "title": "Uitgebreide Azure-diensten",
+  "subtitle": "Naast trainingen bieden wij complete Azure-consulting en beheersdiensten",
   "items": [
     {
       "title": "Azure API Monitoring",
-      "description": "Real-time zichtbaarheid in uw Azure resources met custom dashboards en alerts",
-      "features": ["Resource monitoring", "Custom alert configuraties", "Performance analytics", "Resource gebruik trends"]
+      "description": "Realtime inzicht in uw Azure-resources met aangepaste dashboards en meldingen",
+      "features": ["Resource-monitoring", "Aangepaste meldingsconfiguraties", "Prestatieanalyses", "Trends in resourcegebruik"]
     },
     {
-      "title": "Cloud Management",
-      "description": "Proactief beheer en optimalisatie van uw Azure cloud infrastructuur",
-      "features": ["Infrastructure monitoring & onderhoud", "Security posture management", "Performance tuning", "Backup en disaster recovery"]
+      "title": "Cloudbeheer",
+      "description": "Proactief beheer en optimalisatie van uw Azure-cloudinfrastructuur",
+      "features": ["Infrastructuurmonitoring en -onderhoud", "Beveiligingshouding beheren", "Prestatieoptimalisatie", "Back-up en disaster recovery"]
     },
     {
       "title": "Kostenoptimalisatie",
-      "description": "Identificeer besparingsmogelijkheden en optimaliseer uw Azure uitgaven",
-      "features": ["Uitgaven analyse", "Resource right-sizing", "Reservatie aanbevelingen", "Budget forecasting"]
+      "description": "Ontdek besparingsmogelijkheden en optimaliseer uw Azure-uitgaven",
+      "features": ["Uitgavenanalyse", "Juiste resourcegrootte bepalen", "Reserveringsaanbevelingen", "Budgetprognoses"]
     },
     {
       "title": "Beveiliging & Compliance",
-      "description": "Uitgebreid beveiligingsbeheer en compliance monitoring voor uw Azure omgeving",
-      "features": ["Threat detectie", "Compliance frameworks", "Security assessments", "Zero Trust implementatie"]
+      "description": "Volledig beveiligingsbeheer en compliance-monitoring voor uw Azure-omgeving",
+      "features": ["Dreigingsdetectie", "Compliance-frameworks", "Beveiligingsbeoordelingen", "Zero Trust-implementatie"]
     },
     {
-      "title": "Enterprise File Transfer",
-      "description": "Veilige, betrouwbare file sharing voor bedrijven met geavanceerde beveiliging en controles",
-      "features": ["End-to-end encryptie", "Granulaire access controls", "Transfer automatisering", "Gedetailleerde audit logs"]
+      "title": "Enterprise bestandsoverdracht",
+      "description": "Veilige, betrouwbare bestandsdeling voor bedrijven met geavanceerde beveiliging en controles",
+      "features": ["End-to-end encryptie", "Gedetailleerde toegangscontroles", "Geautomatiseerde overdracht", "Uitgebreide auditlogs"]
     },
     {
       "title": "Cloud Engineering",
-      "description": "Expert cloud engineering diensten om uw Azure infrastructuur te ontwerpen, bouwen en optimaliseren",
-      "features": ["Architectuur ontwerp", "Implementatie", "Migratie diensten", "Performance optimalisatie"]
+      "description": "Deskundige cloud engineering-diensten voor het ontwerpen, bouwen en optimaliseren van uw Azure-infrastructuur",
+      "features": ["Architectuurontwerp", "Implementatie", "Migratiediensten", "Prestatieoptimalisatie"]
     },
     {
       "title": "Microsoft 365 Copilot",
-      "description": "Transformeer uw productiviteit met AI-powered Microsoft 365 Copilot implementatie en training",
-      "features": ["Copilot implementatie", "AI productiviteit training", "Workflow optimalisatie", "Change management"]
+      "description": "Verhoog uw productiviteit met AI-ondersteunde Microsoft 365 Copilot-implementatie en -training",
+      "features": ["Copilot-implementatie", "AI-productiviteitstraining", "Workflowoptimalisatie", "Verandermanagement"]
     },
     {
       "title": "Infrastructure as Code",
-      "description": "Automatiseer infrastructure provisioning en management met code",
-      "features": ["Geautomatiseerde provisioning", "Configuration management", "Version control", "Error reductie"]
+      "description": "Automatiseer het inrichten en beheren van infrastructuur met code",
+      "features": ["Geautomatiseerde provisioning", "Configuratiebeheer", "Versiebeheer", "Foutreductie"]
     },
     {
       "title": "Network Engineering",
-      "description": "Ontwerp en implementeer robuuste networking oplossingen in Azure",
-      "features": ["Network ontwerp", "Implementatie", "Security management", "Performance optimalisatie"]
+      "description": "Ontwerp en implementeer robuuste netwerkoplossingen in Azure",
+      "features": ["Netwerkontwerp", "Implementatie", "Beveiligingsbeheer", "Prestatieoptimalisatie"]
     },
     {
       "title": "AI Engineering & Consultancy",
-      "description": "Transformeer uw bedrijf met AI-powered oplossingen en consultancy",
-      "features": ["Machine learning implementatie", "AI strategie", "Intelligente automatisering", "Data science consulting"]
+      "description": "Transformeer uw bedrijf met AI-ondersteunde oplossingen en consultancy",
+      "features": ["Machine learning-implementatie", "AI-strategie", "Intelligente automatisering", "Data science-consulting"]
     }
   ],
-  "learnMore": "Meer Informatie",
-  "moreFeatures": "meer features",
-  "modules": "Cursus Modules"
+  "learnMore": "Meer informatie",
+  "moreFeatures": "meer functies",
+  "modules": "Cursusmodules"
 }

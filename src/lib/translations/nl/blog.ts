@@ -1,20 +1,20 @@
 export default {
-  comingSoon: "Binnenkort Q1 2025",
+  comingSoon: "Binnenkort beschikbaar – Q1 2025",
   title: "Azure Expertise Blog",
-  description: "We bereiden waardevolle content voor over Azure training en cloud technologieën.",
+  description: "We werken aan waardevolle content over Azure-trainingen en cloudtechnologieën.",
   comingSoonBadge: "Binnenkort",
   features: {
     tutorials: {
-      title: "Expert Tutorials",
-      description: "Diepgaande handleidingen"
+      title: "Deskundige tutorials",
+      description: "Uitgebreide handleidingen"
     },
     bestPractices: {
-      title: "Best Practices",
+      title: "Best practices",
       description: "Bewezen strategieën"
     },
     trends: {
-      title: "Nieuwe Trends",
-      description: "Nieuwste ontwikkelingen"
+      title: "Actuele trends",
+      description: "De nieuwste ontwikkelingen"
     }
   }
 }

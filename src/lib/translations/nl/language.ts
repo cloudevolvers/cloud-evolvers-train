@@ -1,20 +1,20 @@
 export default {
   english: "Engels",
-  dutch: "Nederlands", 
-  switchTo: "Omschakelen naar",
+  dutch: "Nederlands",
+  switchTo: "Wijzig naar",
   geographic: {
     netherlands: "Nederland",
     belgium: "België",
-    luxembourg: "Luxemburg", 
+    luxembourg: "Luxemburg",
     benelux: "BENELUX",
     uk: "VK",
     unitedKingdom: "Verenigd Koninkrijk",
-    servingCustomers: "Primaire dienstverlening aan klanten in BENELUX en VK",
-    remote: "Remote training",
+    servingCustomers: "Wij bedienen voornamelijk klanten in de BENELUX en het VK",
+    remote: "Remote trainingen",
     consultancy: "consultancy",
     worldwide: "wereldwijd",
-    onSite: "on-site opties", 
+    onSite: "on-site mogelijkheden",
     international: "internationale klanten",
-    whenNeeded: "wanneer nodig"
+    whenNeeded: "indien gewenst"
   }
 }

@@ -1,29 +1,29 @@
 {
   "partnership": {
-    "title": "Microsoft Partner",
-    "description": "Officiële Microsoft partner met gecertificeerde trainers"
+    "title": "Microsoft Certified Trainer",
+    "description": "Officieel MCT-gecertificeerde professionals die deskundige trainingen geven"
   },
   "experience": {
-    "title": "10+ Jaar",
-    "description": "Uitgebreide ervaring in Azure training en consultancy"
+    "title": "10+ jaar ervaring",
+    "description": "Ruime ervaring in Azure-trainingen en consultancy"
   },
   "success": {
-    "title": "95% Slagingspercentage",
-    "description": "Hoog certificering slagingspercentage voor onze cursisten"
+    "title": "95% slagingspercentage",
+    "description": "Hoog slagingspercentage voor certificeringen onder onze cursisten"
   },
   "support": {
-    "title": "24/7 Ondersteuning",
-    "description": "Continue ondersteuning gedurende uw leertraject"
+    "title": "24/7 ondersteuning",
+    "description": "Doorlopende ondersteuning tijdens uw gehele leertraject"
   },
   "why": {
-    "title": "Waarom Kiezen Voor Cloud Evolvers",
+    "title": "Waarom kiezen voor Cloud Evolvers",
     "points": [
-      "Microsoft Gecertificeerde Trainers met praktijkervaring",
+      "Microsoft Certified Trainers met praktijkervaring",
       "Uitgebreide hands-on labs en praktische oefeningen",
-      "Post-training ondersteuning en carrièrebegeleiding",
-      "Flexibele leeropties en persoonlijke benadering",
-      "Industrie-erkende certificeringen en carrièreverbetering",
-      "Enterprise-niveau infrastructuur en beveiligingspraktijken"
+      "Ondersteuning na de training en carrièrebegeleiding",
+      "Flexibele leeropties en een persoonlijke aanpak",
+      "Branche-erkende certificeringen voor carrièreontwikkeling",
+      "Infrastructuur en beveiligingspraktijken op enterprise-niveau"
     ]
   }
 }

@@ -81,7 +81,7 @@ export function Hero() {
                             <div className="mt-12 flex flex-wrap items-center gap-4 sm:gap-8 text-sm text-slate-500 dark:text-gray-400 w-full pt-8 border-t border-slate-200 dark:border-white/5">
                                 <div className="flex items-center gap-2">
                                     <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-500" />
-                                    <span className="text-slate-700 dark:text-slate-300">Microsoft Partner</span>
+                                    <span className="text-slate-700 dark:text-slate-300">Microsoft Certified Trainer</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Zap className="w-5 h-5 text-amber-500" />
@@ -89,7 +89,7 @@ export function Hero() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <TerminalIcon className="w-5 h-5 text-emerald-600 dark:text-green-500" />
-                                    <span className="text-slate-700 dark:text-slate-300">CLI-First Approach</span>
+                                    <span className="text-slate-700 dark:text-slate-300">Real World Application First</span>
                                 </div>
                             </div>
                         </motion.div>
