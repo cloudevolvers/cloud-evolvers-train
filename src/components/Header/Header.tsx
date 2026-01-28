@@ -84,23 +84,14 @@ export function Header() {
           fixed top-0 left-0 right-0 z-[9999]
           transition-all duration-500 ease-out
           ${isScrolled
-            ? 'py-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.05)] dark:shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-            : 'py-4 bg-transparent'
+            ? 'py-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-lg shadow-slate-200/20 dark:shadow-black/30 border-b border-slate-200/50 dark:border-slate-700/50'
+            : 'py-4 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200/30 dark:border-slate-700/30'
           }
         `}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
       >
-        {/* Subtle bottom border */}
-        <div
-          className={`
-            absolute inset-x-0 bottom-0 h-px
-            bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent
-            transition-opacity duration-500
-            ${isScrolled ? 'opacity-100' : 'opacity-0'}
-          `}
-        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -112,7 +103,7 @@ export function Header() {
                 whileHover={{ x: 2 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <span className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                   Cloud Evolvers
                 </span>
                 <span className="text-[10px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wide">

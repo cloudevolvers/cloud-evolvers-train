@@ -34,7 +34,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
         <Header />
         <div className="flex items-center justify-center py-24">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
+            <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Service Not Found</h1>
             <Button onClick={() => navigate('/services')}>
               <ArrowLeft size={16} className="mr-2" />
               Back to Services
@@ -166,7 +166,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
                     </Badge>
                   </div>
 
-                  <h1 className="text-slate-900 dark:text-white font-bold leading-tight">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-white font-bold leading-tight">
                     {service.title}
                   </h1>
 
@@ -239,7 +239,16 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
               <Card className="bg-white/80 dark:bg-slate-800/90 border-slate-200 dark:border-slate-700/50 backdrop-blur-sm shadow-lg">
                 <CardContent className="p-8 lg:p-12">
                   <div
-                    className="prose prose-slate dark:prose-invert prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-600 dark:prose-p:text-gray-300 prose-li:text-slate-600 dark:prose-li:text-gray-300 prose-strong:text-slate-900 dark:prose-strong:text-white max-w-none"
+                    className="prose prose-lg prose-slate dark:prose-invert max-w-none
+                      prose-headings:text-slate-900 dark:prose-headings:text-white prose-headings:font-bold
+                      prose-h1:hidden
+                      prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-blue-700 dark:prose-h2:text-blue-400
+                      prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-slate-800 dark:prose-h3:text-slate-200
+                      prose-p:text-slate-600 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-4
+                      prose-li:text-slate-600 dark:prose-li:text-gray-300 prose-li:my-1
+                      prose-ul:my-4 prose-ul:pl-4
+                      prose-strong:text-slate-900 dark:prose-strong:text-white prose-strong:font-semibold
+                      prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline"
                     dangerouslySetInnerHTML={{ __html: service.content }}
                   />
                 </CardContent>
@@ -260,12 +269,12 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-slate-900 dark:text-white font-bold">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 dark:text-white font-bold">
                 {language === 'nl'
                   ? 'Klaar om te beginnen?'
                   : 'Ready to Get Started?'}
               </h2>
-              <p className="text-slate-600 dark:text-gray-300">
+              <p className="text-lg text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
                 {language === 'nl'
                   ? 'Neem contact met ons op voor een persoonlijk gesprek over uw behoeften.'
                   : 'Contact us for a personalized consultation about your needs.'}
