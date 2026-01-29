@@ -263,7 +263,7 @@ export default function TrainingConsultationForm({
                   placeholder="John Doe"
                   required
                   disabled={submitting}
-                  className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 focus-visible:border-blue-600 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                  className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
                 />
               </div>
               <div className="space-y-1.5">
@@ -281,7 +281,7 @@ export default function TrainingConsultationForm({
                   required
                   disabled={submitting}
                   aria-invalid={!!emailError}
-                  className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 focus-visible:border-blue-600 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                  className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
                 />
                 {emailError && (
                   <motion.p
@@ -314,7 +314,7 @@ export default function TrainingConsultationForm({
                 onChange={handleInputChange('phone')}
                 placeholder="+31 6-12345678"
                 disabled={submitting}
-                className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 focus-visible:border-blue-600 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
               />
             </motion.div>
 
@@ -334,10 +334,10 @@ export default function TrainingConsultationForm({
                 onValueChange={(value) => setFormData({ ...formData, training: value })}
                 disabled={submitting}
               >
-                <SelectTrigger className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 focus:border-blue-600 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm">
+                <SelectTrigger className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm">
                   <SelectValue placeholder={language === 'nl' ? 'Selecteer een training...' : 'Select a training...'} />
                 </SelectTrigger>
-                <SelectContent className="bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 max-h-[300px]">
+                <SelectContent className="bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 max-h-[300px]">
                   {trainingOptions.map(option => (
                     <SelectItem key={option.value} value={option.label}>
                       {option.label}
@@ -380,7 +380,7 @@ export default function TrainingConsultationForm({
                         }}
                         placeholder="Choose date, week number, or describe..."
                         disabled={submitting}
-                        className="w-full h-10 bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 focus-visible:border-green-600 dark:focus-visible:border-green-400 focus-visible:ring-2 focus-visible:ring-green-500/20 transition-all shadow-sm"
+                        className="w-full h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
                       />
                     </div>
                     {formData.preferredDates.length > 1 && (
@@ -439,7 +439,7 @@ export default function TrainingConsultationForm({
                 placeholder={t.additionalInfoPlaceholder}
                 disabled={submitting}
                 rows={3}
-                className="bg-white dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 focus-visible:border-blue-600 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm resize-none"
+                className="bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm resize-none"
               />
             </motion.div>
 
@@ -473,24 +473,24 @@ export default function TrainingConsultationForm({
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="bg-red-900/20 border-red-700 mt-3 p-3 rounded-lg"
+                  className="bg-gradient-to-r from-red-500/10 to-rose-500/10 border border-red-500/30 mt-3 p-3 rounded-lg"
                 >
                   <div className="flex items-start space-x-2">
-                    <WarningCircle className="text-red-400 h-4 w-4 mt-0.5 flex-shrink-0" />
+                    <WarningCircle className="text-red-500 h-4 w-4 mt-0.5 flex-shrink-0" weight="fill" />
                     <div className="flex-1 min-w-0">
-                      <div className="text-red-200 font-medium">
+                      <div className="text-red-700 dark:text-red-300 font-medium">
                         {language === 'nl' ? 'Fout' : 'Error'}
                         {formError.statusCode && formError.statusCode > 0 && (
-                          <span className="bg-red-800 ml-2 text-xs px-2 py-0.5 rounded">
+                          <span className="bg-red-500/20 text-red-600 dark:text-red-400 ml-2 text-xs px-2 py-0.5 rounded">
                             {formError.statusCode}
                           </span>
                         )}
                       </div>
-                      <div className="text-red-300 mt-1">
+                      <div className="text-red-600 dark:text-red-400 mt-1">
                         {formError.message}
                       </div>
                       {formError.details && (
-                        <div className="text-red-400 mt-1 opacity-75">
+                        <div className="text-red-500/80 dark:text-red-400/80 mt-1 text-sm">
                           {formError.details}
                         </div>
                       )}
@@ -505,11 +505,11 @@ export default function TrainingConsultationForm({
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="bg-green-900/20 border-green-700 mt-3 p-3 rounded-lg"
+                  className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/30 mt-3 p-3 rounded-lg"
                 >
                   <div className="flex items-start space-x-2">
-                    <CheckCircle className="text-green-400 h-4 w-4 mt-0.5 flex-shrink-0" />
-                    <div className="text-green-200 font-medium">
+                    <CheckCircle className="text-emerald-500 h-4 w-4 mt-0.5 flex-shrink-0" weight="fill" />
+                    <div className="text-emerald-700 dark:text-emerald-300 font-medium">
                       {formSuccess}
                     </div>
                   </div>
