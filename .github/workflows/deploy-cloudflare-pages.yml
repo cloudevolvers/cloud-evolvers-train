@@ -32,7 +32,7 @@ jobs:
   deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment || 'poc' }}
+    environment: ${{ github.event.inputs.environment || (github.ref_name == 'main' && 'production') || 'poc' }}
 
     steps:
       - name: Checkout code
@@ -75,7 +75,7 @@ jobs:
         env:
           NODE_ENV: production
           VITE_COMMIT_SHA: ${{ github.sha }}
-          VITE_ENVIRONMENT: ${{ github.event.inputs.environment || 'poc' }}
+          VITE_ENVIRONMENT: ${{ github.event.inputs.environment || (github.ref_name == 'main' && 'production') || 'poc' }}
           VITE_BUILD_DATE: ${{ steps.build-date.outputs.date }}
           # Frontend environment variables (public)
           VITE_API_KEY: ${{ secrets.API_KEY }}
@@ -147,10 +147,10 @@ jobs:
           echo ""
 
           if [[ "${{ github.ref_name }}" == "main" ]]; then
-            echo "🌍 Environment: Production (POC)"
+            echo "🌍 Environment: Production"
             echo ""
             echo "📡 URLs:"
-            echo "   • Primary:    https://poc.cloudevolvers.com"
+            echo "   • Primary:    https://cloudevolvers.com"
             echo "   • Cloudflare: https://cloud-evolvers-train.pages.dev"
             echo ""
             echo "🔌 API Endpoints:"
