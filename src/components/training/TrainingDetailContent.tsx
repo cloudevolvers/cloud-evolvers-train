@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { BookOpen, Target, CheckCircle, Clock } from '@phosphor-icons/react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { useTranslations } from '@/hooks/use-translations';
 
 interface TrainingDetailContentProps {
   training: any;
@@ -10,6 +11,7 @@ interface TrainingDetailContentProps {
 }
 
 export default function TrainingDetailContent({ training, TrainingContentComponent }: TrainingDetailContentProps) {
+  const { t } = useTranslations();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -39,7 +41,7 @@ export default function TrainingDetailContent({ training, TrainingContentCompone
                   <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl sm:rounded-2xl flex-shrink-0">
                     <BookOpen className="h-5 w-5 sm:h-7 sm:w-7 text-primary" />
                   </div>
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">Course Overview</h2>
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{t.training?.detail?.courseOverview || 'Course Overview'}</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
                   {training.overview || training.description}
@@ -61,7 +63,7 @@ export default function TrainingDetailContent({ training, TrainingContentCompone
                   {/* Header with badge */}
                   <div className="text-center sm:text-left mb-4 sm:mb-6">
                     <div className="inline-block px-4 py-1.5 sm:px-5 sm:py-2 bg-gradient-to-r from-amber-400/30 to-orange-400/30 dark:from-amber-600/30 dark:to-orange-600/30 rounded-full border-2 border-amber-400/40 dark:border-amber-600/40 shadow-sm">
-                      <span className="text-xs sm:text-sm font-bold text-amber-800 dark:text-amber-200 uppercase tracking-wide">Personal Story</span>
+                      <span className="text-xs sm:text-sm font-bold text-amber-800 dark:text-amber-200 uppercase tracking-wide">{t.training?.detail?.personalStory || 'Personal Story'}</span>
                     </div>
                   </div>
                   {/* Instructor name */}
@@ -90,7 +92,7 @@ export default function TrainingDetailContent({ training, TrainingContentCompone
                   <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-xl sm:rounded-2xl flex-shrink-0">
                     <Target className="h-5 w-5 sm:h-7 sm:w-7 text-emerald-600 dark:text-emerald-400" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">Learning Objectives</h3>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{t.training?.detail?.learningObjectives || 'Learning Objectives'}</h3>
                 </div>
                 <div className="grid gap-3 sm:gap-4">
                   {training.learningObjectives?.map((objective: any, index: number) => (
@@ -116,7 +118,7 @@ export default function TrainingDetailContent({ training, TrainingContentCompone
                       </div>
                     </motion.div>
                   )) || (
-                    <p className="text-muted-foreground text-center py-8">No learning objectives available.</p>
+                    <p className="text-muted-foreground text-center py-8">{t.training?.detail?.noLearningObjectives || 'No learning objectives available.'}</p>
                   )}
                 </div>
               </CardContent>
@@ -138,8 +140,8 @@ export default function TrainingDetailContent({ training, TrainingContentCompone
                       <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">Course Modules</h3>
-                      <p className="text-muted-foreground text-xs sm:text-sm mt-1">Structured curriculum for complete mastery</p>
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{t.training?.detail?.courseModules || 'Course Modules'}</h3>
+                      <p className="text-muted-foreground text-xs sm:text-sm mt-1">{t.training?.detail?.modulesCurriculum || 'Structured curriculum for complete mastery'}</p>
                     </div>
                   </div>
                   <div className="grid gap-4 sm:gap-5">

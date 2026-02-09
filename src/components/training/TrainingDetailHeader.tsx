@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Clock, Users, Certificate, Star, Calendar, CurrencyEur } from '@phosphor-icons/react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/use-translations';
 
 interface TrainingDetailHeaderProps {
   training: any;
@@ -11,6 +12,7 @@ interface TrainingDetailHeaderProps {
 }
 
 export default function TrainingDetailHeader({ training, priceInfo, isPromotionActive }: TrainingDetailHeaderProps) {
+  const { t } = useTranslations();
   const getDifficultyColor = (level: string | undefined) => {
     if (!level) return 'bg-green-100 text-green-900 dark:bg-green-900/50 dark:text-green-100 border-2 border-green-300 dark:border-green-700 font-medium';
     
@@ -44,11 +46,11 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               {training.featured && (
                 <Badge className="bg-gradient-to-r from-amber-500 to-orange-500 text-white border-0 px-4 py-1.5 text-sm font-bold shadow-md">
                   <Star className="h-3 w-3 mr-1" weight="fill" />
-                  Featured
+                  {t.training?.detail?.featured || 'Featured'}
                 </Badge>
               )}
               <Badge className={`${getDifficultyColor(training.level)} px-4 py-1.5 text-sm shadow-md`}>
-                {training.level || 'All Levels'}
+                {training.level || t.training?.detail?.allLevels || 'All Levels'}
               </Badge>
             </motion.div>
             
@@ -85,9 +87,9 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
                 <Clock className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <p className="text-xs text-muted-foreground font-medium">Duration</p>
+                <p className="text-xs text-muted-foreground font-medium">{t.training?.detail?.duration || 'Duration'}</p>
                 <p className="font-bold text-foreground">
-                  {training.duration?.days || 0} {(training.duration?.days || 0) === 1 ? 'day' : 'days'}
+                  {training.duration?.days || 0} {(training.duration?.days || 0) === 1 ? (t.training?.detail?.daysSingle || 'day') : (t.training?.detail?.daysPlural || 'days')}
                 </p>
               </div>
             </motion.div>
@@ -102,7 +104,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
                 <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <p className="text-xs text-muted-foreground font-medium">Group Size</p>
+                <p className="text-xs text-muted-foreground font-medium">{t.training?.detail?.groupSize || 'Group Size'}</p>
                 <p className="font-bold text-foreground">Min 6 – Max {training.maxParticipants || 12}</p>
               </div>
             </motion.div>
@@ -117,7 +119,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
                 <CurrencyEur className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div className="min-w-0">
-                <p className="text-xs text-muted-foreground font-medium">Investment</p>
+                <p className="text-xs text-muted-foreground font-medium">{t.training?.detail?.investment || 'Investment'}</p>
                 <div className="flex items-center gap-2">
                   {isPromotionActive && priceInfo.hasDiscount ? (
                     <>
@@ -148,7 +150,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
                   <Certificate className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground font-medium">Certification</p>
+                  <p className="text-xs text-muted-foreground font-medium">{t.training?.detail?.certification || 'Certification'}</p>
                   <p className="font-bold text-foreground text-sm">{training.certification.name}</p>
                 </div>
               </motion.div>
@@ -167,7 +169,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
             >
               <Calendar className="h-6 w-6" />
-              Inquire About Training
+              {t.training?.detail?.inquireAboutTraining || 'Inquire About Training'}
             </motion.a>
           </div>
         </CardContent>

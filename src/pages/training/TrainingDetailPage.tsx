@@ -75,7 +75,7 @@ export default function TrainingDetailPage() {
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center space-y-4">
               <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto"></div>
-              <p className="text-muted-foreground">Loading training details...</p>
+              <p className="text-muted-foreground">{t.training?.detail?.loading || 'Loading training details...'}</p>
             </div>
           </div>
         </div>

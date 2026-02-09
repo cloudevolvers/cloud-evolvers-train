@@ -3,12 +3,14 @@ import { motion } from 'framer-motion';
 import { Users, CheckCircle, BookOpen } from '@phosphor-icons/react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/use-translations';
 
 interface TrainingDetailSidebarProps {
   training: any;
 }
 
 export default function TrainingDetailSidebar({ training }: TrainingDetailSidebarProps) {
+  const { t } = useTranslations();
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -31,7 +33,7 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
                   <CheckCircle className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <CardTitle className="text-lg text-foreground font-bold">
-                  Prerequisites
+                  {t.training?.detail?.prerequisites || 'Prerequisites'}
                 </CardTitle>
               </div>
             </CardHeader>
@@ -70,7 +72,7 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
                   <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <CardTitle className="text-lg text-foreground font-bold">
-                  Target Audience
+                  {t.training?.detail?.targetAudience || 'Target Audience'}
                 </CardTitle>
               </div>
             </CardHeader>
@@ -109,7 +111,7 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
                   <Users className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                 </div>
                 <CardTitle className="text-lg text-foreground font-bold">
-                  Instructor
+                  {t.training?.detail?.instructor || 'Instructor'}
                 </CardTitle>
               </div>
             </CardHeader>
@@ -123,8 +125,8 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
                 >
                   <Users className="h-12 w-12 text-amber-600 dark:text-amber-400" />
                 </motion.div>
-                <h4 className="font-bold text-foreground text-lg mb-1">{training.instructor?.name || 'Expert Instructor'}</h4>
-                <p className="text-sm text-primary mb-3 font-semibold">{training.instructor?.title || 'Microsoft Certified Trainer'}</p>
+                <h4 className="font-bold text-foreground text-lg mb-1">{training.instructor?.name || t.training?.detail?.expertInstructor || 'Expert Instructor'}</h4>
+                <p className="text-sm text-primary mb-3 font-semibold">{training.instructor?.title || t.training?.detail?.mctTrainer || 'Microsoft Certified Trainer'}</p>
                 {training.instructor?.bio && (
                   <p className="text-sm text-muted-foreground leading-relaxed">{training.instructor.bio}</p>
                 )}
@@ -149,7 +151,7 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
                   <BookOpen className="h-5 w-5 text-primary" />
                 </div>
                 <CardTitle className="text-lg text-foreground font-bold">
-                  Topics Covered
+                  {t.training?.detail?.topicsCovered || 'Topics Covered'}
                 </CardTitle>
               </div>
             </CardHeader>
