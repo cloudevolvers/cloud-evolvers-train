@@ -8,10 +8,8 @@ import { SEO, PAGE_SEO } from "@/components/SEO";
 export function AboutPage() {
   const { t, language } = useTranslations();
 
-  const title = language === "nl" ? "Over Cloud Evolvers" : "About Cloud Evolvers";
-  const subtitle = language === "nl"
-    ? "Gespecialiseerd Microsoft Certified Training (MCT) en consultancy bedrijf, opgericht in 2023 met meer dan 15 jaar IT ervaring."
-    : "Specialized Microsoft Certified Training (MCT) and consulting company, founded in 2023 with over 15 years of IT experience.";
+  const title = t.about?.title || "About Cloud Evolvers";
+  const subtitle = t.about?.subtitle || "Specialized Microsoft Certified Training (MCT) and consulting company, founded in 2023 with over 15 years of IT experience.";
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-950 dark:via-slate-900/20 dark:to-slate-950 pt-24 md:pt-28 pb-12 md:pb-16">
@@ -63,27 +61,21 @@ export function AboutPage() {
                       <Users className="text-emerald-600 dark:text-emerald-400 h-5 w-5 md:h-6 md:w-6" weight="duotone" />
                     </div>
                     <h2 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold">
-                      {language === "nl" ? "Ons Verhaal" : "Our Story"}
+                      {t.about?.ourStory?.title || "Our Story"}
                     </h2>
                   </div>
                   <div className="text-sm md:text-base text-muted-foreground space-y-3">
                     <p className="leading-relaxed">
-                      {language === "nl"
-                        ? "Cloud Evolvers is onderdeel van Spot Cloud, en onze passie voor technologie en automatisering drijft ons om klanten te helpen excelleren in het Microsoft ecosysteem."
-                        : "Cloud Evolvers is part of Spot Cloud, and our passion for technology and automation drives us to help customers excel in the Microsoft ecosystem."}
+                      {t.about?.ourStory?.content1 || "Cloud Evolvers is part of Spot Cloud, and our passion for technology and automation drives us to help customers excel in the Microsoft ecosystem."}
                     </p>
                     <p className="leading-relaxed">
-                      {language === "nl"
-                        ? "Onze oprichter, Yaïr Knijn, heeft een passie voor technologie gekoesterd sinds zijn kindertijd, met meer dan 15 jaar ervaring met Microsoft technologieën en cloud oplossingen."
-                        : "Our founder, Yaïr Knijn, has nurtured a passion for technology since his childhood, bringing over 15 years of experience with Microsoft technologies and cloud solutions."}
+                      {t.about?.ourStory?.content2 || "Our founder, Yaïr Knijn, has nurtured a passion for technology since his childhood, bringing over 15 years of experience with Microsoft technologies and cloud solutions."}
                     </p>
                     <h3 className="text-base md:text-lg text-foreground font-semibold mt-3 md:mt-4">
-                      {language === "nl" ? "Waarom Spot Cloud?" : "Why Spot Cloud?"}
+                      {t.about?.ourStory?.whySpotCloud || "Why Spot Cloud?"}
                     </h3>
                     <p className="leading-relaxed">
-                      {language === "nl"
-                        ? "De naam Spot Cloud komt van onze liefde voor honden, specifiek Dalmatiërs. Net zoals de vlekken van een Dalmatiër uniek zijn, leveren wij unieke cloud oplossingen aan onze klanten."
-                        : "The name Spot Cloud stems from our love for dogs, specifically Dalmatians. Just like a Dalmatian's spots are unique, we deliver unique cloud solutions to our customers."}
+                      {t.about?.ourStory?.spotCloudExplanation || "The name Spot Cloud stems from our love for dogs, specifically Dalmatians. Just like a Dalmatian's spots are unique, we deliver unique cloud solutions to our customers."}
                     </p>
                   </div>
                 </CardContent>
@@ -104,22 +96,18 @@ export function AboutPage() {
                       <Target className="text-teal-600 dark:text-teal-400 h-5 w-5 md:h-6 md:w-6" weight="duotone" />
                     </div>
                     <h2 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold">
-                      {language === "nl" ? "Onze Missie" : "Our Mission"}
+                      {t.about?.ourMission?.title || "Our Mission"}
                     </h2>
                   </div>
                   <div className="text-sm md:text-base text-muted-foreground space-y-3">
                     <p className="leading-relaxed">
-                      {language === "nl"
-                        ? "Wij bieden end-to-end implementaties en training in het Microsoft ecosysteem, gebruikmakend van onze liefde voor automatisering om klanten te helpen hun doelen te bereiken."
-                        : "We provide end-to-end implementations and training in the Microsoft ecosystem, using our love for automation to help customers achieve their goals."}
+                      {t.about?.ourMission?.content || "We provide end-to-end implementations and training in the Microsoft ecosystem, using our love for automation to help customers achieve their goals."}
                     </p>
                     <h3 className="text-base md:text-lg text-foreground font-semibold mt-3 md:mt-4">
-                      {language === "nl" ? "Onze Visie" : "Our Vision"}
+                      {t.about?.ourMission?.vision || "Our Vision"}
                     </h3>
                     <p className="leading-relaxed">
-                      {language === "nl"
-                        ? "Wij geloven in praktische, resultaatgerichte training die direct toepasbaar is op de werkplek. Door onze uitgebreide ervaring met Azure implementaties kunnen wij training aanbieden die verder gaat dan theorie - wij delen praktijkervaringen en best practices."
-                        : "We believe in practical, results-oriented training that is immediately applicable in the workplace. Through our extensive experience with Azure implementations, we can offer training that goes beyond theory - we share real-world experiences and best practices."}
+                      {t.about?.ourMission?.visionContent || "We believe in practical, results-oriented training that is immediately applicable in the workplace. Through our extensive experience with Azure implementations, we can offer training that goes beyond theory - we share real-world experiences and best practices."}
                     </p>
                   </div>
                 </CardContent>
@@ -135,29 +123,29 @@ export function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold mb-5 md:mb-6 text-center lg:text-left">
-              {language === "nl" ? "Onze Specialiteiten" : "Our Specialties"}
+              {t.about?.specialties?.title || "Our Specialties"}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
               {[
                 {
                   icon: GraduationCap,
-                  title: language === "nl" ? "Microsoft Certified Training" : "Microsoft Certified Training",
-                  description: language === "nl" ? "Azure en Microsoft 365 trainingsprogramma's" : "Azure and Microsoft 365 training programs"
+                  title: t.about?.specialties?.items?.[0]?.title || "Microsoft Certified Training",
+                  description: t.about?.specialties?.items?.[0]?.description || "Azure and Microsoft 365 training programs"
                 },
                 {
                   icon: Wrench,
-                  title: language === "nl" ? "End-to-end Implementaties" : "End-to-end Implementations",
-                  description: language === "nl" ? "Complete Microsoft stack oplossingen" : "Complete Microsoft stack solutions"
+                  title: t.about?.specialties?.items?.[1]?.title || "End-to-end Implementations",
+                  description: t.about?.specialties?.items?.[1]?.description || "Complete Microsoft stack solutions"
                 },
                 {
                   icon: Target,
-                  title: language === "nl" ? "Automatisering" : "Automation",
-                  description: language === "nl" ? "Efficiëntie door intelligente automatisering" : "Efficiency through intelligent automation"
+                  title: t.about?.specialties?.items?.[2]?.title || "Automation",
+                  description: t.about?.specialties?.items?.[2]?.description || "Efficiency through intelligent automation"
                 },
                 {
                   icon: Users,
-                  title: language === "nl" ? "Consultancy" : "Consultancy",
-                  description: language === "nl" ? "Strategisch advies voor cloud transformatie" : "Strategic advice for cloud transformation"
+                  title: t.about?.specialties?.items?.[3]?.title || "Consultancy",
+                  description: t.about?.specialties?.items?.[3]?.description || "Strategic advice for cloud transformation"
                 }
               ].map((specialty, index) => (
                 <motion.div
@@ -190,7 +178,7 @@ export function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold mb-5 md:mb-6 text-center lg:text-left">
-              {language === "nl" ? "Ons Team" : "Our Team"}
+              {t.about?.team?.title || "Our Team"}
             </h2>
             <div className="max-w-5xl mx-auto">
               <Card className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 shadow-xl transition-all duration-300 overflow-hidden hover:border-primary/40">
@@ -212,12 +200,10 @@ export function AboutPage() {
                         Yaïr Knijn
                       </h3>
                       <p className="text-base md:text-lg text-blue-500 dark:text-blue-400 font-semibold mb-4">
-                        {language === "nl" ? "Oprichter & CEO" : "Founder & CEO"}
+                        {t.about?.team?.founder?.role || "Founder & CEO"}
                       </p>
                       <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-                        {language === "nl"
-                          ? "Met meer dan 15 jaar ervaring in de IT-sector, specialiseert Yaïr zich in Azure-cloud infrastructuur en Microsoft 365 oplossingen. Door zijn passie voor kennisdeling en hands-on begeleiding helpt hij bedrijven succesvol met hun digitale transformatie."
-                          : "With over 15 years of experience in the IT sector, Yaïr specializes in Azure cloud infrastructure and Microsoft 365 solutions. Through his passion for knowledge sharing and hands-on guidance, he helps companies succeed in their digital transformation."}
+                        {t.about?.team?.founder?.description || "With over 15 years of experience in the IT sector, Yaïr specializes in Azure cloud infrastructure and Microsoft 365 solutions. Through his passion for knowledge sharing and hands-on guidance, he helps companies succeed in their digital transformation."}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         <span className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
@@ -248,12 +234,10 @@ export function AboutPage() {
             <Card className="bg-gradient-to-br from-blue-500/5 to-primary/5 border-blue-500/20 shadow-xl">
               <CardContent className="p-8 md:p-12 lg:p-16">
                 <h2 className="text-foreground font-bold mb-4 text-xl md:text-2xl">
-                  {language === "nl" ? "Neem Contact Op" : "Get In Touch"}
+                  {t.about?.contact?.title || "Get In Touch"}
                 </h2>
                 <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto">
-                  {language === "nl"
-                    ? "Klaar om uw cloud reis te beginnen? Neem vandaag nog contact met ons op!"
-                    : "Ready to start your cloud journey? Get in touch with us today!"}
+                  {t.about?.contact?.description || "Ready to start your cloud journey? Get in touch with us today!"}
                 </p>
                 <div className="space-y-2">
                   <a

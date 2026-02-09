@@ -41,7 +41,7 @@ export default function ContactPage() {
 
   // Get service parameter from URL if provided
   const serviceParam = searchParams.get('service');
-  const trainingTitle = serviceParam || (language === 'nl' ? 'Azure Services Contact' : 'Azure Services Contact');
+  const trainingTitle = serviceParam || (contactT.defaultServiceTitle || 'Azure Services Contact');
 
   const benefits = [
     {
@@ -83,13 +83,13 @@ export default function ContactPage() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium mb-6">
               <Sparkle className="w-4 h-4" />
-              Let's Connect
+              {contactT.letsConnect || "Let's Connect"}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-foreground">
               {contactT.title}
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-              Whether you need enterprise training, consulting, or just have a question, our team is ready to help.
+              {contactT.pageDescription || "Whether you need enterprise training, consulting, or just have a question, our team is ready to help."}
             </p>
           </motion.div>
 
@@ -156,7 +156,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-bold text-foreground text-lg">{contactT.microsoftCertified}</div>
-                    <div className="text-sm text-blue-500 dark:text-blue-300">Official Training Partner</div>
+                    <div className="text-sm text-blue-500 dark:text-blue-300">{contactT.officialPartner || 'Official Training Partner'}</div>
                   </div>
                 </div>
                 <div className="space-y-4 pl-2">
@@ -185,7 +185,7 @@ export default function ContactPage() {
               <div className="rounded-2xl border border-border bg-card shadow-xl overflow-hidden relative">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500" />
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-6">Send us a message</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-6">{contactT.sendUsMessage || 'Send us a message'}</h3>
                   {/* The Form Component needs to support dark mode styles or we wrap it in a dark context */}
                   <div className="w-full">
                     <TrainingConsultationForm

@@ -28,5 +28,16 @@ export default {
       title: "Latest Trends",
       description: "Latest developments"
     }
+  },
+  marketing: {
+    headline1: "Master the Cloud.",
+    headline2: "Engineering First.",
+    description: "The enterprise-grade training platform designed for modern cloud engineers. Hands-on labs, real-world simulations, and a direct path to Microsoft Azure mastery.",
+    startTraining: "Start Training Now",
+    viewPathways: "View Pathways",
+    mct: "Microsoft Certified Trainer",
+    instantAccess: "Instant Access",
+    realWorld: "Real World Application First",
+    certification: "Certification"
   }
 };

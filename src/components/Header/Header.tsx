@@ -57,7 +57,7 @@ export function Header() {
 
   const navigationItems = [
     { href: "/training", icon: Certificate, label: t.nav?.training || "Training" },
-    { href: "/azure-excellence", icon: Shield, label: "Azure Excellence" },
+    { href: "/azure-excellence", icon: Shield, label: t.nav?.azureExcellence || "Azure Excellence" },
     { href: "/services", icon: Cloud, label: t.nav?.services || "Services" },
     { href: "/about", icon: Globe, label: t.nav?.about || "About" },
     { href: "/blog", icon: Article, label: t.nav?.blog || "Blog" },

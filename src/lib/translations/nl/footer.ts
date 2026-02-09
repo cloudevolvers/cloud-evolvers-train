@@ -18,5 +18,15 @@ export default {
   rights: "Alle rechten voorbehouden.",
   madeInNetherlands: "Met trots gemaakt in Nederland.",
   copyright: "© {year} {company}. {rights}",
-  builtOn: "Versie van {date} om {time}"
+  builtOn: "Versie van {date} om {time}",
+  getInTouch: "Neem Contact Op",
+  messageSent: "Bericht Verzonden!",
+  messageSuccess: "We nemen binnen 24 uur contact met u op.",
+  somethingWentWrong: "Er is iets misgegaan",
+  tryAgainOrEmail: "Probeer het opnieuw of mail ons rechtstreeks.",
+  yourName: "Uw Naam",
+  yourEmail: "Uw E-mailadres",
+  howCanWeHelp: "Hoe kunnen we u helpen?",
+  sending: "Verzenden...",
+  sendMessage: "Bericht Versturen"
 }
