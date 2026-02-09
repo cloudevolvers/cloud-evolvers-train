@@ -9,8 +9,6 @@ import {
   Globe,
   Shield,
   Phone,
-  Moon,
-  Sun,
   List,
   X,
 } from "@phosphor-icons/react";
@@ -31,28 +29,17 @@ import ReactCountryFlag from 'react-country-flag';
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('theme');
-      if (stored === 'light' || stored === 'dark') return stored;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'dark';
-  });
 
   const { t } = useTranslations();
   const { language, setLanguage } = useLanguageContext();
   const location = useLocation();
 
-  // Theme management
+  // Force dark mode
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    root.classList.remove('light');
+    root.classList.add('dark');
+  }, []);
 
   // Scroll detection
   useEffect(() => {
@@ -159,29 +146,6 @@ export function Header() {
 
             {/* Controls */}
             <div className="flex items-center gap-2">
-              {/* Theme Toggle */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
-                aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-              >
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={theme}
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {theme === 'dark' ? (
-                      <Sun size={18} weight="fill" className="text-amber-500" />
-                    ) : (
-                      <Moon size={18} weight="fill" className="text-slate-600" />
-                    )}
-                  </motion.div>
-                </AnimatePresence>
-              </button>
-
               {/* Language Switcher - Desktop */}
               <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100 dark:bg-slate-800">
                 <button
