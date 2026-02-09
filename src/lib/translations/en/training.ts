@@ -155,6 +155,8 @@ export default {
     contactForPricing: 'Contact for pricing',
     daysSingle: 'day',
     daysPlural: 'days',
+    groupSize: 'Group Size',
+    minParticipants: 'Minimum 6 participants',
     startLearningJourney: 'Start your learning journey',
     formDescription: 'Ready to advance your cloud expertise? Book your training and join professionals mastering Azure.',
     notFound: 'Training Not Found',

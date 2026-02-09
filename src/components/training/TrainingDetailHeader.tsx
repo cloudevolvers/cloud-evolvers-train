@@ -103,7 +103,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               </div>
               <div>
                 <p className="text-xs text-muted-foreground font-medium">Group Size</p>
-                <p className="font-bold text-foreground">Max {training.maxParticipants || 12}</p>
+                <p className="font-bold text-foreground">Min 6 – Max {training.maxParticipants || 12}</p>
               </div>
             </motion.div>
 

@@ -367,6 +367,8 @@ export default {
     contactForPricing: 'Neem contact op voor prijzen',
     daysSingle: 'dag',
     daysPlural: 'dagen',
+    groupSize: 'Groepsgrootte',
+    minParticipants: 'Minimaal 6 deelnemers',
     startLearningJourney: 'Start uw leertraject',
     formDescription: 'Klaar om uw cloudexpertise te vergroten? Boek uw training en sluit u aan bij professionals die Azure beheersen.',
     notFound: 'Training niet gevonden',

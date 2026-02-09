@@ -224,11 +224,11 @@ export default function TrainingDetailPage() {
                   </div>
 
                   {/* Enhanced info cards with better spacing and design */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-6">
-                    <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-6">
+                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-3 h-3 bg-blue-300 rounded-full animate-pulse"></div>
-                        <span className="text-sm font-medium text-primary-foreground/70 uppercase tracking-wide">{t.training.detail.duration}</span>
+                        <span className="text-sm font-medium text-white/80 uppercase tracking-wide">{t.training.detail.duration}</span>
                       </div>
                       <p className="text-lg font-bold text-white">
                         {(() => {
@@ -238,13 +238,23 @@ export default function TrainingDetailPage() {
                       </p>
                     </div>
 
-                    <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-3 h-3 bg-sky-300 rounded-full"></div>
-                        <span className="text-sm font-medium text-primary-foreground/70 uppercase tracking-wide">{t.training.detail.investment}</span>
+                        <span className="text-sm font-medium text-white/80 uppercase tracking-wide">{t.training.detail.investment}</span>
                       </div>
                       <p className="text-lg font-bold text-white">
                         {priceInfo?.displayText || t.training.detail.contactForPricing}
+                      </p>
+                    </div>
+
+                    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-3 h-3 bg-emerald-300 rounded-full"></div>
+                        <span className="text-sm font-medium text-white/80 uppercase tracking-wide">{t.training?.detail?.groupSize || 'Group Size'}</span>
+                      </div>
+                      <p className="text-lg font-bold text-white">
+                        {t.training?.detail?.minParticipants || 'Minimum 6 participants'}
                       </p>
                     </div>
                   </div>
