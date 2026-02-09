@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, House, MagnifyingGlass, GraduationCap } from '@phosphor-icons/react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/use-translations';
 
 export function NotFound() {
+  const { t } = useTranslations();
   return (
     <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-16">
       <motion.div
@@ -44,10 +46,10 @@ export function NotFound() {
               className="mb-8"
             >
               <h2 className="text-3xl font-semibold text-foreground mb-4">
-                Page Not Found
+                {t.notFound?.pageNotFound || 'Page Not Found'}
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                The page you're looking for doesn't exist or has been moved to a new location.
+                {t.notFound?.description || "The page you're looking for doesn't exist or has been moved to a new location."}
               </p>
             </motion.div>
 
@@ -61,14 +63,14 @@ export function NotFound() {
               <Button asChild size="lg" className="group">
                 <Link to="/">
                   <House className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  Back to Home
+                  {t.notFound?.backToHome || 'Back to Home'}
                 </Link>
               </Button>
               
               <Button asChild variant="outline" size="lg" className="group">
                 <Link to="/#training">
                   <GraduationCap className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  Browse Training
+                  {t.notFound?.browseTraining || 'Browse Training'}
                 </Link>
               </Button>
             </motion.div>
@@ -81,7 +83,7 @@ export function NotFound() {
               className="mt-8 pt-8 border-t border-muted-foreground/20"
             >
               <p className="text-sm text-muted-foreground mb-4">
-                Looking for something specific?
+                {t.notFound?.lookingForSomething || 'Looking for something specific?'}
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <Link
@@ -100,7 +102,7 @@ export function NotFound() {
                   to="/#services"
                   className="text-primary hover:text-primary/80 transition-colors underline-offset-4 hover:underline"
                 >
-                  Our Services
+                  {t.notFound?.ourServices || 'Our Services'}
                 </Link>
               </div>
             </motion.div>

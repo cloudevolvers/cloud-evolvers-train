@@ -18,5 +18,15 @@ export default {
   rights: "All rights reserved.",
   madeInNetherlands: "Proudly made in the Netherlands.",
   copyright: "© {year} {company}. {rights}",
-  builtOn: "Built on {date} at {time}"
+  builtOn: "Built on {date} at {time}",
+  getInTouch: "Get in Touch",
+  messageSent: "Message Sent!",
+  messageSuccess: "We'll get back to you within 24 hours.",
+  somethingWentWrong: "Something went wrong",
+  tryAgainOrEmail: "Please try again or email us directly.",
+  yourName: "Your Name",
+  yourEmail: "Your Email",
+  howCanWeHelp: "How can we help you?",
+  sending: "Sending...",
+  sendMessage: "Send Message"
 }

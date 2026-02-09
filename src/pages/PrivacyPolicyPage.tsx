@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "@phosphor-icons/react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslations } from "@/hooks/use-translations";
 
 export function PrivacyPolicyPage() {
+  const { t } = useTranslations();
   return (
     <div className="min-h-screen pt-24 bg-background">
       <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
@@ -12,7 +14,7 @@ export function PrivacyPolicyPage() {
           className="inline-flex items-center mb-6 text-sm text-green-500 hover:text-green-600 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
+          {t.legal?.backToHome || 'Back to Home'}
         </Link>
 
         <motion.div
@@ -22,10 +24,10 @@ export function PrivacyPolicyPage() {
         >
           <Card>
             <CardContent className="p-8">
-              <h1 className="text-green-600 dark:text-green-400 font-bold mb-8">Privacy Policy</h1>
+              <h1 className="text-green-600 dark:text-green-400 font-bold mb-8">{t.legal?.privacyPolicy || 'Privacy Policy'}</h1>
 
               <div className="prose-invert max-w-none">
-                <p className="text-muted-foreground mb-6">Last updated: {new Date().toLocaleDateString()}</p>
+                <p className="text-muted-foreground mb-6">{t.legal?.lastUpdated || 'Last updated:'} {new Date().toLocaleDateString()}</p>
 
                 <h2>1. Introduction</h2>
                 <p>

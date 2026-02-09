@@ -5,8 +5,10 @@ import { Badge } from "@/components/ui/badge";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { TerminalWindow } from "./TerminalWindow";
 import { Link } from "react-router-dom";
+import { useTranslations } from "@/hooks/use-translations";
 
 export function Hero() {
+    const { t } = useTranslations();
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-slate-50/50 to-white dark:from-background dark:via-background dark:to-background">
             {/* Background Effects */}
@@ -35,15 +37,14 @@ export function Hero() {
                             className="w-full"
                         >
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
-                                Master the Cloud. <br />
+                                {t.hero?.marketing?.headline1 || 'Master the Cloud.'} <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-500">
-                                    Engineering First.
+                                    {t.hero?.marketing?.headline2 || 'Engineering First.'}
                                 </span>
                             </h1>
 
                             <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-muted-foreground leading-relaxed max-w-xl mb-8">
-                                The enterprise-grade training platform designed for modern cloud engineers.
-                                Hands-on labs, real-world simulations, and a direct path to Microsoft Azure mastery.
+                                {t.hero?.marketing?.description || 'The enterprise-grade training platform designed for modern cloud engineers. Hands-on labs, real-world simulations, and a direct path to Microsoft Azure mastery.'}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -52,7 +53,7 @@ export function Hero() {
                                         size="lg"
                                         className="bg-blue-600 hover:bg-blue-700 text-white border-none shadow-lg shadow-blue-500/25 dark:shadow-blue-500/20 h-12 px-8 text-base group w-full sm:w-auto"
                                     >
-                                        Start Training Now
+                                        {t.hero?.marketing?.startTraining || 'Start Training Now'}
                                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </Link>
@@ -62,7 +63,7 @@ export function Hero() {
                                         variant="outline"
                                         className="border-slate-300 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 text-slate-900 dark:text-white h-12 px-8 text-base w-full sm:w-auto"
                                     >
-                                        View Pathways
+                                        {t.hero?.marketing?.viewPathways || 'View Pathways'}
                                     </Button>
                                 </Link>
                             </div>
@@ -70,15 +71,15 @@ export function Hero() {
                             <div className="mt-12 flex flex-wrap items-center gap-4 sm:gap-8 text-sm text-slate-500 dark:text-gray-400 w-full pt-8 border-t border-slate-200 dark:border-white/5">
                                 <div className="flex items-center gap-2">
                                     <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-500" />
-                                    <span className="text-slate-700 dark:text-slate-300">Microsoft Certified Trainer</span>
+                                    <span className="text-slate-700 dark:text-slate-300">{t.hero?.marketing?.mct || 'Microsoft Certified Trainer'}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Zap className="w-5 h-5 text-amber-500" />
-                                    <span className="text-slate-700 dark:text-slate-300">Instant Access</span>
+                                    <span className="text-slate-700 dark:text-slate-300">{t.hero?.marketing?.instantAccess || 'Instant Access'}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <TerminalIcon className="w-5 h-5 text-emerald-600 dark:text-green-500" />
-                                    <span className="text-slate-700 dark:text-slate-300">Real World Application First</span>
+                                    <span className="text-slate-700 dark:text-slate-300">{t.hero?.marketing?.realWorld || 'Real World Application First'}</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -105,7 +106,7 @@ export function Hero() {
                                         <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                                     </div>
                                     <div>
-                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Certification</div>
+                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{t.hero?.marketing?.certification || 'Certification'}</div>
                                         <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-104</div>
                                     </div>
                                 </div>
@@ -121,7 +122,7 @@ export function Hero() {
                                         <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                                     </div>
                                     <div>
-                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Certification</div>
+                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{t.hero?.marketing?.certification || 'Certification'}</div>
                                         <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-305</div>
                                     </div>
                                 </div>
@@ -137,7 +138,7 @@ export function Hero() {
                                         <ShieldCheck className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                                     </div>
                                     <div>
-                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Certification</div>
+                                        <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{t.hero?.marketing?.certification || 'Certification'}</div>
                                         <div className="text-sm font-bold text-slate-900 dark:text-white">AZ-500</div>
                                     </div>
                                 </div>

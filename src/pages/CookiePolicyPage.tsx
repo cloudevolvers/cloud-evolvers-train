@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "@phosphor-icons/react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslations } from "@/hooks/use-translations";
 
 export function CookiePolicyPage() {
+  const { t } = useTranslations();
   return (
     <div className="min-h-screen pt-24 bg-background">
       <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
@@ -12,7 +14,7 @@ export function CookiePolicyPage() {
           className="inline-flex items-center mb-6 text-sm text-green-500 hover:text-green-600 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
+          {t.legal?.backToHome || 'Back to Home'}
         </Link>
         
         <motion.div
@@ -22,10 +24,10 @@ export function CookiePolicyPage() {
         >
           <Card>
             <CardContent className="p-8">
-              <h1 className="text-green-400 font-bold mb-8">Cookie Policy</h1>
+              <h1 className="text-green-400 font-bold mb-8">{t.legal?.cookiePolicy || 'Cookie Policy'}</h1>
               
               <div className="prose-invert max-w-none">
-                <p className="text-muted-foreground mb-6">Last updated: {new Date().toLocaleDateString()}</p>
+                <p className="text-muted-foreground mb-6">{t.legal?.lastUpdated || 'Last updated:'} {new Date().toLocaleDateString()}</p>
                 
                 <h2>What Are Cookies</h2>
                 <p>
@@ -70,7 +72,7 @@ export function CookiePolicyPage() {
                   We may update our Cookie Policy from time to time to reflect changes in technology, regulation, or our business practices. Any changes will be posted on this page with an updated revision date.
                 </p>
                 
-                <h2>Contact Us</h2>
+                <h2>{t.legal?.contactUs || 'Contact Us'}</h2>
                 <p>
                   If you have any questions about our Cookie Policy, please contact us at <a href="mailto:privacy@cloudevolvers.com" className="text-green-500 hover:underline">privacy@cloudevolvers.com</a>.
                 </p>

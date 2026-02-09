@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, DownloadSimple, FilePdf } from "@phosphor-icons/react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/use-translations";
 
 export function TermsOfServicePage() {
+  const { t } = useTranslations();
   return (
     <div className="min-h-screen pt-24 bg-background">
       <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
@@ -13,7 +15,7 @@ export function TermsOfServicePage() {
           className="inline-flex items-center mb-6 text-sm text-green-500 hover:text-green-600 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
+          {t.legal?.backToHome || 'Back to Home'}
         </Link>
         
         <motion.div
@@ -23,10 +25,10 @@ export function TermsOfServicePage() {
         >
           <Card>
             <CardContent className="p-8">
-              <h1 className="text-green-400 font-bold mb-8">Terms of Service</h1>
+              <h1 className="text-green-400 font-bold mb-8">{t.legal?.termsOfService || 'Terms of Service'}</h1>
               
               <div className="prose-invert max-w-none">
-                <p className="text-muted-foreground mb-2">Last updated: {new Date().toLocaleDateString()}</p>
+                <p className="text-muted-foreground mb-2">{t.legal?.lastUpdated || 'Last updated:'} {new Date().toLocaleDateString()}</p>
                 <p className="text-sm text-muted-foreground mb-6">
                   Cloud Evolvers is a company of <span className="text-green-400 font-semibold">Spot Cloud B.V.</span>
                 </p>
@@ -35,10 +37,10 @@ export function TermsOfServicePage() {
                 <div className="bg-muted/20 p-6 rounded-lg mb-8 border border-green-500/20">
                   <div className="flex items-center gap-2 mb-4">
                     <FilePdf className="h-5 w-5 text-green-400" />
-                    <h3 className="text-lg font-semibold text-green-400 m-0">Download Terms of Service</h3>
+                    <h3 className="text-lg font-semibold text-green-400 m-0">{t.legal?.downloadTerms || 'Download Terms of Service'}</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Download the complete Terms of Service document in your preferred language:
+                    {t.legal?.downloadDescription || 'Download the complete Terms of Service document in your preferred language:'}
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Button
@@ -118,7 +120,7 @@ export function TermsOfServicePage() {
                   These Terms of Service are governed by and construed in accordance with the laws of the Netherlands, without regard to its conflict of law principles.
                 </p>
                 
-                <h2>10. Contact Us</h2>
+                <h2>10. {t.legal?.contactUs || 'Contact Us'}</h2>
                 <p>
                   If you have any questions about these Terms of Service, please contact us at <a href="mailto:legal@cloudevolvers.com" className="text-green-500 hover:underline">legal@cloudevolvers.com</a>.
                 </p>

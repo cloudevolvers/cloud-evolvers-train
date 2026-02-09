@@ -5,9 +5,13 @@ import { Heart, MapPin, Star, PaperPlaneTilt, CheckCircle, WarningCircle, Envelo
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { useTranslations } from '@/hooks/use-translations';
+import { useLanguageContext } from '@/contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const buildInfo = getBuildInfo();
+  const { t } = useTranslations();
+  const { language } = useLanguageContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
@@ -32,7 +36,7 @@ const Footer: React.FC = () => {
           email: formData.email,
           message: formData.message,
           source: 'footer-contact-form',
-          language: 'en'
+          language
         }),
       });
 
@@ -63,30 +67,30 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <Envelope className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              Get in Touch
+              {t.footer?.getInTouch || 'Get in Touch'}
             </h3>
 
             {submitStatus === 'success' ? (
               <div className="flex items-center gap-3 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
                 <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" weight="fill" />
                 <div>
-                  <p className="font-medium text-green-800 dark:text-green-300">Message Sent!</p>
-                  <p className="text-sm text-green-600 dark:text-green-400">We'll get back to you within 24 hours.</p>
+                  <p className="font-medium text-green-800 dark:text-green-300">{t.footer?.messageSent || 'Message Sent!'}</p>
+                  <p className="text-sm text-green-600 dark:text-green-400">{t.footer?.messageSuccess || "We'll get back to you within 24 hours."}</p>
                 </div>
               </div>
             ) : submitStatus === 'error' ? (
               <div className="flex items-center gap-3 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800 mb-4">
                 <WarningCircle className="w-6 h-6 text-red-600 dark:text-red-400" weight="fill" />
                 <div>
-                  <p className="font-medium text-red-800 dark:text-red-300">Something went wrong</p>
-                  <p className="text-sm text-red-600 dark:text-red-400">Please try again or email us directly.</p>
+                  <p className="font-medium text-red-800 dark:text-red-300">{t.footer?.somethingWentWrong || 'Something went wrong'}</p>
+                  <p className="text-sm text-red-600 dark:text-red-400">{t.footer?.tryAgainOrEmail || 'Please try again or email us directly.'}</p>
                 </div>
               </div>
             ) : null}
 
             <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
-                placeholder="Your Name"
+                placeholder={t.footer?.yourName || 'Your Name'}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
@@ -94,14 +98,14 @@ const Footer: React.FC = () => {
               />
               <Input
                 type="email"
-                placeholder="Your Email"
+                placeholder={t.footer?.yourEmail || 'Your Email'}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
                 required
               />
               <Textarea
-                placeholder="How can we help you?"
+                placeholder={t.footer?.howCanWeHelp || 'How can we help you?'}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="sm:col-span-2 bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 min-h-[80px]"
@@ -116,12 +120,12 @@ const Footer: React.FC = () => {
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Sending...
+                      {t.footer?.sending || 'Sending...'}
                     </span>
                   ) : (
                     <span className="flex items-center gap-2">
                       <PaperPlaneTilt className="w-4 h-4" weight="fill" />
-                      Send Message
+                      {t.footer?.sendMessage || 'Send Message'}
                     </span>
                   )}
                 </Button>
@@ -132,7 +136,7 @@ const Footer: React.FC = () => {
           {/* Contact Info & Links */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Contact</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">{t.footer?.contact || 'Contact'}</h3>
               <div className="space-y-3 text-gray-600 dark:text-slate-400">
                 <a
                   href="mailto:training@cloudevolvers.com"
@@ -161,25 +165,25 @@ const Footer: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Legal</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">{t.footer?.legal || 'Legal'}</h3>
               <div className="space-y-2">
                 <Link
                   to="/privacy-policy"
                   className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
                 >
-                  Privacy Policy
+                  {t.footer?.privacyPolicy || 'Privacy Policy'}
                 </Link>
                 <Link
                   to="/terms-of-service"
                   className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
                 >
-                  Terms of Service
+                  {t.footer?.termsOfService || 'Terms of Service'}
                 </Link>
                 <Link
                   to="/cookie-policy"
                   className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
                 >
-                  Cookie Policy
+                  {t.footer?.cookiePolicy || 'Cookie Policy'}
                 </Link>
               </div>
             </div>
@@ -191,11 +195,11 @@ const Footer: React.FC = () => {
           <div className="text-gray-600 dark:text-slate-400 flex flex-col items-center gap-2 text-center">
             <div className="flex items-center gap-2">
               <Heart size={16} className="text-red-500 dark:text-red-300" />
-              <span>© {new Date().getFullYear()} Spot Cloud B.V. (Cloud Evolvers). All rights reserved.</span>
+              <span>© {new Date().getFullYear()} Spot Cloud B.V. (Cloud Evolvers). {t.footer?.rights || 'All rights reserved.'}</span>
             </div>
             <div className="flex items-center gap-1">
               <MapPin size={14} className="text-emerald-600 dark:text-emerald-300" />
-              <span>Proudly made in the Netherlands.</span>
+              <span>{t.footer?.madeInNetherlands || 'Proudly made in the Netherlands.'}</span>
             </div>
 
             {/* Build Info (hidden in production, visible when text selected) */}

@@ -29,7 +29,7 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
     {
       href: "/azure-excellence",
       icon: Shield,
-      label: language === 'nl' ? "Azure Excellence" : "Azure Excellence"
+      label: t.nav?.azureExcellence || "Azure Excellence"
     },
     {
       href: "/services",

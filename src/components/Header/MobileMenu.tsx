@@ -28,7 +28,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
   const navigationItems = [
     { href: "/", icon: House, label: t.nav?.home || "Home" },
     { href: "/training", icon: Certificate, label: t.nav?.training || "Training" },
-    { href: "/azure-excellence", icon: Shield, label: language === 'nl' ? "Azure Excellence" : "Azure Excellence" },
+    { href: "/azure-excellence", icon: Shield, label: t.nav?.azureExcellence || "Azure Excellence" },
     { href: "/services", icon: Cloud, label: t.nav?.services || "Services" },
     { href: "/about", icon: Globe, label: t.nav?.about || "About" },
     { href: "/blog", icon: Article, label: t.nav?.blog || "Blog" },

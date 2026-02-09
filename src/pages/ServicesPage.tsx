@@ -19,7 +19,8 @@ import { getServiceIcon } from '@/utils/service-icons';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 
 export default function ServicesPage() {
-  const { language } = useTranslations();
+  const { t, language } = useTranslations();
+  const sp = t.servicesPage;
   const services = getAllServices(language);
   const navigate = useNavigate();
 
@@ -71,17 +72,15 @@ export default function ServicesPage() {
                     className="px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-violet-500/10 border-blue-500/30 text-blue-600 dark:text-blue-400"
                   >
                     <Star size={14} className="mr-2" weight="fill" />
-                    {language === 'nl' ? 'Premium Cloud Services' : 'Premium Cloud Services'}
+                    Premium Cloud Services
                   </Badge>
                 </motion.div>
 
                 <h1 className="text-foreground font-bold mb-6 leading-tight text-3xl md:text-4xl lg:text-5xl">
-                  {language === 'nl' ? 'Onze Services' : 'Our Services'}
+                  {sp?.title || 'Our Services'}
                 </h1>
                 <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-lg">
-                  {language === 'nl'
-                    ? 'Uitgebreide cloud engineering en consulting services om uw organisatie te helpen slagen in de digitale transformatiereis.'
-                    : 'Comprehensive cloud engineering and consulting services to help your organization succeed in the digital transformation journey.'}
+                  {sp?.subtitle || 'Comprehensive cloud engineering and consulting services to help your organization succeed in the digital transformation journey.'}
                 </p>
               </motion.div>
 
@@ -160,7 +159,7 @@ export default function ServicesPage() {
                               size="sm"
                               className="text-primary p-0 h-auto font-medium group-hover:translate-x-1 transition-transform duration-300"
                             >
-                              {language === 'nl' ? 'Meer Informatie' : 'Learn More'}
+                              {language === 'nl' ? 'Meer informatie' : 'Learn more'}
                               <ArrowRight size={14} className="ml-1.5" />
                             </Button>
                           </div>
@@ -190,13 +189,11 @@ export default function ServicesPage() {
                     </div>
 
                     <h2 className="text-foreground font-bold text-2xl md:text-3xl mb-4">
-                      {language === 'nl' ? 'Klaar om te Beginnen?' : 'Ready to Get Started?'}
+                      {sp?.contact?.title || 'Ready to Get Started?'}
                     </h2>
 
                     <p className="text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-                      {language === 'nl'
-                        ? 'Neem vandaag nog contact met ons op om te bespreken hoe onze services uw organisatie kunnen helpen bij het behalen van uw cloud transformatiedoelen.'
-                        : 'Contact us today to discuss how our services can help your organization achieve its cloud transformation goals.'}
+                      {sp?.contact?.description || 'Contact us today to discuss how our services can help your organization achieve its cloud transformation goals.'}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -206,7 +203,7 @@ export default function ServicesPage() {
                         onClick={() => navigate('/contact')}
                       >
                         <EnvelopeSimple size={18} className="mr-2" />
-                        {language === 'nl' ? 'Neem Contact Op' : 'Contact Us'}
+                        {sp?.contact?.contactUs || 'Contact Us'}
                       </Button>
                       <Button
                         variant="outline"
@@ -215,7 +212,7 @@ export default function ServicesPage() {
                         onClick={() => navigate('/training')}
                       >
                         <GraduationCap size={18} className="mr-2" />
-                        {language === 'nl' ? 'Bekijk Training Cursussen' : 'View Training Courses'}
+                        {sp?.contact?.viewTraining || 'View Training Courses'}
                       </Button>
                     </div>
                   </CardContent>
