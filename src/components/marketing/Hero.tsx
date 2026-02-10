@@ -6,6 +6,7 @@ import { DotPattern } from "@/components/ui/dot-pattern";
 import { TerminalWindow } from "./TerminalWindow";
 import { Link } from "react-router-dom";
 import { useTranslations } from "@/hooks/use-translations";
+import { BackgroundIcons } from "@/components/BackgroundIcons";
 
 export function Hero() {
     const { t } = useTranslations();
@@ -23,6 +24,7 @@ export function Hero() {
                 <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-100/60 to-transparent dark:from-blue-500/10 dark:to-transparent rounded-full blur-[80px]" />
                 <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-indigo-100/50 to-transparent dark:from-indigo-500/10 dark:to-transparent rounded-full blur-[80px]" />
                 <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-bl from-sky-100/40 to-transparent dark:from-sky-500/5 dark:to-transparent rounded-full blur-[60px]" />
+                <BackgroundIcons variant="hero" />
             </div>
 
             <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -39,12 +41,12 @@ export function Hero() {
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
                                 {t.hero?.marketing?.headline1 || 'Master the Cloud.'} <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-500">
-                                    {t.hero?.marketing?.headline2 || 'Engineering First.'}
+                                    {t.hero?.marketing?.headline2 || 'Every Discipline.'}
                                 </span>
                             </h1>
 
                             <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-muted-foreground leading-relaxed max-w-xl mb-8">
-                                {t.hero?.marketing?.description || 'The enterprise-grade training platform designed for modern cloud engineers. Hands-on labs, real-world simulations, and a direct path to Microsoft Azure mastery.'}
+                                {t.hero?.marketing?.description || 'The enterprise-grade training platform for cloud security, architecture, engineering, and administration. Hands-on labs, real-world simulations, and a direct path to Microsoft Azure mastery.'}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

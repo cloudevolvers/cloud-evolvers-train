@@ -31,8 +31,8 @@ const heroNl = {
   },
   marketing: {
     headline1: "Beheers de Cloud.",
-    headline2: "Engineering Eerst.",
-    description: "Het professionele trainingsplatform ontworpen voor moderne cloud engineers. Praktijklabs, realistische simulaties en een directe weg naar Microsoft Azure-beheersing.",
+    headline2: "Elk Vakgebied.",
+    description: "Het professionele trainingsplatform voor cloud security, architectuur, engineering en beheer. Praktijklabs, realistische simulaties en een directe weg naar Microsoft Azure-beheersing.",
     startTraining: "Start Nu met Training",
     viewPathways: "Bekijk Leertrajecten",
     mct: "Microsoft Certified Trainer",
