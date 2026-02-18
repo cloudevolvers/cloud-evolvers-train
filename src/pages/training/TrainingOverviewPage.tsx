@@ -4,7 +4,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Funnel, Calendar } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
-import { getAllTrainings } from '@/components/training/content/index';
+import { getAllTrainings as getAllJSONTrainings } from '@/data/training-json';
+import type { TrainingJSON } from '@/data/training-json/types';
 import { useTranslations } from '@/hooks/use-translations';
 import { BackgroundIcons } from '@/components/BackgroundIcons';
 import {
@@ -39,22 +40,44 @@ const TrainingOverviewPage: React.FC = () => {
     };
   };
 
-  // Load all trainings
+  // Load all trainings from JSON registry
   useEffect(() => {
-    const loadAllTrainings = async () => {
-      try {
-        const componentTrainings = getAllTrainings();
-        const convertedTrainings: CombinedTraining[] = componentTrainings.map(training => ({
-          ...training,
-          isJsonBased: false,
-        }));
-        setAllTrainings(convertedTrainings);
-      } catch (error) {
-        console.error('❌ Error loading trainings:', error);
-        setAllTrainings([]);
-      }
-    };
-    loadAllTrainings();
+    try {
+      const jsonTrainings = getAllJSONTrainings();
+      const convertedTrainings: CombinedTraining[] = jsonTrainings.map((t: TrainingJSON) => ({
+        id: t.id,
+        slug: t.slug,
+        title: t.title,
+        description: t.description,
+        category: t.category,
+        level: t.difficulty,
+        duration: t.duration,
+        price: t.price,
+        featured: t.featured,
+        icon: t.icon,
+        learningObjectives: t.learningObjectives.map(obj => obj.description),
+        prerequisites: t.prerequisites,
+        targetAudience: t.targetAudience,
+        certification: t.certification ? {
+          available: t.certification.available,
+          examCode: t.certification.examCode,
+          examName: t.certification.name,
+        } : undefined,
+        tags: t.tags,
+        maxParticipants: t.maxParticipants,
+        instructor: {
+          name: t.instructor.name,
+          title: t.instructor.title,
+          experience: (t.instructor as any).experience,
+          certifications: t.instructor.certifications,
+        },
+        isJsonBased: true,
+      }));
+      setAllTrainings(convertedTrainings);
+    } catch (error) {
+      console.error('❌ Error loading trainings:', error);
+      setAllTrainings([]);
+    }
   }, []);
 
   // Filter and sort trainings
