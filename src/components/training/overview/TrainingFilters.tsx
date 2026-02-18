@@ -198,7 +198,7 @@ export function TrainingFilters({
               })}
 
               {/* Category Quick Filters */}
-              {['Azure', 'Microsoft 365', 'Security & Compliance', 'Power Platform', 'AI & Machine Learning'].map((category) => {
+              {['Azure', 'Microsoft 365', 'Security & Compliance', 'Power Platform', 'AI & Machine Learning', 'Windows Server'].map((category) => {
                 const count = categoryStats[category] || 0;
                 if (count === 0) return null;
                 const isActive = filterState.selectedCategory === category;

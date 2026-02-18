@@ -173,7 +173,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure Security Engineer Associate",
+    "name": "Microsoft Certified: Azure Security Engineer Associate",
     "examCode": "AZ-500",
     "provider": "Microsoft"
   },

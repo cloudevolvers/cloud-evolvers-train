@@ -5,7 +5,7 @@
   "subtitle": "Design Enterprise-Scale Solutions on Azure",
   "description": "Design enterprise-scale solutions on Microsoft Azure",
   "overview": "Advanced architecture training for designing and implementing solutions on Microsoft Azure. Learn to advise stakeholders and translate business requirements into secure, scalable, and reliable cloud solutions.",
-  "category": "Azure Architecture",
+  "category": "Azure",
   "subcategory": "Solutions Architecture",
   "difficulty": "Advanced",
   "tags": [
@@ -195,7 +195,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure Solutions Architect Expert",
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
     "examCode": "AZ-305",
     "provider": "Microsoft"
   },

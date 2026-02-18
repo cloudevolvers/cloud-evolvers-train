@@ -4,7 +4,7 @@
   "title": "Azure Network Engineer Associate (AZ-700)",
   "description": "Design, implement, and maintain Azure networking solutions",
   "content": "Comprehensive Azure networking training covering virtual networks, hybrid connectivity, traffic management, network security, and monitoring. Essential for network engineers working with Azure infrastructure.",
-  "category": "Infrastructure",
+  "category": "Azure",
   "subcategory": "Networking",
   "difficulty": "Intermediate",
   "duration": {
@@ -84,7 +84,7 @@
   "featured": false,
   "certification": {
     "available": true,
-    "name": "AZ-700",
+    "name": "Microsoft Certified: Azure Network Engineer Associate",
     "examCode": "AZ-700",
     "provider": "Microsoft"
   },

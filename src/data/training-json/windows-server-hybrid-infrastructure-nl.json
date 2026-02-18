@@ -5,7 +5,7 @@
   "subtitle": "Configureer Windows Server Services in Hybride Omgevingen",
   "description": "Configureer Windows Server services in hybride omgevingen",
   "overview": "Geavanceerde training gericht op het configureren en beheren van Windows Server hybride infrastructuur. Leer on-premises en hybride oplossingen te implementeren en beheren zoals identiteit, management, compute, netwerken en opslag.",
-  "category": "Infrastructuur",
+  "category": "Windows Server",
   "subcategory": "Windows Server",
   "difficulty": "Gevorderd",
   "tags": [
@@ -192,7 +192,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Windows Server Hybrid Administrator Associate",
+    "name": "Microsoft Certified: Windows Server Hybrid Administrator Associate",
     "examCode": "AZ-801",
     "provider": "Microsoft"
   },

@@ -121,7 +121,7 @@
   ],
   "certification": {
     "available": true,
-    "name": "Microsoft Azure Fundamentals",
+    "name": "Microsoft Certified: Azure Fundamentals",
     "examCode": "AZ-900",
     "provider": "Microsoft"
   },

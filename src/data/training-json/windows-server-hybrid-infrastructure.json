@@ -5,7 +5,7 @@
   "subtitle": "Configure Windows Server Services in Hybrid Environments",
   "description": "Configure Windows Server services in hybrid environments",
   "overview": "Advanced training focusing on configuring and managing Windows Server hybrid infrastructure. Learn to implement and manage on-premises and hybrid solutions such as identity, management, compute, networking, and storage.",
-  "category": "Infrastructure",
+  "category": "Windows Server",
   "subcategory": "Windows Server",
   "difficulty": "Advanced",
   "tags": [
@@ -192,7 +192,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Windows Server Hybrid Administrator Associate",
+    "name": "Microsoft Certified: Windows Server Hybrid Administrator Associate",
     "examCode": "AZ-801",
     "provider": "Microsoft"
   },

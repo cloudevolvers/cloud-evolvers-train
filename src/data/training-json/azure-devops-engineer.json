@@ -4,7 +4,7 @@
   "title": "Azure DevOps Engineer Expert (AZ-400)",
   "description": "Master Azure DevOps practices for modern software delivery",
   "content": "Comprehensive training on Azure DevOps practices, covering CI/CD pipelines, infrastructure as code, monitoring, and feedback mechanisms. Perfect for teams adopting DevOps methodologies in Azure environments.",
-  "category": "Development",
+  "category": "Azure",
   "subcategory": "DevOps",
   "difficulty": "Advanced",
   "duration": {
@@ -84,7 +84,7 @@
   "featured": true,
   "certification": {
     "available": true,
-    "name": "AZ-400",
+    "name": "Microsoft Certified: DevOps Engineer Expert",
     "examCode": "AZ-400",
     "provider": "Microsoft"
   },

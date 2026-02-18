@@ -188,7 +188,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure AI Fundamentals",
+    "name": "Microsoft Certified: Azure AI Fundamentals",
     "examCode": "AI-900",
     "provider": "Microsoft"
   },

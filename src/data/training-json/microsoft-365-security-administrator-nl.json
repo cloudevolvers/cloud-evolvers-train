@@ -5,7 +5,7 @@
   "subtitle": "Geavanceerde Beveiliging en Compliance",
   "description": "Beveilig Microsoft 365 omgevingen met geavanceerde beveiligingscontroles en compliance",
   "overview": "Deze geavanceerde 3-daagse cursus behandelt uitgebreide Microsoft 365 beveiligingsadministratie. Leer geavanceerde threat protection te implementeren, security en compliance centers te configureren, information protection policies te beheren en effectief te reageren op beveiligingsincidenten.",
-  "category": "Beveiliging",
+  "category": "Security & Compliance",
   "subcategory": "Microsoft 365 Beveiliging",
   "difficulty": "Gevorderd",
   "duration": {
@@ -71,7 +71,7 @@
   ],
   "certification": {
     "available": true,
-    "name": "Microsoft 365 Security Administrator Associate",
+    "name": "Microsoft Certified: Microsoft 365 Security Administrator Associate",
     "examCode": "MS-500",
     "provider": "Microsoft"
   },

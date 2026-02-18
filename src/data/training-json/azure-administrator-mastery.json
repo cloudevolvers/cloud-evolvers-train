@@ -18,7 +18,7 @@
     "currency": "EUR"
   },
   "featured": true,
-  "icon": "Shield",
+  "icon": "Settings",
   "learningObjectives": [
     {
       "id": "identity-governance",
@@ -71,7 +71,7 @@
   ],
   "certification": {
     "available": true,
-    "name": "Microsoft Azure Administrator",
+    "name": "Microsoft Certified: Azure Administrator Associate",
     "examCode": "AZ-104",
     "provider": "Microsoft"
   },

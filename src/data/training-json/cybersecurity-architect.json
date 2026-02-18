@@ -5,7 +5,7 @@
   "subtitle": "Design Zero Trust Security Architecture Across Microsoft Platforms",
   "description": "Design comprehensive cybersecurity strategies using Zero Trust principles across Microsoft security, compliance, and identity solutions",
   "overview": "This expert-level course prepares you to design cybersecurity strategy and architecture using Microsoft's comprehensive security portfolio. You'll learn to translate business requirements into Zero Trust security solutions, design security for infrastructure, applications, data, and identity. This course is ideal for senior security professionals ready to take on architecture roles.",
-  "category": "Security",
+  "category": "Security & Compliance",
   "subcategory": "Security Architecture",
   "difficulty": "Expert",
   "tags": [
@@ -222,7 +222,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Microsoft Cybersecurity Architect",
+    "name": "Microsoft Certified: Cybersecurity Architect Expert",
     "examCode": "SC-100",
     "provider": "Microsoft"
   },

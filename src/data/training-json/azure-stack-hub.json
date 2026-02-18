@@ -5,7 +5,7 @@
   "subtitle": "Hybrid Cloud Infrastructure Management",
   "description": "Master hybrid cloud infrastructure with Azure Stack Hub deployment and management",
   "overview": "This comprehensive 3-day course covers Azure Stack Hub deployment, configuration, and management. Learn to operate Azure services on-premises, manage hybrid environments, and implement enterprise-grade infrastructure solutions.",
-  "category": "Azure Infrastructure",
+  "category": "Azure",
   "subcategory": "Hybrid Cloud",
   "difficulty": "Advanced",
   "duration": {

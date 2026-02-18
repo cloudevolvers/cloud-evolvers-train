@@ -5,7 +5,7 @@
   "subtitle": "Ontwikkel IoT Oplossingen met Azure",
   "description": "Ontwikkel oplossingen voor Azure IoT services en edge devices",
   "overview": "Beheers Azure IoT oplossingen ontwikkeling met uitgebreide training over IoT Hub, Edge computing, device management en data processing. Bouw enterprise-ready IoT oplossingen met security en optimalisatie best practices.",
-  "category": "AI & Machine Learning",
+  "category": "Azure",
   "subcategory": "IoT",
   "difficulty": "Gevorderd",
   "tags": [
@@ -175,7 +175,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure IoT Developer Specialty",
+    "name": "Microsoft Certified: Azure IoT Developer Specialty",
     "examCode": "AZ-220",
     "provider": "Microsoft"
   },

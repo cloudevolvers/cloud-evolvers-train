@@ -4,7 +4,7 @@
   "title": "Azure Network Engineer Associate (AZ-700)",
   "description": "Ontwerp, implementeer en onderhoud Azure netwerkoplossingen",
   "content": "Uitgebreide Azure netwerk training die virtuele netwerken, hybride connectiviteit, verkeersbeheer, netwerkbeveiliging en monitoring behandelt. Essentieel voor netwerk engineers die werken met Azure infrastructuur.",
-  "category": "Infrastructuur",
+  "category": "Azure",
   "subcategory": "Netwerken",
   "difficulty": "Gemiddeld",
   "duration": {
@@ -84,7 +84,7 @@
   "featured": false,
   "certification": {
     "available": true,
-    "name": "AZ-700",
+    "name": "Microsoft Certified: Azure Network Engineer Associate",
     "examCode": "AZ-700",
     "provider": "Microsoft"
   },

@@ -4,7 +4,7 @@
   "title": "Azure IoT Developer Specialty (AZ-220)",
   "description": "Develop solutions for Azure IoT services and edge devices",
   "content": "Master Azure IoT solutions development with comprehensive training on IoT Hub, Edge computing, device management, and data processing. Build enterprise-ready IoT solutions with security and optimization best practices.",
-  "category": "AI & Machine Learning",
+  "category": "Azure",
   "subcategory": "IoT",
   "difficulty": "Advanced",
   "duration": {
@@ -90,7 +90,7 @@
   "featured": false,
   "certification": {
     "available": true,
-    "name": "AZ-220",
+    "name": "Microsoft Certified: Azure IoT Developer Specialty",
     "examCode": "AZ-220",
     "provider": "Microsoft"
   },

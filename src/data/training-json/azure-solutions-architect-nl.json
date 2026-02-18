@@ -5,7 +5,7 @@
   "subtitle": "Ontwerp Enterprise-Scale Oplossingen op Azure",
   "description": "Ontwerp enterprise-scale oplossingen op Microsoft Azure",
   "overview": "Geavanceerde architectuur training voor het ontwerpen en implementeren van oplossingen op Microsoft Azure. Leer stakeholders te adviseren en business requirements te vertalen naar veilige, schaalbare en betrouwbare cloud oplossingen.",
-  "category": "Azure Architecture",
+  "category": "Azure",
   "subcategory": "Solutions Architecture",
   "difficulty": "Gevorderd",
   "tags": [
@@ -176,7 +176,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure Solutions Architect Expert",
+    "name": "Microsoft Certified: Azure Solutions Architect Expert",
     "examCode": "AZ-305",
     "provider": "Microsoft"
   },
