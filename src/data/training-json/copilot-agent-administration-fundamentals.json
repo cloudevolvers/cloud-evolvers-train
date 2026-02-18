@@ -1,0 +1,191 @@
+{
+  "id": "copilot-agent-administration-fundamentals",
+  "slug": "copilot-agent-administration-fundamentals",
+  "title": "Microsoft 365 Copilot & Agent Administration Fundamentals",
+  "subtitle": "Master AI Administration in Microsoft 365",
+  "description": "Learn to administer Microsoft 365 Copilot and AI agents, including licensing, data protection, governance, and agent management",
+  "overview": "This fundamentals course prepares you for the AB-900 certification exam by covering the core features of Microsoft 365 services, data protection and governance for Copilot, and basic administrative tasks for Copilot and agents. You will learn to manage Copilot licensing, monitor usage and adoption, configure data security with Microsoft Purview, and create and manage AI agents in your organization.",
+  "category": "Microsoft 365",
+  "subcategory": "AI Administration",
+  "difficulty": "Beginner",
+  "tags": [
+    "Microsoft 365",
+    "Copilot",
+    "AI Agents",
+    "Administration",
+    "Microsoft Purview",
+    "Data Governance",
+    "AB-900"
+  ],
+  "duration": {
+    "days": 1,
+    "hours": 8,
+    "format": "days"
+  },
+  "price": {
+    "amount": 695,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "m365-core-features",
+      "title": "Microsoft 365 Core Features & Objects",
+      "description": "Identify core features, objects, and security principles of Microsoft 365 services including Exchange Online, SharePoint, and Teams",
+      "icon": "Cloud"
+    },
+    {
+      "id": "security-principles",
+      "title": "Microsoft 365 Security Principles",
+      "description": "Understand Zero Trust, authentication methods, conditional access, and Microsoft Entra capabilities",
+      "icon": "Shield"
+    },
+    {
+      "id": "data-protection",
+      "title": "Data Protection & Governance for Copilot",
+      "description": "Learn Microsoft Purview features for information protection, DLP, insider risk management, and data security posture management for AI",
+      "icon": "Lock"
+    },
+    {
+      "id": "copilot-administration",
+      "title": "Copilot Administration & Monitoring",
+      "description": "Assign Copilot licenses, manage billing policies, monitor usage and adoption through Copilot Analytics",
+      "icon": "Settings"
+    },
+    {
+      "id": "agent-management",
+      "title": "Agent Creation & Management",
+      "description": "Create agents, configure user access, understand approval processes, and monitor agent lifecycle",
+      "icon": "Bot"
+    }
+  ],
+  "modules": [
+    {
+      "id": "m365-core-services",
+      "title": "Core Features and Objects of Microsoft 365",
+      "description": "Identify core objects and security features across Microsoft 365 services",
+      "icon": "Cloud",
+      "duration": "2.5 hours",
+      "topics": [
+        "License types and their impact on Microsoft 365 feature access",
+        "Organization configuration via the Microsoft 365 admin center",
+        "Exchange Online admin center: mailboxes and distribution lists",
+        "SharePoint admin center: sites, libraries, folders, and permissions",
+        "Teams admin center: teams, channels, and policies",
+        "Zero Trust principles and authentication methods",
+        "Microsoft Entra features and conditional access policies",
+        "Single sign-on (SSO) and Privileged Identity Management (PIM)"
+      ]
+    },
+    {
+      "id": "data-protection-governance",
+      "title": "Data Protection and Governance for Microsoft 365 and Copilot",
+      "description": "Understand Microsoft Purview capabilities and data security implications of Copilot",
+      "icon": "Shield",
+      "duration": "3 hours",
+      "topics": [
+        "Microsoft Purview Information Protection and Data Loss Prevention (DLP)",
+        "Insider Risk Management and Communication Compliance",
+        "Data Security Posture Management (DSPM) for AI",
+        "Sensitivity labels and data classification",
+        "How Copilot accesses data via Microsoft Graph",
+        "How permissions and controls protect against Copilot risks",
+        "Responsible AI principles",
+        "Identifying oversharing in SharePoint and data access governance",
+        "SharePoint Advanced Management and restricted site access"
+      ]
+    },
+    {
+      "id": "copilot-agent-admin",
+      "title": "Administrative Tasks for Copilot and Agents",
+      "description": "Perform basic administrative tasks for Copilot and agents",
+      "icon": "Settings",
+      "duration": "2.5 hours",
+      "topics": [
+        "Comparing built-in capabilities of Copilot and agents",
+        "Copilot monthly license model vs. pay-as-you-go",
+        "Enabling and disabling Copilot features",
+        "Use cases for Researcher and Analyst agents",
+        "Use cases for custom agents",
+        "Assigning Copilot licenses and managing billing policies",
+        "Monitoring Copilot usage with Copilot Analytics and admin center",
+        "Creating, approving, and monitoring agents",
+        "Managing prompts: saving, sharing, scheduling, and deleting"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "m365-admin-center-lab",
+      "title": "Microsoft 365 Admin Center Exploration",
+      "description": "Navigate the Microsoft 365 admin center and explore organization configurations, licensing, and security settings",
+      "duration": "1 hour",
+      "icon": "Settings"
+    },
+    {
+      "id": "purview-lab",
+      "title": "Microsoft Purview Data Protection",
+      "description": "Configure sensitivity labels, DLP policies, and explore Data Security Posture Management for AI",
+      "duration": "1 hour",
+      "icon": "Shield"
+    },
+    {
+      "id": "copilot-licensing-lab",
+      "title": "Copilot Licensing & Monitoring",
+      "description": "Assign Copilot licenses, configure billing policies, and review Copilot Analytics dashboards",
+      "duration": "1 hour",
+      "icon": "BarChart"
+    },
+    {
+      "id": "agent-creation-lab",
+      "title": "Agent Creation & Management",
+      "description": "Create an agent, configure user access, and monitor agent usage through the admin center",
+      "duration": "1 hour",
+      "icon": "Bot"
+    }
+  ],
+  "prerequisites": [
+    "Familiarity with Microsoft 365 core services",
+    "Basic understanding of security and identity concepts",
+    "Experience with Microsoft 365 admin centers",
+    "No prior Copilot or AI experience required"
+  ],
+  "targetAudience": [
+    "Microsoft 365 administrators",
+    "IT professionals managing Copilot deployments",
+    "Security and compliance administrators",
+    "Students preparing for AB-900 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer specializing in Microsoft 365 administration and AI-powered productivity solutions. Experienced in deploying Copilot and managing AI governance for enterprise organizations.",
+    "experience": "7+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Administrator Expert",
+      "MS-900",
+      "AI-900",
+      "SC-900"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Certified: Copilot and Agent Administration Fundamentals",
+    "examCode": "AB-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 20,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-04-15T09:00:00Z"
+  },
+  "featured": true,
+  "icon": "Bot",
+  "createdAt": "2025-02-18T00:00:00Z",
+  "updatedAt": "2025-02-18T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "With the rise of AI in the workplace, managing Copilot has become one of the most asked-about topics by our enterprise clients. I've helped organizations roll out Copilot to thousands of users while keeping their data governance airtight. This course covers everything I wish administrators knew before their first Copilot deployment."
+  }
+}
