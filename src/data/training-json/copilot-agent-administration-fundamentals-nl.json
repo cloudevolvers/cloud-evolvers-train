@@ -1,0 +1,191 @@
+{
+  "id": "copilot-agent-administration-fundamentals-nl",
+  "slug": "copilot-agent-administration-fundamentals",
+  "title": "Microsoft 365 Copilot & Agent Administration Fundamentals",
+  "subtitle": "Beheers AI-administratie in Microsoft 365",
+  "description": "Leer Microsoft 365 Copilot en AI-agents beheren, inclusief licenties, gegevensbescherming, governance en agentbeheer",
+  "overview": "Deze fundamentals-cursus bereidt je voor op het AB-900 certificeringsexamen door de kernfuncties van Microsoft 365-services, gegevensbescherming en governance voor Copilot, en basisbeheertaken voor Copilot en agents te behandelen. Je leert Copilot-licenties te beheren, gebruik en adoptie te monitoren, gegevensbeveiliging te configureren met Microsoft Purview, en AI-agents in je organisatie te creëren en beheren.",
+  "category": "Microsoft 365",
+  "subcategory": "AI-administratie",
+  "difficulty": "Beginner",
+  "tags": [
+    "Microsoft 365",
+    "Copilot",
+    "AI Agents",
+    "Administratie",
+    "Microsoft Purview",
+    "Data Governance",
+    "AB-900"
+  ],
+  "duration": {
+    "days": 1,
+    "hours": 8,
+    "format": "days"
+  },
+  "price": {
+    "amount": 695,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "m365-core-features",
+      "title": "Microsoft 365 Kernfuncties & Objecten",
+      "description": "Identificeer kernfuncties, objecten en beveiligingsprincipes van Microsoft 365-services waaronder Exchange Online, SharePoint en Teams",
+      "icon": "Cloud"
+    },
+    {
+      "id": "security-principles",
+      "title": "Microsoft 365 Beveiligingsprincipes",
+      "description": "Begrijp Zero Trust, authenticatiemethoden, voorwaardelijke toegang en Microsoft Entra-mogelijkheden",
+      "icon": "Shield"
+    },
+    {
+      "id": "data-protection",
+      "title": "Gegevensbescherming & Governance voor Copilot",
+      "description": "Leer Microsoft Purview-functies voor informatiebescherming, DLP, insider risicobeheer en gegevensbeveiligingspostuur voor AI",
+      "icon": "Lock"
+    },
+    {
+      "id": "copilot-administration",
+      "title": "Copilot-administratie & Monitoring",
+      "description": "Wijs Copilot-licenties toe, beheer factureringsbeleid, monitor gebruik en adoptie via Copilot Analytics",
+      "icon": "Settings"
+    },
+    {
+      "id": "agent-management",
+      "title": "Agent Creatie & Beheer",
+      "description": "Creëer agents, configureer gebruikerstoegang, begrijp goedkeuringsprocessen en monitor de levenscyclus van agents",
+      "icon": "Bot"
+    }
+  ],
+  "modules": [
+    {
+      "id": "m365-core-services",
+      "title": "Kernfuncties en Objecten van Microsoft 365",
+      "description": "Identificeer kernobjecten en beveiligingsfuncties in Microsoft 365-services",
+      "icon": "Cloud",
+      "duration": "2,5 uur",
+      "topics": [
+        "Licentietypen en hun impact op Microsoft 365-functietoegang",
+        "Organisatieconfiguratie via het Microsoft 365-beheercentrum",
+        "Exchange Online-beheercentrum: postvakken en distributielijsten",
+        "SharePoint-beheercentrum: sites, bibliotheken, mappen en machtigingen",
+        "Teams-beheercentrum: teams, kanalen en beleid",
+        "Zero Trust-principes en authenticatiemethoden",
+        "Microsoft Entra-functies en beleid voor voorwaardelijke toegang",
+        "Eenmalige aanmelding (SSO) en Privileged Identity Management (PIM)"
+      ]
+    },
+    {
+      "id": "data-protection-governance",
+      "title": "Gegevensbescherming en Governance voor Microsoft 365 en Copilot",
+      "description": "Begrijp Microsoft Purview-mogelijkheden en gegevensbeveiligingsimplicaties van Copilot",
+      "icon": "Shield",
+      "duration": "3 uur",
+      "topics": [
+        "Microsoft Purview Informatiebescherming en Preventie van Gegevensverlies (DLP)",
+        "Insider Risicobeheer en Communicatie Compliance",
+        "Data Security Posture Management (DSPM) voor AI",
+        "Gevoeligheidslabels en gegevensclassificatie",
+        "Hoe Copilot gegevens benadert via Microsoft Graph",
+        "Hoe machtigingen en controles beschermen tegen Copilot-risico's",
+        "Verantwoorde AI-principes",
+        "Overmatig delen identificeren in SharePoint en gegevenstoegangsbeheer",
+        "SharePoint Geavanceerd Beheer en beperkte sitetoegang"
+      ]
+    },
+    {
+      "id": "copilot-agent-admin",
+      "title": "Beheertaken voor Copilot en Agents",
+      "description": "Voer basisbeheertaken uit voor Copilot en agents",
+      "icon": "Settings",
+      "duration": "2,5 uur",
+      "topics": [
+        "Vergelijking van ingebouwde mogelijkheden van Copilot en agents",
+        "Copilot maandelijks licentiemodel vs. betalen per gebruik",
+        "In- en uitschakelen van Copilot-functies",
+        "Toepassingsscenario's voor Researcher en Analyst agents",
+        "Toepassingsscenario's voor aangepaste agents",
+        "Copilot-licenties toewijzen en factureringsbeleid beheren",
+        "Copilot-gebruik monitoren met Copilot Analytics en beheercentrum",
+        "Agents maken, goedkeuren en monitoren",
+        "Prompts beheren: opslaan, delen, plannen en verwijderen"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "m365-admin-center-lab",
+      "title": "Microsoft 365 Beheercentrum Verkenning",
+      "description": "Navigeer door het Microsoft 365-beheercentrum en verken organisatieconfiguraties, licenties en beveiligingsinstellingen",
+      "duration": "1 uur",
+      "icon": "Settings"
+    },
+    {
+      "id": "purview-lab",
+      "title": "Microsoft Purview Gegevensbescherming",
+      "description": "Configureer gevoeligheidslabels, DLP-beleid en verken Data Security Posture Management voor AI",
+      "duration": "1 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "copilot-licensing-lab",
+      "title": "Copilot Licenties & Monitoring",
+      "description": "Wijs Copilot-licenties toe, configureer factureringsbeleid en bekijk Copilot Analytics-dashboards",
+      "duration": "1 uur",
+      "icon": "BarChart"
+    },
+    {
+      "id": "agent-creation-lab",
+      "title": "Agent Creatie & Beheer",
+      "description": "Maak een agent, configureer gebruikerstoegang en monitor agentgebruik via het beheercentrum",
+      "duration": "1 uur",
+      "icon": "Bot"
+    }
+  ],
+  "prerequisites": [
+    "Bekendheid met Microsoft 365 kernservices",
+    "Basisbegrip van beveiliging en identiteitsconcepten",
+    "Ervaring met Microsoft 365 beheercentra",
+    "Geen eerdere Copilot- of AI-ervaring vereist"
+  ],
+  "targetAudience": [
+    "Microsoft 365 beheerders",
+    "IT-professionals die Copilot-implementaties beheren",
+    "Beveiliging- en compliance-beheerders",
+    "Studenten die zich voorbereiden op AB-900 certificering"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer gespecialiseerd in Microsoft 365-administratie en AI-gedreven productiviteitsoplossingen. Ervaren in het uitrollen van Copilot en het beheren van AI-governance voor enterprise organisaties.",
+    "experience": "7+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Administrator Expert",
+      "MS-900",
+      "AI-900",
+      "SC-900"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Certified: Copilot and Agent Administration Fundamentals",
+    "examCode": "AB-900",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 20,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-04-15T09:00:00Z"
+  },
+  "featured": true,
+  "icon": "Bot",
+  "createdAt": "2025-02-18T00:00:00Z",
+  "updatedAt": "2025-02-18T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Met de opkomst van AI op de werkvloer is het beheren van Copilot een van de meest gevraagde onderwerpen geworden bij onze enterprise klanten. Ik heb organisaties geholpen Copilot uit te rollen naar duizenden gebruikers, terwijl hun datagovernance waterdicht bleef. Deze cursus behandelt alles wat beheerders zouden moeten weten voor hun eerste Copilot-implementatie."
+  }
+}

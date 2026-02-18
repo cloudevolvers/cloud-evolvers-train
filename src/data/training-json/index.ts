@@ -29,6 +29,7 @@ import windowsServerHybridAdministrator from './windows-server-hybrid-administra
 import azureAIEngineerData from './azure-ai-engineer.json';
 import securityOperationsAnalystData from './security-operations-analyst.json';
 import cybersecurityArchitectData from './cybersecurity-architect.json';
+import copilotAgentAdminFundamentalsData from './copilot-agent-administration-fundamentals.json';
 
 // Training data registry
 const trainingRegistry: Record<string, TrainingJSON> = {
@@ -60,6 +61,7 @@ const trainingRegistry: Record<string, TrainingJSON> = {
   'azure-ai-engineer': azureAIEngineerData as TrainingJSON,
   'security-operations-analyst': securityOperationsAnalystData as TrainingJSON,
   'cybersecurity-architect': cybersecurityArchitectData as TrainingJSON,
+  'copilot-agent-administration-fundamentals': copilotAgentAdminFundamentalsData as TrainingJSON,
 };
 
 // Function to get training by slug
