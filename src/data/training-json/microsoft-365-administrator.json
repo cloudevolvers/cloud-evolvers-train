@@ -1,0 +1,210 @@
+{
+  "id": "microsoft-365-administrator",
+  "slug": "microsoft-365-administrator",
+  "title": "Microsoft 365 Administrator",
+  "subtitle": "Enterprise Microsoft 365 Administration Expert",
+  "description": "Deploy, manage, and secure Microsoft 365 tenants including identity, security, compliance, and threat management",
+  "overview": "This intensive 4-day course prepares you for the MS-102 certification by covering all four exam domains: tenant deployment and management, Microsoft Entra identity and access, security and threat management with Microsoft Defender XDR, and compliance management with Microsoft Purview. You will gain hands-on experience managing enterprise Microsoft 365 environments end to end.",
+  "category": "Microsoft 365",
+  "subcategory": "Administration",
+  "difficulty": "Advanced",
+  "tags": [
+    "Microsoft 365",
+    "Administration",
+    "Microsoft Entra",
+    "Microsoft Defender",
+    "Microsoft Purview",
+    "Identity",
+    "Security",
+    "MS-102"
+  ],
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "tenant-management",
+      "title": "Deploy & Manage Microsoft 365 Tenants",
+      "description": "Create and configure tenants, manage domains, users, groups, roles, licensing, and monitor service health",
+      "icon": "Cloud"
+    },
+    {
+      "id": "identity-access",
+      "title": "Microsoft Entra Identity & Access",
+      "description": "Implement directory synchronization, authentication methods, conditional access, MFA, and identity protection",
+      "icon": "Key"
+    },
+    {
+      "id": "security-threats",
+      "title": "Security & Threat Management",
+      "description": "Manage security with Microsoft Defender XDR including Defender for Office 365, Endpoint, and Cloud Apps",
+      "icon": "Shield"
+    },
+    {
+      "id": "compliance",
+      "title": "Compliance with Microsoft Purview",
+      "description": "Implement information protection, data lifecycle management, sensitivity labels, and data loss prevention",
+      "icon": "Lock"
+    }
+  ],
+  "modules": [
+    {
+      "id": "tenant-deployment",
+      "title": "Deploy and Manage a Microsoft 365 Tenant",
+      "description": "Implement and manage tenants, users, groups, roles, and licensing",
+      "icon": "Cloud",
+      "duration": "8 hours",
+      "topics": [
+        "Creating and configuring a Microsoft 365 tenant",
+        "Implementing and managing domains",
+        "Configuring org settings: security, privacy, and organizational profile",
+        "Monitoring service health and configuring notifications",
+        "Network connectivity insights",
+        "Managing software updates via the admin center",
+        "Creating and managing users, contacts, and groups",
+        "Managing Microsoft 365 licenses and group-based licensing",
+        "Bulk user management with PowerShell",
+        "Implementing roles in Microsoft 365 and Microsoft Entra",
+        "Managing role groups across Defender XDR, Purview, and workloads",
+        "Delegation with administrative units and PIM"
+      ]
+    },
+    {
+      "id": "identity-access-management",
+      "title": "Implement and Manage Microsoft Entra Identity and Access",
+      "description": "Configure identity synchronization, authentication, and secure access",
+      "icon": "Key",
+      "duration": "8 hours",
+      "topics": [
+        "Preparing for identity synchronization with IdFix",
+        "Implementing Microsoft Entra Connect Sync and Cloud Sync",
+        "Monitoring synchronization with Microsoft Entra Connect Health",
+        "Troubleshooting synchronization issues",
+        "Implementing authentication methods and SSPR",
+        "Microsoft Entra Password Protection",
+        "Planning and implementing identity protection",
+        "Microsoft Entra ID Protection",
+        "Conditional Access policies and MFA",
+        "Investigating and resolving authentication issues"
+      ]
+    },
+    {
+      "id": "security-defender-xdr",
+      "title": "Manage Security and Threats with Microsoft Defender XDR",
+      "description": "Implement threat protection across email, endpoints, and cloud apps",
+      "icon": "Shield",
+      "duration": "10 hours",
+      "topics": [
+        "Exposure Management and Microsoft Secure Score",
+        "Reviewing and responding to incidents, alerts, and guided hunting",
+        "Microsoft Defender XDR reports and Threat Intelligence",
+        "Implementing threat policies in Defender for Office 365",
+        "Configuring alert policies and investigating email threats",
+        "Managing attack simulations and training campaigns",
+        "Onboarding devices to Defender for Endpoint",
+        "Configuring endpoint settings and vulnerability management",
+        "Configuring Microsoft Defender for Cloud Apps",
+        "Cloud App Discovery and app connector configuration",
+        "Managing restricted entities and blocked users"
+      ]
+    },
+    {
+      "id": "compliance-purview",
+      "title": "Manage Compliance with Microsoft Purview",
+      "description": "Implement information protection, data lifecycle management, and DLP",
+      "icon": "Lock",
+      "duration": "6 hours",
+      "topics": [
+        "Implementing sensitive information types with keywords and regex",
+        "Configuring retention labels, policies, and retention policies",
+        "Implementing sensitivity labels and label policies",
+        "Monitoring label usage with Content Explorer and Activity Explorer",
+        "Configuring DLP policies for Exchange, SharePoint, OneDrive, and Teams",
+        "Configuring Endpoint DLP",
+        "Reviewing and responding to DLP alerts, events, and reports"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "tenant-config-lab",
+      "title": "Tenant Configuration & User Management",
+      "description": "Configure a Microsoft 365 tenant, manage domains, users, groups, roles, and licensing with PowerShell",
+      "duration": "3 hours",
+      "icon": "Cloud"
+    },
+    {
+      "id": "identity-sync-lab",
+      "title": "Identity Synchronization & Conditional Access",
+      "description": "Set up Microsoft Entra Connect, configure conditional access policies, and implement MFA",
+      "duration": "3 hours",
+      "icon": "Key"
+    },
+    {
+      "id": "defender-lab",
+      "title": "Microsoft Defender XDR Configuration",
+      "description": "Configure Defender for Office 365 threat policies, onboard endpoints, and set up Cloud Apps",
+      "duration": "3 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "purview-compliance-lab",
+      "title": "Microsoft Purview Compliance",
+      "description": "Configure sensitivity labels, retention policies, and DLP policies across Microsoft 365 workloads",
+      "duration": "3 hours",
+      "icon": "Lock"
+    }
+  ],
+  "prerequisites": [
+    "Functional experience with all Microsoft 365 workloads",
+    "Experience with Microsoft Entra ID administration",
+    "Working knowledge of networking and Active Directory",
+    "PowerShell experience required",
+    "One associate-level Microsoft 365 certification recommended"
+  ],
+  "targetAudience": [
+    "Microsoft 365 administrators",
+    "IT administrators managing enterprise M365 environments",
+    "Professionals pursuing MS-102 certification",
+    "System administrators transitioning to cloud administration"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with extensive experience in Microsoft 365 enterprise deployments and administration. Has managed Microsoft 365 environments for organizations with thousands of users across hybrid and cloud-only scenarios.",
+    "experience": "8+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Administrator Expert",
+      "Microsoft Certified: Identity and Access Administrator Associate",
+      "MS-102",
+      "SC-300"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Certified: Administrator Expert",
+    "examCode": "MS-102",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-05-05T09:00:00Z"
+  },
+  "featured": false,
+  "icon": "Settings",
+  "createdAt": "2025-02-18T00:00:00Z",
+  "updatedAt": "2025-02-18T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Managing Microsoft 365 at enterprise scale is where strategy meets execution. I've helped organizations of all sizes deploy, secure, and optimize their M365 environments, from initial tenant setup through advanced Defender configurations. This course distills that hands-on experience into the practical skills every M365 administrator needs."
+  }
+}
