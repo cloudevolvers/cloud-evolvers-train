@@ -1,0 +1,210 @@
+{
+  "id": "microsoft-365-administrator-nl",
+  "slug": "microsoft-365-administrator",
+  "title": "Microsoft 365 Administrator",
+  "subtitle": "Enterprise Microsoft 365 Administratie Expert",
+  "description": "Implementeer, beheer en beveilig Microsoft 365-tenants inclusief identiteit, beveiliging, compliance en dreigingsbeheer",
+  "overview": "Deze intensieve 4-daagse cursus bereidt je voor op de MS-102 certificering door alle vier examendomeinen te behandelen: tenantimplementatie en -beheer, Microsoft Entra identiteit en toegang, beveiliging en dreigingsbeheer met Microsoft Defender XDR, en compliancebeheer met Microsoft Purview. Je krijgt praktijkervaring met het end-to-end beheren van enterprise Microsoft 365-omgevingen.",
+  "category": "Microsoft 365",
+  "subcategory": "Administratie",
+  "difficulty": "Gevorderd",
+  "tags": [
+    "Microsoft 365",
+    "Administratie",
+    "Microsoft Entra",
+    "Microsoft Defender",
+    "Microsoft Purview",
+    "Identiteit",
+    "Beveiliging",
+    "MS-102"
+  ],
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "price": {
+    "amount": 1795,
+    "currency": "EUR"
+  },
+  "learningObjectives": [
+    {
+      "id": "tenant-management",
+      "title": "Microsoft 365 Tenants Implementeren & Beheren",
+      "description": "Maak en configureer tenants, beheer domeinen, gebruikers, groepen, rollen, licenties en monitor servicestatus",
+      "icon": "Cloud"
+    },
+    {
+      "id": "identity-access",
+      "title": "Microsoft Entra Identiteit & Toegang",
+      "description": "Implementeer directorysynchronisatie, authenticatiemethoden, voorwaardelijke toegang, MFA en identiteitsbescherming",
+      "icon": "Key"
+    },
+    {
+      "id": "security-threats",
+      "title": "Beveiliging & Dreigingsbeheer",
+      "description": "Beheer beveiliging met Microsoft Defender XDR inclusief Defender for Office 365, Endpoint en Cloud Apps",
+      "icon": "Shield"
+    },
+    {
+      "id": "compliance",
+      "title": "Compliance met Microsoft Purview",
+      "description": "Implementeer informatiebescherming, gegevenslevenscyclusbeheer, gevoeligheidslabels en preventie van gegevensverlies",
+      "icon": "Lock"
+    }
+  ],
+  "modules": [
+    {
+      "id": "tenant-deployment",
+      "title": "Microsoft 365 Tenant Implementeren en Beheren",
+      "description": "Implementeer en beheer tenants, gebruikers, groepen, rollen en licenties",
+      "icon": "Cloud",
+      "duration": "8 uur",
+      "topics": [
+        "Een Microsoft 365-tenant maken en configureren",
+        "Domeinen implementeren en beheren",
+        "Organisatie-instellingen configureren: beveiliging, privacy en profiel",
+        "Servicestatus monitoren en meldingen configureren",
+        "Netwerkconnectiviteitsinzichten",
+        "Software-updates beheren via het beheercentrum",
+        "Gebruikers, contacten en groepen maken en beheren",
+        "Microsoft 365-licenties en groepslicenties beheren",
+        "Bulkgebruikersbeheer met PowerShell",
+        "Rollen implementeren in Microsoft 365 en Microsoft Entra",
+        "Rolgroepen beheren in Defender XDR, Purview en workloads",
+        "Delegatie met beheereenheden en PIM"
+      ]
+    },
+    {
+      "id": "identity-access-management",
+      "title": "Microsoft Entra Identiteit en Toegang Implementeren",
+      "description": "Identiteitssynchronisatie, authenticatie en veilige toegang configureren",
+      "icon": "Key",
+      "duration": "8 uur",
+      "topics": [
+        "Voorbereiding op identiteitssynchronisatie met IdFix",
+        "Microsoft Entra Connect Sync en Cloud Sync implementeren",
+        "Synchronisatie monitoren met Microsoft Entra Connect Health",
+        "Synchronisatieproblemen oplossen",
+        "Authenticatiemethoden en SSPR implementeren",
+        "Microsoft Entra Wachtwoordbeveiliging",
+        "Identiteitsbescherming plannen en implementeren",
+        "Microsoft Entra ID Protection",
+        "Beleid voor voorwaardelijke toegang en MFA",
+        "Authenticatieproblemen onderzoeken en oplossen"
+      ]
+    },
+    {
+      "id": "security-defender-xdr",
+      "title": "Beveiliging en Dreigingen Beheren met Microsoft Defender XDR",
+      "description": "Dreigingsbescherming implementeren voor e-mail, endpoints en cloud-apps",
+      "icon": "Shield",
+      "duration": "10 uur",
+      "topics": [
+        "Exposure Management en Microsoft Secure Score",
+        "Incidenten, waarschuwingen en begeleide hunting beoordelen",
+        "Microsoft Defender XDR-rapporten en Threat Intelligence",
+        "Dreigingsbeleid implementeren in Defender for Office 365",
+        "Waarschuwingsbeleid configureren en e-maildreigingen onderzoeken",
+        "Aanvalssimulaties en trainingscampagnes beheren",
+        "Apparaten onboarden naar Defender for Endpoint",
+        "Endpoint-instellingen en kwetsbaarheidsbeheer configureren",
+        "Microsoft Defender for Cloud Apps configureren",
+        "Cloud App Discovery en app-connectorconfiguratie",
+        "Beperkte entiteiten en geblokkeerde gebruikers beheren"
+      ]
+    },
+    {
+      "id": "compliance-purview",
+      "title": "Compliance Beheren met Microsoft Purview",
+      "description": "Informatiebescherming, gegevenslevenscyclusbeheer en DLP implementeren",
+      "icon": "Lock",
+      "duration": "6 uur",
+      "topics": [
+        "Gevoelige informatietypen implementeren met trefwoorden en regex",
+        "Retentielabels, beleid en retentiebeleid configureren",
+        "Gevoeligheidslabels en labelbeleid implementeren",
+        "Labelgebruik monitoren met Content Explorer en Activity Explorer",
+        "DLP-beleid configureren voor Exchange, SharePoint, OneDrive en Teams",
+        "Endpoint DLP configureren",
+        "DLP-waarschuwingen, gebeurtenissen en rapporten beoordelen"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "tenant-config-lab",
+      "title": "Tenantconfiguratie & Gebruikersbeheer",
+      "description": "Configureer een Microsoft 365-tenant, beheer domeinen, gebruikers, groepen, rollen en licenties met PowerShell",
+      "duration": "3 uur",
+      "icon": "Cloud"
+    },
+    {
+      "id": "identity-sync-lab",
+      "title": "Identiteitssynchronisatie & Voorwaardelijke Toegang",
+      "description": "Stel Microsoft Entra Connect in, configureer beleid voor voorwaardelijke toegang en implementeer MFA",
+      "duration": "3 uur",
+      "icon": "Key"
+    },
+    {
+      "id": "defender-lab",
+      "title": "Microsoft Defender XDR Configuratie",
+      "description": "Configureer Defender for Office 365 dreigingsbeleid, onboard endpoints en stel Cloud Apps in",
+      "duration": "3 uur",
+      "icon": "Shield"
+    },
+    {
+      "id": "purview-compliance-lab",
+      "title": "Microsoft Purview Compliance",
+      "description": "Configureer gevoeligheidslabels, retentiebeleid en DLP-beleid voor Microsoft 365-workloads",
+      "duration": "3 uur",
+      "icon": "Lock"
+    }
+  ],
+  "prerequisites": [
+    "Functionele ervaring met alle Microsoft 365-workloads",
+    "Ervaring met Microsoft Entra ID-administratie",
+    "Kennis van netwerken en Active Directory",
+    "PowerShell-ervaring vereist",
+    "Een associate-niveau Microsoft 365-certificering aanbevolen"
+  ],
+  "targetAudience": [
+    "Microsoft 365 beheerders",
+    "IT-beheerders die enterprise M365-omgevingen beheren",
+    "Professionals die de MS-102 certificering nastreven",
+    "Systeembeheerders die overstappen naar cloudadministratie"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yaïr Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer met uitgebreide ervaring in Microsoft 365 enterprise-implementaties en administratie. Heeft Microsoft 365-omgevingen beheerd voor organisaties met duizenden gebruikers in hybride en cloud-only scenario's.",
+    "experience": "8+ jaar",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Administrator Expert",
+      "Microsoft Certified: Identity and Access Administrator Associate",
+      "MS-102",
+      "SC-300"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft 365 Certified: Administrator Expert",
+    "examCode": "MS-102",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 14,
+  "schedule": {
+    "available": true,
+    "nextSession": "2025-05-05T09:00:00Z"
+  },
+  "featured": false,
+  "icon": "Settings",
+  "createdAt": "2025-02-18T00:00:00Z",
+  "updatedAt": "2025-02-18T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yaïr Knijn",
+    "story": "Microsoft 365 beheren op enterprise-schaal is waar strategie en uitvoering samenkomen. Ik heb organisaties van alle groottes geholpen hun M365-omgevingen te implementeren, beveiligen en optimaliseren, van initiële tenantconfiguratie tot geavanceerde Defender-configuraties. Deze cursus bundelt die praktijkervaring tot de vaardigheden die elke M365-beheerder nodig heeft."
+  }
+}
