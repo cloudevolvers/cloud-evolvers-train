@@ -220,7 +220,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure AI Engineer Associate",
+    "name": "Microsoft Certified: Azure AI Engineer Associate",
     "examCode": "AI-102",
     "provider": "Microsoft"
   },

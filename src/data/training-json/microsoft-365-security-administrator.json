@@ -5,7 +5,7 @@
   "subtitle": "Advanced Security and Compliance",
   "description": "Secure Microsoft 365 environments with advanced security controls and compliance",
   "overview": "This advanced 3-day course covers comprehensive Microsoft 365 security administration. Learn to implement advanced threat protection, configure security and compliance centers, manage information protection policies, and respond to security incidents effectively.",
-  "category": "Security",
+  "category": "Security & Compliance",
   "subcategory": "Microsoft 365 Security",
   "difficulty": "Advanced",
   "duration": {
@@ -71,7 +71,7 @@
   ],
   "certification": {
     "available": true,
-    "name": "Microsoft 365 Security Administrator Associate",
+    "name": "Microsoft Certified: Microsoft 365 Security Administrator Associate",
     "examCode": "MS-500",
     "provider": "Microsoft"
   },

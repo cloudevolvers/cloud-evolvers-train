@@ -4,7 +4,7 @@
   "title": "Azure Virtual Desktop Specialty (AZ-140)",
   "description": "Beheers Azure Virtual Desktop voor moderne thuiswerk oplossingen",
   "content": "Beheers Azure Virtual Desktop (AVD) voor enterprise thuiswerk oplossingen. Leer plannen, implementeren, beheren en optimaliseren van virtuele desktop infrastructuur voor moderne hybride werkomgevingen.",
-  "category": "Infrastructuur",
+  "category": "Azure",
   "subcategory": "Virtual Desktop",
   "difficulty": "Gevorderd",
   "duration": {
@@ -90,7 +90,7 @@
   "featured": false,
   "certification": {
     "available": true,
-    "name": "AZ-140",
+    "name": "Microsoft Certified: Azure Virtual Desktop Specialty",
     "examCode": "AZ-140",
     "provider": "Microsoft"
   },

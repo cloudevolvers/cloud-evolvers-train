@@ -5,7 +5,7 @@
   "subtitle": "Ontwerp en Implementeer DevOps Praktijken",
   "description": "Ontwerp en implementeer DevOps praktijken voor continue integratie en levering",
   "overview": "Geavanceerde DevOps training over CI/CD pipeline ontwerp, source control strategieën, dependency management, applicatie infrastructuur en continue feedback. Beheers enterprise DevOps praktijken met Azure.",
-  "category": "Developer Tools",
+  "category": "Azure",
   "subcategory": "DevOps",
   "difficulty": "Gevorderd",
   "tags": [
@@ -181,7 +181,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure DevOps Engineer Expert",
+    "name": "Microsoft Certified: DevOps Engineer Expert",
     "examCode": "AZ-400",
     "provider": "Microsoft"
   },

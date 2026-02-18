@@ -5,7 +5,7 @@
   "subtitle": "Investigate and Respond to Threats with Microsoft Security Solutions",
   "description": "Master threat detection, investigation, and response using Microsoft Sentinel, Defender XDR, and Defender for Cloud",
   "overview": "This intensive course prepares you to work as a Security Operations Center (SOC) analyst using Microsoft's comprehensive security platform. You'll learn to investigate and respond to threats using Microsoft Sentinel SIEM/SOAR, Microsoft Defender XDR, and Microsoft Defender for Cloud. Master the skills to protect your organization against modern cyber threats.",
-  "category": "Security",
+  "category": "Security & Compliance",
   "subcategory": "Security Operations",
   "difficulty": "Advanced",
   "tags": [
@@ -220,7 +220,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Microsoft Security Operations Analyst",
+    "name": "Microsoft Certified: Security Operations Analyst Associate",
     "examCode": "SC-200",
     "provider": "Microsoft"
   },

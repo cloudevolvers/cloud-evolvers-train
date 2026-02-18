@@ -5,7 +5,7 @@
   "subtitle": "Ontwerp Zero Trust Security Architectuur over Microsoft Platforms",
   "description": "Ontwerp uitgebreide cybersecurity strategieën met Zero Trust principes over Microsoft security, compliance en identity oplossingen",
   "overview": "Deze expert-level cursus bereidt je voor om cybersecurity strategie en architectuur te ontwerpen met Microsoft's uitgebreide security portfolio. Je leert business requirements te vertalen naar Zero Trust security oplossingen, security te ontwerpen voor infrastructuur, applicaties, data en identiteit. Deze cursus is ideaal voor senior security professionals die klaar zijn voor architectuurrollen.",
-  "category": "Security",
+  "category": "Security & Compliance",
   "subcategory": "Security Architecture",
   "difficulty": "Expert",
   "tags": [
@@ -222,7 +222,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Microsoft Cybersecurity Architect",
+    "name": "Microsoft Certified: Cybersecurity Architect Expert",
     "examCode": "SC-100",
     "provider": "Microsoft"
   },

@@ -5,7 +5,7 @@
   "subtitle": "Foundation in Azure Security",
   "description": "Master the fundamental security concepts and services in Microsoft Azure",
   "overview": "This comprehensive 2-day course covers the essential security concepts and services in Microsoft Azure. Learn to implement identity management, network security, data protection, and monitoring solutions to secure your Azure environment.",
-  "category": "Security",
+  "category": "Security & Compliance",
   "subcategory": "Azure Security",
   "difficulty": "Beginner",
   "duration": {
@@ -70,10 +70,9 @@
     "Compliance and audit professionals"
   ],
   "certification": {
-    "available": true,
-    "name": "Microsoft Certified: Azure Security Engineer Associate",
-    "examCode": "AZ-500",
-    "provider": "Microsoft"
+    "available": false,
+    "name": "Not Applicable",
+    "provider": "Cloud Evolvers"
   },
   "tags": [
     "Azure",

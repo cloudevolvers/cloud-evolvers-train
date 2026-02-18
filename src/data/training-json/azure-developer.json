@@ -5,7 +5,7 @@
   "subtitle": "Develop Cloud Solutions with Azure",
   "description": "Develop cloud solutions with Azure services and tools",
   "overview": "Comprehensive developer training focusing on building cloud applications and services on Microsoft Azure. Learn to design, build, test, and maintain cloud applications and services, utilizing Azure services for compute, storage, databases, and security.",
-  "category": "Developer Tools",
+  "category": "Azure",
   "subcategory": "Azure Development",
   "difficulty": "Intermediate",
   "tags": [
@@ -190,7 +190,7 @@
   },
   "certification": {
     "available": true,
-    "name": "Azure Developer Associate",
+    "name": "Microsoft Certified: Azure Developer Associate",
     "examCode": "AZ-204",
     "provider": "Microsoft"
   },

@@ -4,7 +4,7 @@
   "title": "Azure Virtual Desktop Specialty (AZ-140)",
   "description": "Master Azure Virtual Desktop for modern remote work solutions",
   "content": "Master Azure Virtual Desktop (AVD) for enterprise remote work solutions. Learn to plan, deploy, manage, and optimize virtual desktop infrastructure for modern hybrid work environments.",
-  "category": "Infrastructure",
+  "category": "Azure",
   "subcategory": "Virtual Desktop",
   "difficulty": "Advanced",
   "duration": {
@@ -90,7 +90,7 @@
   "featured": false,
   "certification": {
     "available": true,
-    "name": "AZ-140",
+    "name": "Microsoft Certified: Azure Virtual Desktop Specialty",
     "examCode": "AZ-140",
     "provider": "Microsoft"
   },
