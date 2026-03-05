@@ -20,6 +20,12 @@ vars = { VITE_ENVIRONMENT = "preview", VITE_SITE_URL = "https://test.cloudevolve
 [env.production]
 vars = { VITE_ENVIRONMENT = "production", VITE_SITE_URL = "https://cloudevolvers.com" }
 
+# D1 Database bindings
+[[d1_databases]]
+binding = "PRICING_DB"
+database_name = "cloud-evolvers-pricing"
+database_id = "c07b171f-987f-4d91-9126-64663b107611"
+
 # Custom domains configuration
 # Production: cloudevolvers.com, www.cloudevolvers.com
 # Preview/Test: test.cloudevolvers.com (branch deployments)
