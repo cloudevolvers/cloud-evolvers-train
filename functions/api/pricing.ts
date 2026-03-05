@@ -16,145 +16,397 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, x-api-key',
 };
 
-// Training course pricing data
+// Training course pricing data - single source of truth
+// All prices in EUR, excluding 21% BTW
+// Fundamentals (1-2 day): €550 | Associate/Specialty (3-4 day): €1,795 | Expert (4-5 day): €2,195
+// Corporate rate: ~€300 discount (min 5 participants)
 const trainingPricing = {
-  // Azure Fundamentals
+  // ═══════════════════════════════════════
+  // AZURE FUNDAMENTALS
+  // ═══════════════════════════════════════
   'az-900': {
     code: 'AZ-900',
     name: 'Microsoft Azure Fundamentals',
-    duration: { days: 1, hours: 8 },
+    slug: 'azure-fundamentals',
+    duration: { days: 2, hours: 16 },
     pricing: {
-      individual: { amount: 495, currency: 'EUR' },
-      corporate: { amount: 395, currency: 'EUR', minParticipants: 5 },
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
       custom: true,
     },
-    includes: [
-      'Official Microsoft courseware',
-      'Hands-on labs',
-      'Practice exam voucher',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-    ],
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'Practice exam voucher', 'Certification exam voucher (optional)', 'MCT-led instruction'],
   },
-  // Azure Administrator
+  'ai-900': {
+    code: 'AI-900',
+    name: 'Azure AI Fundamentals',
+    slug: 'azure-ai-fundamentals',
+    duration: { days: 2, hours: 16 },
+    pricing: {
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'Practice exam voucher', 'MCT-led instruction'],
+  },
+  'az-security-fundamentals': {
+    code: '',
+    name: 'Azure Security Fundamentals',
+    slug: 'azure-security-fundamentals',
+    duration: { days: 2, hours: 16 },
+    pricing: {
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Security hands-on labs', 'Practice exam voucher', 'MCT-led instruction'],
+  },
+  'ms-900': {
+    code: 'MS-900',
+    name: 'Microsoft 365 Fundamentals',
+    slug: 'microsoft-365-fundamentals',
+    duration: { days: 1, hours: 8 },
+    pricing: {
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'Practice exam voucher', 'MCT-led instruction'],
+  },
+  'pl-900': {
+    code: 'PL-900',
+    name: 'Microsoft Power Platform Fundamentals',
+    slug: 'power-platform-fundamentals',
+    duration: { days: 1, hours: 8 },
+    pricing: {
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'Practice exam voucher', 'MCT-led instruction'],
+  },
+  'sc-900': {
+    code: 'SC-900',
+    name: 'Security, Compliance & Identity Fundamentals',
+    slug: 'security-compliance-identity-fundamentals',
+    duration: { days: 2, hours: 16 },
+    pricing: {
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'Practice exam voucher', 'MCT-led instruction'],
+  },
+  'copilot-fundamentals': {
+    code: '',
+    name: 'Microsoft 365 Copilot & Agent Administration Fundamentals',
+    slug: 'copilot-agent-administration-fundamentals',
+    duration: { days: 1, hours: 8 },
+    pricing: {
+      individual: { amount: 550, currency: 'EUR' },
+      corporate: { amount: 450, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'MCT-led instruction'],
+  },
+
+  // ═══════════════════════════════════════
+  // AZURE ASSOCIATE / SPECIALTY
+  // ═══════════════════════════════════════
   'az-104': {
     code: 'AZ-104',
     name: 'Microsoft Azure Administrator',
+    slug: 'azure-administrator',
     duration: { days: 4, hours: 32 },
     pricing: {
-      individual: { amount: 1995, currency: 'EUR' },
-      corporate: { amount: 1695, currency: 'EUR', minParticipants: 5 },
+      individual: { amount: 1795, currency: 'EUR' },
+      corporate: { amount: 1495, currency: 'EUR', minParticipants: 5 },
       custom: true,
     },
-    includes: [
-      'Official Microsoft courseware',
-      'Hands-on labs with Azure sandbox',
-      'Practice exam access',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-      'Post-training support (30 days)',
-    ],
+    includes: ['Official Microsoft courseware', 'Hands-on labs with Azure sandbox', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
   },
-  // Azure Developer
-  'az-204': {
-    code: 'AZ-204',
-    name: 'Developing Solutions for Microsoft Azure',
-    duration: { days: 5, hours: 40 },
-    pricing: {
-      individual: { amount: 2495, currency: 'EUR' },
-      corporate: { amount: 2095, currency: 'EUR', minParticipants: 5 },
-      custom: true,
-    },
-    includes: [
-      'Official Microsoft courseware',
-      'Hands-on development labs',
-      'Azure DevOps access',
-      'Practice exam access',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-      'Post-training support (30 days)',
-    ],
-  },
-  // Azure Solutions Architect
-  'az-305': {
-    code: 'AZ-305',
-    name: 'Designing Microsoft Azure Infrastructure Solutions',
+  'az-104-mastery': {
+    code: 'AZ-104',
+    name: 'Azure Administrator Mastery',
+    slug: 'azure-administrator-mastery',
     duration: { days: 4, hours: 32 },
     pricing: {
-      individual: { amount: 2295, currency: 'EUR' },
-      corporate: { amount: 1895, currency: 'EUR', minParticipants: 5 },
+      individual: { amount: 1495, currency: 'EUR' },
+      corporate: { amount: 1295, currency: 'EUR', minParticipants: 5 },
       custom: true,
     },
-    includes: [
-      'Official Microsoft courseware',
-      'Architecture design workshops',
-      'Real-world case studies',
-      'Practice exam access',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-      'Post-training support (30 days)',
-    ],
+    includes: ['Advanced hands-on labs', 'Real-world scenarios', 'MCT-led instruction', 'Post-training support (30 days)'],
   },
-  // Azure DevOps Engineer
-  'az-400': {
-    code: 'AZ-400',
-    name: 'Designing and Implementing Microsoft DevOps Solutions',
-    duration: { days: 5, hours: 40 },
-    pricing: {
-      individual: { amount: 2495, currency: 'EUR' },
-      corporate: { amount: 2095, currency: 'EUR', minParticipants: 5 },
-      custom: true,
-    },
-    includes: [
-      'Official Microsoft courseware',
-      'CI/CD pipeline labs',
-      'Azure DevOps organization access',
-      'GitHub Actions labs',
-      'Practice exam access',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-      'Post-training support (30 days)',
-    ],
-  },
-  // Azure Security Engineer
   'az-500': {
     code: 'AZ-500',
     name: 'Microsoft Azure Security Technologies',
+    slug: 'azure-security-engineer',
     duration: { days: 4, hours: 32 },
     pricing: {
-      individual: { amount: 2295, currency: 'EUR' },
-      corporate: { amount: 1895, currency: 'EUR', minParticipants: 5 },
+      individual: { amount: 1795, currency: 'EUR' },
+      corporate: { amount: 1495, currency: 'EUR', minParticipants: 5 },
       custom: true,
     },
-    includes: [
-      'Official Microsoft courseware',
-      'Security labs and scenarios',
-      'Microsoft Defender for Cloud access',
-      'Practice exam access',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-      'Post-training support (30 days)',
-    ],
+    includes: ['Official Microsoft courseware', 'Security labs and scenarios', 'Microsoft Defender for Cloud access', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
   },
-  // AI Engineer
   'ai-102': {
     code: 'AI-102',
     name: 'Designing and Implementing a Microsoft Azure AI Solution',
+    slug: 'azure-ai-engineer',
     duration: { days: 4, hours: 32 },
     pricing: {
-      individual: { amount: 2295, currency: 'EUR' },
+      individual: { amount: 1950, currency: 'EUR' },
+      corporate: { amount: 1650, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Azure AI Services labs', 'OpenAI integration workshops', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-700': {
+    code: 'AZ-700',
+    name: 'Azure Network Engineer Associate',
+    slug: 'azure-network-engineer',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1295, currency: 'EUR' },
+      corporate: { amount: 1095, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Networking labs', 'Practice exam access', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-140': {
+    code: 'AZ-140',
+    name: 'Azure Virtual Desktop Specialty',
+    slug: 'azure-virtual-desktop',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1595, currency: 'EUR' },
+      corporate: { amount: 1395, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'AVD hands-on labs', 'Practice exam access', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-220': {
+    code: 'AZ-220',
+    name: 'Azure IoT Developer Specialty',
+    slug: 'azure-iot-developer',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 1895, currency: 'EUR' },
+      corporate: { amount: 1595, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'IoT Hub labs', 'Practice exam access', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-stack-hub': {
+    code: '',
+    name: 'Azure Stack Hub Administration',
+    slug: 'azure-stack-hub',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1295, currency: 'EUR' },
+      corporate: { amount: 1095, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-support': {
+    code: '',
+    name: 'Azure Support Engineer Excellence',
+    slug: 'azure-support-engineer',
+    duration: { days: 2, hours: 16 },
+    pricing: {
+      individual: { amount: 895, currency: 'EUR' },
+      corporate: { amount: 750, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Troubleshooting labs', 'MCT-led instruction'],
+  },
+  'ai-bootcamp': {
+    code: '',
+    name: 'Azure AI Developer Bootcamp',
+    slug: 'azure-ai-developer-bootcamp',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1395, currency: 'EUR' },
+      corporate: { amount: 1195, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Azure AI Services labs', 'OpenAI integration workshops', 'Hands-on projects', 'MCT-led instruction'],
+  },
+
+  // ═══════════════════════════════════════
+  // AZURE EXPERT
+  // ═══════════════════════════════════════
+  'az-204': {
+    code: 'AZ-204',
+    name: 'Developing Solutions for Microsoft Azure',
+    slug: 'azure-developer',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 2195, currency: 'EUR' },
       corporate: { amount: 1895, currency: 'EUR', minParticipants: 5 },
       custom: true,
     },
-    includes: [
-      'Official Microsoft courseware',
-      'Azure AI Services labs',
-      'OpenAI integration workshops',
-      'Practice exam access',
-      'Certification exam voucher (optional)',
-      'MCT-led instruction',
-      'Post-training support (30 days)',
-    ],
+    includes: ['Official Microsoft courseware', 'Hands-on development labs', 'Azure DevOps access', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-305': {
+    code: 'AZ-305',
+    name: 'Designing Microsoft Azure Infrastructure Solutions',
+    slug: 'azure-solutions-architect',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 1795, currency: 'EUR' },
+      corporate: { amount: 1495, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Architecture design workshops', 'Real-world case studies', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'az-400': {
+    code: 'AZ-400',
+    name: 'Designing and Implementing Microsoft DevOps Solutions',
+    slug: 'azure-devops-engineer',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 1795, currency: 'EUR' },
+      corporate: { amount: 1495, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'CI/CD pipeline labs', 'Azure DevOps organization access', 'GitHub Actions labs', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'sc-100': {
+    code: 'SC-100',
+    name: 'Microsoft Cybersecurity Architect',
+    slug: 'cybersecurity-architect',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 2195, currency: 'EUR' },
+      corporate: { amount: 1895, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Security architecture labs', 'Practice exam access', 'Certification exam voucher (optional)', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+
+  // ═══════════════════════════════════════
+  // MICROSOFT 365
+  // ═══════════════════════════════════════
+  'ms-102': {
+    code: 'MS-102',
+    name: 'Microsoft 365 Administrator',
+    slug: 'microsoft-365-administrator',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 1795, currency: 'EUR' },
+      corporate: { amount: 1495, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'Practice exam access', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'ms-identity': {
+    code: '',
+    name: 'Microsoft 365 Identity & Access Administrator',
+    slug: 'microsoft-365-identity-access-administrator',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1195, currency: 'EUR' },
+      corporate: { amount: 995, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Identity labs', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'ms-security': {
+    code: '',
+    name: 'Microsoft 365 Security Administrator',
+    slug: 'microsoft-365-security-administrator',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1195, currency: 'EUR' },
+      corporate: { amount: 995, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Security labs', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'copilot-mastery': {
+    code: '',
+    name: 'Microsoft 365 Copilot Mastery',
+    slug: 'microsoft-365-copilot-mastery',
+    duration: { days: 1, hours: 8 },
+    pricing: {
+      individual: { amount: 595, currency: 'EUR' },
+      corporate: { amount: 495, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Copilot hands-on labs', 'Prompt engineering workshops', 'MCT-led instruction'],
+  },
+  'teams-admin': {
+    code: '',
+    name: 'Teams Advanced Administration',
+    slug: 'teams-advanced-administration',
+    duration: { days: 2, hours: 16 },
+    pricing: {
+      individual: { amount: 895, currency: 'EUR' },
+      corporate: { amount: 750, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Teams administration labs', 'MCT-led instruction'],
+  },
+
+  // ═══════════════════════════════════════
+  // SECURITY & COMPLIANCE
+  // ═══════════════════════════════════════
+  'sc-200': {
+    code: 'SC-200',
+    name: 'Microsoft Security Operations Analyst',
+    slug: 'security-operations-analyst',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 1895, currency: 'EUR' },
+      corporate: { amount: 1595, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Microsoft Sentinel labs', 'Practice exam access', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+
+  // ═══════════════════════════════════════
+  // POWER PLATFORM
+  // ═══════════════════════════════════════
+  'pl-automation': {
+    code: '',
+    name: 'Power Platform Automation Bootcamp',
+    slug: 'power-platform-automation',
+    duration: { days: 2, hours: 16 },
+    pricing: {
+      individual: { amount: 895, currency: 'EUR' },
+      corporate: { amount: 750, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Power Automate labs', 'Power Apps labs', 'MCT-led instruction'],
+  },
+
+  // ═══════════════════════════════════════
+  // WINDOWS SERVER
+  // ═══════════════════════════════════════
+  'ws-hybrid-admin': {
+    code: '',
+    name: 'Windows Server Hybrid Administrator',
+    slug: 'windows-server-hybrid-administrator',
+    duration: { days: 3, hours: 24 },
+    pricing: {
+      individual: { amount: 1095, currency: 'EUR' },
+      corporate: { amount: 895, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'MCT-led instruction', 'Post-training support (30 days)'],
+  },
+  'ws-hybrid-infra': {
+    code: '',
+    name: 'Windows Server Hybrid Infrastructure',
+    slug: 'windows-server-hybrid-infrastructure',
+    duration: { days: 4, hours: 32 },
+    pricing: {
+      individual: { amount: 1595, currency: 'EUR' },
+      corporate: { amount: 1395, currency: 'EUR', minParticipants: 5 },
+      custom: true,
+    },
+    includes: ['Official Microsoft courseware', 'Hands-on labs', 'MCT-led instruction', 'Post-training support (30 days)'],
   },
 };
 
@@ -269,7 +521,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
         services: servicePricing,
         currency: 'EUR',
         vatNote: 'All prices exclude 21% VAT',
-        lastUpdated: '2024-01-01',
+        lastUpdated: '2026-03-05',
         contact: {
           email: 'training@cloudevolvers.com',
           phone: '+31 6-34272027',

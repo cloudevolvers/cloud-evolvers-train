@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
-import { CheckCircle, Users, Calendar, ChatCircle, EnvelopeSimple, Phone, MapPin, ShareNetwork, Sparkle } from '@phosphor-icons/react';
+import { CheckCircle, Users, Calendar, ChatCircle, EnvelopeSimple, Phone, MapPin, ShareNetwork, Sparkle, Copy, Check } from '@phosphor-icons/react';
 import { useLanguage } from '@/hooks/use-language';
 import { useTranslation } from '@/hooks/use-translation';
 import TrainingConsultationForm from '@/components/TrainingConsultationForm';
@@ -12,6 +12,7 @@ export default function ContactPage() {
   const [searchParams] = useSearchParams();
   const [language] = useLanguage();
   const t = useTranslation();
+  const [phoneCopied, setPhoneCopied] = useState(false);
 
   // Animation Ref
   const formRef = useRef(null);
@@ -121,15 +122,28 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  <a href="tel:+31634272027" className="group flex items-center gap-4 p-3 rounded-xl hover:bg-muted/50 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/20 transition-colors">
+                  <div className="group flex items-center gap-4 p-3 rounded-xl hover:bg-muted/50 transition-all duration-300">
+                    <a href="tel:+31634272027" className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/20 transition-colors">
                       <Phone size={24} className="text-green-600 dark:text-green-400" weight="fill" />
-                    </div>
-                    <div>
+                    </a>
+                    <div className="flex-1 min-w-0">
                       <div className="text-sm text-muted-foreground">{contactT.callUs}</div>
-                      <div className="font-medium text-foreground group-hover:text-green-500 transition-colors">+31 6-34272027</div>
+                      <div className="flex items-center gap-2">
+                        <a href="tel:+31634272027" className="font-medium text-foreground group-hover:text-green-500 transition-colors">+31 6-34272027</a>
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText('+31 6-34272027');
+                            setPhoneCopied(true);
+                            setTimeout(() => setPhoneCopied(false), 2000);
+                          }}
+                          className="p-1 rounded-md hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+                          title={contactT.copyPhone || 'Copy phone number'}
+                        >
+                          {phoneCopied ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+                        </button>
+                      </div>
                     </div>
-                  </a>
+                  </div>
 
                   <div className="flex items-center gap-4 p-3">
                     <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">

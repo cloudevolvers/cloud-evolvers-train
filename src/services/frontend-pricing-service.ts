@@ -6,51 +6,112 @@
 // Current pricing data - can be updated dynamically
 const CURRENT_PRICES: Record<string, number> = {
   // Azure Fundamentals
-  'az-900-azure-fundamentals': 690,
-  'azure-fundamentals': 690,
-  
-  // Azure Administrator  
-  'az-104-azure-administrator': 1595,
-  'azure-administrator': 1595,
-  
+  'az-900-azure-fundamentals': 550,
+  'azure-fundamentals': 550,
+
+  // Azure Administrator
+  'az-104-azure-administrator': 1795,
+  'azure-administrator': 1795,
+
   // Azure Developer
-  'az-204-azure-developer': 690,
-  'azure-developer': 690,
-  
+  'az-204-azure-developer': 2195,
+  'azure-developer': 2195,
+
   // Azure Solutions Architect
-  'az-305-azure-architect': 690,
-  'azure-solutions-architect': 690,
-  
+  'az-305-azure-architect': 1795,
+  'azure-solutions-architect': 1795,
+
   // Azure DevOps Engineer
-  'az-400-devops-engineer': 690,
-  'azure-devops-engineer': 690,
-  
+  'az-400-devops-engineer': 1795,
+  'azure-devops-engineer': 1795,
+
   // Azure Security Engineer
-  'az-500-security-engineer': 690,
-  'azure-security-engineer': 690,
-  
+  'az-500-security-engineer': 1795,
+  'azure-security-engineer': 1795,
+
   // Azure AI Fundamentals
-  'ai-900-ai-fundamentals': 895,
-  'azure-ai-fundamentals': 895,
-  
-  // Other courses...
-  'dp-300-database-administrator': 690,
-  'dp-203-data-engineer': 690,
-  'dp-100-data-scientist': 690,
-  'dp-900-data-fundamentals': 690,
-  'ai-102-ai-engineer': 690,
-  'pl-900-power-platform-fundamentals': 690,
-  'pl-100-app-maker': 690,
-  'pl-200-functional-consultant': 690,
-  'pl-400-developer': 690,
-  'ms-900-microsoft-365-fundamentals': 690,
-  'ms-102-microsoft-365-administrator': 690,
-  'ms-700-teams-administrator': 690,
-  'sc-300-security-administrator': 690,
-  'sc-400-information-protection-administrator': 690,
-  'sc-200-security-operations-analyst': 690,
-  'dp-420-cosmos-db-developer': 690,
-  'dp-600-fabric-analytics-engineer': 690
+  'ai-900-ai-fundamentals': 550,
+  'azure-ai-fundamentals': 550,
+
+  // Azure Security Fundamentals
+  'azure-security-fundamentals': 550,
+
+  // Azure Network Engineer
+  'az-700-network-engineer': 1295,
+  'azure-network-engineer': 1295,
+
+  // Azure Virtual Desktop
+  'az-140-virtual-desktop': 1595,
+  'azure-virtual-desktop': 1595,
+
+  // Azure IoT Developer
+  'az-220-iot-developer': 1895,
+  'azure-iot-developer': 1895,
+
+  // Azure Stack Hub
+  'azure-stack-hub': 1295,
+
+  // Azure Support Engineer
+  'azure-support-engineer': 895,
+
+  // Azure AI Developer Bootcamp
+  'azure-ai-developer-bootcamp': 1395,
+
+  // Azure Administrator Mastery
+  'azure-administrator-mastery': 1495,
+
+  // AI Engineer
+  'ai-102-ai-engineer': 1950,
+
+  // Cybersecurity Architect
+  'sc-100-cybersecurity-architect': 2195,
+  'cybersecurity-architect': 2195,
+
+  // Microsoft 365
+  'ms-900-microsoft-365-fundamentals': 550,
+  'microsoft-365-fundamentals': 550,
+  'ms-102-microsoft-365-administrator': 1795,
+  'microsoft-365-administrator': 1795,
+  'microsoft-365-identity-access-administrator': 1195,
+  'microsoft-365-security-administrator': 1195,
+  'microsoft-365-copilot-mastery': 595,
+  'copilot-agent-administration-fundamentals': 550,
+
+  // Teams
+  'ms-700-teams-administrator': 895,
+  'teams-advanced-administration': 895,
+
+  // Security & Compliance
+  'sc-900-security-compliance-identity-fundamentals': 550,
+  'security-compliance-identity-fundamentals': 550,
+  'sc-200-security-operations-analyst': 1895,
+  'security-operations-analyst': 1895,
+
+  // Power Platform
+  'pl-900-power-platform-fundamentals': 550,
+  'power-platform-fundamentals': 550,
+  'power-platform-automation': 895,
+
+  // Windows Server
+  'windows-server-hybrid-administrator': 1095,
+  'windows-server-hybrid-infrastructure': 1595,
+
+  // Data Platform
+  'dp-300-database-administrator': 1795,
+  'dp-203-data-engineer': 1795,
+  'dp-100-data-scientist': 1795,
+  'dp-900-data-fundamentals': 550,
+  'dp-420-cosmos-db-developer': 1795,
+  'dp-600-fabric-analytics-engineer': 1795,
+
+  // Power Platform advanced
+  'pl-100-app-maker': 1795,
+  'pl-200-functional-consultant': 1795,
+  'pl-400-developer': 1795,
+
+  // Security advanced
+  'sc-300-security-administrator': 1795,
+  'sc-400-information-protection-administrator': 1795
 };
 
 // Current promotion - can be updated dynamically
@@ -62,13 +123,7 @@ interface Promotion {
   courses?: string[]; // If specified, only applies to these courses
 }
 
-const CURRENT_PROMOTION: Promotion | null = {
-  percentage: 30,
-  active: true,
-  reason: "Cloud Sale - 30% OFF All Courses!",
-  validUntil: "2025-12-31T23:59:59Z",
-  // courses: ['az-900-azure-fundamentals', 'az-104-azure-administrator'] // Optional: specific courses
-};
+const CURRENT_PROMOTION: Promotion | null = null;
 
 // Pricing history for tracking (optional, for future analytics)
 interface PriceHistory {
