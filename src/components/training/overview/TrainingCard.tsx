@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Sparkle,
 } from '@phosphor-icons/react';
-import { levelColors } from './constants';
+import { categoryImages, levelColors } from './constants';
 import type { CombinedTraining } from './types';
 
 interface TrainingCardProps {
@@ -19,12 +19,28 @@ interface TrainingCardProps {
 }
 
 export function TrainingCard({ training, getTranslatedCourse, formatDuration, t }: TrainingCardProps) {
+  const headerImage = categoryImages[training.category] || categoryImages['Azure'];
+
   return (
     <Link to={`/training/${training.slug}`} className="h-full block group">
-      <Card className="h-full transition-colors border-border hover:border-primary/40 bg-card">
-        <CardContent className="p-5 flex flex-col h-full">
-          {/* Top row: badges */}
-          <div className="flex items-center gap-2 mb-3">
+      <Card className="h-full overflow-hidden transition-colors border-border hover:border-primary/40 bg-card">
+        {/* Category header image */}
+        <div className="h-28 relative overflow-hidden">
+          <img
+            src={headerImage}
+            alt=""
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+          <span className="absolute bottom-2 left-4 text-xs text-muted-foreground">
+            {training.category}
+          </span>
+        </div>
+
+        <CardContent className="p-4 pt-3 flex flex-col h-[calc(100%-7rem)]">
+          {/* Badges */}
+          <div className="flex items-center gap-2 mb-2">
             {training.featured && (
               <Badge variant="secondary" className="text-xs">
                 <Sparkle size={10} className="mr-1" />
@@ -37,14 +53,13 @@ export function TrainingCard({ training, getTranslatedCourse, formatDuration, t 
                 {training.certification.examCode}
               </Badge>
             )}
-            <span className="text-xs text-muted-foreground ml-auto">{training.category}</span>
           </div>
 
           {/* Title & description */}
           <h3 className="text-lg font-semibold mb-2 line-clamp-2 text-foreground group-hover:text-primary transition-colors">
             {getTranslatedCourse(training).title}
           </h3>
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
+          <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
             {getTranslatedCourse(training).description}
           </p>
 

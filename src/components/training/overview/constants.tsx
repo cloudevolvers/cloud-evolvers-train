@@ -1,21 +1,11 @@
-import React from 'react';
-import {
-  Cloud,
-  Shield,
-  Lightning,
-  Brain,
-  MicrosoftWordLogo,
-  WindowsLogo,
-} from '@phosphor-icons/react';
-
-// Category icons mapping - only categories that exist in training data
-export const categoryIcons: Record<string, { icon: React.ComponentType<{ size?: number; className?: string }>, color: string, bgColor: string }> = {
-  'Azure': { icon: Cloud, color: 'text-blue-600', bgColor: 'bg-blue-100 dark:bg-blue-900/30' },
-  'Security & Compliance': { icon: Shield, color: 'text-red-600', bgColor: 'bg-red-100 dark:bg-red-900/30' },
-  'Microsoft 365': { icon: MicrosoftWordLogo, color: 'text-indigo-600', bgColor: 'bg-indigo-100 dark:bg-indigo-900/30' },
-  'Power Platform': { icon: Lightning, color: 'text-yellow-600', bgColor: 'bg-yellow-100 dark:bg-yellow-900/30' },
-  'AI & Machine Learning': { icon: Brain, color: 'text-pink-600', bgColor: 'bg-pink-100 dark:bg-pink-900/30' },
-  'Windows Server': { icon: WindowsLogo, color: 'text-gray-600', bgColor: 'bg-gray-100 dark:bg-slate-900/30' },
+// Category header images - Unsplash (free for commercial use)
+export const categoryImages: Record<string, string> = {
+  'Azure': '/training-categories/azure.jpg',
+  'Security & Compliance': '/training-categories/security.jpg',
+  'Microsoft 365': '/training-categories/microsoft365.jpg',
+  'Power Platform': '/training-categories/power-platform.jpg',
+  'AI & Machine Learning': '/training-categories/ai-ml.jpg',
+  'Windows Server': '/training-categories/windows-server.jpg',
 };
 
 // Enhanced level color mapping with better contrast and readability
