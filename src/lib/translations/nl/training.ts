@@ -2,8 +2,8 @@ export default {
   title: "Microsoft-trainingsprogramma's",
   subtitle: "Professionele trainingen ontworpen door experts voor uw carrièreontwikkeling",
   overview: {
-    title: "Professionele trainingen",
-    subtitle: "Beheers Microsoft-technologieën met onze uitgebreide trainingsprogramma's. Van de basis van Azure cloud computing tot geavanceerde AI-ontwikkeling – vind de perfecte training die aansluit bij uw carrièredoelen.",
+    title: "Trainingen",
+    subtitle: "Azure & Microsoft trainingen door gecertificeerde trainers.",
     stats: {
       totalCourses: "Totaal aantal trainingen",
       featuredCourses: "Uitgelichte trainingen",
