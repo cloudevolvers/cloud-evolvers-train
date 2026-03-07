@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Sparkle,
 } from '@phosphor-icons/react';
-import { categoryImages, levelColors } from './constants';
+import { courseImages, defaultCourseImage, levelColors } from './constants';
 import type { CombinedTraining } from './types';
 
 interface TrainingCardProps {
@@ -19,7 +19,7 @@ interface TrainingCardProps {
 }
 
 export function TrainingCard({ training, getTranslatedCourse, formatDuration, t }: TrainingCardProps) {
-  const headerImage = categoryImages[training.category] || categoryImages['Azure'];
+  const headerImage = courseImages[training.slug] || defaultCourseImage;
 
   return (
     <Link to={`/training/${training.slug}`} className="h-full block group">
