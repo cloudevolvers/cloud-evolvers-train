@@ -25,7 +25,7 @@ const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel
         >
             {image && (
                 <>
-                    <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" />
+                    <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-10 group-hover:opacity-20 transition-opacity" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/30" />
                 </>
             )}
@@ -83,7 +83,7 @@ export function BentoFeatures() {
                             <img
                                 src="/training-categories/azure-solutions-architect.jpg"
                                 alt=""
-                                className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                                className="w-full h-full object-cover object-top opacity-30 group-hover:opacity-40 transition-opacity"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
                         </div>
@@ -141,7 +141,7 @@ export function BentoFeatures() {
                             <img
                                 src="/training-categories/azure-network-engineer.jpg"
                                 alt=""
-                                className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity"
+                                className="w-full h-full object-cover object-top opacity-20 group-hover:opacity-30 transition-opacity"
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
                         </div>
@@ -187,14 +187,14 @@ export function BentoFeatures() {
                     />
 
                     {/* MCT Trainer Card with Founder Photo */}
-                    <div className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-blue-900/20 p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all">
+                    <div className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-blue-900/20 p-6 sm:p-8 relative overflow-hidden group hover:border-blue-500/30 transition-all">
                         <div className="flex flex-col sm:flex-row gap-6 items-center">
-                            <div className="relative">
-                                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-lg shadow-blue-500/10">
+                            <div className="relative shrink-0">
+                                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-lg shadow-blue-500/10">
                                     <img
                                         src="/1625557501943.jpg"
                                         alt="Yaïr Knijn - Microsoft Certified Trainer"
-                                        className="w-full h-full object-cover object-[center_20%]"
+                                        className="w-full h-full object-cover object-[center_15%]"
                                     />
                                 </div>
                                 <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg">
