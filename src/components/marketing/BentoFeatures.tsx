@@ -185,7 +185,7 @@ export function BentoFeatures() {
                             <img
                                 src="/1625557501943.jpg"
                                 alt=""
-                                className="w-full h-full object-cover object-[center_15%] opacity-50 group-hover:opacity-60 transition-all duration-500 group-hover:scale-105"
+                                className="w-full h-full object-cover object-[center_15%] opacity-50 group-hover:opacity-60 transition-opacity duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20" />
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-950/40 to-transparent" />
