@@ -1,31 +1,23 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
 import {
     Cloud,
     Shield,
     Server,
     Database,
     Terminal,
-    Cpu,
     Zap,
     ArrowRight,
     BarChart,
-    Code2,
-    Lock,
     Globe
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/hooks/use-translations";
 
-const BentoCard = ({ title, description, icon: Icon, className, delay, to, dense = false, exploreLabel = "Explore" }: any) => {
+const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel = "Explore" }: any) => {
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: delay * 0.05, duration: 0.4 }}
+        <Link
+            to={to}
             className={cn(
                 "group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors p-6 flex flex-col justify-between",
                 className
@@ -35,12 +27,6 @@ const BentoCard = ({ title, description, icon: Icon, className, delay, to, dense
                 <div className="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 group-hover:text-blue-300 transition-colors">
                     <Icon className="w-5 h-5" />
                 </div>
-                {dense && (
-                    <div className="flex gap-1">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500/50" />
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
-                    </div>
-                )}
             </div>
 
             <div>
@@ -49,11 +35,11 @@ const BentoCard = ({ title, description, icon: Icon, className, delay, to, dense
             </div>
 
             <div className="mt-auto">
-                <Link to={to} className="inline-flex items-center text-xs font-medium text-blue-400 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                <span className="inline-flex items-center text-xs font-medium text-blue-400 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                     {exploreLabel} <ArrowRight className="w-3 h-3 ml-1" />
-                </Link>
+                </span>
             </div>
-        </motion.div>
+        </Link>
     );
 };
 
@@ -73,22 +59,29 @@ export function BentoFeatures() {
                             {b?.subtitle || 'A comprehensive ecosystem of cloud learning modules designed for scale and complexity.'}
                         </p>
                     </div>
-                    <Button variant="ghost" className="text-blue-400 hover:text-blue-300">
-                        {b?.viewAllModules || 'View All Modules'} <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    <Link to="/training">
+                        <Button variant="ghost" className="text-blue-400 hover:text-blue-300">
+                            {b?.viewAllModules || 'View All Modules'} <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
 
-                    {/* Large Hero Card */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="col-span-1 md:col-span-2 xl:col-span-2 row-span-2 rounded-3xl border border-white/10 bg-gradient-to-br from-blue-900/20 to-black p-8 relative overflow-hidden group"
+                    {/* Large Hero Card - Azure Solutions Architect */}
+                    <Link
+                        to="/training/azure-solutions-architect"
+                        className="col-span-1 md:col-span-2 xl:col-span-2 row-span-2 rounded-3xl border border-white/10 bg-gradient-to-br from-blue-900/20 to-black relative overflow-hidden group hover:border-blue-500/30 transition-colors"
                     >
-                        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
-                        <div className="relative z-10 h-full flex flex-col">
+                        <div className="absolute inset-0">
+                            <img
+                                src="/training-categories/azure-solutions-architect.jpg"
+                                alt=""
+                                className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                        </div>
+                        <div className="relative z-10 h-full flex flex-col p-8">
                             <div className="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center mb-6 text-blue-400">
                                 <Cloud className="w-6 h-6" />
                             </div>
@@ -96,37 +89,20 @@ export function BentoFeatures() {
                             <p className="text-gray-400 mb-8 max-w-md">
                                 {b?.azureSolutionsDesc || 'Master the art of designing scalable, secure, and reliable cloud infrastructure on Microsoft Azure.'}
                             </p>
-
-                            {/* Mini Visualization */}
-                            <div className="mt-auto rounded-lg bg-black/40 border border-white/5 p-4 backdrop-blur-sm">
-                                <div className="flex justify-between text-xs text-gray-500 mb-2 font-mono">
-                                    <span>{b?.progress || 'PROGRESS'}</span>
-                                    <span>84%</span>
-                                </div>
-                                <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                                    <div className="h-full w-[84%] bg-gradient-to-r from-blue-500 to-indigo-500" />
-                                </div>
-                                <div className="mt-4 flex gap-4 text-xs font-mono text-gray-400">
-                                    <div className="flex items-center gap-1">
-                                        <div className="w-2 h-2 rounded-full bg-green-500" />
-                                        <span>42 {b?.labs || 'Labs'}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                        <div className="w-2 h-2 rounded-full bg-yellow-500" />
-                                        <span>5 {b?.projects || 'Projects'}</span>
-                                    </div>
-                                </div>
+                            <div className="mt-auto">
+                                <span className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:translate-x-1 transition-transform">
+                                    View course <ArrowRight className="w-4 h-4 ml-2" />
+                                </span>
                             </div>
                         </div>
-                    </motion.div>
+                    </Link>
 
                     {/* Standard Cards */}
                     <BentoCard
                         title={b?.devOps || "DevOps Engineering"}
                         description={b?.devOpsDesc || "CI/CD pipelines, Docker, Kubernetes, and IaC with Terraform."}
                         icon={Terminal}
-                        to="/services/infrastructure-as-code"
-                        delay={1}
+                        to="/training/azure-devops-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
                     />
@@ -134,8 +110,7 @@ export function BentoFeatures() {
                         title={b?.security || "Security Engineering"}
                         description={b?.securityDesc || "Identity management, threat protection, and security operations."}
                         icon={Shield}
-                        to="/services/security-compliance"
-                        delay={2}
+                        to="/training/azure-security-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
                     />
@@ -143,40 +118,40 @@ export function BentoFeatures() {
                         title={b?.dataEng || "Data Engineering"}
                         description={b?.dataEngDesc || "Big data analytics, data warehousing, and ETL pipelines."}
                         icon={Database}
-                        to="/services/ai-engineering"
-                        delay={3}
+                        to="/training/azure-ai-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
                     />
 
-                    {/* Wide Card */}
-                    <div className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/5 bg-white/[0.02] p-6 flex flex-col justify-between hover:border-blue-500/20 transition-colors group">
-                        <div className="flex justify-between items-start">
-                            <div>
-                                <h3 className="text-xl font-bold text-white mb-1">{b?.globalInfra || 'Global Infrastructure'}</h3>
-                                <p className="text-sm text-gray-400">{b?.globalInfraDesc || 'Multi-region deployment strategies.'}</p>
-                            </div>
-                            <Globe className="w-6 h-6 text-indigo-400 group-hover:rotate-12 transition-transform" />
+                    {/* Wide Card - Network */}
+                    <Link
+                        to="/training/azure-network-engineer"
+                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/5 relative overflow-hidden hover:border-blue-500/20 transition-colors group"
+                    >
+                        <div className="absolute inset-0">
+                            <img
+                                src="/training-categories/azure-network-engineer.jpg"
+                                alt=""
+                                className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
                         </div>
-                        <div className="mt-6 flex gap-2">
-                            <div className="h-24 flex-1 rounded-lg bg-white/5 border border-white/5 flex items-end p-2 group-hover:bg-indigo-500/10 transition-colors">
-                                <div className="w-full bg-indigo-500/50 h-[40%] rounded-sm" />
-                            </div>
-                            <div className="h-24 flex-1 rounded-lg bg-white/5 border border-white/5 flex items-end p-2 group-hover:bg-indigo-500/10 transition-colors">
-                                <div className="w-full bg-indigo-500/50 h-[70%] rounded-sm" />
-                            </div>
-                            <div className="h-24 flex-1 rounded-lg bg-white/5 border border-white/5 flex items-end p-2 group-hover:bg-indigo-500/10 transition-colors">
-                                <div className="w-full bg-indigo-500/50 h-[50%] rounded-sm" />
+                        <div className="relative z-10 p-6">
+                            <div className="flex justify-between items-start">
+                                <div>
+                                    <h3 className="text-xl font-bold text-white mb-1">{b?.globalInfra || 'Global Infrastructure'}</h3>
+                                    <p className="text-sm text-gray-400">{b?.globalInfraDesc || 'Multi-region deployment strategies.'}</p>
+                                </div>
+                                <Globe className="w-6 h-6 text-indigo-400 group-hover:rotate-12 transition-transform" />
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
                     <BentoCard
                         title={b?.aiSolutions || "AI Solutions"}
                         description={b?.aiSolutionsDesc || "Implement Generative AI and ML models."}
                         icon={Zap}
-                        to="/services/ai-engineering"
-                        delay={5}
+                        to="/training/azure-ai-fundamentals"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
                     />
@@ -185,8 +160,7 @@ export function BentoFeatures() {
                         title={b?.networkAdvanced || "Network Advanced"}
                         description={b?.networkAdvancedDesc || "Hybrid networking and connectivity."}
                         icon={Server}
-                        to="/services/network-engineering"
-                        delay={6}
+                        to="/training/azure-network-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
                     />
@@ -195,20 +169,13 @@ export function BentoFeatures() {
                         title={b?.finOps || "FinOps"}
                         description={b?.finOpsDesc || "Cost optimization and governance."}
                         icon={BarChart}
-                        to="/services/cost-optimization"
-                        delay={7}
+                        to="/training/azure-administrator"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
                     />
 
                     {/* MCT Trainer Card with Founder Photo */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4 }}
-                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-blue-900/20 p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all"
-                    >
+                    <div className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/80 to-blue-900/20 p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all">
                         <div className="flex flex-col sm:flex-row gap-6 items-center">
                             <div className="relative">
                                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-blue-500/30 shadow-lg shadow-blue-500/10">
@@ -236,7 +203,7 @@ export function BentoFeatures() {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                 </div>
             </div>
