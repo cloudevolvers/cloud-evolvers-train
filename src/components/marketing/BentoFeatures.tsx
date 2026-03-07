@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/hooks/use-translations";
 
-const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel = "Explore" }: any) => {
+const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel = "Explore", image }: any) => {
     return (
         <Link
             to={to}
@@ -23,18 +23,24 @@ const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel
                 className
             )}
         >
-            <div className="flex items-start justify-between mb-4">
+            {image && (
+                <>
+                    <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/30" />
+                </>
+            )}
+            <div className="relative z-10 flex items-start justify-between mb-4">
                 <div className="p-2.5 rounded-lg bg-blue-500/10 text-blue-400 group-hover:text-blue-300 transition-colors">
                     <Icon className="w-5 h-5" />
                 </div>
             </div>
 
-            <div>
+            <div className="relative z-10">
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-200 transition-colors">{title}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
             </div>
 
-            <div className="mt-auto">
+            <div className="relative z-10 mt-auto">
                 <span className="inline-flex items-center text-xs font-medium text-blue-400 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                     {exploreLabel} <ArrowRight className="w-3 h-3 ml-1" />
                 </span>
@@ -105,6 +111,7 @@ export function BentoFeatures() {
                         to="/training/azure-devops-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
+                        image="/training-categories/azure-devops-engineer.jpg"
                     />
                     <BentoCard
                         title={b?.security || "Security Engineering"}
@@ -113,6 +120,7 @@ export function BentoFeatures() {
                         to="/training/azure-security-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
+                        image="/training-categories/azure-security-engineer.jpg"
                     />
                     <BentoCard
                         title={b?.dataEng || "Data Engineering"}
@@ -121,6 +129,7 @@ export function BentoFeatures() {
                         to="/training/azure-ai-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
+                        image="/training-categories/azure-ai-engineer.jpg"
                     />
 
                     {/* Wide Card - Network */}
@@ -154,6 +163,7 @@ export function BentoFeatures() {
                         to="/training/azure-ai-fundamentals"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
+                        image="/training-categories/azure-ai-fundamentals.jpg"
                     />
 
                     <BentoCard
@@ -163,6 +173,7 @@ export function BentoFeatures() {
                         to="/training/azure-network-engineer"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
+                        image="/training-categories/azure-network-engineer.jpg"
                     />
 
                     <BentoCard
@@ -172,6 +183,7 @@ export function BentoFeatures() {
                         to="/training/azure-administrator"
                         className="xl:col-span-1"
                         exploreLabel={exploreLabel}
+                        image="/training-categories/azure-administrator.jpg"
                     />
 
                     {/* MCT Trainer Card with Founder Photo */}
