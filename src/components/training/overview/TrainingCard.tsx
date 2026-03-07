@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Sparkle,
 } from '@phosphor-icons/react';
-import { categoryIcons, levelColors } from './constants';
+import { levelColors } from './constants';
 import type { CombinedTraining } from './types';
 
 interface TrainingCardProps {
@@ -19,18 +19,12 @@ interface TrainingCardProps {
 }
 
 export function TrainingCard({ training, getTranslatedCourse, formatDuration, t }: TrainingCardProps) {
-  const categoryInfo = categoryIcons[training.category] || categoryIcons['Azure'];
-  const CategoryIcon = categoryInfo.icon;
-
   return (
     <Link to={`/training/${training.slug}`} className="h-full block group">
       <Card className="h-full transition-colors border-border hover:border-primary/40 bg-card">
         <CardContent className="p-5 flex flex-col h-full">
-          {/* Top row: category icon + badges */}
+          {/* Top row: badges */}
           <div className="flex items-center gap-2 mb-3">
-            <div className={`p-2 rounded-lg ${categoryInfo.bgColor} ${categoryInfo.color}`}>
-              <CategoryIcon size={18} />
-            </div>
             {training.featured && (
               <Badge variant="secondary" className="text-xs">
                 <Sparkle size={10} className="mr-1" />
@@ -43,6 +37,7 @@ export function TrainingCard({ training, getTranslatedCourse, formatDuration, t 
                 {training.certification.examCode}
               </Badge>
             )}
+            <span className="text-xs text-muted-foreground ml-auto">{training.category}</span>
           </div>
 
           {/* Title & description */}
