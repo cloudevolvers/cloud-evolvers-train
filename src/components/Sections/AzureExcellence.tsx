@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { useTranslations } from "@/hooks/use-translations";
 import {
@@ -72,45 +71,20 @@ export function AzureExcellence() {
   ];
 
   return (
-    <motion.div
-      className="relative space-y-16"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-    >
+    <div className="space-y-16">
       {/* Header Section */}
       <div className="text-center space-y-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-3"
-        >
-          <Badge variant="outline" className="px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-violet-500/10 border-blue-500/30 text-blue-600 dark:text-blue-400 backdrop-blur-sm">
-            <Shield className="h-4 w-4 mr-2" weight="duotone" />
-            {a?.badge || 'Azure and Microsoft Stack Excellence'}
-            <Trophy className="h-4 w-4 ml-2 text-amber-500" weight="duotone" />
-          </Badge>
-        </motion.div>
+        <Badge variant="outline" className="px-5 py-2.5 text-sm font-semibold bg-blue-500/10 border-blue-500/30 text-blue-400">
+          <Shield className="h-4 w-4 mr-2" weight="duotone" />
+          {a?.badge || 'Azure and Microsoft Stack Excellence'}
+          <Trophy className="h-4 w-4 ml-2 text-amber-500" weight="duotone" />
+        </Badge>
 
-        <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight max-w-5xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight max-w-5xl mx-auto">
           {a?.heading || 'Trainings led by Microsoft Certified Trainers'}
-        </motion.h2>
+        </h2>
 
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg text-muted-foreground"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg text-muted-foreground">
           <Badge variant="secondary" className="px-4 py-2 bg-primary/5 border-primary/20">
             <div className="flex items-center gap-2">
               <img src="/flags/nl.svg" alt="Netherlands" className="w-5 h-5 rounded-sm" />
@@ -126,17 +100,11 @@ export function AzureExcellence() {
               <span className="font-semibold text-blue-500">{a?.uk || 'UK'}</span>
             </div>
           </Badge>
-        </motion.div>
+        </div>
 
-        <motion.p
-          className="text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
+        <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           {a?.remoteNote || 'Remote training and consultancy are available worldwide, with on-site options for international clients when needed.'}
-        </motion.p>
+        </p>
       </div>
 
       {/* Popular Trainings */}
@@ -147,17 +115,11 @@ export function AzureExcellence() {
       />
 
       {/* Stats Grid */}
-      <motion.div
-        className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
         {stats.map((stat, index) => (
           <StatCard key={index} {...stat} index={index} />
         ))}
-      </motion.div>
+      </div>
 
       {/* Excellence Content Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -165,6 +127,6 @@ export function AzureExcellence() {
           <ExcellenceCard key={index} {...card} index={index} />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
