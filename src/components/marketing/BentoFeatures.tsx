@@ -83,9 +83,9 @@ export function BentoFeatures() {
                             <img
                                 src="/training-categories/azure-solutions-architect.jpg"
                                 alt=""
-                                className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity"
+                                className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
                         </div>
                         <div className="relative z-10 h-full flex flex-col p-8">
                             <div className="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center mb-6 text-blue-400">
@@ -179,32 +179,35 @@ export function BentoFeatures() {
                     {/* MCT Trainer Card - Your Instructor */}
                     <Link
                         to="/about"
-                        className="col-span-1 md:col-span-2 xl:col-span-2 min-h-[280px] sm:min-h-[320px] rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-blue-950/50 relative overflow-hidden group hover:border-blue-500/30 transition-all"
+                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-blue-950/50 relative overflow-hidden group hover:border-blue-500/30 transition-all"
                     >
-                        <div className="absolute inset-0">
-                            <img
-                                src="/1625557501943.jpg"
-                                alt=""
-                                className="w-full h-full object-cover object-[center_15%] opacity-50 group-hover:opacity-60 transition-opacity duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20" />
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-950/40 to-transparent" />
-                        </div>
-                        <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                            <div className="inline-flex items-center gap-2 mb-3 px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/25 w-fit">
-                                <Shield className="w-3.5 h-3.5 text-blue-400" />
-                                <span className="text-[11px] text-blue-300 font-semibold uppercase tracking-wider">{b?.mctTrainer || 'Microsoft Certified Trainer'}</span>
+                        <div className="flex flex-col sm:flex-row">
+                            {/* Photo side */}
+                            <div className="relative w-full sm:w-48 md:w-56 shrink-0 h-48 sm:h-auto">
+                                <img
+                                    src="/1625557501943.jpg"
+                                    alt="Yaïr Knijn - Microsoft Certified Trainer"
+                                    className="w-full h-full object-cover object-[center_20%]"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-transparent to-slate-900/80 sm:to-slate-900" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-2">Yaïr Knijn</h3>
-                            <p className="text-sm text-gray-300 mb-4 max-w-sm leading-relaxed">{b?.trainerDesc || '15+ years of Microsoft & Azure expertise, delivering hands-on training with real-world project experience.'}</p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/80">Azure Expert</span>
-                                <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/80">Cloud Architect</span>
-                                <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/80">MCT Trainer</span>
+                            {/* Content side */}
+                            <div className="relative z-10 flex-1 flex flex-col justify-center p-6 sm:p-8">
+                                <div className="inline-flex items-center gap-2 mb-3 px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/25 w-fit">
+                                    <Shield className="w-3.5 h-3.5 text-blue-400" />
+                                    <span className="text-[11px] text-blue-300 font-semibold uppercase tracking-wider">{b?.mctTrainer || 'Microsoft Certified Trainer'}</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2">Yaïr Knijn</h3>
+                                <p className="text-sm text-gray-300 mb-4 max-w-sm leading-relaxed">{b?.trainerDesc || '15+ years of Microsoft & Azure expertise, delivering hands-on training with real-world project experience.'}</p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/80">Azure Expert</span>
+                                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/80">Cloud Architect</span>
+                                    <span className="text-[11px] px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-white/80">MCT Trainer</span>
+                                </div>
+                                <span className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:translate-x-1 transition-transform">
+                                    Meet your trainer <ArrowRight className="w-4 h-4 ml-2" />
+                                </span>
                             </div>
-                            <span className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:translate-x-1 transition-transform">
-                                Meet your trainer <ArrowRight className="w-4 h-4 ml-2" />
-                            </span>
                         </div>
                     </Link>
 
