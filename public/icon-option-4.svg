@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Option 4: Stacked ascending bars (evolution) -->
+  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <!-- Three ascending bars -->
+  <rect x="100" y="280" width="80" height="140" rx="16" fill="#15803d"/>
+  <rect x="216" y="200" width="80" height="220" rx="16" fill="#16a34a"/>
+  <rect x="332" y="120" width="80" height="300" rx="16" fill="#22c55e"/>
+  <!-- Cloud accent at top -->
+  <path d="M350 115 C350 95 365 80 385 80 C390 65 405 55 422 55 C442 55 458 68 460 85 C475 88 485 100 485 115 C485 132 472 145 455 145 L370 145 C353 145 340 132 340 115 Z" fill="#22c55e" opacity="0.4"/>
+</svg>

@@ -51,3 +51,21 @@ local.settings.json
 **/credentials.json
 GRAPH_API_CONFIG_COMPLETE.md
 .serena/
+
+# MCP / Playwright MCP screenshots
+.mcp.json
+.playwright-mcp/
+
+# Root-level screenshots (dev artifacts)
+/*.png
+/*.jpg
+/*.jpeg
+
+# Astro build cache
+.astro/
+
+# Wrangler
+.wrangler/
+
+# Bun lockfile
+bun.lock
