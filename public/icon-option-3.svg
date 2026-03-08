@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Option 3: Stylized C with orbital ring -->
+  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <!-- Bold C shape -->
+  <path d="M320 150 C280 120 220 115 175 145 C125 180 105 250 130 310 C155 370 220 400 285 385 C320 377 345 358 360 335" fill="none" stroke="#22c55e" stroke-width="42" stroke-linecap="round"/>
+  <!-- Orbital ring -->
+  <ellipse cx="256" cy="256" rx="170" ry="60" fill="none" stroke="#16a34a" stroke-width="16" transform="rotate(-30 256 256)" opacity="0.6"/>
+  <!-- Dot accent -->
+  <circle cx="370" cy="175" r="18" fill="#22c55e"/>
+</svg>

@@ -84,19 +84,24 @@ export function Header() {
           <div className="flex items-center justify-between">
 
             {/* Brand */}
-            <Link to="/" className="group flex items-center gap-3">
-              <motion.div
-                className="flex flex-col"
-                whileHover={{ x: 2 }}
-                transition={{ duration: 0.2 }}
-              >
-                <span className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+            <Link
+              to="/"
+              className="group flex items-center gap-3"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              <img
+                src="/cloudevolvers-hero-logo.png"
+                alt="Cloud Evolvers"
+                className="h-9 sm:h-10 w-auto rounded-md"
+              />
+              <div className="flex flex-col">
+                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                   Cloud Evolvers
                 </span>
-                <span className="text-[10px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wide">
+                <span className="text-[10px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wide hidden sm:block">
                   Azure & Microsoft Training
                 </span>
-              </motion.div>
+              </div>
 
               {/* MCT Badge - Desktop only */}
               <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200/50 dark:border-emerald-500/20">

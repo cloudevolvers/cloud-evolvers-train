@@ -2,8 +2,8 @@ export default {
   title: "Microsoft Training Programs",
   subtitle: "Expert-designed professional training for your career development",
   overview: {
-    title: "Professional Training Courses",
-    subtitle: "Master Microsoft technologies with our comprehensive training programs. From Azure cloud fundamentals to advanced AI development, find the perfect course that aligns with your career goals.",
+    title: "Training Courses",
+    subtitle: "Azure & Microsoft courses by certified trainers.",
     stats: {
       totalCourses: "Total Courses",
       featuredCourses: "Featured Courses",

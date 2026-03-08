@@ -1,0 +1,8 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Option 2: Cloud with upward chevron -->
+  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <!-- Cloud shape -->
+  <path d="M160 340 C160 340 120 340 120 300 C120 270 145 255 170 258 C175 225 205 200 240 200 C250 175 280 155 315 155 C360 155 395 185 400 220 C430 225 455 250 455 285 C455 320 430 340 400 340 Z" fill="none" stroke="#22c55e" stroke-width="28" stroke-linejoin="round"/>
+  <!-- Upward chevron -->
+  <path d="M220 310 L290 250 L360 310" fill="none" stroke="#22c55e" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

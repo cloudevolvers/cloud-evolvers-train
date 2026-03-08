@@ -1,116 +1,86 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import {
   Clock,
-  Users,
   Certificate,
   ArrowRight,
   Sparkle,
-  Target
 } from '@phosphor-icons/react';
-import { categoryIcons, levelColors } from './constants';
+import { courseImages, defaultCourseImage, levelColors } from './constants';
 import type { CombinedTraining } from './types';
 
 interface TrainingCardProps {
   training: CombinedTraining;
-  index: number;
   getTranslatedCourse: (training: CombinedTraining) => { title: string; description: string };
   formatDuration: (duration: { days: number; hours: number }) => string;
   t: any;
 }
 
-export function TrainingCard({ training, index, getTranslatedCourse, formatDuration, t }: TrainingCardProps) {
-  const categoryInfo = categoryIcons[training.category] || categoryIcons['Azure'];
-  const CategoryIcon = categoryInfo.icon;
+export function TrainingCard({ training, getTranslatedCourse, formatDuration, t }: TrainingCardProps) {
+  const headerImage = courseImages[training.slug] || defaultCourseImage;
 
   return (
-    <motion.div
-      key={training.slug}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="h-full"
-    >
-      <Card className="group h-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 backdrop-blur-sm bg-card/80 border-border hover:border-blue-500/50">
-        <CardContent className="p-6 flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className={`p-3 rounded-xl ${categoryInfo.bgColor} ${categoryInfo.color} shadow-sm`}>
-                <CategoryIcon size={24} />
-              </div>
-              <div>
-                {training.featured && (
-                  <Badge className="text-xs bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-0 shadow-sm">
-                    <Sparkle size={12} className="mr-1" />
-                    Featured
-                  </Badge>
-                )}
-                {training.isJsonBased && (
-                  <Badge className="text-xs bg-gradient-to-r from-blue-400 to-sky-500 text-white border-0 shadow-sm ml-2">
-                    <Target size={12} className="mr-1" />
-                    New
-                  </Badge>
-                )}
-              </div>
-            </div>
-          </div>
+    <Link to={`/training/${training.slug}`} className="h-full block group">
+      <Card className="h-full overflow-hidden transition-colors border-border hover:border-primary/40 bg-card">
+        {/* Category header image */}
+        <div className="h-28 relative overflow-hidden">
+          <img
+            src={headerImage}
+            alt=""
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+          <span className="absolute bottom-2 left-4 text-xs text-muted-foreground">
+            {training.category}
+          </span>
+        </div>
 
-          {/* Content */}
-          {/* Content */}
-          <div className="flex-grow">
-            <h3 className="text-xl font-semibold mb-3 line-clamp-2 text-foreground group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              {getTranslatedCourse(training).title}
-            </h3>
-            <p className="text-muted-foreground mb-4 line-clamp-3 leading-relaxed">
-              {getTranslatedCourse(training).description}
-            </p>
-          </div>
-
-          {/* Metadata */}
-          <div className="space-y-3 mb-6">
-            <div className="flex items-center justify-between text-sm">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Clock size={14} className="text-blue-600 dark:text-blue-400" />
-                <span className="font-medium">{formatDuration(training.duration)}</span>
-              </div>
-              <Badge className={`${levelColors[training.level]} border shadow-sm`}>
-                {training.level}
+        <CardContent className="p-4 pt-3 flex flex-col h-[calc(100%-7rem)]">
+          {/* Badges */}
+          <div className="flex items-center gap-2 mb-2">
+            {training.featured && (
+              <Badge variant="secondary" className="text-xs">
+                <Sparkle size={10} className="mr-1" />
+                Featured
               </Badge>
-            </div>
-
-            <div className="text-sm">
-              <span className="font-medium text-foreground">{training.category}</span>
-            </div>
-
-            {training.certification?.available && (
-              <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400">
-                <Certificate size={14} />
-                <span className="font-medium">{training.certification.examCode}</span>
-              </div>
             )}
-
-            {training.targetAudience && training.targetAudience.length > 0 && (
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Users size={14} className="text-sky-600 dark:text-sky-400" />
-                <span className="line-clamp-1">{training.targetAudience.slice(0, 2).join(', ')}</span>
-              </div>
+            {training.certification?.available && (
+              <Badge variant="outline" className="text-xs">
+                <Certificate size={10} className="mr-1" />
+                {training.certification.examCode}
+              </Badge>
             )}
           </div>
 
-          {/* Action */}
-          <Link to={`/training/${training.slug}`} className="mt-auto">
-            <Button className="w-full group/btn bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-              View Course Details
-              <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          {/* Title & description */}
+          <h3 className="text-lg font-semibold mb-2 line-clamp-2 text-foreground group-hover:text-primary transition-colors">
+            {getTranslatedCourse(training).title}
+          </h3>
+          <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
+            {getTranslatedCourse(training).description}
+          </p>
+
+          {/* Footer metadata */}
+          <div className="flex items-center justify-between text-sm pt-3 border-t border-border">
+            <div className="flex items-center gap-1.5 text-muted-foreground">
+              <Clock size={14} />
+              <span>{formatDuration(training.duration)}</span>
+            </div>
+            <Badge className={`${levelColors[training.level]} border`}>
+              {training.level}
+            </Badge>
+          </div>
+
+          {/* View link */}
+          <div className="flex items-center gap-1 text-sm text-primary mt-3 font-medium">
+            View details
+            <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+          </div>
         </CardContent>
       </Card>
-    </motion.div>
+    </Link>
   );
 }
