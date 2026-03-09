@@ -269,84 +269,6 @@ export const allServices: AllServicesTranslations = {
       order: 3,
     },
   },
-  'enterprise-file-transfer': {
-    en: {
-      id: 'enterprise-file-transfer',
-      title: 'Enterprise File Transfer',
-      slug: 'enterprise-file-transfer',
-      description: 'Secure, reliable file sharing for businesses with advanced security and controls',
-      icon: 'FileTransfer',
-      features: ['End-to-end encryption', 'Granular access controls', 'Transfer automation', 'Detailed audit logs'],
-      sections: [
-        {
-          title: 'End-to-End Encryption',
-          description: 'Protect your data both in transit and at rest with military-grade encryption. Our solution ensures that only authorized recipients can access your files, maintaining confidentiality throughout the entire transfer process.',
-        },
-        {
-          title: 'Granular Access Controls',
-          description: "Define precisely who can access, view, edit, or share specific files and folders. Our role-based permission system gives you complete control over your data, allowing you to tailor access levels to meet your organization's needs.",
-        },
-        {
-          title: 'Transfer Automation',
-          description: 'Streamline your workflows with automated file transfers. Schedule recurring transfers, set up conditional transfers based on triggers, and integrate with your existing business processes to save time and reduce manual errors.',
-        },
-        {
-          title: 'Detailed Audit Logs',
-          description: 'Maintain comprehensive records of all file activities with our detailed audit logging system. Track who accessed files, when they were accessed, and what actions were performed, enabling you to demonstrate compliance and investigate any security concerns.',
-        },
-      ],
-      benefits: [
-        { title: 'Enhanced Security', description: 'Protect sensitive information with advanced security features' },
-        { title: 'Improved Compliance', description: 'Meet regulatory requirements with comprehensive audit trails and security controls' },
-        { title: 'Increased Efficiency', description: 'Automate routine file transfers and streamline business processes' },
-        { title: 'Reduced Risk', description: 'Minimize the chance of data leaks with controlled sharing capabilities' },
-        { title: 'Scalable Solution', description: 'Handle everything from occasional transfers to high-volume enterprise needs' },
-      ],
-      closingText: 'Whether you need to securely share financial documents, collaborate on sensitive projects, or automate file exchanges with business partners, our Enterprise File Transfer solution provides the tools you need to do so securely and efficiently. Contact us today to discover how our Enterprise File Transfer service can strengthen your data security while improving operational efficiency.',
-      isPublished: true,
-      publishedAt: '2024-04-10T00:00:00Z',
-      updatedAt: '2024-04-10T00:00:00Z',
-      order: 3,
-    },
-    nl: {
-      id: 'enterprise-file-transfer',
-      title: 'Enterprise Bestandsoverdracht',
-      slug: 'enterprise-file-transfer',
-      description: 'Veilige, betrouwbare bestandsdeling voor bedrijven met geavanceerde beveiliging en controles',
-      icon: 'FileTransfer',
-      features: ['End-to-end encryptie', 'Granulaire toegangscontroles', 'Transfer automatisering', 'Gedetailleerde audit logs'],
-      sections: [
-        {
-          title: 'End-to-End Encryptie',
-          description: 'Bescherm uw data zowel tijdens transport als in rust met militaire-grade encryptie. Onze oplossing zorgt ervoor dat alleen geautoriseerde ontvangers toegang hebben tot uw bestanden, en behoudt vertrouwelijkheid gedurende het hele overdracht proces.',
-        },
-        {
-          title: 'Granulaire Toegangscontroles',
-          description: 'Definieer precies wie specifieke bestanden en mappen kan benaderen, bekijken, bewerken of delen. Ons op rollen gebaseerde permissie systeem geeft u volledige controle over uw data, waardoor u toegangsniveaus kunt afstemmen op de behoeften van uw organisatie.',
-        },
-        {
-          title: 'Transfer Automatisering',
-          description: 'Stroomijn uw workflows met geautomatiseerde bestandsoverdrachten. Plan terugkerende overdrachten, stel conditionele overdrachten in gebaseerd op triggers, en integreer met uw bestaande bedrijfsprocessen om tijd te besparen en handmatige fouten te verminderen.',
-        },
-        {
-          title: 'Gedetailleerde Audit Logs',
-          description: 'Houd uitgebreide records bij van alle bestandsactiviteiten met ons gedetailleerde audit logging systeem. Volg wie bestanden heeft benaderd, wanneer ze werden benaderd, en welke acties werden uitgevoerd, waardoor u compliance kunt demonstreren en beveiligingsproblemen kunt onderzoeken.',
-        },
-      ],
-      benefits: [
-        { title: 'Verbeterde Beveiliging', description: 'Bescherm gevoelige informatie met geavanceerde beveiligingsfuncties' },
-        { title: 'Verbeterde Compliance', description: 'Voldoe aan regelgevingseisen met uitgebreide audit trails en beveiligingscontroles' },
-        { title: 'Verhoogde Efficiëntie', description: 'Automatiseer routine bestandsoverdrachten en stroomijn bedrijfsprocessen' },
-        { title: 'Verminderd Risico', description: 'Minimaliseer de kans op data lekken met gecontroleerde deelmogelijkheden' },
-        { title: 'Schaalbare Oplossing', description: 'Behandel alles van incidentele overdrachten tot enterprise behoeften met hoog volume' },
-      ],
-      closingText: 'Of u nu veilig financiële documenten moet delen, moet samenwerken aan gevoelige projecten, of bestandsuitwisselingen met zakenpartners moet automatiseren, onze Enterprise Bestandsoverdracht oplossing biedt de tools die u nodig heeft om dit veilig en efficiënt te doen. Neem vandaag nog contact met ons op om te ontdekken hoe onze Enterprise Bestandsoverdracht service uw databeveiliging kan versterken terwijl operationele efficiëntie wordt verbeterd.',
-      isPublished: true,
-      publishedAt: '2024-04-10T00:00:00Z',
-      updatedAt: '2024-04-10T00:00:00Z',
-      order: 3,
-    },
-  },
   'microsoft-365-copilot': {
     en: {
       id: 'microsoft-365-copilot',
@@ -625,11 +547,23 @@ export const allServices: AllServicesTranslations = {
           ],
         },
         {
-          title: 'Bicep/ARM Template Development',
+          title: 'Bicep Development',
+          description: 'Azure Bicep is a domain-specific language for deploying Azure resources declaratively. It provides a cleaner syntax than ARM templates while compiling directly to ARM JSON, making it the native IaC choice for Azure environments.',
           items: [
-            { title: 'Template Design', description: 'Create efficient, parameterized Azure Resource Manager templates' },
-            { title: 'Bicep Migration', description: 'Convert existing ARM templates to the more readable Bicep format' },
-            { title: 'Best Practices', description: 'Implement security and operational excellence in your templates' },
+            { title: 'Bicep Template Design', description: 'Create efficient, type-safe Azure resource definitions with Bicep\'s concise syntax' },
+            { title: 'ARM to Bicep Migration', description: 'Convert existing ARM JSON templates to the more readable and maintainable Bicep format' },
+            { title: 'Module Libraries', description: 'Build reusable Bicep module registries for consistent resource provisioning across teams' },
+            { title: 'Parameter Files & Environments', description: 'Manage multi-environment deployments with structured parameter files and conditional logic' },
+          ],
+        },
+        {
+          title: 'OpenTofu',
+          description: 'OpenTofu is the open-source fork of Terraform, maintained by the Linux Foundation. We help organizations adopt OpenTofu for vendor-neutral, community-driven infrastructure management across any cloud provider.',
+          items: [
+            { title: 'OpenTofu Migration', description: 'Seamlessly transition existing Terraform configurations to OpenTofu with zero downtime' },
+            { title: 'Multi-Cloud Provisioning', description: 'Manage Azure, AWS, and GCP resources from a single OpenTofu configuration' },
+            { title: 'State Encryption', description: 'Leverage OpenTofu\'s native state encryption for enhanced security of sensitive infrastructure data' },
+            { title: 'Provider Development', description: 'Build and customize OpenTofu providers for internal platforms and third-party services' },
           ],
         },
         {
@@ -643,7 +577,7 @@ export const allServices: AllServicesTranslations = {
         {
           title: 'Training and Knowledge Transfer',
           items: [
-            { title: 'Team Workshops', description: 'Train your team on IaC best practices' },
+            { title: 'Team Workshops', description: 'Train your team on IaC best practices across Terraform, Bicep, and OpenTofu' },
             { title: 'Documentation', description: 'Create comprehensive documentation for your IaC implementation' },
             { title: 'Mentoring', description: 'Provide ongoing support and guidance for your team' },
           ],
@@ -653,6 +587,7 @@ export const allServices: AllServicesTranslations = {
         { title: 'Consistency', description: 'Eliminate configuration drift and ensure consistent environments' },
         { title: 'Speed', description: 'Accelerate provisioning and reduce manual tasks' },
         { title: 'Reliability', description: 'Reduce human error through automation' },
+        { title: 'Vendor Flexibility', description: 'Choose the right IaC tool for each scenario - Terraform, Bicep, or OpenTofu' },
         { title: 'Documentation', description: 'Self-documenting infrastructure through code' },
         { title: 'Version Control', description: 'Track changes and implement proper governance' },
         { title: 'Cost Control', description: 'Better visibility and management of cloud resources' },
@@ -684,11 +619,23 @@ export const allServices: AllServicesTranslations = {
           ],
         },
         {
-          title: 'Bicep/ARM Template Ontwikkeling',
+          title: 'Bicep Ontwikkeling',
+          description: 'Azure Bicep is een domeinspecifieke taal voor het declaratief deployen van Azure resources. Het biedt een schonere syntax dan ARM templates en compileert direct naar ARM JSON, waardoor het de native IaC keuze is voor Azure omgevingen.',
           items: [
-            { title: 'Template Ontwerp', description: 'Creëer efficiënte, geparametriseerde Azure Resource Manager templates' },
-            { title: 'Bicep Migratie', description: 'Converteer bestaande ARM templates naar het meer leesbare Bicep formaat' },
-            { title: 'Best Practices', description: 'Implementeer beveiliging en operational excellence in uw templates' },
+            { title: 'Bicep Template Ontwerp', description: 'Creëer efficiënte, type-safe Azure resource definities met Bicep\'s beknopte syntax' },
+            { title: 'ARM naar Bicep Migratie', description: 'Converteer bestaande ARM JSON templates naar het meer leesbare en onderhoudbare Bicep formaat' },
+            { title: 'Module Bibliotheken', description: 'Bouw herbruikbare Bicep module registries voor consistente resource provisioning over teams' },
+            { title: 'Parameter Bestanden & Omgevingen', description: 'Beheer multi-omgeving deployments met gestructureerde parameter bestanden en conditionele logica' },
+          ],
+        },
+        {
+          title: 'OpenTofu',
+          description: 'OpenTofu is de open-source fork van Terraform, onderhouden door de Linux Foundation. Wij helpen organisaties OpenTofu te adopteren voor leveranciersonafhankelijk, community-gedreven infrastructuur beheer over elke cloud provider.',
+          items: [
+            { title: 'OpenTofu Migratie', description: 'Naadloos bestaande Terraform configuraties overzetten naar OpenTofu zonder downtime' },
+            { title: 'Multi-Cloud Provisioning', description: 'Beheer Azure, AWS en GCP resources vanuit één enkele OpenTofu configuratie' },
+            { title: 'State Encryptie', description: 'Benut OpenTofu\'s native state encryptie voor verbeterde beveiliging van gevoelige infrastructuur data' },
+            { title: 'Provider Ontwikkeling', description: 'Bouw en pas OpenTofu providers aan voor interne platforms en externe services' },
           ],
         },
         {
@@ -702,7 +649,7 @@ export const allServices: AllServicesTranslations = {
         {
           title: 'Training en Kennisoverdracht',
           items: [
-            { title: 'Team Workshops', description: 'Train uw team in IaC best practices' },
+            { title: 'Team Workshops', description: 'Train uw team in IaC best practices voor Terraform, Bicep en OpenTofu' },
             { title: 'Documentatie', description: 'Creëer uitgebreide documentatie voor uw IaC implementatie' },
             { title: 'Mentoring', description: 'Bied voortdurende ondersteuning en begeleiding voor uw team' },
           ],
@@ -712,6 +659,7 @@ export const allServices: AllServicesTranslations = {
         { title: 'Consistentie', description: 'Elimineer configuratie drift en zorg voor consistente omgevingen' },
         { title: 'Snelheid', description: 'Versnel provisioning en verminder handmatige taken' },
         { title: 'Betrouwbaarheid', description: 'Verminder menselijke fouten door automatisering' },
+        { title: 'Leverancier Flexibiliteit', description: 'Kies de juiste IaC tool voor elk scenario - Terraform, Bicep of OpenTofu' },
         { title: 'Documentatie', description: 'Zelf-documenterende infrastructuur door code' },
         { title: 'Versie Controle', description: 'Volg wijzigingen en implementeer juiste governance' },
         { title: 'Kosten Controle', description: 'Betere zichtbaarheid en beheer van cloud resources' },

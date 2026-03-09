@@ -24,7 +24,6 @@ import {
   AzureMonitoringPage,
   SecurityCompliancePage,
   CostOptimizationPage,
-  EnterpriseFileTransferPage,
   Microsoft365CopilotPage,
   CloudEngineeringPage,
   InfrastructureAsCodePage,
@@ -62,7 +61,6 @@ function App() {
               <Route path="/services/azure-monitoring" element={<AzureMonitoringPage />} />
               <Route path="/services/security-compliance" element={<SecurityCompliancePage />} />
               <Route path="/services/cost-optimization" element={<CostOptimizationPage />} />
-              <Route path="/services/enterprise-file-transfer" element={<EnterpriseFileTransferPage />} />
               <Route path="/services/microsoft-365-copilot" element={<Microsoft365CopilotPage />} />
               <Route path="/services/cloud-engineering" element={<CloudEngineeringPage />} />
               <Route path="/services/infrastructure-as-code" element={<InfrastructureAsCodePage />} />
