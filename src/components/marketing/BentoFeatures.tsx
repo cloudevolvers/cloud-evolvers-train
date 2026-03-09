@@ -25,8 +25,8 @@ const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel
         >
             {image && (
                 <>
-                    <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-10 group-hover:opacity-20 transition-opacity" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/30" />
+                    <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover object-top opacity-25 group-hover:opacity-35 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </>
             )}
             <div className="relative z-10 flex items-start justify-between mb-4">
@@ -141,9 +141,9 @@ export function BentoFeatures() {
                             <img
                                 src="/training-categories/azure-network-engineer.jpg"
                                 alt=""
-                                className="w-full h-full object-cover object-top opacity-20 group-hover:opacity-30 transition-opacity"
+                                className="w-full h-full object-cover object-top opacity-30 group-hover:opacity-40 transition-opacity"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20" />
                         </div>
                         <div className="relative z-10 p-6">
                             <div className="flex justify-between items-start">
