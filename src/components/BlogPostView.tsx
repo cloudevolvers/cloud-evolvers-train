@@ -153,7 +153,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
           >
             <Card className="bg-slate-800/90 border-slate-700/50 backdrop-blur-sm shadow-2xl">
               <CardContent className="p-6 lg:p-8 xl:p-10">
-                <Badge variant="secondary" className="text-emerald-300 mb-4 bg-blue-500/20 border-blue-500/30">
+                <Badge variant="secondary" className="text-emerald-300 mb-4 bg-neutral-700/50 border-neutral-600/30">
                   {getText(post.category)}
                 </Badge>
                 

@@ -71,7 +71,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                       flex items-center gap-3 p-3 rounded-lg
                       transition-all duration-200
                       ${isActive
-                        ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300'
+                        ? 'bg-neutral-100 dark:bg-neutral-800/50 text-foreground'
                         : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800'
                       }
                     `}
@@ -79,7 +79,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                     <div className={`
                       w-10 h-10 rounded-lg flex items-center justify-center
                       ${isActive
-                        ? 'bg-blue-200 dark:bg-blue-800/70'
+                        ? 'bg-neutral-200 dark:bg-neutral-700'
                         : 'bg-gray-200 dark:bg-slate-700'
                       }
                     `}>
@@ -87,7 +87,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                         size={20}
                         weight={isActive ? "fill" : "regular"}
                         className={isActive
-                          ? 'text-blue-600 dark:text-blue-400'
+                          ? 'text-foreground'
                           : 'text-gray-600 dark:text-gray-400'
                         }
                       />
@@ -131,7 +131,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                     flex-1 flex items-center justify-center gap-2 py-2 rounded-md
                     font-semibold transition-all duration-200
                     ${language === 'en'
-                      ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                      ? 'bg-foreground hover:bg-foreground/90 text-background'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800'
                     }
                   `}

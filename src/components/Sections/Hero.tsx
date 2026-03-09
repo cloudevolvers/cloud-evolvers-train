@@ -157,10 +157,10 @@ export const Hero = () => {
                                 <ShieldCheck className="w-3 h-3" />
                                 MCT CERTIFIED TRAINING
                             </div>
-                            <div className="px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center gap-2">
+                            <div className="px-3 py-1 rounded-full border border-border bg-neutral-500/5 dark:bg-white/5 text-muted-foreground flex items-center gap-2">
                                 <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground/50 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-foreground/70"></span>
                                 </span>
                                 NEXT BATCH: ENROLLING
                             </div>
@@ -168,7 +168,7 @@ export const Hero = () => {
 
                         <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.05] max-w-4xl text-foreground">
                             Training for <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-400 to-green-500 animate-gradient-x">
+                            <span className="text-foreground/80">
                                 Technology Professionals.
                             </span>
                         </h1>
@@ -188,7 +188,7 @@ export const Hero = () => {
                             <Button
                                 size="lg"
                                 onClick={() => navigate('/training')}
-                                className="bg-blue-600 hover:bg-blue-700 text-white border-none rounded-lg px-8 py-7 text-lg font-medium shadow-xl shadow-blue-500/20 transition-all hover:scale-105"
+                                className="bg-black hover:bg-black/90 dark:bg-white dark:hover:bg-white/90 text-white dark:text-black border-none rounded-lg px-8 py-7 text-lg font-medium shadow-xl transition-all hover:scale-105"
                             >
                                 <TerminalIcon className="w-5 h-5 mr-2.5" />
                                 Browse Courses
@@ -224,13 +224,13 @@ export const Hero = () => {
                                                 className={cn(
                                                     "group flex items-center gap-3 px-4 py-2.5",
                                                     "rounded-xl border border-white/10 dark:border-white/5 bg-white/40 dark:bg-white/5 backdrop-blur-md shadow-sm dark:shadow-none",
-                                                    "hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10"
+                                                    "hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                                                 )}
                                             >
                                                 <div className={cn("p-1.5 rounded-lg text-white", badge.color.split(' ')[0].replace('bg-', 'bg-').replace('100', '500/20').replace('50', '500/20'))}>
                                                     <Icon className="w-4 h-4 text-foreground" style={{ color: 'inherit' }} />
                                                 </div>
-                                                <span className="font-mono font-bold text-foreground group-hover:text-blue-500 transition-colors">
+                                                <span className="font-mono font-bold text-foreground group-hover:text-foreground/70 transition-colors">
                                                     {badge.code}
                                                 </span>
                                             </Link>
@@ -243,7 +243,7 @@ export const Hero = () => {
                         <div className="pt-6 border-t border-border/60 grid grid-cols-3 gap-8 max-w-2xl">
                             <div className="space-y-1">
                                 <h4 className="text-2xl font-bold text-foreground flex items-center gap-2">
-                                    AZ-900 <Award className="w-4 h-4 text-blue-500" />
+                                    AZ-900 <Award className="w-4 h-4 text-foreground/70" />
                                 </h4>
                                 <p className="text-xs text-muted-foreground uppercase tracking-wider">To Expert Level</p>
                             </div>
@@ -271,7 +271,7 @@ export const Hero = () => {
                         className="lg:col-span-5 relative h-full flex items-center"
                     >
                         {/* Abstract Decorative Elements behind Terminal */}
-                        <div className="absolute -inset-8 bg-gradient-to-r from-blue-600/20 to-green-500/20 rounded-full blur-3xl opacity-30 animate-pulse" />
+                        <div className="absolute -inset-8 bg-gradient-to-r from-neutral-500/20 to-neutral-400/20 rounded-full blur-3xl opacity-30 animate-pulse" />
 
                         <div className="w-full relative z-10 transform lg:translate-x-12 xl:translate-x-0">
                             <TerminalWindow />
@@ -283,8 +283,8 @@ export const Hero = () => {
                             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                             className="absolute -right-4 -top-12 hidden xl:flex items-center gap-3 bg-card border border-border p-4 rounded-xl shadow-2xl z-30 backdrop-blur-md"
                         >
-                            <div className="bg-blue-500/20 p-2.5 rounded-lg">
-                                <Award className="w-6 h-6 text-blue-500" />
+                            <div className="bg-neutral-100 dark:bg-white/10 p-2.5 rounded-lg">
+                                <Award className="w-6 h-6 text-foreground/70" />
                             </div>
                             <div>
                                 <div className="text-xs text-muted-foreground font-mono">Official Microsoft</div>

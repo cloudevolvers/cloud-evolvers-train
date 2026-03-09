@@ -34,7 +34,7 @@ export function HeaderBrand({ isScrolled }: HeaderBrandProps) {
             className="
               font-bold tracking-tight transition-all duration-300
               text-foreground
-              group-hover:text-blue-500 dark:group-hover:text-blue-400
+              group-hover:text-foreground/70
               leading-none
               text-lg sm:text-xl md:text-2xl
             "

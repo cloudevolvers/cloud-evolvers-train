@@ -6,7 +6,7 @@ import { SEO, PAGE_SEO } from "@/components/SEO";
 
 export default function HomePage() {
     return (
-        <div className="bg-background min-h-screen text-foreground selection:bg-blue-500/30 relative overflow-hidden">
+        <div className="bg-background min-h-screen text-foreground selection:bg-neutral-500/30 relative overflow-hidden">
             <SEO {...PAGE_SEO.home} />
 
             <main className="relative z-10 flex flex-col">
