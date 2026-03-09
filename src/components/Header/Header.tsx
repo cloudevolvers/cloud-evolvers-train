@@ -71,8 +71,8 @@ export function Header() {
           fixed top-0 left-0 right-0 z-[9999]
           transition-all duration-500 ease-out
           ${isScrolled
-            ? 'py-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-lg shadow-slate-200/20 dark:shadow-black/30 border-b border-slate-200/50 dark:border-slate-700/50'
-            : 'py-4 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200/30 dark:border-slate-700/30'
+            ? 'py-2 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl shadow-lg shadow-slate-200/20 dark:shadow-black/30 border-b border-slate-200/50 dark:border-neutral-800/50'
+            : 'py-4 bg-white/60 dark:bg-neutral-950/60 backdrop-blur-md border-b border-slate-200/30 dark:border-neutral-800/30'
           }
         `}
         initial={{ y: -100, opacity: 0 }}
@@ -95,7 +95,7 @@ export function Header() {
                 className="h-9 sm:h-10 w-auto rounded-md"
               />
               <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-slate-700 dark:group-hover:text-white/70 transition-colors duration-200">
                   Cloud Evolvers
                 </span>
                 <span className="text-[10px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wide hidden sm:block">
@@ -114,7 +114,7 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center">
-              <div className="flex items-center gap-1 p-1 rounded-full bg-slate-100/80 dark:bg-slate-800/50 backdrop-blur-sm">
+              <div className="flex items-center gap-1 p-1 rounded-full bg-slate-100/80 dark:bg-neutral-800/50 backdrop-blur-sm">
                 {navigationItems.map((item) => {
                   const isActive = location.pathname === item.href ||
                     (item.href !== '/' && location.pathname.startsWith(item.href));
@@ -127,15 +127,15 @@ export function Header() {
                         relative px-4 py-2 rounded-full text-sm font-medium
                         transition-all duration-200
                         ${isActive
-                          ? 'text-white'
-                          : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
+                          ? 'text-white dark:text-black'
+                          : 'text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white'
                         }
                       `}
                     >
                       {isActive && (
                         <motion.div
                           layoutId="nav-pill"
-                          className="absolute inset-0 bg-blue-600 dark:bg-blue-500 rounded-full"
+                          className="absolute inset-0 bg-neutral-900 dark:bg-white rounded-full"
                           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                         />
                       )}
@@ -152,15 +152,15 @@ export function Header() {
             {/* Controls */}
             <div className="flex items-center gap-2">
               {/* Language Switcher - Desktop */}
-              <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100 dark:bg-slate-800">
+              <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100 dark:bg-neutral-800">
                 <button
                   onClick={() => setLanguage('en')}
                   className={`
                     flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold
                     transition-all duration-200
                     ${language === 'en'
-                      ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
-                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                      ? 'bg-white dark:bg-neutral-700 text-slate-900 dark:text-white shadow-sm'
+                      : 'text-slate-500 dark:text-neutral-400 hover:text-slate-700 dark:hover:text-neutral-200'
                     }
                   `}
                 >
@@ -173,8 +173,8 @@ export function Header() {
                     flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold
                     transition-all duration-200
                     ${language === 'nl'
-                      ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
-                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                      ? 'bg-white dark:bg-neutral-700 text-slate-900 dark:text-white shadow-sm'
+                      : 'text-slate-500 dark:text-neutral-400 hover:text-slate-700 dark:hover:text-neutral-200'
                     }
                   `}
                 >
@@ -189,7 +189,7 @@ export function Header() {
                   e.stopPropagation();
                   setIsMobileMenuOpen(!isMobileMenuOpen);
                 }}
-                className="lg:hidden p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
+                className="lg:hidden p-2 rounded-full bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors duration-200"
                 aria-label="Toggle menu"
               >
                 <AnimatePresence mode="wait">
@@ -224,7 +224,7 @@ export function Header() {
             className="fixed top-16 left-0 right-0 z-[9998] p-4 lg:hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl dark:shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-xl dark:shadow-2xl border border-slate-200 dark:border-neutral-800 overflow-hidden">
               <nav className="p-2">
                 {navigationItems.map((item, index) => {
                   const isActive = location.pathname === item.href;
@@ -243,8 +243,8 @@ export function Header() {
                           flex items-center gap-3 px-4 py-3 rounded-xl
                           transition-colors duration-200
                           ${isActive
-                            ? 'bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400'
-                            : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
+                            ? 'bg-neutral-100 dark:bg-white/10 text-neutral-900 dark:text-white'
+                            : 'text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-neutral-800'
                           }
                         `}
                       >
@@ -257,7 +257,7 @@ export function Header() {
               </nav>
 
               {/* Mobile Language Switcher */}
-              <div className="p-4 border-t border-slate-100 dark:border-slate-800">
+              <div className="p-4 border-t border-slate-100 dark:border-neutral-800">
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setLanguage('en')}
@@ -265,8 +265,8 @@ export function Header() {
                       flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-semibold text-sm
                       transition-all duration-200
                       ${language === 'en'
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'
+                        ? 'bg-white text-black dark:bg-white dark:text-black'
+                        : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-300'
                       }
                     `}
                   >
@@ -279,8 +279,8 @@ export function Header() {
                       flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-semibold text-sm
                       transition-all duration-200
                       ${language === 'nl'
-                        ? 'bg-orange-500 text-white'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300'
+                        ? 'bg-white text-black dark:bg-white dark:text-black'
+                        : 'bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-300'
                       }
                     `}
                   >

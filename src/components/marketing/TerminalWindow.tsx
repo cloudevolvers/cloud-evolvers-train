@@ -66,7 +66,7 @@ export function TerminalWindow({ className }: TerminalProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`w-full max-w-lg rounded-xl overflow-hidden border border-white/10 bg-[#0d1117]/90 backdrop-blur-md shadow-2xl ${className}`}
+            className={`w-full max-w-lg rounded-xl overflow-hidden border border-white/10 bg-[#111111]/90 backdrop-blur-md shadow-2xl ${className}`}
         >
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-white/5">
@@ -87,7 +87,7 @@ export function TerminalWindow({ className }: TerminalProps) {
                 {lines.map((line, index) => (
                     <div key={index} className="mb-2">
                         {line.startsWith(">") ? (
-                            <div className="text-blue-400 font-bold">
+                            <div className="text-green-400 font-bold">
                                 <span className="mr-2 text-pink-500">$</span>
                                 {line.substring(2)}
                             </div>
@@ -104,7 +104,7 @@ export function TerminalWindow({ className }: TerminalProps) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: [0, 1, 0] }}
                         transition={{ repeat: Infinity, duration: 0.8 }}
-                        className="inline-block w-2 h-4 bg-blue-500 ml-1 align-middle"
+                        className="inline-block w-2 h-4 bg-white ml-1 align-middle"
                     />
                 )}
             </div>

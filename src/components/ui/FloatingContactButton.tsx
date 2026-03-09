@@ -94,7 +94,7 @@ export function FloatingContactButton({
           onClick={() => setIsOpen(true)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-gradient-to-br from-blue-600 to-sky-500 text-white shadow-lg hover:shadow-xl transition-shadow cursor-pointer border-2 border-white/20"
+          className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-black shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
           aria-label="Send us a message"
         >
           <Envelope className="w-6 h-6" weight="fill" />
@@ -119,24 +119,24 @@ export function FloatingContactButton({
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="fixed bottom-24 right-5 w-[380px] max-w-[calc(100vw-40px)] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl z-[1000000] overflow-hidden border border-gray-200 dark:border-slate-700"
+              className="fixed bottom-24 right-5 w-[380px] max-w-[calc(100vw-40px)] bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl z-[1000000] overflow-hidden border border-gray-200 dark:border-neutral-700"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-blue-600 to-sky-500 px-5 py-4 flex items-center justify-between">
+              <div className="bg-white dark:bg-neutral-800 px-5 py-4 flex items-center justify-between border-b border-gray-200 dark:border-neutral-700">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-white/20 rounded-lg">
-                    <Envelope className="w-5 h-5 text-white" weight="fill" />
+                  <div className="p-2 bg-neutral-100 dark:bg-neutral-700 rounded-lg">
+                    <Envelope className="w-5 h-5 text-neutral-900 dark:text-white" weight="fill" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg">Quick Message</h3>
-                    <p className="text-white/80 text-xs">We'll respond within 24 hours</p>
+                    <h3 className="text-neutral-900 dark:text-white font-bold text-lg">Quick Message</h3>
+                    <p className="text-neutral-500 dark:text-neutral-400 text-xs">We'll respond within 24 hours</p>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1.5 hover:bg-white/20 rounded-lg transition-colors"
                 >
-                  <X className="w-5 h-5 text-white" />
+                  <X className="w-5 h-5 text-neutral-900 dark:text-white" />
                 </button>
               </div>
 
@@ -174,7 +174,7 @@ export function FloatingContactButton({
                           placeholder="Your Name *"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="pl-10 h-11 bg-gray-50 dark:bg-slate-800 border-gray-200 dark:border-slate-700"
+                          className="pl-10 h-11 bg-gray-50 dark:bg-neutral-800 border-gray-200 dark:border-neutral-700"
                           required
                         />
                       </div>
@@ -186,7 +186,7 @@ export function FloatingContactButton({
                           placeholder="Your Email *"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="pl-10 h-11 bg-gray-50 dark:bg-slate-800 border-gray-200 dark:border-slate-700"
+                          className="pl-10 h-11 bg-gray-50 dark:bg-neutral-800 border-gray-200 dark:border-neutral-700"
                           required
                         />
                       </div>
@@ -198,7 +198,7 @@ export function FloatingContactButton({
                           placeholder="Phone (optional)"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="pl-10 h-11 bg-gray-50 dark:bg-slate-800 border-gray-200 dark:border-slate-700"
+                          className="pl-10 h-11 bg-gray-50 dark:bg-neutral-800 border-gray-200 dark:border-neutral-700"
                         />
                       </div>
 
@@ -206,7 +206,7 @@ export function FloatingContactButton({
                         placeholder="Your message *"
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="min-h-[100px] bg-gray-50 dark:bg-slate-800 border-gray-200 dark:border-slate-700 resize-none"
+                        className="min-h-[100px] bg-gray-50 dark:bg-neutral-800 border-gray-200 dark:border-neutral-700 resize-none"
                         required
                       />
                     </div>
@@ -214,7 +214,7 @@ export function FloatingContactButton({
                     <Button
                       type="submit"
                       disabled={isSubmitting || !isFormValid}
-                      className="w-full h-12 text-base font-bold bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full h-12 text-base font-bold bg-white hover:bg-white/90 text-black shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center gap-2">
