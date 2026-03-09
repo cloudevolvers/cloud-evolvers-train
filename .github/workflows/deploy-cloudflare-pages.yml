@@ -4,9 +4,9 @@ name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: ["main", "feature/*", "fix/*"]
+    branches: ["master", "feature/*", "fix/*"]
   pull_request:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
     inputs:
       environment:
@@ -32,7 +32,7 @@ jobs:
   deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment || (github.ref_name == 'main' && 'production') || 'poc' }}
+    environment: ${{ github.event.inputs.environment || (github.ref_name == 'master' && 'production') || 'poc' }}
 
     steps:
       - name: Checkout code
@@ -75,7 +75,7 @@ jobs:
         env:
           NODE_ENV: production
           VITE_COMMIT_SHA: ${{ github.sha }}
-          VITE_ENVIRONMENT: ${{ github.event.inputs.environment || (github.ref_name == 'main' && 'production') || 'poc' }}
+          VITE_ENVIRONMENT: ${{ github.event.inputs.environment || (github.ref_name == 'master' && 'production') || 'poc' }}
           VITE_BUILD_DATE: ${{ steps.build-date.outputs.date }}
           # Frontend environment variables (public)
           VITE_API_KEY: ${{ secrets.API_KEY }}
@@ -146,7 +146,7 @@ jobs:
           echo "🔑 Commit:  ${{ github.sha }}"
           echo ""
 
-          if [[ "${{ github.ref_name }}" == "main" ]]; then
+          if [[ "${{ github.ref_name }}" == "master" ]]; then
             echo "🌍 Environment: Production"
             echo ""
             echo "📡 URLs:"

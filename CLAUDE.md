@@ -22,7 +22,7 @@ See `.env.example` for the expected environment variables. The actual `.env` fil
 
 | Environment | URL | Branch |
 |-------------|-----|--------|
-| **Production** | `cloudevolvers.com` / `www.cloudevolvers.com` | `main` |
+| **Production** | `cloudevolvers.com` / `www.cloudevolvers.com` | `master` |
 | **Test/Preview** | `test.cloudevolvers.com` | PR branches |
 
 ## Critical Rules

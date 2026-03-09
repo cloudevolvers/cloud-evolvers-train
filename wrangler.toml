@@ -26,7 +26,7 @@ binding = "PRICING_DB"
 database_name = "cloud-evolvers-pricing"
 database_id = "c07b171f-987f-4d91-9126-64663b107611"
 
-# Production environment (main branch)
+# Production environment (master branch)
 # URL: cloudevolvers.com / www.cloudevolvers.com
 [env.production]
 vars = { VITE_ENVIRONMENT = "production", VITE_SITE_URL = "https://cloudevolvers.com" }
