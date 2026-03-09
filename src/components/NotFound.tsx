@@ -33,7 +33,7 @@ export function NotFound() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-8xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent mb-4"
+              className="text-8xl font-bold text-foreground mb-4"
             >
               404
             </motion.h1>
