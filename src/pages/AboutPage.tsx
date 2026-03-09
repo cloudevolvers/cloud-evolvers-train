@@ -58,7 +58,7 @@ export function AboutPage() {
                 <CardContent className="p-4 md:p-6 lg:p-8">
                   <div className="flex items-center mb-4 md:mb-5">
                     <div className="bg-emerald-500/10 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mr-3 flex-shrink-0">
-                      <Users className="text-emerald-600 dark:text-emerald-400 h-5 w-5 md:h-6 md:w-6" weight="duotone" />
+                      <Users className="text-emerald-600 dark:text-emerald-400 h-5 w-5 md:h-6 md:w-6" weight="regular" />
                     </div>
                     <h2 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold">
                       {t.about?.ourStory?.title || "Our Story"}
@@ -93,7 +93,7 @@ export function AboutPage() {
                 <CardContent className="p-4 md:p-6 lg:p-8">
                   <div className="flex items-center mb-4 md:mb-5">
                     <div className="bg-teal-500/10 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mr-3 flex-shrink-0">
-                      <Target className="text-teal-600 dark:text-teal-400 h-5 w-5 md:h-6 md:w-6" weight="duotone" />
+                      <Target className="text-teal-600 dark:text-teal-400 h-5 w-5 md:h-6 md:w-6" weight="regular" />
                     </div>
                     <h2 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold">
                       {t.about?.ourMission?.title || "Our Mission"}
@@ -159,7 +159,7 @@ export function AboutPage() {
                   <Card className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 h-full shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/40">
                     <CardContent className="p-4 md:p-6 text-center">
                       <div className="bg-emerald-500/10 w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mx-auto mb-3">
-                        <specialty.icon className="text-emerald-600 dark:text-emerald-400 h-6 w-6 md:h-7 md:w-7" weight="duotone" />
+                        <specialty.icon className="text-emerald-600 dark:text-emerald-400 h-6 w-6 md:h-7 md:w-7" weight="regular" />
                       </div>
                       <h3 className="text-sm md:text-base text-foreground font-semibold mb-2">{specialty.title}</h3>
                       <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{specialty.description}</p>

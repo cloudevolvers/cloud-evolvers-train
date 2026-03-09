@@ -112,7 +112,7 @@ export function BackgroundIcons({ variant = 'default' }: BackgroundIconsProps) {
               delay 
             }}
           >
-            <Icon size={size} weight="duotone" />
+            <Icon size={size} weight="regular" />
           </motion.div>
         );
       })}

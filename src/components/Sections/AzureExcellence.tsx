@@ -15,6 +15,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+// @ts-ignore
+import ReactCountryFlag from 'react-country-flag';
 
 export function AzureExcellence() {
   const { t } = useTranslations();
@@ -72,7 +74,7 @@ export function AzureExcellence() {
       {/* Hero */}
       <div className="text-center space-y-6">
         <Badge variant="outline" className="px-4 py-2 text-sm font-semibold bg-neutral-500/5 dark:bg-white/5 border-border text-muted-foreground">
-          <Certificate className="h-4 w-4 mr-2" weight="duotone" />
+          <Certificate className="h-4 w-4 mr-2" weight="regular" />
           {a?.badge || 'Azure and Microsoft Stack Excellence'}
         </Badge>
 
@@ -87,16 +89,16 @@ export function AzureExcellence() {
         <div className="flex items-center justify-center gap-3 pt-2">
           <Badge variant="secondary" className="px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 border-border text-foreground">
             <div className="flex items-center gap-2">
-              <img src="/flags/nl.svg" alt="Netherlands" className="w-4 h-4 rounded-sm" />
-              <img src="/flags/be.svg" alt="Belgium" className="w-4 h-4 rounded-sm" />
-              <img src="/flags/lu.svg" alt="Luxembourg" className="w-4 h-4 rounded-sm" />
+              <ReactCountryFlag countryCode="NL" svg style={{ width: '16px', height: '16px' }} />
+              <ReactCountryFlag countryCode="BE" svg style={{ width: '16px', height: '16px' }} />
+              <ReactCountryFlag countryCode="LU" svg style={{ width: '16px', height: '16px' }} />
               <span className="font-semibold text-sm">BENELUX</span>
             </div>
           </Badge>
           <span className="text-muted-foreground text-sm">&</span>
           <Badge variant="secondary" className="px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 border-border text-foreground">
             <div className="flex items-center gap-2">
-              <img src="/flags/gb.svg" alt="United Kingdom" className="w-4 h-4 rounded-sm" />
+              <ReactCountryFlag countryCode="GB" svg style={{ width: '16px', height: '16px' }} />
               <span className="font-semibold text-sm">{a?.uk || 'UK'}</span>
             </div>
           </Badge>
@@ -116,7 +118,7 @@ export function AzureExcellence() {
             <Card className="bg-card border-border hover:border-foreground/20 transition-colors">
               <CardContent className="p-6 text-center space-y-3">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-neutral-100 dark:bg-white/10">
-                  <stat.icon className="h-6 w-6 text-foreground/70" weight="duotone" />
+                  <stat.icon className="h-6 w-6 text-foreground/70" weight="regular" />
                 </div>
                 <div className="text-3xl font-bold text-foreground">{stat.value}</div>
                 <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
@@ -176,7 +178,7 @@ export function AzureExcellence() {
               <CardContent className="p-8 space-y-5">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-neutral-100 dark:bg-white/10 shrink-0">
-                    <card.icon className="h-6 w-6 text-foreground/70" weight="duotone" />
+                    <card.icon className="h-6 w-6 text-foreground/70" weight="regular" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground leading-tight pt-1">
                     {card.title}

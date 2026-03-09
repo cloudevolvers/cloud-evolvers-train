@@ -252,7 +252,7 @@ export default function TrainingConsultationForm({
         >
               <div className="space-y-1.5">
                 <Label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <User className="h-4 w-4 text-blue-500" weight="duotone" />
+                  <User className="h-4 w-4 text-blue-500" weight="regular" />
                   {t.fullName}
                   <span className="text-red-500">*</span>
                 </Label>
@@ -268,7 +268,7 @@ export default function TrainingConsultationForm({
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <Envelope className="h-4 w-4 text-blue-500" weight="duotone" />
+                  <Envelope className="h-4 w-4 text-blue-500" weight="regular" />
                   {t.email}
                   <span className="text-red-500">*</span>
                 </Label>
@@ -304,7 +304,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label htmlFor="phone" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Phone className="h-4 w-4 text-blue-500" weight="duotone" />
+                <Phone className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.phone}
               </Label>
               <Input
@@ -326,7 +326,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label htmlFor="training" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <GraduationCap className="h-4 w-4 text-blue-500" weight="duotone" />
+                <GraduationCap className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.interestedTraining}
               </Label>
               <Select
@@ -355,7 +355,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Calendar className="h-4 w-4 text-blue-500" weight="duotone" />
+                <Calendar className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.preferredDates}
               </Label>
               <p className="text-xs text-foreground/80 leading-relaxed">
@@ -429,7 +429,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <ChatCircle className="h-4 w-4 text-blue-500" weight="duotone" />
+                <ChatCircle className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.additionalInfo}
               </Label>
               <Textarea

@@ -49,7 +49,7 @@ export default function ServicesPage() {
                     <CardHeader className="pb-4">
                       <div className="flex items-start gap-4">
                         <div className="p-3 bg-neutral-100 dark:bg-white/10 rounded-xl border border-border shrink-0">
-                          <IconComponent size={24} className="text-foreground/70" weight="duotone" />
+                          <IconComponent size={24} className="text-foreground/70" weight="regular" />
                         </div>
                         <CardTitle className="text-foreground text-lg leading-tight">
                           {service.title}

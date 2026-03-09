@@ -169,7 +169,7 @@ export function FloatingContactButton({
 
                     <div className="space-y-3">
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" weight="duotone" />
+                        <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" weight="regular" />
                         <Input
                           placeholder="Your Name *"
                           value={formData.name}
@@ -180,7 +180,7 @@ export function FloatingContactButton({
                       </div>
 
                       <div className="relative">
-                        <Envelope className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" weight="duotone" />
+                        <Envelope className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" weight="regular" />
                         <Input
                           type="email"
                           placeholder="Your Email *"
@@ -192,7 +192,7 @@ export function FloatingContactButton({
                       </div>
 
                       <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" weight="duotone" />
+                        <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" weight="regular" />
                         <Input
                           type="tel"
                           placeholder="Phone (optional)"

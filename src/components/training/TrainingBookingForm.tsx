@@ -273,7 +273,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
       >
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <User className="h-4 w-4 text-blue-500" weight="duotone" />
+            <User className="h-4 w-4 text-blue-500" weight="regular" />
             {t.firstName}
             <span className="text-red-500">*</span>
           </label>
@@ -287,7 +287,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         </div>
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <User className="h-4 w-4 text-blue-500" weight="duotone" />
+            <User className="h-4 w-4 text-blue-500" weight="regular" />
             {t.lastName}
             <span className="text-red-500">*</span>
           </label>
@@ -310,7 +310,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
       >
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <Envelope className="h-4 w-4 text-blue-500" weight="duotone" />
+            <Envelope className="h-4 w-4 text-blue-500" weight="regular" />
             {t.email}
             <span className="text-red-500">*</span>
           </label>
@@ -325,7 +325,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         </div>
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <Buildings className="h-4 w-4 text-blue-500" weight="duotone" />
+            <Buildings className="h-4 w-4 text-blue-500" weight="regular" />
             {t.company}
           </label>
           <Input
@@ -378,7 +378,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <Phone className="h-4 w-4 text-blue-500" weight="duotone" />
+                  <Phone className="h-4 w-4 text-blue-500" weight="regular" />
                   {t.phone}
                 </label>
                 <Input
@@ -391,7 +391,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
               </div>
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <Briefcase className="h-4 w-4 text-blue-500" weight="duotone" />
+                  <Briefcase className="h-4 w-4 text-blue-500" weight="regular" />
                   {t.position}
                 </label>
                 <Input
@@ -406,7 +406,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             {/* Experience Level */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <GraduationCap className="h-4 w-4 text-blue-500" weight="duotone" />
+                <GraduationCap className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.experience}
               </label>
               <Select 
@@ -428,7 +428,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             {/* Preferred Date */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Calendar className="h-4 w-4 text-blue-500" weight="duotone" />
+                <Calendar className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.preferredDate}
               </label>
               <Input
@@ -442,7 +442,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             {/* Notes */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <NotePencil className="h-4 w-4 text-blue-500" weight="duotone" />
+                <NotePencil className="h-4 w-4 text-blue-500" weight="regular" />
                 {t.notes}
               </label>
               <Textarea

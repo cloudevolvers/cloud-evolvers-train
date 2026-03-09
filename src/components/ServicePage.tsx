@@ -179,7 +179,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
                 <Card className="bg-gradient-to-br from-neutral-500/5 via-neutral-400/5 to-neutral-300/5 border-border backdrop-blur-sm shadow-2xl overflow-hidden">
                   <CardContent className="p-10 lg:p-14 text-center">
                     <div className="inline-flex items-center justify-center p-4 bg-neutral-500/10 dark:bg-white/10 rounded-2xl mb-6">
-                      <CheckCircle size={32} className="text-foreground/70" weight="duotone" />
+                      <CheckCircle size={32} className="text-foreground/70" weight="regular" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl text-foreground font-bold mb-4">
                       {language === 'nl' ? 'Klaar om te beginnen?' : 'Ready to Get Started?'}
