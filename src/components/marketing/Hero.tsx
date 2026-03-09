@@ -21,12 +21,12 @@ export function Hero() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
                     {/* Left Column: Typography & CTAs */}
-                    <div className="order-2 lg:order-1 flex flex-col items-start text-left space-y-8">
+                    <div className="order-1 lg:order-1 flex flex-col items-start text-left space-y-8">
                         <div className="w-full">
                             <img
                                 src="/cloudevolvers-hero-logo.png"
                                 alt="Cloud Evolvers"
-                                className="w-16 h-16 sm:w-20 sm:h-20 mb-6"
+                                className="hidden sm:block w-16 h-16 lg:w-20 lg:h-20 mb-6 rounded-2xl"
                             />
                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6">
                                 {t.hero?.marketing?.headline1 || 'Master the Cloud.'} <br />
@@ -78,7 +78,7 @@ export function Hero() {
                     </div>
 
                     {/* Right Column: Terminal */}
-                    <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div className="order-2 lg:order-2 flex justify-center lg:justify-end">
                         <TerminalWindow className="w-full shadow-2xl shadow-blue-500/10" />
                     </div>
 

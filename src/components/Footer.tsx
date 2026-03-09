@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-border lg:border-t-0">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <Envelope className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               {t.footer?.getInTouch || 'Get in Touch'}
