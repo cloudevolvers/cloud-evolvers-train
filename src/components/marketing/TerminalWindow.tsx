@@ -66,7 +66,7 @@ export function TerminalWindow({ className }: TerminalProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className={`w-full max-w-lg rounded-xl overflow-hidden border border-white/10 bg-[#111111]/90 backdrop-blur-md shadow-2xl ${className}`}
+            className={`w-full max-w-lg rounded-xl overflow-hidden border border-neutral-200 dark:border-white/10 bg-[#111111]/95 backdrop-blur-md shadow-2xl ${className}`}
         >
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 bg-white/5 border-b border-white/5">

@@ -28,9 +28,9 @@ export function Hero() {
                                 alt="Cloud Evolvers"
                                 className="hidden sm:block w-16 h-16 lg:w-20 lg:h-20 mb-6 rounded-2xl"
                             />
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6">
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6">
                                 {t.hero?.marketing?.headline1 || 'Master the Cloud.'} <br />
-                                <span className="text-white/60">
+                                <span className="text-muted-foreground">
                                     {t.hero?.marketing?.headline2 || 'Every Discipline.'}
                                 </span>
                             </h1>
@@ -43,7 +43,7 @@ export function Hero() {
                                 <Link to="/training">
                                     <Button
                                         size="lg"
-                                        className="bg-white hover:bg-white/90 text-black border-none h-12 px-8 text-base group w-full sm:w-auto"
+                                        className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black border-none h-12 px-8 text-base group w-full sm:w-auto"
                                     >
                                         {t.hero?.marketing?.startTraining || 'Explore Trainings'}
                                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -53,25 +53,25 @@ export function Hero() {
                                     <Button
                                         size="lg"
                                         variant="outline"
-                                        className="border-white/10 hover:bg-white/5 text-white h-12 px-8 text-base w-full sm:w-auto"
+                                        className="border-border hover:bg-accent text-foreground h-12 px-8 text-base w-full sm:w-auto"
                                     >
                                         {t.hero?.marketing?.viewPathways || 'Contact Us'}
                                     </Button>
                                 </Link>
                             </div>
 
-                            <div className="mt-12 flex flex-wrap items-center gap-4 sm:gap-8 text-sm w-full pt-8 border-t border-white/5">
+                            <div className="mt-12 flex flex-wrap items-center gap-4 sm:gap-8 text-sm w-full pt-8 border-t border-border">
                                 <div className="flex items-center gap-2">
-                                    <ShieldCheck className="w-5 h-5 text-white/50" />
-                                    <span className="text-white/50">{t.hero?.marketing?.mct || 'Microsoft Certified Trainer'}</span>
+                                    <ShieldCheck className="w-5 h-5 text-muted-foreground" />
+                                    <span className="text-muted-foreground">{t.hero?.marketing?.mct || 'Microsoft Certified Trainer'}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Zap className="w-5 h-5 text-white/50" />
-                                    <span className="text-white/50">{t.hero?.marketing?.instantAccess || 'Instant Access'}</span>
+                                    <Zap className="w-5 h-5 text-muted-foreground" />
+                                    <span className="text-muted-foreground">{t.hero?.marketing?.instantAccess || 'Instant Access'}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <TerminalIcon className="w-5 h-5 text-white/50" />
-                                    <span className="text-white/50">{t.hero?.marketing?.realWorld || 'Real World Application First'}</span>
+                                    <TerminalIcon className="w-5 h-5 text-muted-foreground" />
+                                    <span className="text-muted-foreground">{t.hero?.marketing?.realWorld || 'Real World Application First'}</span>
                                 </div>
                             </div>
                         </div>

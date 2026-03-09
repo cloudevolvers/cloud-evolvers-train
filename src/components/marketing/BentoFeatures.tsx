@@ -19,7 +19,7 @@ const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel
         <Link
             to={to}
             className={cn(
-                "group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors p-6 flex flex-col justify-between",
+                "group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-white/5 bg-neutral-50 dark:bg-white/[0.02] hover:bg-neutral-100 dark:hover:bg-white/[0.04] transition-colors p-6 flex flex-col justify-between",
                 className
             )}
         >
@@ -30,18 +30,18 @@ const BentoCard = ({ title, description, icon: Icon, className, to, exploreLabel
                 </>
             )}
             <div className="relative z-10 flex items-start justify-between mb-4">
-                <div className="p-2.5 rounded-lg bg-white/10 text-white/70 group-hover:text-white transition-colors">
+                <div className="p-2.5 rounded-lg bg-black/5 dark:bg-white/10 text-foreground/70 group-hover:text-foreground transition-colors">
                     <Icon className="w-5 h-5" />
                 </div>
             </div>
 
             <div className="relative z-10">
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-white/80 transition-colors">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-4">{description}</p>
+                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-foreground/80 transition-colors">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{description}</p>
             </div>
 
             <div className="relative z-10 mt-auto">
-                <span className="inline-flex items-center text-xs font-medium text-white/70 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                <span className="inline-flex items-center text-xs font-medium text-muted-foreground opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                     {exploreLabel} <ArrowRight className="w-3 h-3 ml-1" />
                 </span>
             </div>
@@ -58,15 +58,15 @@ export function BentoFeatures() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem]">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
                     <div className="max-w-xl">
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+                        <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
                             {b?.title || 'Enterprise-Grade Training'}
                         </h2>
-                        <p className="text-lg text-gray-400">
+                        <p className="text-lg text-muted-foreground">
                             {b?.subtitle || 'A comprehensive ecosystem of cloud learning modules designed for scale and complexity.'}
                         </p>
                     </div>
                     <Link to="/training">
-                        <Button variant="ghost" className="text-white/70 hover:text-white">
+                        <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
                             {b?.viewAllModules || 'View All Modules'} <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                     </Link>
@@ -77,7 +77,7 @@ export function BentoFeatures() {
                     {/* Large Hero Card - Azure Solutions Architect */}
                     <Link
                         to="/training/azure-solutions-architect"
-                        className="col-span-1 md:col-span-2 xl:col-span-2 row-span-2 rounded-3xl border border-white/10 bg-black relative overflow-hidden group hover:border-white/20 transition-colors"
+                        className="col-span-1 md:col-span-2 xl:col-span-2 row-span-2 rounded-3xl border border-neutral-200 dark:border-white/10 bg-black relative overflow-hidden group hover:border-neutral-400 dark:hover:border-white/20 transition-colors"
                     >
                         <div className="absolute inset-0">
                             <img
@@ -135,7 +135,7 @@ export function BentoFeatures() {
                     {/* Wide Card - Network */}
                     <Link
                         to="/training/azure-network-engineer"
-                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-white/5 relative overflow-hidden hover:border-white/15 transition-colors group"
+                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-2xl border border-neutral-200 dark:border-white/5 relative overflow-hidden hover:border-neutral-400 dark:hover:border-white/15 transition-colors group"
                     >
                         <div className="absolute inset-0">
                             <img
@@ -179,7 +179,7 @@ export function BentoFeatures() {
                     {/* MCT Trainer Card - Your Instructor */}
                     <Link
                         to="/about"
-                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-3xl border border-white/10 bg-neutral-950 relative overflow-hidden group hover:border-white/20 transition-all"
+                        className="col-span-1 md:col-span-2 xl:col-span-2 rounded-3xl border border-neutral-200 dark:border-white/10 bg-neutral-950 relative overflow-hidden group hover:border-neutral-400 dark:hover:border-white/20 transition-all"
                     >
                         <div className="flex flex-col sm:flex-row">
                             {/* Photo side */}

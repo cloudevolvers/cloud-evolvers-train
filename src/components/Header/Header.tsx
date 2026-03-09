@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ import {
 } from "@phosphor-icons/react";
 import { useTranslations } from "@/hooks/use-translations";
 import { useLanguageContext } from "@/contexts/LanguageContext";
+import { ThemeToggle } from "./ThemeToggle";
 // @ts-ignore
 import ReactCountryFlag from 'react-country-flag';
 
@@ -29,16 +30,29 @@ import ReactCountryFlag from 'react-country-flag';
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light' || stored === 'dark') return stored;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark';
+    }
+    return 'dark';
+  });
 
   const { t } = useTranslations();
   const { language, setLanguage } = useLanguageContext();
   const location = useLocation();
 
-  // Force dark mode
+  // Apply theme to document
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove('light');
-    root.classList.add('dark');
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = useCallback(() => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   }, []);
 
   // Scroll detection
@@ -128,7 +142,7 @@ export function Header() {
                         transition-all duration-200
                         ${isActive
                           ? 'text-white dark:text-black'
-                          : 'text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white'
+                          : 'text-slate-600 dark:text-neutral-300 hover:text-slate-900 dark:hover:text-white'
                         }
                       `}
                     >
@@ -151,6 +165,11 @@ export function Header() {
 
             {/* Controls */}
             <div className="flex items-center gap-2">
+              {/* Theme Toggle - Desktop */}
+              <div className="hidden sm:block">
+                <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+              </div>
+
               {/* Language Switcher - Desktop */}
               <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100 dark:bg-neutral-800">
                 <button
@@ -244,7 +263,7 @@ export function Header() {
                           transition-colors duration-200
                           ${isActive
                             ? 'bg-neutral-100 dark:bg-white/10 text-neutral-900 dark:text-white'
-                            : 'text-slate-600 dark:text-neutral-400 hover:bg-slate-50 dark:hover:bg-neutral-800'
+                            : 'text-slate-600 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-neutral-800'
                           }
                         `}
                       >
@@ -256,8 +275,14 @@ export function Header() {
                 })}
               </nav>
 
-              {/* Mobile Language Switcher */}
-              <div className="p-4 border-t border-slate-100 dark:border-neutral-800">
+              {/* Mobile Theme Toggle & Language Switcher */}
+              <div className="p-4 border-t border-slate-100 dark:border-neutral-800 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-600 dark:text-neutral-400">Theme</span>
+                  <ThemeToggle theme={theme} toggleTheme={toggleTheme} variant="mobile" />
+                </div>
+              </div>
+              <div className="px-4 pb-4">
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setLanguage('en')}

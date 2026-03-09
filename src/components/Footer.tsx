@@ -70,14 +70,14 @@ const Footer: React.FC = () => {
               <div className="space-y-3 text-gray-600 dark:text-slate-400">
                 <a
                   href="mailto:training@cloudevolvers.com"
-                  className="flex items-center gap-2 hover:text-white transition-colors"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Envelope className="w-4 h-4" />
                   training@cloudevolvers.com
                 </a>
                 <a
                   href="tel:+31634272027"
-                  className="flex items-center gap-2 hover:text-white transition-colors"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   +31 6 34272027
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
           {/* Contact Form Section */}
           <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-border lg:border-t-0">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-              <Envelope className="w-5 h-5 text-white/70" />
+              <Envelope className="w-5 h-5 text-muted-foreground" />
               {t.footer?.getInTouch || 'Get in Touch'}
             </h3>
 
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
                 <Button
                   type="submit"
                   disabled={!isFormValid || isSubmitting}
-                  className="w-full sm:w-auto bg-white hover:bg-white/90 text-black"
+                  className="w-full sm:w-auto bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">

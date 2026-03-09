@@ -10,12 +10,11 @@ interface ThemeToggleProps {
 
 /**
  * ThemeToggle Component - Light/Dark mode switcher
- * 
- * Provides visual toggle between light and dark themes.
- * Supports both mobile and desktop variants with smooth animations.
+ *
+ * Monochrome design: subtle icon-only toggle for desktop,
+ * larger button for mobile.
  */
 export function ThemeToggle({ theme, toggleTheme, variant = 'desktop' }: ThemeToggleProps) {
-  const iconSize = variant === 'mobile' ? 20 : 18;
   const isDark = theme === 'dark';
 
   if (variant === 'mobile') {
@@ -27,7 +26,7 @@ export function ThemeToggle({ theme, toggleTheme, variant = 'desktop' }: ThemeTo
           e.stopPropagation();
           toggleTheme();
         }}
-        className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-all duration-200"
+        className="p-2 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all duration-200"
         aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       >
         <motion.div
@@ -37,9 +36,9 @@ export function ThemeToggle({ theme, toggleTheme, variant = 'desktop' }: ThemeTo
           transition={{ duration: 0.3 }}
         >
           {isDark ? (
-            <Sun size={iconSize} weight="duotone" className="text-amber-500" />
+            <Sun size={20} weight="duotone" className="text-neutral-300" />
           ) : (
-            <Moon size={iconSize} weight="duotone" className="text-blue-600" />
+            <Moon size={20} weight="duotone" className="text-neutral-700" />
           )}
         </motion.div>
       </Button>
@@ -47,11 +46,9 @@ export function ThemeToggle({ theme, toggleTheme, variant = 'desktop' }: ThemeTo
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
+    <button
       onClick={toggleTheme}
-      className="flex items-center gap-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 transition-all duration-200"
+      className="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors duration-200"
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       <motion.div
@@ -61,14 +58,11 @@ export function ThemeToggle({ theme, toggleTheme, variant = 'desktop' }: ThemeTo
         transition={{ duration: 0.3 }}
       >
         {isDark ? (
-          <Sun size={iconSize} weight="duotone" className="text-amber-500" />
+          <Sun size={18} weight="duotone" className="text-neutral-300" />
         ) : (
-          <Moon size={iconSize} weight="duotone" className="text-blue-600" />
+          <Moon size={18} weight="duotone" className="text-neutral-700" />
         )}
       </motion.div>
-      <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-        {isDark ? 'Light' : 'Dark'}
-      </span>
-    </Button>
+    </button>
   );
 }

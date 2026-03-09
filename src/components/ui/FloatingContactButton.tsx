@@ -94,7 +94,7 @@ export function FloatingContactButton({
           onClick={() => setIsOpen(true)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white text-black shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+          className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-black text-white dark:bg-white dark:text-black shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
           aria-label="Send us a message"
         >
           <Envelope className="w-6 h-6" weight="fill" />
@@ -214,7 +214,7 @@ export function FloatingContactButton({
                     <Button
                       type="submit"
                       disabled={isSubmitting || !isFormValid}
-                      className="w-full h-12 text-base font-bold bg-white hover:bg-white/90 text-black shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full h-12 text-base font-bold bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center gap-2">
