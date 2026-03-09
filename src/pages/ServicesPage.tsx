@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -44,13 +43,13 @@ export default function ServicesPage() {
                 return (
                   <Card
                     key={service.id}
-                    className="bg-card/80 border-border/50 h-full transition-colors cursor-pointer hover:border-blue-500/40 group"
+                    className="bg-card border-border h-full transition-all duration-200 cursor-pointer hover:border-foreground/20 hover:shadow-md group"
                     onClick={() => navigate(`/services/${service.id}`)}
                   >
                     <CardHeader className="pb-4">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 bg-blue-500/10 rounded-xl border border-blue-500/20 shrink-0">
-                          <IconComponent size={24} className="text-blue-400" weight="duotone" />
+                        <div className="p-3 bg-neutral-100 dark:bg-white/10 rounded-xl border border-border shrink-0">
+                          <IconComponent size={24} className="text-foreground/70" weight="regular" />
                         </div>
                         <CardTitle className="text-foreground text-lg leading-tight">
                           {service.title}
@@ -76,7 +75,7 @@ export default function ServicesPage() {
                         {service.features.length > 3 && (
                           <Badge
                             variant="outline"
-                            className="text-xs py-1 px-2.5 bg-background/50 text-muted-foreground border-border/50"
+                            className="text-xs py-1 px-2.5 bg-background/50 text-muted-foreground border-border"
                           >
                             +{service.features.length - 3} {language === 'nl' ? 'meer' : 'more'}
                           </Badge>
@@ -87,7 +86,7 @@ export default function ServicesPage() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-primary p-0 h-auto font-medium group-hover:translate-x-1 transition-transform duration-300"
+                          className="text-foreground p-0 h-auto font-medium group-hover:translate-x-1 transition-transform duration-300"
                         >
                           {language === 'nl' ? 'Meer informatie' : 'Learn more'}
                           <ArrowRight size={14} className="ml-1.5" />
@@ -106,7 +105,7 @@ export default function ServicesPage() {
       <section className="py-16 lg:py-20">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-4xl mx-auto">
-            <Card className="bg-card border-border/50">
+            <Card className="bg-card border-border">
               <CardContent className="p-10 lg:p-14 text-center">
                 <h2 className="text-foreground font-bold text-2xl md:text-3xl mb-4">
                   {sp?.contact?.title || 'Ready to Get Started?'}
@@ -119,7 +118,7 @@ export default function ServicesPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     size="lg"
-                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                    className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black"
                     onClick={() => navigate('/contact')}
                   >
                     <EnvelopeSimple size={18} className="mr-2" />

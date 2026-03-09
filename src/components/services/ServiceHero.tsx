@@ -25,7 +25,7 @@ export function ServiceHero({ icon: IconComponent, title, description, language 
             {/* Icon and Badge Row */}
             <div className="flex items-center gap-4">
                 <div className="p-4 bg-neutral-500/10 dark:bg-white/10 rounded-2xl border border-border">
-                    <IconComponent size={36} className="text-foreground/70" weight="duotone" />
+                    <IconComponent size={36} className="text-foreground/70" weight="regular" />
                 </div>
                 <Badge
                     variant="outline"

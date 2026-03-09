@@ -87,7 +87,7 @@ export function BlogPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <BookOpen size={16} weight="duotone" />
+              <BookOpen size={16} weight="regular" />
               <span className="font-semibold">{language === 'nl' ? 'Azure Kennis Hub' : 'Azure Knowledge Hub'}</span>
             </motion.div>
 
@@ -135,7 +135,7 @@ export function BlogPage() {
                       {/* Category & Icon */}
                       <div className="flex items-center gap-3 mb-3">
                         <div className="p-2 bg-primary/10 rounded-lg">
-                          <IconComponent size={20} className="text-primary" weight="duotone" />
+                          <IconComponent size={20} className="text-primary" weight="regular" />
                         </div>
                         <Badge variant="secondary" className="text-xs font-medium">
                           {post.category}
@@ -155,15 +155,15 @@ export function BlogPage() {
                       {/* Meta Info */}
                       <div className="text-muted-foreground border-t border-border flex flex-wrap items-center gap-4 mb-4 pt-4 text-xs font-medium">
                         <div className="flex items-center gap-1.5">
-                          <Calendar size={14} weight="duotone" />
+                          <Calendar size={14} weight="regular" />
                           <span>{formatDate(post.date)}</span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <Clock size={14} weight="duotone" />
+                          <Clock size={14} weight="regular" />
                           <span>{post.readTime} {language === 'nl' ? 'min' : 'min'}</span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <User size={14} weight="duotone" />
+                          <User size={14} weight="regular" />
                           <span>{post.author}</span>
                         </div>
                       </div>

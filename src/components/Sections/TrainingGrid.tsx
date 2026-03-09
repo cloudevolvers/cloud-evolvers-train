@@ -202,7 +202,7 @@ export function TrainingGrid() {
                 {/* Course header with icon */}
                 <div className={`relative h-32 bg-gradient-to-br ${categoryColors.bg} ${categoryColors.border} border-b flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
                   <div className={`${categoryColors.icon} group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent size={48} weight="duotone" />
+                    <IconComponent size={48} weight="regular" />
                   </div>
                   <div className="absolute top-4 right-4">
                     <Badge className={`${getLevelColors(course.level)} text-xs px-2 py-1`}>

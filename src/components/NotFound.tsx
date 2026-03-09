@@ -25,7 +25,7 @@ export function NotFound() {
               transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
               className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center"
             >
-              <MagnifyingGlass className="w-12 h-12 text-primary" weight="duotone" />
+              <MagnifyingGlass className="w-12 h-12 text-primary" weight="regular" />
             </motion.div>
 
             {/* Error Code */}
