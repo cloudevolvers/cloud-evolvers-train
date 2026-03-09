@@ -59,7 +59,7 @@ export const defaultCourseImage = `${IMG}/azure.jpg`;
 // Enhanced level color mapping
 export const levelColors: Record<string, string> = {
   'Beginner': 'bg-emerald-100 text-emerald-900 dark:bg-emerald-900/50 dark:text-emerald-200 border-emerald-300 dark:border-emerald-700 font-medium',
-  'Intermediate': 'bg-blue-100 text-blue-900 dark:bg-blue-900/50 dark:text-blue-200 border-blue-300 dark:border-blue-700 font-medium',
+  'Intermediate': 'bg-neutral-100 text-neutral-900 dark:bg-neutral-800/50 dark:text-neutral-200 border-neutral-300 dark:border-neutral-600 font-medium',
   'Advanced': 'bg-orange-100 text-orange-900 dark:bg-orange-900/50 dark:text-orange-200 border-orange-300 dark:border-orange-700 font-medium',
   'Expert': 'bg-red-100 text-red-900 dark:bg-red-900/50 dark:text-red-200 border-red-300 dark:border-red-700 font-medium',
 };

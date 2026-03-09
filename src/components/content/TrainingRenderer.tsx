@@ -350,7 +350,7 @@ export function TrainingRenderer({ data, language = 'en', preview = false }: Con
               <ul className="space-y-2">
                 {data.targetAudience.map((audience, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <Users className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                    <Users className="w-4 h-4 text-foreground/70 mt-0.5 flex-shrink-0" />
                     <span>{audience}</span>
                   </li>
                 ))}

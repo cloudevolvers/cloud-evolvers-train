@@ -23,7 +23,7 @@ const BlogCard = ({ post, index }: { post: any, index: number }) => {
             className="group relative h-full flex flex-col"
         >
             <Link to={`/blog/${post.slug || post.id}`} className="block h-full">
-                <div className="h-full rounded-2xl border border-border bg-card/40 backdrop-blur-sm overflow-hidden hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col">
+                <div className="h-full rounded-2xl border border-border bg-card/40 backdrop-blur-sm overflow-hidden hover:border-foreground/20 transition-all duration-300 hover:shadow-2xl flex flex-col">
                     {/* Image */}
                     <div className="h-48 w-full bg-muted relative overflow-hidden">
                         {post.image ? (
@@ -41,7 +41,7 @@ const BlogCard = ({ post, index }: { post: any, index: number }) => {
 
                         {/* Category Badge */}
                         <div className="absolute top-4 left-4 z-10">
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 backdrop-blur-md">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-500/10 text-foreground border border-border backdrop-blur-md">
                                 {post.category}
                             </span>
                         </div>
@@ -60,7 +60,7 @@ const BlogCard = ({ post, index }: { post: any, index: number }) => {
                             </div>
                         </div>
 
-                        <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2 group-hover:text-blue-500 transition-colors">
+                        <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2 group-hover:text-foreground/70 transition-colors">
                             {post.title}
                         </h3>
 
@@ -75,7 +75,7 @@ const BlogCard = ({ post, index }: { post: any, index: number }) => {
                                 </div>
                                 <span className="text-xs text-muted-foreground">{post.author}</span>
                             </div>
-                            <span className="text-sm font-medium text-blue-500 group-hover:text-blue-600 dark:text-blue-400 dark:group-hover:text-blue-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                            <span className="text-sm font-medium text-foreground group-hover:text-foreground/70 flex items-center gap-1 group-hover:gap-2 transition-all">
                                 Read Article <ArrowRight className="w-4 h-4" />
                             </span>
                         </div>
@@ -95,21 +95,21 @@ export const BlogSection = () => {
         <section className="py-32 relative bg-background overflow-hidden" id="blog">
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-            <div className="absolute w-[800px] h-[800px] -top-[400px] -right-[200px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute w-[800px] h-[800px] -top-[400px] -right-[200px] bg-neutral-500/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[120rem] relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div className="max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-neutral-500/5 text-muted-foreground text-xs font-medium mb-6">
                             <span className="relative flex h-2 w-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground/50 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-foreground/70"></span>
                             </span>
                             LATEST INSIGHTS
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
                             Technical Deep Dives & <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+                            <span className="text-foreground/80">
                                 Engineering Updates
                             </span>
                         </h2>

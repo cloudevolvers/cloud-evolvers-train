@@ -53,11 +53,11 @@ export function ErrorMessage({
       textColor: 'text-yellow-700 dark:text-yellow-300'
     },
     info: {
-      bg: 'bg-gradient-to-r from-blue-50 to-sky-100 dark:from-blue-900/20 dark:to-sky-800/20',
-      border: 'border-blue-200 dark:border-blue-700',
-      icon: <Info size={20} className="text-blue-400" />,
-      titleColor: 'text-blue-800 dark:text-blue-200',
-      textColor: 'text-blue-700 dark:text-blue-300'
+      bg: 'bg-gradient-to-r from-neutral-50 to-neutral-100 dark:from-neutral-900/20 dark:to-neutral-800/20',
+      border: 'border-neutral-200 dark:border-neutral-700',
+      icon: <Info size={20} className="text-neutral-400" />,
+      titleColor: 'text-neutral-800 dark:text-neutral-200',
+      textColor: 'text-neutral-700 dark:text-neutral-300'
     }
   };
 
@@ -102,7 +102,7 @@ export function ErrorMessage({
                   initial={{ width: '100%' }}
                   animate={{ width: '0%' }}
                   transition={{ duration: autoCloseDelay / 1000, ease: 'linear' }}
-                  className={`bg-blue-600' mt-3 h-1 rounded-full type type type`}
+                  className={`bg-foreground/50 mt-3 h-1 rounded-full`}
                 />
               )}
             </div>

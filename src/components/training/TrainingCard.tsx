@@ -51,7 +51,7 @@ export function TrainingCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="h-full"
     >
-      <Card className="group h-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 backdrop-blur-sm bg-card/80 border-white/20 hover:border-blue-300/50">
+      <Card className="group h-full transition-all duration-300 hover:shadow-xl hover:shadow-neutral-500/10 hover:-translate-y-2 backdrop-blur-sm bg-card/80 border-white/20 hover:border-foreground/30">
         <CardContent className="p-6 flex flex-col h-full">
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
@@ -68,7 +68,7 @@ export function TrainingCard({
                 </Badge>
               )}
               {training.isJsonBased && (
-                <Badge className="inline-flex items-center justify-center text-xs bg-gradient-to-r from-blue-400 to-sky-500 text-white border-0 shadow-sm">
+                <Badge className="inline-flex items-center justify-center text-xs bg-foreground text-background border-0 shadow-sm">
                   <Target size={12} className="mr-1 flex-shrink-0" />
                   <span className="leading-none">{t?.training?.overview?.courseCard?.new || 'New'}</span>
                 </Badge>
@@ -78,7 +78,7 @@ export function TrainingCard({
 
           {/* Content */}
           <div className="flex-grow">
-            <h3 className="text-xl font-semibold mb-3 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            <h3 className="text-xl font-semibold mb-3 line-clamp-2 group-hover:text-foreground/80 transition-colors">
               {translatedCourse.title}
             </h3>
             <p className="text-muted-foreground mb-4 line-clamp-3 leading-relaxed">
@@ -90,7 +90,7 @@ export function TrainingCard({
           <div className="space-y-3 mb-6">
             <div className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Clock size={14} className="text-blue-500 dark:text-blue-400" />
+                <Clock size={14} className="text-foreground/70" />
                 <span className="font-medium">{formatDuration(training.duration)}</span>
               </div>
               <Badge className={`${levelColors[training.level]} border shadow-sm`}>
@@ -103,7 +103,7 @@ export function TrainingCard({
             </div>
 
             {training.certification?.available && (
-              <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400">
+              <div className="flex items-center gap-2 text-sm text-foreground/70">
                 <Certificate size={14} />
                 <span className="font-medium">{training.certification.examCode}</span>
               </div>
@@ -111,7 +111,7 @@ export function TrainingCard({
 
             {training.targetAudience && training.targetAudience.length > 0 && (
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Users size={14} className="text-sky-500 dark:text-sky-400" />
+                <Users size={14} className="text-foreground/70" />
                 <span className="line-clamp-1">{training.targetAudience.slice(0, 2).join(', ')}</span>
               </div>
             )}
@@ -123,7 +123,7 @@ export function TrainingCard({
             className="mt-auto" 
             onClick={() => console.log('🔗 Navigating to:', training.slug, training.title)}
           >
-            <Button className="w-full group/btn bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="w-full group/btn bg-black hover:bg-black/90 dark:bg-white dark:hover:bg-white/90 text-white dark:text-black border-0 shadow-lg hover:shadow-xl transition-all duration-300">
               {t?.training?.overview?.courseCard?.viewCourseDetails || 'View Course Details'}
               <ArrowRight size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
             </Button>

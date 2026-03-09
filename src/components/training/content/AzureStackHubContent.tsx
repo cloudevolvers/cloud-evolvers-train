@@ -58,17 +58,17 @@ export default function AzureStackHubContent() {
     <div className="space-y-12">
       {/* Hero Section */}
       <motion.section 
-        className="from-slate-950/20 via-blue-950/20 to-slate-950/20 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
+        className="from-neutral-950/20 via-neutral-900/20 to-neutral-950/20 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-slate-200/20 to-blue-200/20 rounded-full -translate-y-32 translate-x-32" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-200/20 to-slate-200/20 rounded-full translate-y-24 -translate-x-24" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-neutral-200/20 to-neutral-300/20 rounded-full -translate-y-32 translate-x-32" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-neutral-300/20 to-neutral-200/20 rounded-full translate-y-24 -translate-x-24" />
         
         <div className="relative z-10">
           <div className="flex items-center gap-4 mb-6">
-            <div className="p-3 bg-gradient-to-br from-slate-500 to-blue-500 rounded-2xl text-white shadow-lg">
+            <div className="p-3 bg-foreground rounded-2xl text-background shadow-lg">
               <Stack className="h-8 w-8" />
             </div>
             <div>
@@ -162,8 +162,8 @@ export default function AzureStackHubContent() {
 
           <div className="bg-slate-800 border-slate-700 rounded-xl p-6">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-blue-950/20 p-2 rounded-lg">
-                <CloudArrowUp className="text-blue-400 h-5 w-5" />
+              <div className="bg-neutral-800/20 p-2 rounded-lg">
+                <CloudArrowUp className="text-foreground/70 h-5 w-5" />
               </div>
               <h3 className="text-white font-semibold">Installation & Configuration</h3>
             </div>
@@ -218,8 +218,8 @@ export default function AzureStackHubContent() {
           <h2 className="text-white font-bold">Prerequisites</h2>
           <div className="space-y-3">
             {trainingMetadata.prerequisites.map((prereq, index) => (
-              <div key={index} className="bg-blue-900/20 flex items-start gap-3 p-3 rounded-lg">
-                <ArrowRight className="text-blue-400 h-5 w-5 flex-shrink-0 mt-0.5" />
+              <div key={index} className="bg-neutral-800/20 flex items-start gap-3 p-3 rounded-lg">
+                <ArrowRight className="text-foreground/70 h-5 w-5 flex-shrink-0 mt-0.5" />
                 <span className="text-foreground font-medium">{prereq}</span>
               </div>
             ))}

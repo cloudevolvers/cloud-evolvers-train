@@ -252,7 +252,7 @@ export default function TrainingConsultationForm({
         >
               <div className="space-y-1.5">
                 <Label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <User className="h-4 w-4 text-blue-500" weight="regular" />
+                  <User className="h-4 w-4 text-foreground/70" weight="regular" />
                   {t.fullName}
                   <span className="text-red-500">*</span>
                 </Label>
@@ -263,12 +263,12 @@ export default function TrainingConsultationForm({
                   placeholder="John Doe"
                   required
                   disabled={submitting}
-                  className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                  className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all shadow-sm"
                 />
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="email" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <Envelope className="h-4 w-4 text-blue-500" weight="regular" />
+                  <Envelope className="h-4 w-4 text-foreground/70" weight="regular" />
                   {t.email}
                   <span className="text-red-500">*</span>
                 </Label>
@@ -281,7 +281,7 @@ export default function TrainingConsultationForm({
                   required
                   disabled={submitting}
                   aria-invalid={!!emailError}
-                  className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                  className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all shadow-sm"
                 />
                 {emailError && (
                   <motion.p
@@ -304,7 +304,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label htmlFor="phone" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Phone className="h-4 w-4 text-blue-500" weight="regular" />
+                <Phone className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.phone}
               </Label>
               <Input
@@ -314,7 +314,7 @@ export default function TrainingConsultationForm({
                 onChange={handleInputChange('phone')}
                 placeholder="+31 6-12345678"
                 disabled={submitting}
-                className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all shadow-sm"
               />
             </motion.div>
 
@@ -326,7 +326,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label htmlFor="training" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <GraduationCap className="h-4 w-4 text-blue-500" weight="regular" />
+                <GraduationCap className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.interestedTraining}
               </Label>
               <Select
@@ -334,10 +334,10 @@ export default function TrainingConsultationForm({
                 onValueChange={(value) => setFormData({ ...formData, training: value })}
                 disabled={submitting}
               >
-                <SelectTrigger className="h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-sm">
+                <SelectTrigger className="h-10 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus:border-foreground dark:focus:border-foreground/70 focus:ring-2 focus:ring-foreground/20 transition-all shadow-sm">
                   <SelectValue placeholder={language === 'nl' ? 'Selecteer een training...' : 'Select a training...'} />
                 </SelectTrigger>
-                <SelectContent className="bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 max-h-[300px]">
+                <SelectContent className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 max-h-[300px]">
                   {trainingOptions.map(option => (
                     <SelectItem key={option.value} value={option.label}>
                       {option.label}
@@ -355,7 +355,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Calendar className="h-4 w-4 text-blue-500" weight="regular" />
+                <Calendar className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.preferredDates}
               </Label>
               <p className="text-xs text-foreground/80 leading-relaxed">
@@ -380,7 +380,7 @@ export default function TrainingConsultationForm({
                         }}
                         placeholder="Choose date, week number, or describe..."
                         disabled={submitting}
-                        className="w-full h-10 bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm"
+                        className="w-full h-10 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all shadow-sm"
                       />
                     </div>
                     {formData.preferredDates.length > 1 && (
@@ -413,7 +413,7 @@ export default function TrainingConsultationForm({
                     });
                   }}
                   disabled={submitting}
-                  className="w-full h-9 border-2 border-dashed border-blue-500/30 hover:border-solid hover:border-blue-500/50 transition-all duration-200 bg-blue-500/5 hover:bg-blue-500/10 text-blue-600 dark:text-blue-400"
+                  className="w-full h-9 border-2 border-dashed border-border hover:border-solid hover:border-foreground/50 transition-all duration-200 bg-neutral-500/5 dark:bg-white/5 hover:bg-neutral-500/10 dark:hover:bg-white/10 text-foreground"
                 >
                   <Plus className="h-3.5 w-3.5 mr-2" weight="bold" />
                   {formData.preferredDates.length === 0 ? t.addPreferredDate : t.addAnotherDate}
@@ -429,7 +429,7 @@ export default function TrainingConsultationForm({
               transition={{ duration: 0.3 }}
             >
               <Label htmlFor="message" className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <ChatCircle className="h-4 w-4 text-blue-500" weight="regular" />
+                <ChatCircle className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.additionalInfo}
               </Label>
               <Textarea
@@ -439,7 +439,7 @@ export default function TrainingConsultationForm({
                 placeholder={t.additionalInfoPlaceholder}
                 disabled={submitting}
                 rows={3}
-                className="bg-white dark:bg-slate-800 border-2 border-blue-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all shadow-sm resize-none"
+                className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all shadow-sm resize-none"
               />
             </motion.div>
 
@@ -451,7 +451,7 @@ export default function TrainingConsultationForm({
             >
               <Button
                 type="submit"
-                className="w-full h-12 text-base bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 hover:from-blue-700 hover:via-blue-800 hover:to-sky-700 transition-all duration-300 text-white font-bold shadow-lg hover:shadow-xl transform hover:scale-[1.01] active:scale-[0.99]"
+                className="w-full h-12 text-base bg-black hover:bg-black/90 dark:bg-white dark:hover:bg-white/90 transition-all duration-300 text-white dark:text-black font-bold shadow-lg hover:shadow-xl transform hover:scale-[1.01] active:scale-[0.99]"
                 disabled={submitting}
               >
                 {submitting ? (
@@ -505,7 +505,7 @@ export default function TrainingConsultationForm({
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/30 mt-3 p-3 rounded-lg"
+                  className="bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border border-emerald-500/30 mt-3 p-3 rounded-lg"
                 >
                   <div className="flex items-start space-x-2">
                     <CheckCircle className="text-emerald-500 h-4 w-4 mt-0.5 flex-shrink-0" weight="fill" />

@@ -16,7 +16,7 @@ export function AboutPage() {
       <SEO {...PAGE_SEO.about} />
       {/* Background with floating icons */}
       <div className="absolute inset-0">
-        <div className="from-blue-100/20 via-slate-50/15 to-blue-100/20 dark:from-slate-900/20 dark:via-slate-900/25 dark:to-slate-800/20 absolute inset-0 bg-gradient-to-br" />
+        <div className="from-neutral-100/20 via-slate-50/15 to-neutral-100/20 dark:from-slate-900/20 dark:via-slate-900/25 dark:to-slate-800/20 absolute inset-0 bg-gradient-to-br" />
         <BackgroundIcons variant="default" />
       </div>
 
@@ -191,7 +191,7 @@ export function AboutPage() {
                         alt="Yaïr Knijn - Founder & CEO"
                         className="w-full h-full object-cover object-[center_20%]"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent lg:bg-gradient-to-r lg:from-blue-900/40"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:bg-gradient-to-r lg:from-black/40"></div>
                     </div>
 
                     {/* Content Section - 3 columns */}
@@ -199,7 +199,7 @@ export function AboutPage() {
                       <h3 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold mb-2">
                         Yaïr Knijn
                       </h3>
-                      <p className="text-base md:text-lg text-blue-500 dark:text-blue-400 font-semibold mb-4">
+                      <p className="text-base md:text-lg text-muted-foreground font-semibold mb-4">
                         {t.about?.team?.founder?.role || "Founder & CEO"}
                       </p>
                       <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
@@ -209,10 +209,10 @@ export function AboutPage() {
                         <span className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
                           Microsoft Certified Trainer
                         </span>
-                        <span className="bg-blue-500/10 border border-blue-500/20 text-blue-500 inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
+                        <span className="bg-neutral-500/10 border border-border text-foreground inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
                           Azure Expert
                         </span>
-                        <span className="bg-purple-500/10 border border-purple-500/20 text-purple-500 inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
+                        <span className="bg-neutral-500/10 border border-border text-foreground inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
                           Cloud Architect
                         </span>
                       </div>
@@ -231,7 +231,7 @@ export function AboutPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <Card className="bg-gradient-to-br from-blue-500/5 to-primary/5 border-blue-500/20 shadow-xl">
+            <Card className="bg-gradient-to-br from-neutral-500/5 to-neutral-500/3 border-border shadow-xl">
               <CardContent className="p-8 md:p-12 lg:p-16">
                 <h2 className="text-foreground font-bold mb-4 text-xl md:text-2xl">
                   {t.about?.contact?.title || "Get In Touch"}
@@ -242,7 +242,7 @@ export function AboutPage() {
                 <div className="space-y-2">
                   <a
                     href="mailto:info@cloudevolvers.com"
-                    className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 inline-block font-bold transition-all duration-200 px-6 py-3 rounded-lg shadow-md hover:shadow-lg border border-blue-500/20"
+                    className="text-foreground hover:text-foreground/80 bg-neutral-500/10 hover:bg-neutral-500/15 inline-block font-bold transition-all duration-200 px-6 py-3 rounded-lg shadow-md hover:shadow-lg border border-border"
                   >
                     info@cloudevolvers.com
                   </a>

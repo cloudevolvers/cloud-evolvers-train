@@ -63,13 +63,13 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-blue-500/30 relative overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground selection:bg-neutral-500/30 relative overflow-hidden">
       <SEO {...PAGE_SEO.contact} />
       {/* Ambient Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <DotPattern className="opacity-10 text-blue-500/20" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+        <DotPattern className="opacity-10 text-neutral-500/20" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-neutral-500/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-neutral-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
@@ -82,7 +82,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-neutral-500/5 dark:bg-white/5 text-muted-foreground text-xs font-medium mb-6">
               <Sparkle className="w-4 h-4" />
               {contactT.letsConnect || "Let's Connect"}
             </div>
@@ -107,18 +107,18 @@ export default function ContactPage() {
                 className="rounded-2xl border border-border bg-card/60 backdrop-blur-md p-6 lg:p-8 shadow-sm"
               >
                 <h2 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <ShareNetwork className="text-blue-500" size={24} />
+                  <ShareNetwork className="text-foreground/70" size={24} />
                   {contactT.contactInformation}
                 </h2>
 
                 <div className="space-y-6">
                   <a href="mailto:training@cloudevolvers.com" className="group flex items-center gap-4 p-3 rounded-xl hover:bg-muted/50 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/20 transition-colors">
-                      <EnvelopeSimple size={24} className="text-blue-600 dark:text-blue-400" weight="fill" />
+                    <div className="w-12 h-12 rounded-full bg-neutral-100 dark:bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-neutral-200 dark:group-hover:bg-white/15 transition-colors">
+                      <EnvelopeSimple size={24} className="text-foreground/70" weight="fill" />
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">{contactT.emailUs}</div>
-                      <div className="font-medium text-foreground group-hover:text-blue-500 transition-colors">training@cloudevolvers.com</div>
+                      <div className="font-medium text-foreground group-hover:text-foreground/70 transition-colors">training@cloudevolvers.com</div>
                     </div>
                   </a>
 
@@ -146,8 +146,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-center gap-4 p-3">
-                    <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin size={24} className="text-purple-600 dark:text-purple-400" weight="fill" />
+                    <div className="w-12 h-12 rounded-full bg-neutral-100 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin size={24} className="text-foreground/70" weight="fill" />
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">{contactT.ourReach}</div>
@@ -162,15 +162,15 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/5 to-purple-900/5 border border-blue-500/10"
+                className="p-6 rounded-2xl bg-gradient-to-br from-neutral-500/5 to-neutral-500/3 border border-border"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-                    <CheckCircle size={24} className="text-white" weight="fill" />
+                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center shadow-lg">
+                    <CheckCircle size={24} className="text-background" weight="fill" />
                   </div>
                   <div>
                     <div className="font-bold text-foreground text-lg">{contactT.microsoftCertified}</div>
-                    <div className="text-sm text-blue-500 dark:text-blue-300">{contactT.officialPartner || 'Official Training Partner'}</div>
+                    <div className="text-sm text-muted-foreground">{contactT.officialPartner || 'Official Training Partner'}</div>
                   </div>
                 </div>
                 <div className="space-y-4 pl-2">
@@ -178,7 +178,7 @@ export default function ContactPage() {
                     const Icon = benefit.icon;
                     return (
                       <div key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
-                        <Icon size={16} className="text-blue-500" />
+                        <Icon size={16} className="text-foreground/70" />
                         <span>{benefit.title}</span>
                       </div>
                     )
@@ -197,7 +197,7 @@ export default function ContactPage() {
               className="lg:col-span-7"
             >
               <div className="rounded-2xl border border-border bg-card shadow-xl overflow-hidden relative">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-green-500" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-400 via-neutral-500 to-neutral-600 dark:from-neutral-600 dark:via-neutral-500 dark:to-neutral-400" />
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-foreground mb-6">{contactT.sendUsMessage || 'Send us a message'}</h3>
                   {/* The Form Component needs to support dark mode styles or we wrap it in a dark context */}

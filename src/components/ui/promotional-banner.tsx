@@ -43,7 +43,7 @@ export function PromotionalBanner({ className = '', compact = false }: Promotion
       className={`relative overflow-hidden ${className}`}
     >
       {/* Solid professional background */}
-      <div className="absolute inset-0 bg-blue-700 hover:bg-blue-800 transition-colors" />
+      <div className="absolute inset-0 bg-black dark:bg-white transition-colors" />
 
       <div className={`relative z-10 flex items-center justify-center gap-4 md:gap-6 ${compact ? 'py-2 px-4' : 'py-2.5 px-6'}`}>
         {/* Left section - Launch announcement */}
@@ -53,9 +53,9 @@ export function PromotionalBanner({ className = '', compact = false }: Promotion
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             className="hidden sm:block"
           >
-            <Rocket className={`${compact ? 'h-4 w-4' : 'h-5 w-5'} text-white`} weight="fill" />
+            <Rocket className={`${compact ? 'h-4 w-4' : 'h-5 w-5'} text-white dark:text-black`} weight="fill" />
           </motion.div>
-          <span className={`font-bold ${compact ? 'text-xs' : 'text-sm'} text-white tracking-wide uppercase`}>
+          <span className={`font-bold ${compact ? 'text-xs' : 'text-sm'} text-white dark:text-black tracking-wide uppercase`}>
             {t.title}
           </span>
         </div>
@@ -65,11 +65,11 @@ export function PromotionalBanner({ className = '', compact = false }: Promotion
 
         {/* Center section - Discount badge */}
         <div className="flex items-center gap-2">
-          <Badge className="bg-white text-blue-600 font-extrabold px-3 py-1 border-0 shadow-lg hover:shadow-xl transition-shadow text-sm">
+          <Badge className="bg-white dark:bg-black text-black dark:text-white font-extrabold px-3 py-1 border-0 shadow-lg hover:shadow-xl transition-shadow text-sm">
             <Gift className="h-3.5 w-3.5 mr-1.5" weight="fill" />
             30% OFF
           </Badge>
-          <span className={`font-semibold ${compact ? 'text-xs' : 'text-sm'} text-white hidden sm:inline`}>
+          <span className={`font-semibold ${compact ? 'text-xs' : 'text-sm'} text-white dark:text-black hidden sm:inline`}>
             {t.allCourses}
           </span>
         </div>
@@ -78,7 +78,7 @@ export function PromotionalBanner({ className = '', compact = false }: Promotion
         {!compact && (
           <Link
             to="/training"
-            className="hidden lg:flex items-center gap-1.5 text-white hover:text-white/90 transition-colors group"
+            className="hidden lg:flex items-center gap-1.5 text-white dark:text-black hover:text-white/90 dark:hover:text-black/80 transition-colors group"
           >
             <span className="text-sm font-medium">{t.cta}</span>
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" weight="bold" />

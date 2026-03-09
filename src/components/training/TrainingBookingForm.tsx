@@ -273,7 +273,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
       >
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <User className="h-4 w-4 text-blue-500" weight="regular" />
+            <User className="h-4 w-4 text-foreground/70" weight="regular" />
             {t.firstName}
             <span className="text-red-500">*</span>
           </label>
@@ -282,12 +282,12 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             value={formData.firstName}
             onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
             placeholder={t.placeholders.firstName}
-            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
           />
         </div>
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <User className="h-4 w-4 text-blue-500" weight="regular" />
+            <User className="h-4 w-4 text-foreground/70" weight="regular" />
             {t.lastName}
             <span className="text-red-500">*</span>
           </label>
@@ -296,7 +296,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             value={formData.lastName}
             onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
             placeholder={t.placeholders.lastName}
-            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
           />
         </div>
       </motion.div>
@@ -310,7 +310,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
       >
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <Envelope className="h-4 w-4 text-blue-500" weight="regular" />
+            <Envelope className="h-4 w-4 text-foreground/70" weight="regular" />
             {t.email}
             <span className="text-red-500">*</span>
           </label>
@@ -320,19 +320,19 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             value={formData.email}
             onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
             placeholder={t.placeholders.email}
-            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
           />
         </div>
         <div className="space-y-2">
           <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-            <Buildings className="h-4 w-4 text-blue-500" weight="regular" />
+            <Buildings className="h-4 w-4 text-foreground/70" weight="regular" />
             {t.company}
           </label>
           <Input
             value={formData.company}
             onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
             placeholder={t.placeholders.company}
-            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+            className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
           />
         </div>
       </motion.div>
@@ -348,7 +348,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
           type="button"
           variant="outline"
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 px-8 py-3 h-auto border-2 border-dashed border-blue-400/40 hover:border-solid hover:border-blue-500 transition-all duration-300 bg-gradient-to-r from-blue-50 to-sky-50 dark:from-blue-950/30 dark:to-sky-950/30 hover:from-blue-100 hover:to-sky-100 dark:hover:from-blue-900/40 dark:hover:to-sky-900/40 text-blue-600 dark:text-blue-400 font-medium rounded-xl shadow-sm hover:shadow-md"
+          className="flex items-center gap-2 px-8 py-3 h-auto border-2 border-dashed border-border hover:border-solid hover:border-foreground/50 transition-all duration-300 bg-neutral-500/5 dark:bg-white/5 hover:bg-neutral-500/10 dark:hover:bg-white/10 text-foreground dark:text-foreground font-medium rounded-xl shadow-sm hover:shadow-md"
         >
           {isExpanded ? (
             <>
@@ -378,7 +378,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <Phone className="h-4 w-4 text-blue-500" weight="regular" />
+                  <Phone className="h-4 w-4 text-foreground/70" weight="regular" />
                   {t.phone}
                 </label>
                 <Input
@@ -386,19 +386,19 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
                   value={formData.phone}
                   onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                   placeholder={t.placeholders.phone}
-                  className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+                  className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
                 />
               </div>
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                  <Briefcase className="h-4 w-4 text-blue-500" weight="regular" />
+                  <Briefcase className="h-4 w-4 text-foreground/70" weight="regular" />
                   {t.position}
                 </label>
                 <Input
                   value={formData.position}
                   onChange={(e) => setFormData(prev => ({ ...prev, position: e.target.value }))}
                   placeholder={t.placeholders.position}
-                  className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+                  className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
                 />
               </div>
             </div>
@@ -406,14 +406,14 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             {/* Experience Level */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <GraduationCap className="h-4 w-4 text-blue-500" weight="regular" />
+                <GraduationCap className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.experience}
               </label>
               <Select 
                 value={formData.experience} 
                 onValueChange={(value) => setFormData(prev => ({ ...prev, experience: value }))}
               >
-                <SelectTrigger className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-500/20 transition-all">
+                <SelectTrigger className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus:border-foreground dark:focus:border-foreground/70 focus:ring-2 focus:ring-foreground/20 transition-all">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600">
@@ -428,21 +428,21 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
             {/* Preferred Date */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Calendar className="h-4 w-4 text-blue-500" weight="regular" />
+                <Calendar className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.preferredDate}
               </label>
               <Input
                 value={formData.preferredDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, preferredDate: e.target.value }))}
                 placeholder={t.placeholders.preferredDate}
-                className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all"
+                className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
               />
             </div>
 
             {/* Notes */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <NotePencil className="h-4 w-4 text-blue-500" weight="regular" />
+                <NotePencil className="h-4 w-4 text-foreground/70" weight="regular" />
                 {t.notes}
               </label>
               <Textarea
@@ -450,12 +450,12 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
                 onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
                 placeholder={t.placeholders.notes}
                 rows={3}
-                className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-blue-500 dark:focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/20 transition-all resize-none"
+                className="bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all resize-none"
               />
             </div>
 
             {/* Newsletter Subscription */}
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-blue-500/5 border border-blue-500/10">
+            <div className="flex items-start gap-3 p-4 rounded-xl bg-neutral-500/5 dark:bg-white/5 border border-border">
               <Checkbox
                 id="newsletter"
                 checked={formData.newsletter}
@@ -480,7 +480,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         <Button
           type="submit"
           disabled={isSubmitting || !isBasicFormValid}
-          className="w-full h-14 text-lg font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 hover:from-blue-700 hover:via-blue-600 hover:to-sky-600 transition-all duration-300 text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] disabled:from-gray-400 disabled:via-gray-400 disabled:to-gray-400 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none rounded-xl"
+          className="w-full h-14 text-lg font-bold bg-black hover:bg-black/90 dark:bg-white dark:hover:bg-white/90 transition-all duration-300 text-white dark:text-black shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] disabled:from-gray-400 disabled:via-gray-400 disabled:to-gray-400 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none rounded-xl"
           size="lg"
         >
           {isSubmitting ? (

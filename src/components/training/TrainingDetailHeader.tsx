@@ -18,7 +18,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
     
     switch (level.toLowerCase()) {
       case 'beginner': return 'bg-green-100 text-green-900 dark:bg-green-900/50 dark:text-green-100 border-2 border-green-300 dark:border-green-700 font-medium';
-      case 'intermediate': return 'bg-blue-100 text-blue-900 dark:bg-blue-900/50 dark:text-blue-100 border-2 border-blue-300 dark:border-blue-700 font-medium';
+      case 'intermediate': return 'bg-neutral-100 text-neutral-900 dark:bg-neutral-800/50 dark:text-neutral-100 border-2 border-neutral-300 dark:border-neutral-600 font-medium';
       case 'advanced': return 'bg-orange-100 text-orange-900 dark:bg-orange-900/50 dark:text-orange-100 border-2 border-orange-300 dark:border-orange-700 font-medium';
       case 'expert': return 'bg-red-100 text-red-900 dark:bg-red-900/50 dark:text-red-100 border-2 border-red-300 dark:border-red-700 font-medium';
       default: return 'bg-green-100 text-green-900 dark:bg-green-900/50 dark:text-green-100 border-2 border-green-300 dark:border-green-700 font-medium';
@@ -32,7 +32,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
       className="mb-8"
     >
       <Card className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-2">
-        <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-blue-950/30 p-8 lg:p-10 xl:p-12">
+        <div className="bg-gradient-to-br from-slate-50 via-white to-neutral-50/30 dark:from-slate-900 dark:via-slate-800 dark:to-neutral-950/30 p-8 lg:p-10 xl:p-12">
           <div className="max-w-5xl">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -40,7 +40,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               transition={{ delay: 0.1 }}
               className="flex items-center gap-3 mb-6"
             >
-              <Badge className="bg-gradient-to-r from-blue-600 to-sky-600 text-white border-0 px-4 py-1.5 text-sm font-bold shadow-md">
+              <Badge className="bg-foreground text-background border-0 px-4 py-1.5 text-sm font-bold shadow-md">
                 {training.category}
               </Badge>
               {training.featured && (
@@ -58,7 +58,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 bg-gradient-to-r from-blue-600 via-sky-600 to-cyan-600 bg-clip-text text-transparent"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 text-foreground"
             >
               {training.title}
             </motion.h1>
@@ -98,10 +98,10 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex items-center gap-3 p-4 bg-gradient-to-br from-blue-500/10 to-blue-500/5 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+              className="flex items-center gap-3 p-4 bg-gradient-to-br from-neutral-500/10 to-neutral-500/5 rounded-xl border border-border hover:border-foreground/20 transition-all duration-300"
             >
-              <div className="flex items-center justify-center w-10 h-10 bg-blue-500/20 rounded-lg">
-                <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <div className="flex items-center justify-center w-10 h-10 bg-neutral-100 dark:bg-white/10 rounded-lg">
+                <Users className="h-5 w-5 text-foreground/70" />
               </div>
               <div>
                 <p className="text-xs text-muted-foreground font-medium">{t.training?.detail?.groupSize || 'Group Size'}</p>
@@ -166,7 +166,7 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
+              className="bg-black hover:bg-black/90 dark:bg-white dark:hover:bg-white/90 text-white dark:text-black px-8 py-4 rounded-xl font-bold flex items-center gap-3 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
             >
               <Calendar className="h-6 w-6" />
               {t.training?.detail?.inquireAboutTraining || 'Inquire About Training'}

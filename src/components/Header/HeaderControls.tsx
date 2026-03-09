@@ -81,7 +81,7 @@ export function HeaderControls({
               flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold
               transition-all duration-200
               ${language === 'en'
-                ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-sm'
+                ? 'bg-foreground hover:bg-foreground/90 text-background shadow-sm'
                 : 'text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700'
               }
             `}

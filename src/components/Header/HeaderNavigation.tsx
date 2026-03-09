@@ -76,7 +76,7 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
                 group flex items-center gap-2 px-3 py-2 rounded-lg
                 font-medium transition-all duration-300 text-sm tracking-wide
                 ${isActive
-                  ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20'
+                  ? 'bg-foreground/10 text-foreground border border-foreground/20'
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
                 }
               `}
@@ -87,8 +87,8 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
                 className={`
                   transition-colors
                   ${isActive
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-muted-foreground group-hover:text-blue-500'
+                    ? 'text-foreground'
+                    : 'text-muted-foreground group-hover:text-foreground'
                   }
                 `}
               />

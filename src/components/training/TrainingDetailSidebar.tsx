@@ -26,7 +26,7 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
           transition={{ delay: 0.3 }}
         >
           <Card className="shadow-xl bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm border border-white/10 dark:border-white/5 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-transparent to-neutral-500/3 pointer-events-none"></div>
             <CardHeader className="pb-4 relative z-10">
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-xl">
@@ -65,11 +65,11 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
           transition={{ delay: 0.4 }}
         >
           <Card className="shadow-xl bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm border border-white/10 dark:border-white/5 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-transparent to-neutral-500/3 pointer-events-none"></div>
             <CardHeader className="pb-4 relative z-10">
               <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-xl">
-                  <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                <div className="flex items-center justify-center w-10 h-10 bg-neutral-100 dark:bg-white/10 rounded-xl">
+                  <Users className="h-5 w-5 text-foreground/70" />
                 </div>
                 <CardTitle className="text-lg text-foreground font-bold">
                   {t.training?.detail?.targetAudience || 'Target Audience'}
@@ -84,9 +84,9 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5 + index * 0.05 }}
-                    className="flex items-start gap-3 p-3 bg-gradient-to-r from-blue-500/10 to-transparent rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+                    className="flex items-start gap-3 p-3 bg-gradient-to-r from-neutral-500/10 to-transparent rounded-lg border border-border hover:border-foreground/20 transition-all duration-300"
                   >
-                    <Users className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+                    <Users className="h-4 w-4 text-foreground/70 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-foreground leading-relaxed">{audience}</span>
                   </motion.div>
                 ))}
@@ -144,7 +144,7 @@ export default function TrainingDetailSidebar({ training }: TrainingDetailSideba
           transition={{ delay: 0.6 }}
         >
           <Card className="shadow-xl bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm border border-white/10 dark:border-white/5 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-blue-500/5 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-transparent to-neutral-500/3 pointer-events-none"></div>
             <CardHeader className="pb-4 relative z-10">
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl">

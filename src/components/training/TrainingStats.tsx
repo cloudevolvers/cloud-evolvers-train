@@ -31,29 +31,29 @@ export function TrainingStats({
       icon: GraduationCap,
       value: totalCourses,
       label: t?.training?.overview?.stats?.totalCourses || 'Training Courses',
-      color: 'text-blue-600 dark:text-blue-400',
-      bgColor: 'bg-blue-100 dark:bg-blue-900/30'
+      color: 'text-foreground/70',
+      bgColor: 'bg-neutral-100 dark:bg-white/10'
     },
     {
       icon: Star,
       value: featuredCourses,
       label: t?.training?.overview?.stats?.featuredCourses || 'Featured Courses',
-      color: 'text-sky-600 dark:text-sky-400',
-      bgColor: 'bg-sky-100 dark:bg-sky-900/30'
+      color: 'text-foreground/70',
+      bgColor: 'bg-neutral-100 dark:bg-white/10'
     },
     {
       icon: Trophy,
       value: withCertification,
       label: t?.training?.overview?.stats?.withCertification || 'With Certification',
-      color: 'text-cyan-600 dark:text-cyan-400',
-      bgColor: 'bg-cyan-100 dark:bg-cyan-900/30'
+      color: 'text-foreground/70',
+      bgColor: 'bg-neutral-100 dark:bg-white/10'
     },
     {
       icon: Users,
       value: categories,
       label: t?.training?.overview?.stats?.categories || 'Categories',
-      color: 'text-indigo-600 dark:text-indigo-400',
-      bgColor: 'bg-indigo-100 dark:bg-indigo-900/30'
+      color: 'text-foreground/70',
+      bgColor: 'bg-neutral-100 dark:bg-white/10'
     }
   ];
 
@@ -73,7 +73,7 @@ export function TrainingStats({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
-            <Card className="bg-card/60 backdrop-blur-lg border-white/20 hover:border-blue-300/50 transition-all duration-300">
+            <Card className="bg-card/60 backdrop-blur-lg border-white/20 hover:border-foreground/30 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4">
                   <div className={`p-3 rounded-xl ${stat.bgColor} ${stat.color}`}>
