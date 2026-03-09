@@ -1,3 +1,14 @@
+export interface ServiceSectionItem {
+  title: string;
+  description: string;
+}
+
+export interface ServiceSection {
+  title: string;
+  description?: string;
+  items?: ServiceSectionItem[];
+}
+
 export interface Service {
   id: string;
   title: string;
@@ -5,7 +16,9 @@ export interface Service {
   description: string;
   icon: string;
   features: string[];
-  content: string;
+  sections: ServiceSection[];
+  benefits: ServiceSectionItem[];
+  closingText: string;
   isPublished: boolean;
   publishedAt: string;
   updatedAt: string;

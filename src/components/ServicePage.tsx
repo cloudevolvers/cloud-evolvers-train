@@ -5,13 +5,44 @@ import { ArrowLeft, CheckCircle, Phone } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router-dom";
 import { allServices } from "@/data/services";
-import type { Service } from "@/types/services";
+import type { Service, ServiceSection as ServiceSectionType } from "@/types/services";
 import { getServiceIcon } from "@/utils/service-icons";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceFeatureCard } from "@/components/services/ServiceFeatureCard";
 
 interface ServicePageProps {
   serviceId?: string;
+}
+
+function SectionBlock({ section }: { section: ServiceSectionType }) {
+  return (
+    <div className="mb-10">
+      <h2 className="text-2xl font-bold text-foreground mb-4 pb-3 border-b border-border">
+        {section.title}
+      </h2>
+      {section.description && (
+        <p className="text-muted-foreground leading-relaxed mb-6">{section.description}</p>
+      )}
+      {section.items && section.items.length > 0 && (
+        <div className="space-y-3">
+          {section.items.map((item, j) => (
+            <div key={j} className="flex items-start gap-3">
+              <CheckCircle
+                size={18}
+                className="text-emerald-500 mt-1 shrink-0"
+                weight="fill"
+              />
+              <p className="text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-foreground">{item.title}</span>
+                {": "}
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
@@ -38,6 +69,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
 
   const service: Service = allServices[serviceId as keyof typeof allServices][language];
   const IconComponent = getServiceIcon(service.icon);
+  const benefitsTitle = language === 'nl' ? 'Voordelen' : 'Benefits';
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-background to-background">
@@ -98,19 +130,40 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                 <Card className="bg-card/80 backdrop-blur-sm border-border shadow-lg overflow-hidden">
                   <CardContent className="p-8 lg:p-12">
-                    <div
-                      className="prose prose-lg prose-slate dark:prose-invert max-w-none
-                        prose-headings:text-foreground prose-headings:font-bold prose-h1:hidden
-                        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-5 prose-h2:text-primary prose-h2:border-b prose-h2:border-border prose-h2:pb-3
-                        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-foreground
-                        prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-5
-                        prose-li:text-muted-foreground prose-li:my-2 prose-ul:my-5 prose-ul:pl-0 prose-ul:list-none prose-ul:space-y-2
-                        prose-strong:text-foreground prose-strong:font-semibold
-                        prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                        [&_li]:relative [&_li]:pl-6
-                        [&_li:before]:content-['✓'] [&_li:before]:absolute [&_li:before]:left-0 [&_li:before]:text-emerald-500 [&_li:before]:font-bold"
-                      dangerouslySetInnerHTML={{ __html: service.content }}
-                    />
+                    {/* Sections */}
+                    {service.sections.map((section, i) => (
+                      <SectionBlock key={i} section={section} />
+                    ))}
+
+                    {/* Benefits */}
+                    {service.benefits && service.benefits.length > 0 && (
+                      <div className="mb-10">
+                        <h2 className="text-2xl font-bold text-foreground mb-4 pb-3 border-b border-border">
+                          {benefitsTitle}
+                        </h2>
+                        <div className="space-y-3">
+                          {service.benefits.map((benefit, i) => (
+                            <div key={i} className="flex items-start gap-3">
+                              <CheckCircle
+                                size={18}
+                                className="text-emerald-500 mt-1 shrink-0"
+                                weight="fill"
+                              />
+                              <p className="text-muted-foreground leading-relaxed">
+                                <span className="font-semibold text-foreground">{benefit.title}</span>
+                                {": "}
+                                {benefit.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Closing */}
+                    {service.closingText && (
+                      <p className="text-muted-foreground leading-relaxed">{service.closingText}</p>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>

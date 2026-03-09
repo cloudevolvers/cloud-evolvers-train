@@ -24,12 +24,12 @@ export function ServiceHero({ icon: IconComponent, title, description, language 
         >
             {/* Icon and Badge Row */}
             <div className="flex items-center gap-4">
-                <div className="p-4 bg-gradient-to-br from-blue-500/20 to-indigo-500/10 rounded-2xl border border-blue-500/20">
-                    <IconComponent size={36} className="text-blue-600 dark:text-blue-400" weight="duotone" />
+                <div className="p-4 bg-neutral-500/10 dark:bg-white/10 rounded-2xl border border-border">
+                    <IconComponent size={36} className="text-foreground/70" weight="duotone" />
                 </div>
                 <Badge
                     variant="outline"
-                    className="px-3 py-1.5 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border-blue-500/30 text-blue-600 dark:text-blue-400 font-medium"
+                    className="px-3 py-1.5 bg-neutral-500/5 dark:bg-white/5 border-border text-muted-foreground font-medium"
                 >
                     <Sparkle size={12} className="mr-1.5" weight="fill" />
                     {language === 'nl' ? 'Premium Service' : 'Premium Service'}
@@ -50,7 +50,7 @@ export function ServiceHero({ icon: IconComponent, title, description, language 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                     size="lg"
-                    className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black shadow-lg"
                     onClick={() => navigate('/contact')}
                 >
                     <Phone size={18} className="mr-2" />
