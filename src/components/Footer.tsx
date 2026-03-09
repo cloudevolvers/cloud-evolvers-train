@@ -70,14 +70,14 @@ const Footer: React.FC = () => {
               <div className="space-y-3 text-gray-600 dark:text-slate-400">
                 <a
                   href="mailto:training@cloudevolvers.com"
-                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Envelope className="w-4 h-4" />
                   training@cloudevolvers.com
                 </a>
                 <a
                   href="tel:+31634272027"
-                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   +31 6 34272027
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
           {/* Contact Form Section */}
           <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-border lg:border-t-0">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-              <Envelope className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <Envelope className="w-5 h-5 text-muted-foreground" />
               {t.footer?.getInTouch || 'Get in Touch'}
             </h3>
 
@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
                 placeholder={t.footer?.yourName || 'Your Name'}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+                className="bg-white dark:bg-neutral-900 border-gray-300 dark:border-neutral-700"
                 required
               />
               <Input
@@ -157,21 +157,21 @@ const Footer: React.FC = () => {
                 placeholder={t.footer?.yourEmail || 'Your Email'}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600"
+                className="bg-white dark:bg-neutral-900 border-gray-300 dark:border-neutral-700"
                 required
               />
               <Textarea
                 placeholder={t.footer?.howCanWeHelp || 'How can we help you?'}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="sm:col-span-2 bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 min-h-[80px]"
+                className="sm:col-span-2 bg-white dark:bg-neutral-900 border-gray-300 dark:border-neutral-700 min-h-[80px]"
                 required
               />
               <div className="sm:col-span-2">
                 <Button
                   type="submit"
                   disabled={!isFormValid || isSubmitting}
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full sm:w-auto bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
@@ -191,8 +191,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-300 dark:border-slate-700">
-          <div className="text-gray-600 dark:text-slate-400 flex flex-col items-center gap-2 text-center">
+        <div className="pt-8 border-t border-gray-300 dark:border-neutral-800">
+          <div className="text-gray-600 dark:text-neutral-500 flex flex-col items-center gap-2 text-center">
             <div className="flex items-center gap-2">
               <Heart size={16} className="text-red-500 dark:text-red-300" />
               <span>© {new Date().getFullYear()} Spot Cloud B.V. (Cloud Evolvers). {t.footer?.rights || 'All rights reserved.'}</span>
