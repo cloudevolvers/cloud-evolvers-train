@@ -41,7 +41,7 @@ export const TrainingCourseCard: React.FC<TrainingCourseCardProps> = ({ course, 
       onClick={() => navigate(`/training/${course.code.toLowerCase()}`)}
       className="cursor-pointer group"
     >
-      <Card className="h-full overflow-hidden bg-white dark:bg-slate-800 border border-border/40 group-hover:border-blue-500/40 shadow-sm hover:shadow-xl transition-all duration-300 relative">
+      <Card className="h-full overflow-hidden bg-white dark:bg-slate-800 border border-border/40 group-hover:border-foreground/40 shadow-sm hover:shadow-xl transition-all duration-300 relative">
         {/* Popular badge */}
         {course.popular && (
           <div className="absolute top-4 left-4 z-10">

@@ -31,17 +31,17 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
     <div className="space-y-12">
       {/* Course Overview with gradient background */}
       <motion.section 
-        className="from-slate-900/30 via-blue-900/30 to-slate-900/30 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
+        className="from-neutral-900/30 via-neutral-800/30 to-neutral-900/30 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="from-blue-500/10 to-sky-500/10 absolute top-0 right-0 w-64 h-64 bg-gradient-to-br rounded-full -translate-y-32 translate-x-32" />
-        <div className="from-sky-500/10 to-blue-500/10 absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr rounded-full translate-y-24 -translate-x-24" />
+        <div className="from-neutral-500/10 to-neutral-400/10 absolute top-0 right-0 w-64 h-64 bg-gradient-to-br rounded-full -translate-y-32 translate-x-32" />
+        <div className="from-neutral-400/10 to-neutral-500/10 absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr rounded-full translate-y-24 -translate-x-24" />
         
         <div className="relative z-10">
           <h2 className="text-slate-100 font-bold mb-6 flex items-center gap-3">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-sky-500 rounded-2xl text-white shadow-lg">
+            <div className="p-3 bg-foreground rounded-2xl text-background shadow-lg">
               <BookOpen className="h-8 w-8" />
             </div>
             Course Overview
@@ -60,7 +60,7 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 bg-gradient-to-br from-blue-500 to-sky-500 rounded-xl text-white">
+          <div className="p-2 bg-foreground rounded-xl text-background">
             <Target className="h-6 w-6" />
           </div>
           <h3 className="text-slate-100 font-bold">Learning Objectives</h3>
@@ -74,15 +74,15 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
             return (
               <motion.div 
                 key={objective.id}
-                className="bg-gradient-to-r from-slate-800/40 to-blue-800/40 border-blue-700/50 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
+                className="bg-gradient-to-r from-neutral-800/40 to-neutral-700/40 border-neutral-600/50 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-blue-700/60 group-hover:bg-blue-600/70 p-2 rounded-lg transition-colors">
-                  <IconComponent className="text-blue-200 h-5 w-5" />
+                <div className="bg-neutral-600/60 group-hover:bg-neutral-500/70 p-2 rounded-lg transition-colors">
+                  <IconComponent className="text-foreground/70 h-5 w-5" />
                 </div>
                 <div>
                   <span className="text-slate-100 font-semibold">{objective.title}:</span>
@@ -104,47 +104,47 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
         <h3 className="text-slate-100 font-bold mb-6">Training Format</h3>
         <div className="grid gap-6 md:grid-cols-3">
           <motion.div 
-            className="from-slate-800/40 to-blue-800/40 border-blue-700/50 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
+            className="from-neutral-800/40 to-neutral-700/40 border-neutral-600/50 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="p-3 bg-blue-500 rounded-xl text-white shadow-md">
+            <div className="p-3 bg-foreground rounded-xl text-background shadow-md">
               <Clock className="h-7 w-7" />
             </div>
             <div>
               <div className="text-slate-100 font-bold">Duration</div>
-              <div className="text-blue-400 font-medium">
+              <div className="text-foreground/70 font-medium">
                 {training.duration?.days || 0} {(training.duration?.days || 0) === 1 ? 'day' : 'days'} intensive
               </div>
             </div>
           </motion.div>
           
           <motion.div 
-            className="from-blue-800/40 to-sky-800/40 border-sky-700/50 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
+            className="from-neutral-800/40 to-neutral-700/40 border-neutral-600/50 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="p-3 bg-sky-500 rounded-xl text-white shadow-md">
+            <div className="p-3 bg-foreground rounded-xl text-background shadow-md">
               <Users className="h-7 w-7" />
             </div>
             <div>
               <div className="text-slate-100 font-bold">Group Size</div>
-              <div className="text-sky-400 font-medium">Max {training.maxParticipants} participants</div>
+              <div className="text-foreground/70 font-medium">Max {training.maxParticipants} participants</div>
             </div>
           </motion.div>
           
           {training.certification?.available && (
             <motion.div 
-              className="from-cyan-800/40 to-blue-800/40 border-cyan-700/50 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
+              className="from-neutral-800/40 to-neutral-700/40 border-neutral-600/50 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="p-3 bg-cyan-500 rounded-xl text-white shadow-md">
+              <div className="p-3 bg-foreground rounded-xl text-background shadow-md">
                 <Award className="h-7 w-7" />
               </div>
               <div>
                 <div className="text-slate-100 font-bold">Certification</div>
-                <div className="text-cyan-400 font-medium">{training.certification.examCode} preparation</div>
+                <div className="text-foreground/70 font-medium">{training.certification.examCode} preparation</div>
               </div>
             </motion.div>
           )}
@@ -163,20 +163,20 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
           {training.modules.map((module, index) => {
             const IconComponent = getIcon(module.icon);
             const gradientClasses = [
-              'from-blue-100 to-sky-100 dark:from-blue-800/40 dark:to-sky-800/40 border-blue-200 dark:border-blue-700/50',
-              'from-sky-100 to-cyan-100 dark:from-sky-800/40 dark:to-cyan-800/40 border-sky-200 dark:border-sky-700/50',
-              'from-cyan-100 to-blue-100 dark:from-cyan-800/40 dark:to-blue-800/40 border-cyan-200 dark:border-cyan-700/50'
+              'from-neutral-100 to-neutral-50 dark:from-neutral-800/40 dark:to-neutral-700/40 border-neutral-200 dark:border-neutral-600/50',
+              'from-neutral-50 to-neutral-100 dark:from-neutral-700/40 dark:to-neutral-800/40 border-neutral-200 dark:border-neutral-600/50',
+              'from-neutral-100 to-neutral-50 dark:from-neutral-800/40 dark:to-neutral-700/40 border-neutral-200 dark:border-neutral-600/50'
             ];
-            const iconBgClasses = ['bg-blue-200 dark:bg-blue-700/60', 'bg-sky-200 dark:bg-sky-700/60', 'bg-cyan-200 dark:bg-cyan-700/60'];
+            const iconBgClasses = ['bg-neutral-200 dark:bg-neutral-600/60', 'bg-neutral-200 dark:bg-neutral-600/60', 'bg-neutral-200 dark:bg-neutral-600/60'];
             const textClasses = [
-              'text-blue-900 dark:text-blue-100',
-              'text-sky-900 dark:text-sky-100', 
-              'text-cyan-900 dark:text-cyan-100'
+              'text-neutral-900 dark:text-neutral-100',
+              'text-neutral-900 dark:text-neutral-100',
+              'text-neutral-900 dark:text-neutral-100'
             ];
             const descTextClasses = [
-              'text-blue-800 dark:text-blue-200',
-              'text-sky-800 dark:text-sky-200',
-              'text-cyan-800 dark:text-cyan-200'
+              'text-neutral-800 dark:text-neutral-200',
+              'text-neutral-800 dark:text-neutral-200',
+              'text-neutral-800 dark:text-neutral-200'
             ];
             
             const styleIndex = index % 3;
@@ -229,20 +229,20 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="text-blue-100 dark:text-blue-200 font-bold mb-6">Hands-on Labs</h3>
-          <div className="bg-gradient-to-r from-blue-800/40 to-sky-800/40 dark:from-blue-900/40 dark:to-sky-900/40 border-blue-700/50 dark:border-blue-600/30 p-6 rounded-xl">
-            <p className="text-blue-200 dark:text-blue-300 font-medium mb-6">
+          <h3 className="text-neutral-100 dark:text-neutral-200 font-bold mb-6">Hands-on Labs</h3>
+          <div className="bg-gradient-to-r from-neutral-800/40 to-neutral-700/40 dark:from-neutral-800/40 dark:to-neutral-700/40 border-neutral-600/50 dark:border-neutral-600/30 p-6 rounded-xl">
+            <p className="text-neutral-200 dark:text-neutral-300 font-medium mb-6">
               Extensive practical exercises including:
             </p>
             <ul className="space-y-4">
               {training.handsOnLabs.map((lab, index) => {
                 const IconComponent = getIcon(lab.icon);
                 const colors = [
-                  'text-blue-600 dark:text-blue-400',
-                  'text-sky-600 dark:text-sky-400',
-                  'text-cyan-600 dark:text-cyan-400',
-                  'text-indigo-600 dark:text-indigo-400',
-                  'text-blue-600 dark:text-blue-400'
+                  'text-foreground/70',
+                  'text-foreground/70',
+                  'text-foreground/70',
+                  'text-foreground/70',
+                  'text-foreground/70'
                 ];
                 
                 return (
@@ -254,7 +254,7 @@ export default function TrainingContentRenderer({ training }: TrainingContentRen
                         <span className="text-sm opacity-75 ml-2">({lab.duration})</span>
                       )}
                       {lab.description && (
-                        <p className="text-blue-300 dark:text-blue-400 mt-1">{lab.description}</p>
+                        <p className="text-neutral-300 dark:text-neutral-400 mt-1">{lab.description}</p>
                       )}
                     </div>
                   </li>

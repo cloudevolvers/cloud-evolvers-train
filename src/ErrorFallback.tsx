@@ -68,8 +68,8 @@ export const ErrorFallback = ({ error, resetErrorBoundary }) => {
                 )}
                 
                 {isDev && (
-                  <div className="bg-blue-950/20 border-blue-800 rounded p-3">
-                    <p className="text-blue-300">
+                  <div className="bg-neutral-800/20 border-neutral-700 rounded p-3">
+                    <p className="text-neutral-300">
                       <strong>Development Tips:</strong>
                       <br />• Check the browser console for additional error details
                       <br />• Look for syntax errors or missing imports in the stack trace

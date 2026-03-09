@@ -52,7 +52,7 @@ export default function TrainingDetailPage() {
   // Handle loading state
   if (loading) {
     return (
-      <div className="min-h-screen pt-24 bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-900/10 dark:via-background dark:to-blue-900/10">
+      <div className="min-h-screen pt-24 bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-900/10 dark:via-background dark:to-neutral-900/10">
         <div className="container max-w-[90rem] mx-auto px-6 py-8">
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center space-y-4">
@@ -68,7 +68,7 @@ export default function TrainingDetailPage() {
   // Handle error state
   if (error) {
     return (
-      <div className="min-h-screen pt-24 bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-900/10 dark:via-background dark:to-blue-900/10">
+      <div className="min-h-screen pt-24 bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-900/10 dark:via-background dark:to-neutral-900/10">
         <div className="container max-w-[90rem] mx-auto px-6 py-8">
           <div className="text-center space-y-6">
             <div className="bg-red-900/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
@@ -96,7 +96,7 @@ export default function TrainingDetailPage() {
   }
 
   return (
-    <div className="min-h-screen pt-24 bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-900/10 dark:via-background dark:to-blue-900/10">
+    <div className="min-h-screen pt-24 bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-900/10 dark:via-background dark:to-neutral-900/10">
       <div className="container max-w-[90rem] mx-auto px-6 py-8">
         {/* Breadcrumb Navigation */}
         <motion.div

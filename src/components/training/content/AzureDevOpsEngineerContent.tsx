@@ -188,8 +188,8 @@ export default function AzureDevOpsEngineerContent() {
 
           <div className="bg-slate-800 rounded-xl p-6 border border-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-indigo-950/20 p-2 rounded-lg">
-                <Gauge className="text-indigo-400 h-6 w-6" />
+              <div className="bg-neutral-800/20 p-2 rounded-lg">
+                <Gauge className="text-foreground/70 h-6 w-6" />
               </div>
               <h3 className="text-white font-semibold">Security & Monitoring</h3>
             </div>

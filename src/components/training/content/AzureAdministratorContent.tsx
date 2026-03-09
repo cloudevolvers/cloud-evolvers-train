@@ -43,17 +43,17 @@ export default function AzureAdministratorContent() {
     <div className="space-y-12">
       {/* Course Overview with gradient background */}
       <motion.section 
-        className="from-blue-950/20 via-indigo-950/20 to-blue-950/20 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
+        className="from-neutral-950/20 via-neutral-900/20 to-neutral-950/20 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-200/20 to-indigo-200/20 rounded-full -translate-y-32 translate-x-32" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-indigo-200/20 to-blue-200/20 rounded-full translate-y-24 -translate-x-24" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-neutral-200/20 to-neutral-300/20 rounded-full -translate-y-32 translate-x-32" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-neutral-300/20 to-neutral-200/20 rounded-full translate-y-24 -translate-x-24" />
         
         <div className="relative z-10">
           <h2 className="text-white font-bold mb-6 flex items-center gap-3">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl text-white shadow-lg">
+            <div className="p-3 bg-foreground rounded-2xl text-background shadow-lg">
               <BookOpen className="h-8 w-8" />
             </div>
             Course Overview
@@ -98,12 +98,12 @@ export default function AzureAdministratorContent() {
           </motion.div>
           
           <motion.div 
-            className="bg-slate-800/50 border-blue-800/30 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
+            className="bg-slate-800/50 border-neutral-700/30 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="bg-blue-950/30 group-hover:bg-blue-900/40 p-2 rounded-lg transition-colors">
-              <Database className="text-blue-400 h-5 w-5" />
+            <div className="bg-neutral-800/30 group-hover:bg-neutral-700/40 p-2 rounded-lg transition-colors">
+              <Database className="text-foreground/70 h-5 w-5" />
             </div>
             <div>
               <span className="text-white font-semibold">Storage Solutions:</span>
@@ -112,12 +112,12 @@ export default function AzureAdministratorContent() {
           </motion.div>
           
           <motion.div 
-            className="bg-slate-800/50 border-purple-800/30 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
+            className="bg-slate-800/50 border-neutral-700/30 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="bg-purple-950/30 group-hover:bg-purple-900/40 p-2 rounded-lg transition-colors">
-              <Settings className="text-purple-400 h-5 w-5" />
+            <div className="bg-neutral-800/30 group-hover:bg-neutral-700/40 p-2 rounded-lg transition-colors">
+              <Settings className="text-foreground/70 h-5 w-5" />
             </div>
             <div>
               <span className="text-white font-semibold">Compute Resources:</span>
@@ -126,12 +126,12 @@ export default function AzureAdministratorContent() {
           </motion.div>
           
           <motion.div 
-            className="bg-slate-800/50 border-indigo-800/30 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
+            className="bg-slate-800/50 border-neutral-700/30 flex items-start gap-4 p-6 rounded-xl transition-all duration-300 group"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="bg-indigo-950/30 group-hover:bg-indigo-900/40 p-2 rounded-lg transition-colors">
-              <Network className="text-indigo-400 h-5 w-5" />
+            <div className="bg-neutral-800/30 group-hover:bg-neutral-700/40 p-2 rounded-lg transition-colors">
+              <Network className="text-foreground/70 h-5 w-5" />
             </div>
             <div>
               <span className="text-white font-semibold">Virtual Networking:</span>
@@ -165,16 +165,16 @@ export default function AzureAdministratorContent() {
         <h3 className="text-white font-bold mb-6">Training Format</h3>
         <div className="grid gap-6 md:grid-cols-3">
           <motion.div 
-            className="from-blue-950/30 to-indigo-950/30 border-blue-800/30 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
+            className="from-neutral-900/30 to-neutral-800/30 border-neutral-700/30 flex items-center gap-4 p-6 bg-gradient-to-br rounded-xl shadow-sm transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="p-3 bg-blue-500 rounded-xl text-white shadow-md">
+            <div className="p-3 bg-foreground rounded-xl text-background shadow-md">
               <Clock className="h-7 w-7" />
             </div>
             <div>
               <div className="text-white font-bold">Duration</div>
-              <div className="text-blue-400 font-medium">4 days intensive</div>
+              <div className="text-foreground/70 font-medium">4 days intensive</div>
             </div>
           </motion.div>
           
@@ -234,13 +234,13 @@ export default function AzureAdministratorContent() {
           </motion.div>
           
           <motion.div 
-            className="bg-slate-800/50 border-blue-800/30 p-6 rounded-xl transition-all duration-300"
+            className="bg-slate-800/50 border-neutral-700/30 p-6 rounded-xl transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="flex items-start gap-4">
-              <div className="bg-blue-900/30 p-2 rounded-lg">
-                <Database className="text-blue-400 h-6 w-6" />
+              <div className="bg-neutral-800/30 p-2 rounded-lg">
+                <Database className="text-foreground/70 h-6 w-6" />
               </div>
               <div>
                 <h4 className="text-white font-bold mb-2">Module 2: Implement and Manage Storage</h4>
@@ -250,13 +250,13 @@ export default function AzureAdministratorContent() {
           </motion.div>
           
           <motion.div 
-            className="bg-slate-800/50 border-purple-800/30 p-6 rounded-xl transition-all duration-300"
+            className="bg-slate-800/50 border-neutral-700/30 p-6 rounded-xl transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="flex items-start gap-4">
-              <div className="bg-purple-900/30 p-2 rounded-lg">
-                <Settings className="text-purple-400 h-6 w-6" />
+              <div className="bg-neutral-800/30 p-2 rounded-lg">
+                <Settings className="text-foreground/70 h-6 w-6" />
               </div>
               <div>
                 <h4 className="text-white font-bold mb-2">Module 3: Deploy and Manage Azure Compute Resources</h4>
@@ -266,13 +266,13 @@ export default function AzureAdministratorContent() {
           </motion.div>
           
           <motion.div 
-            className="bg-slate-800/50 border-indigo-800/30 p-6 rounded-xl transition-all duration-300"
+            className="bg-slate-800/50 border-neutral-700/30 p-6 rounded-xl transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="flex items-start gap-4">
-              <div className="bg-indigo-900/30 p-2 rounded-lg">
-                <Network className="text-indigo-400 h-6 w-6" />
+              <div className="bg-neutral-800/30 p-2 rounded-lg">
+                <Network className="text-foreground/70 h-6 w-6" />
               </div>
               <div>
                 <h4 className="text-white font-bold mb-2">Module 4: Configure and Manage Virtual Networking</h4>
@@ -325,7 +325,7 @@ export default function AzureAdministratorContent() {
               whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 mt-2.5 flex-shrink-0" />
+              <div className="w-2 h-2 rounded-full bg-foreground/50 mt-2.5 flex-shrink-0" />
               <span>Deploying and configuring virtual machines</span>
             </motion.li>
             <motion.li 
@@ -333,7 +333,7 @@ export default function AzureAdministratorContent() {
               whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mt-2.5 flex-shrink-0" />
+              <div className="w-2 h-2 rounded-full bg-foreground/50 mt-2.5 flex-shrink-0" />
               <span>Creating and managing storage solutions</span>
             </motion.li>
             <motion.li 
@@ -341,7 +341,7 @@ export default function AzureAdministratorContent() {
               whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 mt-2.5 flex-shrink-0" />
+              <div className="w-2 h-2 rounded-full bg-foreground/50 mt-2.5 flex-shrink-0" />
               <span>Implementing virtual networking and hybrid connectivity</span>
             </motion.li>
             <motion.li 
@@ -373,8 +373,8 @@ export default function AzureAdministratorContent() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="bg-blue-900/30 p-1 rounded-lg">
-                  <CheckCircle className="text-blue-400 h-4 w-4" />
+                <div className="bg-neutral-800/30 p-1 rounded-lg">
+                  <CheckCircle className="text-foreground/70 h-4 w-4" />
                 </div>
                 <span className="text-gray-300 leading-relaxed">{prerequisite}</span>
               </motion.div>
@@ -389,11 +389,11 @@ export default function AzureAdministratorContent() {
           transition={{ duration: 0.6, delay: 1.2 }}
         >
           <h3 className="text-white font-bold mb-6">Instructor</h3>
-          <div className="from-indigo-950/30 to-blue-950/30 border-indigo-800/30 p-6 bg-gradient-to-br rounded-xl">
+          <div className="from-neutral-900/30 to-neutral-800/30 border-neutral-700/30 p-6 bg-gradient-to-br rounded-xl">
             <div className="space-y-4">
               <div>
                 <h4 className="text-white font-bold">{trainingMetadata.instructor.name}</h4>
-                <p className="text-indigo-400 font-medium">{trainingMetadata.instructor.title}</p>
+                <p className="text-foreground/70 font-medium">{trainingMetadata.instructor.title}</p>
               </div>
               <p className="text-gray-300">
                 Microsoft Certified Trainer with extensive industry experience in Azure infrastructure, 
@@ -417,7 +417,7 @@ export default function AzureAdministratorContent() {
           {trainingMetadata.tags.map((tag, index) => (
             <motion.span
               key={index}
-              className="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium text-sm shadow-sm hover:shadow-md transition-shadow"
+              className="px-4 py-2 bg-foreground text-background rounded-full font-medium text-sm shadow-sm hover:shadow-md transition-shadow"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >

@@ -58,28 +58,28 @@ export default function AzureAIFundamentalsContent() {
     <div className="space-y-12">
       {/* Hero Section */}
       <motion.section 
-        className="from-purple-950/20 via-pink-950/20 to-purple-950/20 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
+        className="from-neutral-950/20 via-neutral-900/20 to-neutral-950/20 relative bg-gradient-to-br rounded-2xl p-8 overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-200/20 to-pink-200/20 rounded-full -translate-y-32 translate-x-32" />
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-pink-200/20 to-purple-200/20 rounded-full translate-y-24 -translate-x-24" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-neutral-200/20 to-neutral-300/20 rounded-full -translate-y-32 translate-x-32" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-neutral-300/20 to-neutral-200/20 rounded-full translate-y-24 -translate-x-24" />
         
         <div className="relative z-10">
           <div className="flex items-center gap-4 mb-6">
-            <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl text-white shadow-lg">
+            <div className="p-3 bg-foreground rounded-2xl text-background shadow-lg">
               <Brain className="h-8 w-8" />
             </div>
             <div>
-              <div className="text-purple-400 font-medium">Beginner Level</div>
+              <div className="text-foreground/70 font-medium">Beginner Level</div>
               <div className="text-sm text-muted-foreground font-medium">AI-900 Fundamentals</div>
             </div>
           </div>
           
           <h1 className="text-white font-bold mb-4">
             Azure AI
-            <span className="text-purple-400 block">Fundamentals</span>
+            <span className="text-foreground/70 block">Fundamentals</span>
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
@@ -88,21 +88,21 @@ export default function AzureAIFundamentalsContent() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-slate-800/60 flex items-center gap-3 backdrop-blur-sm rounded-lg p-4">
-              <Clock className="text-purple-400 h-6 w-6" />
+              <Clock className="text-foreground/70 h-6 w-6" />
               <div>
                 <div className="text-white font-semibold">2 Days</div>
                 <div className="text-sm text-muted-foreground font-medium">Foundation Course</div>
               </div>
             </div>
             <div className="bg-slate-800/60 flex items-center gap-3 backdrop-blur-sm rounded-lg p-4">
-              <Users className="text-purple-400 h-6 w-6" />
+              <Users className="text-foreground/70 h-6 w-6" />
               <div>
                 <div className="text-white font-semibold">Max 15</div>
                 <div className="text-sm text-muted-foreground font-medium">Participants</div>
               </div>
             </div>
             <div className="bg-slate-800/60 flex items-center gap-3 backdrop-blur-sm rounded-lg p-4">
-              <Certificate className="text-purple-400 h-6 w-6" />
+              <Certificate className="text-foreground/70 h-6 w-6" />
               <div>
                 <div className="text-white font-semibold">AI-900</div>
                 <div className="text-sm text-muted-foreground font-medium">Certification</div>
@@ -147,8 +147,8 @@ export default function AzureAIFundamentalsContent() {
         <div className="space-y-8">
           <div className="bg-slate-800 rounded-xl p-6 border border-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-purple-950/20 p-2 rounded-lg">
-                <Brain className="text-purple-400 h-6 w-6" />
+              <div className="bg-neutral-800/20 p-2 rounded-lg">
+                <Brain className="text-foreground/70 h-6 w-6" />
               </div>
               <h3 className="text-white font-semibold">AI Concepts & Principles</h3>
             </div>
@@ -162,8 +162,8 @@ export default function AzureAIFundamentalsContent() {
 
           <div className="bg-slate-800 rounded-xl p-6 border border-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-pink-950/20 p-2 rounded-lg">
-                <Eye className="text-pink-400 h-6 w-6" />
+              <div className="bg-neutral-800/20 p-2 rounded-lg">
+                <Eye className="text-foreground/70 h-6 w-6" />
               </div>
               <h3 className="text-white font-semibold">Computer Vision</h3>
             </div>
@@ -177,8 +177,8 @@ export default function AzureAIFundamentalsContent() {
 
           <div className="bg-slate-800 rounded-xl p-6 border border-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-blue-950/20 p-2 rounded-lg">
-                <Waveform className="text-blue-400 h-6 w-6" />
+              <div className="bg-neutral-800/20 p-2 rounded-lg">
+                <Waveform className="text-foreground/70 h-6 w-6" />
               </div>
               <h3 className="text-white font-semibold">Natural Language Processing</h3>
             </div>
@@ -192,8 +192,8 @@ export default function AzureAIFundamentalsContent() {
 
           <div className="bg-slate-800 rounded-xl p-6 border border-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-indigo-950/20 p-2 rounded-lg">
-                <Robot className="text-indigo-400 h-6 w-6" />
+              <div className="bg-neutral-800/20 p-2 rounded-lg">
+                <Robot className="text-foreground/70 h-6 w-6" />
               </div>
               <h3 className="text-white font-semibold">Conversational AI</h3>
             </div>
@@ -218,8 +218,8 @@ export default function AzureAIFundamentalsContent() {
           <h2 className="text-white font-bold">Prerequisites</h2>
           <div className="grid gap-4">
             {trainingMetadata.prerequisites.map((prereq, index) => (
-              <div key={index} className="bg-pink-900/20 flex items-start gap-3 p-3 rounded-lg">
-                <ArrowRight className="text-pink-400 h-6 w-6 flex-shrink-0 mt-0.5" />
+              <div key={index} className="bg-neutral-800/20 flex items-start gap-3 p-3 rounded-lg">
+                <ArrowRight className="text-foreground/70 h-6 w-6 flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">{prereq}</span>
               </div>
             ))}
@@ -235,8 +235,8 @@ export default function AzureAIFundamentalsContent() {
           <h2 className="text-white font-bold">Target Audience</h2>
           <div className="grid gap-4">
             {trainingMetadata.targetAudience.map((audience, index) => (
-              <div key={index} className="bg-purple-900/20 flex items-start gap-3 p-3 rounded-lg">
-                <Users className="text-purple-400 h-6 w-6 flex-shrink-0 mt-0.5" />
+              <div key={index} className="bg-neutral-800/20 flex items-start gap-3 p-3 rounded-lg">
+                <Users className="text-foreground/70 h-6 w-6 flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">{audience}</span>
               </div>
             ))}

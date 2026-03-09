@@ -134,7 +134,7 @@ export const Hero = () => {
                     className="pointer-events-none absolute -inset-px transition duration-300 z-10"
                     style={{
                         opacity: isHovering ? 1 : 0,
-                        background: `radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.1), transparent 40%)`,
+                        background: `radial-gradient(800px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(128, 128, 128, 0.08), transparent 40%)`,
                     }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background z-0" />

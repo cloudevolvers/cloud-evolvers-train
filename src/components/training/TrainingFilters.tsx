@@ -60,7 +60,7 @@ export function TrainingFilters({
               placeholder={t?.training?.overview?.filters?.search || 'Search courses...'}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 bg-background/50 border-white/20 focus:border-blue-500"
+              className="pl-10 bg-background/50 border-white/20 focus:border-foreground"
             />
           </div>
         </div>
