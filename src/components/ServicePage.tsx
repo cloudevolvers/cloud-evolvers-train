@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router-dom";
 import { allServices } from "@/data/services";
 import type { Service } from "@/types/services";
-import { Header } from "@/components/Header";
-import Footer from "@/components/Footer";
 import { getServiceIcon } from "@/utils/service-icons";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { ServiceFeatureCard } from "@/components/services/ServiceFeatureCard";
@@ -25,7 +23,6 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
   if (!serviceId || !allServices[serviceId as keyof typeof allServices]) {
     return (
       <div className="min-h-screen bg-background">
-        <Header />
         <div className="flex items-center justify-center py-24">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-foreground mb-4">Service Not Found</h1>
@@ -35,7 +32,6 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
             </Button>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -48,19 +44,18 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/10 via-indigo-500/8 to-violet-500/5 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-neutral-500/10 via-neutral-400/8 to-neutral-300/5 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-emerald-500/8 via-teal-500/5 to-cyan-500/5 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-neutral-500/8 via-neutral-400/5 to-neutral-300/5 rounded-full blur-3xl"
           animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         />
       </div>
 
       <div className="relative z-10">
-        <Header />
 
         {/* Hero Section */}
         <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
@@ -128,10 +123,10 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
           <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
             <div className="max-w-4xl mx-auto">
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <Card className="bg-gradient-to-br from-blue-500/5 via-indigo-500/5 to-violet-500/5 border-blue-500/20 backdrop-blur-sm shadow-2xl overflow-hidden">
+                <Card className="bg-gradient-to-br from-neutral-500/5 via-neutral-400/5 to-neutral-300/5 border-border backdrop-blur-sm shadow-2xl overflow-hidden">
                   <CardContent className="p-10 lg:p-14 text-center">
-                    <div className="inline-flex items-center justify-center p-4 bg-gradient-to-br from-blue-500/20 to-indigo-500/10 rounded-2xl mb-6">
-                      <CheckCircle size={32} className="text-blue-500" weight="duotone" />
+                    <div className="inline-flex items-center justify-center p-4 bg-neutral-500/10 dark:bg-white/10 rounded-2xl mb-6">
+                      <CheckCircle size={32} className="text-foreground/70" weight="duotone" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl text-foreground font-bold mb-4">
                       {language === 'nl' ? 'Klaar om te beginnen?' : 'Ready to Get Started?'}
@@ -140,7 +135,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
                       {language === 'nl' ? 'Neem contact met ons op voor een persoonlijk gesprek over uw behoeften.' : 'Contact us for a personalized consultation about your needs.'}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg" onClick={() => navigate('/contact')}>
+                      <Button size="lg" className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black shadow-lg" onClick={() => navigate('/contact')}>
                         <Phone size={18} className="mr-2" />
                         {language === 'nl' ? 'Neem contact op' : 'Contact Us'}
                       </Button>
@@ -155,7 +150,6 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
           </div>
         </section>
 
-        <Footer />
       </div>
     </div>
   );
