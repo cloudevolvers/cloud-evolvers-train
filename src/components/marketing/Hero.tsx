@@ -7,7 +7,7 @@ import { useTranslations } from "@/hooks/use-translations";
 export function Hero() {
     const { t } = useTranslations();
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background pt-20 sm:pt-24 lg:pt-0">
             {/* Background Photo */}
             <div className="absolute inset-0">
                 <img
