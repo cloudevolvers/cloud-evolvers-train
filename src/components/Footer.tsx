@@ -63,6 +63,62 @@ const Footer: React.FC = () => {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-10">
 
+          {/* Contact Info & Links */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">{t.footer?.contact || 'Contact'}</h3>
+              <div className="space-y-3 text-gray-600 dark:text-slate-400">
+                <a
+                  href="mailto:training@cloudevolvers.com"
+                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  <Envelope className="w-4 h-4" />
+                  training@cloudevolvers.com
+                </a>
+                <a
+                  href="tel:+31634272027"
+                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  +31 6 34272027
+                </a>
+                <a
+                  href="https://wa.me/31634272027"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                >
+                  <WhatsappLogo className="w-4 h-4" weight="fill" />
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">{t.footer?.legal || 'Legal'}</h3>
+              <div className="space-y-2">
+                <Link
+                  to="/privacy-policy"
+                  className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  {t.footer?.privacyPolicy || 'Privacy Policy'}
+                </Link>
+                <Link
+                  to="/terms-of-service"
+                  className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  {t.footer?.termsOfService || 'Terms of Service'}
+                </Link>
+                <Link
+                  to="/cookie-policy"
+                  className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  {t.footer?.cookiePolicy || 'Cookie Policy'}
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* Contact Form Section */}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
@@ -131,62 +187,6 @@ const Footer: React.FC = () => {
                 </Button>
               </div>
             </form>
-          </div>
-
-          {/* Contact Info & Links */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">{t.footer?.contact || 'Contact'}</h3>
-              <div className="space-y-3 text-gray-600 dark:text-slate-400">
-                <a
-                  href="mailto:training@cloudevolvers.com"
-                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  <Envelope className="w-4 h-4" />
-                  training@cloudevolvers.com
-                </a>
-                <a
-                  href="tel:+31634272027"
-                  className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  +31 6 34272027
-                </a>
-                <a
-                  href="https://wa.me/31634272027"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-green-600 dark:hover:text-green-400 transition-colors"
-                >
-                  <WhatsappLogo className="w-4 h-4" weight="fill" />
-                  WhatsApp
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">{t.footer?.legal || 'Legal'}</h3>
-              <div className="space-y-2">
-                <Link
-                  to="/privacy-policy"
-                  className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
-                >
-                  {t.footer?.privacyPolicy || 'Privacy Policy'}
-                </Link>
-                <Link
-                  to="/terms-of-service"
-                  className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
-                >
-                  {t.footer?.termsOfService || 'Terms of Service'}
-                </Link>
-                <Link
-                  to="/cookie-policy"
-                  className="block text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
-                >
-                  {t.footer?.cookiePolicy || 'Cookie Policy'}
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
 
