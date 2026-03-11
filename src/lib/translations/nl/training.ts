@@ -369,6 +369,7 @@ export default {
     daysPlural: 'dagen',
     groupSize: 'Groepsgrootte',
     minParticipants: 'Minimaal 6 deelnemers',
+    perPerson: 'per persoon',
     startLearningJourney: 'Start uw leertraject',
     formDescription: 'Klaar om uw cloudexpertise te vergroten? Boek uw training en sluit u aan bij professionals die Azure beheersen.',
     notFound: 'Training niet gevonden',
