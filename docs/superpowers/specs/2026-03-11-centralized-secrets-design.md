@@ -166,6 +166,7 @@ Secrets needed in GitHub:
 |------|--------|
 | `.github/scripts/check-env-changes.sh` | References old env var names (`API_KEY`, `EMAIL_AZURE_*`). SWA-specific Azure CLI logic. |
 | `scripts/setup-github-secrets.sh` | Pushes old secret names (`AZURE_AD_CLIENT_ID`, `API_KEY`, etc.). Will be replaced by the deploy workflow. |
+| `docs/testing/test-graph-working.sh` | Contains a **hardcoded Azure AD client secret** as a fallback value. Must be deleted, not just updated. |
 
 **Scripts and docs with stale references** (update old names in cleanup step):
 
@@ -174,16 +175,20 @@ These files contain references to old env var names in comments, READMEs, or tes
 - `scripts/maintenance/verify-optimization.sh`
 - `scripts/test-pr-preview.sh`
 - `docs/testing/test-graph-api.js`
-- `docs/testing/test-graph-working.sh`
 - `docs/deployment/AZURE_FUNCTIONS_OPTIMIZATION.md`
 - `docs/deployment/NEXT_SESSION_PROMPT.md`
 - `docs/deployment/STAGING_DEPLOYMENT_SETUP.md`
+- `docs/deployment/GRAPH_API_CONFIG_COMPLETE.md`
+- `docs/deployment/ENV_VARS_CLEANUP_VERIFICATION.md`
+- `docs/deployment/DEPLOYMENT_SUMMARY.md`
+- `docs/deployment/PR_PREVIEW_SETUP.md`
+- `docs/PR_PREVIEW_SETUP.md`
 - `README.md` (env var setup section)
 - `infra/README.md`
 
 **Files NOT needing changes** (verified):
 - `src/pages/training/TrainingDetailPage.tsx` — no env var references
-- `src/lib/pricing.ts` — no env var references
+- `src/lib/pricing.ts` — frontend pricing utility, no env var references (different from `functions/api/pricing.ts` which IS listed above)
 
 ### 4. Remove Hardcoded Fallbacks
 
@@ -270,7 +275,7 @@ The deploy workflow must include a verification step after deployment:
 To avoid a broken intermediate state, apply changes in this order:
 
 1. **Set new GitHub Secrets** — add `FORM_API_KEY`, `EMAIL_CLIENT_SECRET`, `ADMIN_PASSWORD`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` with correct values. Keep old secrets (`API_KEY`, etc.) temporarily.
-2. **Update code** — rename all env var references in functions and frontend code (Section 3). The code changes are backward-compatible because the actual values haven't changed yet, and the old CF Pages env vars still exist.
+2. **Update code** — rename all env var references in functions and frontend code (Section 3). Backend renames are backward-compatible (old CF runtime env vars still exist until next deploy). **Frontend renames are NOT backward-compatible** — the build will look for `VITE_FORM_API_KEY` instead of `VITE_API_KEY`, so steps 2-6 must be deployed together via the new workflow.
 3. **Update `wrangler.toml`** — add the new non-secret config vars (Section 1).
 4. **Create deploy workflow** — the new GitHub Actions workflow that builds and deploys (Section 2).
 5. **Update monitor workflows** — rename secret references in monitor workflows (Section 5).
