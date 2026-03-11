@@ -79,7 +79,15 @@ export class FrontendPricingService {
   }
 
   static getCoursePrice(courseSlug: string): number {
-    return CURRENT_PRICES[courseSlug] || 690;
+    const price = CURRENT_PRICES[courseSlug];
+    if (price !== undefined) return price;
+    // Only use fallback in production; in dev, return 0 so missing prices are visible
+    const isProd = import.meta.env.VITE_ENVIRONMENT === 'production' || import.meta.env.MODE === 'production';
+    return isProd ? 690 : 0;
+  }
+
+  static isFallbackPrice(courseSlug: string): boolean {
+    return !(courseSlug in CURRENT_PRICES);
   }
 
   static getPromotionalPrice(courseSlug: string) {

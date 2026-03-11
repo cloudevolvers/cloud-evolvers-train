@@ -16,6 +16,7 @@ export { default as FrontendPricingService } from '@/services/frontend-pricing-s
 export function getTrainingPriceDisplay(slug: string, fallbackPrice?: number) {
   const priceInfo = FrontendPricingService.getFormattedPriceInfo(slug);
   const promotion = FrontendPricingService.getCurrentPromotion();
+  const isFallbackPrice = FrontendPricingService.isFallbackPrice(slug);
 
   return {
     originalPrice: priceInfo.originalPrice,
@@ -28,6 +29,7 @@ export function getTrainingPriceDisplay(slug: string, fallbackPrice?: number) {
     formattedDiscount: priceInfo.hasDiscount ? `${priceInfo.discount}% OFF` : '',
     hasDiscount: priceInfo.hasDiscount,
     discountPercentage: priceInfo.discount,
+    isFallbackPrice,
     currency: 'EUR',
     displayText: priceInfo.hasDiscount
       ? `${priceInfo.formattedDiscountedPrice} (was ${priceInfo.formattedOriginalPrice})`

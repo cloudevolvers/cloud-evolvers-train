@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { loadTrainingBySlug } from '@/content/loader';
 import { getTrainingPriceDisplay, isPromotionalPricingActive } from '@/lib/pricing';
+import { isProduction } from '@/lib/version';
 import TrainingDetailHeader from '@/components/training/TrainingDetailHeader';
 import TrainingDetailContent from '@/components/training/TrainingDetailContent';
 import TrainingDetailSidebar from '@/components/training/TrainingDetailSidebar';
@@ -105,9 +106,12 @@ export default function TrainingDetailPage() {
   const priceInfo = training ? getTrainingPriceDisplay(slug, training.price?.amount) : null;
   const isPromotionActive = isPromotionalPricingActive();
 
-  const priceDisplay = isPromotionActive && priceInfo?.hasDiscount
-    ? priceInfo.formattedFinalPrice
-    : `€${training?.price?.amount || 'TBD'}`;
+  const showDevPrice = !isProduction() && (!training?.price?.amount || priceInfo?.isFallbackPrice);
+  const priceDisplay = showDevPrice
+    ? 'DEV'
+    : isPromotionActive && priceInfo?.hasDiscount
+      ? priceInfo.formattedFinalPrice
+      : `€${training?.price?.amount || 'TBD'}`;
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
