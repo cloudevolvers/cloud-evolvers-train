@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Calendar } from '@phosphor-icons/react';
+import { ArrowLeft, Calendar, CurrencyEur, ArrowRight } from '@phosphor-icons/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { loadTrainingBySlug } from '@/content/loader';
@@ -20,6 +21,8 @@ export default function TrainingDetailPage() {
   const { t } = useTranslations();
   const [training, setTraining] = useState<TrainingJSON | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   if (!slug) {
     return <Navigate to="/training" replace />;
@@ -45,6 +48,22 @@ export default function TrainingDetailPage() {
 
     loadTraining();
   }, [slug, language]);
+
+  // Show sticky CTA bar when header scrolls out of view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyBar(!entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: '-80px 0px 0px 0px' }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [training]);
 
   const heroImage = courseImages[slug] || defaultCourseImage;
 
@@ -86,8 +105,51 @@ export default function TrainingDetailPage() {
   const priceInfo = training ? getTrainingPriceDisplay(slug, training.price?.amount) : null;
   const isPromotionActive = isPromotionalPricingActive();
 
+  const priceDisplay = isPromotionActive && priceInfo?.hasDiscount
+    ? priceInfo.formattedFinalPrice
+    : `€${training?.price?.amount || 'TBD'}`;
+
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
+      {/* Sticky CTA Bar */}
+      <AnimatePresence>
+        {showStickyBar && (
+          <motion.div
+            initial={{ y: -80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -80, opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className="fixed top-[65px] left-0 right-0 z-[9998] bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg"
+          >
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-16 max-w-[1600px] mx-auto">
+                <div className="flex items-center gap-3 min-w-0">
+                  <h2 className="font-bold text-foreground text-sm sm:text-base truncate">
+                    {training?.title}
+                  </h2>
+                  <span className="hidden sm:inline-flex items-center text-xs text-muted-foreground bg-muted px-2 py-1 rounded-md flex-shrink-0">
+                    {training?.duration?.days} {(training?.duration?.days || 0) === 1 ? (t.training?.detail?.daysSingle || 'day') : (t.training?.detail?.daysPlural || 'days')}
+                  </span>
+                </div>
+                <div className="flex items-center gap-4 flex-shrink-0">
+                  <span className="text-xl font-extrabold text-emerald-600 dark:text-emerald-400">
+                    {priceDisplay}
+                  </span>
+                  <a
+                    href="#booking-form"
+                    className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 text-sm shadow-md hover:shadow-lg whitespace-nowrap"
+                  >
+                    <Calendar className="h-4 w-4" />
+                    <span className="hidden sm:inline">{t.training?.detail?.inquireAboutTraining || 'Inquire'}</span>
+                    <span className="sm:hidden">Inquire</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Course hero image */}
       <div className="absolute inset-x-0 top-0 h-72 sm:h-80 md:h-96">
         <img
@@ -100,7 +162,7 @@ export default function TrainingDetailPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Back Navigation */}
-        <div className="mb-8">
+        <div className="mb-6">
           <Button
             variant="ghost"
             onClick={() => window.history.back()}
@@ -114,11 +176,13 @@ export default function TrainingDetailPage() {
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 xl:gap-12 max-w-[1600px] mx-auto">
           {/* Main Content */}
           <div className="xl:col-span-3">
-            <TrainingDetailHeader
-              training={training}
-              priceInfo={priceInfo}
-              isPromotionActive={isPromotionActive}
-            />
+            <div ref={headerRef}>
+              <TrainingDetailHeader
+                training={training}
+                priceInfo={priceInfo}
+                isPromotionActive={isPromotionActive}
+              />
+            </div>
             <TrainingDetailContent
               training={training}
               TrainingContentComponent={null}
@@ -134,23 +198,29 @@ export default function TrainingDetailPage() {
         {/* Booking Form Section */}
         <div
           id="booking-form"
-          className="mt-16 max-w-5xl mx-auto"
+          className="mt-16 max-w-5xl mx-auto scroll-mt-20"
         >
-          <Card className="shadow-xl bg-card border border-border/50 overflow-hidden">
-            <CardHeader className="bg-primary text-primary-foreground p-8 xl:p-10">
-              <div className="flex items-start gap-6 mb-8">
-                <div className="p-4 bg-white/10 rounded-2xl">
-                  <Calendar className="h-10 w-10 text-white" />
+          <Card className="shadow-2xl bg-card border border-border/50 overflow-hidden">
+            {/* Booking header - emerald themed for conversion */}
+            <CardHeader className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 dark:from-emerald-700 dark:via-emerald-800 dark:to-emerald-900 text-white p-8 xl:p-10">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                <div className="p-3 bg-white/15 rounded-xl">
+                  <Calendar className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-3xl xl:text-4xl font-bold leading-tight">
-                  {t.training.detail.readyToTransform}
-                </CardTitle>
+                <div>
+                  <CardTitle className="text-2xl xl:text-3xl font-bold leading-tight text-white">
+                    {t.training.detail.readyToTransform}
+                  </CardTitle>
+                  <p className="text-emerald-100/80 mt-1 text-sm">
+                    {t.training.detail.formDescription}
+                  </p>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-6">
-                <div className="bg-white/15 rounded-xl p-4 border border-white/20">
-                  <span className="text-sm font-medium text-white/80 uppercase tracking-wide block mb-1">{t.training.detail.duration}</span>
-                  <p className="text-lg font-bold text-white">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="bg-white/10 rounded-xl p-4 border border-white/15">
+                  <span className="text-xs font-medium text-emerald-100/70 uppercase tracking-wide block mb-1">{t.training.detail.duration}</span>
+                  <p className="text-base font-bold text-white">
                     {(() => {
                       const days = training?.duration?.days || 4;
                       return `${days} ${days === 1 ? t.training.detail.daysSingle : t.training.detail.daysPlural} ${t.training.detail.intensiveTraining}`;
@@ -158,28 +228,25 @@ export default function TrainingDetailPage() {
                   </p>
                 </div>
 
-                <div className="bg-white/15 rounded-xl p-4 border border-white/20">
-                  <span className="text-sm font-medium text-white/80 uppercase tracking-wide block mb-1">{t.training.detail.investment}</span>
-                  <p className="text-lg font-bold text-white">
-                    {priceInfo?.displayText || t.training.detail.contactForPricing}
+                <div className="bg-white/10 rounded-xl p-4 border border-white/15">
+                  <span className="text-xs font-medium text-emerald-100/70 uppercase tracking-wide block mb-1">{t.training.detail.investment}</span>
+                  <p className="text-xl font-extrabold text-white">
+                    {priceDisplay}
                   </p>
                 </div>
 
-                <div className="bg-white/15 rounded-xl p-4 border border-white/20">
-                  <span className="text-sm font-medium text-white/80 uppercase tracking-wide block mb-1">{t.training?.detail?.groupSize || 'Group Size'}</span>
-                  <p className="text-lg font-bold text-white">
+                <div className="bg-white/10 rounded-xl p-4 border border-white/15">
+                  <span className="text-xs font-medium text-emerald-100/70 uppercase tracking-wide block mb-1">{t.training?.detail?.groupSize || 'Group Size'}</span>
+                  <p className="text-base font-bold text-white">
                     {t.training?.detail?.minParticipants || 'Minimum 6 participants'}
                   </p>
                 </div>
               </div>
             </CardHeader>
 
-            <CardContent className="p-10 xl:p-12">
-              <div className="mb-10 text-center">
-                <h3 className="text-2xl xl:text-3xl font-bold text-foreground mb-4">{t.training.detail.startLearningJourney}</h3>
-                <p className="text-muted-foreground text-lg xl:text-xl max-w-3xl mx-auto leading-relaxed">
-                  {t.training.detail.formDescription}
-                </p>
+            <CardContent className="p-8 xl:p-10">
+              <div className="mb-8 text-center">
+                <h3 className="text-xl xl:text-2xl font-bold text-foreground mb-2">{t.training.detail.startLearningJourney}</h3>
               </div>
 
               <TrainingBookingForm

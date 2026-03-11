@@ -157,6 +157,7 @@ export default {
     daysPlural: 'days',
     groupSize: 'Group Size',
     minParticipants: 'Minimum 6 participants',
+    perPerson: 'per person',
     startLearningJourney: 'Start your learning journey',
     formDescription: 'Ready to advance your cloud expertise? Book your training and join professionals mastering Azure.',
     notFound: 'Training Not Found',
