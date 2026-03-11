@@ -4,6 +4,7 @@ import { Clock, Users, Certificate, Star, Calendar, CurrencyEur, ArrowRight } fr
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/use-translations';
+import { isProduction } from '@/lib/version';
 
 interface TrainingDetailHeaderProps {
   training: any;
@@ -25,9 +26,12 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
     }
   };
 
-  const priceDisplay = isPromotionActive && priceInfo?.hasDiscount
-    ? priceInfo.formattedFinalPrice
-    : `€${training.price?.amount || 'TBD'}`;
+  const showDevPrice = !isProduction() && (!training.price?.amount || priceInfo?.isFallbackPrice);
+  const priceDisplay = showDevPrice
+    ? 'DEV'
+    : isPromotionActive && priceInfo?.hasDiscount
+      ? priceInfo.formattedFinalPrice
+      : `€${training.price?.amount || 'TBD'}`;
 
   return (
     <motion.div

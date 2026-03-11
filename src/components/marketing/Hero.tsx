@@ -40,7 +40,7 @@ export function Hero() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                                <Link to="/training">
+                                <Link to="/training" className="w-full sm:w-auto">
                                     <Button
                                         size="lg"
                                         className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black border-none h-12 px-8 text-base group w-full sm:w-auto"
@@ -49,7 +49,7 @@ export function Hero() {
                                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </Link>
-                                <Link to="/contact">
+                                <Link to="/contact" className="w-full sm:w-auto">
                                     <Button
                                         size="lg"
                                         variant="outline"

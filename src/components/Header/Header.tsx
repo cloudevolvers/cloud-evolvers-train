@@ -164,11 +164,14 @@ export function Header() {
             </nav>
 
             {/* Controls */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {/* Theme Toggle - Desktop */}
               <div className="hidden sm:block">
                 <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
               </div>
+
+              {/* Separator */}
+              <div className="hidden sm:block w-px h-6 bg-slate-200 dark:bg-neutral-700" />
 
               {/* Language Switcher - Desktop */}
               <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100 dark:bg-neutral-800">
