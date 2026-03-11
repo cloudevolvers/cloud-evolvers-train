@@ -184,14 +184,20 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
       });
 
       const data = await response.json();
-      
+
       if (!response.ok) {
-        throw new Error(data.message || 'Submission failed');
+        // Server returns { error, details } - use those for better messages
+        const serverError = data.error || data.details || data.message || 'Submission failed';
+        // For server-side errors (email service down, etc.), show a helpful fallback
+        if (response.status >= 500) {
+          throw new Error('SERVICE_ERROR');
+        }
+        throw new Error(serverError);
       }
 
       setIsSuccess(true);
       showSuccess('Training inquiry submitted successfully!', 'We\'ll contact you within 24 hours.');
-      
+
       // Reset form
       setFormData({
         firstName: '',
@@ -209,9 +215,17 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         terms: false,
       });
       setIsExpanded(false);
-      
+
     } catch (error: any) {
-      showApiError(error.message || 'Failed to submit inquiry. Please try again.');
+      if (error.message === 'SERVICE_ERROR') {
+        showApiError(language === 'nl'
+          ? 'Onze e-mailservice is tijdelijk niet beschikbaar. Stuur uw aanvraag naar training@cloudevolvers.com'
+          : 'Our email service is temporarily unavailable. Please send your inquiry to training@cloudevolvers.com');
+      } else {
+        showApiError(error.message || (language === 'nl'
+          ? 'Het verzenden van uw aanvraag is mislukt. Probeer het opnieuw.'
+          : 'Failed to submit inquiry. Please try again.'));
+      }
     } finally {
       setIsSubmitting(false);
     }
