@@ -172,10 +172,8 @@ export default function TrainingDetailContent({ training, TrainingContentCompone
                           {module.topics && module.topics.length > 0 && (
                             <div className="space-y-2 sm:space-y-3 mt-3 sm:mt-4">
                               {module.topics.map((topic: string, topicIndex: number) => (
-                                <div key={topicIndex} className="flex items-start gap-2 sm:gap-4 p-2.5 sm:p-3.5 bg-gradient-to-r from-neutral-50 to-transparent dark:from-neutral-900/30 dark:to-transparent rounded-lg sm:rounded-xl border border-border">
-                                  <div className="flex items-center justify-center w-5 h-5 sm:w-7 sm:h-7 bg-foreground rounded-md sm:rounded-lg flex-shrink-0 shadow-md">
-                                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-background" />
-                                  </div>
+                                <div key={topicIndex} className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3.5 bg-gradient-to-r from-neutral-50 to-transparent dark:from-neutral-900/30 dark:to-transparent rounded-lg sm:rounded-xl border border-border">
+                                  <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-500 dark:text-emerald-400 flex-shrink-0" weight="fill" />
                                   <span className="text-foreground leading-relaxed text-sm sm:text-base font-medium">{topic}</span>
                                 </div>
                               ))}
