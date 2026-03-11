@@ -3,12 +3,11 @@
  */
 
 interface Env {
-  API_KEY: string;
-  AZURE_AD_CLIENT_ID: string;
-  AZURE_AD_TENANT_ID: string;
-  EMAIL_AZURE_CLIENT_ID: string;
-  EMAIL_AZURE_CLIENT_SECRET: string;
-  EMAIL_SENDER: string;
+  FORM_API_KEY: string;
+  EMAIL_TENANT_ID: string;
+  EMAIL_CLIENT_ID: string;
+  EMAIL_CLIENT_SECRET: string;
+  EMAIL_SENDER_ADDRESS: string;
   ADMIN_PASSWORD: string;
 }
 
@@ -30,12 +29,11 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     status: 'ok',
     timestamp: new Date().toISOString(),
     environment: {
-      API_KEY: env.API_KEY ? '✅ configured' : '❌ missing',
-      AZURE_AD_CLIENT_ID: env.AZURE_AD_CLIENT_ID ? '✅ configured' : '❌ missing',
-      AZURE_AD_TENANT_ID: env.AZURE_AD_TENANT_ID ? '✅ configured' : '❌ missing',
-      EMAIL_AZURE_CLIENT_ID: env.EMAIL_AZURE_CLIENT_ID ? '✅ configured' : '❌ missing',
-      EMAIL_AZURE_CLIENT_SECRET: env.EMAIL_AZURE_CLIENT_SECRET ? `✅ configured (${env.EMAIL_AZURE_CLIENT_SECRET.length} chars)` : '❌ missing',
-      EMAIL_SENDER: env.EMAIL_SENDER ? `✅ ${env.EMAIL_SENDER}` : '❌ missing',
+      FORM_API_KEY: env.FORM_API_KEY ? '✅ configured' : '❌ missing',
+      EMAIL_TENANT_ID: env.EMAIL_TENANT_ID ? '✅ configured' : '❌ missing',
+      EMAIL_CLIENT_ID: env.EMAIL_CLIENT_ID ? '✅ configured' : '❌ missing',
+      EMAIL_CLIENT_SECRET: env.EMAIL_CLIENT_SECRET ? `✅ configured (${env.EMAIL_CLIENT_SECRET.length} chars)` : '❌ missing',
+      EMAIL_SENDER_ADDRESS: env.EMAIL_SENDER_ADDRESS ? `✅ ${env.EMAIL_SENDER_ADDRESS}` : '❌ missing',
       ADMIN_PASSWORD: env.ADMIN_PASSWORD ? '✅ configured' : '❌ missing',
     },
     endpoints: {

@@ -16,19 +16,20 @@ echo "🔍 TESTING MICROSOFT GRAPH API CONFIGURATION"
 echo "--------------------------------------------"
 
 # Test 1: Verify Azure AD Service Principal credentials are accessible
+# Note: EMAIL_CLIENT_ID, EMAIL_TENANT_ID, EMAIL_CLIENT_SECRET are now in wrangler.toml
 echo "📋 Test 1: Service Principal Authentication"
-echo "   Client ID: ${VITE_AZURE_AD_CLIENT_ID:0:8}..."
-echo "   Tenant ID: ${VITE_AZURE_AD_TENANT_ID:0:8}..."
-echo "   Client Secret: ${VITE_AZURE_AD_CLIENT_SECRET:0:8}..."
+echo "   Client ID: ${EMAIL_CLIENT_ID:0:8}..."
+echo "   Tenant ID: ${EMAIL_TENANT_ID:0:8}..."
+echo "   Client Secret: ${EMAIL_CLIENT_SECRET:0:8}..."
 
 # Get access token using the same credentials that the deployed sites should use
 echo ""
 echo "🔐 Acquiring test access token..."
 
 TOKEN_RESPONSE=$(curl -s -X POST \
-    "https://login.microsoftonline.com/$VITE_AZURE_AD_TENANT_ID/oauth2/v2.0/token" \
+    "https://login.microsoftonline.com/$EMAIL_TENANT_ID/oauth2/v2.0/token" \
     -H "Content-Type: application/x-www-form-urlencoded" \
-    -d "client_id=$VITE_AZURE_AD_CLIENT_ID&client_secret=$VITE_AZURE_AD_CLIENT_SECRET&scope=https://graph.microsoft.com/.default&grant_type=client_credentials")
+    -d "client_id=$EMAIL_CLIENT_ID&client_secret=$EMAIL_CLIENT_SECRET&scope=https://graph.microsoft.com/.default&grant_type=client_credentials")
 
 ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
 
@@ -61,11 +62,11 @@ echo "🎯 ENVIRONMENT VARIABLES VERIFICATION"
 echo "------------------------------------"
 
 # Verify that both sites should have the correct environment variables
-echo "✅ Required Variables Status:"
-echo "   VITE_AZURE_AD_CLIENT_ID: ✅ Set (e66fa949-5dad-4067-b01b-587088d16796)"
-echo "   VITE_AZURE_AD_TENANT_ID: ✅ Set (34dd9821-1508-4858-974c-e5fd1493a58f)"
-echo "   VITE_AZURE_AD_CLIENT_SECRET: ✅ Set (from Azure Key Vault)"
-echo "   VITE_EMAIL_SENDER: ✅ Set (internalautomation@xevolve.io)"
+echo "✅ Required Variables Status (configured in wrangler.toml):"
+echo "   EMAIL_CLIENT_ID: ✅ Set (e66fa949-5dad-4067-b01b-587088d16796)"
+echo "   EMAIL_TENANT_ID: ✅ Set (34dd9821-1508-4858-974c-e5fd1493a58f)"
+echo "   EMAIL_CLIENT_SECRET: ✅ Set (from Azure Key Vault)"
+echo "   EMAIL_SENDER_ADDRESS: ✅ Set (internalautomation@xevolve.io)"
 echo ""
 echo "📍 xEvolve Environment:"
 echo "   VITE_EMAIL_RECIPIENT: info@xevolve.io"

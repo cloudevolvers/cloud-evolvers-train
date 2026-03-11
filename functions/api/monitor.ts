@@ -8,11 +8,11 @@
  */
 
 interface Env {
-  API_KEY: string;
-  AZURE_AD_TENANT_ID: string;
-  EMAIL_AZURE_CLIENT_ID: string;
-  EMAIL_AZURE_CLIENT_SECRET: string;
-  EMAIL_SENDER: string;
+  FORM_API_KEY: string;
+  EMAIL_TENANT_ID: string;
+  EMAIL_CLIENT_ID: string;
+  EMAIL_CLIENT_SECRET: string;
+  EMAIL_SENDER_ADDRESS: string;
 }
 
 const ALERT_EMAIL = 'yair@cloudevolvers.com';
@@ -32,7 +32,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 
   // Require API key for the monitor endpoint
   const apiKey = request.headers.get('x-api-key');
-  if (!apiKey || apiKey !== env.API_KEY) {
+  if (!apiKey || apiKey !== env.FORM_API_KEY) {
     return new Response(
       JSON.stringify({ error: 'Unauthorized' }),
       { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -42,7 +42,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   const url = new URL(request.url);
   const shouldAlert = url.searchParams.get('alert') === 'true';
 
-  const emailClientId = env.EMAIL_AZURE_CLIENT_ID;
+  const emailClientId = env.EMAIL_CLIENT_ID;
   const result: Record<string, unknown> = {
     timestamp: new Date().toISOString(),
     checks: {} as Record<string, unknown>,
@@ -50,10 +50,10 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 
   // Check 1: Are all required env vars present?
   const envCheck = {
-    AZURE_AD_TENANT_ID: !!env.AZURE_AD_TENANT_ID,
-    EMAIL_AZURE_CLIENT_ID: !!env.EMAIL_AZURE_CLIENT_ID,
-    EMAIL_AZURE_CLIENT_SECRET: !!env.EMAIL_AZURE_CLIENT_SECRET,
-    EMAIL_SENDER: !!env.EMAIL_SENDER,
+    EMAIL_TENANT_ID: !!env.EMAIL_TENANT_ID,
+    EMAIL_CLIENT_ID: !!env.EMAIL_CLIENT_ID,
+    EMAIL_CLIENT_SECRET: !!env.EMAIL_CLIENT_SECRET,
+    EMAIL_SENDER_ADDRESS: !!env.EMAIL_SENDER_ADDRESS,
   };
   const allEnvPresent = Object.values(envCheck).every(Boolean);
   (result.checks as Record<string, unknown>).envVars = { ok: allEnvPresent, details: envCheck };
@@ -69,13 +69,13 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   let tokenError = '';
   try {
     const tokenResponse = await fetch(
-      `https://login.microsoftonline.com/${env.AZURE_AD_TENANT_ID}/oauth2/v2.0/token`,
+      `https://login.microsoftonline.com/${env.EMAIL_TENANT_ID}/oauth2/v2.0/token`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           client_id: emailClientId,
-          client_secret: env.EMAIL_AZURE_CLIENT_SECRET,
+          client_secret: env.EMAIL_CLIENT_SECRET,
           scope: 'https://graph.microsoft.com/.default',
           grant_type: 'client_credentials',
         }),

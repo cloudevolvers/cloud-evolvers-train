@@ -53,10 +53,11 @@ if [ -f ".github/workflows/config/deployments.json" ]; then
     fi
     
     # Check environment variables
-    if grep -q "VITE_AZURE_AD_CLIENT_ID" ".github/workflows/config/deployments.json"; then
-        echo -e "${GREEN}✅ Azure AD configuration included${NC}"
+    # Note: EMAIL_CLIENT_ID and EMAIL_TENANT_ID are now configured in wrangler.toml
+    if grep -q "EMAIL_CLIENT_ID" ".github/workflows/config/deployments.json" || grep -q "VITE_AZURE_AD_CLIENT_ID" ".github/workflows/config/deployments.json"; then
+        echo -e "${GREEN}✅ Email client configuration included${NC}"
     else
-        echo -e "${RED}❌ Azure AD configuration missing${NC}"
+        echo -e "${RED}❌ Email client configuration missing (check wrangler.toml for EMAIL_CLIENT_ID)${NC}"
     fi
 else
     echo -e "${RED}❌ Deployment configuration missing${NC}"

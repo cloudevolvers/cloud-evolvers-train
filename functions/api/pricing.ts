@@ -7,7 +7,7 @@
  */
 
 interface Env {
-  API_KEY: string;
+  FORM_API_KEY: string;
   PRICING_DB: D1Database;
 }
 
@@ -120,7 +120,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   const apiKey = request.headers.get('x-api-key');
   const requireAuth = url.searchParams.get('auth') === 'required';
 
-  if (requireAuth && (!apiKey || apiKey !== env.API_KEY)) {
+  if (requireAuth && (!apiKey || apiKey !== env.FORM_API_KEY)) {
     return new Response(
       JSON.stringify({ error: 'Unauthorized', details: 'Invalid API key' }),
       { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

@@ -95,7 +95,7 @@ For Static Web Apps, it's recommended to:
 
 ```json
 {
-  "VITE_API_KEY": "@Microsoft.KeyVault(VaultName=xevolve-shared-kv;SecretName=api-key)",
+  "VITE_FORM_API_KEY": "@Microsoft.KeyVault(VaultName=xevolve-shared-kv;SecretName=api-key)",
   "VITE_DATABASE_URL": "@Microsoft.KeyVault(VaultName=xevolve-shared-kv;SecretName=database-url)"
 }
 ```

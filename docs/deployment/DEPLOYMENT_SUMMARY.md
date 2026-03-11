@@ -31,7 +31,7 @@
 - ✅ **Removed deploy-clean.yml**: Streamlined to single workflow
 
 #### 5. **Fixed Environment Variables** ✅ **NEW!**
-- ✅ Added missing Azure AD configuration (`VITE_AZURE_AD_CLIENT_ID`, `VITE_AZURE_AD_TENANT_ID`)
+- ✅ Added missing email client configuration (`EMAIL_CLIENT_ID`, `EMAIL_TENANT_ID` in wrangler.toml)
 - ✅ Updated resource group for production (`ce-xv-prod-rg`)  
 - ✅ Standardized variable names across environments
 - ✅ Corrected API URLs and app names

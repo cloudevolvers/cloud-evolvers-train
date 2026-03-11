@@ -3,15 +3,15 @@
 ## 🔧 **What I've Implemented:**
 
 ### 1. **Environment Variables Configuration**
-- **Added to `.env`:**
+- **Configured in `wrangler.toml`:**
   ```properties
-  # Microsoft Graph API Configuration
-  VITE_AZURE_AD_CLIENT_ID=<from-github-secrets>
-  VITE_AZURE_AD_TENANT_ID=<from-github-secrets>
-  VITE_AZURE_AD_CLIENT_SECRET=<from-github-secrets>
+  # Microsoft Graph API Configuration (server-side, in wrangler.toml)
+  EMAIL_CLIENT_ID=<from-secrets>
+  EMAIL_TENANT_ID=<from-secrets>
+  EMAIL_CLIENT_SECRET=<from-secrets>
 
   # Email Configuration
-  VITE_EMAIL_SENDER=automation@SpotCloud687.onmicrosoft.com
+  EMAIL_SENDER_ADDRESS=automation@SpotCloud687.onmicrosoft.com
   VITE_EMAIL_RECIPIENT=yair@cloudevolvers.com
   VITE_EMAIL_REPLY_TO_RECIPIENT=training@cloudevolvers.com
   ```

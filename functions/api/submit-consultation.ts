@@ -6,12 +6,11 @@
  */
 
 interface Env {
-  API_KEY: string;
-  AZURE_AD_CLIENT_ID: string;
-  AZURE_AD_TENANT_ID: string;
-  EMAIL_AZURE_CLIENT_ID: string;
-  EMAIL_AZURE_CLIENT_SECRET: string;
-  EMAIL_SENDER: string;
+  FORM_API_KEY: string;
+  EMAIL_TENANT_ID: string;
+  EMAIL_CLIENT_ID: string;
+  EMAIL_CLIENT_SECRET: string;
+  EMAIL_SENDER_ADDRESS: string;
 }
 
 interface ContactFormData {
@@ -41,7 +40,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
     // Validate API key
     const apiKey = request.headers.get('x-api-key');
-    if (!apiKey || apiKey !== env.API_KEY) {
+    if (!apiKey || apiKey !== env.FORM_API_KEY) {
       return new Response(
         JSON.stringify({ error: 'Unauthorized', details: 'Invalid API key' }),
         { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -69,17 +68,17 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     // Get Microsoft Graph access token using dedicated email service principal
-    const emailClientId = env.EMAIL_AZURE_CLIENT_ID || env.AZURE_AD_CLIENT_ID;
-    const emailSender = env.EMAIL_SENDER || 'training@cloudevolvers.com';
+    const emailClientId = env.EMAIL_CLIENT_ID;
+    const emailSender = env.EMAIL_SENDER_ADDRESS;
 
     const tokenResponse = await fetch(
-      `https://login.microsoftonline.com/${env.AZURE_AD_TENANT_ID}/oauth2/v2.0/token`,
+      `https://login.microsoftonline.com/${env.EMAIL_TENANT_ID}/oauth2/v2.0/token`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           client_id: emailClientId,
-          client_secret: env.EMAIL_AZURE_CLIENT_SECRET,
+          client_secret: env.EMAIL_CLIENT_SECRET,
           scope: 'https://graph.microsoft.com/.default',
           grant_type: 'client_credentials',
         }),
@@ -95,8 +94,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           details: 'Failed to authenticate with Microsoft Graph',
           debug: {
             status: tokenResponse.status,
-            clientId: emailClientId?.substring(0, 8) + '...',
-            tenantId: env.AZURE_AD_TENANT_ID?.substring(0, 8) + '...',
+            clientId: emailClientId.substring(0, 8) + '...',
+            tenantId: env.EMAIL_TENANT_ID.substring(0, 8) + '...',
           }
         }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }

@@ -12,7 +12,7 @@
 - ✅ Verified Azure resources match configuration
 
 ### 3. **Fixed Environment Variables** ✅
-- ✅ Added missing `VITE_AZURE_AD_CLIENT_ID` and `VITE_AZURE_AD_TENANT_ID`
+- ✅ Added missing `EMAIL_CLIENT_ID` and `EMAIL_TENANT_ID` (in wrangler.toml)
 - ✅ Standardized variable names across all environments
 - ✅ Corrected API URLs for each environment
 - ✅ Added proper app naming per environment

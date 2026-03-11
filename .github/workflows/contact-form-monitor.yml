@@ -96,10 +96,10 @@ jobs:
             | /api/submit-consultation | ${consultationStatus} | ${consultationOk ? '✅ OK' : '❌ FAILED'} |
             
             ### Action Required
-            Please investigate the Azure Functions deployment and ensure:
-            1. The Azure Function App is running
-            2. Environment variables are configured correctly
-            3. CORS settings allow the production domain
+            Please investigate the Cloudflare Pages deployment and ensure:
+            1. The Cloudflare Pages deployment is live
+            2. Environment variables are set (check /api/health endpoint)
+            3. Secrets are configured via GitHub Actions deploy workflow
             
             ### How to Close
             Close this issue once the problem is resolved. The next health check will create a new issue if problems persist.

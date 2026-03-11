@@ -1,23 +1,11 @@
-# 🚀 Cloudflare Pages Deployment Workflow
-# Deploys to poc.cloudevolvers.com on Cloudflare Pages
 name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: ["master", "feature/*", "fix/*"]
+    branches: ["master"]
   pull_request:
     branches: ["master"]
   workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Target environment'
-        required: true
-        type: choice
-        options:
-          - poc
-          - dev
-          - production
-        default: 'poc'
 
 concurrency:
   group: deploy-cf-${{ github.ref }}
@@ -26,80 +14,56 @@ concurrency:
 permissions:
   contents: read
   deployments: write
-  id-token: write  # Required for Azure Key Vault OIDC
 
 jobs:
   deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: ${{ github.event.inputs.environment || (github.ref_name == 'master' && 'production') || 'poc' }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      # Optional: Azure Key Vault Secrets Retrieval
-      # Uncomment this section if using Azure Key Vault for secrets management
-      # - name: Azure Login
-      #   uses: azure/login@v2
-      #   with:
-      #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
-      #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-      #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      #
-      # - name: Get secrets from Azure Key Vault
-      #   uses: azure/get-keyvault-secrets@v1
-      #   with:
-      #     keyvault: 'cloudevolvers-kv'
-      #     secrets: 'api-key,azure-ad-client-id,azure-ad-tenant-id,email-client-secret'
-      #   id: keyvault
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
-
-      - name: Install Cloudflare Workers types
-        run: npm install --save-dev @cloudflare/workers-types --legacy-peer-deps
+        run: bun install
 
       - name: Set build date
         id: build-date
-        run: echo "date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_OUTPUT
+        run: echo "date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> "$GITHUB_OUTPUT"
 
       - name: Build application
-        run: npm run build
+        run: bun run build
         env:
           NODE_ENV: production
           VITE_COMMIT_SHA: ${{ github.sha }}
-          VITE_ENVIRONMENT: ${{ github.event.inputs.environment || (github.ref_name == 'master' && 'production') || 'poc' }}
+          VITE_ENVIRONMENT: ${{ github.ref_name == 'master' && 'production' || 'preview' }}
           VITE_BUILD_DATE: ${{ steps.build-date.outputs.date }}
-          # Frontend environment variables (public)
-          VITE_API_KEY: ${{ secrets.API_KEY }}
-          VITE_AZURE_AD_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
-          VITE_AZURE_AD_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+          VITE_FORM_API_KEY: ${{ secrets.FORM_API_KEY }}
 
       - name: Install Wrangler
         run: npm install -g wrangler
 
-      - name: Configure Cloudflare Pages Secrets
-        run: |
-          echo "📦 Configuring Cloudflare Pages secrets..."
-
-          # Set secrets for the Pages project (these are used by Functions)
-          echo "${{ secrets.API_KEY }}" | wrangler pages secret put API_KEY --project-name=cloud-evolvers-train 2>/dev/null || true
-          echo "${{ secrets.AZURE_AD_CLIENT_ID }}" | wrangler pages secret put AZURE_AD_CLIENT_ID --project-name=cloud-evolvers-train 2>/dev/null || true
-          echo "${{ secrets.AZURE_AD_TENANT_ID }}" | wrangler pages secret put AZURE_AD_TENANT_ID --project-name=cloud-evolvers-train 2>/dev/null || true
-          echo "${{ secrets.EMAIL_AZURE_CLIENT_ID }}" | wrangler pages secret put EMAIL_AZURE_CLIENT_ID --project-name=cloud-evolvers-train 2>/dev/null || true
-          echo "${{ secrets.EMAIL_AZURE_CLIENT_SECRET }}" | wrangler pages secret put EMAIL_AZURE_CLIENT_SECRET --project-name=cloud-evolvers-train 2>/dev/null || true
-          echo "${{ secrets.EMAIL_SENDER }}" | wrangler pages secret put EMAIL_SENDER --project-name=cloud-evolvers-train 2>/dev/null || true
-          echo "${{ secrets.ADMIN_PASSWORD }}" | wrangler pages secret put ADMIN_PASSWORD --project-name=cloud-evolvers-train 2>/dev/null || true
-
-          echo "✅ Secrets configured"
+      - name: Set FORM_API_KEY secret
+        run: echo "$FORM_API_KEY" | wrangler pages secret put FORM_API_KEY --project-name cloud-evolvers-train
         env:
+          FORM_API_KEY: ${{ secrets.FORM_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Set EMAIL_CLIENT_SECRET secret
+        run: echo "$EMAIL_CLIENT_SECRET" | wrangler pages secret put EMAIL_CLIENT_SECRET --project-name cloud-evolvers-train
+        env:
+          EMAIL_CLIENT_SECRET: ${{ secrets.EMAIL_CLIENT_SECRET }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Set ADMIN_PASSWORD secret
+        run: echo "$ADMIN_PASSWORD" | wrangler pages secret put ADMIN_PASSWORD --project-name cloud-evolvers-train
+        env:
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
@@ -107,58 +71,60 @@ jobs:
         id: deploy
         run: |
           set -e
-          echo "📂 Contents of dist directory:"
-          ls -la dist/ | head -20
-          echo ""
-          echo "🚀 Deploying to Cloudflare Pages..."
+          echo "Deploying to Cloudflare Pages..."
 
-          # Run wrangler and capture output, but don't fail on error yet
-          set +e
-          OUTPUT=$(wrangler pages deploy dist --project-name=cloud-evolvers-train --branch=${{ github.ref_name }} 2>&1)
-          EXIT_CODE=$?
-          set -e
-
+          OUTPUT=$(wrangler pages deploy dist --project-name=cloud-evolvers-train --branch="$GITHUB_REF_NAME" 2>&1)
           echo "$OUTPUT"
 
-          if [ $EXIT_CODE -ne 0 ]; then
-            echo "❌ Deployment failed with exit code $EXIT_CODE"
-            exit $EXIT_CODE
-          fi
-
-          # Extract deployment URL
           DEPLOYMENT_URL=$(echo "$OUTPUT" | grep -oP 'https://[^\s]+\.pages\.dev' | head -1 || echo "")
-          echo "deployment_url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
-          echo "✅ Deployment successful: $DEPLOYMENT_URL"
+          echo "deployment_url=$DEPLOYMENT_URL" >> "$GITHUB_OUTPUT"
+          echo "Deployment successful: $DEPLOYMENT_URL"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+
+      - name: Verify deployment
+        if: github.ref_name == 'master'
+        run: |
+          echo "Waiting for deployment to propagate..."
+          sleep 30
+
+          RESPONSE=$(curl -s -w "\n%{http_code}" "https://cloudevolvers.com/api/health")
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+
+          echo "Health check HTTP status: $HTTP_CODE"
+          echo "$BODY"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::Health check failed with HTTP $HTTP_CODE"
+            exit 1
+          fi
+
+          if echo "$BODY" | grep -q "missing"; then
+            echo "::error::Some environment variables are missing"
+            exit 1
+          fi
+
+          echo "Deployment verified successfully"
 
       - name: Deployment Summary
         if: success()
+        env:
+          REF_NAME: ${{ github.ref_name }}
+          COMMIT_SHA: ${{ github.sha }}
+          DEPLOY_URL: ${{ steps.deploy.outputs.deployment_url }}
         run: |
-          echo ""
-          echo "╔═══════════════════════════════════════════════════════════════════╗"
-          echo "║  🎉 DEPLOYMENT SUCCESSFUL                                         ║"
-          echo "╚═══════════════════════════════════════════════════════════════════╝"
-          echo ""
-          echo "📦 Project: cloud-evolvers-train"
-          echo "🌿 Branch:  ${{ github.ref_name }}"
-          echo "🔑 Commit:  ${{ github.sha }}"
-          echo ""
-
-          if [[ "${{ github.ref_name }}" == "master" ]]; then
-            echo "🌍 Environment: Production"
-            echo ""
-            echo "📡 URLs:"
-            echo "   • Primary:    https://cloudevolvers.com"
-            echo "   • Cloudflare: https://cloud-evolvers-train.pages.dev"
-            echo ""
-            echo "🔌 API Endpoints:"
-            echo "   • Contact:    https://cloud-evolvers-train.pages.dev/api/submit-consultation"
-            echo "   • Pricing:    https://cloud-evolvers-train.pages.dev/api/pricing"
+          echo "## Deployment Result" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|-------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Project | cloud-evolvers-train |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Branch | $REF_NAME |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Commit | $COMMIT_SHA |" >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$REF_NAME" == "master" ]]; then
+            echo "| URL | https://cloudevolvers.com |" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "🔧 Environment: Preview"
-            echo ""
-            echo "📡 Preview URL: ${{ steps.deploy.outputs.deployment_url }}"
+            echo "| URL | $DEPLOY_URL |" >> "$GITHUB_STEP_SUMMARY"
           fi
-          echo ""

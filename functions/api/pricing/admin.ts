@@ -7,7 +7,7 @@
  */
 
 interface Env {
-  API_KEY: string;
+  FORM_API_KEY: string;
   ADMIN_PASSWORD: string;
   PRICING_KV?: KVNamespace;
 }
@@ -28,7 +28,7 @@ function authenticateAdmin(request: Request, env: Env): { authenticated: boolean
   const apiKey = request.headers.get('x-api-key');
   const adminPassword = request.headers.get('x-admin-password');
 
-  if (!apiKey || apiKey !== env.API_KEY) {
+  if (!apiKey || apiKey !== env.FORM_API_KEY) {
     return { authenticated: false, error: 'Invalid API key' };
   }
 

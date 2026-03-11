@@ -135,12 +135,13 @@ export const translations = {
 VITE_APP_ENV=production
 VITE_APP_NAME=Cloud Evolvers Training
 
-# Azure AD (for contact forms)
-VITE_AZURE_AD_CLIENT_ID=your-client-id
-VITE_AZURE_AD_TENANT_ID=your-tenant-id
+# Email client credentials (server-side, configured in wrangler.toml)
+EMAIL_CLIENT_ID=your-client-id
+EMAIL_TENANT_ID=your-tenant-id
+EMAIL_CLIENT_SECRET=your-client-secret
 
 # Email Configuration
-VITE_EMAIL_SENDER=your-sender@domain.com
+EMAIL_SENDER_ADDRESS=your-sender@domain.com
 VITE_EMAIL_RECIPIENT=recipient@domain.com
 ```
 

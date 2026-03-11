@@ -10,7 +10,7 @@ echo
 
 # Configuration - Update these for your deployed function app
 FUNCTION_APP_URL="${1:-http://localhost:7071}"  # Use argument or default to local
-API_KEY="${2:-}"  # Optional API key for detailed health info
+FORM_API_KEY="${2:-}"  # Optional API key for detailed health info
 
 # Colors
 GREEN='\033[0;32m'
@@ -76,7 +76,7 @@ test_health_endpoint() {
 
 # Function to test detailed health with API key
 test_detailed_health() {
-    if [[ -z "$API_KEY" ]]; then
+    if [[ -z "$FORM_API_KEY" ]]; then
         echo -e "${YELLOW}Skipping detailed health test (no API key provided)${NC}"
         echo
         return
@@ -86,7 +86,7 @@ test_detailed_health() {
     echo "===================================="
     
     local health_url="$FUNCTION_APP_URL/api/health"
-    local response=$(curl -s -H "X-API-Key: $API_KEY" "$health_url" 2>/dev/null)
+    local response=$(curl -s -H "X-API-Key: $FORM_API_KEY" "$health_url" 2>/dev/null)
     
     if echo "$response" | jq . > /dev/null 2>&1; then
         # Check for token service stats
@@ -229,7 +229,7 @@ show_deployment_summary() {
 # Main execution
 main() {
     echo "Starting verification for: $FUNCTION_APP_URL"
-    [[ -n "$API_KEY" ]] && echo "Using API key for detailed testing"
+    [[ -n "$FORM_API_KEY" ]] && echo "Using API key for detailed testing"
     echo
     
     test_health_endpoint
@@ -244,12 +244,12 @@ main() {
 
 # Show usage if no arguments and not running locally
 if [[ "$FUNCTION_APP_URL" == "http://localhost:7071" ]] && ! curl -s "$FUNCTION_APP_URL/api/health" > /dev/null 2>&1; then
-    echo "Usage: $0 [FUNCTION_APP_URL] [API_KEY]"
+    echo "Usage: $0 [FUNCTION_APP_URL] [FORM_API_KEY]"
     echo
     echo "Examples:"
     echo "  $0                                          # Test local development"
     echo "  $0 https://your-app.azurewebsites.net      # Test deployed app"
-    echo "  $0 https://your-app.azurewebsites.net your-api-key  # Test with auth"
+    echo "  $0 https://your-app.azurewebsites.net your-form-api-key  # Test with auth"
     echo
     echo "Note: Local Azure Functions not running. Start with 'func host start'"
     exit 1

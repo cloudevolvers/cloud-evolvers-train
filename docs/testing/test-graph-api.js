@@ -8,9 +8,9 @@
 console.log('🧪 Cloud Evolvers Microsoft Graph API Test');
 console.log('==========================================');
 
-// Check environment variables
-const clientId = process.env.VITE_AZURE_AD_CLIENT_ID || 'e66fa949-5dad-4067-b01b-587088d16796';
-const tenantId = process.env.VITE_AZURE_AD_TENANT_ID || '34dd9821-1508-4858-974c-e5fd1493a58f';
+// Check environment variables (EMAIL_CLIENT_ID / EMAIL_TENANT_ID are in wrangler.toml)
+const clientId = process.env.EMAIL_CLIENT_ID || 'e66fa949-5dad-4067-b01b-587088d16796';
+const tenantId = process.env.EMAIL_TENANT_ID || '34dd9821-1508-4858-974c-e5fd1493a58f';
 
 console.log(`✓ Client ID: ${clientId}`);
 console.log(`✓ Tenant ID: ${tenantId}`);

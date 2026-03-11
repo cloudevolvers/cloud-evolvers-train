@@ -164,7 +164,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
-          'x-api-key': import.meta.env.VITE_API_KEY || 'dev-cloudevolvers-api-key-2024-secure'
+          'x-api-key': import.meta.env.VITE_FORM_API_KEY
         },
         body: JSON.stringify({
           name: `${formData.firstName} ${formData.lastName}`.trim(),

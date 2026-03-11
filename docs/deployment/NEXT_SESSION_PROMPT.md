@@ -53,7 +53,7 @@ The **contact forms return 500 errors** - this is our main focus for next time!
    - Verify Azure Function configuration
 
 3. **🔐 Fix Missing Environment Variables:**
-   - The functions expect: `EMAIL_AZURE_TENANT_ID`, `EMAIL_AZURE_CLIENT_ID`, `EMAIL_AZURE_CLIENT_SECRET`
+   - The functions expect: `EMAIL_TENANT_ID`, `EMAIL_CLIENT_ID`, `EMAIL_CLIENT_SECRET`
    - These are needed for Microsoft Graph API email sending
    - Currently missing from local and cloud environments
 
@@ -75,7 +75,7 @@ The **contact forms return 500 errors** - this is our main focus for next time!
 #### **Current Error Root Cause:**
 ```javascript
 // Functions expect these environment variables:
-// EMAIL_AZURE_TENANT_ID, EMAIL_AZURE_CLIENT_ID, EMAIL_AZURE_CLIENT_SECRET  
+// EMAIL_TENANT_ID, EMAIL_CLIENT_ID, EMAIL_CLIENT_SECRET
 // But they're not configured in local.settings.json or Azure app settings
 ```
 

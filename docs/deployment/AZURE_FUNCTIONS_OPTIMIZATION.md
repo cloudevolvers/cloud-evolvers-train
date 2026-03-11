@@ -120,12 +120,12 @@ curl http://localhost:7071/api/health
 
 ### Environment Variables (No Changes Required)
 ```bash
-# Existing Azure AD configuration (unchanged)
-EMAIL_AZURE_TENANT_ID=your-tenant-id
-EMAIL_AZURE_CLIENT_ID=your-client-id  
-EMAIL_AZURE_CLIENT_SECRET=your-client-secret
-EMAIL_SENDER=your-sender@domain.com
-API_KEY=your-api-key
+# Email configuration (configured in wrangler.toml)
+EMAIL_TENANT_ID=your-tenant-id
+EMAIL_CLIENT_ID=your-client-id
+EMAIL_CLIENT_SECRET=your-client-secret
+EMAIL_SENDER_ADDRESS=your-sender@domain.com
+FORM_API_KEY=your-api-key
 ```
 
 ### Timer Configuration
