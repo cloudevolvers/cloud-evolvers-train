@@ -34,6 +34,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [showFallbackEmail, setShowFallbackEmail] = useState(false);
   const { notification, hideNotification, showApiError, showSuccess } = useNotification();
   
   // Translations
@@ -154,6 +155,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
     }
 
     setIsSubmitting(true);
+    setShowFallbackEmail(false);
     hideNotification();
     
     try {
@@ -217,15 +219,8 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
       setIsExpanded(false);
 
     } catch (error: any) {
-      if (error.message === 'SERVICE_ERROR') {
-        showApiError(language === 'nl'
-          ? 'Onze e-mailservice is tijdelijk niet beschikbaar. Stuur uw aanvraag naar training@cloudevolvers.com'
-          : 'Our email service is temporarily unavailable. Please send your inquiry to training@cloudevolvers.com');
-      } else {
-        showApiError(error.message || (language === 'nl'
-          ? 'Het verzenden van uw aanvraag is mislukt. Probeer het opnieuw.'
-          : 'Failed to submit inquiry. Please try again.'));
-      }
+      setShowFallbackEmail(true);
+      showApiError(error instanceof Error ? error : new Error(error?.message || 'Submission failed'), language);
     } finally {
       setIsSubmitting(false);
     }
@@ -258,22 +253,48 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      {/* Error Notification */}
+      {/* Error Notification + Fallback Email */}
       <AnimatePresence>
         {notification?.isVisible && notification.type === 'error' && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="p-4 rounded-xl bg-red-500/10 border border-red-500/20"
+            className="space-y-3"
           >
-            <div className="flex items-start gap-3">
-              <WarningCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" weight="fill" />
-              <div>
-                <p className="font-medium text-red-600 dark:text-red-400">{notification.title}</p>
-                <p className="text-sm text-red-600/80 dark:text-red-400/80">{notification.message}</p>
+            <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+              <div className="flex items-start gap-3">
+                <WarningCircle className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" weight="fill" />
+                <div>
+                  <p className="font-medium text-red-600 dark:text-red-400">{notification.title}</p>
+                  <p className="text-sm text-red-600/80 dark:text-red-400/80">{notification.message}</p>
+                </div>
               </div>
             </div>
+            {showFallbackEmail && (
+              <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                <div className="flex items-start gap-3">
+                  <Envelope className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" weight="fill" />
+                  <div>
+                    <p className="font-medium text-amber-700 dark:text-amber-300 mb-1">
+                      {language === 'nl' ? 'Stuur uw aanvraag per e-mail' : 'Send your inquiry by email'}
+                    </p>
+                    <p className="text-sm text-amber-700/80 dark:text-amber-300/80 mb-2">
+                      {language === 'nl'
+                        ? 'U kunt ons ook rechtstreeks bereiken:'
+                        : 'You can also reach us directly:'}
+                    </p>
+                    <a
+                      href={`mailto:yair@cloudevolvers.com?subject=${encodeURIComponent(`Training Inquiry: ${training?.title || 'General'}`)}&body=${encodeURIComponent(`Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nCompany: ${formData.company}\nTraining: ${training?.title || ''}\n\n${formData.notes || ''}`)}`}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600 text-white rounded-lg text-sm font-semibold transition-colors"
+                    >
+                      <Envelope className="h-4 w-4" weight="bold" />
+                      yair@cloudevolvers.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
