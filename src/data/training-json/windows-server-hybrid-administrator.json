@@ -1,7 +1,7 @@
 {
   "id": "windows-server-hybrid-administrator",
   "slug": "windows-server-hybrid-administrator",
-  "title": "Windows Server Hybrid Administrator",
+  "title": "Windows Server Hybrid Administrator (AZ-800)",
   "subtitle": "Hybrid Cloud Infrastructure Management",
   "description": "Master hybrid Windows Server environments with Azure integration",
   "overview": "This comprehensive 3-day course covers hybrid Windows Server administration, including Azure Arc integration, hybrid identity solutions, storage management, and modern infrastructure operations. Learn to design and manage hybrid environments that seamlessly integrate on-premises and cloud resources.",

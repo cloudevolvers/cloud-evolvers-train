@@ -1,7 +1,7 @@
 {
   "id": "microsoft-365-administrator",
   "slug": "microsoft-365-administrator",
-  "title": "Microsoft 365 Administrator",
+  "title": "Microsoft 365 Administrator (MS-102)",
   "subtitle": "Enterprise Microsoft 365 Administration Expert",
   "description": "Deploy, manage, and secure Microsoft 365 tenants including identity, security, compliance, and threat management",
   "overview": "This intensive 4-day course prepares you for the MS-102 certification by covering all four exam domains: tenant deployment and management, Microsoft Entra identity and access, security and threat management with Microsoft Defender XDR, and compliance management with Microsoft Purview. You will gain hands-on experience managing enterprise Microsoft 365 environments end to end.",

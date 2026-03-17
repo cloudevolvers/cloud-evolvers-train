@@ -1,7 +1,7 @@
 {
   "id": "windows-server-hybrid-infrastructure",
   "slug": "windows-server-hybrid-infrastructure",
-  "title": "Windows Server Hybrid Infrastructure",
+  "title": "Windows Server Hybrid Infrastructure (AZ-801)",
   "subtitle": "Configure Windows Server Services in Hybrid Environments",
   "description": "Configure Windows Server services in hybrid environments",
   "overview": "Advanced training focusing on configuring and managing Windows Server hybrid infrastructure. Learn to implement and manage on-premises and hybrid solutions such as identity, management, compute, networking, and storage.",

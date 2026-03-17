@@ -1,7 +1,7 @@
 {
   "id": "windows-server-hybrid-administrator",
   "slug": "windows-server-hybrid-administrator",
-  "title": "Windows Server Hybrid Beheerder",
+  "title": "Windows Server Hybrid Beheerder (AZ-800)",
   "subtitle": "Hybrid Cloud Infrastructuur Management",
   "description": "Beheers hybride Windows Server omgevingen met Azure integratie",
   "overview": "Deze uitgebreide 3-daagse cursus behandelt hybride Windows Server beheer, inclusief Azure Arc integratie, hybride identiteitsoplossingen, opslagbeheer en moderne infrastructuur operaties. Leer hybride omgevingen te ontwerpen en beheren die on-premises en cloud resources naadloos integreren.",
