@@ -22,15 +22,19 @@ import {
 } from '@phosphor-icons/react';
 import { useNotification } from '@/hooks/use-notification';
 import type { Language } from '@/contexts/LanguageContext';
+import SessionPicker from '@/components/training/SessionPicker';
+import type { TrainingSession } from '@/hooks/use-training-sessions';
 
 interface TrainingBookingFormProps {
   training: any;
   priceInfo?: any;
   isPromotionActive?: boolean;
   language: Language;
+  sessions?: TrainingSession[];
+  sessionsLoading?: boolean;
 }
 
-export default function TrainingBookingForm({ training, priceInfo, isPromotionActive, language }: TrainingBookingFormProps) {
+export default function TrainingBookingForm({ training, priceInfo, isPromotionActive, language, sessions, sessionsLoading }: TrainingBookingFormProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -132,7 +136,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
     company: '',
     position: '',
     experience: 'beginner',
-    preferredDate: '',
+    selectedSessionId: '',
     dietary: '',
     accessibility: '',
     notes: '',
@@ -144,7 +148,8 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const isBasicFormValid = formData.firstName.trim() && formData.lastName.trim() && formData.email.trim();
+  const hasSessions = sessions && sessions.length > 0;
+  const isBasicFormValid = formData.firstName.trim() && formData.lastName.trim() && formData.email.trim() && (!hasSessions || formData.selectedSessionId);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -159,46 +164,72 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
     hideNotification();
     
     try {
-      // Submit to the consultation API endpoint (matches Azure Function name)
-      const response = await fetch('/api/submit-consultation', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'x-api-key': import.meta.env.VITE_FORM_API_KEY
-        },
-        body: JSON.stringify({
-          name: `${formData.firstName} ${formData.lastName}`.trim(),
-          email: formData.email,
-          phone: formData.phone || '',
-          training: training?.title || 'General Inquiry',
-          trainingLevel: formData.experience,
-          preferredDates: formData.preferredDate ? [formData.preferredDate] : [],
-          message: [
-            formData.company ? `Company: ${formData.company}` : '',
-            formData.position ? `Position: ${formData.position}` : '',
-            formData.dietary ? `Dietary: ${formData.dietary}` : '',
-            formData.accessibility ? `Accessibility: ${formData.accessibility}` : '',
-            formData.notes || '',
-            formData.newsletter ? 'Newsletter: Subscribed' : ''
-          ].filter(Boolean).join('\n') || 'Training inquiry from detail page',
-          language: language
-        }),
-      });
+      const hasSessions = sessions && sessions.length > 0;
 
-      const data = await response.json();
+      if (hasSessions && formData.selectedSessionId) {
+        // Enrollment API for scheduled sessions
+        const response = await fetch('/api/enrollments', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': import.meta.env.VITE_FORM_API_KEY,
+          },
+          body: JSON.stringify({
+            sessionId: formData.selectedSessionId,
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone || undefined,
+            company: formData.company || undefined,
+            dietaryRequirements: formData.dietary || undefined,
+            notes: formData.notes || undefined,
+          }),
+        });
 
-      if (!response.ok) {
-        // Server returns { error, details } - use those for better messages
-        const serverError = data.error || data.details || data.message || 'Submission failed';
-        // For server-side errors (email service down, etc.), show a helpful fallback
-        if (response.status >= 500) {
-          throw new Error('SERVICE_ERROR');
+        const data = await response.json();
+
+        if (!response.ok) {
+          if (response.status >= 500) throw new Error('SERVICE_ERROR');
+          throw new Error(data.error || 'Enrollment failed');
         }
-        throw new Error(serverError);
-      }
 
-      setIsSuccess(true);
-      showSuccess('Training inquiry submitted successfully!', 'We\'ll contact you within 24 hours.');
+        setIsSuccess(true);
+        showSuccess(
+          data.enrollment?.status === 'waitlisted'
+            ? 'Added to waitlist!'
+            : 'Enrollment confirmed!',
+          data.enrollment?.status === 'waitlisted'
+            ? "We'll notify you when a spot opens up."
+            : "We'll contact you within 24 hours with more details."
+        );
+      } else {
+        // Fallback to consultation API for courses without scheduled dates
+        const response = await fetch('/api/submit-consultation', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': import.meta.env.VITE_FORM_API_KEY,
+          },
+          body: JSON.stringify({
+            name: `${formData.firstName} ${formData.lastName}`.trim(),
+            email: formData.email,
+            phone: formData.phone || '',
+            training: training?.title || 'General Inquiry',
+            message: formData.notes || 'Training inquiry from detail page',
+            language,
+          }),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          if (response.status >= 500) throw new Error('SERVICE_ERROR');
+          throw new Error(data.error || data.details || 'Submission failed');
+        }
+
+        setIsSuccess(true);
+        showSuccess('Training inquiry submitted successfully!', "We'll contact you within 24 hours.");
+      }
 
       // Reset form
       setFormData({
@@ -209,7 +240,7 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         company: '',
         position: '',
         experience: 'beginner',
-        preferredDate: '',
+        selectedSessionId: '',
         dietary: '',
         accessibility: '',
         notes: '',
@@ -217,7 +248,6 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         terms: false,
       });
       setIsExpanded(false);
-
     } catch (error: any) {
       setShowFallbackEmail(true);
       showApiError(error instanceof Error ? error : new Error(error?.message || 'Submission failed'), language);
@@ -372,6 +402,20 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
         </div>
       </motion.div>
 
+      {/* Session Date Selection */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.08 }}
+      >
+        <SessionPicker
+          sessions={sessions || []}
+          loading={sessionsLoading || false}
+          selectedSessionId={formData.selectedSessionId}
+          onSelect={(id) => setFormData(prev => ({ ...prev, selectedSessionId: id }))}
+        />
+      </motion.div>
+
       {/* Show More/Less Button */}
       <motion.div 
         className="flex justify-center py-4"
@@ -458,20 +502,6 @@ export default function TrainingBookingForm({ training, priceInfo, isPromotionAc
                   <SelectItem value="expert">{t.experienceLevels.expert}</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
-
-            {/* Preferred Date */}
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                <Calendar className="h-4 w-4 text-foreground/70" weight="regular" />
-                {t.preferredDate}
-              </label>
-              <Input
-                value={formData.preferredDate}
-                onChange={(e) => setFormData(prev => ({ ...prev, preferredDate: e.target.value }))}
-                placeholder={t.placeholders.preferredDate}
-                className="h-11 bg-white dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-600 focus-visible:border-foreground dark:focus-visible:border-foreground/70 focus-visible:ring-2 focus-visible:ring-foreground/20 transition-all"
-              />
             </div>
 
             {/* Notes */}
