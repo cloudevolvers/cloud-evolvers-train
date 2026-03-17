@@ -194,7 +194,7 @@
     "name": "",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2025-02-01"

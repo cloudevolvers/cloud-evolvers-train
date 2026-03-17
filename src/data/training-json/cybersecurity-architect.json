@@ -226,7 +226,7 @@
     "examCode": "SC-100",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "schedule": {
     "available": true
   },

@@ -111,7 +111,7 @@ export default function AzureFundamentalsContent() {
             <Users className="h-5 w-5 text-primary" />
             <div>
               <div className="font-semibold text-foreground">Group Size</div>
-              <div className="text-sm text-muted-foreground font-medium">Max 15 participants</div>
+              <div className="text-sm text-muted-foreground font-medium">Max 10 participants</div>
             </div>
           </div>
           <div className="flex items-center gap-3 p-4 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">

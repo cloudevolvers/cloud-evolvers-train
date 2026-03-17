@@ -88,7 +88,7 @@
     "examCode": "AZ-700",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Network",
   "overview": "Uitgebreide Azure netwerk training die virtuele netwerken, hybride connectiviteit, verkeersbeheer, netwerkbeveiliging en monitoring behandelt. Essentieel voor netwerk engineers die werken met Azure infrastructuur.",
   "whatYouWillLearn": [

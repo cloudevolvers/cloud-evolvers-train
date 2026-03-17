@@ -82,7 +82,7 @@
     "Infrastructure",
     "Enterprise"
   ],
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2024-03-01T09:00:00Z"

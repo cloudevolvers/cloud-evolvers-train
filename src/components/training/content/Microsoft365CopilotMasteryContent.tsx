@@ -93,7 +93,7 @@ export default function Microsoft365CopilotMasteryContent() {
             <div className="bg-slate-800/60 flex items-center gap-3 backdrop-blur-sm rounded-lg p-4">
               <Users className="text-violet-400 h-5 w-5" />
               <div>
-                <div className="text-white font-semibold">Max 15</div>
+                <div className="text-white font-semibold">Max 10</div>
                 <div className="text-sm text-muted-foreground font-medium">Participants</div>
               </div>
             </div>

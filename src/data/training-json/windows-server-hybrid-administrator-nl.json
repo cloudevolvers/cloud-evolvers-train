@@ -82,7 +82,7 @@
     "Infrastructuur",
     "Beheer"
   ],
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2024-03-25T09:00:00Z"

@@ -88,7 +88,7 @@
     "examCode": "AZ-700",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Network",
   "overview": "Comprehensive Azure networking training covering virtual networks, hybrid connectivity, traffic management, network security, and monitoring. Essential for network engineers working with Azure infrastructure.",
   "whatYouWillLearn": [

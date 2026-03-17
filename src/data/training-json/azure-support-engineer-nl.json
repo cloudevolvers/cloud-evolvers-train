@@ -81,7 +81,7 @@
     "Klantenservice",
     "Probleemoplossing"
   ],
-  "maxParticipants": 16,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2024-03-05T09:00:00Z"

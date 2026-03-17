@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS training_sessions (
   course_name TEXT NOT NULL,
   start_date TEXT NOT NULL,
   end_date TEXT NOT NULL,
-  max_participants INTEGER NOT NULL DEFAULT 15,
+  max_participants INTEGER NOT NULL DEFAULT 10,
   location TEXT NOT NULL,
   status TEXT NOT NULL DEFAULT 'open',
   price INTEGER,

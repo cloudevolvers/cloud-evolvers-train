@@ -174,7 +174,7 @@
     "examCode": "AZ-500",
     "provider": "Microsoft"
   },
-  "maxParticipants": 16,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "Beschikbaar op aanvraag"

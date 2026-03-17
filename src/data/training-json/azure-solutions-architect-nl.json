@@ -180,7 +180,7 @@
     "examCode": "AZ-305",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "Beschikbaar op aanvraag"

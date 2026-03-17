@@ -88,7 +88,7 @@
     "examCode": "AZ-400",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Pipeline",
   "overview": "Comprehensive training on Azure DevOps practices, covering CI/CD pipelines, infrastructure as code, monitoring, and feedback mechanisms. Perfect for teams adopting DevOps methodologies in Azure environments.",
   "whatYouWillLearn": [

@@ -94,7 +94,7 @@
     "examCode": "AZ-140",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Desktop",
   "overview": "Master Azure Virtual Desktop (AVD) for enterprise remote work solutions. Learn to plan, deploy, manage, and optimize virtual desktop infrastructure for modern hybrid work environments.",
   "whatYouWillLearn": [

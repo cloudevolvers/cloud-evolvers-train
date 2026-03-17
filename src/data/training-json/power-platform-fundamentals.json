@@ -200,7 +200,7 @@
     "examCode": "PL-900",
     "provider": "Microsoft"
   },
-  "maxParticipants": 20,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2024-12-20"

@@ -82,7 +82,7 @@
     "Identity",
     "Zero Trust"
   ],
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2024-02-15T09:00:00Z"

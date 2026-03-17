@@ -175,7 +175,7 @@
     "examCode": "AB-900",
     "provider": "Microsoft"
   },
-  "maxParticipants": 20,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2025-04-15T09:00:00Z"

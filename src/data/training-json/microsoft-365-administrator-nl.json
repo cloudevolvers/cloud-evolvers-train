@@ -194,7 +194,7 @@
     "examCode": "MS-102",
     "provider": "Microsoft"
   },
-  "maxParticipants": 14,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2025-05-05T09:00:00Z"

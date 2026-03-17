@@ -170,7 +170,7 @@ export function enrollmentConfirmationEmailHtml(params: {
               </table>
               ${!isWaitlisted ? `
               <p style="margin:16px 0 0;font-size:14px;color:#334155;">
-                <strong>What to expect:</strong> Extensive hands-on labs with real-world scenarios, personal attention in a small group (max 15), and lunch is on us. Just bring your laptop and enthusiasm!
+                <strong>What to expect:</strong> Extensive hands-on labs with real-world scenarios, personal attention in a small group (max 10), and lunch is on us. Just bring your laptop and enthusiasm!
               </p>` : ''}
               <p style="margin:16px 0 0;font-size:13px;color:#94a3b8;">
                 Questions? Reply to this email or contact us at yair@cloudevolvers.com

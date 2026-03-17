@@ -224,7 +224,7 @@
     "examCode": "SC-200",
     "provider": "Microsoft"
   },
-  "maxParticipants": 14,
+  "maxParticipants": 10,
   "schedule": {
     "available": true
   },

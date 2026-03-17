@@ -94,7 +94,7 @@
     "examCode": "AZ-220",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Cpu",
   "overview": "Master Azure IoT solutions development with comprehensive training on IoT Hub, Edge computing, device management, and data processing. Build enterprise-ready IoT solutions with security and optimization best practices.",
   "whatYouWillLearn": [

@@ -94,7 +94,7 @@
     "name": "Bootcamp Certificate",
     "provider": "Cloud Evolvers"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Lightning",
   "overview": "Unlock the power of low-code automation with Microsoft Power Platform. Master Power Apps, Power Automate, and Power BI to build sophisticated business solutions without traditional programming.",
   "whatYouWillLearn": [

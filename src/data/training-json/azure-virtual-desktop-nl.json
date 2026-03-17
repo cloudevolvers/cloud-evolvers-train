@@ -94,7 +94,7 @@
     "examCode": "AZ-140",
     "provider": "Microsoft"
   },
-  "maxParticipants": 12,
+  "maxParticipants": 10,
   "icon": "Desktop",
   "overview": "Beheers Azure Virtual Desktop (AVD) voor enterprise thuiswerk oplossingen. Leer plannen, implementeren, beheren en optimaliseren van virtuele desktop infrastructuur voor moderne hybride werkomgevingen.",
   "whatYouWillLearn": [
