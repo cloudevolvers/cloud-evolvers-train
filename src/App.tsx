@@ -14,7 +14,6 @@ import TrainingDetailPage from "@/pages/training/TrainingDetailPage";
 import TrainingOverviewPage from "@/pages/training/TrainingOverviewPage";
 import ContactPage from "@/pages/ContactPage";
 
-import PricingDashboard from "@/components/admin/PricingDashboard";
 import BookingDashboard from '@/components/admin/BookingDashboard';
 import ImageManagementPage from "@/pages/ImageManagementPage";
 import { NotFound } from "@/components/NotFound";
@@ -71,8 +70,8 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-              <Route path="/admin" element={<PricingDashboard />} />
-              <Route path="/admin/pricing" element={<PricingDashboard />} />
+              <Route path="/admin" element={<BookingDashboard />} />
+              <Route path="/admin/pricing" element={<BookingDashboard />} />
               <Route path="/admin/images" element={<ImageManagementPage />} />
               <Route path="/admin/bookings" element={<BookingDashboard />} />
               <Route path="*" element={<NotFound />} />

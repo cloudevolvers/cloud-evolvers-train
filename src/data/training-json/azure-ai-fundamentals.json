@@ -19,10 +19,6 @@
     "days": 2,
     "format": "days"
   },
-  "price": {
-    "amount": 695,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "ai-concepts",

@@ -19,10 +19,6 @@
     "days": 1,
     "format": "days"
   },
-  "price": {
-    "amount": 550,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "cloud-concepts",

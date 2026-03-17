@@ -74,10 +74,6 @@
       "AZ-900"
     ]
   },
-  "price": {
-    "amount": 1895,
-    "currency": "EUR"
-  },
   "schedule": {
     "available": true
   },

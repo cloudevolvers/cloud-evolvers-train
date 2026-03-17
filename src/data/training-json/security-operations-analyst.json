@@ -22,10 +22,6 @@
     "days": 4,
     "format": "days"
   },
-  "price": {
-    "amount": 1895,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "defender-xdr",

@@ -22,10 +22,6 @@
     "days": 4,
     "format": "days"
   },
-  "price": {
-    "amount": 1950,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "ai-solution-planning",

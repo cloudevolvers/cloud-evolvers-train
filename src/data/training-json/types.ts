@@ -47,12 +47,6 @@ export interface TrainingJSON {
     format: 'days' | 'hours';
   };
   
-  // Pricing
-  price: {
-    amount: number;
-    currency: string;
-  };
-  
   // Learning Content
   learningObjectives: Array<{
     id: string;

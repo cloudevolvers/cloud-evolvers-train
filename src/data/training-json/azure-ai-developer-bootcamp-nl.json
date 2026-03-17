@@ -20,10 +20,6 @@
     "days": 3,
     "format": "dagen"
   },
-  "price": {
-    "amount": 1395,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "cognitive-services",

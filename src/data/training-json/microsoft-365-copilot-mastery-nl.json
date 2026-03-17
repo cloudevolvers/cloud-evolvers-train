@@ -13,10 +13,6 @@
     "hours": 8,
     "format": "days"
   },
-  "price": {
-    "amount": 595,
-    "currency": "EUR"
-  },
   "featured": true,
   "icon": "Lightning",
   "learningObjectives": [

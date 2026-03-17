@@ -13,10 +13,6 @@
     "hours": 16,
     "format": "days"
   },
-  "price": {
-    "amount": 895,
-    "currency": "EUR"
-  },
   "featured": false,
   "icon": "Headset",
   "learningObjectives": [

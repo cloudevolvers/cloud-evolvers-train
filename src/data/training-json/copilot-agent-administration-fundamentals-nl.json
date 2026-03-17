@@ -22,10 +22,6 @@
     "hours": 8,
     "format": "days"
   },
-  "price": {
-    "amount": 695,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "m365-core-features",

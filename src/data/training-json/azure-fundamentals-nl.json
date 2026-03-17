@@ -50,10 +50,6 @@
       "Azure Solutions Architect Expert"
     ]
   },
-  "price": {
-    "amount": 695,
-    "currency": "EUR"
-  },
   "schedule": {
     "available": true,
     "nextSession": "2024-01-15"

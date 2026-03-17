@@ -68,10 +68,6 @@
       "AZ-305"
     ]
   },
-  "price": {
-    "amount": 1795,
-    "currency": "EUR"
-  },
   "schedule": {
     "available": true
   },

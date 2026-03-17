@@ -45,7 +45,6 @@ const TrainingOverviewPage: React.FC = () => {
         category: t.category,
         level: t.difficulty,
         duration: t.duration,
-        price: t.price,
         featured: t.featured,
         icon: t.icon,
         learningObjectives: t.learningObjectives.map(obj => obj.description),

@@ -19,10 +19,6 @@
     "days": 4,
     "format": "dagen"
   },
-  "price": {
-    "amount": 2195,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "compute-solutions",

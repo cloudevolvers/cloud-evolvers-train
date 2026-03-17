@@ -13,10 +13,6 @@
     "hours": 24,
     "format": "days"
   },
-  "price": {
-    "amount": 1195,
-    "currency": "EUR"
-  },
   "featured": false,
   "icon": "Shield",
   "learningObjectives": [

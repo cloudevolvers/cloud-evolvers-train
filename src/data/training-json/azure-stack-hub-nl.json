@@ -13,10 +13,6 @@
     "hours": 24,
     "format": "days"
   },
-  "price": {
-    "amount": 1295,
-    "currency": "EUR"
-  },
   "featured": false,
   "icon": "Stack",
   "learningObjectives": [

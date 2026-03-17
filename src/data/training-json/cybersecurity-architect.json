@@ -22,10 +22,6 @@
     "days": 4,
     "format": "days"
   },
-  "price": {
-    "amount": 2195,
-    "currency": "EUR"
-  },
   "learningObjectives": [
     {
       "id": "zero-trust",
