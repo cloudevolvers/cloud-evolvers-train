@@ -12,6 +12,7 @@ import {
   type FilterState
 } from '@/components/training/overview';
 import { SEO, PAGE_SEO } from '@/components/SEO';
+import WhyCloudEvolvers from '@/components/training/WhyCloudEvolvers';
 
 const TrainingOverviewPage: React.FC = () => {
   const [filterState, setFilterState] = useState<FilterState>({
@@ -141,6 +142,8 @@ const TrainingOverviewPage: React.FC = () => {
             {t?.training?.overview?.subtitle || 'Azure & Microsoft courses by certified trainers'}
           </p>
         </div>
+
+        <WhyCloudEvolvers />
 
         {/* Filters */}
         <TrainingFilters
