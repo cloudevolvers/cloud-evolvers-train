@@ -21,7 +21,7 @@ import { Textarea } from './ui/textarea';
 import { Card, CardContent, CardHeader } from './ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { DatePicker } from './ui/date-picker';
-import { extendedTrainingCourses } from '@/data/extended-training-courses';
+import { getAllTrainings } from '@/data/training-json';
 
 interface TrainingConsultationFormProps {
   language: 'en' | 'nl';
@@ -58,16 +58,12 @@ export default function TrainingConsultationForm({
   } | null>(null);
   const [formSuccess, setFormSuccess] = useState<string | null>(null);
 
-  // Build training options list
+  // Build training options from JSON registry
   const trainingOptions = [
     { value: 'general', label: language === 'nl' ? 'Algemene Vraag' : 'General Inquiry' },
-    { value: 'az-900', label: 'AZ-900: Azure Fundamentals' },
-    { value: 'az-104', label: 'AZ-104: Azure Administrator' },
-    { value: 'az-204', label: 'AZ-204: Azure Developer' },
-    { value: 'az-305', label: 'AZ-305: Azure Solutions Architect' },
-    ...extendedTrainingCourses.map(course => ({
-      value: course.code.toLowerCase(),
-      label: `${course.code}: ${course.name} `
+    ...getAllTrainings().map(course => ({
+      value: course.slug,
+      label: course.title
     }))
   ];
 

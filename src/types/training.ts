@@ -9,8 +9,7 @@ export interface Training {
   subcategory?: string;
   level: DifficultyLevel;
   duration: Duration;
-  price?: Price;
-  
+
   // Course Content
   overview: string;
   learningObjectives: string[];
@@ -48,11 +47,6 @@ export interface Duration {
   days?: number;
   hours?: number;
   format: 'days' | 'hours';
-}
-
-export interface Price {
-  amount: number;
-  currency: string;
 }
 
 export interface CertificationInfo {
