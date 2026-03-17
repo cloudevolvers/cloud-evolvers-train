@@ -47,6 +47,8 @@ See `.env.example` for the expected environment variables. The actual `.env` fil
 2. **NO POP-UPS**: Always navigate to actual pages with URLs
 3. **NO SCROLLBARS**: Use slice() to limit items, not overflow scrolling
 4. **Real Data Only**: Only display confirmed, accurate information
+5. **NO HARDCODED PRICES**: All pricing comes from D1 database via the API. NEVER put prices in JSON files, TypeScript constants, or frontend code. Update prices via `/admin/bookings` or the training sessions API. If a course has no scheduled session, show "Contact us" — never a stale number.
+6. **Promotions via DB only**: Promotional pricing is managed through the admin dashboard or API by updating the `price` field on training sessions. No hardcoded promotional discount logic in frontend code.
 
 ## Tech Stack
 - Frontend: React 18 + TypeScript + Vite

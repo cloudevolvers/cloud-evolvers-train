@@ -26,10 +26,6 @@ function convertTrainingMetadata(metadata: TrainingMetadata): Training {
       hours: metadata.duration?.hours || 0,
       format: (metadata.duration?.days || 0) > 0 ? 'days' as const : 'hours' as const
     },
-    price: {
-      amount: metadata.price.amount,
-      currency: metadata.price.currency
-    },
     overview: metadata.description,
     learningObjectives: metadata.learningObjectives,
     prerequisites: metadata.prerequisites,
@@ -101,7 +97,6 @@ function convertTrainingJSON(jsonTraining: TrainingJSON): Training {
     subcategory: jsonTraining.subcategory,
     level: jsonTraining.difficulty as any,
     duration: jsonTraining.duration,
-    price: jsonTraining.price,
     overview: jsonTraining.overview,
     learningObjectives: jsonTraining.learningObjectives.map(obj => obj.description),
     prerequisites: jsonTraining.prerequisites,

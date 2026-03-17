@@ -118,7 +118,6 @@ export function getTrainingMetadata(slug: string) {
     prerequisites: training.prerequisites,
     learningObjectives: training.learningObjectives.map(obj => obj.description),
     instructor: training.instructor,
-    price: training.price,
     schedule: training.schedule,
     tags: training.tags,
     featured: training.featured,
