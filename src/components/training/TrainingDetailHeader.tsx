@@ -4,15 +4,13 @@ import { Clock, Users, Certificate, Star, Calendar, CurrencyEur, ArrowRight } fr
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/use-translations';
-import { isProduction } from '@/lib/version';
 
 interface TrainingDetailHeaderProps {
   training: any;
-  priceInfo: any;
-  isPromotionActive: boolean;
+  priceDisplay: string;
 }
 
-export default function TrainingDetailHeader({ training, priceInfo, isPromotionActive }: TrainingDetailHeaderProps) {
+export default function TrainingDetailHeader({ training, priceDisplay }: TrainingDetailHeaderProps) {
   const { t } = useTranslations();
   const getDifficultyColor = (level: string | undefined) => {
     if (!level) return 'bg-green-100 text-green-900 dark:bg-green-900/50 dark:text-green-100 border-2 border-green-300 dark:border-green-700 font-medium';
@@ -25,13 +23,6 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
       default: return 'bg-green-100 text-green-900 dark:bg-green-900/50 dark:text-green-100 border-2 border-green-300 dark:border-green-700 font-medium';
     }
   };
-
-  const showDevPrice = !isProduction() && (!training.price?.amount || priceInfo?.isFallbackPrice);
-  const priceDisplay = showDevPrice
-    ? 'DEV'
-    : isPromotionActive && priceInfo?.hasDiscount
-      ? priceInfo.formattedFinalPrice
-      : `€${training.price?.amount || 'TBD'}`;
 
   return (
     <motion.div
@@ -100,11 +91,6 @@ export default function TrainingDetailHeader({ training, priceInfo, isPromotionA
                   <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">
                     {priceDisplay}
                   </span>
-                  {isPromotionActive && priceInfo?.hasDiscount && (
-                    <span className="text-sm line-through text-muted-foreground">
-                      {priceInfo.formattedOriginalPrice}
-                    </span>
-                  )}
                   <span className="text-sm text-muted-foreground">
                     / {t.training?.detail?.perPerson || 'per person'}
                   </span>

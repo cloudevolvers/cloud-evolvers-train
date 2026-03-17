@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { loadTrainingBySlug } from '@/content/loader';
-import { getTrainingPriceDisplay, isPromotionalPricingActive } from '@/lib/pricing';
-import { isProduction } from '@/lib/version';
 import TrainingDetailHeader from '@/components/training/TrainingDetailHeader';
 import TrainingDetailContent from '@/components/training/TrainingDetailContent';
 import TrainingDetailSidebar from '@/components/training/TrainingDetailSidebar';
@@ -106,22 +104,11 @@ export default function TrainingDetailPage() {
     );
   }
 
-  const priceInfo = training ? getTrainingPriceDisplay(slug, training.price?.amount) : null;
-  const isPromotionActive = isPromotionalPricingActive();
-
-  // Price from D1 session (in cents) takes priority over JSON
+  // Price comes from D1 sessions only — no hardcoded fallbacks
   const sessionPrice = sessions.length > 0 && sessions[0].price
-    ? sessions[0].price / 100
+    ? `€${sessions[0].price / 100}`
     : null;
-
-  const showDevPrice = !isProduction() && (!training?.price?.amount || priceInfo?.isFallbackPrice) && !sessionPrice;
-  const priceDisplay = showDevPrice
-    ? 'DEV'
-    : sessionPrice
-      ? `€${sessionPrice}`
-      : isPromotionActive && priceInfo?.hasDiscount
-        ? priceInfo.formattedFinalPrice
-        : `€${training?.price?.amount || 'TBD'}`;
+  const priceDisplay = sessionPrice || 'Contact us';
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
@@ -193,8 +180,7 @@ export default function TrainingDetailPage() {
             <div ref={headerRef}>
               <TrainingDetailHeader
                 training={training}
-                priceInfo={priceInfo}
-                isPromotionActive={isPromotionActive}
+                priceDisplay={priceDisplay}
               />
             </div>
             <TrainingBadges />
@@ -266,8 +252,6 @@ export default function TrainingDetailPage() {
 
               <TrainingBookingForm
                 training={training}
-                priceInfo={priceInfo}
-                isPromotionActive={isPromotionActive}
                 language={language}
                 sessions={sessions}
                 sessionsLoading={sessionsLoading}

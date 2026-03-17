@@ -27,14 +27,12 @@ import type { TrainingSession } from '@/hooks/use-training-sessions';
 
 interface TrainingBookingFormProps {
   training: any;
-  priceInfo?: any;
-  isPromotionActive?: boolean;
   language: Language;
   sessions?: TrainingSession[];
   sessionsLoading?: boolean;
 }
 
-export default function TrainingBookingForm({ training, priceInfo, isPromotionActive, language, sessions, sessionsLoading }: TrainingBookingFormProps) {
+export default function TrainingBookingForm({ training, language, sessions, sessionsLoading }: TrainingBookingFormProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
