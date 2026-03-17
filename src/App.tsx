@@ -15,6 +15,7 @@ import TrainingOverviewPage from "@/pages/training/TrainingOverviewPage";
 import ContactPage from "@/pages/ContactPage";
 
 import PricingDashboard from "@/components/admin/PricingDashboard";
+import BookingDashboard from '@/components/admin/BookingDashboard';
 import ImageManagementPage from "@/pages/ImageManagementPage";
 import { NotFound } from "@/components/NotFound";
 import { SEO, PAGE_SEO } from "@/components/SEO";
@@ -73,6 +74,7 @@ function App() {
               <Route path="/admin" element={<PricingDashboard />} />
               <Route path="/admin/pricing" element={<PricingDashboard />} />
               <Route path="/admin/images" element={<ImageManagementPage />} />
+              <Route path="/admin/bookings" element={<BookingDashboard />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

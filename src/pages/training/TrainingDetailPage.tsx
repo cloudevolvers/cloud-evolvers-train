@@ -11,6 +11,8 @@ import TrainingDetailHeader from '@/components/training/TrainingDetailHeader';
 import TrainingDetailContent from '@/components/training/TrainingDetailContent';
 import TrainingDetailSidebar from '@/components/training/TrainingDetailSidebar';
 import TrainingBookingForm from '@/components/training/TrainingBookingForm';
+import TrainingBadges from '@/components/training/TrainingBadges';
+import { useTrainingSessions } from '@/hooks/use-training-sessions';
 import { useLanguageContext } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/use-translations';
 import type { TrainingJSON } from '@/content/types';
@@ -24,6 +26,7 @@ export default function TrainingDetailPage() {
   const [loading, setLoading] = useState(true);
   const [showStickyBar, setShowStickyBar] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
+  const { sessions, loading: sessionsLoading } = useTrainingSessions(slug);
 
   if (!slug) {
     return <Navigate to="/training" replace />;
@@ -187,6 +190,7 @@ export default function TrainingDetailPage() {
                 isPromotionActive={isPromotionActive}
               />
             </div>
+            <TrainingBadges />
             <TrainingDetailContent
               training={training}
               TrainingContentComponent={null}
@@ -258,6 +262,8 @@ export default function TrainingDetailPage() {
                 priceInfo={priceInfo}
                 isPromotionActive={isPromotionActive}
                 language={language}
+                sessions={sessions}
+                sessionsLoading={sessionsLoading}
               />
             </CardContent>
           </Card>
