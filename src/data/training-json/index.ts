@@ -14,7 +14,6 @@ import microsoft365FundamentalsData from './microsoft-365-fundamentals.json';
 import powerPlatformAutomation from './power-platform-automation.json';
 import securityComplianceIdentityFundamentals from './security-compliance-identity-fundamentals.json';
 import teamsAdvancedAdministration from './teams-advanced-administration.json';
-import azureAdministratorMastery from './azure-administrator-mastery.json';
 import microsoft365CopilotMastery from './microsoft-365-copilot-mastery.json';
 import azureSecurityFundamentals from './azure-security-fundamentals.json';
 import azureStackHub from './azure-stack-hub.json';
@@ -49,7 +48,6 @@ const trainingRegistry: Record<string, TrainingJSON> = {
   'power-platform-automation': powerPlatformAutomation as TrainingJSON,
   'security-compliance-identity-fundamentals': securityComplianceIdentityFundamentals as TrainingJSON,
   'teams-advanced-administration': teamsAdvancedAdministration as TrainingJSON,
-  'azure-administrator-mastery': azureAdministratorMastery as TrainingJSON,
   'microsoft-365-copilot-mastery': microsoft365CopilotMastery as TrainingJSON,
   'azure-security-fundamentals': azureSecurityFundamentals as TrainingJSON,
   'azure-stack-hub': azureStackHub as TrainingJSON,

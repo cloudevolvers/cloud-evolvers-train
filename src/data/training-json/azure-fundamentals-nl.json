@@ -51,7 +51,7 @@
     ]
   },
   "price": {
-    "amount": 550,
+    "amount": 695,
     "currency": "EUR"
   },
   "schedule": {
@@ -125,7 +125,7 @@
     "examCode": "AZ-900",
     "provider": "Microsoft"
   },
-  "maxParticipants": 15,
+  "maxParticipants": 10,
   "featured": true,
   "icon": "Cloud",
   "tags": [

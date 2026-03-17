@@ -3,7 +3,7 @@ import { Flask, ForkKnife, UsersThree } from '@phosphor-icons/react';
 const badges = [
   { icon: Flask, label: 'Hands-on Labs', color: 'text-blue-600 dark:text-blue-400' },
   { icon: ForkKnife, label: 'Lunch Included', color: 'text-emerald-600 dark:text-emerald-400' },
-  { icon: UsersThree, label: 'Max 15 Participants', color: 'text-purple-600 dark:text-purple-400' },
+  { icon: UsersThree, label: 'Max 10 Participants', color: 'text-purple-600 dark:text-purple-400' },
 ];
 
 export default function TrainingBadges() {

@@ -81,7 +81,7 @@
     "Productiviteit",
     "Automatisering"
   ],
-  "maxParticipants": 15,
+  "maxParticipants": 10,
   "schedule": {
     "available": true,
     "nextSession": "2024-02-10T09:00:00Z"

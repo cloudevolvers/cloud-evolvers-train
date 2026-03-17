@@ -16,6 +16,16 @@ Cloudflare API tokens are configured via environment variables and are **IP-whit
 - `CLOUDFLARE_DNS_TOKEN` - For DNS operations
 - `CLOUDFLARE_API_TOKEN` - For general Cloudflare API access
 
+**When IP-blocked**, use the Global API Key from Azure Key Vault (not IP-restricted):
+```bash
+CF_GLOBAL_KEY=$(az keyvault secret show --vault-name reactor-prod-kv --name cloudfare-cf-global-api-key --query value -o tsv)
+CLOUDFLARE_API_KEY="$CF_GLOBAL_KEY" CLOUDFLARE_EMAIL="yairknijn@gmail.com" CLOUDFLARE_API_TOKEN="" wrangler <command>
+```
+
+Cloudflare credentials are stored in:
+- **Local**: `.env` (gitignored) — `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_DNS_TOKEN`
+- **Azure Key Vault**: `reactor-prod-kv` — `cloudfare-cf-global-api-key`, `cf-mcp-api-token`
+
 See `.env.example` for the expected environment variables. The actual `.env` file is gitignored.
 
 ### Deployment Environments

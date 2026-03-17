@@ -51,7 +51,7 @@
     ]
   },
   "price": {
-    "amount": 550,
+    "amount": 695,
     "currency": "EUR"
   },
   "schedule": {
@@ -70,7 +70,7 @@
     "examCode": "AZ-900",
     "provider": "Microsoft"
   },
-  "maxParticipants": 15,
+  "maxParticipants": 10,
   "icon": "Cloud",
   "overview": "This comprehensive Azure Fundamentals training provides a solid foundation for understanding Microsoft Azure cloud services. Designed for beginners, this course covers all the essential concepts needed to start working with Azure confidently.",
   "whatYouWillLearn": [
@@ -157,7 +157,7 @@
   ],
   "trainingFormat": {
     "duration": "2 days intensive",
-    "groupSize": "Max 15 participants",
+    "groupSize": "Max 10 participants",
     "certification": "AZ-900 preparation"
   },
   "targetAudience": [

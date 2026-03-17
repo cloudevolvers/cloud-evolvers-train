@@ -3,23 +3,23 @@ import { Flask, ForkKnife, UsersThree, Trophy } from '@phosphor-icons/react';
 const differentiators = [
   {
     icon: Flask,
-    title: 'Real-World Labs',
-    description: 'Learn by doing with extensive hands-on labs built from real production scenarios',
+    title: 'Hands-on Labs',
+    description: 'No death-by-PowerPoint. You get real labs on real Azure environments — the same scenarios we solve for our clients.',
   },
   {
     icon: ForkKnife,
-    title: 'Lunch Included',
-    description: 'Focus on learning — lunch and refreshments are on us',
+    title: 'Lunch Is On Us',
+    description: 'Good food, good coffee, all day. You focus on learning, we take care of the rest.',
   },
   {
     icon: UsersThree,
-    title: 'Personal Attention',
-    description: 'Maximum 15 participants per session for personalized guidance',
+    title: 'Small Groups Only',
+    description: 'Max 10 people per class. You actually get to ask questions and get help when you\'re stuck.',
   },
   {
     icon: Trophy,
-    title: 'Expert Instructor',
-    description: 'Led by Yair Knijn, Principal Cloud Architect with hands-on enterprise experience',
+    title: 'Taught by a Practitioner',
+    description: 'Yaïr builds and runs Azure infrastructure daily. Not a slide-reader — someone who does the work.',
   },
 ];
 
@@ -31,7 +31,7 @@ export default function WhyCloudEvolvers() {
           Why Train With Us?
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          We believe the best way to learn cloud technology is by doing it — not watching slides.
+          We got tired of trainings where you sit and watch slides all day. So we built something better.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
