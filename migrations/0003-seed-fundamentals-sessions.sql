@@ -3,7 +3,7 @@
 
 INSERT OR IGNORE INTO training_sessions (id, course_slug, course_name, start_date, end_date, max_participants, location, status, price)
 VALUES
-  ('sess-az900-sep2026', 'azure-fundamentals', 'Azure Fundamentals (AZ-900)', '2026-09-08', '2026-09-09', 15, 'Amsterdam', 'open', 99500),
-  ('sess-ai900-sep2026', 'azure-ai-fundamentals', 'Azure AI Fundamentals (AI-900)', '2026-09-10', '2026-09-11', 15, 'Amsterdam', 'open', 99500),
-  ('sess-sc900-sep2026', 'security-compliance-identity-fundamentals', 'Security, Compliance & Identity Fundamentals (SC-900)', '2026-09-29', '2026-09-30', 15, 'Amsterdam', 'open', 99500),
-  ('sess-ab900-sep2026', 'copilot-agent-administration-fundamentals', 'Microsoft 365 Copilot & Agent Administration Fundamentals (AB-900)', '2026-09-12', '2026-09-12', 15, 'Amsterdam', 'open', 79500);
+  ('sess-az900-sep2026', 'azure-fundamentals', 'Azure Fundamentals (AZ-900)', '2026-09-08', '2026-09-09', 15, 'Amsterdam', 'open', 69500),
+  ('sess-ai900-sep2026', 'azure-ai-fundamentals', 'Azure AI Fundamentals (AI-900)', '2026-09-10', '2026-09-11', 15, 'Amsterdam', 'open', 69500),
+  ('sess-sc900-sep2026', 'security-compliance-identity-fundamentals', 'Security, Compliance & Identity Fundamentals (SC-900)', '2026-09-29', '2026-09-30', 15, 'Amsterdam', 'open', 69500),
+  ('sess-ab900-sep2026', 'copilot-agent-administration-fundamentals', 'Microsoft 365 Copilot & Agent Administration Fundamentals (AB-900)', '2026-09-12', '2026-09-12', 15, 'Amsterdam', 'open', 69500);
