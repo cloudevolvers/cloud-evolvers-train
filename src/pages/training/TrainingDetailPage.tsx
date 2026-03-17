@@ -109,12 +109,19 @@ export default function TrainingDetailPage() {
   const priceInfo = training ? getTrainingPriceDisplay(slug, training.price?.amount) : null;
   const isPromotionActive = isPromotionalPricingActive();
 
-  const showDevPrice = !isProduction() && (!training?.price?.amount || priceInfo?.isFallbackPrice);
+  // Price from D1 session (in cents) takes priority over JSON
+  const sessionPrice = sessions.length > 0 && sessions[0].price
+    ? sessions[0].price / 100
+    : null;
+
+  const showDevPrice = !isProduction() && (!training?.price?.amount || priceInfo?.isFallbackPrice) && !sessionPrice;
   const priceDisplay = showDevPrice
     ? 'DEV'
-    : isPromotionActive && priceInfo?.hasDiscount
-      ? priceInfo.formattedFinalPrice
-      : `€${training?.price?.amount || 'TBD'}`;
+    : sessionPrice
+      ? `€${sessionPrice}`
+      : isPromotionActive && priceInfo?.hasDiscount
+        ? priceInfo.formattedFinalPrice
+        : `€${training?.price?.amount || 'TBD'}`;
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
