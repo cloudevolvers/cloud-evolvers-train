@@ -15,6 +15,8 @@ export interface Service {
   slug: string;
   description: string;
   icon: string;
+  image: string;
+  imageCredit?: string;
   features: string[];
   sections: ServiceSection[];
   benefits: ServiceSectionItem[];

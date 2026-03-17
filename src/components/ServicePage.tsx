@@ -113,7 +113,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
               {/* Main Hero Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
                 <div className="lg:col-span-3">
-                  <ServiceHero icon={IconComponent} title={service.title} description={service.description} language={language} />
+                  <ServiceHero icon={IconComponent} title={service.title} description={service.description} image={service.image} imageCredit={service.imageCredit} language={language} />
                 </div>
                 <div className="lg:col-span-2">
                   <ServiceFeatureCard features={service.features} title={language === 'nl' ? 'Belangrijkste functies' : 'Key Features'} />

@@ -6,8 +6,10 @@ export const allServices: AllServicesTranslations = {
       id: 'cloud-management',
       title: 'Cloud Management',
       slug: 'cloud-management',
-      description: 'Expert management of your Azure infrastructure with 24/7 monitoring and support.',
+      description: 'Proactive management of your Azure cloud environment — from FinOps and governance to 24/7 operational support.',
       icon: 'Cloud',
+      image: '/images/services/cloud-management.jpg',
+      imageCredit: 'Brett Sayles / Pexels',
       features: ['Resource optimization', 'Cost monitoring', 'Performance tuning', 'Infrastructure as Code'],
       sections: [
         {
@@ -17,22 +19,25 @@ export const allServices: AllServicesTranslations = {
             { title: 'Cost Optimization', description: 'Regular reviews and recommendations to reduce cloud spending' },
             { title: 'Performance Tuning', description: 'Optimization of resources for maximum performance' },
             { title: 'Infrastructure as Code', description: 'Implementation of IaC practices for scalable and consistent deployments' },
+            { title: 'Azure Arc & Multi-Cloud Governance', description: 'Extend Azure management to hybrid and multi-cloud resources with Azure Arc for unified governance' },
           ],
         },
       ],
       benefits: [],
-      closingText: 'Contact us today to learn how our Cloud Management services can transform your Azure experience.',
+      closingText: 'With Azure evolving rapidly — from FinOps tooling to Arc-enabled governance — our Cloud Management services help you stay ahead while keeping operations lean and cost-effective.',
       isPublished: true,
       publishedAt: '2024-01-01T00:00:00Z',
-      updatedAt: '2024-01-01T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 1,
     },
     nl: {
       id: 'cloud-management',
       title: 'Cloud Beheer',
       slug: 'cloud-management',
-      description: 'Deskundig beheer van uw Azure infrastructuur met 24/7 monitoring en ondersteuning.',
+      description: 'Proactief beheer van uw Azure cloud omgeving — van FinOps en governance tot 24/7 operationele ondersteuning.',
       icon: 'Cloud',
+      image: '/images/services/cloud-management.jpg',
+      imageCredit: 'Brett Sayles / Pexels',
       features: ['Resource optimalisatie', 'Kosten monitoring', 'Prestatie optimalisatie', 'Infrastructure as Code'],
       sections: [
         {
@@ -42,14 +47,15 @@ export const allServices: AllServicesTranslations = {
             { title: 'Kosten Optimalisatie', description: 'Regelmatige reviews en aanbevelingen om cloud uitgaven te verlagen' },
             { title: 'Prestatie Optimalisatie', description: 'Optimalisatie van resources voor maximale prestaties' },
             { title: 'Infrastructure as Code', description: 'Implementatie van IaC praktijken voor schaalbare en consistente deployments' },
+            { title: 'Azure Arc & Multi-Cloud Governance', description: 'Breid Azure beheer uit naar hybride en multi-cloud resources met Azure Arc voor uniforme governance' },
           ],
         },
       ],
       benefits: [],
-      closingText: 'Neem vandaag nog contact met ons op om te ontdekken hoe onze Cloud Beheer services uw Azure ervaring kunnen transformeren.',
+      closingText: 'Met de snelle evolutie van Azure — van FinOps tooling tot Arc-enabled governance — helpen onze Cloud Beheer services u voorop te blijven terwijl operaties lean en kosteneffectief blijven.',
       isPublished: true,
       publishedAt: '2024-01-01T00:00:00Z',
-      updatedAt: '2024-01-01T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 1,
     },
   },
@@ -60,6 +66,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'azure-monitoring',
       description: 'Real-time visibility into your Azure resources with custom dashboards and alerts',
       icon: 'LineChart',
+      image: '/images/services/azure-monitoring.jpg',
+      imageCredit: 'Lukas Blazek / Pexels',
       features: ['24/7 resource monitoring', 'Custom alert configurations', 'Performance analytics', 'Resource usage trends'],
       sections: [
         {
@@ -78,6 +86,10 @@ export const allServices: AllServicesTranslations = {
           title: 'Resource Usage Trends',
           description: 'Track resource utilization over time to identify growth patterns, seasonal variations, and optimization opportunities. Our trend analysis helps with capacity planning and cost management.',
         },
+        {
+          title: 'AI-Driven Observability',
+          description: 'Leverage Azure Monitor\'s AI-powered insights and AIOps capabilities to automatically detect anomalies, correlate alerts, and reduce mean time to resolution. With integration into Microsoft Copilot for Azure, your operations team gets intelligent recommendations in natural language.',
+        },
       ],
       benefits: [
         { title: 'Proactive Issue Prevention', description: 'Identify and address potential problems before they affect your services' },
@@ -89,7 +101,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Contact us today to learn how our Azure Monitoring services can enhance the visibility, performance, and reliability of your cloud infrastructure.',
       isPublished: true,
       publishedAt: '2024-04-10T00:00:00Z',
-      updatedAt: '2024-04-10T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 2,
     },
     nl: {
@@ -98,6 +110,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'azure-monitoring',
       description: 'Real-time zichtbaarheid van uw Azure resources met aangepaste dashboards en alerts',
       icon: 'LineChart',
+      image: '/images/services/azure-monitoring.jpg',
+      imageCredit: 'Lukas Blazek / Pexels',
       features: ['24/7 resource monitoring', 'Aangepaste alert configuraties', 'Prestatie analytics', 'Resource gebruiks trends'],
       sections: [
         {
@@ -116,6 +130,10 @@ export const allServices: AllServicesTranslations = {
           title: 'Resource Gebruiks Trends',
           description: 'Volg resource gebruik over tijd om groei patronen, seizoensvariaties en optimalisatie mogelijkheden te identificeren. Onze trend analyse helpt bij capaciteitsplanning en kostenbeheer.',
         },
+        {
+          title: 'AI-Gedreven Observability',
+          description: 'Benut Azure Monitor\'s AI-aangedreven inzichten en AIOps mogelijkheden om automatisch anomalieën te detecteren, alerts te correleren en de gemiddelde hersteltijd te verkorten. Met integratie in Microsoft Copilot voor Azure krijgt uw operationeel team intelligente aanbevelingen in natuurlijke taal.',
+        },
       ],
       benefits: [
         { title: 'Proactieve Probleem Preventie', description: 'Identificeer en behandel potentiële problemen voordat ze uw services beïnvloeden' },
@@ -127,7 +145,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Neem vandaag nog contact met ons op om te leren hoe onze Azure Monitoring services de zichtbaarheid, prestaties en betrouwbaarheid van uw cloud infrastructuur kunnen verbeteren.',
       isPublished: true,
       publishedAt: '2024-04-10T00:00:00Z',
-      updatedAt: '2024-04-10T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 2,
     },
   },
@@ -136,8 +154,10 @@ export const allServices: AllServicesTranslations = {
       id: 'security-compliance',
       title: 'Security & Compliance',
       slug: 'security-compliance',
-      description: 'Comprehensive security management and compliance monitoring for your Azure environment.',
+      description: 'End-to-end security for your Azure environment — from Zero Trust architecture and Microsoft Sentinel SIEM to NIS2 and DORA compliance readiness.',
       icon: 'Shield',
+      image: '/images/services/security-compliance.jpg',
+      imageCredit: 'Dan Nelson / Pexels',
       features: ['Threat detection', 'Compliance frameworks', 'Security assessments', 'Zero Trust implementation'],
       sections: [
         {
@@ -151,6 +171,8 @@ export const allServices: AllServicesTranslations = {
             { title: 'Compliance Management', description: 'Implementation and maintenance of compliance frameworks' },
             { title: 'Security Assessments', description: 'Regular evaluation of your security posture' },
             { title: 'Zero Trust Architecture', description: 'Implementation of modern security principles' },
+            { title: 'NIS2 & DORA Compliance', description: 'Prepare for EU NIS2 and DORA regulatory requirements with comprehensive compliance assessments and implementation' },
+            { title: 'Microsoft Sentinel & Copilot for Security', description: 'Deploy AI-powered SIEM/SOAR with Microsoft Sentinel and accelerate threat investigation using Copilot for Security' },
           ],
         },
       ],
@@ -158,15 +180,17 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Secure your Azure environment today with our expert security services.',
       isPublished: true,
       publishedAt: '2024-01-02T00:00:00Z',
-      updatedAt: '2024-01-02T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 2,
     },
     nl: {
       id: 'security-compliance',
       title: 'Beveiliging & Compliance',
       slug: 'security-compliance',
-      description: 'Uitgebreid beveiligingsbeheer en compliance monitoring voor uw Azure omgeving.',
+      description: 'End-to-end beveiliging voor uw Azure omgeving — van Zero Trust architectuur en Microsoft Sentinel SIEM tot NIS2 en DORA compliance gereedheid.',
       icon: 'Shield',
+      image: '/images/services/security-compliance.jpg',
+      imageCredit: 'Dan Nelson / Pexels',
       features: ['Dreigingsdetectie', 'Compliance frameworks', 'Beveiligingsassessments', 'Zero Trust implementatie'],
       sections: [
         {
@@ -180,6 +204,8 @@ export const allServices: AllServicesTranslations = {
             { title: 'Compliance Beheer', description: 'Implementatie en onderhoud van compliance frameworks' },
             { title: 'Beveiligingsassessments', description: 'Regelmatige evaluatie van uw beveiligingspositie' },
             { title: 'Zero Trust Architectuur', description: 'Implementatie van moderne beveiligingsprincipes' },
+            { title: 'NIS2 & DORA Compliance', description: 'Bereid u voor op de EU NIS2 en DORA regelgeving met uitgebreide compliance assessments en implementatie' },
+            { title: 'Microsoft Sentinel & Copilot for Security', description: 'Implementeer AI-aangedreven SIEM/SOAR met Microsoft Sentinel en versnel dreigingsonderzoek met Copilot for Security' },
           ],
         },
       ],
@@ -187,7 +213,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Beveilig uw Azure omgeving vandaag nog met onze expert beveiligingsservices.',
       isPublished: true,
       publishedAt: '2024-01-02T00:00:00Z',
-      updatedAt: '2024-01-02T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 2,
     },
   },
@@ -198,6 +224,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'cost-optimization',
       description: 'Identify savings opportunities and optimize your Azure spending',
       icon: 'PiggyBank',
+      image: '/images/services/cost-optimization.jpg',
+      imageCredit: 'Negative Space / Pexels',
       features: ['Spending analysis', 'Resource right-sizing', 'Reservation recommendations', 'Budget forecasting'],
       sections: [
         {
@@ -216,6 +244,10 @@ export const allServices: AllServicesTranslations = {
           title: 'Budget Forecasting',
           description: 'Our advanced forecasting tools predict future Azure spending based on historical patterns and planned workloads, enabling proactive budget management and preventing unexpected cost overruns.',
         },
+        {
+          title: 'FinOps & Cloud Financial Management',
+          description: 'We help you adopt FinOps practices across your organization, combining Azure Cost Management, Microsoft Cost Optimization workbook, and custom dashboards to create a culture of cloud financial accountability. From chargeback models to showback reporting, we build the financial visibility your teams need.',
+        },
       ],
       benefits: [
         { title: 'Immediate Cost Reduction', description: 'Identify and eliminate waste quickly to see fast ROI' },
@@ -227,7 +259,7 @@ export const allServices: AllServicesTranslations = {
       closingText: "Whether you're facing rapid cloud cost increases or simply want to ensure you're using your Azure budget efficiently, our Cost Optimization service delivers measurable savings while maintaining or improving your cloud infrastructure performance. Contact us today for a complimentary cost assessment to see how much you could save.",
       isPublished: true,
       publishedAt: '2024-04-10T00:00:00Z',
-      updatedAt: '2024-04-10T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 3,
     },
     nl: {
@@ -236,6 +268,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'cost-optimization',
       description: 'Identificeer besparingsmogelijkheden en optimaliseer uw Azure uitgaven',
       icon: 'PiggyBank',
+      image: '/images/services/cost-optimization.jpg',
+      imageCredit: 'Negative Space / Pexels',
       features: ['Uitgaven analyse', 'Resource right-sizing', 'Reservering aanbevelingen', 'Budget voorspelling'],
       sections: [
         {
@@ -254,6 +288,10 @@ export const allServices: AllServicesTranslations = {
           title: 'Budget Voorspelling',
           description: 'Onze geavanceerde voorspelling tools voorspellen toekomstige Azure uitgaven gebaseerd op historische patronen en geplande workloads, wat proactief budgetbeheer mogelijk maakt en onverwachte kostenoverschrijdingen voorkomt.',
         },
+        {
+          title: 'FinOps & Cloud Financieel Management',
+          description: 'We helpen u FinOps praktijken te adopteren in uw organisatie, door Azure Cost Management, Microsoft Cost Optimization workbook en aangepaste dashboards te combineren om een cultuur van cloud financiële verantwoordelijkheid te creëren. Van chargeback modellen tot showback rapportage, wij bouwen de financiële zichtbaarheid die uw teams nodig hebben.',
+        },
       ],
       benefits: [
         { title: 'Directe Kostenreductie', description: 'Identificeer en elimineer verspilling snel voor snelle ROI' },
@@ -265,7 +303,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Of u nu te maken heeft met snelle cloud kostenstijgingen of gewoon wilt zorgen dat u uw Azure budget efficiënt gebruikt, onze Kosten Optimalisatie service levert meetbare besparingen terwijl uw cloud infrastructuur prestaties behouden of verbeterd worden. Neem vandaag nog contact met ons op voor een gratis kosten assessment om te zien hoeveel u zou kunnen besparen.',
       isPublished: true,
       publishedAt: '2024-04-10T00:00:00Z',
-      updatedAt: '2024-04-10T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 3,
     },
   },
@@ -274,8 +312,10 @@ export const allServices: AllServicesTranslations = {
       id: 'microsoft-365-copilot',
       title: 'Microsoft 365 Copilot',
       slug: 'microsoft-365-copilot',
-      description: 'Maximize productivity with AI-powered assistance across Microsoft 365.',
+      description: 'Unlock AI-powered productivity across your organization with Microsoft 365 Copilot — from rollout strategy and adoption to advanced prompt engineering and Copilot Studio customization.',
       icon: 'Bot',
+      image: '/images/services/microsoft-365-copilot.jpg',
+      imageCredit: 'Matheus Bertelli / Pexels',
       features: ['AI-powered assistance', 'Productivity optimization', 'Integration with Microsoft 365', 'User training and support'],
       sections: [
         {
@@ -290,6 +330,7 @@ export const allServices: AllServicesTranslations = {
             { title: 'User Training', description: 'Comprehensive training programs to ensure adoption and maximize productivity benefits' },
             { title: 'Integration Support', description: 'Technical assistance with integrating Copilot across your Microsoft 365 environment' },
             { title: 'Content Optimization', description: 'Guidance on optimizing your content and data to get the most out of Copilot' },
+            { title: 'Copilot Studio & Custom Agents', description: 'Build custom Copilot agents and plugins using Copilot Studio to automate domain-specific workflows' },
           ],
         },
         {
@@ -341,15 +382,17 @@ export const allServices: AllServicesTranslations = {
       closingText: "Contact us today to learn how Microsoft 365 Copilot can transform your organization's productivity.",
       isPublished: true,
       publishedAt: '2024-01-03T00:00:00Z',
-      updatedAt: '2024-01-03T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 3,
     },
     nl: {
       id: 'microsoft-365-copilot',
       title: 'Microsoft 365 Copilot',
       slug: 'microsoft-365-copilot',
-      description: 'Maximize productivity with AI-powered assistance across Microsoft 365.',
+      description: 'Ontgrendel AI-aangedreven productiviteit in uw organisatie met Microsoft 365 Copilot — van uitrolstrategie en adoptie tot geavanceerde prompt engineering en Copilot Studio aanpassing.',
       icon: 'Bot',
+      image: '/images/services/microsoft-365-copilot.jpg',
+      imageCredit: 'Matheus Bertelli / Pexels',
       features: ['AI-powered assistance', 'Productivity optimization', 'Integration with Microsoft 365', 'User training and support'],
       sections: [
         {
@@ -364,6 +407,7 @@ export const allServices: AllServicesTranslations = {
             { title: 'User Training', description: 'Comprehensive training programs to ensure adoption and maximize productivity benefits' },
             { title: 'Integration Support', description: 'Technical assistance with integrating Copilot across your Microsoft 365 environment' },
             { title: 'Content Optimization', description: 'Guidance on optimizing your content and data to get the most out of Copilot' },
+            { title: 'Copilot Studio & Custom Agents', description: 'Bouw aangepaste Copilot agents en plugins met Copilot Studio om domeinspecifieke workflows te automatiseren' },
           ],
         },
         {
@@ -415,7 +459,7 @@ export const allServices: AllServicesTranslations = {
       closingText: "Contact us today to learn how Microsoft 365 Copilot can transform your organization's productivity.",
       isPublished: true,
       publishedAt: '2024-01-03T00:00:00Z',
-      updatedAt: '2024-01-03T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 3,
     },
   },
@@ -426,6 +470,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'cloud-engineering',
       description: 'Expert cloud engineering services to design, build, and optimize your Azure infrastructure.',
       icon: 'Network',
+      image: '/images/services/cloud-engineering.jpg',
+      imageCredit: 'Christina Morillo / Pexels',
       features: ['Architecture design', 'Implementation', 'Migration services', 'Performance optimization'],
       sections: [
         {
@@ -469,7 +515,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Contact us today to discuss how our Cloud Engineering services can help you build a robust, efficient Azure infrastructure.',
       isPublished: true,
       publishedAt: '2024-01-04T00:00:00Z',
-      updatedAt: '2024-01-04T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 4,
     },
     nl: {
@@ -478,6 +524,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'cloud-engineering',
       description: 'Expert cloud engineering services om uw Azure infrastructuur te ontwerpen, bouwen en optimaliseren.',
       icon: 'Network',
+      image: '/images/services/cloud-engineering.jpg',
+      imageCredit: 'Christina Morillo / Pexels',
       features: ['Architectuur ontwerp', 'Implementatie', 'Migratie services', 'Prestatie optimalisatie'],
       sections: [
         {
@@ -521,7 +569,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Neem vandaag nog contact met ons op om te bespreken hoe onze Cloud Engineering services u kunnen helpen bij het bouwen van een robuuste, efficiënte Azure infrastructuur.',
       isPublished: true,
       publishedAt: '2024-01-04T00:00:00Z',
-      updatedAt: '2024-01-04T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 4,
     },
   },
@@ -532,6 +580,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'infrastructure-as-code',
       description: 'Automate infrastructure provisioning and management with code.',
       icon: 'Code',
+      image: '/images/services/infrastructure-as-code.jpg',
+      imageCredit: 'Markus Spiske / Pexels',
       features: ['Automated provisioning', 'Configuration management', 'Version control', 'Error reduction'],
       sections: [
         {
@@ -567,6 +617,10 @@ export const allServices: AllServicesTranslations = {
           ],
         },
         {
+          title: 'AI-Assisted IaC',
+          description: 'Leverage GitHub Copilot and Azure AI to accelerate IaC development. We help teams adopt AI pair-programming for Terraform, Bicep, and OpenTofu — reducing boilerplate, catching misconfigurations early, and speeding up infrastructure reviews.',
+        },
+        {
           title: 'CI/CD Pipeline Integration',
           items: [
             { title: 'Automated Testing', description: 'Implement infrastructure testing in your deployment pipelines' },
@@ -595,7 +649,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Contact us today to start your Infrastructure as Code journey.',
       isPublished: true,
       publishedAt: '2024-01-05T00:00:00Z',
-      updatedAt: '2024-01-05T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 5,
     },
     nl: {
@@ -604,6 +658,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'infrastructure-as-code',
       description: 'Automatiseer infrastructuur provisioning en beheer met code.',
       icon: 'Code',
+      image: '/images/services/infrastructure-as-code.jpg',
+      imageCredit: 'Markus Spiske / Pexels',
       features: ['Geautomatiseerde provisioning', 'Configuratie beheer', 'Versie controle', 'Fout reductie'],
       sections: [
         {
@@ -639,6 +695,10 @@ export const allServices: AllServicesTranslations = {
           ],
         },
         {
+          title: 'AI-Ondersteunde IaC',
+          description: 'Benut GitHub Copilot en Azure AI om IaC-ontwikkeling te versnellen. We helpen teams AI pair-programming te adopteren voor Terraform, Bicep en OpenTofu — minder boilerplate, vroege detectie van misconfiguraties en snellere infrastructure reviews.',
+        },
+        {
           title: 'CI/CD Pipeline Integratie',
           items: [
             { title: 'Geautomatiseerd Testen', description: 'Implementeer infrastructuur testing in uw deployment pipelines' },
@@ -667,7 +727,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Neem vandaag nog contact met ons op om uw Infrastructure as Code reis te starten.',
       isPublished: true,
       publishedAt: '2024-01-05T00:00:00Z',
-      updatedAt: '2024-01-05T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 5,
     },
   },
@@ -676,8 +736,10 @@ export const allServices: AllServicesTranslations = {
       id: 'ai-engineering',
       title: 'AI Engineering & Consultancy',
       slug: 'ai-engineering',
-      description: 'Build and deploy advanced AI solutions in your Azure environment.',
+      description: 'From Azure OpenAI and RAG architectures to responsible AI governance — we help you build, deploy, and scale AI solutions that deliver real business value.',
       icon: 'Cpu',
+      image: '/images/services/ai-engineering.jpg',
+      imageCredit: 'Pavel Danilyuk / Pexels',
       features: ['AI solution design', 'Model development', 'Deployment and monitoring', 'Business value analysis'],
       sections: [
         {
@@ -691,6 +753,14 @@ export const allServices: AllServicesTranslations = {
             { title: 'Prompt Engineering', description: 'Create effective prompts for optimal AI responses' },
             { title: 'Content Filtering', description: 'Implement appropriate content controls' },
             { title: 'Integration Architecture', description: 'Design robust, scalable systems that incorporate Azure OpenAI' },
+          ],
+        },
+        {
+          title: 'RAG & Knowledge Systems',
+          items: [
+            { title: 'Retrieval-Augmented Generation', description: 'Build enterprise RAG solutions using Azure AI Search, Azure OpenAI, and your proprietary data sources' },
+            { title: 'AI Agent Architectures', description: 'Design and deploy autonomous AI agents using frameworks like Semantic Kernel and AutoGen for complex multi-step workflows' },
+            { title: 'Vector Databases & Embeddings', description: 'Implement efficient vector search with Azure AI Search or Cosmos DB for MongoDB vCore for semantic retrieval at scale' },
           ],
         },
         {
@@ -730,15 +800,17 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Contact us today to explore how AI can transform your business processes and create new opportunities.',
       isPublished: true,
       publishedAt: '2024-01-06T00:00:00Z',
-      updatedAt: '2024-01-06T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 6,
     },
     nl: {
       id: 'ai-engineering',
       title: 'AI Engineering & Consultancy',
       slug: 'ai-engineering',
-      description: 'Bouw en deploy geavanceerde AI oplossingen in uw Azure omgeving.',
+      description: 'Van Azure OpenAI en RAG-architecturen tot verantwoorde AI-governance — wij helpen u AI-oplossingen te bouwen, deployen en schalen die echte bedrijfswaarde leveren.',
       icon: 'Cpu',
+      image: '/images/services/ai-engineering.jpg',
+      imageCredit: 'Pavel Danilyuk / Pexels',
       features: ['AI oplossing ontwerp', 'Model ontwikkeling', 'Deployment en monitoring', 'Business waarde analyse'],
       sections: [
         {
@@ -752,6 +824,14 @@ export const allServices: AllServicesTranslations = {
             { title: 'Prompt Engineering', description: 'Creëer effectieve prompts voor optimale AI responses' },
             { title: 'Content Filtering', description: 'Implementeer juiste content controles' },
             { title: 'Integratie Architectuur', description: 'Ontwerp robuuste, schaalbare systemen die Azure OpenAI incorporeren' },
+          ],
+        },
+        {
+          title: 'RAG & Kennissystemen',
+          items: [
+            { title: 'Retrieval-Augmented Generation', description: 'Bouw enterprise RAG-oplossingen met Azure AI Search, Azure OpenAI en uw eigen databronnen' },
+            { title: 'AI Agent Architecturen', description: 'Ontwerp en deploy autonome AI-agents met frameworks zoals Semantic Kernel en AutoGen voor complexe meerstaps workflows' },
+            { title: 'Vector Databases & Embeddings', description: 'Implementeer efficiënte vectorzoekopdrachten met Azure AI Search of Cosmos DB voor MongoDB vCore voor semantisch ophalen op schaal' },
           ],
         },
         {
@@ -791,7 +871,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Neem vandaag nog contact met ons op om te verkennen hoe AI uw bedrijfsprocessen kan transformeren en nieuwe kansen kan creëren.',
       isPublished: true,
       publishedAt: '2024-01-06T00:00:00Z',
-      updatedAt: '2024-01-06T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 6,
     },
   },
@@ -802,6 +882,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'network-engineering',
       description: 'Design and implement robust networking solutions in Azure.',
       icon: 'Graph',
+      image: '/images/services/network-engineering.jpg',
+      imageCredit: 'Brett Sayles / Pexels',
       features: ['Network design', 'Implementation', 'Security management', 'Performance optimization'],
       sections: [
         {
@@ -824,6 +906,7 @@ export const allServices: AllServicesTranslations = {
             { title: 'VPN Configuration', description: 'Set up site-to-site and point-to-site VPN solutions' },
             { title: 'Virtual WAN', description: 'Configure global transit networks for distributed environments' },
             { title: 'Azure Front Door', description: 'Implement global load balancing and application acceleration' },
+            { title: 'Azure Private 5G Core', description: 'Deploy private 5G/LTE networks for IoT and edge computing scenarios using Azure Private MEC' },
           ],
         },
         {
@@ -855,7 +938,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Contact us today to discuss your Azure networking needs.',
       isPublished: true,
       publishedAt: '2024-01-07T00:00:00Z',
-      updatedAt: '2024-01-07T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 7,
     },
     nl: {
@@ -864,6 +947,8 @@ export const allServices: AllServicesTranslations = {
       slug: 'network-engineering',
       description: 'Ontwerp en implementeer robuuste netwerk oplossingen in Azure.',
       icon: 'Graph',
+      image: '/images/services/network-engineering.jpg',
+      imageCredit: 'Brett Sayles / Pexels',
       features: ['Netwerk ontwerp', 'Implementatie', 'Beveiliging beheer', 'Prestatie optimalisatie'],
       sections: [
         {
@@ -886,6 +971,7 @@ export const allServices: AllServicesTranslations = {
             { title: 'VPN Configuratie', description: 'Stel site-to-site en point-to-site VPN oplossingen op' },
             { title: 'Virtual WAN', description: 'Configureer globale transit netwerken voor gedistribueerde omgevingen' },
             { title: 'Azure Front Door', description: 'Implementeer globale load balancing en applicatie acceleratie' },
+            { title: 'Azure Private 5G Core', description: 'Deploy private 5G/LTE netwerken voor IoT en edge computing scenario\'s met Azure Private MEC' },
           ],
         },
         {
@@ -917,7 +1003,7 @@ export const allServices: AllServicesTranslations = {
       closingText: 'Neem vandaag nog contact met ons op om uw Azure netwerk behoeften te bespreken.',
       isPublished: true,
       publishedAt: '2024-01-07T00:00:00Z',
-      updatedAt: '2024-01-07T00:00:00Z',
+      updatedAt: '2026-03-17T00:00:00Z',
       order: 7,
     },
   },

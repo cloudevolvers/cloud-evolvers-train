@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { getAllServices } from '@/data/services';
@@ -43,20 +43,30 @@ export default function ServicesPage() {
                 return (
                   <Card
                     key={service.id}
-                    className="bg-card border-border h-full transition-all duration-200 cursor-pointer hover:border-foreground/20 hover:shadow-md group"
+                    className="bg-card border-border h-full transition-all duration-200 cursor-pointer hover:border-foreground/20 hover:shadow-md group overflow-hidden"
                     onClick={() => navigate(`/services/${service.id}`)}
                   >
-                    <CardHeader className="pb-4">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-neutral-100 dark:bg-white/10 rounded-xl border border-border shrink-0">
-                          <IconComponent size={24} className="text-foreground/70" weight="regular" />
+                    {/* Service Image */}
+                    <div className="relative h-44 overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                      <div className="absolute bottom-3 left-3">
+                        <div className="p-2.5 bg-card/90 backdrop-blur-sm rounded-xl border border-border">
+                          <IconComponent size={20} className="text-foreground/70" weight="regular" />
                         </div>
-                        <CardTitle className="text-foreground text-lg leading-tight">
-                          {service.title}
-                        </CardTitle>
                       </div>
-                    </CardHeader>
-                    <CardContent className="pt-0 space-y-4">
+                    </div>
+
+                    <CardContent className="pt-4 pb-5 space-y-3">
+                      <h3 className="text-foreground font-semibold text-lg leading-tight">
+                        {service.title}
+                      </h3>
+
                       <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
                         {service.description}
                       </p>
@@ -82,7 +92,7 @@ export default function ServicesPage() {
                         )}
                       </div>
 
-                      <div className="pt-2">
+                      <div className="pt-1">
                         <Button
                           variant="ghost"
                           size="sm"
