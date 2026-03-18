@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/hooks/use-translations";
 
+const terminalLines = [
+    "$ az login --tenant cloudevolvers",
+    "> profile: microsoft-training",
+    "$ azd env get-values",
+    "> DELIVERY=dutch-english",
+    "> FORMAT=in-company, remote",
+];
+
 export function Hero() {
     const { t } = useTranslations();
     const marketing = t.hero?.marketing;
@@ -27,7 +35,7 @@ export function Hero() {
                             <span>{marketing?.eyebrow || "Azure training led by Yaïr Knijn"}</span>
                         </div>
 
-                        <h1 className="font-display mt-8 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4.35rem] lg:leading-[0.98]">
+                        <h1 className="font-display mt-8 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[4rem] lg:leading-[0.98]">
                             {marketing?.headline1 || "Microsoft training for admins, architects, and platform teams."}
                             <span className="mt-3 block text-slate-300">
                                 {marketing?.headline2 || "Azure, Microsoft 365, and real production decisions."}
@@ -59,7 +67,7 @@ export function Hero() {
                             </Link>
                         </div>
 
-                        <div className="mt-12 w-full max-w-2xl rounded-[1.75rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-sm">
+                        <div className="mt-12 w-full max-w-xl rounded-[1.75rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur-sm">
                             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
                                 {marketing?.proofLabel || "What companies ask for"}
                             </p>
@@ -74,9 +82,9 @@ export function Hero() {
                         </div>
                     </div>
 
-                    <div className="flex items-center lg:justify-end">
+                    <div className="flex items-center lg:justify-end lg:pt-10">
                         <div className="w-full max-w-lg">
-                            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm">
+                            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-sm">
                                 <div className="relative min-h-[520px]">
                                     <img
                                         src="/1625557501943.jpg"
@@ -84,6 +92,26 @@ export function Hero() {
                                         className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
                                     />
                                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.08),rgba(3,7,18,0.2)_36%,rgba(3,7,18,0.86)_100%)]" />
+
+                                    <div className="absolute right-5 top-5 hidden w-[270px] rounded-[1.4rem] border border-emerald-300/15 bg-[#07111f]/88 p-4 shadow-[0_25px_60px_rgba(0,0,0,0.45)] backdrop-blur-md lg:block">
+                                        <div className="flex items-center justify-between">
+                                            <div className="flex gap-1.5">
+                                                <span className="h-2.5 w-2.5 rounded-full bg-rose-400/80" />
+                                                <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
+                                                <span className="h-2.5 w-2.5 rounded-full bg-emerald-300/80" />
+                                            </div>
+                                            <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">
+                                                Lab snapshot
+                                            </span>
+                                        </div>
+                                        <div className="mt-4 space-y-2 font-mono text-[11px] leading-5 text-emerald-200/90">
+                                            {terminalLines.map((line) => (
+                                                <div key={line} className={line.startsWith(">") ? "text-slate-300" : ""}>
+                                                    {line}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
 
                                     <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
                                         <div className="max-w-md rounded-[1.6rem] border border-white/10 bg-black/35 p-6 backdrop-blur-md">
