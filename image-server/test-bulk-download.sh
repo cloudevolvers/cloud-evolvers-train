@@ -32,7 +32,7 @@ curl -X POST http://localhost:3001/bulk-search \
 
 echo ""
 echo "✅ Bulk search completed! Check the image server logs for details:"
-echo "   npm run images:logs"
+echo "   bun run images:logs"
 echo ""
 echo "📊 To see downloaded images:"
 echo "   curl http://localhost:3001/downloaded | python3 -m json.tool"

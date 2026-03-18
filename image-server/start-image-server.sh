@@ -65,7 +65,7 @@ start_server() {
     # Check if node_modules exists
     if [ ! -d "node_modules" ]; then
         print_status "Installing dependencies..."
-        npm install
+        bun install
     fi
     
     # Start the server in background

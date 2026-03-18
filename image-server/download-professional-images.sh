@@ -142,7 +142,7 @@ if command -v curl > /dev/null 2>&1; then
         print_success "📊 Image server now has $current_count total images"
     else
         print_warning "⚠️  Image server not responding (may not be running)"
-        print_status "💡 Start with: npm run images"
+        print_status "💡 Start with: bun run images"
     fi
 fi
 

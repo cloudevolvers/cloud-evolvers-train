@@ -188,7 +188,7 @@ export default defineConfig({
 
 1. **Start your development server**:
    ```bash
-   npm run dev
+   bun dev
    ```
 
 2. **MCP server automatically starts** at `http://localhost:5000/__mcp/sse`
@@ -227,7 +227,7 @@ For more information, see the [vite-plugin-mcp documentation](https://www.npmjs.
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn
+- Bun
 - Git
 
 ### Installation
@@ -237,23 +237,22 @@ git clone https://github.com/xevolve-org/cloud-evolvers-train.git
 cd cloud-evolvers-train
 
 # Install dependencies
-npm install
+bun install
 
 # Set up environment variables
 cp .env.example .env
 # Edit .env with your configuration
 
 # Start development server
-npm run dev
+bun dev
 ```
 
 ### Available Scripts
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run type-check   # TypeScript type checking
-npm run lint         # ESLint checking
+bun dev              # Start development server
+bun run build        # Build for production
+bun run preview      # Preview production build
+bun run lint         # ESLint checking
 ```
 
 ## 🎨 Styling and Design
@@ -281,28 +280,27 @@ xl: 1280px   /* Extra large devices */
 
 ### Component Testing
 ```bash
-npm run test         # Run all tests
-npm run test:watch   # Watch mode
-npm run test:coverage # Coverage report
+bun test             # Run all tests
+bun test --watch     # Watch mode
+bun test --coverage  # Coverage report
 ```
 
 ### E2E Testing
 ```bash
-npm run test:e2e     # Run Playwright tests
+bunx playwright test # Run Playwright tests
 ```
 
 ## 🚀 Deployment
 
+### GitHub Actions
+Production and preview deployments run through GitHub Actions. Merging to `master` triggers the Cloudflare Pages workflow and publishes the site from CI.
+
 ### Azure Static Web Apps
-The project is configured for Azure Static Web Apps deployment:
+Legacy Static Web Apps references remain in the repo for older environments, but the website deployment path is GitHub Actions:
 
 ```bash
-# Deploy using Azure CLI
-az staticwebapp create \
-  --name cloud-evolvers-train \
-  --source https://github.com/xevolve-org/cloud-evolvers-train \
-  --location "West Europe" \
-  --build-location "dist"
+# Merge a PR into master to deploy via GitHub Actions
+gh pr merge <pr-number> --squash --auto
 ```
 
 ### Environment-Specific Builds
