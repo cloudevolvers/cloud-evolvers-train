@@ -16,11 +16,11 @@ export NODE_ENV=production
 
 # Build the application for production
 echo "📦 Building application for production..."
-npm run build
+bun run build
 
 # Deploy using SWA CLI
 echo "🌐 Deploying to Static Web App (Production)..."
-npx swa deploy \
+bunx swa deploy \
   --config cloud-evolvers-train \
   --env production \
   --no-use-keychain \

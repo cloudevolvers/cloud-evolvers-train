@@ -31,22 +31,22 @@ image-server/
 
 ## 🚀 Quick Start
 
-### Using npm scripts (from main project):
+### Using Bun scripts (from main project):
 ```bash
 # Start the image server
-npm run images
+bun run images
 
 # Check server status  
-npm run images:status
+bun run images:status
 
 # View server logs
-npm run images:logs
+bun run images:logs
 
 # Stop the server
-npm run images:stop
+bun run images:stop
 
 # Restart the server
-npm run images:restart
+bun run images:restart
 ```
 
 ### Using the startup script directly:

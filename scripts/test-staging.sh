@@ -15,7 +15,7 @@ test_blog_construction() {
     
     # Start staging server
     echo "Starting staging server..."
-    npm run dev:staging > /dev/null 2>&1 &
+    bun run dev:staging > /dev/null 2>&1 &
     DEV_PID=$!
     sleep 5
     
@@ -61,7 +61,7 @@ test_build_process() {
     echo -e "${YELLOW}Testing Build Process...${NC}"
     
     # Test staging build
-    if npm run build:staging > /dev/null 2>&1; then
+    if bun run build:staging > /dev/null 2>&1; then
         echo -e "${GREEN}✅ Staging build successful${NC}"
         
         # Check if dist folder exists

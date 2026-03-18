@@ -142,7 +142,7 @@ if [[ $? -eq 0 ]]; then
     print_status "Next steps:"
     echo "1. Configure GitHub Actions secrets for the Static Web App API token"
     echo "2. Update your deployment configuration with the new hostname"
-    echo "3. Deploy your application using 'npm run deploy' or GitHub Actions"
+    echo "3. Deploy your application through GitHub Actions after pushing your changes"
     
 else
     print_error "Infrastructure deployment failed!"

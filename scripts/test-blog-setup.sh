@@ -124,7 +124,7 @@ fi
 
 # Test 8: Build test
 print_status "Testing application build..."
-if npm run build > /tmp/build.log 2>&1; then
+if bun run build > /tmp/build.log 2>&1; then
     print_success "Application builds successfully"
 else
     print_error "Application build failed"
