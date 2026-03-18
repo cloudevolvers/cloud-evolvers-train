@@ -12,7 +12,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Microsoft 365',
       level: 'Beginner',
       duration: { days: 1, format: 'days' },
-      price: { amount: 695, currency: 'EUR' },
       
       overview: 'Introduction to Microsoft 365 productivity and teamwork solutions. Learn about cloud concepts, core Microsoft 365 services, security, compliance, privacy, and trust in Microsoft 365. Perfect for anyone evaluating cloud services.',
       
@@ -124,7 +123,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Microsoft 365',
       level: 'Beginner',
       duration: { days: 1, format: 'days' },
-      price: { amount: 695, currency: 'EUR' },
       
       overview: 'Introductie tot Microsoft 365 productiviteit en teamwork oplossingen. Leer over cloud concepten, kern Microsoft 365 services, security, compliance, privacy en trust in Microsoft 365. Perfect voor iedereen die cloud services evalueert.',
       
@@ -238,7 +236,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1695, currency: 'EUR' },
       
       overview: 'Advanced training on Microsoft 365 Security Administration. Learn to secure Microsoft 365 deployment, implement advanced threat protection, manage security governance, and respond to threats. Essential for security professionals working with Microsoft 365.',
       
@@ -360,7 +357,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1695, currency: 'EUR' },
       
       overview: 'Geavanceerde training over Microsoft 365 Security Administration. Leer Microsoft 365 deployment beveiligen, geavanceerde threat protection implementeren, security governance beheren en reageren op bedreigingen. Essentieel voor security professionals die met Microsoft 365 werken.',
       
@@ -483,7 +479,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Intermediate',
       duration: { days: 2, format: 'days' },
-      price: { amount: 995, currency: 'EUR' },
       
       overview: 'Comprehensive training on Microsoft Copilot for Microsoft 365. Learn to leverage AI-powered assistance across Word, Excel, PowerPoint, Outlook, Teams, and more. Transform your productivity with intelligent automation and content generation.',
       
@@ -603,7 +598,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Intermediate',
       duration: { days: 2, format: 'days' },
-      price: { amount: 995, currency: 'EUR' },
       
       overview: 'Uitgebreide training over Microsoft Copilot voor Microsoft 365. Leer AI-aangedreven assistentie gebruiken in Word, Excel, PowerPoint, Outlook, Teams en meer. Transformeer je productiviteit met intelligente automatisering en content generatie.',
       
@@ -726,7 +720,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Microsoft 365',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Comprehensive training for Microsoft Teams administrators. Learn to plan, deploy, and manage Teams environments including calling, meetings, chat, collaboration, and Teams integration with other Microsoft 365 workloads.',
       
@@ -848,7 +841,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Microsoft 365',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Uitgebreide training voor Microsoft Teams administrators. Leer Teams omgevingen plannen, implementeren en beheren inclusief calling, meetings, chat, samenwerking en Teams integratie met andere Microsoft 365 workloads.',
       
@@ -972,7 +964,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Advanced training for identity and access administrators. Learn to implement and manage Azure AD identity solutions, including authentication, authorization, identity governance, and access management for Microsoft 365 and hybrid environments.',
       
@@ -1093,7 +1084,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Geavanceerde training voor identity en access administrators. Leer Azure AD identity oplossingen implementeren en beheren, inclusief authentication, authorization, identity governance en access management voor Microsoft 365 en hybride omgevingen.',
       
@@ -1217,7 +1207,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Microsoft 365',
       level: 'Expert',
       duration: { days: 5, format: 'days' },
-      price: { amount: 2495, currency: 'EUR' },
       
       overview: 'Comprehensive expert-level training for Microsoft 365 Administrators who deploy, configure, secure, manage, and monitor services in a Microsoft 365 tenant. This advanced course covers tenant implementation, identity and access, security threats, compliance solutions, and endpoint management.',
       
@@ -1361,7 +1350,6 @@ export const modernWorkplaceCourses: TrainingTranslations = {
       category: 'Microsoft 365',
       level: 'Expert',
       duration: { days: 5, format: 'days' },
-      price: { amount: 2495, currency: 'EUR' },
       
       overview: 'Uitgebreide expert-level training voor Microsoft 365 Administrators die services deployen, configureren, beveiligen, beheren en monitoren in een Microsoft 365 tenant. Deze geavanceerde cursus behandelt tenant implementatie, identity en access, security threats, compliance oplossingen, en endpoint management.',
       

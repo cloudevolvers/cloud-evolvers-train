@@ -13,6 +13,7 @@ import {
 } from '@/components/training/overview';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import WhyCloudEvolvers from '@/components/training/WhyCloudEvolvers';
+import { PageHeroBg } from '@/components/PageHeroBg';
 
 const TrainingOverviewPage: React.FC = () => {
   const [filterState, setFilterState] = useState<FilterState>({
@@ -44,7 +45,7 @@ const TrainingOverviewPage: React.FC = () => {
         description: t.description,
         category: t.category,
         level: t.difficulty,
-        duration: t.duration,
+        duration: { days: t.duration.days, hours: t.duration.hours ?? 0, format: t.duration.format },
         featured: t.featured,
         icon: t.icon,
         learningObjectives: t.learningObjectives.map(obj => obj.description),
@@ -128,16 +129,18 @@ const TrainingOverviewPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background">
+    <div className="relative min-h-screen pt-28 md:pt-32 pb-12 bg-background">
       <SEO {...PAGE_SEO.training} />
+      <PageHeroBg />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
+        <div className="mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
             {t?.training?.overview?.title || 'Training Courses'}
           </h1>
-          <p className="text-muted-foreground">
+          <div className="mb-4 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
+          <p className="text-muted-foreground max-w-2xl">
             {t?.training?.overview?.subtitle || 'Azure & Microsoft courses by certified trainers'}
           </p>
         </div>

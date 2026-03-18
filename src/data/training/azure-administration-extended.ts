@@ -12,7 +12,6 @@ export const azureAdministrationCourses: TrainingTranslations = {
       category: 'Azure Administration',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1495, currency: 'EUR' },
       
       overview: 'Comprehensive Azure administrator training covering identity, governance, storage, compute, and networking. Learn to manage Azure subscriptions, secure identities, administer the infrastructure, configure virtual networking, connect Azure and on-premises sites, manage network traffic, implement storage solutions, create and scale virtual machines, implement web apps and containers, backup and share data, and monitor your solution.',
       
@@ -134,7 +133,6 @@ export const azureAdministrationCourses: TrainingTranslations = {
       category: 'Azure Administration',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1495, currency: 'EUR' },
       
       overview: 'Uitgebreide Azure administrator training die identity, governance, storage, compute en networking behandelt. Leer Azure subscriptions beheren, identities beveiligen, infrastructuur administreren, virtuele netwerken configureren, Azure en on-premises sites verbinden, netwerkverkeer beheren, storage oplossingen implementeren, virtuele machines creëren en schalen, web apps en containers implementeren, data backuppen en delen, en je oplossing monitoren.',
       
@@ -258,7 +256,6 @@ export const azureAdministrationCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1295, currency: 'EUR' },
       
       overview: 'Comprehensive networking training focusing on Azure network infrastructure. Learn to design, implement, manage, and monitor network solutions in Azure including virtual networks, hybrid connections, load balancing, network security, and private connectivity.',
       
@@ -369,7 +366,6 @@ export const azureAdministrationCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1295, currency: 'EUR' },
       
       overview: 'Uitgebreide networking training gericht op Azure network infrastructuur. Leer het ontwerpen, implementeren, beheren en monitoren van network oplossingen in Azure inclusief virtuele netwerken, hybride verbindingen, load balancing, network beveiliging en private connectivity.',
       

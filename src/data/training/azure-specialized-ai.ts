@@ -11,7 +11,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Advanced',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Intensive bootcamp for developers looking to build sophisticated AI solutions using Azure Cognitive Services, Machine Learning, and AI services. Focus on practical implementation and real-world scenarios.',
       
@@ -131,7 +130,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Advanced',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Intensieve bootcamp voor developers die geavanceerde AI oplossingen willen bouwen met Azure Cognitive Services, Machine Learning en AI services. Focus op praktische implementatie en real-world scenario\'s.',
       
@@ -254,7 +252,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1695, currency: 'EUR' },
       
       overview: 'Specialized training for implementing and managing Internet of Things (IoT) solutions using Azure IoT Hub, IoT Central, and related services. Learn to develop, deploy, and maintain IoT solutions at scale.',
       
@@ -377,7 +374,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1695, currency: 'EUR' },
       
       overview: 'Gespecialiseerde training voor het implementeren en beheren van Internet of Things (IoT) oplossingen met Azure IoT Hub, IoT Central en gerelateerde services. Leer IoT oplossingen ontwikkelen, deployen en onderhouden op schaal.',
       
@@ -501,7 +497,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Comprehensive training on Azure Virtual Desktop (AVD) covering deployment, configuration, and management of virtual desktop infrastructure in the cloud. Learn to deliver Windows desktops and applications to any device.',
       
@@ -621,7 +616,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Uitgebreide training over Azure Virtual Desktop (AVD) die deployment, configuratie en beheer van virtual desktop infrastructuur in de cloud behandelt. Leer Windows desktops en applicaties leveren naar elk apparaat.',
       
@@ -745,7 +739,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Comprehensive training for AI engineers building, managing, and deploying AI solutions on Azure. Learn to leverage Azure AI services, implement computer vision, natural language processing, generative AI, and create intelligent agents.',
       
@@ -877,7 +870,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Machine Learning',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Uitgebreide training voor AI engineers die AI oplossingen bouwen, beheren en implementeren op Azure. Leer Azure AI services gebruiken, computer vision implementeren, natural language processing, generative AI en intelligente agents creëren.',
       
@@ -1012,7 +1004,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Copilot',
       level: 'Beginner',
       duration: { days: 1, format: 'days' },
-      price: { amount: 695, currency: 'EUR' },
       
       overview: 'Foundation course for administrators managing Microsoft 365 Copilot and custom agents. Learn essential administrative tasks, security fundamentals, data protection, and governance for AI-powered productivity tools.',
       
@@ -1124,7 +1115,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Copilot',
       level: 'Beginner',
       duration: { days: 1, format: 'days' },
-      price: { amount: 695, currency: 'EUR' },
       
       overview: 'Basiscursus voor beheerders die Microsoft 365 Copilot en aangepaste agents beheren. Leer essentiële administratieve taken, beveiligingsfundamenten, gegevensbescherming en governance voor AI-gestuurde productiviteitstools.',
       
@@ -1239,7 +1229,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Copilot',
       level: 'Intermediate',
       duration: { days: 2, format: 'days' },
-      price: { amount: 895, currency: 'EUR' },
       
       overview: 'Learn to leverage AI-powered productivity tools in daily work without coding. Master prompt engineering, agent creation, and effective use of Microsoft 365 Copilot across apps to enhance business processes and decision-making.',
       
@@ -1361,7 +1350,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Copilot',
       level: 'Intermediate',
       duration: { days: 2, format: 'days' },
-      price: { amount: 895, currency: 'EUR' },
       
       overview: 'Leer AI-gestuurde productiviteitstools te gebruiken in dagelijks werk zonder te programmeren. Beheers prompt engineering, agent creatie en effectief gebruik van Microsoft 365 Copilot in apps om bedrijfsprocessen en besluitvorming te verbeteren.',
       
@@ -1486,7 +1474,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Leadership',
       level: 'Advanced',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1295, currency: 'EUR' },
       
       overview: 'Strategic leadership program for executives and managers driving AI adoption. Learn to identify AI opportunities, align investments with business goals, establish governance frameworks, and lead successful AI transformation across organizations.',
       
@@ -1625,7 +1612,6 @@ export const azureSpecializedCourses: TrainingTranslations = {
       category: 'AI & Leadership',
       level: 'Advanced',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1295, currency: 'EUR' },
       
       overview: 'Strategisch leiderschapsprogramma voor executives en managers die AI-adoptie aansturen. Leer AI-kansen te identificeren, investeringen af te stemmen op bedrijfsdoelen, governance frameworks te vestigen en succesvolle AI-transformatie te leiden in organisaties.',
       

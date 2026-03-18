@@ -12,7 +12,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Advanced training focusing on configuring and managing Windows Server hybrid infrastructure. Learn to implement and manage on-premises and hybrid solutions such as identity, management, compute, networking, and storage.',
       
@@ -134,7 +133,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Geavanceerde training gericht op het configureren en beheren van Windows Server hybride infrastructuur. Leer on-premises en hybride oplossingen implementeren en beheren zoals identity, management, compute, networking en storage.',
       
@@ -257,7 +255,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1295, currency: 'EUR' },
       
       overview: 'Comprehensive training for administering Windows Server workloads in hybrid environments. Learn to manage Windows Server workloads using on-premises, hybrid, and cloud technologies.',
       
@@ -377,7 +374,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1295, currency: 'EUR' },
       
       overview: 'Uitgebreide training voor het administreren van Windows Server workloads in hybride omgevingen. Leer Windows Server workloads beheren met on-premises, hybride en cloud technologieën.',
       
@@ -500,7 +496,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Advanced',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1495, currency: 'EUR' },
       
       overview: 'Specialized training for Azure Stack Hub operators. Learn to provide cloud services from your own datacenter using Azure Stack Hub. Cover deployment, configuration, management, and troubleshooting of Azure Stack Hub infrastructure.',
       
@@ -621,7 +616,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Advanced',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1495, currency: 'EUR' },
       
       overview: 'Gespecialiseerde training voor Azure Stack Hub operators. Leer cloud services leveren vanuit je eigen datacenter met Azure Stack Hub. Behandelt deployment, configuratie, management en troubleshooting van Azure Stack Hub infrastructuur.',
       
@@ -744,7 +738,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Comprehensive training for Azure support engineers and professionals who troubleshoot Azure solutions. Learn advanced troubleshooting techniques, support methodologies, and tools for resolving complex Azure issues.',
       
@@ -866,7 +859,6 @@ export const infrastructureCourses: TrainingTranslations = {
       category: 'Infrastructure',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Uitgebreide training voor Azure support engineers en professionals die Azure oplossingen troubleshooten. Leer geavanceerde troubleshooting technieken, support methodologieën en tools voor het oplossen van complexe Azure issues.',
       

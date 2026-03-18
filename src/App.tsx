@@ -1,6 +1,7 @@
 import { AzureExcellencePage } from "@/pages/AzureExcellencePage";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -36,6 +37,7 @@ function App() {
     <LanguageProvider>
       <div className="min-h-screen relative overflow-hidden bg-background">
         <div className="relative z-20">
+          <ScrollToTop />
           <Header />
           <main className="bg-background min-h-screen">
             <Routes>
