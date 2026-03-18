@@ -9,10 +9,12 @@ interface ServiceHeroProps {
     icon: Icon;
     title: string;
     description: string;
+    image: string;
+    imageCredit?: string;
     language: 'en' | 'nl';
 }
 
-export function ServiceHero({ icon: IconComponent, title, description, language }: ServiceHeroProps) {
+export function ServiceHero({ icon: IconComponent, title, description, image, imageCredit, language }: ServiceHeroProps) {
     const navigate = useNavigate();
 
     return (
@@ -22,6 +24,21 @@ export function ServiceHero({ icon: IconComponent, title, description, language 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
         >
+            {/* Hero Image */}
+            <div className="relative rounded-2xl overflow-hidden aspect-[16/9]">
+                <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                {imageCredit && (
+                    <span className="absolute bottom-2 right-3 text-[10px] text-white/60">
+                        {imageCredit}
+                    </span>
+                )}
+            </div>
+
             {/* Icon and Badge Row */}
             <div className="flex items-center gap-4">
                 <div className="p-4 bg-neutral-500/10 dark:bg-white/10 rounded-2xl border border-border">
