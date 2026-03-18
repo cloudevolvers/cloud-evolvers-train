@@ -7,6 +7,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import TrainingConsultationForm from '@/components/TrainingConsultationForm';
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { SEO, PAGE_SEO } from '@/components/SEO';
+import { PageHeroBg } from '@/components/PageHeroBg';
 
 export default function ContactPage() {
   const [searchParams] = useSearchParams();
@@ -71,6 +72,7 @@ export default function ContactPage() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-neutral-500/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-neutral-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
       </div>
+      <PageHeroBg />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
 
@@ -80,9 +82,9 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-neutral-500/5 dark:bg-white/5 text-muted-foreground text-xs font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-neutral-500/5 dark:bg-white/5 text-muted-foreground text-xs font-medium mb-8">
               <Sparkle className="w-4 h-4" />
               {contactT.letsConnect || "Let's Connect"}
             </div>
@@ -137,7 +139,7 @@ export default function ContactPage() {
                             setTimeout(() => setPhoneCopied(false), 2000);
                           }}
                           className="p-1 rounded-md hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
-                          title={contactT.copyPhone || 'Copy phone number'}
+                          title={(contactT as Record<string, string>).copyPhone || 'Copy phone number'}
                         >
                           {phoneCopied ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
                         </button>

@@ -12,7 +12,6 @@ export const securityComplianceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Comprehensive security training focusing on implementing security controls and threat protection, managing identity and access, and securing data, applications, and networks in Azure.',
       
@@ -123,7 +122,6 @@ export const securityComplianceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Uitgebreide security training gericht op het implementeren van security controls en threat protection, beheren van identity en access, en beveiligen van data, applicaties en netwerken in Azure.',
       
@@ -236,7 +234,6 @@ export const securityComplianceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Beginner',
       duration: { days: 2, format: 'days' },
-      price: { amount: 895, currency: 'EUR' },
       
       overview: 'Fundamental training covering security, compliance, and identity concepts and solutions across Microsoft cloud services. Perfect for business users, IT professionals, and students new to security concepts.',
       
@@ -346,7 +343,6 @@ export const securityComplianceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Beginner',
       duration: { days: 2, format: 'days' },
-      price: { amount: 895, currency: 'EUR' },
       
       overview: 'Fundamentele training die security, compliance en identity concepten en oplossingen in Microsoft cloud services behandelt. Perfect voor business gebruikers, IT professionals en iedereen die nieuw is bij security concepten.',
       
@@ -459,7 +455,6 @@ export const securityComplianceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Comprehensive training for security professionals who mitigate organizational risk by rapidly remediating active attacks, advising on threat protection improvements, and investigating threats across cloud and on-premises environments.',
       
@@ -593,7 +588,6 @@ export const securityComplianceCourses: TrainingTranslations = {
       category: 'Security & Compliance',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Uitgebreide training voor security professionals die organisatierisico\'s verminderen door snel actieve aanvallen te verhelpen, te adviseren over verbeteringen in threat protection, en bedreigingen te onderzoeken in cloud en on-premises omgevingen.',
       

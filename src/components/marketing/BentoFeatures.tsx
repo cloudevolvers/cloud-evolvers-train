@@ -62,9 +62,9 @@ export function BentoFeatures() {
     const exploreLabel = b?.explore || "Explore";
 
     return (
-        <section className="relative z-10 bg-background py-32">
+        <section className="relative z-10 border-t border-border/40 bg-background py-28 sm:py-32 lg:py-36">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div className="mb-20 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
                         <h2 className="font-display text-3xl font-semibold text-foreground md:text-5xl">
                             {b?.title || "Choose the training track that matches the work in front of you."}
@@ -178,9 +178,9 @@ export function BentoFeatures() {
                     </div>
                 </div>
 
-                    <Link
-                        to="/about"
-                        className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 dark:hover:border-white/20 sm:p-8"
+                <Link
+                    to="/about"
+                    className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 dark:hover:border-white/20 sm:p-8"
                 >
                     <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
                         <div className="overflow-hidden rounded-[1.5rem] bg-neutral-950">

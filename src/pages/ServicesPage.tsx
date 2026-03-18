@@ -12,6 +12,7 @@ import {
 } from '@phosphor-icons/react';
 import { getServiceIcon } from '@/utils/service-icons';
 import { SEO, PAGE_SEO } from '@/components/SEO';
+import { PageHeroBg } from '@/components/PageHeroBg';
 
 export default function ServicesPage() {
   const { t, language } = useTranslations();
@@ -20,9 +21,9 @@ export default function ServicesPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen pt-28 md:pt-32 bg-background">
+    <div className="relative min-h-screen pt-28 md:pt-32 bg-background">
       <SEO {...PAGE_SEO.services} />
-
+      <PageHeroBg />
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
