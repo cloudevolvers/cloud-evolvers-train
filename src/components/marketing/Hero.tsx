@@ -40,7 +40,7 @@ export function Hero() {
                             {marketing?.headline1 || "Microsoft training for admins, architects, and platform teams."}
                         </h1>
 
-                        <p className="mt-8 max-w-lg border-l-2 border-white/10 pl-5 text-lg leading-relaxed text-slate-400">
+                        <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate-400">
                             {marketing?.description || "In-company and remote training in Dutch or English, with labs, architecture decisions, and operational lessons drawn from real Microsoft cloud work."}
                         </p>
 

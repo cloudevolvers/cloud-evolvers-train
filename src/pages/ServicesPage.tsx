@@ -28,11 +28,12 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-[120rem] mx-auto">
-            <div className="text-center mb-14 lg:mb-18">
+            <div className="mb-14 lg:mb-18">
               <h1 className="text-foreground font-bold mb-6 leading-tight text-3xl md:text-4xl lg:text-5xl">
                 {sp?.title || 'Our Services'}
               </h1>
-              <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed text-lg">
+              <div className="mb-6 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
+              <p className="text-muted-foreground max-w-3xl leading-relaxed text-lg">
                 {sp?.subtitle || 'Comprehensive cloud engineering and consulting services to help your organization succeed in the digital transformation journey.'}
               </p>
             </div>

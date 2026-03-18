@@ -82,7 +82,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="mb-20"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-neutral-500/5 dark:bg-white/5 text-muted-foreground text-xs font-medium mb-8">
               <Sparkle className="w-4 h-4" />
@@ -91,7 +91,8 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-foreground">
               {contactT.title}
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            <div className="mb-6 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
+            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl font-light leading-relaxed">
               {contactT.pageDescription || "Whether you need enterprise training, consulting, or just have a question, our team is ready to help."}
             </p>
           </motion.div>
