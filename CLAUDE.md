@@ -50,6 +50,13 @@ See `.env.example` for the expected environment variables. The actual `.env` fil
 5. **NO HARDCODED PRICES**: All pricing comes from D1 database via the API. NEVER put prices in JSON files, TypeScript constants, or frontend code. Update prices via `/admin/bookings` or the training sessions API. If a course has no scheduled session, show "Contact us" — never a stale number.
 6. **Promotions via DB only**: Promotional pricing is managed through the admin dashboard or API by updating the `price` field on training sessions. No hardcoded promotional discount logic in frontend code.
 
+## Code Quality
+
+- **Clean up as you go**: When touching a file, improve code you find — remove dead imports, unused variables, duplicated logic, stale comments. Leave it better than you found it.
+- **No dead code**: Delete unused files, components, types, and exports. Don't comment out code "for later" — git has history.
+- **Single source of truth**: Don't duplicate data across JSON files, TypeScript constants, and the database. Pick one source and derive everything from it.
+- **No AI slop**: Write authentic copy. Avoid generic phrases like "empower your journey" or "unlock your potential". Write like a real person.
+
 ## Tech Stack
 - Frontend: React 18 + TypeScript + Vite
 - Styling: Tailwind CSS + shadcn/ui
