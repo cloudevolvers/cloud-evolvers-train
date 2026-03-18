@@ -17,8 +17,6 @@ import ContactPage from "@/pages/ContactPage";
 import BookingDashboard from '@/components/admin/BookingDashboard';
 import ImageManagementPage from "@/pages/ImageManagementPage";
 import { NotFound } from "@/components/NotFound";
-import { SEO, PAGE_SEO } from "@/components/SEO";
-import { FloatingContactButton } from "@/components/ui/FloatingContactButton";
 import {
   CloudManagementPage,
   AzureMonitoringPage,
@@ -33,14 +31,10 @@ import {
 
 import HomePage from "@/pages/HomePage";
 
-
-
 function App() {
-  // Test comment for PR preview deployment
   return (
     <LanguageProvider>
       <div className="min-h-screen relative overflow-hidden bg-background">
-        {/* Main content */}
         <div className="relative z-20">
           <Header />
           <main className="bg-background min-h-screen">
@@ -78,8 +72,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-          {/* Floating Quick Message Button - sits next to WhatsApp widget */}
-          <FloatingContactButton />
         </div>
       </div>
     </LanguageProvider>
