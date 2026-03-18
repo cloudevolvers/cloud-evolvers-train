@@ -30,14 +30,27 @@ export default {
     }
   },
   marketing: {
-    headline1: "Master the Cloud.",
-    headline2: "Every Discipline.",
-    description: "The enterprise-grade training platform for cloud security, architecture, engineering, and administration. Hands-on labs, real-world simulations, and a direct path to Microsoft Azure mastery.",
-    startTraining: "Explore Trainings",
-    viewPathways: "Contact Us",
+    eyebrow: "Microsoft training led by Yaïr Knijn",
+    headline1: "Microsoft training for admins, architects, and platform teams.",
+    headline2: "Azure, Microsoft 365, and real production decisions.",
+    description: "In-company and remote training in Dutch or English, with labs, architecture decisions, and operational lessons drawn from real Microsoft cloud work.",
+    startTraining: "Browse training tracks",
+    viewPathways: "Plan a team session",
     mct: "Microsoft Certified Trainer",
-    instantAccess: "Instant Access",
-    realWorld: "Real World Application First",
-    certification: "Certification"
+    mctDetail: "Training grounded in real Azure architecture and operations.",
+    delivery: "Dutch or English delivery",
+    deliveryDetail: "Remote, on-site, and in-company formats for teams across the Netherlands.",
+    realWorld: "Real production examples",
+    realWorldDetail: "Landing zones, governance, security, and operations woven into the coursework.",
+    founderLabel: "Lead trainer",
+    founderRole: "Microsoft Certified Trainer, Azure architect, and hands-on consultant.",
+    proofLabel: "What companies ask for",
+    proofOne: "Azure and Microsoft 365 courses tied to the roles teams already have.",
+    proofTwo: "Workshops that explain governance, identity, networking, and security through real operating scenarios.",
+    founderQuote: "I don’t teach Azure as a catalogue. I teach the decisions teams need to make when they actually run it.",
+    formatLabel: "Formats",
+    formatValue: "In-company workshops, scheduled cohorts, and private coaching",
+    audienceLabel: "Best fit",
+    audienceValue: "Teams rolling out Azure, Microsoft 365, governance, operations, security, or architecture practices"
   }
 };
