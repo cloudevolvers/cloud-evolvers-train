@@ -1,7 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import {
   Certificate,
   Cloud,
@@ -83,10 +82,10 @@ export function Header() {
       <motion.header
         className={`
           fixed top-0 left-0 right-0 z-[9999]
-          transition-all duration-500 ease-out
+          transition-all duration-300 ease-out
           ${isScrolled
-            ? 'py-2 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl shadow-lg shadow-slate-200/20 dark:shadow-black/30 border-b border-slate-200/50 dark:border-neutral-800/50'
-            : 'py-4 bg-white/60 dark:bg-neutral-950/60 backdrop-blur-md border-b border-slate-200/30 dark:border-neutral-800/30'
+            ? 'py-1.5 bg-white/82 dark:bg-neutral-950/82 backdrop-blur-xl shadow-[0_10px_30px_rgba(15,23,42,0.08)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.28)] border-b border-slate-200/45 dark:border-neutral-800/55'
+            : 'py-2.5 bg-white/42 dark:bg-neutral-950/48 backdrop-blur-lg border-b border-slate-200/20 dark:border-neutral-800/30'
           }
         `}
         initial={{ y: -100, opacity: 0 }}
@@ -106,19 +105,19 @@ export function Header() {
               <img
                 src="/cloudevolvers-hero-logo.png"
                 alt="Cloud Evolvers"
-                className="h-9 sm:h-10 w-auto rounded-md"
+                className="h-8 w-auto rounded-md sm:h-9"
               />
               <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-slate-700 dark:group-hover:text-white/70 transition-colors duration-200">
+                <span className="text-base font-bold tracking-tight text-slate-900 transition-colors duration-200 group-hover:text-slate-700 dark:text-white dark:group-hover:text-white/70 sm:text-[1.35rem]">
                   Cloud Evolvers
                 </span>
-                <span className="text-[10px] sm:text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wide hidden sm:block">
-                  Azure & Microsoft Training
+                <span className="hidden text-[10px] font-medium tracking-[0.14em] text-slate-500 dark:text-slate-400 sm:block">
+                  Microsoft training
                 </span>
               </div>
 
               {/* MCT Badge - Desktop only */}
-              <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200/50 dark:border-emerald-500/20">
+              <div className="hidden xl:flex items-center gap-1.5 rounded-full border border-emerald-200/40 bg-emerald-50/80 px-2 py-1 dark:border-emerald-500/15 dark:bg-emerald-500/8">
                 <Certificate size={12} weight="fill" className="text-emerald-600 dark:text-emerald-400" />
                 <span className="text-[10px] font-semibold text-emerald-700 dark:text-emerald-400 tracking-wide">
                   MCT
@@ -128,7 +127,7 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center">
-              <div className="flex items-center gap-1 p-1 rounded-full bg-slate-100/80 dark:bg-neutral-800/50 backdrop-blur-sm">
+              <div className="flex items-center gap-0.5 rounded-full border border-slate-200/55 bg-white/55 px-1.5 py-1 shadow-sm backdrop-blur-md dark:border-white/8 dark:bg-white/[0.04]">
                 {navigationItems.map((item) => {
                   const isActive = location.pathname === item.href ||
                     (item.href !== '/' && location.pathname.startsWith(item.href));
@@ -138,11 +137,11 @@ export function Header() {
                       key={item.href}
                       to={item.href}
                       className={`
-                        relative px-4 py-2 rounded-full text-sm font-medium
+                        relative px-3 py-1.5 rounded-full text-[13px] font-medium
                         transition-all duration-200
                         ${isActive
                           ? 'text-white dark:text-black'
-                          : 'text-slate-600 dark:text-neutral-300 hover:text-slate-900 dark:hover:text-white'
+                          : 'text-slate-500 dark:text-neutral-300 hover:text-slate-900 dark:hover:text-white'
                         }
                       `}
                     >
@@ -164,24 +163,24 @@ export function Header() {
             </nav>
 
             {/* Controls */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               {/* Theme Toggle - Desktop */}
               <div className="hidden sm:block">
                 <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
               </div>
 
               {/* Separator */}
-              <div className="hidden sm:block w-px h-6 bg-slate-200 dark:bg-neutral-700" />
+              <div className="hidden sm:block w-px h-5 bg-slate-200 dark:bg-neutral-700" />
 
               {/* Language Switcher - Desktop */}
-              <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100 dark:bg-neutral-800">
+              <div className="hidden sm:flex items-center gap-0.5 rounded-full border border-slate-200/70 bg-white/70 p-0.5 dark:border-white/10 dark:bg-white/[0.05]">
                 <button
                   onClick={() => setLanguage('en')}
                   className={`
-                    flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold
+                    flex items-center gap-1 rounded-full px-2 py-1.5 text-[11px] font-semibold
                     transition-all duration-200
                     ${language === 'en'
-                      ? 'bg-white dark:bg-neutral-700 text-slate-900 dark:text-white shadow-sm'
+                      ? 'bg-slate-900 text-white shadow-sm dark:bg-white dark:text-slate-950'
                       : 'text-slate-500 dark:text-neutral-400 hover:text-slate-700 dark:hover:text-neutral-200'
                     }
                   `}
@@ -192,10 +191,10 @@ export function Header() {
                 <button
                   onClick={() => setLanguage('nl')}
                   className={`
-                    flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold
+                    flex items-center gap-1 rounded-full px-2 py-1.5 text-[11px] font-semibold
                     transition-all duration-200
                     ${language === 'nl'
-                      ? 'bg-white dark:bg-neutral-700 text-slate-900 dark:text-white shadow-sm'
+                      ? 'bg-slate-900 text-white shadow-sm dark:bg-white dark:text-slate-950'
                       : 'text-slate-500 dark:text-neutral-400 hover:text-slate-700 dark:hover:text-neutral-200'
                     }
                   `}
@@ -211,7 +210,7 @@ export function Header() {
                   e.stopPropagation();
                   setIsMobileMenuOpen(!isMobileMenuOpen);
                 }}
-                className="lg:hidden p-2 rounded-full bg-slate-100 dark:bg-neutral-800 hover:bg-slate-200 dark:hover:bg-neutral-700 transition-colors duration-200"
+                className="lg:hidden rounded-full border border-slate-200/70 bg-white/70 p-2 hover:bg-slate-100 dark:border-white/10 dark:bg-white/[0.05] dark:hover:bg-white/[0.09] transition-colors duration-200"
                 aria-label="Toggle menu"
               >
                 <AnimatePresence mode="wait">

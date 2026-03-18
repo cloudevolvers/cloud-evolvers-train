@@ -48,7 +48,7 @@ export function Hero() {
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </Link>
-                            <Link to="/contact" className="w-full sm:w-auto">
+                            <Link to="/contact#contact-form" className="w-full sm:w-auto">
                                 <Button
                                     size="lg"
                                     variant="outline"

@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { CheckCircle, Users, Calendar, ChatCircle, EnvelopeSimple, Phone, MapPin, ShareNetwork, Sparkle, Copy, Check } from '@phosphor-icons/react';
 import { useLanguage } from '@/hooks/use-language';
 import { useTranslation } from '@/hooks/use-translation';
@@ -10,6 +10,7 @@ import { SEO, PAGE_SEO } from '@/components/SEO';
 
 export default function ContactPage() {
   const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [language] = useLanguage();
   const t = useTranslation();
   const [phoneCopied, setPhoneCopied] = useState(false);
@@ -43,6 +44,35 @@ export default function ContactPage() {
   // Get service parameter from URL if provided
   const serviceParam = searchParams.get('service');
   const trainingTitle = serviceParam || (contactT.defaultServiceTitle || 'Azure Services Contact');
+
+  useEffect(() => {
+    if (location.hash !== '#contact-form') {
+      return;
+    }
+
+    const element = document.getElementById('contact-form');
+    if (!element) {
+      return;
+    }
+
+    const scrollToForm = () => {
+      const headerOffset = 112;
+      const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+      window.scrollTo({
+        top: Math.max(elementTop - headerOffset, 0),
+        behavior: 'smooth',
+      });
+    };
+
+    const initialFrame = window.requestAnimationFrame(scrollToForm);
+    const delayedScroll = window.setTimeout(scrollToForm, 220);
+
+    return () => {
+      window.cancelAnimationFrame(initialFrame);
+      window.clearTimeout(delayedScroll);
+    };
+  }, [location.hash]);
 
   const benefits = [
     {
@@ -191,10 +221,11 @@ export default function ContactPage() {
             {/* Right Column: Form */}
             <motion.div
               ref={formRef}
+              id="contact-form"
               initial={{ opacity: 0, x: 20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="lg:col-span-7"
+              className="lg:col-span-7 scroll-mt-28"
             >
               <div className="rounded-2xl border border-border bg-card shadow-xl overflow-hidden relative">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-400 via-neutral-500 to-neutral-600 dark:from-neutral-600 dark:via-neutral-500 dark:to-neutral-400" />

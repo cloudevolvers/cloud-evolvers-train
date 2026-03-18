@@ -157,7 +157,7 @@ export function BentoFeatures() {
                             image="/training-categories/microsoft-365-administrator.jpg"
                         />
                         <Link
-                            to="/contact"
+                            to="/contact#contact-form"
                             className="group rounded-[2rem] border border-border bg-[linear-gradient(160deg,rgba(255,255,255,0.95),rgba(244,246,250,0.95))] p-6 transition-colors hover:border-neutral-400 dark:bg-[linear-gradient(160deg,rgba(17,24,39,0.96),rgba(11,18,32,0.96))] dark:hover:border-white/20"
                         >
                             <div className="flex h-full flex-col">
