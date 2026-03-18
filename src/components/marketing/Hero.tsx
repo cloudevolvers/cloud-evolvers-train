@@ -9,27 +9,30 @@ export function Hero() {
     const marketing = t.hero?.marketing;
 
     return (
-        <section className="relative overflow-hidden bg-[#050816] pt-32 text-white sm:pt-36 lg:pt-28">
+        <section className="relative overflow-hidden bg-[#050816] text-white">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(35,82,67,0.22),transparent_50%),radial-gradient(ellipse_at_80%_60%,rgba(38,79,128,0.15),transparent_50%)]" />
 
-            <div className="container relative z-10 mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8 lg:pb-28">
-                <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+            <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                {/* Top breathing room — clears the fixed header */}
+                <div className="h-28 sm:h-32 lg:h-28" />
+
+                <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
                     {/* Copy */}
-                    <div className="flex flex-col items-start pt-8 lg:pt-12">
+                    <div className="flex flex-col items-start">
                         <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/8 px-3.5 py-1.5 text-xs font-medium tracking-wide text-emerald-300">
                             <ShieldCheck className="h-3.5 w-3.5" />
                             {marketing?.eyebrow || "Microsoft training led by Yaïr Knijn"}
                         </div>
 
-                        <h1 className="font-display mt-14 max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+                        <h1 className="font-display mt-10 max-w-xl text-4xl font-semibold tracking-tight sm:mt-12 sm:text-5xl lg:mt-14 lg:text-[3.5rem] lg:leading-[1.1]">
                             {marketing?.headline1 || "Microsoft training for admins, architects, and platform teams."}
                         </h1>
 
-                        <p className="mt-8 max-w-lg text-lg leading-relaxed text-slate-400">
+                        <p className="mt-8 max-w-lg text-lg leading-relaxed text-slate-400 sm:mt-10">
                             {marketing?.description || "In-company and remote training in Dutch or English, with labs, architecture decisions, and operational lessons drawn from real Microsoft cloud work."}
                         </p>
 
-                        <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                        <div className="mt-10 flex w-full flex-col gap-3 sm:mt-12 sm:w-auto sm:flex-row">
                             <Link to="/training" className="w-full sm:w-auto">
                                 <Button
                                     size="lg"
@@ -50,7 +53,7 @@ export function Hero() {
                             </Link>
                         </div>
 
-                        <TerminalWindow className="mt-14 w-full max-w-sm" />
+                        <TerminalWindow className="mt-16 w-full max-w-sm sm:mt-20" />
                     </div>
 
                     {/* Photo */}
@@ -73,6 +76,9 @@ export function Hero() {
                         </div>
                     </div>
                 </div>
+
+                {/* Bottom breathing room */}
+                <div className="h-24 sm:h-28 lg:h-32" />
             </div>
         </section>
     );
