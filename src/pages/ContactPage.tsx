@@ -173,7 +173,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-bold text-foreground text-lg">{contactT.microsoftCertified}</div>
-                    <div className="text-sm text-muted-foreground">{contactT.officialPartner || 'Official Training Partner'}</div>
+                    <div className="text-sm text-muted-foreground">{contactT.mctTrainers || 'Elite Certified Experts'}</div>
                   </div>
                 </div>
                 <div className="space-y-4 pl-2">
