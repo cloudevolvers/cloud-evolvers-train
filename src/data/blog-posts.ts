@@ -42,7 +42,17 @@ export {
   securityCopilotGaPost,
   copilotPlusPcsPost,
   azureDeploymentEnvironmentsPost,
-  
+  scimProvisioningPost,
+  samlSsoConfigurationPost,
+  claimsMappingPoliciesPost,
+  workloadIdentityFederationPost,
+  continuousAccessEvaluationPost,
+  conditionalAccessDesignPost,
+  crossTenantAccessPost,
+  entraPermissionsManagementPost,
+  oidcVsSamlMigrationPost,
+  entraExternalIdPost,
+
   // Combined posts array
   blogPosts,
   

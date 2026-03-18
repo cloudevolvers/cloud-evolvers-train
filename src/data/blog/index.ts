@@ -33,6 +33,16 @@ import { windows365LinkPost } from './posts/windows-365-link';
 import { securityCopilotGaPost } from './posts/security-copilot-ga';
 import { copilotPlusPcsPost } from './posts/copilot-plus-pcs';
 import { azureDeploymentEnvironmentsPost } from './posts/azure-deployment-environments';
+import { scimProvisioningPost } from './posts/scim-provisioning';
+import { samlSsoConfigurationPost } from './posts/saml-sso-configuration';
+import { claimsMappingPoliciesPost } from './posts/claims-mapping-policies';
+import { workloadIdentityFederationPost } from './posts/workload-identity-federation';
+import { continuousAccessEvaluationPost } from './posts/continuous-access-evaluation';
+import { conditionalAccessDesignPost } from './posts/conditional-access-design';
+import { crossTenantAccessPost } from './posts/cross-tenant-access';
+import { entraPermissionsManagementPost } from './posts/entra-permissions-management';
+import { oidcVsSamlMigrationPost } from './posts/oidc-vs-saml-migration';
+import { entraExternalIdPost } from './posts/entra-external-id';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -66,10 +76,30 @@ export {
   securityCopilotGaPost,
   copilotPlusPcsPost,
   azureDeploymentEnvironmentsPost,
+  scimProvisioningPost,
+  samlSsoConfigurationPost,
+  claimsMappingPoliciesPost,
+  workloadIdentityFederationPost,
+  continuousAccessEvaluationPost,
+  conditionalAccessDesignPost,
+  crossTenantAccessPost,
+  entraPermissionsManagementPost,
+  oidcVsSamlMigrationPost,
+  entraExternalIdPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
 export const blogPosts: BlogPost[] = [
+  scimProvisioningPost,
+  samlSsoConfigurationPost,
+  claimsMappingPoliciesPost,
+  workloadIdentityFederationPost,
+  continuousAccessEvaluationPost,
+  conditionalAccessDesignPost,
+  crossTenantAccessPost,
+  entraPermissionsManagementPost,
+  oidcVsSamlMigrationPost,
+  entraExternalIdPost,
   azureContainerAppsSessionsPost,
   windows365LinkPost,
   securityCopilotGaPost,
