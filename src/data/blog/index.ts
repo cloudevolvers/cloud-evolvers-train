@@ -23,6 +23,16 @@ import { mandatoryMfaEnforcementPost } from './posts/mandatory-mfa-enforcement';
 import { aksNetworkPoliciesPost } from './posts/aks-network-policies';
 import { flexConsumptionPost } from './posts/flex-consumption-functions';
 import { responsibleAiPost } from './posts/responsible-ai-azure-openai';
+import { azureAiFoundryPost } from './posts/azure-ai-foundry';
+import { githubCopilotAgentModePost } from './posts/github-copilot-agent-mode';
+import { microsoftFabricPost } from './posts/microsoft-fabric';
+import { entraLifecycleWorkflowsPost } from './posts/entra-lifecycle-workflows';
+import { azureVerifiedModulesPost } from './posts/azure-verified-modules';
+import { azureContainerAppsSessionsPost } from './posts/azure-container-apps-sessions';
+import { windows365LinkPost } from './posts/windows-365-link';
+import { securityCopilotGaPost } from './posts/security-copilot-ga';
+import { copilotPlusPcsPost } from './posts/copilot-plus-pcs';
+import { azureDeploymentEnvironmentsPost } from './posts/azure-deployment-environments';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -46,10 +56,30 @@ export {
   aksNetworkPoliciesPost,
   flexConsumptionPost,
   responsibleAiPost,
+  azureAiFoundryPost,
+  githubCopilotAgentModePost,
+  microsoftFabricPost,
+  entraLifecycleWorkflowsPost,
+  azureVerifiedModulesPost,
+  azureContainerAppsSessionsPost,
+  windows365LinkPost,
+  securityCopilotGaPost,
+  copilotPlusPcsPost,
+  azureDeploymentEnvironmentsPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
 export const blogPosts: BlogPost[] = [
+  azureContainerAppsSessionsPost,
+  windows365LinkPost,
+  securityCopilotGaPost,
+  copilotPlusPcsPost,
+  azureDeploymentEnvironmentsPost,
+  azureAiFoundryPost,
+  githubCopilotAgentModePost,
+  microsoftFabricPost,
+  entraLifecycleWorkflowsPost,
+  azureVerifiedModulesPost,
   aksNetworkPoliciesPost,
   flexConsumptionPost,
   responsibleAiPost,
