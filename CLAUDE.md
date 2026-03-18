@@ -41,6 +41,13 @@ See `.env.example` for the expected environment variables. The actual `.env` fil
 - **Always use git worktrees** for feature work — never commit directly on `master`
 - PR flow: `feature/*` → squash merge to `master`
 
+## Deployment Verification (CRITICAL)
+
+**Always inspect end-to-end when deploying.** After pushing or merging:
+1. **Monitor the CI/CD run** — watch `gh run watch` or check the Cloudflare Pages dashboard until the deploy completes
+2. **Inspect the live page** — open the deployed URL and verify the changes are visible and working correctly
+3. **Never assume a deploy succeeded** — always confirm visually in the browser before marking work as done
+
 ## Critical Rules
 
 1. **NO FAKE DATA**: Never use Math.random() or generated statistics
