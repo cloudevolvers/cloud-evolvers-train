@@ -64,7 +64,7 @@ export function BentoFeatures() {
     return (
         <section className="relative z-10 bg-background py-32">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mb-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
                         <h2 className="font-display text-3xl font-semibold text-foreground md:text-5xl">
                             {b?.title || "Choose the training track that matches the work in front of you."}

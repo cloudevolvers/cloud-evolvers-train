@@ -86,7 +86,7 @@ export function Header() {
           transition-all duration-500 ease-out
           ${isScrolled
             ? 'py-2 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl shadow-lg shadow-slate-200/20 dark:shadow-black/30 border-b border-slate-200/50 dark:border-neutral-800/50'
-            : 'py-4 bg-white/60 dark:bg-neutral-950/60 backdrop-blur-md border-b border-slate-200/30 dark:border-neutral-800/30'
+            : 'py-4 bg-white/50 dark:bg-neutral-950/40 backdrop-blur-md border-b border-transparent'
           }
         `}
         initial={{ y: -100, opacity: 0 }}
@@ -117,13 +117,6 @@ export function Header() {
                 </span>
               </div>
 
-              {/* MCT Badge - Desktop only */}
-              <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200/50 dark:border-emerald-500/20">
-                <Certificate size={12} weight="fill" className="text-emerald-600 dark:text-emerald-400" />
-                <span className="text-[10px] font-semibold text-emerald-700 dark:text-emerald-400 tracking-wide">
-                  MCT
-                </span>
-              </div>
             </Link>
 
             {/* Desktop Navigation */}
