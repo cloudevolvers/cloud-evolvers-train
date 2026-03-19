@@ -14,6 +14,13 @@ export interface BlogSection {
   code?: {
     language: string;
     code: string;
+    title?: string;
+    collapsed?: boolean;
+  };
+  callout?: {
+    type: 'info' | 'warning';
+    title: string;
+    content: string;
   };
   image?: string;
   subsections?: BlogSubsection[];
@@ -68,6 +75,13 @@ export interface LocalizedBlogPost {
       code?: {
         language: string;
         code: string;
+        title?: string;
+        collapsed?: boolean;
+      };
+      callout?: {
+        type: 'info' | 'warning';
+        title: string;
+        content: string;
       };
       image?: string;
       subsections?: Array<{
