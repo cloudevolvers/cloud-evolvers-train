@@ -63,6 +63,7 @@ import { azureFilesNfsEncryptionPost } from './posts/azure-files-nfs-encryption'
 import { azureArcLandingZonesPost } from './posts/azure-arc-landing-zones';
 import { microsoftFabricAiMarch2026Post } from './posts/microsoft-fabric-ai-march-2026';
 import { agenticAiToolsWindowsPost } from './posts/agentic-ai-tools-windows';
+import { exchangeRbacAccessPoliciesPost } from './posts/exchange-rbac-access-policies';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -126,6 +127,7 @@ export {
   azureArcLandingZonesPost,
   microsoftFabricAiMarch2026Post,
   agenticAiToolsWindowsPost,
+  exchangeRbacAccessPoliciesPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
@@ -188,6 +190,7 @@ export const blogPosts: BlogPost[] = [
   azureArcLandingZonesPost,
   microsoftFabricAiMarch2026Post,
   agenticAiToolsWindowsPost,
+  exchangeRbacAccessPoliciesPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Helper function to get localized text
