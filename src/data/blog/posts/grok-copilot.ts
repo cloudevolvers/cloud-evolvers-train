@@ -25,8 +25,8 @@ export const grokCopilotPost: BlogPost = {
   readTime: 5,
   content: {
     introduction: {
-      en: "Grok, GitHub's new code search and navigation tool, is now available in public preview for all GitHub Copilot users! Grok is a next-generation code search and navigation experience, designed to help developers find, understand, and work with code faster than ever before.",
-      nl: "Grok, GitHub's nieuwe code zoek- en navigatietool, is nu beschikbaar in openbare preview voor alle GitHub Copilot gebruikers! Grok is een next-generation code zoek- en navigatie-ervaring, ontworpen om ontwikkelaars te helpen code sneller dan ooit te vinden, begrijpen en ermee te werken."
+      en: "GitHub just shipped Grok Code Fast 1 in public preview for all Copilot users. It is a code search and navigation tool that actually understands your codebase — not just string matching, but semantic search that knows what functions do, how types connect, and where definitions live. If you have ever wasted twenty minutes grep-ing through a massive repo trying to find where something is called, this is built for you.",
+      nl: "GitHub heeft net Grok Code Fast 1 uitgebracht in public preview voor alle Copilot-gebruikers. Het is een code-zoek- en navigatietool die je codebase daadwerkelijk begrijpt — niet alleen string matching, maar semantisch zoeken dat weet wat functies doen, hoe types samenhangen en waar definities staan. Als je ooit twintig minuten hebt verspild aan grep-en door een enorme repo om te vinden waar iets wordt aangeroepen, dan is dit voor jou gemaakt."
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const grokCopilotPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Try it out and let us know what you think!',
-      nl: 'Probeer het uit en laat ons weten wat je ervan vindt!'
+      en: 'Grok is still in preview, so expect rough edges. But if code search has been a pain point for your team — especially on large repos — it is worth spending ten minutes with it. Open a repo on GitHub.com, hit "/" and see how it handles your codebase. The AI-powered explanations alone save time during code reviews and onboarding.',
+      nl: 'Grok zit nog in preview, dus verwacht hier en daar een ruwe rand. Maar als code zoeken een pijnpunt is voor je team — vooral bij grote repos — is het de moeite waard om er tien minuten mee te spelen. Open een repo op GitHub.com, druk op "/" en kijk hoe het je codebase aanpakt. De AI-uitleg alleen al scheelt tijd bij code reviews en onboarding.'
     }
   }
 };

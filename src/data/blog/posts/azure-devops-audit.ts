@@ -25,8 +25,8 @@ export const azureDevOpsAuditPost: BlogPost = {
   readTime: 12,
   content: {
     introduction: {
-      en: "Organizations need visibility into changes made within their Azure DevOps environment for compliance, security, and troubleshooting purposes. The Azure DevOps Audit API provides access to a comprehensive log of actions, including permission changes, pipeline modifications, repository updates, and more. In this article, we'll build a PowerShell solution that queries this API and generates beautiful HTML reports.",
-      nl: 'Organisaties hebben zicht nodig op wijzigingen in hun Azure DevOps-omgeving voor compliance, beveiliging en troubleshooting-doeleinden. De Azure DevOps Audit API biedt toegang tot een uitgebreid log van acties, waaronder permissiewijzigingen, pipeline-aanpassingen, repository-updates en meer. In dit artikel bouwen we een PowerShell-oplossing die deze API bevraagt en mooie HTML-rapporten genereert.'
+      en: 'Someone changed the permissions on your production pipeline last Tuesday. Who was it? What did they change? Good luck finding out from the Azure DevOps UI — the audit log is buried and the filtering is minimal. The Audit API at auditservice.dev.azure.com is much more useful, but it returns raw JSON that nobody wants to read. Here is a PowerShell script that pulls the audit data, filters the noise, and generates an HTML report you can actually hand to a compliance reviewer or security team.',
+      nl: 'Iemand heeft afgelopen dinsdag de permissies op je productiepipeline gewijzigd. Wie was het? Wat hebben ze veranderd? Succes met het uitzoeken via de Azure DevOps UI — het auditlog zit diep verstopt en de filtermogelijkheden zijn minimaal. De Audit API op auditservice.dev.azure.com is veel nuttiger, maar die retourneert ruwe JSON die niemand wil lezen. Hier is een PowerShell-script dat de auditdata ophaalt, de ruis filtert, en een HTML-rapport genereert dat je daadwerkelijk kunt overhandigen aan een compliance-reviewer of beveiligingsteam.'
     },
     sections: [
       {
@@ -77,8 +77,8 @@ $headers = @{ "Authorization" = "Basic $base64Auth" }`
       }
     ],
     conclusion: {
-      en: 'Auditing your Azure DevOps environment is essential for security and compliance. With PowerShell and the Audit API, you can build automated solutions that generate professional reports for stakeholders.',
-      nl: 'Het auditen van je Azure DevOps-omgeving is essentieel voor beveiliging en compliance. Met PowerShell en de Audit API kun je geautomatiseerde oplossingen bouwen die professionele rapporten genereren voor stakeholders.'
+      en: 'The Audit API gives you everything — permission changes, pipeline edits, repo updates, IP addresses, timestamps. The trick is making that data useful. A scheduled PowerShell script that generates an HTML report weekly is enough for most teams. For larger organizations, consider shipping the audit events to Azure Log Analytics where you get retention policies, KQL queries, and alerting built in. Either way, do not wait until an incident to figure out how your audit logs work. Set this up on a quiet afternoon and you will thank yourself later.',
+      nl: 'De Audit API geeft je alles — permissiewijzigingen, pipeline-edits, repo-updates, IP-adressen, timestamps. De truc is die data bruikbaar maken. Een gepland PowerShell-script dat wekelijks een HTML-rapport genereert is voldoende voor de meeste teams. Voor grotere organisaties, overweeg de auditevents naar Azure Log Analytics te sturen waar je retentiebeleid, KQL-queries en alerting ingebouwd krijgt. Hoe dan ook, wacht niet tot een incident om uit te zoeken hoe je auditlogs werken. Stel dit in op een rustige middag en je zult jezelf later dankbaar zijn.'
     }
   }
 };
