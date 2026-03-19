@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from '@/hooks/use-translations';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Badge } from "@/components/ui/badge";
-import { getAllBlogPosts, getLocalizedBlogPost, getBlogPost } from '@/data/blog-posts';
-import { BlogPostView } from '@/components/BlogPostView';
+import { getAllBlogPosts, getLocalizedBlogPost } from '@/data/blog-posts';
 import {
   Calendar,
   Clock,
-  ArrowRight,
   Lightning,
   ShieldCheck,
   Terminal,
@@ -28,7 +26,6 @@ const categoryIcons: Record<string, typeof Lightning> = {
   'AI & Automation': Lightning,
   'AI & Automatisering': Lightning,
   'AI Tools': Sparkle,
-  'AI & Machine Learning': Robot,
   'AI & Machine Learning': Robot,
   'Azure Security': ShieldCheck,
   'Azure Beveiliging': ShieldCheck,
@@ -56,29 +53,19 @@ function getCategoryIcon(category: string) {
 
 export function BlogPage() {
   const { language } = useTranslations();
-  const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
 
   const allPosts = getAllBlogPosts();
-  const blogPosts = allPosts.map(post => getLocalizedBlogPost(post, language));
-
-  const rawSelectedPost = selectedPostId ? getBlogPost(selectedPostId) : null;
-  const selectedPost = rawSelectedPost ? getLocalizedBlogPost(rawSelectedPost, language) : null;
-
-  if (selectedPost) {
-    return (
-      <BlogPostView
-        post={selectedPost}
-        onBack={() => setSelectedPostId(null)}
-      />
-    );
-  }
+  const blogPosts = allPosts.map(post => ({
+    ...getLocalizedBlogPost(post, language),
+    rawId: post.id,
+  }));
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString(language === 'nl' ? 'nl-NL' : 'en-US', {
-      year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
+      year: 'numeric',
     });
   };
 
@@ -108,55 +95,55 @@ export function BlogPage() {
             const Icon = getCategoryIcon(post.category);
 
             return (
-              <motion.article
+              <motion.div
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.5) }}
-                className="group cursor-pointer"
-                onClick={() => setSelectedPostId(post.id)}
               >
-                {/* Image */}
-                {post.image && (
-                  <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-muted">
-                    <img
-                      src={post.image}
-                      alt=""
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                <Link to={`/blog/${post.rawId}`} className="group block">
+                  {/* Image */}
+                  {post.image && (
+                    <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-muted">
+                      <img
+                        src={post.image}
+                        alt=""
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+
+                  {/* Category */}
+                  <div className="flex items-center gap-2 mb-2.5">
+                    <Icon size={14} weight="bold" className="text-muted-foreground" />
+                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                      {post.category}
+                    </span>
                   </div>
-                )}
 
-                {/* Category */}
-                <div className="flex items-center gap-2 mb-2.5">
-                  <Icon size={14} weight="bold" className="text-muted-foreground" />
-                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                    {post.category}
-                  </span>
-                </div>
+                  {/* Title */}
+                  <h2 className="text-lg font-semibold text-foreground leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    {post.title}
+                  </h2>
 
-                {/* Title */}
-                <h2 className="text-lg font-semibold text-foreground leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
+                  {/* Excerpt */}
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">
+                    {post.excerpt}
+                  </p>
 
-                {/* Excerpt */}
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">
-                  {post.excerpt}
-                </p>
-
-                {/* Meta */}
-                <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
-                  <div className="flex items-center gap-1">
-                    <Calendar size={12} weight="regular" />
-                    <span>{formatDate(post.date)}</span>
+                  {/* Meta */}
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
+                    <div className="flex items-center gap-1">
+                      <Calendar size={12} weight="regular" />
+                      <span>{formatDate(post.date)}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock size={12} weight="regular" />
+                      <span>{post.readTime} min</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Clock size={12} weight="regular" />
-                    <span>{post.readTime} min</span>
-                  </div>
-                </div>
-              </motion.article>
+                </Link>
+              </motion.div>
             );
           })}
         </div>

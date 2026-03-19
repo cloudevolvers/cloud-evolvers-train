@@ -7,7 +7,10 @@ export function LatestBlogPosts() {
   const { language } = useTranslations();
   const latest = getAllBlogPosts()
     .slice(0, 3)
-    .map(post => getLocalizedBlogPost(post, language));
+    .map(post => ({
+      ...getLocalizedBlogPost(post, language),
+      rawId: post.id,
+    }));
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -43,7 +46,7 @@ export function LatestBlogPosts() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
           {latest.map((post) => (
-            <Link key={post.id} to="/blog" className="group">
+            <Link key={post.rawId} to={`/blog/${post.rawId}`} className="group">
               {post.image && (
                 <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-muted">
                   <img
