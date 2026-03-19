@@ -1,0 +1,162 @@
+<h2>Article View v2: Your Colors + Code Blocks</h2>
+<p class="subtitle">Using your monochrome palette (no blue accents), plus expandable code snippets with copy buttons</p>
+
+<div class="mockup">
+  <div class="mockup-header">Blog Article — Monochrome Dark</div>
+  <div class="mockup-body" style="background: hsl(0 0% 7%); padding: 0; overflow: hidden;">
+    <div style="font-family: 'Inter', system-ui, sans-serif; color: hsl(0 0% 95%); padding: 48px 40px 60px;">
+
+      <!-- Back link -->
+      <div style="margin-bottom: 32px;">
+        <span style="color: hsl(0 0% 55%); font-size: 13px;">← All articles</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: start;">
+
+        <!-- LEFT: Sticky TOC (monochrome) -->
+        <div>
+          <div style="color: hsl(0 0% 45%); font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; font-weight: 600;">On this page</div>
+
+          <div style="margin-bottom: 6px;">
+            <div style="color: hsl(0 0% 95%); font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid hsl(0 0% 95%); font-weight: 500;">Exchange RBAC</div>
+          </div>
+          <div style="margin-bottom: 6px;">
+            <div style="color: hsl(0 0% 50%); font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">Access Policies</div>
+          </div>
+          <div style="margin-bottom: 6px;">
+            <div style="color: hsl(0 0% 50%); font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">App-Only Access</div>
+          </div>
+          <div style="margin-bottom: 6px;">
+            <div style="color: hsl(0 0% 50%); font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">Automation Scripts</div>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <div style="color: hsl(0 0% 50%); font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">Conclusion</div>
+          </div>
+
+          <!-- Progress -->
+          <div style="border-top: 1px solid hsl(0 0% 16%); padding-top: 14px;">
+            <div style="color: hsl(0 0% 40%); font-size: 11px; margin-bottom: 6px;">Progress</div>
+            <div style="background: hsl(0 0% 15%); height: 2px; border-radius: 1px; overflow: hidden;">
+              <div style="background: hsl(0 0% 72%); height: 100%; width: 30%; border-radius: 1px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Content -->
+        <div style="max-width: 660px;">
+
+          <div style="color: hsl(0 0% 55%); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; font-weight: 500;">Azure Security</div>
+
+          <h1 style="color: hsl(0 0% 95%); font-size: 30px; font-weight: 700; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.02em;">Exchange Online RBAC and Access Policies: Locking Down Mailbox Access</h1>
+
+          <div style="color: hsl(0 0% 55%); font-size: 13px; margin-bottom: 10px;">
+            <span style="color: hsl(0 0% 80%); font-weight: 500;">Yair Knijn</span> · March 20, 2026 · 9 min read
+          </div>
+
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px;">
+            <span style="background: hsl(0 0% 15%); color: hsl(0 0% 65%); font-size: 11px; padding: 3px 10px; border-radius: 4px;">Exchange Online</span>
+            <span style="background: hsl(0 0% 15%); color: hsl(0 0% 65%); font-size: 11px; padding: 3px 10px; border-radius: 4px;">RBAC</span>
+            <span style="background: hsl(0 0% 15%); color: hsl(0 0% 65%); font-size: 11px; padding: 3px 10px; border-radius: 4px;">Security</span>
+          </div>
+
+          <div style="height: 1px; background: hsl(0 0% 16%); margin-bottom: 32px;"></div>
+
+          <!-- Intro -->
+          <p style="color: hsl(0 0% 78%); font-size: 16px; line-height: 1.85; margin: 0 0 36px;">Exchange Online has its own RBAC system, separate from Entra ID roles. Most admins discover this the hard way: they assign Global Admin to someone and that person still cannot run <code style="background: hsl(0 0% 13%); color: hsl(0 0% 75%); padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: 'JetBrains Mono', monospace;">Get-Mailbox</code> in PowerShell. This post covers the Exchange RBAC model, application access policies, and how to scope third-party app access to specific mailboxes.</p>
+
+          <!-- Section -->
+          <h2 style="color: hsl(0 0% 93%); font-size: 22px; font-weight: 600; margin: 0 0 16px; letter-spacing: -0.01em;">Exchange RBAC: How It Actually Works</h2>
+
+          <p style="color: hsl(0 0% 78%); font-size: 16px; line-height: 1.85; margin: 0 0 24px;">Exchange RBAC predates Entra ID roles. It uses role groups, management roles, and role assignments to control who can do what. The built-in role groups — Organization Management, Recipient Management, Help Desk — map to common admin personas.</p>
+
+          <!-- CALLOUT: monochrome style -->
+          <div style="background: hsl(0 0% 11%); border: 1px solid hsl(0 0% 18%); border-left: 3px solid hsl(0 0% 72%); border-radius: 6px; padding: 14px 18px; margin: 0 0 24px;">
+            <div style="color: hsl(0 0% 72%); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600;">Key point</div>
+            <p style="color: hsl(0 0% 70%); font-size: 14px; line-height: 1.7; margin: 0;">Exchange RBAC is <strong style="color: hsl(0 0% 90%);">separate</strong> from Entra ID roles. Global Admin gives you Exchange admin access indirectly, but Exchange-specific roles give you granular control over mailbox operations.</p>
+          </div>
+
+          <p style="color: hsl(0 0% 78%); font-size: 16px; line-height: 1.85; margin: 0 0 32px;">The catch: you cannot use the Entra portal to assign Exchange roles. You need the Exchange Admin Center or PowerShell. And the role names do not map 1:1 to what you see in Entra.</p>
+
+          <!-- EXPANDABLE CODE BLOCK -->
+          <div style="border: 1px solid hsl(0 0% 18%); border-radius: 8px; overflow: hidden; margin: 0 0 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: hsl(0 0% 11%); border-bottom: 1px solid hsl(0 0% 18%);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: hsl(0 0% 55%); font-size: 12px;">▼</span>
+                <span style="color: hsl(0 0% 72%); font-size: 12px; font-weight: 500;">List Exchange role group members</span>
+                <span style="background: hsl(0 0% 15%); color: hsl(0 0% 55%); font-size: 10px; padding: 2px 8px; border-radius: 3px; font-family: monospace;">PowerShell</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 4px; color: hsl(0 0% 50%); font-size: 11px; cursor: pointer;">
+                <span>📋</span> Copy
+              </div>
+            </div>
+            <pre style="margin: 0; padding: 16px; background: hsl(0 0% 9%); overflow-x: auto;"><code style="color: hsl(0 0% 75%); font-size: 13px; font-family: 'JetBrains Mono', monospace; line-height: 1.7;"><span style="color: hsl(0 0% 55%);"># Connect to Exchange Online</span>
+Connect-ExchangeOnline -UserPrincipalName admin@contoso.com
+
+<span style="color: hsl(0 0% 55%);"># List all role group members</span>
+Get-RoleGroupMember -Identity "Organization Management"
+
+<span style="color: hsl(0 0% 55%);"># Check a specific user's roles</span>
+Get-ManagementRoleAssignment -RoleAssignee "user@contoso.com"</code></pre>
+          </div>
+
+          <!-- Section divider -->
+          <div style="height: 1px; background: hsl(0 0% 13%); margin: 44px 0;"></div>
+
+          <!-- Section 2 -->
+          <h2 style="color: hsl(0 0% 93%); font-size: 22px; font-weight: 600; margin: 0 0 16px;">Application Access Policies</h2>
+
+          <p style="color: hsl(0 0% 78%); font-size: 16px; line-height: 1.85; margin: 0 0 24px;">When a third-party app registers in Entra ID and gets the <code style="background: hsl(0 0% 13%); color: hsl(0 0% 75%); padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: 'JetBrains Mono', monospace;">full_access_as_app</code> permission for Exchange, it can read every mailbox in the tenant. Application access policies let you scope that down to specific mailboxes.</p>
+
+          <!-- WARNING callout: monochrome with warm neutral -->
+          <div style="background: hsl(40 8% 10%); border: 1px solid hsl(40 10% 20%); border-left: 3px solid hsl(40 30% 55%); border-radius: 6px; padding: 14px 18px; margin: 0 0 24px;">
+            <div style="color: hsl(40 30% 60%); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600;">Warning</div>
+            <p style="color: hsl(40 10% 65%); font-size: 14px; line-height: 1.7; margin: 0;">Without an access policy, <strong style="color: hsl(40 15% 80%);">any app with EWS or Graph mailbox permissions can read all mailboxes</strong>. This is the default. You have to explicitly restrict it.</p>
+          </div>
+
+          <!-- Another expandable code block (collapsed state) -->
+          <div style="border: 1px solid hsl(0 0% 18%); border-radius: 8px; overflow: hidden; margin: 0 0 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: hsl(0 0% 11%);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: hsl(0 0% 55%); font-size: 12px;">▶</span>
+                <span style="color: hsl(0 0% 72%); font-size: 12px; font-weight: 500;">Create an application access policy</span>
+                <span style="background: hsl(0 0% 15%); color: hsl(0 0% 55%); font-size: 10px; padding: 2px 8px; border-radius: 3px; font-family: monospace;">PowerShell</span>
+              </div>
+              <div style="color: hsl(0 0% 45%); font-size: 11px;">Click to expand</div>
+            </div>
+          </div>
+
+          <!-- Another expandable (collapsed) -->
+          <div style="border: 1px solid hsl(0 0% 18%); border-radius: 8px; overflow: hidden; margin: 0 0 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: hsl(0 0% 11%);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: hsl(0 0% 55%); font-size: 12px;">▶</span>
+                <span style="color: hsl(0 0% 72%); font-size: 12px; font-weight: 500;">Test access policy with Graph API</span>
+                <span style="background: hsl(0 0% 15%); color: hsl(0 0% 55%); font-size: 10px; padding: 2px 8px; border-radius: 3px; font-family: monospace;">Bash / curl</span>
+              </div>
+              <div style="color: hsl(0 0% 45%); font-size: 11px;">Click to expand</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top: 24px;">Does this feel right? Specifically:</h3>
+<div class="options">
+  <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>Yes, build this</h3>
+      <p>Monochrome colors, TOC, callouts, expandable code blocks with copy — go ahead and implement.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="tweak" onclick="toggleSelect(this)">
+    <div class="letter">~</div>
+    <div class="content">
+      <h3>Close, but tweak...</h3>
+      <p>Tell me what to change in the terminal.</p>
+    </div>
+  </div>
+</div>
