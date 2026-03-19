@@ -43,37 +43,37 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
   const renderSection = (section: BlogSectionType, index: number) => (
     <motion.section
       key={index}
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.15 + index * 0.05 }}
-      className="mb-10"
+      transition={{ duration: 0.35, delay: 0.1 + index * 0.04 }}
+      className="mb-12"
     >
-      <h2 className="text-2xl font-semibold text-foreground mb-4 tracking-tight">
+      <h2 className="text-[1.4rem] font-semibold text-foreground mb-4 tracking-tight leading-tight">
         {getText(section.title)}
       </h2>
-      <p className="text-muted-foreground leading-[1.8] text-[1.05rem]">
+      <p className="text-foreground/85 leading-[1.85] text-[1.02rem]">
         {getText(section.content)}
       </p>
 
       {section.code && (
-        <pre className="mt-4 p-4 bg-muted/50 border border-border rounded-md overflow-x-auto text-sm font-mono">
+        <pre className="mt-5 p-4 bg-muted/60 border border-border rounded-md overflow-x-auto text-sm font-mono">
           <code>{section.code.code}</code>
         </pre>
       )}
 
       {section.subsections?.map((subsection, subIndex) => (
-        <div key={subIndex} className="mt-6 pl-5 border-l-2 border-border">
-          <h3 className="text-lg font-medium text-foreground mb-2">
+        <div key={subIndex} className="mt-7 pl-5 border-l-2 border-border/60">
+          <h3 className="text-base font-medium text-foreground mb-2">
             {getText(subsection.title)}
           </h3>
-          <p className="text-muted-foreground leading-[1.8]">
+          <p className="text-foreground/80 leading-[1.8]">
             {getText(subsection.content)}
           </p>
 
           {subsection.list && (
             <ul className="mt-3 space-y-1.5 list-disc list-outside pl-5">
               {getList(subsection.list)?.map((item, i) => (
-                <li key={i} className="text-muted-foreground leading-relaxed">{item}</li>
+                <li key={i} className="text-foreground/80 leading-relaxed">{item}</li>
               ))}
             </ul>
           )}
@@ -94,7 +94,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                   {getRows(subsection.table.rows).map((row, rowIndex) => (
                     <tr key={rowIndex} className="border-b border-border last:border-0">
                       {row.map((cell, cellIndex) => (
-                        <td key={cellIndex} className="px-4 py-2.5 text-muted-foreground">
+                        <td key={cellIndex} className="px-4 py-2.5 text-foreground/80">
                           {cell}
                         </td>
                       ))}
@@ -110,14 +110,14 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
   );
 
   return (
-    <div className="min-h-screen bg-background pt-28 pb-20">
-      <div className="max-w-[680px] mx-auto px-5">
+    <div className="min-h-screen bg-background pt-28 pb-24">
+      <div className="max-w-[52rem] mx-auto px-6 lg:px-8">
         {/* Back */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="mb-10"
+          transition={{ duration: 0.25 }}
+          className="mb-8"
         >
           <Button
             variant="ghost"
@@ -132,12 +132,12 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
 
         {/* Header */}
         <motion.header
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
+          transition={{ duration: 0.4 }}
+          className="mb-10"
         >
-          <div className="flex items-center gap-3 mb-5 text-sm text-muted-foreground">
+          <div className="flex items-center gap-3 mb-4 text-sm text-muted-foreground">
             <span className="font-medium text-foreground">{post.author}</span>
             <span aria-hidden>&middot;</span>
             <time>{formatDate(post.date)}</time>
@@ -145,15 +145,15 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
             <span>{post.readTime} {language === 'nl' ? 'min lezen' : 'min read'}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-[1.2] tracking-tight mb-5">
+          <h1 className="text-3xl sm:text-[2.5rem] font-bold text-foreground leading-[1.15] tracking-tight mb-5">
             {getText(post.title)}
           </h1>
 
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-foreground/70 leading-relaxed">
             {getText(post.excerpt)}
           </p>
 
-          <div className="flex flex-wrap gap-1.5 mt-6">
+          <div className="flex flex-wrap gap-1.5 mt-5">
             {post.tags.map((tag) => (
               <Badge
                 key={tag}
@@ -170,12 +170,12 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
 
         {/* Article body */}
         <motion.article
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.08 }}
         >
           {/* Introduction */}
-          <p className="text-muted-foreground leading-[1.8] text-[1.05rem] mb-10">
+          <p className="text-foreground/85 leading-[1.85] text-[1.02rem] mb-12">
             {getText(post.content.introduction)}
           </p>
 
@@ -184,22 +184,22 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
 
           {/* Conclusion */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.15 + post.content.sections.length * 0.05 }}
-            className="mt-12 pt-8 border-t border-border"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            className="mt-14 pt-10 border-t border-border"
           >
-            <h2 className="text-2xl font-semibold text-foreground mb-4 tracking-tight">
+            <h2 className="text-[1.4rem] font-semibold text-foreground mb-4 tracking-tight">
               {language === 'nl' ? 'Conclusie' : 'Conclusion'}
             </h2>
-            <p className="text-muted-foreground leading-[1.8] text-[1.05rem]">
+            <p className="text-foreground/85 leading-[1.85] text-[1.02rem]">
               {getText(post.content.conclusion)}
             </p>
           </motion.div>
         </motion.article>
 
         {/* Footer */}
-        <div className="mt-16 pt-8 border-t border-border">
+        <div className="mt-20 pt-8 border-t border-border">
           <Button
             variant="ghost"
             size="sm"

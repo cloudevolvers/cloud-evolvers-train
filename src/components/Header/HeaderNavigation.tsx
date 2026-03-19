@@ -77,7 +77,7 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
                 font-medium transition-all duration-300 text-sm tracking-wide
                 ${isActive
                   ? 'bg-foreground/10 text-foreground border border-foreground/20'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                  : 'text-foreground/65 hover:text-foreground hover:bg-muted/50'
                 }
               `}
             >
@@ -88,7 +88,7 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
                   transition-colors
                   ${isActive
                     ? 'text-foreground'
-                    : 'text-muted-foreground group-hover:text-foreground'
+                    : 'text-foreground/65 group-hover:text-foreground'
                   }
                 `}
               />
