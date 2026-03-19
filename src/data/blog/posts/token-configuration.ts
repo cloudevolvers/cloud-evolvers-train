@@ -11,7 +11,7 @@ export const tokenConfigurationPost: BlogPost = {
     nl: 'Beheers token configuratie in Microsoft Entra ID - voeg custom claims toe, configureer optional claims en beheer token lifetime voor je applicaties'
   },
   date: '2025-06-07',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Entra', 'Tokens', 'Claims', 'Authentication', 'OAuth'],
   image: '/images/unsplash/identity-access-management.jpg',
   excerpt: {

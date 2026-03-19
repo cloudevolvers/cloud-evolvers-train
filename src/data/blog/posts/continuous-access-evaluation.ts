@@ -11,7 +11,7 @@ export const continuousAccessEvaluationPost: BlogPost = {
     nl: 'Hoe Continuous Access Evaluation de token-levensduurkloof dicht — kritieke events, claims challenges, langlevende tokens en wat CAE wel en niet dekt.'
   },
   date: '2026-02-20',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'CAE', 'Security', 'Conditional Access', 'Zero Trust'],
   image: '/images/unsplash/zero-trust-security-model.jpg',
   excerpt: {

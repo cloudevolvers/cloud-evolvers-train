@@ -11,7 +11,7 @@ export const scimProvisioningPost: BlogPost = {
     nl: 'Een diepgaande blik op SCIM 2.0 provisioning met Microsoft Entra ID — sync-cycli, attribuutmappings, scoping filters, quarantine-states en hoe je veelvoorkomende fouten oplost.'
   },
   date: '2026-03-17',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'SCIM', 'Provisioning', 'Identity', 'Automation'],
   image: '/images/unsplash/identity-access-management.jpg',
   excerpt: {

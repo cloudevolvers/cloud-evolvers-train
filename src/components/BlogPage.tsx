@@ -1,23 +1,58 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from '@/hooks/use-translations';
 import { useState } from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, getLocalizedBlogPost, getBlogPost } from '@/data/blog-posts';
 import { BlogPostView } from '@/components/BlogPostView';
 import {
   Calendar,
   Clock,
-  User,
   ArrowRight,
-  BookOpen,
-  Brain,
-  Shield,
-  Code,
+  Lightning,
+  ShieldCheck,
+  Terminal,
   Cloud,
-  Gear
+  Wrench,
+  Network,
+  Database,
+  Key,
+  Robot,
+  HardDrives,
+  Lock,
+  Cpu,
+  Cube,
+  Sparkle,
 } from "@phosphor-icons/react";
+
+const categoryIcons: Record<string, typeof Lightning> = {
+  'AI & Automation': Lightning,
+  'AI & Automatisering': Lightning,
+  'AI Tools': Sparkle,
+  'AI & Machine Learning': Robot,
+  'AI & Machine Learning': Robot,
+  'Azure Security': ShieldCheck,
+  'Azure Beveiliging': ShieldCheck,
+  'Security': ShieldCheck,
+  'Security & Compliance': Lock,
+  'Security & Identity': Key,
+  'Cloud Architecture': Cloud,
+  'DevOps': Wrench,
+  'DevOps & Automation': Wrench,
+  'Infrastructure & Networking': Network,
+  'Infrastructuur & Netwerken': Network,
+  'Infrastructure': HardDrives,
+  'Infrastructure & Operations': HardDrives,
+  'Infrastructure as Code': Terminal,
+  'Kubernetes & Containers': Cube,
+  'Serverless & Functions': Cpu,
+  'API Development': Terminal,
+  'Identity & Access': Key,
+  'Identity': Key,
+};
+
+function getCategoryIcon(category: string) {
+  return categoryIcons[category] || Cloud;
+}
 
 export function BlogPage() {
   const { language } = useTranslations();
@@ -42,148 +77,88 @@ export function BlogPage() {
     const date = new Date(dateString);
     return date.toLocaleDateString(language === 'nl' ? 'nl-NL' : 'en-US', {
       year: 'numeric',
-      month: 'long',
+      month: 'short',
       day: 'numeric'
     });
   };
 
-  const getCategoryIcon = (category: string) => {
-    const iconMap = {
-      'AI Tools': Brain,
-      'Azure Security': Shield,
-      'Azure Development': Code,
-      'Cloud Architecture': Cloud,
-      'DevOps': Gear,
-      'Azure Beveiliging': Shield,
-      'Default': BookOpen
-    };
-    return iconMap[category as keyof typeof iconMap] || iconMap.Default;
-  };
-
   return (
-    <div className="min-h-screen bg-background pt-40 pb-20">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-neutral-500/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-neutral-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
-      </div>
-
+    <div className="min-h-screen bg-background pt-36 pb-20">
       <motion.div
-        className="container mx-auto px-4 relative z-10"
-        initial={{ opacity: 0, y: 20 }}
+        className="max-w-6xl mx-auto px-5"
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <motion.div
-            className="mb-16 text-center"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.div
-              className="bg-primary/10 border border-primary/20 text-primary inline-flex items-center gap-2 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <BookOpen size={16} weight="regular" />
-              <span className="font-semibold">{language === 'nl' ? 'Azure Kennis Hub' : 'Azure Knowledge Hub'}</span>
-            </motion.div>
+        {/* Header */}
+        <div className="mb-14">
+          <h1 className="text-4xl font-bold text-foreground tracking-tight mb-3">
+            {language === 'nl' ? 'Blog' : 'Blog'}
+          </h1>
+          <p className="text-muted-foreground text-lg max-w-xl">
+            {language === 'nl'
+              ? 'Artikelen over Azure, cloud infrastructuur en de nieuwste Microsoft-technologie.'
+              : 'Articles on Azure, cloud infrastructure, and the latest Microsoft technology.'}
+          </p>
+        </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              {language === 'nl' ? 'Blog & Inzichten' : 'Blog & Insights'}
-            </h1>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              {language === 'nl'
-                ? 'Ontdek onze expert artikelen over Azure, cloud technologieën en best practices voor Microsoft certifications.'
-                : 'Discover our expert articles on Azure, cloud technologies, and best practices for Microsoft certifications.'}
-            </p>
-          </motion.div>
+        {/* Posts */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
+          {blogPosts.map((post, index) => {
+            const Icon = getCategoryIcon(post.category);
 
-          {/* Blog Posts Grid */}
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            {blogPosts.map((post, index) => {
-              const IconComponent = getCategoryIcon(post.category);
+            return (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.5) }}
+                className="group cursor-pointer"
+                onClick={() => setSelectedPostId(post.id)}
+              >
+                {/* Image */}
+                {post.image && (
+                  <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-muted">
+                    <img
+                      src={post.image}
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
 
-              return (
-                <motion.div
-                  key={post.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <Card className="bg-card border-border h-full backdrop-blur-sm transition-all duration-300 cursor-pointer group hover:shadow-lg hover:border-primary/50">
-                    <CardContent className="p-6 flex flex-col h-full">
-                      {/* Post Image */}
-                      {post.image && (
-                        <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-muted">
-                          <img
-                            src={post.image}
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                        </div>
-                      )}
+                {/* Category */}
+                <div className="flex items-center gap-2 mb-2.5">
+                  <Icon size={14} weight="bold" className="text-muted-foreground" />
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                    {post.category}
+                  </span>
+                </div>
 
-                      {/* Category & Icon */}
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-primary/10 rounded-lg">
-                          <IconComponent size={20} className="text-primary" weight="regular" />
-                        </div>
-                        <Badge variant="secondary" className="text-xs font-medium">
-                          {post.category}
-                        </Badge>
-                      </div>
+                {/* Title */}
+                <h2 className="text-lg font-semibold text-foreground leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  {post.title}
+                </h2>
 
-                      {/* Title */}
-                      <h3 className="text-xl font-bold mb-3 line-clamp-2 text-foreground group-hover:text-primary transition-colors">
-                        {post.title}
-                      </h3>
+                {/* Excerpt */}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">
+                  {post.excerpt}
+                </p>
 
-                      {/* Excerpt */}
-                      <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-grow text-sm">
-                        {post.excerpt}
-                      </p>
-
-                      {/* Meta Info */}
-                      <div className="text-muted-foreground border-t border-border flex flex-wrap items-center gap-4 mb-4 pt-4 text-xs font-medium">
-                        <div className="flex items-center gap-1.5">
-                          <Calendar size={14} weight="regular" />
-                          <span>{formatDate(post.date)}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Clock size={14} weight="regular" />
-                          <span>{post.readTime} {language === 'nl' ? 'min' : 'min'}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <User size={14} weight="regular" />
-                          <span>{post.author}</span>
-                        </div>
-                      </div>
-
-                      {/* Read More Button */}
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-primary mt-auto self-start p-0 h-auto font-semibold hover:bg-transparent hover:text-primary/80"
-                        onClick={() => setSelectedPostId(post.id)}
-                      >
-                        {language === 'nl' ? 'Lees Artikel' : 'Read Article'}
-                        <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                {/* Meta */}
+                <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
+                  <div className="flex items-center gap-1">
+                    <Calendar size={12} weight="regular" />
+                    <span>{formatDate(post.date)}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock size={12} weight="regular" />
+                    <span>{post.readTime} min</span>
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
       </motion.div>
     </div>

@@ -11,7 +11,7 @@ export const conditionalAccessDesignPost: BlogPost = {
     nl: 'Een gelaagde aanpak voor het opbouwen van Conditional Access policies in Microsoft Entra ID — van baseline bescherming via app-specifieke regels tot risk-based enforcement.'
   },
   date: '2026-02-12',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'Conditional Access', 'Security', 'Zero Trust', 'Governance'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {

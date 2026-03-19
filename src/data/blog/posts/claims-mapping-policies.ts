@@ -11,7 +11,7 @@ export const claimsMappingPoliciesPost: BlogPost = {
     nl: 'Hoe je claims mapping policies in Microsoft Entra ID gebruikt wanneer optional claims niet genoeg zijn — Graph API-setup, transformatietypen, groepsclaim-filtering en bekende beperkingen.'
   },
   date: '2026-03-06',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'Claims', 'Tokens', 'SAML', 'OIDC'],
   image: '/images/unsplash/compliance-governance-audit.jpg',
   excerpt: {

@@ -11,7 +11,7 @@ export const azureIamGuidePost: BlogPost = {
     nl: 'Beheers Azure Identity en Access Management met deze uitgebreide gids over RBAC, Entra ID, conditional access en security best practices.'
   },
   date: '2025-05-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Security', 'IAM', 'RBAC', 'Entra ID'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {

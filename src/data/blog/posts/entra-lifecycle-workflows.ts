@@ -11,7 +11,7 @@ export const entraLifecycleWorkflowsPost: BlogPost = {
     nl: 'Leer hoe je het onboarden van medewerkers, rolwijzigingen en offboarding automatiseert met Entra ID Governance lifecycle workflows met HR-gestuurde provisioning en aangepaste taakextensies.'
   },
   date: '2026-02-25',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'Identity', 'Governance', 'Automation', 'Azure'],
   image: '/images/unsplash/identity-access-management.jpg',
   excerpt: {

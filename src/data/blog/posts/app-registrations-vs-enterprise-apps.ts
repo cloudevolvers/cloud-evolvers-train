@@ -11,7 +11,7 @@ export const appRegistrationsVsEnterpriseAppsPost: BlogPost = {
     nl: 'Begrijp het verschil tussen App Registrations en Enterprise Applications in Microsoft Entra ID en wanneer elk te gebruiken.'
   },
   date: '2025-04-25',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Entra ID', 'Identity', 'Apps', 'Authentication'],
   image: '/images/pexels/pexels-cyber-security-concept.jpg',
   excerpt: {

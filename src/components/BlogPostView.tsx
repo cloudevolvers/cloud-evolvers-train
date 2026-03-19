@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BlogPost, BlogSection as BlogSectionType } from "@/types/blog";
 import { LocalizedBlogPost } from "@/data/blog-posts";
-import { Calendar, Clock, ArrowLeft, User } from "@phosphor-icons/react";
+import { ArrowLeft } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/hooks/use-translations";
 
@@ -25,7 +24,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
   };
 
   const getText = (text: string | { en: string; nl: string }): string => {
-    return typeof text === 'string' ? text : text.en; // Default to English if union type
+    return typeof text === 'string' ? text : text.en;
   };
 
   const getList = (list: string[] | { en: string[]; nl: string[] } | undefined): string[] | undefined => {
@@ -42,38 +41,50 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
   };
 
   const renderSection = (section: BlogSectionType, index: number) => (
-    <motion.div
+    <motion.section
       key={index}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="mb-8"
+      transition={{ duration: 0.4, delay: 0.15 + index * 0.05 }}
+      className="mb-10"
     >
-      <h2 className="text-white font-bold mb-4">{getText(section.title)}</h2>
-      <p className="text-gray-300 mb-4 leading-relaxed text-lg">{getText(section.content)}</p>
-      
+      <h2 className="text-2xl font-semibold text-foreground mb-4 tracking-tight">
+        {getText(section.title)}
+      </h2>
+      <p className="text-muted-foreground leading-[1.8] text-[1.05rem]">
+        {getText(section.content)}
+      </p>
+
+      {section.code && (
+        <pre className="mt-4 p-4 bg-muted/50 border border-border rounded-md overflow-x-auto text-sm font-mono">
+          <code>{section.code.code}</code>
+        </pre>
+      )}
+
       {section.subsections?.map((subsection, subIndex) => (
-        <div key={subIndex} className="ml-4 mb-6">
-          <h3 className="text-white font-semibold mb-3">{getText(subsection.title)}</h3>
-          <p className="text-gray-300 mb-3 leading-relaxed">{getText(subsection.content)}</p>
-          
+        <div key={subIndex} className="mt-6 pl-5 border-l-2 border-border">
+          <h3 className="text-lg font-medium text-foreground mb-2">
+            {getText(subsection.title)}
+          </h3>
+          <p className="text-muted-foreground leading-[1.8]">
+            {getText(subsection.content)}
+          </p>
+
           {subsection.list && (
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              {getList(subsection.list)?.map((item, itemIndex) => (
-                <li key={itemIndex} className="text-gray-300 leading-relaxed">
-                  {item}
-                </li>
+            <ul className="mt-3 space-y-1.5 list-disc list-outside pl-5">
+              {getList(subsection.list)?.map((item, i) => (
+                <li key={i} className="text-muted-foreground leading-relaxed">{item}</li>
               ))}
             </ul>
           )}
-          
+
           {subsection.table && (
-            <div className="overflow-x-auto mt-4">
-              <table className="w-full border-collapse border border-slate-600">
+            <div className="overflow-x-auto mt-4 border border-border rounded-md">
+              <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-slate-700/50">
-                    {getHeaders(subsection.table.headers).map((header, headerIndex) => (
-                      <th key={headerIndex} className="border border-slate-600 p-3 text-left font-semibold text-white">
+                  <tr className="bg-muted/50">
+                    {getHeaders(subsection.table.headers).map((header, i) => (
+                      <th key={i} className="px-4 py-2.5 text-left font-medium text-foreground border-b border-border">
                         {header}
                       </th>
                     ))}
@@ -81,9 +92,9 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                 </thead>
                 <tbody>
                   {getRows(subsection.table.rows).map((row, rowIndex) => (
-                    <tr key={rowIndex} className="hover:bg-slate-700/30">
+                    <tr key={rowIndex} className="border-b border-border last:border-0">
                       {row.map((cell, cellIndex) => (
-                        <td key={cellIndex} className="border border-slate-600 p-3 text-gray-300">
+                        <td key={cellIndex} className="px-4 py-2.5 text-muted-foreground">
                           {cell}
                         </td>
                       ))}
@@ -95,139 +106,109 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
           )}
         </div>
       ))}
-    </motion.div>
+    </motion.section>
   );
 
   return (
-    <div className="from-green-900/30 via-emerald-900/30 to-teal-900/30 min-h-screen pt-24 relative overflow-hidden bg-gradient-to-br">
-      {/* Hero-style Background Effects - Matching green/emerald/teal theme */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-green-500/20 via-emerald-500/15 to-teal-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2],
-            rotate: [0, -180, -360],
-          }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-emerald-500/20 via-green-500/15 to-teal-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.3, 0.6, 0.3],
-            rotate: [360, 180, 0],
-          }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        />
-      </div>
-      
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-        <div className="max-w-[120rem] mx-auto py-8 lg:py-12 xl:py-16">
-          {/* Back Button */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
+    <div className="min-h-screen bg-background pt-28 pb-20">
+      <div className="max-w-[680px] mx-auto px-5">
+        {/* Back */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="mb-10"
+        >
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onBack}
+            className="text-muted-foreground hover:text-foreground -ml-2 gap-1.5"
           >
-            <Button
-              variant="ghost"
-              onClick={onBack}
-              className="bg-slate-800/90 border-slate-700/50 text-white group flex items-center gap-2 backdrop-blur-sm transition-all duration-300"
-            >
-              <ArrowLeft 
-                size={16} 
-                className="transition-transform duration-300 group-hover:-translate-x-1" 
-              />
-              {language === 'nl' ? 'Terug naar Blog' : 'Back to Blog'}
-            </Button>
-          </motion.div>
+            <ArrowLeft size={15} />
+            {language === 'nl' ? 'Alle artikelen' : 'All articles'}
+          </Button>
+        </motion.div>
 
-          {/* Article Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <Card className="bg-slate-800/90 border-slate-700/50 backdrop-blur-sm shadow-2xl">
-              <CardContent className="p-6 lg:p-8 xl:p-10">
-                <Badge variant="secondary" className="text-emerald-300 mb-4 bg-neutral-700/50 border-neutral-600/30">
-                  {getText(post.category)}
-                </Badge>
-                
-                <h1 className="text-white font-bold mb-6 leading-tight">
-                  {getText(post.title)}
-                </h1>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {getText(post.excerpt)}
-                </p>
-                
-                <div className="text-gray-400 flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <User size={16} />
-                    {post.author}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar size={16} />
-                    {formatDate(post.date)}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock size={16} />
-                    {post.readTime} {language === 'nl' ? 'min lezen' : 'min read'}
-                  </div>
-                </div>
-                
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {post.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="bg-slate-700/50 text-gray-300 border-slate-600">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* Article Content */}
-          <div className="max-w-5xl mx-auto">
-            <Card className="bg-slate-800/90 border-slate-700/50 backdrop-blur-sm shadow-2xl">
-              <CardContent className="p-6 lg:p-8 xl:p-10">
-                {/* Introduction */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="mb-8"
-                >
-                  <p className="text-gray-300 leading-relaxed">
-                    {getText(post.content.introduction)}
-                  </p>
-                </motion.div>
-
-                {/* Sections */}
-                {post.content.sections.map((section, index) => renderSection(section, index))}
-
-                {/* Conclusion */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: post.content.sections.length * 0.1 }}
-                  className="from-emerald-500/20 to-teal-500/20 mt-12 p-6 bg-gradient-to-r rounded-2xl border border-emerald-500/30"
-                >
-                  <h2 className="text-white font-bold mb-4">
-                    {language === 'nl' ? 'Conclusie' : 'Conclusion'}
-                  </h2>
-                  <p className="text-gray-300 leading-relaxed">
-                    {getText(post.content.conclusion)}
-                  </p>
-                </motion.div>
-              </CardContent>
-            </Card>
+        {/* Header */}
+        <motion.header
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
+          <div className="flex items-center gap-3 mb-5 text-sm text-muted-foreground">
+            <span className="font-medium text-foreground">{post.author}</span>
+            <span aria-hidden>&middot;</span>
+            <time>{formatDate(post.date)}</time>
+            <span aria-hidden>&middot;</span>
+            <span>{post.readTime} {language === 'nl' ? 'min lezen' : 'min read'}</span>
           </div>
+
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-[1.2] tracking-tight mb-5">
+            {getText(post.title)}
+          </h1>
+
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {getText(post.excerpt)}
+          </p>
+
+          <div className="flex flex-wrap gap-1.5 mt-6">
+            {post.tags.map((tag) => (
+              <Badge
+                key={tag}
+                variant="secondary"
+                className="text-xs font-normal px-2.5 py-0.5"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </motion.header>
+
+        <hr className="border-border mb-10" />
+
+        {/* Article body */}
+        <motion.article
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          {/* Introduction */}
+          <p className="text-muted-foreground leading-[1.8] text-[1.05rem] mb-10">
+            {getText(post.content.introduction)}
+          </p>
+
+          {/* Sections */}
+          {post.content.sections.map((section, index) => renderSection(section, index))}
+
+          {/* Conclusion */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.15 + post.content.sections.length * 0.05 }}
+            className="mt-12 pt-8 border-t border-border"
+          >
+            <h2 className="text-2xl font-semibold text-foreground mb-4 tracking-tight">
+              {language === 'nl' ? 'Conclusie' : 'Conclusion'}
+            </h2>
+            <p className="text-muted-foreground leading-[1.8] text-[1.05rem]">
+              {getText(post.content.conclusion)}
+            </p>
+          </motion.div>
+        </motion.article>
+
+        {/* Footer */}
+        <div className="mt-16 pt-8 border-t border-border">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={onBack}
+            className="text-muted-foreground hover:text-foreground -ml-2 gap-1.5"
+          >
+            <ArrowLeft size={15} />
+            {language === 'nl' ? 'Terug naar alle artikelen' : 'Back to all articles'}
+          </Button>
         </div>
       </div>
     </div>

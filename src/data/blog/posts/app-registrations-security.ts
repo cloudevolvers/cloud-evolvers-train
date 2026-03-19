@@ -11,7 +11,7 @@ export const appRegistrationsSecurityPost: BlogPost = {
     nl: 'Leer hoe je app registrations in Microsoft Entra ID auditeert, beveiligingsrisicos identificeert en proper credential lifecycle management implementeert'
   },
   date: '2025-06-08',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Entra', 'Security', 'App Registration', 'Credentials', 'Governance'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {

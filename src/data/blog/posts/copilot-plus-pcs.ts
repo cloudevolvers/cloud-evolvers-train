@@ -11,7 +11,7 @@ export const copilotPlusPcsPost: BlogPost = {
     nl: 'Begrip van Copilot+ PC\'s, de NPU-hardwarevereiste, ARM-compatibiliteitsoverwegingen, en waar enterprise IT-teams op moeten plannen nu Windows AI-functies verschuiven naar on-device verwerking'
   },
   date: '2026-01-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft', 'Copilot', 'AI', 'Hardware', 'Enterprise'],
   image: '/images/pexels/pexels-tech-startup-workspace.jpg',
   excerpt: {

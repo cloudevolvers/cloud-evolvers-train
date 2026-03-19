@@ -11,7 +11,7 @@ export const azureProvisionedFileSharesPost: BlogPost = {
     nl: 'Leer hoe je Azure Files met provisioned model deployt via Bicep voor voorspelbare prestaties en consistente IOPS in je cloud workloads'
   },
   date: '2025-06-09',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure Files', 'Bicep', 'Infrastructure as Code', 'Storage', 'Performance'],
   image: '/images/pexels/pexels-cloud-computing-servers.jpg',
   excerpt: {
