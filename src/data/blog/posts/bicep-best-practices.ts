@@ -25,8 +25,8 @@ export const bicepBestPracticesPost: BlogPost = {
   readTime: 10,
   content: {
     introduction: {
-      en: 'Bicep is the recommended domain-specific language (DSL) for deploying Azure resources. Following best practices ensures your infrastructure code is maintainable, secure, and scalable.',
-      nl: 'Bicep is de aanbevolen domain-specific language (DSL) voor het deployen van Azure resources. Het volgen van best practices zorgt ervoor dat je infrastructuurcode onderhoudbaar, veilig en schaalbaar is.'
+      en: 'Bicep is Azure\'s native IaC language, and if you\'re deploying to Azure, it\'s the right default choice over raw ARM templates. But writing Bicep that works is different from writing Bicep that your team can maintain six months later. Most of the pain comes from the same mistakes: everything in one huge file, no naming consistency, secrets in plain text, and no preview before deploying. Here are the practices that actually matter.',
+      nl: 'Bicep is Azure\'s native IaC-taal, en als je naar Azure deployt, is het de juiste standaardkeuze boven rauwe ARM-templates. Maar Bicep schrijven die werkt is iets anders dan Bicep schrijven die je team over zes maanden nog kan onderhouden. De meeste pijn komt van dezelfde fouten: alles in één enorm bestand, geen naamgevingsconsistentie, secrets in platte tekst, en geen preview voor het deployen. Dit zijn de praktijken die er echt toe doen.'
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const bicepBestPracticesPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Following these Bicep best practices will help you build robust, maintainable infrastructure code. Start with small modules and gradually build up your library of reusable components.',
-      nl: 'Het volgen van deze Bicep best practices helpt je robuuste, onderhoudbare infrastructuurcode te bouwen. Begin met kleine modules en bouw geleidelijk je bibliotheek van herbruikbare componenten op.'
+      en: 'None of this is complicated on its own. Small modules, clear names, secure parameters, what-if before apply. The hard part is discipline — doing it consistently on every deployment, not just the ones you have time for. Pick one practice you\'re not doing yet, apply it to your next PR, and build from there. Also look at Azure Verified Modules before writing your own — there\'s a good chance someone already built what you need.',
+      nl: 'Niets hiervan is op zichzelf ingewikkeld. Kleine modules, duidelijke namen, secure parameters, what-if voor apply. Het moeilijke is discipline — het consequent doen bij elke deployment, niet alleen bij degene waarvoor je tijd hebt. Pak één praktijk die je nog niet toepast, gebruik het bij je volgende PR, en bouw van daaruit. Kijk ook naar Azure Verified Modules voordat je je eigen modules schrijft — de kans is groot dat iemand al heeft gebouwd wat je nodig hebt.'
     }
   }
 };

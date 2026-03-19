@@ -173,6 +173,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.08 }}
+          className="prose prose-lg dark:prose-invert prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-foreground/85 prose-li:text-foreground/80 prose-strong:text-foreground prose-a:text-primary max-w-none"
         >
           {/* Introduction */}
           <p className="text-foreground/85 leading-[1.85] text-[1.02rem] mb-12">

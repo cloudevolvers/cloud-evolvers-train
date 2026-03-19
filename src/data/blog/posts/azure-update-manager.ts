@@ -25,8 +25,8 @@ export const azureUpdateManagerPost: BlogPost = {
   readTime: 10,
   content: {
     introduction: {
-      en: 'Keeping virtual machines patched is critical for security but challenging at scale. Azure Update Manager is a unified solution that replaces the legacy Azure Automation Update Management. It works with Azure VMs and Arc-enabled servers, supports Windows and Linux, and provides centralized compliance visibility across your entire estate.',
-      nl: 'Virtuele machines gepatcht houden is cruciaal voor beveiliging maar uitdagend op schaal. Azure Update Manager is een unified oplossing die het legacy Azure Automation Update Management vervangt. Het werkt met Azure VMs en Arc-enabled servers, ondersteunt Windows en Linux, en biedt gecentraliseerd compliance-zicht over je hele estate.'
+      en: 'Nobody enjoys patching VMs. But unpatched VMs are how breaches happen, so you do it anyway. The old Azure Automation Update Management worked, sort of — it required a Log Analytics workspace, had quirky scheduling, and didn\'t handle Arc-enabled servers well. Azure Update Manager replaces all of that. It\'s native to ARM, works with both Azure VMs and Arc-enabled servers, handles Windows and Linux, and gives you one dashboard for patch compliance across everything.',
+      nl: 'Niemand vindt het leuk om VM\'s te patchen. Maar niet-gepatchte VM\'s zijn hoe inbreuken gebeuren, dus je doet het toch. Het oude Azure Automation Update Management werkte, min of meer — het vereiste een Log Analytics workspace, had eigenaardige scheduling en ging niet goed om met Arc-enabled servers. Azure Update Manager vervangt dat allemaal. Het is native in ARM, werkt met zowel Azure VM\'s als Arc-enabled servers, ondersteunt Windows en Linux, en geeft je één dashboard voor patch compliance over alles.'
     },
     sections: [
       {
@@ -96,8 +96,8 @@ az maintenance configuration create \\
       }
     ],
     conclusion: {
-      en: 'Azure Update Manager simplifies VM patching at enterprise scale. Start by migrating from legacy Update Management, then leverage dynamic scopes and maintenance configurations for a fully automated patching strategy.',
-      nl: 'Azure Update Manager vereenvoudigt VM patching op enterprise-schaal. Begin met migreren van legacy Update Management, benut dan dynamic scopes en maintenance configuraties voor een volledig geautomatiseerde patching-strategie.'
+      en: 'If you\'re still on the old Azure Automation Update Management, migrate. Azure Update Manager drops the Log Analytics dependency, adds dynamic scoping so new VMs get patched automatically, and the compliance reporting is actually usable. Set up your maintenance windows per environment tier, add pre/post scripts to snapshot before patching, and set alerts for machines that fall behind. Patching will never be exciting, but it can at least be automatic.',
+      nl: 'Als je nog op het oude Azure Automation Update Management zit, migreer. Azure Update Manager laat de Log Analytics-afhankelijkheid vallen, voegt dynamic scoping toe zodat nieuwe VM\'s automatisch gepatcht worden, en de compliance-rapportage is daadwerkelijk bruikbaar. Stel je maintenance windows in per omgevingstier, voeg pre/post scripts toe om snapshots te maken voor patching, en stel alerts in voor machines die achterlopen. Patching wordt nooit spannend, maar het kan tenminste automatisch.'
     }
   }
 };

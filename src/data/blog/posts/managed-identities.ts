@@ -25,8 +25,8 @@ export const managedIdentitiesPost: BlogPost = {
   readTime: 8,
   content: {
     introduction: {
-      en: 'Managed Identities eliminate the need to manage credentials in your code. They provide an automatically managed identity in Microsoft Entra ID for applications to use when connecting to resources that support Microsoft Entra authentication.',
-      nl: 'Managed Identities elimineren de noodzaak om referenties in je code te beheren. Ze bieden een automatisch beheerde identiteit in Microsoft Entra ID voor applicaties om te gebruiken bij het verbinden met resources die Microsoft Entra authenticatie ondersteunen.'
+      en: 'Stop putting connection strings and secrets in your code. Seriously. Managed Identities in Azure give your apps an identity in Microsoft Entra ID so they can authenticate to other Azure services without any credentials stored anywhere. No keys in environment variables, no secrets in Key Vault references that someone forgets to rotate. Azure handles the credential lifecycle for you. There are two types — system-assigned and user-assigned — and picking the wrong one creates headaches down the road.',
+      nl: 'Stop met connection strings en secrets in je code zetten. Echt. Managed Identities in Azure geven je apps een identiteit in Microsoft Entra ID zodat ze kunnen authenticeren bij andere Azure-services zonder dat er ergens credentials opgeslagen staan. Geen keys in omgevingsvariabelen, geen secrets in Key Vault-referenties die iemand vergeet te roteren. Azure beheert de credential-lifecycle voor je. Er zijn twee types — system-assigned en user-assigned — en de verkeerde kiezen levert later hoofdpijn op.'
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const managedIdentitiesPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Managed Identities are a cornerstone of secure Azure development. Understanding when to use each type helps you design more secure and maintainable solutions.',
-      nl: 'Managed Identities zijn een hoeksteen van veilige Azure-ontwikkeling. Begrijpen wanneer elk type te gebruiken helpt je veiligere en beter onderhoudbare oplossingen te ontwerpen.'
+      en: 'Quick rule of thumb: use system-assigned when the identity belongs to one resource and should die with it. Use user-assigned when multiple resources share the same permissions, or when you need to set up RBAC before the resource exists. Either way, use DefaultAzureCredential in your code so it works in both local dev and production. And delete any connection strings you have lying around — they are a breach waiting to happen.',
+      nl: 'Vuistregel: gebruik system-assigned als de identiteit bij een resource hoort en ermee moet verdwijnen. Gebruik user-assigned als meerdere resources dezelfde rechten delen, of als je RBAC moet instellen voordat de resource bestaat. Gebruik in beide gevallen DefaultAzureCredential in je code zodat het werkt in zowel lokale dev als productie. En gooi die connection strings weg die je nog hebt liggen — dat is een breach die op je wacht.'
     }
   }
 };

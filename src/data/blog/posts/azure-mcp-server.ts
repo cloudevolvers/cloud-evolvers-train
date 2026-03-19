@@ -25,8 +25,8 @@ export const azureMcpServerPost: BlogPost = {
   readTime: 14,
   content: {
     introduction: {
-      en: 'The Azure MCP Server represents a paradigm shift in how developers and AI agents interact with Azure resources. By implementing the Model Context Protocol (MCP), it enables AI agents like GitHub Copilot agent mode, OpenAI Agents SDK, and Microsoft Copilot Studio to execute Azure operations through natural language commands. This opens up powerful automation scenarios where your AI assistant becomes a true Azure operations partner.',
-      nl: 'De Azure MCP Server vertegenwoordigt een paradigmaverschuiving in hoe ontwikkelaars en AI agents communiceren met Azure resources. Door het Model Context Protocol (MCP) te implementeren, stelt het AI agents zoals GitHub Copilot agent mode, OpenAI Agents SDK en Microsoft Copilot Studio in staat om Azure-operaties uit te voeren via natuurlijke taalcommandos. Dit opent krachtige automatiseringsscenarios waarbij je AI-assistent een echte Azure-operatiepartner wordt.'
+      en: 'Microsoft shipped an MCP server for Azure, and it\'s more useful than you\'d expect. The Azure MCP Server implements the Model Context Protocol so AI agents — GitHub Copilot agent mode, OpenAI Agents SDK, Copilot Studio — can talk to Azure resources through natural language. Ask your AI to create a storage container, query Cosmos DB, or scale an App Service, and it actually does it. No portal clicking, no CLI scripting. The practical value depends on how much you trust an AI agent with your infrastructure, but the capability is real.',
+      nl: 'Microsoft heeft een MCP-server voor Azure uitgebracht, en die is nuttiger dan je zou verwachten. De Azure MCP Server implementeert het Model Context Protocol zodat AI-agents — GitHub Copilot agent mode, OpenAI Agents SDK, Copilot Studio — via natuurlijke taal met Azure-resources kunnen praten. Vraag je AI om een storage container te maken, Cosmos DB te queryen of een App Service te schalen, en het doet het daadwerkelijk. Geen portaal-geklik, geen CLI-scripting. De praktische waarde hangt af van hoeveel vertrouwen je een AI-agent geeft over je infrastructuur, maar de mogelijkheid is echt.'
     },
     sections: [
       {
@@ -106,8 +106,8 @@ export const azureMcpServerPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Azure MCP Server bridges the gap between conversational AI and Azure infrastructure management. As MCP adoption grows across the industry, expect this to become a standard way of interacting with cloud resources. Start experimenting today with GitHub Copilot agent mode to experience the future of cloud operations.',
-      nl: 'Azure MCP Server overbrugt de kloof tussen conversationele AI en Azure infrastructuurbeheer. Naarmate MCP-adoptie groeit in de industrie, verwacht dat dit een standaard manier wordt om met cloud resources te communiceren. Begin vandaag te experimenteren met GitHub Copilot agent mode om de toekomst van cloud operations te ervaren.'
+      en: 'The Azure MCP Server is worth trying if you already use GitHub Copilot or another MCP-compatible agent. The setup takes minutes, it respects your existing RBAC permissions, and it logs everything. It won\'t replace proper IaC pipelines for production deployments — you still want version-controlled Bicep or Terraform for that. But for ad-hoc queries, quick resource checks, and prototyping, talking to Azure through an AI agent is surprisingly practical.',
+      nl: 'De Azure MCP Server is het proberen waard als je al GitHub Copilot of een andere MCP-compatibele agent gebruikt. De setup kost minuten, het respecteert je bestaande RBAC-permissies en het logt alles. Het vervangt geen IaC-pipelines voor productiedeployments — daar wil je nog steeds versiebeheerde Bicep of Terraform voor. Maar voor ad-hoc queries, snelle resource-checks en prototyping is praten met Azure via een AI-agent verrassend praktisch.'
     }
   }
 };
