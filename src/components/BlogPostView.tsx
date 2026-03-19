@@ -40,172 +40,136 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
     return Array.isArray(rows) ? rows : rows.en;
   };
 
-  const renderSection = (section: BlogSectionType, index: number) => (
-    <motion.section
-      key={index}
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, delay: 0.1 + index * 0.04 }}
-      className="mb-12"
-    >
-      <h2 className="text-[1.4rem] font-semibold text-foreground mb-4 tracking-tight leading-tight">
-        {getText(section.title)}
-      </h2>
-      <p className="text-foreground/85 leading-[1.85] text-[1.02rem]">
-        {getText(section.content)}
-      </p>
-
-      {section.code && (
-        <pre className="mt-5 p-4 bg-muted/60 border border-border rounded-md overflow-x-auto text-sm font-mono">
-          <code>{section.code.code}</code>
-        </pre>
-      )}
-
-      {section.subsections?.map((subsection, subIndex) => (
-        <div key={subIndex} className="mt-7 pl-5 border-l-2 border-border/60">
-          <h3 className="text-base font-medium text-foreground mb-2">
-            {getText(subsection.title)}
-          </h3>
-          <p className="text-foreground/80 leading-[1.8]">
-            {getText(subsection.content)}
-          </p>
-
-          {subsection.list && (
-            <ul className="mt-3 space-y-1.5 list-disc list-outside pl-5">
-              {getList(subsection.list)?.map((item, i) => (
-                <li key={i} className="text-foreground/80 leading-relaxed">{item}</li>
-              ))}
-            </ul>
-          )}
-
-          {subsection.table && (
-            <div className="overflow-x-auto mt-4 border border-border rounded-md">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-muted/50">
-                    {getHeaders(subsection.table.headers).map((header, i) => (
-                      <th key={i} className="px-4 py-2.5 text-left font-medium text-foreground border-b border-border">
-                        {header}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {getRows(subsection.table.rows).map((row, rowIndex) => (
-                    <tr key={rowIndex} className="border-b border-border last:border-0">
-                      {row.map((cell, cellIndex) => (
-                        <td key={cellIndex} className="px-4 py-2.5 text-foreground/80">
-                          {cell}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
-      ))}
-    </motion.section>
-  );
-
   return (
     <div className="min-h-screen bg-background pt-28 pb-24">
-      <div className="max-w-[52rem] mx-auto px-6 lg:px-8">
+      <div className="max-w-[44rem] mx-auto px-6">
         {/* Back */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.25 }}
-          className="mb-8"
+          className="mb-10"
         >
           <Button
             variant="ghost"
             size="sm"
             onClick={onBack}
-            className="text-muted-foreground hover:text-foreground -ml-2 gap-1.5"
+            className="text-muted-foreground hover:text-foreground -ml-3 gap-1.5"
           >
             <ArrowLeft size={15} />
             {language === 'nl' ? 'Alle artikelen' : 'All articles'}
           </Button>
         </motion.div>
 
-        {/* Header */}
+        {/* Byline */}
         <motion.header
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-10"
+          transition={{ duration: 0.3 }}
         >
-          <div className="flex items-center gap-3 mb-4 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2.5 text-sm text-muted-foreground mb-6">
             <span className="font-medium text-foreground">{post.author}</span>
-            <span aria-hidden>&middot;</span>
+            <span>&middot;</span>
             <time>{formatDate(post.date)}</time>
-            <span aria-hidden>&middot;</span>
-            <span>{post.readTime} {language === 'nl' ? 'min lezen' : 'min read'}</span>
+            <span>&middot;</span>
+            <span>{post.readTime} min</span>
           </div>
 
-          <h1 className="text-3xl sm:text-[2.5rem] font-bold text-foreground leading-[1.15] tracking-tight mb-5">
+          <h1 className="text-[2rem] sm:text-[2.4rem] font-bold text-foreground leading-[1.15] tracking-tight">
             {getText(post.title)}
           </h1>
 
-          <p className="text-lg text-foreground/70 leading-relaxed">
+          <p className="mt-5 text-[1.1rem] leading-relaxed text-muted-foreground">
             {getText(post.excerpt)}
           </p>
 
           <div className="flex flex-wrap gap-1.5 mt-5">
             {post.tags.map((tag) => (
-              <Badge
-                key={tag}
-                variant="secondary"
-                className="text-xs font-normal px-2.5 py-0.5"
-              >
+              <Badge key={tag} variant="secondary" className="text-xs font-normal">
                 {tag}
               </Badge>
             ))}
           </div>
+
+          <hr className="mt-10 mb-0 border-border" />
         </motion.header>
 
-        <hr className="border-border mb-10" />
-
-        {/* Article body */}
+        {/* Body */}
         <motion.article
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.08 }}
-          className="prose prose-lg dark:prose-invert prose-headings:tracking-tight prose-headings:text-foreground prose-p:text-foreground/85 prose-li:text-foreground/80 prose-strong:text-foreground prose-a:text-primary max-w-none"
+          transition={{ duration: 0.3, delay: 0.05 }}
+          className="prose prose-neutral dark:prose-invert prose-lg max-w-none
+            prose-headings:font-semibold prose-headings:tracking-tight
+            prose-h2:text-[1.35rem] prose-h2:mt-14 prose-h2:mb-4
+            prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
+            prose-p:leading-[1.8] prose-p:text-foreground/85 prose-p:mb-6
+            prose-li:text-foreground/80 prose-li:leading-[1.7]
+            prose-strong:text-foreground
+            prose-code:text-sm prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+            prose-pre:bg-muted/60 prose-pre:border prose-pre:border-border
+            prose-table:text-sm
+            prose-th:text-left prose-th:font-medium prose-th:bg-muted/50
+            prose-td:border-border prose-th:border-border
+          "
         >
           {/* Introduction */}
-          <p className="text-foreground/85 leading-[1.85] text-[1.02rem] mb-12">
-            {getText(post.content.introduction)}
-          </p>
+          <p>{getText(post.content.introduction)}</p>
 
           {/* Sections */}
-          {post.content.sections.map((section, index) => renderSection(section, index))}
+          {post.content.sections.map((section, index) => (
+            <section key={index}>
+              <h2>{getText(section.title)}</h2>
+              <p>{getText(section.content)}</p>
+
+              {section.code && (
+                <pre><code className={`language-${section.code.language}`}>{section.code.code}</code></pre>
+              )}
+
+              {section.subsections?.map((sub, si) => (
+                <div key={si} className="pl-5 border-l-2 border-border/50 mt-6 mb-8">
+                  <h3>{getText(sub.title)}</h3>
+                  <p>{getText(sub.content)}</p>
+                  {sub.list && (
+                    <ul>
+                      {getList(sub.list)?.map((item, i) => <li key={i}>{item}</li>)}
+                    </ul>
+                  )}
+                  {sub.table && (
+                    <div className="overflow-x-auto">
+                      <table>
+                        <thead>
+                          <tr>
+                            {getHeaders(sub.table.headers).map((h, i) => <th key={i}>{h}</th>)}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {getRows(sub.table.rows).map((row, ri) => (
+                            <tr key={ri}>
+                              {row.map((cell, ci) => <td key={ci}>{cell}</td>)}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </section>
+          ))}
 
           {/* Conclusion */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-            className="mt-14 pt-10 border-t border-border"
-          >
-            <h2 className="text-[1.4rem] font-semibold text-foreground mb-4 tracking-tight">
-              {language === 'nl' ? 'Conclusie' : 'Conclusion'}
-            </h2>
-            <p className="text-foreground/85 leading-[1.85] text-[1.02rem]">
-              {getText(post.content.conclusion)}
-            </p>
-          </motion.div>
+          <hr />
+          <h2>{language === 'nl' ? 'Conclusie' : 'Conclusion'}</h2>
+          <p>{getText(post.content.conclusion)}</p>
         </motion.article>
 
-        {/* Footer */}
+        {/* Footer nav */}
         <div className="mt-20 pt-8 border-t border-border">
           <Button
             variant="ghost"
             size="sm"
             onClick={onBack}
-            className="text-muted-foreground hover:text-foreground -ml-2 gap-1.5"
+            className="text-muted-foreground hover:text-foreground -ml-3 gap-1.5"
           >
             <ArrowLeft size={15} />
             {language === 'nl' ? 'Terug naar alle artikelen' : 'Back to all articles'}

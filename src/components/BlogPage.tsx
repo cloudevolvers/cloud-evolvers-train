@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from '@/hooks/use-translations';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, getLocalizedBlogPost } from '@/data/blog-posts';
 import {
   Calendar,
@@ -12,7 +13,6 @@ import {
   Cloud,
   Wrench,
   Network,
-  Database,
   Key,
   Robot,
   HardDrives,
@@ -21,6 +21,8 @@ import {
   Cube,
   Sparkle,
 } from "@phosphor-icons/react";
+
+const POSTS_PER_PAGE = 12;
 
 const categoryIcons: Record<string, typeof Lightning> = {
   'AI & Automation': Lightning,
@@ -53,12 +55,16 @@ function getCategoryIcon(category: string) {
 
 export function BlogPage() {
   const { language } = useTranslations();
+  const [visible, setVisible] = useState(POSTS_PER_PAGE);
 
   const allPosts = getAllBlogPosts();
   const blogPosts = allPosts.map(post => ({
     ...getLocalizedBlogPost(post, language),
     rawId: post.id,
   }));
+
+  const shown = blogPosts.slice(0, visible);
+  const hasMore = visible < blogPosts.length;
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -71,40 +77,85 @@ export function BlogPage() {
 
   return (
     <div className="min-h-screen bg-background pt-36 pb-20">
-      <motion.div
-        className="max-w-6xl mx-auto px-5"
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-14">
-          <h1 className="text-4xl font-bold text-foreground tracking-tight mb-3">
-            {language === 'nl' ? 'Blog' : 'Blog'}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="mb-12"
+        >
+          <h1 className="text-3xl font-bold text-foreground tracking-tight">
+            Blog
           </h1>
-          <p className="text-muted-foreground text-lg max-w-xl">
+          <p className="mt-2 text-muted-foreground max-w-lg">
             {language === 'nl'
               ? 'Artikelen over Azure, cloud infrastructuur en de nieuwste Microsoft-technologie.'
               : 'Articles on Azure, cloud infrastructure, and the latest Microsoft technology.'}
           </p>
-        </div>
+        </motion.div>
 
-        {/* Posts */}
+        {/* Featured post — first one gets a bigger treatment */}
+        {shown.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.05 }}
+            className="mb-14"
+          >
+            <Link to={`/blog/${shown[0].rawId}`} className="group grid md:grid-cols-2 gap-6 items-start">
+              {shown[0].image && (
+                <div className="aspect-[16/10] rounded-lg overflow-hidden bg-muted">
+                  <img
+                    src={shown[0].image}
+                    alt=""
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="py-1">
+                <div className="flex items-center gap-2 mb-3">
+                  {(() => { const Icon = getCategoryIcon(shown[0].category); return <Icon size={13} weight="bold" className="text-muted-foreground" />; })()}
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                    {shown[0].category}
+                  </span>
+                </div>
+                <h2 className="text-2xl font-bold text-foreground leading-snug group-hover:text-primary transition-colors mb-3">
+                  {shown[0].title}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3">
+                  {shown[0].excerpt}
+                </p>
+                <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
+                  <div className="flex items-center gap-1">
+                    <Calendar size={12} />
+                    <span>{formatDate(shown[0].date)}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock size={12} />
+                    <span>{shown[0].readTime} min</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        )}
+
+        {/* Rest of posts */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-          {blogPosts.map((post, index) => {
+          {shown.slice(1).map((post, index) => {
             const Icon = getCategoryIcon(post.category);
 
             return (
               <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
+                key={post.rawId}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.5) }}
+                transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.3) }}
               >
                 <Link to={`/blog/${post.rawId}`} className="group block">
-                  {/* Image */}
                   {post.image && (
-                    <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-muted">
+                    <div className="aspect-[16/10] mb-3 rounded-lg overflow-hidden bg-muted">
                       <img
                         src={post.image}
                         alt=""
@@ -113,32 +164,28 @@ export function BlogPage() {
                     </div>
                   )}
 
-                  {/* Category */}
-                  <div className="flex items-center gap-2 mb-2.5">
-                    <Icon size={14} weight="bold" className="text-muted-foreground" />
-                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Icon size={13} weight="bold" className="text-muted-foreground" />
+                    <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
                       {post.category}
                     </span>
                   </div>
 
-                  {/* Title */}
-                  <h2 className="text-lg font-semibold text-foreground leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-base font-semibold text-foreground leading-snug mb-1.5 group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
-                  </h2>
+                  </h3>
 
-                  {/* Excerpt */}
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 mb-2">
                     {post.excerpt}
                   </p>
 
-                  {/* Meta */}
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground/70">
+                  <div className="flex items-center gap-3 text-[11px] text-muted-foreground/60">
                     <div className="flex items-center gap-1">
-                      <Calendar size={12} weight="regular" />
+                      <Calendar size={11} />
                       <span>{formatDate(post.date)}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Clock size={12} weight="regular" />
+                      <Clock size={11} />
                       <span>{post.readTime} min</span>
                     </div>
                   </div>
@@ -147,7 +194,21 @@ export function BlogPage() {
             );
           })}
         </div>
-      </motion.div>
+
+        {/* Load more */}
+        {hasMore && (
+          <div className="mt-14 text-center">
+            <Button
+              variant="outline"
+              onClick={() => setVisible(v => v + POSTS_PER_PAGE)}
+            >
+              {language === 'nl'
+                ? `Meer artikelen laden (${blogPosts.length - visible} resterend)`
+                : `Load more articles (${blogPosts.length - visible} remaining)`}
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
