@@ -27,6 +27,11 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
       label: t.nav?.training || "Training"
     },
     {
+      href: "/blog",
+      icon: Article,
+      label: t.nav?.blog || "Blog"
+    },
+    {
       href: "/azure-excellence",
       icon: Shield,
       label: t.nav?.azureExcellence || "Azure Excellence"
@@ -40,11 +45,6 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
       href: "/about",
       icon: Globe,
       label: t.nav?.about || "About"
-    },
-    {
-      href: "/blog",
-      icon: Article,
-      label: t.nav?.blog || "Blog"
     },
     {
       href: "/contact",
