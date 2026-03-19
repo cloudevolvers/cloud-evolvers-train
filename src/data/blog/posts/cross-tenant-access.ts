@@ -11,7 +11,7 @@ export const crossTenantAccessPost: BlogPost = {
     nl: 'Configureer inbound en outbound cross-tenant access in Microsoft Entra ID — B2B samenwerking, B2B direct connect, trust instellingen, tenant restrictions v2 en cross-tenant synchronisatie.'
   },
   date: '2026-02-05',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'B2B', 'Cross-Tenant', 'Collaboration', 'Security'],
   image: '/images/unsplash/business-collaboration.jpg',
   excerpt: {

@@ -11,7 +11,7 @@ export const passwordlessAuthenticationPost: BlogPost = {
     nl: 'Deploy FIDO2 security keys, passkeys en Windows Hello for Business om wachtwoord-gebaseerde aanvallen te elimineren en Zero Trust authenticatie te bereiken'
   },
   date: '2025-12-05',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Entra', 'Security', 'Passwordless', 'FIDO2', 'Zero Trust'],
   image: '/images/unsplash/zero-trust-security-model.jpg',
   excerpt: {

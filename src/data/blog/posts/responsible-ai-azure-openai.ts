@@ -11,12 +11,12 @@ export const responsibleAiPost: BlogPost = {
     nl: 'Leer hoe je responsible AI-practices implementeert in Azure OpenAI deployments met content filtering, prompt engineering en harm mitigation-strategieën'
   },
   date: '2025-12-01',
-  author: 'Falk Krahl',
-  tags: ['Azure OpenAI', 'Responsible AI', 'GPT-4', 'AI Safety', 'Content Filtering'],
+  author: 'Yair Knijn',
+  tags: ['Azure OpenAI', 'Responsible AI', 'GPT-5', 'AI Safety', 'Content Filtering'],
   image: '/images/pexels/pexels-artificial-intelligence-robot.jpg',
   excerpt: {
-    en: 'Deploying GPT-4 and other LLMs requires careful consideration of responsible AI principles. Learn the four-layer mitigation approach: model, safety system, application, and positioning.',
-    nl: 'Het deployen van GPT-4 en andere LLMs vereist zorgvuldige overweging van responsible AI-principes. Leer de vier-lagen mitigatie-aanpak: model, safety system, applicatie en positionering.'
+    en: 'Deploying LLMs like GPT-5 on Azure requires careful consideration of responsible AI principles. Learn the four-layer mitigation approach: model, safety system, application, and positioning.',
+    nl: 'Het deployen van LLMs zoals GPT-5 op Azure vereist zorgvuldige overweging van responsible AI-principes. Leer de vier-lagen mitigatie-aanpak: model, safety system, applicatie en positionering.'
   },
   category: {
     en: 'AI & Machine Learning',

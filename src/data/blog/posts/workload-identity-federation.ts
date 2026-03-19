@@ -11,7 +11,7 @@ export const workloadIdentityFederationPost: BlogPost = {
     nl: 'Hoe workload identity federation client secrets in CI/CD vervangt door token exchange — setup voor GitHub Actions, Azure DevOps en AKS met praktische configuratiedetails.'
   },
   date: '2026-02-28',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'Workload Identity', 'GitHub Actions', 'DevOps', 'Security'],
   image: '/images/unsplash/ci-cd-pipeline-automation.jpg',
   excerpt: {

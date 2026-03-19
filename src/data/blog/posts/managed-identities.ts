@@ -11,7 +11,7 @@ export const managedIdentitiesPost: BlogPost = {
     nl: 'Een uitgebreide gids voor het begrijpen en implementeren van Managed Identities in Azure voor veilige, credential-vrije authenticatie.'
   },
   date: '2025-06-15',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Security', 'Identity', 'Best Practices', 'Managed Identity'],
   image: '/images/unsplash/identity-access-management.jpg',
   excerpt: {

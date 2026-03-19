@@ -11,7 +11,7 @@ export const azureUpdateManagerPost: BlogPost = {
     nl: 'Leer hoe je Azure Update Manager gebruikt om patching voor Windows en Linux VMs te automatiseren over subscriptions met maintenance windows en compliance reporting'
   },
   date: '2025-06-06',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure Update Manager', 'VM Patching', 'Automation', 'Security', 'Compliance'],
   image: '/images/pexels/pexels-modern-server-room.jpg',
   excerpt: {

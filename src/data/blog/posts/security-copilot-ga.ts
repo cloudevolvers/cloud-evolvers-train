@@ -11,7 +11,7 @@ export const securityCopilotGaPost: BlogPost = {
     nl: 'Een praktische blik op Microsoft Security Copilot in productie — hoe het integreert met Sentinel, Defender XDR en Intune, het SCU-prijsmodel, en wat het daadwerkelijk goed doet versus waar het tekortschiet'
   },
   date: '2026-01-20',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Security', 'Copilot', 'AI', 'Microsoft Sentinel', 'SOC'],
   image: '/images/unsplash/threat-detection-monitoring.jpg',
   excerpt: {

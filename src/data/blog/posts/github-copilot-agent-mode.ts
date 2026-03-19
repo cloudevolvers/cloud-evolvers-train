@@ -11,7 +11,7 @@ export const githubCopilotAgentModePost: BlogPost = {
     nl: 'Ontdek hoe GitHub Copilot evolueerde van eenvoudige code-aanvullingen naar agent mode, met autonome multi-bestandbewerking, terminalcommando\'s en iteratief probleemoplossen.'
   },
   date: '2026-03-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['GitHub', 'Copilot', 'AI', 'Developer Tools', 'Productivity'],
   image: '/images/pexels/pexels-developer-coding-setup.jpg',
   excerpt: {

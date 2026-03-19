@@ -11,7 +11,7 @@ export const entraExternalIdPost: BlogPost = {
     nl: 'Bouw klantgerichte authenticatie met Microsoft Entra External ID — de opvolger van Azure AD B2C. Behandelt externe tenant setup, user flows, native authentication SDK, custom authentication extensions en prijzen.'
   },
   date: '2026-01-08',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra External ID', 'CIAM', 'Identity', 'B2C', 'Authentication'],
   image: '/images/unsplash/digital-transformation.jpg',
   excerpt: {

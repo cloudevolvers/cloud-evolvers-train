@@ -11,7 +11,7 @@ export const mandatoryMfaEnforcementPost: BlogPost = {
     nl: 'Microsoft dwingt verplichte MFA af voor alle Azure portal en admin center toegang. Leer de tijdlijn, vereisten en hoe je je organisatie voorbereidt'
   },
   date: '2025-12-04',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'MFA', 'Security', 'Compliance', 'Entra ID'],
   image: '/images/unsplash/compliance-governance-audit.jpg',
   excerpt: {

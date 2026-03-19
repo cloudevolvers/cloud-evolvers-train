@@ -11,7 +11,7 @@ export const flexConsumptionPost: BlogPost = {
     nl: 'Ontdek Azure Functions Flex Consumption plan met VNet-integratie, always-ready instances, per-function scaling en flexibele geheugenconfiguratie'
   },
   date: '2025-12-02',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure Functions', 'Serverless', 'Flex Consumption', 'VNet', 'Scaling'],
   image: '/images/pexels/pexels-serverless-computing.jpg',
   excerpt: {

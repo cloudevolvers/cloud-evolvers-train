@@ -11,7 +11,7 @@ export const azureDeploymentEnvironmentsPost: BlogPost = {
     nl: 'Hoe Azure Deployment Environments platform engineering-teams in staat stelt om beheerde self-service infrastructuur te bieden met IaC-templates in Bicep, Terraform of Pulumi'
   },
   date: '2026-01-05',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Platform Engineering', 'DevOps', 'IaC', 'Developer Experience'],
   image: '/images/unsplash/cloud-infrastructure-network.jpg',
   excerpt: {

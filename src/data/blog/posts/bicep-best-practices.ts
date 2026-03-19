@@ -11,7 +11,7 @@ export const bicepBestPracticesPost: BlogPost = {
     nl: 'Leer essentiële Bicep best practices voor het schrijven van onderhoudbare, veilige en efficiënte Infrastructure as Code voor Azure.'
   },
   date: '2025-05-20',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Bicep', 'IaC', 'DevOps', 'Best Practices'],
   image: '/images/pexels/pexels-infrastructure-as-code.jpg',
   excerpt: {

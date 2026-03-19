@@ -11,7 +11,7 @@ export const aksNetworkPoliciesPost: BlogPost = {
     nl: 'Beheers Kubernetes network policies in AKS met Azure CNI Powered by Cilium voor Layer 7 filtering, FQDN-gebaseerde policies en microsegmentatie'
   },
   date: '2025-12-03',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['AKS', 'Kubernetes', 'Security', 'Cilium', 'Zero Trust', 'Networking'],
   image: '/images/unsplash/cloud-infrastructure-network.jpg',
   excerpt: {

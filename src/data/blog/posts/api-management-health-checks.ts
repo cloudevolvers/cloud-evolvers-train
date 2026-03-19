@@ -11,7 +11,7 @@ export const apiManagementHealthChecksPost: BlogPost = {
     nl: 'Leer hoe je uitgebreide health checks en monitoring implementeert voor je APIs in Azure API Management.'
   },
   date: '2025-04-15',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'API Management', 'Monitoring', 'DevOps', 'Health Checks'],
   image: '/images/unsplash/api-integration.jpg',
   excerpt: {

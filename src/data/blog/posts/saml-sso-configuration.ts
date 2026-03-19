@@ -11,7 +11,7 @@ export const samlSsoConfigurationPost: BlogPost = {
     nl: 'Een praktische walkthrough van het configureren van SAML-gebaseerde single sign-on in Microsoft Entra ID, inclusief claimtransformaties, certificaatbeheer en het oplossen van de meest voorkomende SSO-fouten.'
   },
   date: '2026-03-12',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'SAML', 'SSO', 'Identity', 'Federation'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {

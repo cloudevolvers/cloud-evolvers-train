@@ -11,7 +11,7 @@ export const azureMcpServerPost: BlogPost = {
     nl: 'Leer hoe je de Azure MCP Server gebruikt om AI agents zoals GitHub Copilot te laten communiceren met Azure resources via natuurlijke taalcommandos'
   },
   date: '2025-12-06',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'MCP', 'AI Agents', 'GitHub Copilot', 'Automation'],
   image: '/images/pexels/pexels-artificial-intelligence-robot.jpg',
   excerpt: {

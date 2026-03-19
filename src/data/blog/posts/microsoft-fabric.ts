@@ -11,7 +11,7 @@ export const microsoftFabricPost: BlogPost = {
     nl: 'Een diepgaande kijk op Microsoft Fabric, het uniforme analytics platform dat data engineering, data warehousing, real-time analytics en Power BI consolideert onder één SaaS-ervaring met OneLake als kern.'
   },
   date: '2026-03-05',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Fabric', 'Data Engineering', 'Analytics', 'Azure', 'Power BI'],
   image: '/images/unsplash/business-analytics-dashboard.jpg',
   excerpt: {

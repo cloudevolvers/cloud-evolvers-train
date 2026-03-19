@@ -11,7 +11,7 @@ export const azureDevOpsAuditPost: BlogPost = {
     nl: 'Leer hoe je PowerShell gebruikt om Azure DevOps audit logs te bevragen en uitgebreide HTML-rapporten te genereren voor compliance- en beveiligingsreviews'
   },
   date: '2025-06-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure DevOps', 'PowerShell', 'Auditing', 'Compliance', 'Security'],
   image: '/images/unsplash/compliance-governance-audit.jpg',
   excerpt: {

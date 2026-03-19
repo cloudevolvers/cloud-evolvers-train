@@ -11,7 +11,7 @@ export const windows365LinkPost: BlogPost = {
     nl: 'Ontdek Windows 365 Link, Microsoft\'s compacte thin client speciaal ontworpen voor Windows 365 Cloud PC\'s met nul lokale dataopslag en automatische beveiligingsupdates'
   },
   date: '2026-02-01',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Windows 365', 'Cloud PC', 'Microsoft', 'Remote Work', 'Endpoint'],
   image: '/images/pexels/pexels-hybrid-work-environment.jpg',
   excerpt: {

@@ -11,7 +11,7 @@ export const azureContainerAppsSessionsPost: BlogPost = {
     nl: 'Leer hoe Azure Container Apps dynamic sessions AI-applicaties in staat stellen om onvertrouwde code veilig uit te voeren in Hyper-V geïsoleerde sandboxes met ingebouwde LangChain en Semantic Kernel integratie'
   },
   date: '2026-02-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Container Apps', 'AI', 'Serverless', 'Python'],
   image: '/images/unsplash/docker-containerization.jpg',
   excerpt: {

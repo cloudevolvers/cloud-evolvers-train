@@ -11,7 +11,7 @@ export const oidcVsSamlMigrationPost: BlogPost = {
     nl: 'Een praktische vergelijking van OIDC, SAML 2.0 en WS-Federation in Microsoft Entra ID — wanneer elk protocol te kiezen en hoe te migreren van ADFS naar Entra ID cloud authenticatie.'
   },
   date: '2026-01-18',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'OIDC', 'SAML', 'WS-Fed', 'Identity', 'Migration'],
   image: '/images/unsplash/api-integration.jpg',
   excerpt: {

@@ -11,7 +11,7 @@ export const azureVerifiedModulesPost: BlogPost = {
     nl: 'Ontdek Azure Verified Modules (AVM), het door Microsoft onderhouden IaC-register voor Bicep en Terraform dat geteste, beheerde en productieklare modules biedt voor Azure-resources.'
   },
   date: '2026-02-18',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'IaC', 'Terraform', 'Bicep', 'DevOps'],
   image: '/images/pexels/pexels-infrastructure-as-code.jpg',
   excerpt: {

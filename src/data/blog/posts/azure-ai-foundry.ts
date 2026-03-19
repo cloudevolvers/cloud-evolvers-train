@@ -11,7 +11,7 @@ export const azureAiFoundryPost: BlogPost = {
     nl: 'Ontdek Azure AI Foundry, de hernoemde en uitgebreide opvolger van Azure AI Studio, met een uniforme modelcatalogus, prompt flow, evaluatietools en governance voor het bouwen van productie AI-applicaties.'
   },
   date: '2026-03-15',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'AI', 'Azure AI Foundry', 'Machine Learning', 'LLM'],
   image: '/images/unsplash/ai-machine-learning.jpg',
   excerpt: {

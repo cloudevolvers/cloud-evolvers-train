@@ -11,7 +11,7 @@ export const entraPermissionsManagementPost: BlogPost = {
     nl: 'Ontdek en right-size over-geprivilegieerde identiteiten in Azure, AWS en GCP met Microsoft Entra Permissions Management — een CIEM-oplossing die het verschil tussen verleende en gebruikte permissies bijhoudt.'
   },
   date: '2026-01-28',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'Permissions Management', 'CIEM', 'Multi-Cloud', 'Security'],
   image: '/images/pexels/pexels-cyber-security-concept.jpg',
   excerpt: {
