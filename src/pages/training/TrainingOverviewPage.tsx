@@ -134,19 +134,62 @@ const TrainingOverviewPage: React.FC = () => {
       <PageHeroBg />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            {t?.training?.overview?.title || 'Training Courses'}
-          </h1>
-          <div className="mb-4 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
-          <p className="text-muted-foreground max-w-2xl">
-            {t?.training?.overview?.subtitle || 'Azure & Microsoft courses by certified trainers'}
-          </p>
+        {/* Premium Hero Section */}
+        <div className="relative mb-12 rounded-[2rem] overflow-hidden border border-border/40 bg-gradient-to-b from-card/60 to-background/60 backdrop-blur-xl shadow-2xl dark:shadow-emerald-900/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-blue-500/5" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div className="p-8 md:p-12 lg:col-span-7 lg:pr-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-sm font-medium mb-8 backdrop-blur-md">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Premium Tech Education
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-foreground leading-[1.1]">
+                {t?.training?.overview?.title || 'Master the Cloud.'}
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400 mt-2">
+                  Accelerate Your Impact.
+                </span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
+                {t?.training?.overview?.subtitle || 'Elite Azure & Microsoft courses taught by certified practitioners. Real-world skills for modern engineering teams.'}
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  className="rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-emerald-500/20 transition-all hover:shadow-emerald-500/40 hover:-translate-y-0.5"
+                  onClick={() => {
+                    document.getElementById('training-filters')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
+                >
+                  Browse Courses
+                </Button>
+                <Link to="/contact">
+                  <Button variant="outline" className="rounded-full px-8 py-6 text-base font-semibold bg-background/50 backdrop-blur-sm border-border/60 hover:bg-muted/50 transition-all">
+                    Request Custom Training
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative h-64 sm:h-80 lg:h-full lg:col-span-5 w-full hidden md:block rounded-l-[3rem] overflow-hidden shadow-inner border-l border-border/40 my-8 mr-8">
+              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-transparent mix-blend-overlay z-10" />
+              <img
+                src="/images/cloud_training_hero.png"
+                alt="Cloud Training Concept"
+                className="absolute inset-0 w-full h-full object-cover object-center scale-[1.02] transition-transform duration-[20s] hover:scale-110"
+              />
+            </div>
+          </div>
         </div>
 
-        <WhyCloudEvolvers />
+        <div className="mb-16">
+          <WhyCloudEvolvers />
+        </div>
 
+        <div id="training-filters" className="scroll-mt-32" />
         {/* Filters */}
         <TrainingFilters
           filterState={filterState}
