@@ -85,7 +85,7 @@ export function Header() {
           fixed top-0 left-0 right-0 z-[9999]
           transition-all duration-500 ease-out
           ${isScrolled
-            ? 'py-2 bg-white/90 backdrop-blur-xl shadow-lg shadow-slate-200/20 border-b border-slate-200/50'
+            ? 'py-2 bg-white/90 backdrop-blur-xl shadow-md shadow-slate-900/5 border-b border-slate-200/50'
             : 'py-4 bg-white/50 backdrop-blur-md border-b border-transparent'
           }
         `}
@@ -109,7 +109,7 @@ export function Header() {
                 className="h-9 sm:h-10 w-auto rounded-md"
               />
               <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 group-hover:text-slate-700 transition-colors duration-200">
+                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-800 group-hover:text-slate-700 transition-colors duration-200">
                   Cloud Evolvers
                 </span>
                 <span className="text-[10px] sm:text-xs font-medium text-slate-500 tracking-wide hidden sm:block">
@@ -142,7 +142,7 @@ export function Header() {
                       {isActive && (
                         <motion.div
                           layoutId="nav-pill"
-                          className="absolute inset-0 bg-neutral-900 rounded-full"
+                          className="absolute inset-0 bg-slate-800 rounded-full"
                           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                         />
                       )}

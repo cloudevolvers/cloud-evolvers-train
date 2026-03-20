@@ -38,7 +38,7 @@ const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: 
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover object-top opacity-20 transition-opacity group-hover:opacity-30"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
                 </>
             )}
 
@@ -83,40 +83,39 @@ export function BentoFeatures() {
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
                     <Link
                         to="/training/azure-administrator"
-                        className="group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-950 transition-colors hover:border-neutral-400"
+                        className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition-colors hover:border-slate-300"
                     >
                         <div className="absolute inset-0">
                             <img
                                 src="/training-categories/azure-administrator.jpg"
                                 alt=""
-                                className="h-full w-full object-cover opacity-45 transition-opacity group-hover:opacity-60"
+                                className="h-full w-full object-cover opacity-10 transition-opacity group-hover:opacity-15"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/65 to-sky-950/60" />
                         </div>
 
                         <div className="relative z-10 flex min-h-[360px] flex-col p-8 lg:p-10">
                             <div className="flex items-center justify-between">
-                                <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/75">
+                                <div className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
                                     {b?.featuredLabel || "Most requested by teams"}
                                 </div>
-                                <ArrowUpRight className="h-5 w-5 text-white/55 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                                <ArrowUpRight className="h-5 w-5 text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                             </div>
 
-                            <div className="mt-12 w-fit rounded-xl bg-white/10 p-3 text-white/70">
+                            <div className="mt-12 w-fit rounded-xl bg-slate-100 p-3 text-slate-600">
                                 <Cog className="h-6 w-6" />
                             </div>
-                            <p className="mt-8 text-sm font-medium uppercase tracking-[0.16em] text-sky-200/80">
+                            <p className="mt-8 text-sm font-medium uppercase tracking-wider text-slate-400">
                                 {b?.featuredKicker || "Operations track"}
                             </p>
-                            <h3 className="font-display mt-3 max-w-lg text-3xl font-semibold text-white lg:text-4xl">
+                            <h3 className="font-display mt-3 max-w-lg text-3xl font-semibold text-slate-900 lg:text-4xl">
                                 {b?.featuredTitle || "AZ-104 for admins who need to run Azure well."}
                             </h3>
-                            <p className="mt-5 max-w-xl text-base leading-7 text-white/72">
+                            <p className="mt-5 max-w-xl text-base leading-7 text-slate-500">
                                 {b?.featuredDesc || "Identity, networking, storage, governance, and operational decision-making taught through the kind of environment work teams actually inherit."}
                             </p>
 
                             <div className="mt-auto pt-12">
-                                <span className="inline-flex items-center text-sm font-medium text-white/80 transition-transform group-hover:translate-x-1">
+                                <span className="inline-flex items-center text-sm font-medium text-slate-700 transition-transform group-hover:translate-x-1">
                                     {b?.featuredCta || "See the administrator track"} <ArrowRight className="ml-2 h-4 w-4" />
                                 </span>
                             </div>
@@ -161,7 +160,7 @@ export function BentoFeatures() {
                             className="group rounded-[2rem] border border-border bg-[linear-gradient(160deg,rgba(255,255,255,0.95),rgba(244,246,250,0.95))] p-6 transition-colors hover:border-neutral-400"
                         >
                             <div className="flex h-full flex-col">
-                                <div className="w-fit rounded-xl bg-emerald-500/10 p-3 text-emerald-700">
+                                <div className="w-fit rounded-xl bg-slate-100 p-3 text-slate-600">
                                     <BriefcaseBusiness className="h-6 w-6" />
                                 </div>
                                 <h3 className="mt-5 text-xl font-semibold text-foreground">
@@ -183,7 +182,7 @@ export function BentoFeatures() {
                     className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 sm:p-8"
                 >
                     <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
-                        <div className="overflow-hidden rounded-[1.5rem] bg-neutral-950">
+                        <div className="overflow-hidden rounded-[1.5rem] bg-slate-100">
                             <img
                                 src="/1625557501943.jpg"
                                 alt="Yaïr Knijn"
@@ -191,7 +190,7 @@ export function BentoFeatures() {
                             />
                         </div>
                         <div>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
                                 <ShieldCheck className="h-3.5 w-3.5" />
                                 <span>{b?.mctTrainer || "Microsoft Certified Trainer"}</span>
                             </div>
