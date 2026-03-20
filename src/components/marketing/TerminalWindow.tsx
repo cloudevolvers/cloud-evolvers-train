@@ -52,15 +52,15 @@ export function TerminalWindow({ className = "" }: { className?: string }) {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className={`rounded-[1.4rem] border border-emerald-300/15 bg-[#07111f]/88 p-4 shadow-[0_25px_60px_rgba(0,0,0,0.45)] backdrop-blur-md ${className}`}
+            className={`rounded-xl border border-slate-200 bg-white p-4 shadow-md ${className}`}
         >
             <div className="flex items-center justify-between">
                 <div className="flex gap-1.5">
-                    <span className="h-2.5 w-2.5 rounded-full bg-rose-400/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-300/80" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
                 </div>
-                <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500">
+                <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-400">
                     Lab snapshot
                 </span>
             </div>
@@ -71,8 +71,8 @@ export function TerminalWindow({ className = "" }: { className?: string }) {
                         key={i}
                         className={
                             commands[i]?.type === "cmd"
-                                ? "text-emerald-200/90"
-                                : "text-slate-300"
+                                ? "text-slate-800"
+                                : "text-slate-400"
                         }
                     >
                         {line}
@@ -82,7 +82,7 @@ export function TerminalWindow({ className = "" }: { className?: string }) {
                     <motion.span
                         animate={{ opacity: [0, 1, 0] }}
                         transition={{ repeat: Infinity, duration: 0.8 }}
-                        className="inline-block h-3.5 w-1.5 translate-y-[1px] bg-emerald-300/80"
+                        className="inline-block h-3.5 w-1.5 translate-y-[1px] bg-slate-400"
                     />
                 )}
             </div>
