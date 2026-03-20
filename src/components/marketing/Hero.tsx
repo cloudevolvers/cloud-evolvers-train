@@ -9,7 +9,7 @@ export function Hero() {
     const marketing = t.hero?.marketing;
 
     return (
-        <section className="relative overflow-hidden bg-[#fafafa]">
+        <section className="relative overflow-hidden bg-white">
             {/* Thin top accent line */}
             <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
