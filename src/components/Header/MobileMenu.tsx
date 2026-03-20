@@ -16,7 +16,7 @@ interface MobileMenuProps {
 
 /**
  * MobileMenu Component - Mobile navigation overlay
- * 
+ *
  * Displays full navigation menu and language switcher for mobile devices.
  * Includes smooth animations and backdrop for better UX.
  */
@@ -45,7 +45,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
 
@@ -71,16 +71,16 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                       flex items-center gap-3 p-3 rounded-lg
                       transition-all duration-200
                       ${isActive
-                        ? 'bg-neutral-100 dark:bg-neutral-800/50 text-foreground'
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800'
+                        ? 'bg-neutral-100 text-foreground'
+                        : 'text-gray-700 hover:bg-gray-100'
                       }
                     `}
                   >
                     <div className={`
                       w-10 h-10 rounded-lg flex items-center justify-center
                       ${isActive
-                        ? 'bg-neutral-200 dark:bg-neutral-700'
-                        : 'bg-gray-200 dark:bg-slate-700'
+                        ? 'bg-neutral-200'
+                        : 'bg-gray-200'
                       }
                     `}>
                       <item.icon
@@ -88,7 +88,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                         weight={isActive ? "fill" : "regular"}
                         className={isActive
                           ? 'text-foreground'
-                          : 'text-gray-600 dark:text-gray-400'
+                          : 'text-gray-600'
                         }
                       />
                     </div>
@@ -110,7 +110,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                     font-semibold transition-all duration-200
                     ${language === 'nl'
                       ? 'bg-orange-500 hover:bg-orange-600 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800'
+                      : 'text-gray-700 hover:bg-gray-100'
                     }
                   `}
                 >
@@ -132,7 +132,7 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
                     font-semibold transition-all duration-200
                     ${language === 'en'
                       ? 'bg-foreground hover:bg-foreground/90 text-background'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800'
+                      : 'text-gray-700 hover:bg-gray-100'
                     }
                   `}
                 >
