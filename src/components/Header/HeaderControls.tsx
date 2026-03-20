@@ -41,7 +41,7 @@ export function HeaderControls({
             e.stopPropagation();
             setIsMobileMenuOpen(!isMobileMenuOpen);
           }}
-          className="p-1.5 rounded-lg border border-border bg-card hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-200"
+          className="p-1.5 rounded-lg border border-border bg-card hover:bg-slate-100 transition-all duration-200"
           aria-label="Toggle mobile menu"
         >
           <AnimatePresence mode="wait">
@@ -53,9 +53,9 @@ export function HeaderControls({
               transition={{ duration: 0.2 }}
             >
               {isMobileMenuOpen ? (
-                <X size={20} weight="bold" className="text-gray-700 dark:text-gray-300" />
+                <X size={20} weight="bold" className="text-gray-700" />
               ) : (
-                <List size={20} weight="bold" className="text-gray-700 dark:text-gray-300" />
+                <List size={20} weight="bold" className="text-gray-700" />
               )}
             </motion.div>
           </AnimatePresence>
@@ -82,7 +82,7 @@ export function HeaderControls({
               transition-all duration-200
               ${language === 'en'
                 ? 'bg-foreground hover:bg-foreground/90 text-background shadow-sm'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700'
+                : 'text-gray-700 hover:bg-gray-200'
               }
             `}
           >
@@ -104,7 +104,7 @@ export function HeaderControls({
               transition-all duration-200
               ${language === 'nl'
                 ? 'bg-orange-500 hover:bg-orange-600 text-white shadow-sm'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700'
+                : 'text-gray-700 hover:bg-gray-200'
               }
             `}
           >

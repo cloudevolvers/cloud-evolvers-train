@@ -44,7 +44,7 @@ export function HeaderBrand({ isScrolled }: HeaderBrandProps) {
 
           {/* Tagline - Always visible, compact */}
           <motion.div
-            className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 font-medium leading-none mt-0.5"
+            className="text-[10px] sm:text-xs text-gray-600 font-medium leading-none mt-0.5"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -59,8 +59,7 @@ export function HeaderBrand({ isScrolled }: HeaderBrandProps) {
         className="
           hidden lg:flex items-center gap-2 rounded-md
           bg-emerald-100 text-emerald-700
-          dark:bg-emerald-500/10 dark:text-emerald-400
-          border border-emerald-200 dark:border-emerald-500/20
+          border border-emerald-200
           px-3 py-1 ml-4 flex-shrink-0 min-w-fit
           font-semibold text-xs tracking-wide
         "
