@@ -1,15 +1,5 @@
-import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import {
-    ArrowRight,
-    ArrowUpRight,
-    BriefcaseBusiness,
-    Building2,
-    Cloud,
-    Cog,
-    Shield,
-    ShieldCheck
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/use-translations";
@@ -17,13 +7,12 @@ import { useTranslations } from "@/hooks/use-translations";
 interface BentoCardProps {
     description: string;
     exploreLabel: string;
-    icon: ComponentType<{ className?: string }>;
     image: string;
     title: string;
     to: string;
 }
 
-const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: BentoCardProps) => {
+const BentoCard = ({ title, description, to, image, exploreLabel }: BentoCardProps) => {
     return (
         <Link
             to={to}
@@ -43,10 +32,7 @@ const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: 
             )}
 
             <div className="relative z-10 flex flex-col p-5">
-                <div className="w-fit rounded-lg bg-slate-100 p-2 text-slate-500">
-                    <Icon className="h-4 w-4" />
-                </div>
-                <h3 className="mt-3 text-lg font-semibold text-slate-900">{title}</h3>
+                <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-500">{description}</p>
                 <div className="mt-4 inline-flex items-center text-sm font-medium text-slate-700 transition-transform group-hover:translate-x-1">
                     {exploreLabel} <ArrowRight className="ml-2 h-4 w-4" />
@@ -66,15 +52,15 @@ export function BentoFeatures() {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
-                        <h2 className="font-display text-3xl font-semibold text-foreground md:text-5xl">
+                        <h2 className="font-display text-3xl font-semibold text-slate-900 md:text-5xl">
                             {b?.title || "Choose the training track that matches the work in front of you."}
                         </h2>
-                        <p className="mt-4 text-lg text-muted-foreground">
+                        <p className="mt-4 text-lg text-slate-500">
                             {b?.subtitle || "Most teams come to us for one of these routes: Microsoft fundamentals, Azure operations, architecture, or Microsoft 365 administration."}
                         </p>
                     </div>
                     <Link to="/training">
-                        <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+                        <Button variant="ghost" className="text-slate-500 hover:text-slate-900">
                             {b?.viewAllModules || "View all training"} <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </Link>
@@ -95,10 +81,7 @@ export function BentoFeatures() {
                                 <ArrowUpRight className="h-5 w-5 text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                             </div>
 
-                            <div className="mt-12 w-fit rounded-xl bg-slate-100 p-3 text-slate-600">
-                                <Cog className="h-6 w-6" />
-                            </div>
-                            <p className="mt-8 text-sm font-medium uppercase tracking-wider text-slate-400">
+                            <p className="mt-12 text-sm font-medium uppercase tracking-wider text-slate-400">
                                 {b?.featuredKicker || "Operations track"}
                             </p>
                             <h3 className="font-display mt-3 max-w-lg text-3xl font-semibold text-slate-900 lg:text-4xl">
@@ -120,7 +103,7 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.fundamentalsTitle || "AZ-900 Fundamentals"}
                             description={b?.fundamentalsDesc || "For teams that need a clear baseline before they start operating or designing in Azure."}
-                            icon={Cloud}
+
                             to="/training/azure-fundamentals"
                             exploreLabel={exploreLabel}
                             image="/training-categories/azure-fundamentals.jpg"
@@ -128,7 +111,7 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.architectTitle || "AZ-305 Architecture"}
                             description={b?.architectDesc || "For architects shaping landing zones, governance, resilience, and cloud design decisions."}
-                            icon={BriefcaseBusiness}
+
                             to="/training/azure-solutions-architect"
                             exploreLabel={exploreLabel}
                             image="/training-categories/azure-solutions-architect.jpg"
@@ -136,7 +119,7 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.securityTitle || "AZ-500 Security"}
                             description={b?.securityDesc || "For teams working on identity, posture management, and operational controls across Microsoft cloud."}
-                            icon={Shield}
+
                             to="/training/azure-security-engineer"
                             exploreLabel={exploreLabel}
                             image="/training-categories/azure-security-engineer.jpg"
@@ -144,7 +127,7 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.m365Title || "Microsoft 365 Administration"}
                             description={b?.m365Desc || "For teams responsible for tenant operations, identity, compliance, and day-to-day Microsoft 365 administration."}
-                            icon={Building2}
+
                             to="/training/microsoft-365-administrator"
                             exploreLabel={exploreLabel}
                             image="/training-categories/microsoft-365-administrator.jpg"
@@ -154,16 +137,13 @@ export function BentoFeatures() {
                             className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-slate-300 hover:shadow-sm"
                         >
                             <div className="flex h-full flex-col">
-                                <div className="w-fit rounded-xl bg-slate-100 p-3 text-slate-600">
-                                    <BriefcaseBusiness className="h-6 w-6" />
-                                </div>
-                                <h3 className="mt-5 text-xl font-semibold text-foreground">
+                                <h3 className="text-xl font-semibold text-slate-900">
                                     {b?.teamTitle || "In-company Azure sessions"}
                                 </h3>
-                                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                                <p className="mt-3 text-sm leading-7 text-slate-500">
                                     {b?.teamDesc || "Use the homepage as a route into custom team training: aligned on your roles, your architecture, and the pressure points your teams are dealing with now."}
                                 </p>
-                                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-foreground transition-transform group-hover:translate-x-1">
+                                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
                                     {b?.teamCta || "Plan a team workshop"} <ArrowRight className="h-4 w-4" />
                                 </div>
                             </div>
@@ -184,17 +164,16 @@ export function BentoFeatures() {
                             />
                         </div>
                         <div>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
-                                <ShieldCheck className="h-3.5 w-3.5" />
-                                <span>{b?.mctTrainer || "Microsoft Certified Trainer"}</span>
+                            <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                                {b?.mctTrainer || "Microsoft Certified Trainer"}
                             </div>
-                            <h3 className="font-display mt-5 text-3xl font-semibold text-foreground">
+                            <h3 className="font-display mt-5 text-3xl font-semibold text-slate-900">
                                 {b?.founderTitle || "Yaïr leads the training, not a generic content library."}
                             </h3>
-                            <p className="mt-4 max-w-3xl text-base leading-8 text-muted-foreground">
+                            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-500">
                                 {b?.trainerDesc || "More than 15 years of Azure and Microsoft delivery experience, translated into workshops that focus on how teams govern, secure, operate, and scale real environments."}
                             </p>
-                            <span className="mt-6 inline-flex items-center text-sm font-medium text-foreground transition-transform group-hover:translate-x-1">
+                            <span className="mt-6 inline-flex items-center text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
                                 {b?.founderCta || "Read Yaïr's background"} <ArrowRight className="ml-2 h-4 w-4" />
                             </span>
                         </div>
