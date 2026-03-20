@@ -270,6 +270,14 @@
 </head>
 
 <body>
+    <script>
+      // Force light mode before paint to prevent dark flash
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      if (!location.pathname.startsWith('/blog')) {
+        localStorage.setItem('theme', 'light');
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     

@@ -77,6 +77,13 @@ export function TrainingPathways() {
                                 to={`/training/${stage.slug}`}
                                 className="group relative w-full overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:border-slate-300 hover:shadow-md md:w-[45%]"
                             >
+                                <div className="h-36 overflow-hidden">
+                                    <img
+                                        src={`/training-categories/${stage.slug}.jpg`}
+                                        alt=""
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                </div>
                                 <div className="p-6">
                                     <div className="mb-4 flex justify-between items-center">
                                         <div className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-mono font-bold text-slate-600">

@@ -88,7 +88,7 @@ export function Hero() {
                     </div>
                 </div>
 
-                <div className="h-28 sm:h-32 lg:h-36" />
+                <div className="h-16 sm:h-20 lg:h-24" />
             </div>
         </section>
     );

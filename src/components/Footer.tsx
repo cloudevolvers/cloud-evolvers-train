@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
   const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim();
 
   return (
-    <footer className="bg-background border-t border-border py-12 relative z-10">
+    <footer className="bg-white border-t border-slate-200 py-12 relative z-10">
       <div className="max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-10">
@@ -70,14 +70,14 @@ const Footer: React.FC = () => {
               <div className="space-y-3 text-gray-600">
                 <a
                   href="mailto:training@cloudevolvers.com"
-                  className="flex items-center gap-2 hover:text-foreground transition-colors"
+                  className="flex items-center gap-2 hover:text-slate-900 transition-colors"
                 >
                   <Envelope className="w-4 h-4" />
                   training@cloudevolvers.com
                 </a>
                 <a
                   href="tel:+31634272027"
-                  className="flex items-center gap-2 hover:text-foreground transition-colors"
+                  className="flex items-center gap-2 hover:text-slate-900 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   +31 6 34272027
@@ -120,9 +120,9 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-border lg:border-t-0">
+          <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-slate-200 lg:border-t-0">
             <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <Envelope className="w-5 h-5 text-muted-foreground" />
+              <Envelope className="w-5 h-5 text-slate-500" />
               {t.footer?.getInTouch || 'Get in Touch'}
             </h3>
 
