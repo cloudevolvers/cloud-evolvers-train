@@ -65,17 +65,17 @@ export function TrainingPathways() {
                                 stage.position === "right" ? "md:flex-row-reverse" : ""
                             )}
                         >
-                            <div className="absolute left-1/2 top-1/2 z-20 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-neutral-300 bg-background dark:border-white/40 md:block" />
+                            <div className="absolute left-1/2 top-1/2 z-20 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-neutral-300 bg-background md:block" />
                             <div
                                 className={cn(
-                                    "absolute top-1/2 hidden h-0.5 w-1/2 bg-neutral-200 dark:bg-white/10 md:block",
+                                    "absolute top-1/2 hidden h-0.5 w-1/2 bg-neutral-200 md:block",
                                     stage.position === "left" ? "right-0" : "left-0"
                                 )}
                             />
 
                             <Link
                                 to={`/training/${stage.slug}`}
-                                className="group relative w-full overflow-hidden rounded-2xl border border-border transition-all hover:border-neutral-400 dark:hover:border-white/20 md:w-[45%]"
+                                className="group relative w-full overflow-hidden rounded-2xl border border-border transition-all hover:border-neutral-400 md:w-[45%]"
                             >
                                 <div className="absolute inset-0">
                                     <img

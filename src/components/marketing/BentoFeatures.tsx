@@ -28,7 +28,7 @@ const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: 
         <Link
             to={to}
             className={cn(
-                "group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-50 p-6 transition-colors hover:border-neutral-400 dark:border-white/5 dark:bg-white/[0.02] dark:hover:border-white/20"
+                "group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-50 p-6 transition-colors hover:border-neutral-400"
             )}
         >
             {image && (
@@ -43,7 +43,7 @@ const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: 
             )}
 
             <div className="relative z-10 flex h-full flex-col">
-                <div className="w-fit rounded-xl bg-black/5 p-3 text-foreground/70 transition-colors group-hover:text-foreground dark:bg-white/10">
+                <div className="w-fit rounded-xl bg-black/5 p-3 text-foreground/70 transition-colors group-hover:text-foreground">
                     <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-foreground">{title}</h3>
@@ -83,7 +83,7 @@ export function BentoFeatures() {
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
                     <Link
                         to="/training/azure-administrator"
-                        className="group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-950 transition-colors hover:border-neutral-400 dark:border-white/10 dark:hover:border-white/20"
+                        className="group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-950 transition-colors hover:border-neutral-400"
                     >
                         <div className="absolute inset-0">
                             <img
@@ -158,10 +158,10 @@ export function BentoFeatures() {
                         />
                         <Link
                             to="/contact"
-                            className="group rounded-[2rem] border border-border bg-[linear-gradient(160deg,rgba(255,255,255,0.95),rgba(244,246,250,0.95))] p-6 transition-colors hover:border-neutral-400 dark:bg-[linear-gradient(160deg,rgba(17,24,39,0.96),rgba(11,18,32,0.96))] dark:hover:border-white/20"
+                            className="group rounded-[2rem] border border-border bg-[linear-gradient(160deg,rgba(255,255,255,0.95),rgba(244,246,250,0.95))] p-6 transition-colors hover:border-neutral-400"
                         >
                             <div className="flex h-full flex-col">
-                                <div className="w-fit rounded-xl bg-emerald-500/10 p-3 text-emerald-700 dark:text-emerald-300">
+                                <div className="w-fit rounded-xl bg-emerald-500/10 p-3 text-emerald-700">
                                     <BriefcaseBusiness className="h-6 w-6" />
                                 </div>
                                 <h3 className="mt-5 text-xl font-semibold text-foreground">
@@ -180,7 +180,7 @@ export function BentoFeatures() {
 
                 <Link
                     to="/about"
-                    className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 dark:hover:border-white/20 sm:p-8"
+                    className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 sm:p-8"
                 >
                     <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
                         <div className="overflow-hidden rounded-[1.5rem] bg-neutral-950">
@@ -191,7 +191,7 @@ export function BentoFeatures() {
                             />
                         </div>
                         <div>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">
                                 <ShieldCheck className="h-3.5 w-3.5" />
                                 <span>{b?.mctTrainer || "Microsoft Certified Trainer"}</span>
                             </div>
