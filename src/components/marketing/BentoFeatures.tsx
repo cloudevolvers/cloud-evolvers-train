@@ -28,18 +28,27 @@ const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: 
         <Link
             to={to}
             className={cn(
-                "group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-slate-300 hover:shadow-sm"
+                "group relative overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:border-slate-300 hover:shadow-md"
             )}
         >
-            {/* Clean card — no background image */}
-
-            <div className="relative z-10 flex h-full flex-col">
-                <div className="w-fit rounded-xl bg-black/5 p-3 text-foreground/70 transition-colors group-hover:text-foreground">
-                    <Icon className="h-5 w-5" />
+            {/* Photo header */}
+            {image && (
+                <div className="h-32 overflow-hidden">
+                    <img
+                        src={image}
+                        alt=""
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-foreground">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">{description}</p>
-                <div className="mt-6 inline-flex items-center text-sm font-medium text-foreground transition-transform group-hover:translate-x-1">
+            )}
+
+            <div className="relative z-10 flex flex-col p-5">
+                <div className="w-fit rounded-lg bg-slate-100 p-2 text-slate-500">
+                    <Icon className="h-4 w-4" />
+                </div>
+                <h3 className="mt-3 text-lg font-semibold text-slate-900">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-500">{description}</p>
+                <div className="mt-4 inline-flex items-center text-sm font-medium text-slate-700 transition-transform group-hover:translate-x-1">
                     {exploreLabel} <ArrowRight className="ml-2 h-4 w-4" />
                 </div>
             </div>

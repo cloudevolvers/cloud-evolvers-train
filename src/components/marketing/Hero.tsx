@@ -1,8 +1,7 @@
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/hooks/use-translations";
-import { TerminalWindow } from "./TerminalWindow";
 
 export function Hero() {
     const { t } = useTranslations();
@@ -10,38 +9,25 @@ export function Hero() {
 
     return (
         <section className="relative overflow-hidden bg-white">
-            {/* Thin top accent line */}
-            <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-
             <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                {/* Top breathing room — clears the fixed header */}
                 <div className="h-36 sm:h-40 lg:h-36" />
 
                 <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
                     {/* Copy */}
-                    <div
-                        className="relative flex flex-col items-start"
-                        style={{
-                            backgroundImage: "radial-gradient(circle, rgb(203 213 225 / 0.4) 1px, transparent 1px)",
-                            backgroundSize: "24px 24px",
-                        }}
-                    >
-                        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-xs font-medium tracking-wide text-slate-600">
-                            <ShieldCheck className="h-3.5 w-3.5" />
+                    <div className="flex flex-col items-start">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-medium tracking-wide text-slate-500">
                             {marketing?.eyebrow || "Microsoft training led by Yaïr Knijn"}
                         </div>
 
-                        <div className="mt-8 mb-2 h-px w-16 bg-slate-200" />
-
-                        <h1 className="font-display max-w-xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
+                        <h1 className="font-display mt-8 max-w-xl text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
                             {marketing?.headline1 || "Microsoft training for admins, architects, and platform teams."}
                         </h1>
 
-                        <p className="mt-10 max-w-lg text-lg leading-relaxed tracking-wide text-slate-500">
+                        <p className="mt-8 max-w-lg text-lg leading-relaxed text-slate-500">
                             {marketing?.description || "In-company and remote training in Dutch or English, with labs, architecture decisions, and operational lessons drawn from real Microsoft cloud work."}
                         </p>
 
-                        <div className="mt-12 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                        <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                             <Link to="/training" className="w-full sm:w-auto">
                                 <Button
                                     size="lg"
@@ -62,12 +48,26 @@ export function Hero() {
                             </Link>
                         </div>
 
-                        <TerminalWindow className="mt-16 w-full max-w-sm" />
+                        {/* Trust signals instead of terminal */}
+                        <div className="mt-14 flex items-center gap-6 text-sm text-slate-400">
+                            <div className="flex items-center gap-2">
+                                <div className="h-1.5 w-1.5 rounded-full bg-slate-300" />
+                                Dutch & English
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="h-1.5 w-1.5 rounded-full bg-slate-300" />
+                                In-company & remote
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="h-1.5 w-1.5 rounded-full bg-slate-300" />
+                                Hands-on labs
+                            </div>
+                        </div>
                     </div>
 
                     {/* Photo + caption */}
                     <div className="relative mx-auto w-full max-w-md lg:mx-0 lg:mt-6 lg:max-w-none">
-                        <div className="overflow-hidden rounded-2xl ring-1 ring-slate-100 shadow-lg">
+                        <div className="overflow-hidden rounded-2xl shadow-lg shadow-slate-200/50">
                             <img
                                 src="/1625557501943.jpg"
                                 alt="Yaïr Knijn delivering Azure training"
@@ -88,8 +88,7 @@ export function Hero() {
                     </div>
                 </div>
 
-                {/* Bottom breathing room */}
-                <div className="h-32 sm:h-36 lg:h-40" />
+                <div className="h-28 sm:h-32 lg:h-36" />
             </div>
         </section>
     );
