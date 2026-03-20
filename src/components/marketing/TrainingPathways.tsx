@@ -13,9 +13,9 @@ interface PathwayStage {
 }
 
 const pathwayImages: Record<string, string> = {
-    "az-900": "/training-categories/azure.jpg",
-    "az-104": "/training-categories/azure-devops-engineer.jpg",
-    "az-305": "/training-categories/azure-developer.jpg",
+    "az-900": "/images/unsplash/modern-office.jpg",
+    "az-104": "/images/unsplash/cloud-server-room.jpg",
+    "az-305": "/images/unsplash/whiteboard-planning.jpg",
 };
 
 export function TrainingPathways() {

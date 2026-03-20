@@ -112,7 +112,7 @@ export function BentoFeatures() {
 
                             to="/training/azure-fundamentals"
                             exploreLabel={exploreLabel}
-                            image="/training-categories/azure-fundamentals.jpg"
+                            image="/images/unsplash/team-collaboration.jpg"
                         />
                         <BentoCard
                             title={b?.architectTitle || "AZ-305 Architecture"}
@@ -120,7 +120,7 @@ export function BentoFeatures() {
 
                             to="/training/azure-solutions-architect"
                             exploreLabel={exploreLabel}
-                            image="/training-categories/azure-solutions-architect.jpg"
+                            image="/images/unsplash/coding-laptop.jpg"
                         />
                         <BentoCard
                             title={b?.securityTitle || "AZ-500 Security"}
@@ -136,7 +136,7 @@ export function BentoFeatures() {
 
                             to="/training/microsoft-365-administrator"
                             exploreLabel={exploreLabel}
-                            image="/training-categories/microsoft-365-administrator.jpg"
+                            image="/images/unsplash/network-cables.jpg"
                         />
                         <Link
                             to="/contact"
