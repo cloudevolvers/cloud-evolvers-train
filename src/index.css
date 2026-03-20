@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    /* Monochrome Light Mode - Clean neutral whites */
-    --background: 0 0% 98%;
+    /* Monochrome Light Mode - Pure white */
+    --background: 0 0% 100%;
     --foreground: 0 0% 9%;
 
     /* Cards - Pure white */

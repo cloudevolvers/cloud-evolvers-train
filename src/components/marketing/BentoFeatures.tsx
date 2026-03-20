@@ -28,19 +28,10 @@ const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: 
         <Link
             to={to}
             className={cn(
-                "group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-50 p-6 transition-colors hover:border-neutral-400"
+                "group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-slate-300 hover:shadow-sm"
             )}
         >
-            {image && (
-                <>
-                    <img
-                        src={image}
-                        alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-top opacity-20 transition-opacity group-hover:opacity-30"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
-                </>
-            )}
+            {/* Clean card — no background image */}
 
             <div className="relative z-10 flex h-full flex-col">
                 <div className="w-fit rounded-xl bg-black/5 p-3 text-foreground/70 transition-colors group-hover:text-foreground">
@@ -62,7 +53,7 @@ export function BentoFeatures() {
     const exploreLabel = b?.explore || "Explore";
 
     return (
-        <section className="relative z-10 border-t border-border/40 bg-background py-28 sm:py-32 lg:py-36">
+        <section className="relative z-10 border-t border-slate-100 bg-white py-28 sm:py-32 lg:py-36">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
@@ -83,15 +74,9 @@ export function BentoFeatures() {
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
                     <Link
                         to="/training/azure-administrator"
-                        className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition-colors hover:border-slate-300"
+                        className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50/50 shadow-sm transition-all hover:border-slate-300 hover:shadow-md"
                     >
-                        <div className="absolute inset-0">
-                            <img
-                                src="/training-categories/azure-administrator.jpg"
-                                alt=""
-                                className="h-full w-full object-cover opacity-10 transition-opacity group-hover:opacity-15"
-                            />
-                        </div>
+                        {/* Clean — no background image */}
 
                         <div className="relative z-10 flex min-h-[360px] flex-col p-8 lg:p-10">
                             <div className="flex items-center justify-between">
@@ -157,7 +142,7 @@ export function BentoFeatures() {
                         />
                         <Link
                             to="/contact"
-                            className="group rounded-[2rem] border border-border bg-[linear-gradient(160deg,rgba(255,255,255,0.95),rgba(244,246,250,0.95))] p-6 transition-colors hover:border-neutral-400"
+                            className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-slate-300 hover:shadow-sm"
                         >
                             <div className="flex h-full flex-col">
                                 <div className="w-fit rounded-xl bg-slate-100 p-3 text-slate-600">
@@ -179,7 +164,7 @@ export function BentoFeatures() {
 
                 <Link
                     to="/about"
-                    className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 sm:p-8"
+                    className="group mt-6 block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-slate-300 hover:shadow-md sm:p-8"
                 >
                     <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
                         <div className="overflow-hidden rounded-[1.5rem] bg-slate-100">
