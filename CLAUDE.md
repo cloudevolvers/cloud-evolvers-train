@@ -56,6 +56,8 @@ See `.env.example` for the expected environment variables. The actual `.env` fil
 4. **Real Data Only**: Only display confirmed, accurate information
 5. **NO HARDCODED PRICES**: All pricing comes from D1 database via the API. NEVER put prices in JSON files, TypeScript constants, or frontend code. Update prices via `/admin/bookings` or the training sessions API. If a course has no scheduled session, show "Contact us" — never a stale number.
 6. **Promotions via DB only**: Promotional pricing is managed through the admin dashboard or API by updating the `price` field on training sessions. No hardcoded promotional discount logic in frontend code.
+7. **NO GENERIC ICONS**: Do not use generic rounded-corner icons above headings or on cards (Shield, Cloud, Cog, etc.). They look templated and AI-generated. Use real photos, typography, or nothing. If a card has a background photo, that IS the visual — don't stack an icon on top.
+8. **LIGHT MODE ONLY**: The site is white/light mode for all pages except blog (which keeps a dark/light toggle). Do not add `dark:` classes to non-blog components.
 
 ## Code Quality
 
@@ -70,6 +72,9 @@ See `.env.example` for the expected environment variables. The actual `.env` fil
 - Animations: Framer Motion
 - Deployment: Cloudflare Pages
 - DNS: Cloudflare DNS
+
+## Package Manager
+**Always use `bun`** — never npm or yarn. All commands should use `bun` or `bunx`.
 
 ## Quick Commands
 ```bash
