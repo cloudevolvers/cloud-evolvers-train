@@ -48,7 +48,7 @@ export function BentoFeatures() {
     const exploreLabel = b?.explore || "Explore";
 
     return (
-        <section className="relative z-10 border-t border-slate-100 bg-white py-28 sm:py-32 lg:py-36">
+        <section className="relative z-10 border-t border-slate-100 bg-white py-16 sm:py-20 lg:py-24">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
@@ -71,9 +71,15 @@ export function BentoFeatures() {
                         to="/training/azure-administrator"
                         className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50/50 shadow-sm transition-all hover:border-slate-300 hover:shadow-md"
                     >
-                        {/* Clean — no background image */}
+                        <div className="h-48 overflow-hidden">
+                            <img
+                                src="/training-categories/azure-administrator.jpg"
+                                alt=""
+                                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                        </div>
 
-                        <div className="relative z-10 flex min-h-[360px] flex-col p-8 lg:p-10">
+                        <div className="relative z-10 flex min-h-[280px] flex-col p-8 lg:p-10">
                             <div className="flex items-center justify-between">
                                 <div className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
                                     {b?.featuredLabel || "Most requested by teams"}

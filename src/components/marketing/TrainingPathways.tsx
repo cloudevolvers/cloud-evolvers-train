@@ -12,6 +12,12 @@ interface PathwayStage {
     title: string;
 }
 
+const pathwayImages: Record<string, string> = {
+    "az-900": "/training-categories/azure.jpg",
+    "az-104": "/training-categories/azure-devops-engineer.jpg",
+    "az-305": "/training-categories/azure-developer.jpg",
+};
+
 export function TrainingPathways() {
     const { t } = useTranslations();
     const pathways = t.pathways;
@@ -79,7 +85,7 @@ export function TrainingPathways() {
                             >
                                 <div className="h-36 overflow-hidden">
                                     <img
-                                        src={`/training-categories/${stage.slug}.jpg`}
+                                        src={pathwayImages[stage.id] || `/training-categories/${stage.slug}.jpg`}
                                         alt=""
                                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
