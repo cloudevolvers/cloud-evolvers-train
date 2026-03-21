@@ -64,6 +64,9 @@ import { azureArcLandingZonesPost } from './posts/azure-arc-landing-zones';
 import { microsoftFabricAiMarch2026Post } from './posts/microsoft-fabric-ai-march-2026';
 import { agenticAiToolsWindowsPost } from './posts/agentic-ai-tools-windows';
 import { exchangeRbacAccessPoliciesPost } from './posts/exchange-rbac-access-policies';
+import { visualStudio184MarchUpdatePost } from './posts/visual-studio-18-4-march-update';
+import { entraAgentIdPost } from './posts/entra-agent-id';
+import { entraExternalMfaGaPost } from './posts/entra-external-mfa-ga';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -128,6 +131,9 @@ export {
   microsoftFabricAiMarch2026Post,
   agenticAiToolsWindowsPost,
   exchangeRbacAccessPoliciesPost,
+  visualStudio184MarchUpdatePost,
+  entraAgentIdPost,
+  entraExternalMfaGaPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
@@ -191,6 +197,9 @@ export const blogPosts: BlogPost[] = [
   microsoftFabricAiMarch2026Post,
   agenticAiToolsWindowsPost,
   exchangeRbacAccessPoliciesPost,
+  visualStudio184MarchUpdatePost,
+  entraAgentIdPost,
+  entraExternalMfaGaPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Helper function to get localized text
