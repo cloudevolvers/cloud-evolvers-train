@@ -1,0 +1,88 @@
+import type { BlogPost } from '../types';
+
+export const virtualWanRouteMapsPost: BlogPost = {
+  id: 'virtual-wan-route-maps',
+  title: {
+    en: 'Azure Virtual WAN Route-Maps and Forced Tunnel: Granular Control Over Hub Routing',
+    nl: 'Azure Virtual WAN Route-Maps en Forced Tunnel: Gedetailleerde Controle over Hub Routing'
+  },
+  description: {
+    en: 'Route-maps bring BGP-style route manipulation to Azure Virtual WAN hubs. Combined with forced tunnel mode and new NVA capabilities, organizations gain precise control over how traffic flows between branches, VNets, and the internet.',
+    nl: 'Route-maps brengen BGP-achtige routemanipulatie naar Azure Virtual WAN-hubs. In combinatie met forced tunnel-modus en nieuwe NVA-mogelijkheden krijgen organisaties nauwkeurige controle over hoe verkeer stroomt tussen vestigingen, VNets en het internet.'
+  },
+  date: '2025-07-22',
+  author: 'Yair Knijn',
+  tags: ['Azure', 'Virtual WAN', 'Networking', 'Route-Maps', 'Firewall'],
+  image: '/images/pexels/pexels-developer-coding-setup.jpg',
+  excerpt: {
+    en: 'Azure Virtual WAN Route-Maps reached GA in April 2025, giving network engineers the ability to filter, modify, and override route advertisements across Virtual WAN hubs. Forced tunnel mode, added in November 2025, extends this by letting organizations route all internet-bound traffic through a security solution in the hub before forwarding it via dynamically learned default routes.',
+    nl: 'Azure Virtual WAN Route-Maps werden GA in april 2025, waarmee netwerkingenieurs de mogelijkheid krijgen om routeadvertenties te filteren, aan te passen en te overschrijven in Virtual WAN-hubs. Forced tunnel-modus, toegevoegd in november 2025, breidt dit uit door organisaties al het internetverkeer door een beveiligingsoplossing in de hub te laten routeren voordat het wordt doorgestuurd via dynamisch geleerde standaardroutes.'
+  },
+  category: {
+    en: 'Infrastructure & Networking',
+    nl: 'Infrastructuur & Netwerken'
+  },
+  readTime: 9,
+  content: {
+    introduction: {
+      en: 'Virtual WAN route-maps went GA in April 2025. Honestly, this was overdue. Until then, the routing model was mostly take-it-or-leave-it — Virtual WAN decided which routes went where, and you worked around it with static routes and spoke-level UDRs. Now you get proper BGP-style route manipulation on the hub: filter, modify, drop, prepend. Then in November 2025, Microsoft added forced tunnel mode for routing all internet traffic through a security appliance in the hub. Add in NVA improvements like SNAT IP allocation, re-image support, Cisco Firepower Threat Defense GA, and DNAT for next-gen firewalls, and Virtual WAN finally feels like a real routing and security platform, not just a connectivity wrapper.',
+      nl: 'Virtual WAN route-maps werden GA in april 2025. Eerlijk gezegd was dit al lang nodig. Tot dan was het routeringsmodel grotendeels alles-of-niets — Virtual WAN bepaalde welke routes waarheen gingen, en je werkte eromheen met statische routes en spoke-level UDR\'s. Nu krijg je echte BGP-achtige routemanipulatie op de hub: filteren, aanpassen, droppen, prependen. In november 2025 voegde Microsoft forced tunnel-modus toe voor het routeren van al het internetverkeer door een beveiligingsappliance in de hub. Tel daar NVA-verbeteringen bij op zoals SNAT IP-allocatie, re-image ondersteuning, Cisco Firepower Threat Defense GA, en DNAT voor next-gen firewalls, en Virtual WAN voelt eindelijk als een echt routerings- en beveiligingsplatform, niet alleen een connectiviteitswrapper.'
+    },
+    sections: [
+      {
+        title: {
+          en: 'Route-Maps: BGP Route Manipulation for Virtual WAN',
+          nl: 'Route-Maps: BGP-routemanipulatie voor Virtual WAN'
+        },
+        content: {
+          en: 'Route-maps in Virtual WAN function similarly to route-maps on traditional BGP routers. They let you define rules that match on route prefixes, AS paths, or communities, and then apply actions such as dropping the route, modifying the next hop, prepending the AS path, or adding communities. This gives you control over both inbound and outbound route advertisements on the hub router. A practical example is preventing a specific branch from learning routes to a development VNet — you create a route-map on the outbound direction of the branch connection that drops prefixes matching the development address space. Another common pattern is AS path prepending to influence traffic symmetry across redundant ExpressRoute circuits. Before route-maps, achieving this required workarounds like static routes or UDRs on spoke VNets, which were fragile and hard to maintain at scale. Route-maps apply at the hub router level and affect all connections going through that hub, which makes them the right tool for network-wide routing policy rather than per-VNet overrides.',
+          nl: 'Route-maps in Virtual WAN functioneren vergelijkbaar met route-maps op traditionele BGP-routers. Ze laten je regels definiëren die matchen op routeprefixen, AS-paden of communities, en vervolgens acties toepassen zoals het droppen van de route, het wijzigen van de next hop, het prependen van het AS-pad of het toevoegen van communities. Dit geeft je controle over zowel inkomende als uitgaande routeadvertenties op de hub-router. Een praktisch voorbeeld is het voorkomen dat een specifieke vestiging routes naar een ontwikkel-VNet leert — je maakt een route-map op de uitgaande richting van de vestigingsverbinding die prefixen matcht met de ontwikkeladresruimte en deze dropt. Een ander veelvoorkomend patroon is AS-pad prepending om verkeersymmetrie te beïnvloeden over redundante ExpressRoute-circuits. Voordat route-maps beschikbaar waren, vereiste dit workarounds zoals statische routes of UDR\'s op spoke-VNets, die kwetsbaar en moeilijk te onderhouden waren op schaal. Route-maps worden toegepast op het hub-routerniveau en beïnvloeden alle verbindingen die door die hub gaan, wat ze het juiste instrument maakt voor netwerkbreed routeringsbeleid in plaats van per-VNet overschrijvingen.'
+        }
+      },
+      {
+        title: {
+          en: 'Forced Tunnel Mode for Internet Traffic Inspection',
+          nl: 'Forced Tunnel-modus voor Internetverkeerinspectie'
+        },
+        content: {
+          en: 'Forced tunnel mode, added in November 2025, solves a specific and persistent challenge: routing all internet-bound traffic from spoke VNets through a security appliance in the hub before it reaches the internet. The mechanism works by allowing the hub to learn a 0.0.0.0/0 default route dynamically from either an on-premises device (via VPN or ExpressRoute) or an NVA deployed in the hub. When forced tunnel mode is enabled, this default route is advertised to all connected spoke VNets, so their internet traffic gets pulled into the hub rather than breaking out locally. The security solution in the hub — whether Azure Firewall, a third-party NVA, or a SaaS security service — inspects the traffic and then forwards it to the internet or back to on-premises depending on policy. This differs from the simpler "secure internet traffic" routing intent that already existed, because forced tunnel mode respects dynamically learned routes rather than requiring static configuration. Organizations with existing on-premises internet breakout points can now extend that model into Azure without rebuilding their routing architecture.',
+          nl: 'Forced tunnel-modus, toegevoegd in november 2025, lost een specifieke en hardnekkige uitdaging op: al het internetverkeer van spoke-VNets routeren door een beveiligingsappliance in de hub voordat het het internet bereikt. Het mechanisme werkt doordat de hub een 0.0.0.0/0 standaardroute dynamisch kan leren van ofwel een on-premises apparaat (via VPN of ExpressRoute) of een NVA die in de hub is geplaatst. Wanneer forced tunnel-modus is ingeschakeld, wordt deze standaardroute geadverteerd naar alle verbonden spoke-VNets, zodat hun internetverkeer naar de hub wordt getrokken in plaats van lokaal uit te breken. De beveiligingsoplossing in de hub — of dat nu Azure Firewall, een NVA van een derde partij of een SaaS-beveiligingsdienst is — inspecteert het verkeer en stuurt het vervolgens door naar het internet of terug naar on-premises, afhankelijk van het beleid. Dit verschilt van de eenvoudigere "beveilig internetverkeer" routing intent die al bestond, omdat forced tunnel-modus dynamisch geleerde routes respecteert in plaats van statische configuratie te vereisen. Organisaties met bestaande on-premises internetuitbraakpunten kunnen dat model nu uitbreiden naar Azure zonder hun routeringsarchitectuur opnieuw op te bouwen.'
+        }
+      },
+      {
+        title: {
+          en: 'NVA Improvements: IP Allocation, Re-image, and Cisco Firepower',
+          nl: 'NVA-verbeteringen: IP-allocatie, Re-image en Cisco Firepower'
+        },
+        content: {
+          en: 'The April 2025 release brought two NVA operational improvements that address real production pain points. NVA IP allocation lets you add additional IP addresses to NVA interfaces deployed in Virtual WAN hubs. The primary use case is fixing SNAT port exhaustion: when a single NVA IP handles outbound NAT for thousands of connections, the 64K port limit per IP becomes a bottleneck. Adding more IPs to the interface multiplies the available SNAT ports without requiring additional NVA instances. The NVA re-image capability allows you to reset an NVA instance to its original image without deleting and redeploying the entire resource, which is useful for recovery from configuration drift or corrupted state. On the partner ecosystem side, Cisco Firepower Threat Defense reached general availability in February 2025 as a Virtual WAN NVA, joining the existing lineup of Barracuda, Check Point, Fortinet, and Palo Alto. This means organizations already running Cisco FTD on-premises can extend the same firewall platform into their Azure Virtual WAN hubs for consistent security policy enforcement.',
+          nl: 'De release van april 2025 bracht twee operationele NVA-verbeteringen die echte productieproblemen aanpakken. NVA IP-allocatie stelt je in staat om extra IP-adressen toe te voegen aan NVA-interfaces die in Virtual WAN-hubs zijn geplaatst. Het primaire gebruik is het oplossen van SNAT-poortuitputting: wanneer een enkel NVA-IP uitgaande NAT afhandelt voor duizenden verbindingen, wordt de limiet van 64K poorten per IP een knelpunt. Door meer IP\'s aan de interface toe te voegen, vermenigvuldig je de beschikbare SNAT-poorten zonder dat extra NVA-instanties nodig zijn. De NVA re-image-mogelijkheid stelt je in staat een NVA-instantie te resetten naar de oorspronkelijke image zonder de gehele resource te verwijderen en opnieuw te deployen, wat nuttig is voor herstel van configuratiedrift of een corrupte staat. Aan de kant van het partnerecosysteem bereikte Cisco Firepower Threat Defense algemene beschikbaarheid in februari 2025 als Virtual WAN NVA, en voegt zich bij de bestaande reeks van Barracuda, Check Point, Fortinet en Palo Alto. Dit betekent dat organisaties die al Cisco FTD on-premises draaien hetzelfde firewallplatform kunnen uitbreiden naar hun Azure Virtual WAN-hubs voor consistente handhaving van beveiligingsbeleid.'
+        }
+      },
+      {
+        title: {
+          en: 'DNAT for Next-Gen Firewall NVAs',
+          nl: 'DNAT voor Next-Gen Firewall NVA\'s'
+        },
+        content: {
+          en: 'Destination NAT for next-generation firewall NVAs entered public preview alongside the other April 2025 updates. DNAT lets you publish applications to the internet through a firewall NVA in the Virtual WAN hub without exposing the backend server IP addresses. Inbound traffic arrives at the NVA public IP, the firewall applies its inspection and policy rules, and then translates the destination address to the actual backend server in a spoke VNet. This is a standard pattern for on-premises firewalls that was previously difficult to replicate in Virtual WAN because the hub NVA did not support inbound NAT. Without DNAT, organizations had to place a separate firewall or reverse proxy in a spoke VNet with its own public IP, which fragmented the security perimeter and created additional management overhead. With DNAT on the hub NVA, the entire north-south traffic flow — both outbound internet access and inbound application publishing — can be handled by a single firewall deployment in the hub.',
+          nl: 'Destination NAT voor next-generation firewall NVA\'s ging in public preview samen met de andere updates van april 2025. DNAT stelt je in staat applicaties op het internet te publiceren via een firewall NVA in de Virtual WAN-hub zonder de IP-adressen van de backend-servers bloot te stellen. Inkomend verkeer arriveert bij het publieke IP van de NVA, de firewall past zijn inspectie- en beleidsregels toe, en vertaalt vervolgens het bestemmingsadres naar de werkelijke backend-server in een spoke-VNet. Dit is een standaardpatroon voor on-premises firewalls dat voorheen moeilijk te repliceren was in Virtual WAN omdat de hub-NVA geen inkomende NAT ondersteunde. Zonder DNAT moesten organisaties een aparte firewall of reverse proxy in een spoke-VNet plaatsen met een eigen publiek IP, wat de beveiligingsperimeter fragmenteerde en extra beheeroverhead creëerde. Met DNAT op de hub-NVA kan de gehele north-south verkeersstroom — zowel uitgaande internettoegang als inkomende applicatiepublicatie — worden afgehandeld door een enkele firewalldeployment in de hub.'
+        }
+      },
+      {
+        title: {
+          en: 'New Hub Metrics and Operational Visibility',
+          nl: 'Nieuwe Hub-metrics en Operationele Zichtbaarheid'
+        },
+        content: {
+          en: 'Microsoft introduced two new hub-level metrics that address a longstanding operational gap. Routing Infrastructure Units indicates how much of the hub router capacity is consumed by the current routing table size and connection count. Virtual WAN hubs have finite routing capacity — measured in routing infrastructure units — and exceeding it causes route advertisements to be dropped silently. Having this as a metric means you can set alerts before hitting the ceiling, which is critical for large-scale deployments with hundreds of VNet connections and thousands of routes. Spoke VM Utilization tracks how many VMs are deployed across the spoke VNets connected to the hub, relative to the hub SKU limits. This matters because the hub SKU determines the maximum number of spoke VMs it can support, and exceeding that limit degrades routing performance. Both metrics are available in Azure Monitor and can be integrated into existing dashboards and alerting pipelines. For organizations operating multiple hubs across regions, these metrics finally provide the data needed to right-size hub SKUs and plan capacity expansions before performance degrades.',
+          nl: 'Microsoft introduceerde twee nieuwe metrics op hubniveau die een langdurige operationele lacune aanpakken. Routing Infrastructure Units geeft aan hoeveel van de hub-routercapaciteit wordt verbruikt door de huidige routetabelgrootte en het aantal verbindingen. Virtual WAN-hubs hebben eindige routeringscapaciteit — gemeten in routing infrastructure units — en het overschrijden hiervan zorgt ervoor dat routeadvertenties stilzwijgend worden verworpen. Dit als metric beschikbaar hebben betekent dat je waarschuwingen kunt instellen voordat je het plafond bereikt, wat cruciaal is voor grootschalige deployments met honderden VNet-verbindingen en duizenden routes. Spoke VM Utilization houdt bij hoeveel VM\'s zijn gedeployed in de spoke-VNets die met de hub zijn verbonden, in verhouding tot de limieten van de hub-SKU. Dit is belangrijk omdat de hub-SKU het maximale aantal spoke-VM\'s bepaalt dat het kan ondersteunen, en het overschrijden van die limiet de routeringsprestaties verslechtert. Beide metrics zijn beschikbaar in Azure Monitor en kunnen worden geïntegreerd in bestaande dashboards en waarschuwingspijplijnen. Voor organisaties die meerdere hubs over regio\'s beheren, bieden deze metrics eindelijk de data die nodig is om hub-SKU\'s op de juiste grootte af te stemmen en capaciteitsuitbreidingen te plannen voordat de prestaties verslechteren.'
+        }
+      }
+    ],
+    conclusion: {
+      en: 'A year ago, Virtual WAN was a connectivity service with limited routing control. Now it is a proper routing and security platform. Route-maps give you the BGP-level control you have been asking for. Forced tunnel mode solves the centralized internet inspection requirement cleanly. The NVA updates (SNAT IPs, re-image, DNAT, Cisco Firepower) close the gaps that used to require workarounds. If you are still using static routes or spoke UDRs to hack around Virtual WAN routing limitations, take another look. Most of those workarounds can probably go away now.',
+      nl: 'Een jaar geleden was Virtual WAN een connectiviteitsdienst met beperkte routeringscontrole. Nu is het een echt routerings- en beveiligingsplatform. Route-maps geven je de BGP-level controle waar je om vroeg. Forced tunnel-modus lost de eis voor gecentraliseerde internetinspectie netjes op. De NVA-updates (SNAT IP\'s, re-image, DNAT, Cisco Firepower) dichten de gaten die voorheen workarounds vereisten. Als je nog steeds statische routes of spoke-UDR\'s gebruikt om Virtual WAN-routeringsbeperkingen te omzeilen, kijk dan nog eens. De meeste van die workarounds kunnen waarschijnlijk nu weg.'
+    }
+  }
+};

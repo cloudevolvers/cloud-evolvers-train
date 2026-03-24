@@ -11,7 +11,7 @@ export const azureProvisionedFileSharesPost: BlogPost = {
     nl: 'Leer hoe je Azure Files met provisioned model deployt via Bicep voor voorspelbare prestaties en consistente IOPS in je cloud workloads'
   },
   date: '2025-06-09',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure Files', 'Bicep', 'Infrastructure as Code', 'Storage', 'Performance'],
   image: '/images/pexels/pexels-cloud-computing-servers.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const azureProvisionedFileSharesPost: BlogPost = {
   readTime: 10,
   content: {
     introduction: {
-      en: 'Azure Files recently introduced the Provisioned model for premium file shares, offering guaranteed IOPS and throughput regardless of usage patterns. Unlike pay-as-you-go, provisioned gives you predictable performance—critical for databases, virtual desktops, and high-performance applications. In this article, we deploy a provisioned file share using Bicep.',
-      nl: 'Azure Files heeft recent het Provisioned-model geïntroduceerd voor premium file shares, met gegarandeerde IOPS en doorvoer ongeacht gebruikspatronen. Anders dan pay-as-you-go geeft provisioned je voorspelbare prestaties—cruciaal voor databases, virtuele desktops en high-performance applicaties. In dit artikel deployen we een provisioned file share met Bicep.'
+      en: 'Azure Files now has a provisioned model for premium shares. Instead of tying your IOPS to storage capacity (and hoping for the best), you pick the exact IOPS and throughput you need and Azure guarantees it. You pay whether you use it or not — that\'s the trade-off — but your database or VDI workload gets consistent performance instead of mysterious slowdowns during peak hours. Here\'s how to deploy one with Bicep.',
+      nl: 'Azure Files heeft nu een provisioned model voor premium shares. In plaats van je IOPS te koppelen aan opslagcapaciteit (en het beste te hopen), kies je de exacte IOPS en doorvoer die je nodig hebt en Azure garandeert het. Je betaalt of je het gebruikt of niet — dat is de afweging — maar je database of VDI-workload krijgt consistente prestaties in plaats van mysterieuze vertragingen tijdens piekuren. Hier is hoe je er een deployt met Bicep.'
     },
     sections: [
       {
@@ -106,8 +106,8 @@ resource fileShare 'Microsoft.Storage/storageAccounts/fileServices/shares@2023-0
       }
     ],
     conclusion: {
-      en: 'Provisioned Azure Files gives you the performance guarantees needed for demanding workloads. With Bicep, you can deploy and version control your infrastructure while ensuring consistent, predictable file share performance.',
-      nl: 'Provisioned Azure Files geeft je de prestatiegaranties die nodig zijn voor veeleisende workloads. Met Bicep kun je je infrastructuur deployen en versiebeheren terwijl je consistente, voorspelbare file share-prestaties waarborgt.'
+      en: 'The provisioned model costs more than pay-as-you-go when you\'re not using the full capacity. But for workloads where inconsistent IOPS means angry users or failed jobs, the predictability is worth it. Deploy it with Bicep so it\'s versioned and repeatable. Monitor your actual IOPS consumption with Azure Monitor after a week or two, then right-size. Don\'t guess — measure first, then commit to a provisioning level.',
+      nl: 'Het provisioned model kost meer dan pay-as-you-go als je de volledige capaciteit niet benut. Maar voor workloads waar inconsistente IOPS boze gebruikers of gefaalde jobs betekent, is de voorspelbaarheid het waard. Deploy het met Bicep zodat het versiebeheerd en herhaalbaar is. Monitor je werkelijke IOPS-verbruik met Azure Monitor na een week of twee en pas dan de grootte aan. Gok niet — meet eerst, dan pas committen aan een provisioning-niveau.'
     }
   }
 };

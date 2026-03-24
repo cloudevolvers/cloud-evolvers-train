@@ -1,0 +1,164 @@
+<h2>Article View: Detailed Mockup</h2>
+<p class="subtitle">Left TOC + reading column with whitespace, reading aids, and technical helpers. How does this feel?</p>
+
+<div class="mockup">
+  <div class="mockup-header">Blog Article — Dark Mode</div>
+  <div class="mockup-body" style="background: #0d0d0d; padding: 0; overflow: hidden;">
+    <div style="font-family: 'Inter', system-ui, sans-serif; color: #e5e5e5; padding: 48px 40px 60px;">
+
+      <!-- Back link -->
+      <div style="margin-bottom: 32px;">
+        <span style="color: #888; font-size: 13px; cursor: pointer;">← All articles</span>
+      </div>
+
+      <!-- Two-column layout -->
+      <div style="display: grid; grid-template-columns: 210px 1fr; gap: 48px; align-items: start;">
+
+        <!-- LEFT: Sticky TOC -->
+        <div style="position: sticky; top: 24px;">
+          <div style="color: #666; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; font-weight: 600;">On this page</div>
+
+          <div style="margin-bottom: 8px;">
+            <div style="color: #e5e5e5; font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid #3b82f6; font-weight: 500;">The GPT-5 Family</div>
+          </div>
+          <div style="margin-bottom: 8px;">
+            <div style="color: #777; font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">GPT-5.4: What's New</div>
+          </div>
+          <div style="margin-bottom: 8px;">
+            <div style="color: #777; font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">vs the O-Series</div>
+          </div>
+          <div style="margin-bottom: 8px;">
+            <div style="color: #777; font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">Choosing a Tier</div>
+          </div>
+          <div style="margin-bottom: 24px;">
+            <div style="color: #777; font-size: 13px; padding: 6px 0 6px 14px; border-left: 2px solid transparent;">Migration Path</div>
+          </div>
+
+          <!-- Reading time / progress -->
+          <div style="border-top: 1px solid #222; padding-top: 16px;">
+            <div style="color: #555; font-size: 11px; margin-bottom: 6px;">Reading progress</div>
+            <div style="background: #1a1a1a; height: 3px; border-radius: 2px; overflow: hidden;">
+              <div style="background: #3b82f6; height: 100%; width: 25%; border-radius: 2px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Article content -->
+        <div style="max-width: 680px;">
+
+          <!-- Category + byline -->
+          <div style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; font-weight: 500;">AI & Automation</div>
+
+          <h1 style="color: #f5f5f5; font-size: 32px; font-weight: 700; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.02em;">GPT-5.4 on Azure OpenAI: The Full GPT-5 Model Family Explained</h1>
+
+          <div style="display: flex; align-items: center; gap: 12px; color: #888; font-size: 13px; margin-bottom: 10px;">
+            <span style="color: #ccc; font-weight: 500;">Yair Knijn</span>
+            <span>·</span>
+            <span>March 19, 2026</span>
+            <span>·</span>
+            <span>10 min read</span>
+          </div>
+
+          <!-- Tags -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 28px;">
+            <span style="background: #1a1a1a; color: #999; font-size: 11px; padding: 3px 10px; border-radius: 4px;">Azure</span>
+            <span style="background: #1a1a1a; color: #999; font-size: 11px; padding: 3px 10px; border-radius: 4px;">OpenAI</span>
+            <span style="background: #1a1a1a; color: #999; font-size: 11px; padding: 3px 10px; border-radius: 4px;">GPT-5.4</span>
+            <span style="background: #1a1a1a; color: #999; font-size: 11px; padding: 3px 10px; border-radius: 4px;">Reasoning Models</span>
+          </div>
+
+          <div style="height: 1px; background: #1f1f1f; margin-bottom: 36px;"></div>
+
+          <!-- Introduction -->
+          <p style="color: #c5c5c5; font-size: 16px; line-height: 1.85; margin: 0 0 40px;">GPT-5 landed on Azure OpenAI in August 2025. Seven months and twenty-something model variants later, we are at GPT-5.4. Microsoft shipped 5.4 and 5.4-pro on March 5, then dropped the mini and nano tiers on March 17. In the same breath, GPT-4o standard deployments start auto-upgrading on March 9 — forced retirement by end of month.</p>
+
+          <!-- Section 1 -->
+          <h2 style="color: #f0f0f0; font-size: 22px; font-weight: 600; margin: 0 0 18px; letter-spacing: -0.01em;">The GPT-5 Model Family: From Base to 5.4</h2>
+
+          <p style="color: #c5c5c5; font-size: 16px; line-height: 1.85; margin: 0 0 28px;">The GPT-5 family is structured in generations, each bringing incremental improvements in reasoning quality, instruction following, and tool use reliability. GPT-5 base (August 2025) introduced the 400K context window with 272K input and 128K output capacity.</p>
+
+          <!-- Technical callout box -->
+          <div style="background: #111; border: 1px solid #222; border-left: 3px solid #3b82f6; border-radius: 6px; padding: 16px 20px; margin: 0 0 28px;">
+            <div style="color: #3b82f6; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-weight: 600;">Key difference</div>
+            <p style="color: #bbb; font-size: 14px; line-height: 1.7; margin: 0;">GPT-5 models have a <strong style="color: #e5e5e5;">400K context</strong> with <strong style="color: #e5e5e5;">parallel tool calling</strong>. The o-series has 200K context and processes tools sequentially.</p>
+          </div>
+
+          <p style="color: #c5c5c5; font-size: 16px; line-height: 1.85; margin: 0 0 40px;">GPT-5.1 (November 2025) added codex variants optimized for code generation. GPT-5.2 (December 2025) improved multi-step reasoning consistency. GPT-5.3 brought a new codex model in February 2026, and now GPT-5.4 represents the current state of the art.</p>
+
+          <!-- Section divider with spacing -->
+          <div style="height: 1px; background: #1a1a1a; margin: 48px 0;"></div>
+
+          <!-- Section 2 -->
+          <h2 style="color: #f0f0f0; font-size: 22px; font-weight: 600; margin: 0 0 18px; letter-spacing: -0.01em;">GPT-5.4: What Is New</h2>
+
+          <p style="color: #c5c5c5; font-size: 16px; line-height: 1.85; margin: 0 0 28px;">GPT-5.4 launched on March 5, 2026 alongside GPT-5.4-pro, with GPT-5.4-mini and GPT-5.4-nano arriving on March 17. The model is currently available in Global Standard deployment across East US 2, Sweden Central, South Central US, and Poland Central.</p>
+
+          <!-- Table for model comparison -->
+          <div style="border: 1px solid #1f1f1f; border-radius: 8px; overflow: hidden; margin: 0 0 32px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+              <thead>
+                <tr style="background: #141414;">
+                  <th style="text-align: left; padding: 10px 14px; color: #999; font-weight: 500; border-bottom: 1px solid #1f1f1f;">Model</th>
+                  <th style="text-align: left; padding: 10px 14px; color: #999; font-weight: 500; border-bottom: 1px solid #1f1f1f;">Context</th>
+                  <th style="text-align: left; padding: 10px 14px; color: #999; font-weight: 500; border-bottom: 1px solid #1f1f1f;">Best for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding: 10px 14px; color: #ccc; border-bottom: 1px solid #161616;">gpt-5.4</td><td style="padding: 10px 14px; color: #999; border-bottom: 1px solid #161616;">1.05M</td><td style="padding: 10px 14px; color: #999; border-bottom: 1px solid #161616;">General reasoning</td></tr>
+                <tr><td style="padding: 10px 14px; color: #ccc; border-bottom: 1px solid #161616;">gpt-5.4-pro</td><td style="padding: 10px 14px; color: #999; border-bottom: 1px solid #161616;">1.05M</td><td style="padding: 10px 14px; color: #999; border-bottom: 1px solid #161616;">Maximum quality</td></tr>
+                <tr><td style="padding: 10px 14px; color: #ccc; border-bottom: 1px solid #161616;">gpt-5.4-mini</td><td style="padding: 10px 14px; color: #999; border-bottom: 1px solid #161616;">400K</td><td style="padding: 10px 14px; color: #999; border-bottom: 1px solid #161616;">Cost-optimized</td></tr>
+                <tr><td style="padding: 10px 14px; color: #ccc;">gpt-5.4-nano</td><td style="padding: 10px 14px; color: #999;">400K</td><td style="padding: 10px 14px; color: #999;">High throughput</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Warning callout -->
+          <div style="background: #1a1408; border: 1px solid #332a0a; border-left: 3px solid #eab308; border-radius: 6px; padding: 16px 20px; margin: 0 0 40px;">
+            <div style="color: #eab308; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-weight: 600;">Heads up</div>
+            <p style="color: #bba870; font-size: 14px; line-height: 1.7; margin: 0;">GPT-4o standard deployments <strong style="color: #ddc878;">retire March 31, 2026</strong> with auto-upgrades starting March 9. Plan your migration now.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top: 32px;">Reading helpers shown in this mockup:</h3>
+<div class="options" data-multiselect>
+  <div class="option" data-choice="toc" onclick="toggleSelect(this)">
+    <div class="letter">1</div>
+    <div class="content">
+      <h3>Sticky TOC with active indicator</h3>
+      <p>Blue left border follows current section. Stays visible as you scroll.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="progress" onclick="toggleSelect(this)">
+    <div class="letter">2</div>
+    <div class="content">
+      <h3>Reading progress bar</h3>
+      <p>Below the TOC, shows how far through the article you are.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="callouts" onclick="toggleSelect(this)">
+    <div class="letter">3</div>
+    <div class="content">
+      <h3>Callout boxes (info, warning)</h3>
+      <p>Blue for key technical facts, yellow for deprecation warnings/deadlines.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="dividers" onclick="toggleSelect(this)">
+    <div class="letter">4</div>
+    <div class="content">
+      <h3>Section dividers with generous spacing</h3>
+      <p>Thin lines between major sections, 48px+ vertical breathing room.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="tables" onclick="toggleSelect(this)">
+    <div class="letter">5</div>
+    <div class="content">
+      <h3>Styled comparison tables</h3>
+      <p>For model comparisons, feature matrices, migration timelines.</p>
+    </div>
+  </div>
+</div>

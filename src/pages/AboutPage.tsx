@@ -1,256 +1,180 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Users, Target, Wrench } from "@phosphor-icons/react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useTranslations } from "@/hooks/use-translations";
-import { BackgroundIcons } from "@/components/BackgroundIcons";
+import { PageHeroBg } from "@/components/PageHeroBg";
 import { SEO, PAGE_SEO } from "@/components/SEO";
 
 export function AboutPage() {
-  const { t, language } = useTranslations();
-
-  const title = t.about?.title || "About Cloud Evolvers";
-  const subtitle = t.about?.subtitle || "Specialized Microsoft Certified Training (MCT) and consulting company, founded in 2023 with over 15 years of IT experience.";
+  const { t } = useTranslations();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50/30 to-white dark:from-slate-950 dark:via-slate-900/20 dark:to-slate-950 pt-24 md:pt-28 pb-12 md:pb-16">
+    <section className="relative overflow-hidden bg-background pt-28 md:pt-32 pb-16 md:pb-24">
       <SEO {...PAGE_SEO.about} />
-      {/* Background with floating icons */}
-      <div className="absolute inset-0">
-        <div className="from-neutral-100/20 via-slate-50/15 to-neutral-100/20 dark:from-slate-900/20 dark:via-slate-900/25 dark:to-slate-800/20 absolute inset-0 bg-gradient-to-br" />
-        <BackgroundIcons variant="default" />
-      </div>
+      <PageHeroBg />
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 
-        {/* Hero Section */}
-        <div className="flex flex-col items-center justify-center gap-4 mb-8 md:mb-10">
-          <motion.h1
-            className="text-3xl md:text-4xl lg:text-5xl text-foreground font-bold leading-tight text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            {title}
-          </motion.h1>
-          <motion.div
-            className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 rounded-2xl p-4 md:p-6 max-w-4xl mx-auto shadow-xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <p className="text-sm md:text-base text-foreground leading-relaxed font-medium text-center">
-              {subtitle}
-            </p>
-          </motion.div>
-        </div>
+        {/* Page header */}
+        <motion.div
+          className="mb-16 md:mb-20"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground font-semibold tracking-tight">
+            {t.about?.title || "About Cloud Evolvers"}
+          </h1>
+          <div className="mt-4 h-px w-16 bg-gradient-to-r from-emerald-500/50 to-transparent" />
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            {t.about?.subtitle || "Cloud Evolvers is the training arm of Spot Cloud — a company built on 15+ years of hands-on Microsoft infrastructure work. We train the people who run Azure and Microsoft 365 in production."}
+          </p>
+        </motion.div>
 
-        {/* Main Content */}
-        <div className="space-y-8 md:space-y-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {/* Our Story */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 h-full shadow-xl transition-all duration-300 hover:border-primary/40">
-                <CardContent className="p-4 md:p-6 lg:p-8">
-                  <div className="flex items-center mb-4 md:mb-5">
-                    <div className="bg-emerald-500/10 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mr-3 flex-shrink-0">
-                      <Users className="text-emerald-600 dark:text-emerald-400 h-5 w-5 md:h-6 md:w-6" weight="regular" />
-                    </div>
-                    <h2 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold">
-                      {t.about?.ourStory?.title || "Our Story"}
-                    </h2>
-                  </div>
-                  <div className="text-sm md:text-base text-muted-foreground space-y-3">
-                    <p className="leading-relaxed">
-                      {t.about?.ourStory?.content1 || "Cloud Evolvers is part of Spot Cloud, and our passion for technology and automation drives us to help customers excel in the Microsoft ecosystem."}
-                    </p>
-                    <p className="leading-relaxed">
-                      {t.about?.ourStory?.content2 || "Our founder, Yaïr Knijn, has nurtured a passion for technology since his childhood, bringing over 15 years of experience with Microsoft technologies and cloud solutions."}
-                    </p>
-                    <h3 className="text-base md:text-lg text-foreground font-semibold mt-3 md:mt-4">
-                      {t.about?.ourStory?.whySpotCloud || "Why Spot Cloud?"}
-                    </h3>
-                    <p className="leading-relaxed">
-                      {t.about?.ourStory?.spotCloudExplanation || "The name Spot Cloud stems from our love for dogs, specifically Dalmatians. Just like a Dalmatian's spots are unique, we deliver unique cloud solutions to our customers."}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Our Mission */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 h-full shadow-xl transition-all duration-300 hover:border-primary/40">
-                <CardContent className="p-4 md:p-6 lg:p-8">
-                  <div className="flex items-center mb-4 md:mb-5">
-                    <div className="bg-teal-500/10 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mr-3 flex-shrink-0">
-                      <Target className="text-teal-600 dark:text-teal-400 h-5 w-5 md:h-6 md:w-6" weight="regular" />
-                    </div>
-                    <h2 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold">
-                      {t.about?.ourMission?.title || "Our Mission"}
-                    </h2>
-                  </div>
-                  <div className="text-sm md:text-base text-muted-foreground space-y-3">
-                    <p className="leading-relaxed">
-                      {t.about?.ourMission?.content || "We provide end-to-end implementations and training in the Microsoft ecosystem, using our love for automation to help customers achieve their goals."}
-                    </p>
-                    <h3 className="text-base md:text-lg text-foreground font-semibold mt-3 md:mt-4">
-                      {t.about?.ourMission?.vision || "Our Vision"}
-                    </h3>
-                    <p className="leading-relaxed">
-                      {t.about?.ourMission?.visionContent || "We believe in practical, results-oriented training that is immediately applicable in the workplace. Through our extensive experience with Azure implementations, we can offer training that goes beyond theory - we share real-world experiences and best practices."}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-
-          {/* Our Specialties */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold mb-5 md:mb-6 text-center lg:text-left">
-              {t.about?.specialties?.title || "Our Specialties"}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-              {[
-                {
-                  icon: GraduationCap,
-                  title: t.about?.specialties?.items?.[0]?.title || "Microsoft Certified Training",
-                  description: t.about?.specialties?.items?.[0]?.description || "Azure and Microsoft 365 training programs"
-                },
-                {
-                  icon: Wrench,
-                  title: t.about?.specialties?.items?.[1]?.title || "End-to-end Implementations",
-                  description: t.about?.specialties?.items?.[1]?.description || "Complete Microsoft stack solutions"
-                },
-                {
-                  icon: Target,
-                  title: t.about?.specialties?.items?.[2]?.title || "Automation",
-                  description: t.about?.specialties?.items?.[2]?.description || "Efficiency through intelligent automation"
-                },
-                {
-                  icon: Users,
-                  title: t.about?.specialties?.items?.[3]?.title || "Consultancy",
-                  description: t.about?.specialties?.items?.[3]?.description || "Strategic advice for cloud transformation"
-                }
-              ].map((specialty, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <Card className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 h-full shadow-lg transition-all duration-300 hover:shadow-xl hover:border-primary/40">
-                    <CardContent className="p-4 md:p-6 text-center">
-                      <div className="bg-emerald-500/10 w-12 h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mx-auto mb-3">
-                        <specialty.icon className="text-emerald-600 dark:text-emerald-400 h-6 w-6 md:h-7 md:w-7" weight="regular" />
-                      </div>
-                      <h3 className="text-sm md:text-base text-foreground font-semibold mb-2">{specialty.title}</h3>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{specialty.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Team Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-foreground font-bold mb-5 md:mb-6 text-center lg:text-left">
-              {t.about?.team?.title || "Our Team"}
-            </h2>
-            <div className="max-w-5xl mx-auto">
-              <Card className="bg-gradient-to-br from-card/90 to-card/95 backdrop-blur-sm border border-border/40 shadow-xl transition-all duration-300 overflow-hidden hover:border-primary/40">
-                <CardContent className="p-0">
-                  <div className="grid lg:grid-cols-5 gap-0">
-                    {/* Photo Section - 2 columns */}
-                    <div className="lg:col-span-2 relative h-64 sm:h-80 lg:h-auto lg:min-h-[400px] border-r border-border/20">
-                      <img
-                        src="/1625557501943.jpg"
-                        alt="Yaïr Knijn - Founder & CEO"
-                        className="w-full h-full object-cover object-[center_20%]"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent lg:bg-gradient-to-r lg:from-black/40"></div>
-                    </div>
-
-                    {/* Content Section - 3 columns */}
-                    <div className="lg:col-span-3 p-4 sm:p-6 md:p-8 flex flex-col justify-center">
-                      <h3 className="text-lg md:text-xl lg:text-2xl text-foreground font-bold mb-2">
-                        Yaïr Knijn
-                      </h3>
-                      <p className="text-base md:text-lg text-muted-foreground font-semibold mb-4">
-                        {t.about?.team?.founder?.role || "Founder & CEO"}
-                      </p>
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-                        {t.about?.team?.founder?.description || "With over 15 years of experience in the IT sector, Yaïr specializes in Azure cloud infrastructure and Microsoft 365 solutions. Through his passion for knowledge sharing and hands-on guidance, he helps companies succeed in their digital transformation."}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
-                          Microsoft Certified Trainer
-                        </span>
-                        <span className="bg-neutral-500/10 border border-border text-foreground inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
-                          Azure Expert
-                        </span>
-                        <span className="bg-neutral-500/10 border border-border text-foreground inline-flex items-center rounded-full px-4 py-2 shadow-sm hover:shadow-md transition-all duration-200 font-medium">
-                          Cloud Architect
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </motion.div>
-
-          {/* Contact Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Card className="bg-gradient-to-br from-neutral-500/5 to-neutral-500/3 border-border shadow-xl">
-              <CardContent className="p-8 md:p-12 lg:p-16">
-                <h2 className="text-foreground font-bold mb-4 text-xl md:text-2xl">
-                  {t.about?.contact?.title || "Get In Touch"}
-                </h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed max-w-2xl mx-auto">
-                  {t.about?.contact?.description || "Ready to start your cloud journey? Get in touch with us today!"}
-                </p>
-                <div className="space-y-2">
-                  <a
-                    href="mailto:info@cloudevolvers.com"
-                    className="text-foreground hover:text-foreground/80 bg-neutral-500/10 hover:bg-neutral-500/15 inline-block font-bold transition-all duration-200 px-6 py-3 rounded-lg shadow-md hover:shadow-lg border border-border"
-                  >
-                    info@cloudevolvers.com
-                  </a>
+        {/* Yaïr — full-width hero card */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-16 md:mb-20"
+        >
+          <Card className="overflow-hidden border border-border shadow-lg">
+            <CardContent className="p-0">
+              <div className="grid lg:grid-cols-5 gap-0">
+                {/* Photo */}
+                <div className="lg:col-span-2 relative h-72 sm:h-80 lg:h-auto lg:min-h-[440px]">
+                  <img
+                    src="/1625557501943.jpg"
+                    alt="Yaïr Knijn"
+                    className="w-full h-full object-cover object-[center_18%]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
                 </div>
+
+                {/* Bio */}
+                <div className="lg:col-span-3 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-600 dark:text-emerald-400">
+                    {t.about?.team?.founder?.role || "Founder & lead trainer"}
+                  </p>
+                  <h2 className="font-display mt-2 text-2xl md:text-3xl text-foreground font-semibold">
+                    Yaïr Knijn
+                  </h2>
+                  <div className="mt-5 space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
+                    <p>
+                      {t.about?.team?.founder?.description || "Yaïr has been working with Microsoft infrastructure since the Windows Server 2003 days. He moved into Azure early, ran large-scale tenant migrations, and now spends most of his time helping teams understand the decisions that actually matter in production — identity, networking, governance, and cost control."}
+                    </p>
+                    <p>
+                      As an MCT (Microsoft Certified Trainer), he delivers all Cloud Evolvers training personally. No subcontractors, no slideshows from a content library — just practical workshops backed by real project experience.
+                    </p>
+                  </div>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    <span className="rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-300">
+                      Microsoft Certified Trainer
+                    </span>
+                    <span className="rounded-full border border-border bg-muted/50 px-3 py-1.5 text-xs font-medium text-foreground">
+                      Azure Solutions Architect Expert
+                    </span>
+                    <span className="rounded-full border border-border bg-muted/50 px-3 py-1.5 text-xs font-medium text-foreground">
+                      15+ years Microsoft
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* How we work — two columns */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-16 md:mb-20"
+        >
+          <h2 className="font-display text-2xl md:text-3xl text-foreground font-semibold mb-8">
+            {t.about?.ourStory?.title || "How we work"}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border border-border">
+              <CardContent className="p-6 md:p-8">
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  {t.about?.ourMission?.title || "Training that starts from operations"}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {t.about?.ourMission?.content || "Every course we run is shaped by actual Azure and Microsoft 365 work — tenant migrations, landing zone builds, security hardening, cost reviews. We teach the decisions teams face when they inherit or scale environments, not just the exam objectives."}
+                </p>
               </CardContent>
             </Card>
-          </motion.div>
-        </div>
+            <Card className="border border-border">
+              <CardContent className="p-6 md:p-8">
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  {t.about?.ourMission?.vision || "Small groups, real labs"}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {t.about?.ourMission?.visionContent || "We cap sessions at 10 participants so everyone gets hands-on time. Labs run in live Azure environments, not sandboxed simulators. Participants walk out with muscle memory, not just notes."}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </motion.div>
+
+        {/* Spot Cloud origin story — compact */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mb-16 md:mb-20"
+        >
+          <div className="rounded-2xl border border-border bg-card p-6 md:p-10">
+            <h2 className="font-display text-xl md:text-2xl text-foreground font-semibold mb-4">
+              {t.about?.ourStory?.whySpotCloud || "Why Spot Cloud?"}
+            </h2>
+            <div className="max-w-3xl space-y-3 text-sm md:text-base leading-relaxed text-muted-foreground">
+              <p>
+                {t.about?.ourStory?.content1 || "Cloud Evolvers is the training brand of Spot Cloud, the company Yaïr founded in 2023. Spot Cloud also does consulting and implementation work — Azure landing zones, Microsoft 365 tenant architecture, automation with Bicep and Terraform."}
+              </p>
+              <p>
+                {t.about?.ourStory?.spotCloudExplanation || "The name? It comes from our Dalmatian. Spots are unique, and so is every cloud environment we work with. No two tenants look the same, so no two training programs should either."}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="rounded-2xl border border-border bg-card p-8 md:p-12 text-center">
+            <h2 className="font-display text-xl md:text-2xl text-foreground font-semibold mb-3">
+              {t.about?.contact?.title || "Want to talk training?"}
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+              {t.about?.contact?.description || "Tell us what your team is working on and we'll suggest the tracks and format that fit."}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+              >
+                Get in touch
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/training"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+              >
+                Browse training
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

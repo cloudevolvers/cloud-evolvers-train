@@ -12,7 +12,6 @@ export const powerPlatformCourses: TrainingTranslations = {
       category: 'Power Platform',
       level: 'Beginner',
       duration: { days: 1, format: 'days' },
-      price: { amount: 695, currency: 'EUR' },
       
       overview: 'Introduction to Microsoft Power Platform including Power Apps, Power Automate, Power BI, and Power Virtual Agents. Learn how to build simple applications, automate workflows, analyze data, and create chatbots without extensive coding.',
       
@@ -134,7 +133,6 @@ export const powerPlatformCourses: TrainingTranslations = {
       category: 'Power Platform',
       level: 'Beginner',
       duration: { days: 1, format: 'days' },
-      price: { amount: 695, currency: 'EUR' },
       
       overview: 'Introductie tot Microsoft Power Platform inclusief Power Apps, Power Automate, Power BI en Power Virtual Agents. Leer eenvoudige applicaties bouwen, workflows automatiseren, data analyseren en chatbots creëren zonder uitgebreide programmeerkennis.',
       
@@ -257,7 +255,6 @@ export const powerPlatformCourses: TrainingTranslations = {
       category: 'Power Platform',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Advanced training focusing on business process automation using Power Platform. Learn to create sophisticated workflows, integrate systems, build automated solutions, and implement governance for enterprise automation initiatives.',
       
@@ -377,7 +374,6 @@ export const powerPlatformCourses: TrainingTranslations = {
       category: 'Power Platform',
       level: 'Intermediate',
       duration: { days: 3, format: 'days' },
-      price: { amount: 1395, currency: 'EUR' },
       
       overview: 'Geavanceerde training gericht op bedrijfsproces automatisering met Power Platform. Leer geavanceerde workflows creëren, systemen integreren, geautomatiseerde oplossingen bouwen en governance implementeren voor enterprise automation initiatieven.',
       
@@ -500,7 +496,6 @@ export const powerPlatformCourses: TrainingTranslations = {
       category: 'Power Platform',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Comprehensive training for Power BI data analysts. Learn to prepare data, model data, visualize and analyze data, and deploy and maintain assets. Master advanced DAX, data modeling, and creating compelling business intelligence solutions.',
       
@@ -632,7 +627,6 @@ export const powerPlatformCourses: TrainingTranslations = {
       category: 'Power Platform',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Uitgebreide training voor Power BI data analisten. Leer data voorbereiden, data modelleren, data visualiseren en analyseren, en assets implementeren en onderhouden. Beheers geavanceerde DAX, data modeling en het creëren van overtuigende business intelligence oplossingen.',
       

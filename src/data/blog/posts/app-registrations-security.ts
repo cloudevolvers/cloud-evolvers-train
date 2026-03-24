@@ -11,7 +11,7 @@ export const appRegistrationsSecurityPost: BlogPost = {
     nl: 'Leer hoe je app registrations in Microsoft Entra ID auditeert, beveiligingsrisicos identificeert en proper credential lifecycle management implementeert'
   },
   date: '2025-06-08',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Entra', 'Security', 'App Registration', 'Credentials', 'Governance'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const appRegistrationsSecurityPost: BlogPost = {
   readTime: 14,
   content: {
     introduction: {
-      en: 'App registrations in Microsoft Entra ID (formerly Azure AD) are the identity backbone for your applications. However, they can become a significant security risk when credentials expire without rotation, excessive permissions are granted, or owner access is not properly managed. This article covers a comprehensive security audit approach and best practices for credential management.',
-      nl: 'App registrations in Microsoft Entra ID (voorheen Azure AD) zijn de identiteitsruggengraat voor je applicaties. Ze kunnen echter een significant beveiligingsrisico worden wanneer credentials verlopen zonder rotatie, excessieve permissies worden toegekend, of eigenaarstoegang niet goed wordt beheerd. Dit artikel behandelt een uitgebreide security audit-aanpak en best practices voor credential management.'
+      en: 'Open your Entra ID tenant right now and count the app registrations. Now check how many have expired credentials. How many have Directory.ReadWrite.All permissions that nobody remembers granting. How many have no owner listed at all. If you have been running your tenant for more than a year, the answers are probably uncomfortable. App registrations in Microsoft Entra ID (formerly Azure AD) are quiet attack vectors — they sit there with stale secrets and overprivileged permissions until something goes wrong. Here is how to audit them and set up the guardrails so they stop drifting.',
+      nl: 'Open je Entra ID-tenant nu en tel de app registrations. Controleer dan hoeveel verlopen credentials hebben. Hoeveel Directory.ReadWrite.All-permissies hebben die niemand zich herinnert te hebben verleend. Hoeveel geen eigenaar hebben. Als je tenant langer dan een jaar draait, zijn de antwoorden waarschijnlijk ongemakkelijk. App registrations in Microsoft Entra ID (voorheen Azure AD) zijn stille aanvalsvectoren — ze zitten daar met verouderde secrets en te brede permissies totdat er iets misgaat. Zo audit je ze en stel je de vangrails in zodat ze stoppen met afdrijven.'
     },
     sections: [
       {
@@ -92,8 +92,8 @@ $expiringApps | Format-Table -AutoSize`
       }
     ],
     conclusion: {
-      en: 'Regular auditing of app registrations is essential for maintaining a secure identity posture. Combine automated scanning with governance policies to catch issues before they become vulnerabilities.',
-      nl: 'Regelmatige auditing van app registrations is essentieel voor het handhaven van een veilige identity posture. Combineer geautomatiseerde scanning met governance policies om problemen te vangen voordat ze kwetsbaarheden worden.'
+      en: 'A one-time audit is useful. A recurring one is what actually keeps you safe. Run the PowerShell scripts on a schedule — weekly is fine for most tenants. Automate credential rotation through Key Vault so secrets do not sit expired for months. Set up alerts for new high-privilege permission grants so you catch them when they happen, not during next quarter\'s review. None of this is hard to do. The hard part is doing it consistently before an incident forces you to.',
+      nl: 'Een eenmalige audit is nuttig. Een terugkerende is wat je echt veilig houdt. Draai de PowerShell-scripts op een schema — wekelijks is prima voor de meeste tenants. Automatiseer credential rotation via Key Vault zodat secrets niet maanden verlopen blijven. Stel alerts in voor nieuwe high-privilege permission grants zodat je ze opmerkt wanneer ze gebeuren, niet tijdens de review van volgend kwartaal. Niets hiervan is moeilijk. Het moeilijke is het consequent doen voordat een incident je ertoe dwingt.'
     }
   }
 };

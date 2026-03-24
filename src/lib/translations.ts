@@ -185,7 +185,7 @@ export const translations = {
       letsConnect: "Let's Connect",
       pageDescription: "Whether you need enterprise training, consulting, or just have a question, our team is ready to help.",
       sendUsMessage: "Send us a message",
-      officialPartner: "Official Training Partner"
+      officialPartner: "Elite Certified Experts"
     },
     form: {
       registerInterest: "Register Your Interest",
@@ -539,7 +539,7 @@ export const translations = {
       letsConnect: "Neem Contact Op",
       pageDescription: "Of u nu bedrijfstraining, advies of gewoon een vraag heeft, ons team staat klaar om te helpen.",
       sendUsMessage: "Stuur ons een bericht",
-      officialPartner: "Officiële Trainingspartner"
+      officialPartner: "Elite Certified Experts"
     },
     form: {
       registerInterest: "Registreer uw interesse",

@@ -11,7 +11,7 @@ export const appRegistrationsVsEnterpriseAppsPost: BlogPost = {
     nl: 'Begrijp het verschil tussen App Registrations en Enterprise Applications in Microsoft Entra ID en wanneer elk te gebruiken.'
   },
   date: '2025-04-25',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Entra ID', 'Identity', 'Apps', 'Authentication'],
   image: '/images/pexels/pexels-cyber-security-concept.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const appRegistrationsVsEnterpriseAppsPost: BlogPost = {
   readTime: 7,
   content: {
     introduction: {
-      en: 'One of the most common points of confusion in Microsoft Entra ID is the relationship between App Registrations and Enterprise Applications. They appear in different places in the portal but are deeply connected.',
-      nl: 'Een van de meest voorkomende punten van verwarring in Microsoft Entra ID is de relatie tussen App Registrations en Enterprise Applications. Ze verschijnen op verschillende plaatsen in de portal maar zijn nauw verbonden.'
+      en: 'You delete an Enterprise Application and your multi-tenant app breaks in a customer\'s tenant. You change a redirect URI on the Enterprise Application blade and nothing happens. You search for your app in Entra ID and find it in two different places with different settings. Sound familiar? The split between App Registrations and Enterprise Applications trips up even experienced Azure admins, because the Entra portal shows them as separate things without making the relationship obvious. Once you get the mental model right, it clicks. Here is the short version.',
+      nl: 'Je verwijdert een Enterprise Application en je multi-tenant app werkt niet meer in de tenant van een klant. Je wijzigt een redirect URI op het Enterprise Application-blad en er gebeurt niets. Je zoekt je app in Entra ID en vindt hem op twee verschillende plekken met verschillende instellingen. Herkenbaar? De splitsing tussen App Registrations en Enterprise Applications laat zelfs ervaren Azure-admins struikelen, omdat de Entra-portal ze als aparte dingen toont zonder de relatie duidelijk te maken. Zodra het mentale model klopt, valt alles op z\'n plek. Hier is de korte versie.'
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const appRegistrationsVsEnterpriseAppsPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Understanding this relationship is crucial for proper application management. Remember: App Registration = definition, Enterprise Application = instance.',
-      nl: 'Het begrijpen van deze relatie is cruciaal voor correct applicatiebeheer. Onthoud: App Registration = definitie, Enterprise Application = instantie.'
+      en: 'The rule of thumb: App Registration is your app\'s blueprint — credentials, API permissions, redirect URIs go here. Enterprise Application (Service Principal) is the local instance in a specific tenant — user assignments, conditional access, SSO config go here. Delete the App Registration and you kill it everywhere. Delete the Enterprise Application and you only remove it from that one tenant. Stick that on a post-it note and save yourself some future headaches.',
+      nl: 'De vuistregel: App Registration is de blauwdruk van je app — credentials, API-permissies en redirect URI\'s stel je hier in. Enterprise Application (Service Principal) is de lokale instantie in een specifieke tenant — gebruikerstoewijzingen, conditional access en SSO-config stel je hier in. Verwijder de App Registration en je schakelt het overal uit. Verwijder de Enterprise Application en je haalt het alleen uit die ene tenant. Plak dat op een post-it en bespaar jezelf wat toekomstige hoofdpijn.'
     }
   }
 };

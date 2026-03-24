@@ -1,10 +1,12 @@
 import { AzureExcellencePage } from "@/pages/AzureExcellencePage";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { BlogPage } from "@/components/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 import { AboutPage } from "@/pages/AboutPage";
 import ServicesPage from "@/pages/ServicesPage";
 import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
@@ -36,6 +38,7 @@ function App() {
     <LanguageProvider>
       <div className="min-h-screen relative overflow-hidden bg-background">
         <div className="relative z-20">
+          <ScrollToTop />
           <Header />
           <main className="bg-background min-h-screen">
             <Routes>
@@ -44,6 +47,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/azure-excellence" element={<AzureExcellencePage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:id" element={<BlogPostPage />} />
               <Route path="/contact" element={<ContactPage />} />
 
               <Route path="/training" element={<TrainingOverviewPage />} />

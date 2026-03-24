@@ -11,7 +11,7 @@ export const mandatoryMfaEnforcementPost: BlogPost = {
     nl: 'Microsoft dwingt verplichte MFA af voor alle Azure portal en admin center toegang. Leer de tijdlijn, vereisten en hoe je je organisatie voorbereidt'
   },
   date: '2025-12-04',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'MFA', 'Security', 'Compliance', 'Entra ID'],
   image: '/images/unsplash/compliance-governance-audit.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const mandatoryMfaEnforcementPost: BlogPost = {
   readTime: 10,
   content: {
     introduction: {
-      en: 'Throughout 2024-2025, Microsoft has been rolling out mandatory multifactor authentication (MFA) enforcement for admin portals including the Azure portal, Microsoft 365 admin center, and Microsoft Entra admin center. This is a significant security enhancement that affects all organizations using Azure and Microsoft 365. Understanding the timeline and requirements is critical to avoid access disruptions and ensure your organization remains compliant.',
-      nl: 'Gedurende 2024-2025 heeft Microsoft verplichte multifactor authenticatie (MFA)-handhaving uitgerold voor admin portals inclusief de Azure portal, Microsoft 365 admin center en Microsoft Entra admin center. Dit is een significante beveiligingsverbetering die alle organisaties raakt die Azure en Microsoft 365 gebruiken. Het begrijpen van de tijdlijn en vereisten is cruciaal om toegangsonderbrekingen te voorkomen en ervoor te zorgen dat je organisatie compliant blijft.'
+      en: 'Microsoft made MFA mandatory for Azure portal, Microsoft 365 admin center, and Entra admin center. Not optional, not recommended — mandatory. The rollout started in late 2024 and by mid-2025 it hit all tenants. If you have not set up MFA yet, your users are getting blocked right now. This is a good move — password-only access to admin portals was a liability — but it caught a lot of organizations off guard, especially those with service accounts and automation scripts that sign in interactively.',
+      nl: 'Microsoft heeft MFA verplicht gemaakt voor Azure portal, Microsoft 365 admin center en Entra admin center. Niet optioneel, niet aanbevolen — verplicht. De uitrol begon eind 2024 en halverwege 2025 waren alle tenants aan de beurt. Heb je nog geen MFA ingesteld? Dan worden je gebruikers nu geblokkeerd. Dit is een goede zet — wachtwoord-only toegang tot admin portals was een risico — maar het overviel veel organisaties, vooral die met serviceaccounts en automatiseringsscripts die interactief inloggen.'
     },
     sections: [
       {
@@ -122,8 +122,8 @@ az login --identity`
       }
     ],
     conclusion: {
-      en: 'Mandatory MFA for Azure and Microsoft 365 admin portals is now a reality. Organizations that have proactively deployed MFA will see no disruption. Those who havent must act now to avoid access issues. Use this as an opportunity to go beyond basic MFA and deploy phishing-resistant passwordless authentication for your most critical users and applications.',
-      nl: 'Verplichte MFA voor Azure en Microsoft 365 admin portals is nu een realiteit. Organisaties die proactief MFA hebben gedeployd zullen geen verstoring ervaren. Degenen die dat niet hebben gedaan moeten nu handelen om toegangsproblemen te voorkomen. Gebruik dit als een kans om verder te gaan dan basis-MFA en phishing-bestendige passwordless authenticatie te deployen voor je meest kritieke gebruikers en applicaties.'
+      en: 'If your org already had MFA policies in place, nothing changes for you. If not, act now — your admins and users will get locked out otherwise. While you are at it, do not stop at basic MFA. SMS codes are better than nothing, but they are still vulnerable to SIM-swapping and phishing. Set up FIDO2 keys or passkeys for your admins at minimum. And go audit your automation scripts — any script that does `az login` interactively will break. Switch those to service principals or managed identities.',
+      nl: 'Had je organisatie al MFA-policies? Dan verandert er niets. Zo niet, handel nu — je admins en gebruikers worden anders buitengesloten. En als je toch bezig bent, stop niet bij basis-MFA. SMS-codes zijn beter dan niets, maar ze zijn nog steeds kwetsbaar voor SIM-swapping en phishing. Stel minstens FIDO2-keys of passkeys in voor je admins. En ga je automatiseringsscripts auditen — elk script dat interactief `az login` doet gaat stuk. Zet die om naar service principals of managed identities.'
     }
   }
 };

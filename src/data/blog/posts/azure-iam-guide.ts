@@ -11,7 +11,7 @@ export const azureIamGuidePost: BlogPost = {
     nl: 'Beheers Azure Identity en Access Management met deze uitgebreide gids over RBAC, Entra ID, conditional access en security best practices.'
   },
   date: '2025-05-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'Security', 'IAM', 'RBAC', 'Entra ID'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const azureIamGuidePost: BlogPost = {
   readTime: 15,
   content: {
     introduction: {
-      en: 'Identity and Access Management (IAM) is the foundation of Azure security. This guide covers the essential concepts, components, and best practices for implementing robust IAM in your Azure environment.',
-      nl: 'Identity en Access Management (IAM) is de basis van Azure security. Deze gids behandelt de essentiële concepten, componenten en best practices voor het implementeren van robuuste IAM in je Azure-omgeving.'
+      en: 'Get IAM wrong in Azure and nothing else matters. Your network security, your encryption, your monitoring — all of it falls apart if the wrong person has the wrong access. Azure gives you RBAC, Entra ID, Conditional Access, and PIM. Each solves a different piece of the puzzle. The trick is knowing how they fit together and where teams typically get tripped up.',
+      nl: 'Als je IAM verkeerd inricht in Azure, maakt de rest niet meer uit. Je netwerkbeveiliging, je encryptie, je monitoring — het valt allemaal om als de verkeerde persoon de verkeerde toegang heeft. Azure geeft je RBAC, Entra ID, Conditional Access en PIM. Elk lost een ander stuk van de puzzel op. De kunst is weten hoe ze samenwerken en waar teams doorgaans struikelen.'
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const azureIamGuidePost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'A well-designed IAM strategy is essential for Azure security. Combine RBAC, Conditional Access, and PIM to create a defense-in-depth approach to identity management.',
-      nl: 'Een goed ontworpen IAM-strategie is essentieel voor Azure security. Combineer RBAC, Conditional Access en PIM om een defense-in-depth benadering voor identity management te creëren.'
+      en: 'RBAC handles who can do what. Conditional Access decides under which circumstances they can do it. PIM makes sure privileged access is temporary, not permanent. Layer all three and you have a solid identity posture. Skip any one of them and you\'re leaving a gap that attackers will find.',
+      nl: 'RBAC regelt wie wat mag doen. Conditional Access bepaalt onder welke omstandigheden ze het mogen doen. PIM zorgt dat privileged access tijdelijk is, niet permanent. Combineer alle drie en je hebt een solide identiteitshouding. Sla er eentje over en je laat een gat open dat aanvallers zullen vinden.'
     }
   }
 };

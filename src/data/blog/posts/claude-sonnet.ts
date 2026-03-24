@@ -25,8 +25,8 @@ export const claudeSonnetPost: BlogPost = {
   readTime: 5,
   content: {
     introduction: {
-      en: "GitHub has announced the integration of Claude Sonnet 4.5, Anthropic's most advanced model, into GitHub Copilot. This powerful addition gives developers access to state-of-the-art AI capabilities for code generation, understanding, and problem-solving.",
-      nl: "GitHub heeft de integratie van Claude Sonnet 4.5, Anthropic's meest geavanceerde model, in GitHub Copilot aangekondigd. Deze krachtige toevoeging geeft ontwikkelaars toegang tot state-of-the-art AI-mogelijkheden voor codegeneratie, begrip en probleemoplossing."
+      en: "GitHub added Claude Sonnet 4.5 to Copilot, and it's a noticeable upgrade for code-heavy work. Anthropic's model handles complex refactoring, multi-file context, and debugging differently than GPT-4o — sometimes better, sometimes just different. The point is you now have a real choice. Pick the model that fits the task instead of being locked to one.",
+      nl: "GitHub heeft Claude Sonnet 4.5 toegevoegd aan Copilot, en het is een merkbare upgrade voor code-intensief werk. Anthropic's model gaat anders om met complexe refactoring, multi-file context en debugging dan GPT-4o — soms beter, soms gewoon anders. Het punt is dat je nu een echte keuze hebt. Kies het model dat bij de taak past in plaats van vastzitten aan één optie."
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const claudeSonnetPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Start using Claude Sonnet 4.5 in GitHub Copilot today and experience the next generation of AI-powered coding assistance!',
-      nl: 'Begin vandaag nog met het gebruik van Claude Sonnet 4.5 in GitHub Copilot en ervaar de volgende generatie AI-aangedreven codeerassistentie!'
+      en: 'Having multiple strong models in Copilot is genuinely useful. Claude Sonnet 4.5 is particularly good at explaining existing code and catching subtle bugs. GPT-4o tends to be faster for straightforward completions. Try both on your actual codebase — the model selector is right there in the chat. Your mileage will vary by language and project, but having the option is a clear improvement over a single-model setup.',
+      nl: 'Meerdere sterke modellen in Copilot hebben is oprecht nuttig. Claude Sonnet 4.5 is bijzonder goed in het uitleggen van bestaande code en het vinden van subtiele bugs. GPT-4o is meestal sneller voor rechttoe-rechtaan completions. Probeer beide op je eigen codebase — de modelselector zit gewoon in de chat. Je ervaring zal verschillen per taal en project, maar de keuze hebben is een duidelijke verbetering ten opzichte van één enkel model.'
     }
   }
 };

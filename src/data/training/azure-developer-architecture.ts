@@ -12,7 +12,6 @@ export const azureDeveloperArchitectureCourses: TrainingTranslations = {
       category: 'Developer Tools',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Comprehensive developer training focusing on building cloud applications and services on Microsoft Azure. Learn to design, build, test, and maintain cloud applications and services, utilizing Azure services for compute, storage, databases, and security.',
       
@@ -134,7 +133,6 @@ export const azureDeveloperArchitectureCourses: TrainingTranslations = {
       category: 'Developer Tools',
       level: 'Intermediate',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1595, currency: 'EUR' },
       
       overview: 'Uitgebreide developer training gericht op het bouwen van cloud applicaties en services op Microsoft Azure. Leer cloud applicaties en services ontwerpen, bouwen, testen en onderhouden, waarbij Azure services voor compute, storage, databases en beveiliging worden gebruikt.',
       
@@ -258,7 +256,6 @@ export const azureDeveloperArchitectureCourses: TrainingTranslations = {
       category: 'Azure Architecture',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1795, currency: 'EUR' },
       
       overview: 'Advanced architecture training for designing and implementing solutions on Microsoft Azure. Learn to advise stakeholders and translate business requirements into secure, scalable, and reliable cloud solutions.',
       
@@ -370,7 +367,6 @@ export const azureDeveloperArchitectureCourses: TrainingTranslations = {
       category: 'Azure Architecture',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1795, currency: 'EUR' },
       
       overview: 'Geavanceerde architectuur training voor het ontwerpen en implementeren van oplossingen op Microsoft Azure. Leer stakeholders adviseren en business requirements vertalen naar veilige, schaalbare en betrouwbare cloud oplossingen.',
       
@@ -484,7 +480,6 @@ export const azureDeveloperArchitectureCourses: TrainingTranslations = {
       category: 'Developer Tools',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1695, currency: 'EUR' },
       
       overview: 'Advanced DevOps training focusing on implementing continuous integration, continuous delivery, dependency management, application infrastructure, and compliance and security practices using Azure DevOps and related technologies.',
       
@@ -597,7 +592,6 @@ export const azureDeveloperArchitectureCourses: TrainingTranslations = {
       category: 'Developer Tools',
       level: 'Advanced',
       duration: { days: 4, format: 'days' },
-      price: { amount: 1695, currency: 'EUR' },
       
       overview: 'Geavanceerde DevOps training gericht op het implementeren van continuous integration, continuous delivery, dependency management, applicatie infrastructuur en compliance en security practices met Azure DevOps en gerelateerde technologieën.',
       

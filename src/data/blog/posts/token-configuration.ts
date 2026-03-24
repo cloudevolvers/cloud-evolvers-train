@@ -11,7 +11,7 @@ export const tokenConfigurationPost: BlogPost = {
     nl: 'Beheers token configuratie in Microsoft Entra ID - voeg custom claims toe, configureer optional claims en beheer token lifetime voor je applicaties'
   },
   date: '2025-06-07',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Entra', 'Tokens', 'Claims', 'Authentication', 'OAuth'],
   image: '/images/unsplash/identity-access-management.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const tokenConfigurationPost: BlogPost = {
   readTime: 11,
   content: {
     introduction: {
-      en: "When building applications that authenticate with Microsoft Entra ID, you often need more than the default token claims. Perhaps you need the user's employee ID, department, or custom attributes stored in directory extensions. This article covers how to configure token claims, work with optional claims, and manage token lifetime policies.",
-      nl: 'Bij het bouwen van applicaties die authenticeren met Microsoft Entra ID, heb je vaak meer nodig dan de standaard token claims. Misschien heb je het employee ID van de gebruiker nodig, de afdeling, of custom attributes opgeslagen in directory extensions. Dit artikel behandelt hoe je token claims configureert, werkt met optional claims en token lifetime policies beheert.'
+      en: "Entra ID tokens come with a handful of default claims, and that is rarely enough. Your app probably needs the user's employee ID, their department, maybe a custom attribute from a directory extension. The good news is Entra gives you fine-grained control over what goes into ID tokens, access tokens, and SAML tokens. The bad news is the configuration is spread across multiple portal blades and manifest properties. Here is how to get the right claims into your tokens without the guesswork.",
+      nl: 'Entra ID-tokens komen met een handvol standaardclaims, en dat is zelden genoeg. Je app heeft waarschijnlijk het employee ID van de gebruiker nodig, de afdeling, misschien een custom attribuut uit een directory extension. Het goede nieuws: Entra geeft je fijnmazige controle over wat er in ID-tokens, access tokens en SAML-tokens terechtkomt. Het slechte nieuws: de configuratie is verspreid over meerdere portalbblades en manifest-properties. Hier lees je hoe je de juiste claims in je tokens krijgt zonder gokwerk.'
     },
     sections: [
       {
@@ -97,8 +97,8 @@ export const tokenConfigurationPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Proper token configuration ensures your applications receive the identity information they need while maintaining security. Start with minimal claims and add only what your application requires.',
-      nl: 'Correcte token configuratie zorgt ervoor dat je applicaties de identiteitsinformatie ontvangen die ze nodig hebben terwijl de beveiliging behouden blijft. Begin met minimale claims en voeg alleen toe wat je applicatie nodig heeft.'
+      en: 'Keep your tokens lean. Add only the claims your app actually reads — every extra claim increases token size and exposes data that might not need to be there. Use jwt.ms to inspect what you are actually getting. And if something looks wrong, check the sign-in logs before you start changing manifest properties at random.',
+      nl: 'Houd je tokens lean. Voeg alleen claims toe die je app daadwerkelijk uitleest — elke extra claim vergroot de tokengrootte en onthult data die er misschien niet in hoeft te zitten. Gebruik jwt.ms om te inspecteren wat je daadwerkelijk ontvangt. En als er iets niet klopt, check de sign-in logs voordat je lukraak manifest-properties gaat wijzigen.'
     }
   }
 };

@@ -1,0 +1,73 @@
+<h2>Blog Redesign: Layout Direction</h2>
+<p class="subtitle">The current blog has alignment issues, dense text walls, and the header nav order needs fixing. Which direction feels right?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 24px; background: #0a0a0a;">
+      <!-- Option A: Magazine style -->
+      <div style="max-width: 680px; font-family: system-ui;">
+        <div style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px;">AI & Automation</div>
+        <div style="color: #fff; font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 12px;">GPT-5.4 on Azure OpenAI</div>
+        <div style="color: #999; font-size: 13px; margin-bottom: 20px;">Yair Knijn · Mar 19, 2026 · 10 min</div>
+        <div style="height: 1px; background: #222; margin-bottom: 24px;"></div>
+        <div style="color: #bbb; font-size: 15px; line-height: 1.9; margin-bottom: 32px;">GPT-5 landed on Azure OpenAI in August 2025. Seven months and twenty-something model variants later, we are at GPT-5.4.</div>
+        <div style="color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 14px;">The GPT-5 Model Family</div>
+        <div style="color: #bbb; font-size: 15px; line-height: 1.9;">The GPT-5 family is structured in generations, each bringing improvements in reasoning quality...</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A: Clean Single Column (Substack-like)</h3>
+      <p>44rem max-width, generous vertical rhythm, clear heading hierarchy. Optimized for reading. Simple and proven.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 24px; background: #0a0a0a;">
+      <!-- Option B: Left-anchored with TOC -->
+      <div style="display: grid; grid-template-columns: 200px 1fr; gap: 40px; font-family: system-ui;">
+        <div style="position: sticky; top: 0;">
+          <div style="color: #666; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">On this page</div>
+          <div style="color: #fff; font-size: 13px; margin-bottom: 10px; padding-left: 12px; border-left: 2px solid #3b82f6;">The GPT-5 Family</div>
+          <div style="color: #888; font-size: 13px; margin-bottom: 10px; padding-left: 12px; border-left: 2px solid transparent;">GPT-5.4: What's New</div>
+          <div style="color: #888; font-size: 13px; margin-bottom: 10px; padding-left: 12px; border-left: 2px solid transparent;">vs the O-Series</div>
+          <div style="color: #888; font-size: 13px; margin-bottom: 10px; padding-left: 12px; border-left: 2px solid transparent;">Choosing a Tier</div>
+          <div style="color: #888; font-size: 13px; padding-left: 12px; border-left: 2px solid transparent;">Migration Path</div>
+        </div>
+        <div>
+          <div style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">AI & Automation</div>
+          <div style="color: #fff; font-size: 26px; font-weight: 700; line-height: 1.2; margin-bottom: 10px;">GPT-5.4 on Azure OpenAI</div>
+          <div style="color: #999; font-size: 13px; margin-bottom: 20px;">Yair Knijn · Mar 19 · 10 min</div>
+          <div style="height: 1px; background: #222; margin-bottom: 20px;"></div>
+          <div style="color: #bbb; font-size: 14px; line-height: 1.85;">GPT-5 landed on Azure OpenAI in August 2025. Seven months later, we are at GPT-5.4...</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B: Left TOC + Content (Docs-like)</h3>
+      <p>Sticky table of contents on the left, article content on the right. Better for long technical posts with many sections. More complex to build.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 24px; background: #0a0a0a;">
+      <!-- Option C: Full-width hero + single column -->
+      <div style="font-family: system-ui;">
+        <div style="background: linear-gradient(135deg, #111 0%, #1a1a2e 100%); padding: 32px; border-radius: 12px; margin-bottom: 24px;">
+          <div style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">AI & Automation</div>
+          <div style="color: #fff; font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 10px;">GPT-5.4 on Azure OpenAI: The Full GPT-5 Model Family</div>
+          <div style="color: #aaa; font-size: 14px; line-height: 1.6; margin-bottom: 14px;">GPT-5.4 launched March 5, 2026 on Azure OpenAI with GPT-5.4-mini and nano following on March 17.</div>
+          <div style="color: #888; font-size: 12px;">Yair Knijn · Mar 19, 2026 · 10 min read</div>
+        </div>
+        <div style="max-width: 620px;">
+          <div style="color: #bbb; font-size: 15px; line-height: 1.9; margin-bottom: 28px;">GPT-5 landed on Azure OpenAI in August 2025. Seven months later...</div>
+          <div style="color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 12px;">The GPT-5 Model Family</div>
+          <div style="color: #bbb; font-size: 15px; line-height: 1.9;">The family is structured in generations...</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C: Hero Header + Single Column</h3>
+      <p>Full-width header card with title/excerpt/meta, then constrained reading column below. Visual punch at the top, reading focus below.</p>
+    </div>
+  </div>
+</div>

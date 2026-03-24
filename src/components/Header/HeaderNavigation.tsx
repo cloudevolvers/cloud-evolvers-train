@@ -27,6 +27,11 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
       label: t.nav?.training || "Training"
     },
     {
+      href: "/blog",
+      icon: Article,
+      label: t.nav?.blog || "Blog"
+    },
+    {
       href: "/azure-excellence",
       icon: Shield,
       label: t.nav?.azureExcellence || "Azure Excellence"
@@ -40,11 +45,6 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
       href: "/about",
       icon: Globe,
       label: t.nav?.about || "About"
-    },
-    {
-      href: "/blog",
-      icon: Article,
-      label: t.nav?.blog || "Blog"
     },
     {
       href: "/contact",
@@ -76,8 +76,8 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
                 group flex items-center gap-2 px-3 py-2 rounded-lg
                 font-medium transition-all duration-300 text-sm tracking-wide
                 ${isActive
-                  ? 'bg-foreground/10 text-foreground border border-foreground/20'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                  ? 'bg-foreground/8 text-foreground'
+                  : 'text-foreground/50 hover:text-foreground/80'
                 }
               `}
             >
@@ -88,7 +88,7 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
                   transition-colors
                   ${isActive
                     ? 'text-foreground'
-                    : 'text-muted-foreground group-hover:text-foreground'
+                    : 'text-foreground/50 group-hover:text-foreground/80'
                   }
                 `}
               />

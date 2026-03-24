@@ -11,7 +11,7 @@ export const securityCopilotGaPost: BlogPost = {
     nl: 'Een praktische blik op Microsoft Security Copilot in productie — hoe het integreert met Sentinel, Defender XDR en Intune, het SCU-prijsmodel, en wat het daadwerkelijk goed doet versus waar het tekortschiet'
   },
   date: '2026-01-20',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Security', 'Copilot', 'AI', 'Microsoft Sentinel', 'SOC'],
   image: '/images/unsplash/threat-detection-monitoring.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const securityCopilotGaPost: BlogPost = {
   readTime: 8,
   content: {
     introduction: {
-      en: 'Security Copilot went generally available in April 2024, and the question every security team asks is: does it actually help, or is it another AI feature that sounds impressive in demos but disappoints in production? After deploying it across multiple customer environments integrated with Microsoft Sentinel, Defender XDR, Intune, and Entra ID, the answer is nuanced. It is genuinely useful for specific workflows — incident triage, KQL query generation, and threat intelligence lookups. It is not replacing your Tier 2 analysts anytime soon. Understanding where it shines and where it struggles is essential before you commit Security Compute Units to your budget.',
-      nl: 'Security Copilot werd algemeen beschikbaar in april 2024, en de vraag die elk beveiligingsteam stelt is: helpt het echt, of is het weer een AI-functie die indrukwekkend klinkt in demo\'s maar teleurstelt in productie? Na het te hebben geïmplementeerd in meerdere klantomgevingen geïntegreerd met Microsoft Sentinel, Defender XDR, Intune en Entra ID, is het antwoord genuanceerd. Het is oprecht nuttig voor specifieke workflows — incidenttriage, KQL-querygeneratie en threat intelligence-lookups. Het vervangt je Tier 2-analisten niet op korte termijn. Begrijpen waar het uitblinkt en waar het moeite heeft is essentieel voordat je Security Compute Units aan je budget toewijst.'
+      en: 'Security Copilot went GA in April 2024. The big question: does it actually help in a real SOC, or is it just another AI demo that falls apart in production? We have deployed it across multiple customer environments with Sentinel, Defender XDR, Intune, and Entra ID. The honest answer is somewhere in between. It is genuinely good at incident triage, KQL generation, and threat intel lookups. It is not replacing your Tier 2 analysts. Before you commit SCUs to your budget, you should know exactly where it delivers and where it does not.',
+      nl: 'Security Copilot werd GA in april 2024. De grote vraag: helpt het echt in een echte SOC, of is het gewoon weer een AI-demo die in productie uit elkaar valt? We hebben het uitgerold in meerdere klantomgevingen met Sentinel, Defender XDR, Intune en Entra ID. Het eerlijke antwoord zit ergens in het midden. Het is oprecht goed in incidenttriage, KQL-generatie en threat intel-lookups. Het vervangt je Tier 2-analisten niet. Voordat je SCU\'s in je budget opneemt, moet je precies weten waar het levert en waar niet.'
     },
     sections: [
       {
@@ -81,8 +81,8 @@ export const securityCopilotGaPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Microsoft Security Copilot delivers real value for SOC teams already invested in the Microsoft security ecosystem. KQL generation and incident summarization save measurable time every day. Script analysis and threat intelligence integration accelerate investigations that used to take hours. But go in with realistic expectations: provision a small number of SCUs, train your analysts on effective prompting, build promptbooks for your common workflows, and always verify the AI output. Security Copilot is a powerful tool in the hands of a skilled analyst — it is not an autopilot for your security operations.',
-      nl: 'Microsoft Security Copilot levert echte waarde voor SOC-teams die al geïnvesteerd hebben in het Microsoft-beveiligingsecosysteem. KQL-generatie en incidentsamenvatting besparen elke dag meetbare tijd. Scriptanalyse en threat intelligence-integratie versnellen onderzoeken die vroeger uren duurden. Maar ga erin met realistische verwachtingen: provisioneer een klein aantal SCU\'s, train je analisten in effectief prompten, bouw promptbooks voor je veelvoorkomende workflows, en verifieer altijd de AI-output. Security Copilot is een krachtig hulpmiddel in de handen van een ervaren analist — het is geen autopilot voor je beveiligingsoperaties.'
+      en: 'If your SOC already runs on Microsoft security tooling, Security Copilot is worth the investment. KQL generation and incident summaries save real time every day. Script deobfuscation alone can shave 30 minutes off an investigation. But keep expectations honest. Start with a small SCU allocation. Train your analysts on prompting — bad prompts give bad results. Build promptbooks for your repeat workflows. And never trust the output blindly. Security Copilot makes a good analyst faster. It does not make a missing analyst appear.',
+      nl: 'Als je SOC al draait op Microsoft-beveiligingstooling, is Security Copilot de investering waard. KQL-generatie en incidentsamenvattingen besparen elke dag echte tijd. Scriptdeobfuscatie alleen al kan 30 minuten van een onderzoek schelen. Maar houd de verwachtingen eerlijk. Begin met een kleine SCU-toewijzing. Train je analisten in prompting — slechte prompts geven slechte resultaten. Bouw promptbooks voor je terugkerende workflows. En vertrouw de output nooit blindelings. Security Copilot maakt een goede analist sneller. Het laat een ontbrekende analist niet verschijnen.'
     }
   }
 };

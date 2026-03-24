@@ -11,7 +11,7 @@ export const passwordlessAuthenticationPost: BlogPost = {
     nl: 'Deploy FIDO2 security keys, passkeys en Windows Hello for Business om wachtwoord-gebaseerde aanvallen te elimineren en Zero Trust authenticatie te bereiken'
   },
   date: '2025-12-05',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft Entra', 'Security', 'Passwordless', 'FIDO2', 'Zero Trust'],
   image: '/images/unsplash/zero-trust-security-model.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const passwordlessAuthenticationPost: BlogPost = {
   readTime: 15,
   content: {
     introduction: {
-      en: 'Attack methods have evolved to the point where passwords alone cannot reliably protect an account. Password spray attacks, credential stuffing, and phishing remain the most common attack vectors. Microsoft and security organizations worldwide recommend moving to phishing-resistant passwordless authentication as a cornerstone of Zero Trust security. This guide covers the practical deployment of FIDO2 security keys, passkeys in Microsoft Authenticator, and Windows Hello for Business.',
-      nl: 'Aanvalsmethoden zijn geëvolueerd tot het punt waarop wachtwoorden alleen een account niet betrouwbaar kunnen beschermen. Password spray-aanvallen, credential stuffing en phishing blijven de meest voorkomende aanvalsvectoren. Microsoft en beveiligingsorganisaties wereldwijd bevelen aan om over te stappen naar phishing-bestendige passwordless authenticatie als hoeksteen van Zero Trust-beveiliging. Deze gids behandelt de praktische deployment van FIDO2 security keys, passkeys in Microsoft Authenticator en Windows Hello for Business.'
+      en: 'Passwords get stolen. That is not a hot take, it is just what happens — password spray, credential stuffing, and phishing are still the top three attack vectors in every breach report. MFA helps, but SMS codes can be SIM-swapped and push notifications can be fatigue-attacked. The real fix is removing passwords entirely. Microsoft Entra ID now supports three phishing-resistant methods: FIDO2 security keys, passkeys in Microsoft Authenticator, and Windows Hello for Business. Here is how to actually deploy them.',
+      nl: 'Wachtwoorden worden gestolen. Dat is geen schokkend inzicht, het is gewoon wat er gebeurt — password spray, credential stuffing en phishing staan nog steeds bovenaan in elk breach-rapport. MFA helpt, maar SMS-codes kunnen ge-SIM-swapt worden en push-notificaties kunnen worden aangevallen via notification fatigue. De echte oplossing is wachtwoorden helemaal verwijderen. Microsoft Entra ID ondersteunt nu drie phishing-bestendige methoden: FIDO2 security keys, passkeys in Microsoft Authenticator en Windows Hello for Business. Hier is hoe je ze daadwerkelijk deployt.'
     },
     sections: [
       {
@@ -120,8 +120,8 @@ Update-MgPolicyAuthenticationMethodPolicyAuthenticationMethodConfiguration \`
       }
     ],
     conclusion: {
-      en: 'Passwordless authentication is no longer optional - its a security imperative. With Microsoft enforcing MFA across Azure and Microsoft 365, now is the time to go further and deploy phishing-resistant methods. Start with your privileged users and critical applications, then expand to all users. The investment in passwordless pays dividends in reduced help desk calls, improved user experience, and dramatically stronger security posture.',
-      nl: 'Passwordless authenticatie is niet langer optioneel - het is een beveiligingsnoodzaak. Met Microsoft die MFA afdwingt over Azure en Microsoft 365, is nu het moment om verder te gaan en phishing-bestendige methoden te deployen. Begin met je privileged users en kritieke applicaties, breid dan uit naar alle gebruikers. De investering in passwordless betaalt zich terug in minder helpdesk-oproepen, verbeterde gebruikerservaring en dramatisch sterkere beveiligingshouding.'
+      en: 'Microsoft already made MFA mandatory for admin portals. Passwordless is the logical next step — and a better one. Start with your admins and IT team. Give them FIDO2 keys, let them use it for a month, collect feedback. Then roll out passkeys in Microsoft Authenticator to the rest of the organization. Use Conditional Access authentication strength policies to require phishing-resistant methods for sensitive apps. The side benefit nobody talks about: password reset tickets drop to near zero. Your help desk will thank you.',
+      nl: 'Microsoft heeft MFA al verplicht gemaakt voor admin portals. Passwordless is de logische volgende stap — en een betere. Begin met je admins en IT-team. Geef ze FIDO2-keys, laat ze het een maand gebruiken, verzamel feedback. Rol daarna passkeys in Microsoft Authenticator uit naar de rest van de organisatie. Gebruik Conditional Access authentication strength-policies om phishing-bestendige methoden te vereisen voor gevoelige apps. Het bijkomende voordeel waar niemand het over heeft: wachtwoord-reset-tickets dalen naar bijna nul. Je helpdesk zal je dankbaar zijn.'
     }
   }
 };

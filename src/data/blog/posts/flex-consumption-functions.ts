@@ -11,7 +11,7 @@ export const flexConsumptionPost: BlogPost = {
     nl: 'Ontdek Azure Functions Flex Consumption plan met VNet-integratie, always-ready instances, per-function scaling en flexibele geheugenconfiguratie'
   },
   date: '2025-12-02',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure Functions', 'Serverless', 'Flex Consumption', 'VNet', 'Scaling'],
   image: '/images/pexels/pexels-serverless-computing.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const flexConsumptionPost: BlogPost = {
   readTime: 13,
   content: {
     introduction: {
-      en: 'Azure Functions Flex Consumption represents a major evolution in serverless computing. Building on the strengths of the traditional Consumption plan - dynamic scaling and execution-based billing - Flex Consumption adds critical enterprise features: virtual network integration, always-ready instances to eliminate cold starts, per-function scaling, and flexible memory configuration. Microsoft now recommends Flex Consumption as the primary serverless option, with the Linux Consumption plan scheduled for retirement in September 2028.',
-      nl: 'Azure Functions Flex Consumption vertegenwoordigt een grote evolutie in serverless computing. Voortbouwend op de sterke punten van het traditionele Consumption plan - dynamische schaling en execution-based billing - voegt Flex Consumption kritieke enterprise-functies toe: virtual network-integratie, always-ready instances om cold starts te elimineren, per-function scaling en flexibele geheugenconfiguratie. Microsoft beveelt nu Flex Consumption aan als de primaire serverless optie, met het Linux Consumption plan gepland voor retirement in september 2028.'
+      en: 'The original Azure Functions Consumption plan had two big gaps: no VNet support and cold starts you could not control. Flex Consumption fills both. You get VNet integration, always-ready instances to kill cold start latency, per-function scaling, configurable memory (512MB, 2048MB, or 4096MB), and up to 1000 instances — all while keeping pay-per-use billing. Microsoft now recommends Flex Consumption over traditional Consumption. Linux Consumption is scheduled for retirement in September 2028, so this is not optional for long.',
+      nl: 'Het oorspronkelijke Azure Functions Consumption plan had twee grote gaten: geen VNet-ondersteuning en cold starts die je niet kon beheersen. Flex Consumption dicht beide. Je krijgt VNet-integratie, always-ready instances om cold start-latency te elimineren, per-function scaling, configureerbaar geheugen (512MB, 2048MB of 4096MB), en tot 1000 instances — allemaal met behoud van pay-per-use billing. Microsoft raadt nu Flex Consumption aan boven traditioneel Consumption. Linux Consumption gaat met pensioen in september 2028, dus dit is niet lang optioneel.'
     },
     sections: [
       {
@@ -122,8 +122,8 @@ az functionapp config set \\
       }
     ],
     conclusion: {
-      en: 'Azure Functions Flex Consumption is the future of serverless on Azure. With VNet integration, always-ready instances, per-function scaling, and flexible memory options, it addresses the major limitations of traditional Consumption while maintaining the pay-for-what-you-use model. Start planning your migration now, especially if you are on Linux Consumption which is retiring in 2028.',
-      nl: 'Azure Functions Flex Consumption is de toekomst van serverless op Azure. Met VNet-integratie, always-ready instances, per-function scaling en flexibele geheugenopties, adresseert het de belangrijkste beperkingen van traditioneel Consumption terwijl het pay-for-what-you-use model behouden blijft. Begin nu met het plannen van je migratie, vooral als je op Linux Consumption zit dat in 2028 retired wordt.'
+      en: 'Flex Consumption is what the original Consumption plan should have been. VNet support, controllable cold starts, independent scaling per function, and memory options that match your workload — without giving up pay-per-use pricing. If you are on Linux Consumption, the September 2028 retirement deadline gives you time but not unlimited time. Test your triggers for compatibility, update your deployment pipeline, and migrate. The longer you wait, the more functions you accumulate on a plan with an expiration date.',
+      nl: 'Flex Consumption is wat het oorspronkelijke Consumption plan had moeten zijn. VNet-ondersteuning, beheersbare cold starts, onafhankelijke scaling per functie, en geheugenopties die bij je workload passen — zonder pay-per-use pricing op te geven. Als je op Linux Consumption zit, geeft de pensioendeadline van september 2028 je tijd maar niet onbeperkt. Test je triggers op compatibiliteit, update je deployment-pipeline en migreer. Hoe langer je wacht, hoe meer functies je verzamelt op een plan met een vervaldatum.'
     }
   }
 };

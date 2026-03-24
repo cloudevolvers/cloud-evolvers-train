@@ -11,7 +11,7 @@ export const crossTenantAccessPost: BlogPost = {
     nl: 'Configureer inbound en outbound cross-tenant access in Microsoft Entra ID — B2B samenwerking, B2B direct connect, trust instellingen, tenant restrictions v2 en cross-tenant synchronisatie.'
   },
   date: '2026-02-05',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'B2B', 'Cross-Tenant', 'Collaboration', 'Security'],
   image: '/images/unsplash/business-collaboration.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const crossTenantAccessPost: BlogPost = {
   readTime: 8,
   content: {
     introduction: {
-      en: 'As soon as your organization works with partners, vendors, or subsidiaries on Microsoft 365, you need to make deliberate decisions about cross-tenant access. The default Entra ID configuration allows your users to invite external guests and allows external guests to be invited into your tenant — with no restrictions on which organizations can participate. Cross-tenant access settings give you fine-grained control over this. They govern B2B collaboration, B2B direct connect, trust relationships for Conditional Access claims, and the newer tenant restrictions v2. This article covers each of these and when you actually need to configure them.',
-      nl: 'Zodra je organisatie samenwerkt met partners, leveranciers of dochterondernemingen op Microsoft 365, moet je bewuste beslissingen nemen over cross-tenant access. De standaard Entra ID configuratie staat je gebruikers toe externe gasten uit te nodigen en staat externe gasten toe in je tenant te worden uitgenodigd — zonder beperkingen op welke organisaties mogen deelnemen. Cross-tenant access instellingen geven je fijnmazige controle hierover. Ze regelen B2B samenwerking, B2B direct connect, trust relaties voor Conditional Access claims en de nieuwere tenant restrictions v2. Dit artikel behandelt elk van deze onderdelen en wanneer je ze daadwerkelijk moet configureren.'
+      en: 'Out of the box, Entra ID lets anyone in your tenant invite guests from any organization, and lets any external organization invite your users. No guardrails. The moment you work with a partner, vendor, or subsidiary on Microsoft 365, that default becomes a problem. Cross-tenant access settings exist to fix it. They control B2B collaboration, B2B direct connect, MFA trust between tenants, and tenant restrictions v2. Most admins leave these at defaults longer than they should. Here is what each setting does and when you actually need to touch them.',
+      nl: 'Standaard laat Entra ID iedereen in je tenant gasten uitnodigen van elke organisatie, en laat het elke externe organisatie je gebruikers uitnodigen. Geen vangrails. Zodra je samenwerkt met een partner, leverancier of dochteronderneming op Microsoft 365, wordt die standaard een probleem. Cross-tenant access instellingen bestaan om dat te fixen. Ze regelen B2B-samenwerking, B2B direct connect, MFA-trust tussen tenants en tenant restrictions v2. De meeste admins laten deze langer op de standaardwaarden staan dan zou moeten. Hier is wat elke instelling doet en wanneer je ze daadwerkelijk moet aanpassen.'
     },
     sections: [
       {
@@ -81,8 +81,8 @@ export const crossTenantAccessPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Cross-tenant access settings are not optional configuration for organizations that collaborate externally — they are the control plane for external identity. Understand the difference between B2B collaboration and direct connect, be deliberate about trust settings, use tenant restrictions v2 to prevent shadow IT through personal accounts, and always audit current collaboration patterns before applying restrictions. For multi-tenant organizations, cross-tenant synchronization combined with automatic redemption provides a seamless user experience without sacrificing governance.',
-      nl: 'Cross-tenant access instellingen zijn geen optionele configuratie voor organisaties die extern samenwerken — ze zijn het controleplatform voor externe identiteit. Begrijp het verschil tussen B2B samenwerking en direct connect, wees bewust bij trust instellingen, gebruik tenant restrictions v2 om schaduw-IT via persoonlijke accounts te voorkomen, en audit altijd huidige samenwerkingspatronen voordat je beperkingen toepast. Voor multi-tenant organisaties biedt cross-tenant synchronisatie gecombineerd met automatische inwisseling een naadloze gebruikerservaring zonder governance op te offeren.'
+      en: 'If your tenant collaborates with external organizations and you have not touched cross-tenant access settings, you are running on defaults that trust everyone equally. That is not a security posture — it is the absence of one. Know the difference between B2B collaboration and direct connect. Be intentional about which partners you trust for MFA and device claims. Use tenant restrictions v2 to stop data leaking through personal accounts on corporate devices. And audit your sign-in logs before you restrict anything — you need to see what is actually happening before you can make good policy decisions. For multi-tenant orgs, cross-tenant sync plus automatic redemption gives users a smooth experience without giving up control.',
+      nl: 'Als je tenant samenwerkt met externe organisaties en je hebt de cross-tenant access instellingen niet aangeraakt, dan draai je op defaults die iedereen gelijk vertrouwen. Dat is geen beveiligingshouding — het is de afwezigheid ervan. Ken het verschil tussen B2B-samenwerking en direct connect. Wees bewust over welke partners je vertrouwt voor MFA en device claims. Gebruik tenant restrictions v2 om te voorkomen dat data lekt via persoonlijke accounts op bedrijfsapparaten. En audit je sign-in logs voordat je iets beperkt — je moet zien wat er daadwerkelijk gebeurt voordat je goede beleidsbeslissingen kunt nemen. Voor multi-tenant organisaties geeft cross-tenant sync plus automatische inwisseling gebruikers een soepele ervaring zonder controle op te geven.'
     }
   }
 };

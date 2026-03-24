@@ -2,6 +2,7 @@ import { Hero } from "@/components/marketing/Hero";
 import { HomeProofSection } from "@/components/marketing/HomeProofSection";
 import { BentoFeatures } from "@/components/marketing/BentoFeatures";
 import { TrainingPathways } from "@/components/marketing/TrainingPathways";
+import { LatestBlogPosts } from "@/components/marketing/LatestBlogPosts";
 
 import { SEO, PAGE_SEO } from "@/components/SEO";
 
@@ -14,6 +15,7 @@ export default function HomePage() {
                 <Hero />
                 <HomeProofSection />
                 <BentoFeatures />
+                <LatestBlogPosts />
                 <TrainingPathways />
             </main>
         </div>

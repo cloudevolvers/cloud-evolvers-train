@@ -43,6 +43,30 @@ import { crossTenantAccessPost } from './posts/cross-tenant-access';
 import { entraPermissionsManagementPost } from './posts/entra-permissions-management';
 import { oidcVsSamlMigrationPost } from './posts/oidc-vs-saml-migration';
 import { entraExternalIdPost } from './posts/entra-external-id';
+import { azureOpenaiReasoningModelsPost } from './posts/azure-openai-reasoning-models';
+import { copilotStudioComputerUsePost } from './posts/copilot-studio-computer-use';
+import { azureAiSearchAgenticRetrievalPost } from './posts/azure-ai-search-agentic-retrieval';
+import { gpt41AzureOpenaiPost } from './posts/gpt-41-azure-openai';
+import { visualStudio2026AiPost } from './posts/visual-studio-2026-ai';
+import { m365CopilotGpt5AgentsPost } from './posts/m365-copilot-gpt5-agents';
+import { foundryIqAiSearchPost } from './posts/foundry-iq-ai-search';
+import { azureOpenaiRealtimeApiPost } from './posts/azure-openai-realtime-api';
+import { githubCopilotCodingAgentPost } from './posts/github-copilot-coding-agent';
+import { copilotStudioMultiAgentPost } from './posts/copilot-studio-multi-agent';
+import { foundryAgentServicePost } from './posts/foundry-agent-service';
+import { soraVideoGenerationAzurePost } from './posts/sora-video-generation-azure';
+import { securityDashboardAiPost } from './posts/security-dashboard-ai';
+import { virtualWanRouteMapsPost } from './posts/virtual-wan-route-maps';
+import { vpnGatewayIpv6Post } from './posts/vpn-gateway-ipv6';
+import { appGatewayWafV2Post } from './posts/app-gateway-waf-v2';
+import { azureFilesNfsEncryptionPost } from './posts/azure-files-nfs-encryption';
+import { azureArcLandingZonesPost } from './posts/azure-arc-landing-zones';
+import { microsoftFabricAiMarch2026Post } from './posts/microsoft-fabric-ai-march-2026';
+import { agenticAiToolsWindowsPost } from './posts/agentic-ai-tools-windows';
+import { exchangeRbacAccessPoliciesPost } from './posts/exchange-rbac-access-policies';
+import { visualStudio184MarchUpdatePost } from './posts/visual-studio-18-4-march-update';
+import { entraAgentIdPost } from './posts/entra-agent-id';
+import { entraExternalMfaGaPost } from './posts/entra-external-mfa-ga';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -86,10 +110,40 @@ export {
   entraPermissionsManagementPost,
   oidcVsSamlMigrationPost,
   entraExternalIdPost,
+  azureOpenaiReasoningModelsPost,
+  copilotStudioComputerUsePost,
+  azureAiSearchAgenticRetrievalPost,
+  gpt41AzureOpenaiPost,
+  visualStudio2026AiPost,
+  m365CopilotGpt5AgentsPost,
+  foundryIqAiSearchPost,
+  azureOpenaiRealtimeApiPost,
+  githubCopilotCodingAgentPost,
+  copilotStudioMultiAgentPost,
+  foundryAgentServicePost,
+  soraVideoGenerationAzurePost,
+  securityDashboardAiPost,
+  virtualWanRouteMapsPost,
+  vpnGatewayIpv6Post,
+  appGatewayWafV2Post,
+  azureFilesNfsEncryptionPost,
+  azureArcLandingZonesPost,
+  microsoftFabricAiMarch2026Post,
+  agenticAiToolsWindowsPost,
+  exchangeRbacAccessPoliciesPost,
+  visualStudio184MarchUpdatePost,
+  entraAgentIdPost,
+  entraExternalMfaGaPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
 export const blogPosts: BlogPost[] = [
+  m365CopilotGpt5AgentsPost,
+  visualStudio2026AiPost,
+  copilotStudioComputerUsePost,
+  azureOpenaiReasoningModelsPost,
+  gpt41AzureOpenaiPost,
+  azureAiSearchAgenticRetrievalPost,
   scimProvisioningPost,
   samlSsoConfigurationPost,
   claimsMappingPoliciesPost,
@@ -128,6 +182,24 @@ export const blogPosts: BlogPost[] = [
   azureIamGuidePost,
   appRegistrationsVsEnterpriseAppsPost,
   apiManagementHealthChecksPost,
+  foundryIqAiSearchPost,
+  azureOpenaiRealtimeApiPost,
+  githubCopilotCodingAgentPost,
+  copilotStudioMultiAgentPost,
+  foundryAgentServicePost,
+  soraVideoGenerationAzurePost,
+  securityDashboardAiPost,
+  virtualWanRouteMapsPost,
+  vpnGatewayIpv6Post,
+  appGatewayWafV2Post,
+  azureFilesNfsEncryptionPost,
+  azureArcLandingZonesPost,
+  microsoftFabricAiMarch2026Post,
+  agenticAiToolsWindowsPost,
+  exchangeRbacAccessPoliciesPost,
+  visualStudio184MarchUpdatePost,
+  entraAgentIdPost,
+  entraExternalMfaGaPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Helper function to get localized text

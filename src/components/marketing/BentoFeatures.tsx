@@ -1,15 +1,5 @@
-import type { ComponentType } from "react";
 import { Link } from "react-router-dom";
-import {
-    ArrowRight,
-    ArrowUpRight,
-    BriefcaseBusiness,
-    Building2,
-    Cloud,
-    Cog,
-    Shield,
-    ShieldCheck
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/use-translations";
@@ -17,38 +7,34 @@ import { useTranslations } from "@/hooks/use-translations";
 interface BentoCardProps {
     description: string;
     exploreLabel: string;
-    icon: ComponentType<{ className?: string }>;
     image: string;
     title: string;
     to: string;
 }
 
-const BentoCard = ({ title, description, icon: Icon, to, image, exploreLabel }: BentoCardProps) => {
+const BentoCard = ({ title, description, to, image, exploreLabel }: BentoCardProps) => {
     return (
         <Link
             to={to}
             className={cn(
-                "group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-50 p-6 transition-all duration-200 hover:border-neutral-400 hover:bg-neutral-100/80 dark:border-white/5 dark:bg-white/[0.02] dark:hover:border-white/20 dark:hover:bg-white/[0.05]"
+                "group relative overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:border-slate-300 hover:shadow-md"
             )}
         >
+            {/* Photo header */}
             {image && (
-                <>
+                <div className="h-32 overflow-hidden">
                     <img
                         src={image}
                         alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-top opacity-20 transition-opacity group-hover:opacity-30"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </>
+                </div>
             )}
 
-            <div className="relative z-10 flex h-full flex-col">
-                <div className="w-fit rounded-xl bg-black/5 p-3 text-foreground/70 transition-colors group-hover:text-foreground dark:bg-white/10">
-                    <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-5 text-xl font-semibold text-foreground">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">{description}</p>
-                <div className="mt-6 inline-flex items-center text-sm font-medium text-foreground transition-transform group-hover:translate-x-1">
+            <div className="relative z-10 flex flex-col p-5">
+                <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-500">{description}</p>
+                <div className="mt-4 inline-flex items-center text-sm font-medium text-slate-700 transition-transform group-hover:translate-x-1">
                     {exploreLabel} <ArrowRight className="ml-2 h-4 w-4" />
                 </div>
             </div>
@@ -62,19 +48,19 @@ export function BentoFeatures() {
     const exploreLabel = b?.explore || "Explore";
 
     return (
-        <section className="relative z-10 bg-background py-32">
+        <section className="relative z-10 border-t border-slate-100 bg-white py-16 sm:py-20 lg:py-24">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mb-20 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div className="mb-20 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
-                        <h2 className="font-display text-3xl font-semibold text-foreground md:text-5xl">
+                        <h2 className="font-display text-3xl font-semibold text-slate-900 md:text-5xl">
                             {b?.title || "Pick the track that matches what your team actually does."}
                         </h2>
-                        <p className="mt-4 text-lg text-muted-foreground">
+                        <p className="mt-4 text-lg text-slate-500">
                             {b?.subtitle || "Most teams come to us for one of these routes: Microsoft fundamentals, Azure operations, architecture, or Microsoft 365 administration."}
                         </p>
                     </div>
                     <Link to="/training">
-                        <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+                        <Button variant="ghost" className="text-slate-500 hover:text-slate-900">
                             {b?.viewAllModules || "View all training"} <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </Link>
@@ -83,40 +69,36 @@ export function BentoFeatures() {
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
                     <Link
                         to="/training/azure-administrator"
-                        className="group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-neutral-950 transition-colors hover:border-neutral-400 dark:border-white/10 dark:hover:border-white/20"
+                        className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50/50 shadow-sm transition-all hover:border-slate-300 hover:shadow-md"
                     >
-                        <div className="absolute inset-0">
+                        <div className="h-48 overflow-hidden">
                             <img
                                 src="/training-categories/azure-administrator.jpg"
                                 alt=""
-                                className="h-full w-full object-cover opacity-45 transition-opacity group-hover:opacity-60"
+                                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/65 to-sky-950/60" />
                         </div>
 
-                        <div className="relative z-10 flex min-h-[360px] flex-col p-8 lg:p-10">
+                        <div className="relative z-10 flex min-h-[280px] flex-col p-8 lg:p-10">
                             <div className="flex items-center justify-between">
-                                <div className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white/75">
+                                <div className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
                                     {b?.featuredLabel || "Most requested by teams"}
                                 </div>
-                                <ArrowUpRight className="h-5 w-5 text-white/55 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                                <ArrowUpRight className="h-5 w-5 text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                             </div>
 
-                            <div className="mt-12 w-fit rounded-xl bg-white/10 p-3 text-white/70">
-                                <Cog className="h-6 w-6" />
-                            </div>
-                            <p className="mt-8 text-sm font-medium uppercase tracking-[0.16em] text-sky-200/80">
+                            <p className="mt-12 text-sm font-medium uppercase tracking-wider text-slate-400">
                                 {b?.featuredKicker || "Operations track"}
                             </p>
-                            <h3 className="font-display mt-3 max-w-lg text-3xl font-semibold text-white lg:text-4xl">
+                            <h3 className="font-display mt-3 max-w-lg text-3xl font-semibold text-slate-900 lg:text-4xl">
                                 {b?.featuredTitle || "AZ-104 for admins who need to run Azure well."}
                             </h3>
-                            <p className="mt-5 max-w-xl text-base leading-7 text-white/72">
+                            <p className="mt-5 max-w-xl text-base leading-7 text-slate-500">
                                 {b?.featuredDesc || "Identity, networking, storage, governance, and operational decision-making taught through the kind of environment work teams actually inherit."}
                             </p>
 
                             <div className="mt-auto pt-12">
-                                <span className="inline-flex items-center text-sm font-medium text-white/80 transition-transform group-hover:translate-x-1">
+                                <span className="inline-flex items-center text-sm font-medium text-slate-700 transition-transform group-hover:translate-x-1">
                                     {b?.featuredCta || "See the administrator track"} <ArrowRight className="ml-2 h-4 w-4" />
                                 </span>
                             </div>
@@ -127,23 +109,20 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.fundamentalsTitle || "AZ-900 Fundamentals"}
                             description={b?.fundamentalsDesc || "For teams that need a clear baseline before they start operating or designing in Azure."}
-                            icon={Cloud}
                             to="/training/azure-fundamentals"
                             exploreLabel={exploreLabel}
-                            image="/training-categories/azure-fundamentals.jpg"
+                            image="/images/unsplash/team-collaboration.jpg"
                         />
                         <BentoCard
                             title={b?.architectTitle || "AZ-305 Architecture"}
                             description={b?.architectDesc || "For architects shaping landing zones, governance, resilience, and cloud design decisions."}
-                            icon={BriefcaseBusiness}
                             to="/training/azure-solutions-architect"
                             exploreLabel={exploreLabel}
-                            image="/training-categories/azure-solutions-architect.jpg"
+                            image="/images/unsplash/coding-laptop.jpg"
                         />
                         <BentoCard
                             title={b?.securityTitle || "AZ-500 Security"}
                             description={b?.securityDesc || "For teams working on identity, posture management, and operational controls across Microsoft cloud."}
-                            icon={Shield}
                             to="/training/azure-security-engineer"
                             exploreLabel={exploreLabel}
                             image="/training-categories/azure-security-engineer.jpg"
@@ -151,26 +130,22 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.m365Title || "Microsoft 365 Administration"}
                             description={b?.m365Desc || "For teams running tenant operations: identity, compliance, and day-to-day Microsoft 365 work."}
-                            icon={Building2}
                             to="/training/microsoft-365-administrator"
                             exploreLabel={exploreLabel}
-                            image="/training-categories/microsoft-365-administrator.jpg"
+                            image="/images/unsplash/network-cables.jpg"
                         />
                         <Link
                             to="/contact"
-                            className="group rounded-[2rem] border border-border bg-[linear-gradient(160deg,rgba(255,255,255,0.95),rgba(244,246,250,0.95))] p-6 transition-colors hover:border-neutral-400 dark:bg-[linear-gradient(160deg,rgba(17,24,39,0.96),rgba(11,18,32,0.96))] dark:hover:border-white/20"
+                            className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-slate-300 hover:shadow-sm"
                         >
                             <div className="flex h-full flex-col">
-                                <div className="w-fit rounded-xl bg-emerald-500/10 p-3 text-emerald-700 dark:text-emerald-300">
-                                    <BriefcaseBusiness className="h-6 w-6" />
-                                </div>
-                                <h3 className="mt-5 text-xl font-semibold text-foreground">
+                                <h3 className="text-xl font-semibold text-slate-900">
                                     {b?.teamTitle || "In-company Azure sessions"}
                                 </h3>
-                                <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                                <p className="mt-3 text-sm leading-7 text-slate-500">
                                     {b?.teamDesc || "Sessions built around your team's environment, maturity level, and the pressure points you're dealing with now."}
                                 </p>
-                                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-foreground transition-transform group-hover:translate-x-1">
+                                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
                                     {b?.teamCta || "Plan a team workshop"} <ArrowRight className="h-4 w-4" />
                                 </div>
                             </div>
@@ -180,20 +155,19 @@ export function BentoFeatures() {
 
                 <Link
                     to="/about"
-                    className="group mt-6 block rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm transition-colors hover:border-neutral-400 dark:hover:border-white/20 sm:p-8"
+                    className="group mt-6 block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-slate-300 hover:shadow-md sm:p-8"
                 >
                     <div className="flex flex-col gap-5">
-                        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">
-                            <ShieldCheck className="h-3.5 w-3.5" />
-                            <span>{b?.mctTrainer || "Microsoft Certified Trainer"}</span>
+                        <div className="inline-flex w-fit items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                            {b?.mctTrainer || "Microsoft Certified Trainer"}
                         </div>
-                        <h3 className="font-display text-3xl font-semibold text-foreground">
+                        <h3 className="font-display text-3xl font-semibold text-slate-900">
                             {b?.founderTitle || "Yaïr leads the training, not a generic content library."}
                         </h3>
-                        <p className="max-w-3xl text-base leading-8 text-muted-foreground">
+                        <p className="max-w-3xl text-base leading-8 text-slate-500">
                             {b?.trainerDesc || "More than 15 years of Azure and Microsoft delivery experience, translated into workshops that focus on how teams govern, secure, operate, and scale real environments."}
                         </p>
-                        <span className="inline-flex items-center text-sm font-medium text-foreground transition-transform group-hover:translate-x-1">
+                        <span className="inline-flex items-center text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
                             {b?.founderCta || "Read Yaïr's background"} <ArrowRight className="ml-2 h-4 w-4" />
                         </span>
                     </div>

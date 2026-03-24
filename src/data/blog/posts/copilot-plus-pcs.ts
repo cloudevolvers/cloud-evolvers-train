@@ -11,7 +11,7 @@ export const copilotPlusPcsPost: BlogPost = {
     nl: 'Begrip van Copilot+ PC\'s, de NPU-hardwarevereiste, ARM-compatibiliteitsoverwegingen, en waar enterprise IT-teams op moeten plannen nu Windows AI-functies verschuiven naar on-device verwerking'
   },
   date: '2026-01-10',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Microsoft', 'Copilot', 'AI', 'Hardware', 'Enterprise'],
   image: '/images/pexels/pexels-tech-startup-workspace.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const copilotPlusPcsPost: BlogPost = {
   readTime: 7,
   content: {
     introduction: {
-      en: 'Microsoft introduced the Copilot+ PC category in mid-2024, and it marks the first time in years that Windows has created a meaningful hardware tier distinction. A Copilot+ PC is not just a marketing label — it requires a Neural Processing Unit (NPU) capable of at least 40 trillion operations per second (TOPS), and it unlocks a set of Windows features that do not work on older hardware. This is Microsoft signaling that the future of Windows AI is on-device, not cloud-only. For enterprise IT teams planning hardware refreshes, this creates real questions about timing, compatibility, and value. Here is what you need to know.',
-      nl: 'Microsoft introduceerde de Copilot+ PC-categorie medio 2024, en het markeert de eerste keer in jaren dat Windows een betekenisvol hardwareniveauonderscheid heeft gecreëerd. Een Copilot+ PC is niet zomaar een marketinglabel — het vereist een Neural Processing Unit (NPU) die in staat is tot minimaal 40 biljoen bewerkingen per seconde (TOPS), en het ontgrendelt een set Windows-functies die niet werken op oudere hardware. Dit is Microsoft\'s signaal dat de toekomst van Windows AI on-device is, niet alleen cloud. Voor enterprise IT-teams die hardwareverversingen plannen, roept dit echte vragen op over timing, compatibiliteit en waarde. Dit is wat je moet weten.'
+      en: 'For the first time in years, Windows has a hardware dividing line that actually matters. Copilot+ PCs, introduced mid-2024, require a Neural Processing Unit (NPU) doing at least 40 TOPS. No NPU, no access to a growing list of Windows AI features — Recall, Live Captions translation, Cocreator, Studio Effects. These run on-device, not in the cloud. Microsoft is betting that local AI processing is the future of Windows. If you are planning a hardware refresh, this changes the conversation about which laptops to buy, when, and for whom.',
+      nl: 'Voor het eerst in jaren heeft Windows een hardware-scheidslijn die er echt toe doet. Copilot+ PC\'s, geïntroduceerd medio 2024, vereisen een Neural Processing Unit (NPU) van minimaal 40 TOPS. Geen NPU, geen toegang tot een groeiende lijst Windows AI-functies — Recall, Live Captions-vertaling, Cocreator, Studio Effects. Die draaien lokaal, niet in de cloud. Microsoft gokt dat lokale AI-verwerking de toekomst van Windows is. Als je een hardwareverversing plant, verandert dit het gesprek over welke laptops je koopt, wanneer en voor wie.'
     },
     sections: [
       {
@@ -81,8 +81,8 @@ export const copilotPlusPcsPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Copilot+ PCs represent a genuine platform shift, not just a marketing exercise. The NPU requirement creates a real hardware dividing line, and the on-device AI features are exclusive to qualifying devices. For enterprise IT, the action items are clear: test your application portfolio on ARM if considering Snapdragon devices, start including NPU requirements in your next hardware refresh specifications, configure Intune policies for the new AI features, and prioritize Copilot+ devices for roles that benefit most. The shift to on-device AI processing is particularly relevant for privacy-conscious and regulated organizations. This is not an urgent crisis — your existing hardware keeps working fine — but it is a trend you should be planning for now.',
-      nl: 'Copilot+ PC\'s vertegenwoordigen een echte platformverschuiving, niet alleen een marketingoefening. De NPU-vereiste creëert een echte hardware-scheidslijn, en de on-device AI-functies zijn exclusief voor kwalificerende apparaten. Voor enterprise IT zijn de actiepunten duidelijk: test je applicatieportfolio op ARM als je Snapdragon-apparaten overweegt, begin NPU-vereisten op te nemen in je volgende hardwareverversingsspecificaties, configureer Intune-beleid voor de nieuwe AI-functies, en prioriteer Copilot+-apparaten voor rollen die het meest profiteren. De verschuiving naar on-device AI-verwerking is bijzonder relevant voor privacybewuste en gereguleerde organisaties. Dit is geen urgente crisis — je bestaande hardware blijft prima werken — maar het is een trend waarvoor je nu zou moeten plannen.'
+      en: 'Copilot+ PCs are not just a sticker on a laptop. The NPU requirement draws a real line between hardware that gets the new AI features and hardware that does not. Your action list: test your critical apps on ARM before buying Snapdragon devices at scale, put NPU specs into your next refresh cycle, set up Intune policies for Recall and Studio Effects, and prioritize Copilot+ machines for knowledge workers in meetings and data-heavy roles. The on-device processing angle is a big deal for regulated industries — meeting audio and screen activity never leaves the machine. Your current fleet keeps working fine. But the feature gap between old and new hardware will only grow.',
+      nl: 'Copilot+ PC\'s zijn niet zomaar een sticker op een laptop. De NPU-vereiste trekt een echte lijn tussen hardware die de nieuwe AI-functies krijgt en hardware die dat niet krijgt. Je actielijst: test je kritieke apps op ARM voordat je Snapdragon-apparaten op schaal koopt, neem NPU-specs op in je volgende verversingsronde, stel Intune-beleid in voor Recall en Studio Effects, en geef Copilot+-machines prioriteit aan kenniswerkers in vergaderingen en data-intensieve rollen. Het on-device aspect is belangrijk voor gereguleerde sectoren — meeting-audio en schermactiviteit verlaten het apparaat nooit. Je huidige vloot blijft prima werken. Maar het functieverschil tussen oude en nieuwe hardware wordt alleen maar groter.'
     }
   }
 };

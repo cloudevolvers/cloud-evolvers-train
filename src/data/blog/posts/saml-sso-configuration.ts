@@ -11,7 +11,7 @@ export const samlSsoConfigurationPost: BlogPost = {
     nl: 'Een praktische walkthrough van het configureren van SAML-gebaseerde single sign-on in Microsoft Entra ID, inclusief claimtransformaties, certificaatbeheer en het oplossen van de meest voorkomende SSO-fouten.'
   },
   date: '2026-03-12',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Entra ID', 'SAML', 'SSO', 'Identity', 'Federation'],
   image: '/images/unsplash/azure-security-center.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const samlSsoConfigurationPost: BlogPost = {
   readTime: 8,
   content: {
     introduction: {
-      en: 'SAML 2.0 remains the dominant SSO protocol for enterprise SaaS applications, and Microsoft Entra ID is one of the most widely deployed identity providers for it. While newer apps tend to use OpenID Connect, you will still configure SAML for ServiceNow, Salesforce, SAP, and dozens of other enterprise platforms. The configuration itself is not complicated, but the details — NameID format, claim transformations, certificate lifecycle — are where things go wrong.',
-      nl: 'SAML 2.0 blijft het dominante SSO-protocol voor enterprise SaaS-applicaties, en Microsoft Entra ID is een van de meest ingezette identity providers hiervoor. Hoewel nieuwere apps de neiging hebben OpenID Connect te gebruiken, zul je nog steeds SAML configureren voor ServiceNow, Salesforce, SAP en tientallen andere enterprise platforms. De configuratie zelf is niet ingewikkeld, maar de details — NameID-formaat, claimtransformaties, certificaatlevenscyclus — zijn waar het misgaat.'
+      en: 'SAML is not going anywhere. Yes, newer apps default to OpenID Connect, but ServiceNow, Salesforce, SAP, and plenty of other enterprise platforms still need SAML 2.0. Entra ID handles it well. The basic setup is quick — fill in three URLs and you are done. The tricky part is everything else: getting the NameID format right, writing claim transformations that actually work, and not forgetting about certificate expiry until SSO breaks at 2 AM.',
+      nl: 'SAML gaat nergens heen. Ja, nieuwere apps kiezen standaard voor OpenID Connect, maar ServiceNow, Salesforce, SAP en tal van andere enterprise-platforms hebben nog steeds SAML 2.0 nodig. Entra ID doet dat prima. De basisconfiguratie is snel — drie URL\'s invullen en klaar. Het lastige zit in de rest: het NameID-formaat goed krijgen, claimtransformaties schrijven die daadwerkelijk werken, en niet pas aan certificaatverlopen denken als SSO om 2 uur \'s nachts kapotgaat.'
     },
     sections: [
       {
@@ -97,8 +97,8 @@ export const samlSsoConfigurationPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'SAML SSO in Entra ID is stable once configured, but the initial setup requires attention to certificate lifecycle, NameID format alignment between Entra and the SP, and claim transformation logic. Keep the SAML-tracer extension in your toolkit, set calendar reminders for certificate expiry 90 days out, and always test with actual user accounts before declaring SSO complete.',
-      nl: 'SAML SSO in Entra ID is stabiel zodra het geconfigureerd is, maar de initiële setup vereist aandacht voor certificaatlevenscyclus, NameID-formaat afstemming tussen Entra en de SP, en claimtransformatielogica. Houd de SAML-tracer extensie in je toolkit, stel agendaherinneringen in voor certificaatverlopen 90 dagen vooruit en test altijd met echte gebruikersaccounts voordat je SSO als compleet beschouwt.'
+      en: 'Once SAML SSO works in Entra ID, it tends to just keep working. The problems happen during setup and during certificate rollover. Two things that will save you hours: install SAML-tracer in your browser now, and put a calendar reminder 90 days before every SAML certificate expires. And test with real user accounts, not just your admin. Admin accounts have a habit of working when nothing else does.',
+      nl: 'Als SAML SSO eenmaal werkt in Entra ID, blijft het gewoon doordraaien. De problemen ontstaan tijdens de setup en bij certificaatrollover. Twee dingen die je uren besparen: installeer SAML-tracer nu in je browser, en zet een agendaherinnering 90 dagen voor elke SAML-certificaatvervaldatum. En test met echte gebruikersaccounts, niet alleen je admin. Admin-accounts hebben de neiging te werken terwijl niets anders dat doet.'
     }
   }
 };

@@ -11,12 +11,12 @@ export const responsibleAiPost: BlogPost = {
     nl: 'Leer hoe je responsible AI-practices implementeert in Azure OpenAI deployments met content filtering, prompt engineering en harm mitigation-strategieën'
   },
   date: '2025-12-01',
-  author: 'Falk Krahl',
-  tags: ['Azure OpenAI', 'Responsible AI', 'GPT-4', 'AI Safety', 'Content Filtering'],
+  author: 'Yair Knijn',
+  tags: ['Azure OpenAI', 'Responsible AI', 'GPT-5', 'AI Safety', 'Content Filtering'],
   image: '/images/pexels/pexels-artificial-intelligence-robot.jpg',
   excerpt: {
-    en: 'Deploying GPT-4 and other LLMs requires careful consideration of responsible AI principles. Learn the four-layer mitigation approach: model, safety system, application, and positioning.',
-    nl: 'Het deployen van GPT-4 en andere LLMs vereist zorgvuldige overweging van responsible AI-principes. Leer de vier-lagen mitigatie-aanpak: model, safety system, applicatie en positionering.'
+    en: 'Deploying LLMs like GPT-5 on Azure requires careful consideration of responsible AI principles. Learn the four-layer mitigation approach: model, safety system, application, and positioning.',
+    nl: 'Het deployen van LLMs zoals GPT-5 op Azure vereist zorgvuldige overweging van responsible AI-principes. Leer de vier-lagen mitigatie-aanpak: model, safety system, applicatie en positionering.'
   },
   category: {
     en: 'AI & Machine Learning',
@@ -25,8 +25,8 @@ export const responsibleAiPost: BlogPost = {
   readTime: 14,
   content: {
     introduction: {
-      en: 'Large language models like GPT-4 bring powerful capabilities but also significant responsible AI challenges: harmful content generation, manipulation risks, privacy concerns, and potential misuse. Microsoft recommends a structured approach following the Responsible AI lifecycle: Identify potential harms, Measure their occurrence, Mitigate through layered defenses, and Operate with ongoing monitoring. This guide provides practical implementation strategies for each phase.',
-      nl: 'Large language models zoals GPT-4 brengen krachtige mogelijkheden maar ook significante responsible AI-uitdagingen: schadelijke content-generatie, manipulatierisico\'s, privacyzorgen en potentieel misbruik. Microsoft beveelt een gestructureerde aanpak aan volgens de Responsible AI-levenscyclus: Identificeer potentiële schade, Meet het voorkomen ervan, Mitigeer via gelaagde verdedigingen, en Opereer met doorlopende monitoring. Deze gids biedt praktische implementatiestrategieën voor elke fase.'
+      en: 'You deployed an LLM. Now someone is going to make it say something it should not. That is not pessimism, it is the reality of putting a language model in front of users. Azure OpenAI gives you tools to deal with this — content filters, system messages, guardrails — but you have to actually configure them. Microsoft breaks it down into four layers: model, safety system, application, and positioning. Skip a layer and you have a gap. This guide covers what to set up at each layer and how to keep it working after launch.',
+      nl: 'Je hebt een LLM gedeployed. Nu gaat iemand proberen het iets te laten zeggen wat niet mag. Dat is geen pessimisme, het is de realiteit van een taalmodel voor gebruikers zetten. Azure OpenAI geeft je tools om hiermee om te gaan — content filters, system messages, guardrails — maar je moet ze wel daadwerkelijk instellen. Microsoft verdeelt het in vier lagen: model, safety system, applicatie en positionering. Sla een laag over en je hebt een gat. Deze gids behandelt wat je op elke laag moet instellen en hoe je het werkend houdt na launch.'
     },
     sections: [
       {
@@ -130,8 +130,8 @@ IMPORTANT: If you are unsure about an answer, say so. Do not make up information
       }
     ],
     conclusion: {
-      en: 'Responsible AI implementation requires ongoing commitment across multiple layers. The four-layer approach - model, safety system, application, and positioning - provides comprehensive protection when implemented together. Start with harm identification, deploy with appropriate mitigations, and maintain continuous monitoring. As AI capabilities evolve, so must your responsible AI practices.',
-      nl: 'Responsible AI-implementatie vereist doorlopende toewijding over meerdere lagen. De vier-lagen aanpak - model, safety system, applicatie en positionering - biedt uitgebreide bescherming wanneer samen geïmplementeerd. Begin met schade-identificatie, deploy met passende mitigaties, en onderhoud continue monitoring. Naarmate AI-mogelijkheden evolueren, moeten ook je responsible AI-practices evolueren.'
+      en: 'None of this is set-and-forget. Models change, users find new ways to break things, and your content filters will need tuning as you learn what your actual traffic looks like. Run red team sessions regularly — not just at launch. Track what your filters block and look for patterns. And be honest with your users: tell them it is AI, show them where the information came from, and make it easy to flag bad outputs. The four-layer approach works, but only if you treat it as an ongoing practice instead of a launch checklist.',
+      nl: 'Niets hiervan is instellen en vergeten. Modellen veranderen, gebruikers vinden nieuwe manieren om dingen te breken, en je content filters moeten bijgesteld worden naarmate je leert hoe je werkelijke verkeer eruitziet. Draai regelmatig red team-sessies — niet alleen bij launch. Houd bij wat je filters blokkeren en zoek naar patronen. En wees eerlijk tegen je gebruikers: vertel ze dat het AI is, laat zien waar de informatie vandaan komt, en maak het makkelijk om slechte output te melden. De vier-lagen aanpak werkt, maar alleen als je het behandelt als een doorlopende praktijk in plaats van een launch-checklist.'
     }
   }
 };

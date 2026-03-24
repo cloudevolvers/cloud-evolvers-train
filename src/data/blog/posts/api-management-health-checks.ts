@@ -11,7 +11,7 @@ export const apiManagementHealthChecksPost: BlogPost = {
     nl: 'Leer hoe je uitgebreide health checks en monitoring implementeert voor je APIs in Azure API Management.'
   },
   date: '2025-04-15',
-  author: 'Falk Krahl',
+  author: 'Yair Knijn',
   tags: ['Azure', 'API Management', 'Monitoring', 'DevOps', 'Health Checks'],
   image: '/images/unsplash/api-integration.jpg',
   excerpt: {
@@ -25,8 +25,8 @@ export const apiManagementHealthChecksPost: BlogPost = {
   readTime: 9,
   content: {
     introduction: {
-      en: 'Health checks are essential for maintaining reliable API services. Azure API Management provides multiple ways to monitor and verify the health of your APIs and their backends.',
-      nl: 'Health checks zijn essentieel voor het onderhouden van betrouwbare API-services. Azure API Management biedt meerdere manieren om de gezondheid van je APIs en hun backends te monitoren en verifiëren.'
+      en: 'Your API gateway says it is healthy. Your backend database has been down for ten minutes. Users are getting 500s. The built-in APIM status endpoint only checks if the gateway process is running — it tells you nothing about whether your actual APIs work. You need health checks that go deeper: probing backends, verifying database connections, and checking downstream dependencies. APIM has the pieces for this, but you have to wire them up yourself.',
+      nl: 'Je API-gateway zegt dat hij gezond is. Je backend-database is al tien minuten down. Gebruikers krijgen 500-errors. Het ingebouwde APIM-statusendpoint controleert alleen of het gatewayproces draait — het zegt niets over of je daadwerkelijke API\'s werken. Je hebt health checks nodig die dieper gaan: backends pollen, databaseverbindingen verifiëren, en downstream-afhankelijkheden controleren. APIM heeft de onderdelen hiervoor, maar je moet ze zelf aan elkaar knopen.'
     },
     sections: [
       {
@@ -71,8 +71,8 @@ export const apiManagementHealthChecksPost: BlogPost = {
       }
     ],
     conclusion: {
-      en: 'Comprehensive health monitoring is crucial for API reliability. Combine built-in features with custom health endpoints for complete visibility.',
-      nl: 'Uitgebreide health monitoring is cruciaal voor API-betrouwbaarheid. Combineer ingebouwde functies met custom health endpoints voor complete zichtbaarheid.'
+      en: 'The built-in /status endpoint is a starting point, not an answer. Pair it with custom health APIs that actually test your backends, configure backend entity probes with sensible intervals, and hook everything into Azure Monitor with alerts that fire before your users notice. It is not glamorous work, but the difference between "we caught it in 30 seconds" and "a customer called to tell us" is usually one well-configured health check.',
+      nl: 'Het ingebouwde /status-endpoint is een beginpunt, geen oplossing. Combineer het met custom health API\'s die je backends daadwerkelijk testen, configureer backend entity probes met verstandige intervallen, en koppel alles aan Azure Monitor met alerts die afgaan voordat je gebruikers het merken. Het is geen glamoureus werk, maar het verschil tussen "we hadden het binnen 30 seconden door" en "een klant belde om het te melden" is meestal één goed geconfigureerde health check.'
     }
   }
 };
