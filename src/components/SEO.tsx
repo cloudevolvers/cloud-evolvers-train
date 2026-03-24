@@ -4,14 +4,13 @@ interface SEOProps {
   title?: string;
   description?: string;
   canonical?: string;
-  keywords?: string;
   type?: 'website' | 'article' | 'product';
   image?: string;
   noindex?: boolean;
 }
 
-const DEFAULT_TITLE = 'Cloud Evolvers - Azure Training & Microsoft Certification';
-const DEFAULT_DESCRIPTION = 'Official Microsoft Certified Trainer (MCT) led Azure training in the Netherlands. AZ-900, AZ-104, AZ-305, AZ-400, AZ-500 certification courses.';
+const DEFAULT_TITLE = 'Azure Training Netherlands — MCT-Led Courses | Cloud Evolvers';
+const DEFAULT_DESCRIPTION = 'Hands-on Azure certification training led by Microsoft Certified Trainer Yaïr Knijn. AZ-900, AZ-104, AZ-305, AZ-500 courses in Dutch and English.';
 const DEFAULT_IMAGE = 'https://cloudevolvers.com/cloudevolvers-social-card.png';
 const SITE_URL = 'https://cloudevolvers.com';
 
@@ -19,7 +18,6 @@ export function SEO({
   title,
   description = DEFAULT_DESCRIPTION,
   canonical,
-  keywords,
   type = 'website',
   image = DEFAULT_IMAGE,
   noindex = false,
@@ -32,7 +30,6 @@ export function SEO({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -44,6 +41,7 @@ export function SEO({
       <meta property="og:image" content={image} />
 
       {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
@@ -55,45 +53,38 @@ export function SEO({
 export const PAGE_SEO = {
   home: {
     title: undefined, // Uses default
-    description: 'Official Microsoft Certified Trainer (MCT) led Azure training in the Netherlands. AZ-900, AZ-104, AZ-305, AZ-400, AZ-500 certification courses with hands-on labs.',
+    description: 'Hands-on Azure certification training led by Microsoft Certified Trainer Yaïr Knijn. AZ-900, AZ-104, AZ-305, AZ-500 courses in Dutch and English.',
     canonical: '/',
-    keywords: 'Azure training, Microsoft certification, MCT trainer, Netherlands, cloud training',
   },
   training: {
     title: 'Azure & Microsoft Training Courses',
-    description: 'Complete catalog of Azure and Microsoft certification training courses. AZ-900, AZ-104, AZ-204, AZ-305, AZ-400, AZ-500, AI-102, and more. MCT-led with hands-on labs.',
+    description: 'Full catalog of Azure and Microsoft certification courses. AZ-900, AZ-104, AZ-204, AZ-305, AZ-400, AZ-500, AI-102 and more. MCT-led with hands-on labs.',
     canonical: '/training',
-    keywords: 'Azure certification, Microsoft training, AZ-900, AZ-104, AZ-305, AZ-400, AZ-500, AI-102, DP-900',
   },
   azureExcellence: {
     title: 'Azure Excellence - Cloud Architecture & Best Practices',
-    description: 'Expert Azure cloud architecture, DevOps implementation, and Microsoft best practices consulting. Optimize your cloud infrastructure with certified experts.',
+    description: 'Azure cloud architecture, DevOps implementation, and Microsoft best practices consulting. Certified experts helping you get the most from Azure.',
     canonical: '/azure-excellence',
-    keywords: 'Azure architecture, cloud consulting, DevOps, Azure best practices, cloud optimization',
   },
   services: {
     title: 'Cloud Consulting & Training Services',
-    description: 'Professional Azure consulting, corporate training, and cloud migration services. Custom training programs for your organization.',
+    description: 'Azure consulting, corporate training, and cloud migration services in the Netherlands. Custom programs tailored to your team.',
     canonical: '/services',
-    keywords: 'Azure consulting, corporate training, cloud migration, custom training, Microsoft services',
   },
   about: {
     title: 'About Cloud Evolvers - MCT Certified Trainers',
-    description: 'Meet our Microsoft Certified Trainers (MCT). Learn about Cloud Evolvers mission to provide excellence in Azure and Microsoft training.',
+    description: 'Meet Yaïr Knijn, Microsoft Certified Trainer with 15+ years of Azure and Microsoft 365 experience. Based in the Netherlands.',
     canonical: '/about',
-    keywords: 'MCT trainer, Microsoft Certified Trainer, Cloud Evolvers team, Azure experts',
   },
   blog: {
     title: 'Azure & Cloud Technology Blog',
-    description: 'Latest insights, tutorials, and best practices for Azure, Microsoft 365, and cloud technologies. Expert articles from MCT certified trainers.',
+    description: 'Azure tutorials, exam tips, and cloud architecture insights from a working Microsoft Certified Trainer. Practical advice, no fluff.',
     canonical: '/blog',
-    keywords: 'Azure blog, cloud tutorials, Microsoft tips, Azure best practices, cloud technology',
   },
   contact: {
-    title: 'Contact Us - Get Started with Azure Training',
-    description: 'Contact Cloud Evolvers for Azure training inquiries, corporate programs, or consulting services. Quick response via WhatsApp or email.',
+    title: 'Contact Us - Azure Training Inquiries',
+    description: 'Get in touch about Azure training, corporate programs, or consulting. We respond within one business day via WhatsApp or email.',
     canonical: '/contact',
-    keywords: 'contact Azure training, training inquiry, corporate training contact',
   },
 };
 
@@ -103,6 +94,5 @@ export function getTrainingSEO(courseCode: string, courseTitle: string, courseDe
     title: `${courseCode}: ${courseTitle} Training`,
     description: `${courseDescription.slice(0, 155)}...`,
     canonical: `/training/${courseCode.toLowerCase()}`,
-    keywords: `${courseCode}, ${courseTitle}, Azure certification, Microsoft training, hands-on labs`,
   };
 }

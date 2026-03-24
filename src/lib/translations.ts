@@ -310,12 +310,13 @@ export const translations = {
         {
           id: 'az-305',
           title: 'AZ-305',
-          subtitle: 'Design with confidence',
+          subtitle: 'Design for production',
           description: 'Use the architecture route for landing zones, resilience, governance choices, and cloud design tradeoffs across environments.',
           slug: 'azure-solutions-architect',
           position: 'left'
         }
-      ]
+      ],
+      bottomCta: "Plan your team's training route"
     },
     trainingSection: {
       title: "Microsoft Training Programs",
@@ -663,12 +664,13 @@ export const translations = {
         {
           id: 'az-305',
           title: 'AZ-305',
-          subtitle: 'Ontwerp met vertrouwen',
+          subtitle: 'Ontwerp voor productie',
           description: 'Gebruik de architectuurroute voor landing zones, resilience, governancekeuzes en cloud trade-offs over meerdere omgevingen heen.',
           slug: 'azure-solutions-architect',
           position: 'left'
         }
-      ]
+      ],
+      bottomCta: "Plan het trainingspad van je team"
     },
     trainingSection: {
       title: "Microsoft-trainingsprogramma's",

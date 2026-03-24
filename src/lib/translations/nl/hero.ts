@@ -30,11 +30,11 @@ const heroNl = {
     }
   },
   marketing: {
-    eyebrow: "Microsoft-training onder leiding van Yaïr Knijn",
-    headline1: "Microsoft-training voor beheerders, architecten en platformteams.",
+    eyebrow: "Microsoft Certified Trainer — 15+ jaar Azure-ervaring",
+    headline1: "Je team draait Azure. Zorg dat ze weten hoe.",
     headline2: "Azure, Microsoft 365 en echte productiepraktijk.",
-    description: "In-company en remote trainingen in het Nederlands of Engels, met labs, architectuurkeuzes en operationele lessen uit echte Microsoft cloud-omgevingen.",
-    startTraining: "Bekijk trainingstrajecten",
+    description: "Training door een actieve consultant voor IT-teams in Nederland. Echte labs, architectuurkeuzes en operationele kennis — in het Nederlands of Engels, remote of bij jullie op kantoor.",
+    startTraining: "Bekijk trainingen",
     viewPathways: "Plan een teamsessie",
     mct: "Microsoft Certified Trainer",
     mctDetail: "Training op basis van echte Azure-architectuur en operationeel werk.",
@@ -43,15 +43,26 @@ const heroNl = {
     realWorld: "Echte productievoorbeelden",
     realWorldDetail: "Landing zones, governance, security en operations zitten direct in het lesmateriaal verweven.",
     founderLabel: "Lead trainer",
-    founderRole: "Microsoft Certified Trainer, Azure-architect en hands-on consultant.",
-    proofLabel: "Waar bedrijven ons voor inschakelen",
+    founderRole: "MCT, Azure-architect en hands-on consultant bij Spot Cloud B.V.",
+    proofLabel: "Waarom teams bij ons boeken",
+    proofHeading: "Wat je team uit een sessie haalt.",
+    proofDescription: "Je trainer doet nog steeds Azure-consultancy. Dat betekent dat sessies worden gevormd door wat er in productie misgaat, wat auditors vragen, en waar teams tegenaan lopen na go-live — niet alleen wat er op het examen staat.",
     proofOne: "Azure- en Microsoft 365-training die aansluit op de rollen die teams vandaag al hebben.",
     proofTwo: "Workshops die governance, identity, networking en security uitleggen via echte praktijksituaties.",
     founderQuote: "Ik geef geen Azure-les als een catalogus. Ik geef les over de beslissingen die teams moeten nemen wanneer ze Azure echt draaien.",
     formatLabel: "Vormen",
     formatValue: "In-company workshops, geplande groepen en private coaching",
     audienceLabel: "Beste match",
-    audienceValue: "Teams die Azure, Microsoft 365, governance, operations, security of architectuur uitrollen"
+    audienceValue: "Teams die Azure, Microsoft 365, governance, operations, security of architectuur uitrollen",
+    expectLabel: "Wat je kunt verwachten",
+    expectHeading: "Microsoft-training door een practitioner, niet een contentwagen.",
+    expectDescription: "Alle trainingen worden gegeven door Yaïr Knijn — MCT, Azure-architect en actief consultant. Sessies combineren examenvoorbereiding met de platform-, governance- en operationele beslissingen waar je team echt mee te maken heeft.",
+    teamFitLabel: "Teamfit",
+    teamFitHeading: "Voor teams die dagelijks Azure draaien en scherper willen worden.",
+    teamFitDescription: "De meeste teams die boeken zijn beheergroepen die AZ-104 voorbereiden, architecten die aan AZ-305 werken, of securityleads die AZ-500 aanpakken. Als je team Azure of Microsoft 365 in productie beheert, is dit voor jullie gebouwd.",
+    nextStepLabel: "Volgende stap",
+    nextStepHeading: "Plan de juiste route voor je team.",
+    nextStepDescription: "Vertel ons de rollen en kennishiaten — wij matchen jullie met het juiste traject en format."
   }
 }
 

@@ -1,4 +1,5 @@
 import { Hero } from "@/components/marketing/Hero";
+import { HomeProofSection } from "@/components/marketing/HomeProofSection";
 import { BentoFeatures } from "@/components/marketing/BentoFeatures";
 import { TrainingPathways } from "@/components/marketing/TrainingPathways";
 
@@ -11,6 +12,7 @@ export default function HomePage() {
 
             <main className="relative z-10 flex flex-col">
                 <Hero />
+                <HomeProofSection />
                 <BentoFeatures />
                 <TrainingPathways />
             </main>

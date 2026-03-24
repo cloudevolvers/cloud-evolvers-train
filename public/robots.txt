@@ -7,9 +7,6 @@ Allow: /
 # Sitemaps
 Sitemap: https://cloudevolvers.com/sitemap.xml
 
-# Crawl-delay for politeness
-Crawl-delay: 1
-
 # Block unnecessary paths
 Disallow: /api/
 Disallow: /_spark/
