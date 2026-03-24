@@ -1,22 +1,20 @@
 #!/bin/bash
+set -euo pipefail
 
-# Deploy to Staging Environment
+# Deploy to Staging/Preview Environment (Cloudflare Pages)
 echo "🧪 Deploying to Staging Environment..."
-
-# Set environment
-export NODE_ENV=staging
 
 # Build the application for staging
 echo "📦 Building application for staging..."
 bun run build:staging
 
-# Deploy using SWA CLI
-echo "🌐 Deploying to Static Web App (Staging)..."
-bunx swa deploy \
-  --config cloud-evolvers-train-staging \
-  --env staging \
-  --no-use-keychain \
-  --verbose
+# Deploy to Cloudflare Pages (staging branch deployment)
+echo "🌐 Deploying to Cloudflare Pages (staging)..."
+npx wrangler pages deploy dist \
+  --project-name cloud-evolvers-train \
+  --branch staging \
+  --commit-dirty=true
 
 echo "✅ Staging deployment complete!"
-echo "📋 Staging environment is ready for testing!"
+echo "📋 Preview URL: https://staging.cloud-evolvers-train.pages.dev"
+echo "📋 Also available at: https://test.cloudevolvers.com (if custom domain configured)"

@@ -16,15 +16,15 @@ export function Hero() {
                     {/* Copy */}
                     <div className="flex flex-col items-start">
                         <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-medium tracking-wide text-slate-500">
-                            {marketing?.eyebrow || "Microsoft training led by Yaïr Knijn"}
+                            {marketing?.eyebrow || "Microsoft Certified Trainer — 15+ years Azure delivery"}
                         </div>
 
                         <h1 className="font-display mt-8 max-w-xl text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
-                            {marketing?.headline1 || "Microsoft training for admins, architects, and platform teams."}
+                            {marketing?.headline1 || "Your team runs Azure. Make sure they know how."}
                         </h1>
 
                         <p className="mt-8 max-w-lg text-lg leading-relaxed text-slate-500">
-                            {marketing?.description || "In-company and remote training in Dutch or English, with labs, architecture decisions, and operational lessons drawn from real Microsoft cloud work."}
+                            {marketing?.description || "Practitioner-led training for IT teams in the Netherlands. Real labs, architecture decisions, and operational know-how — delivered in Dutch or English, remote or at your office."}
                         </p>
 
                         <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
@@ -33,7 +33,7 @@ export function Hero() {
                                     size="lg"
                                     className="group h-12 w-full border-none bg-slate-900 px-7 text-base font-medium text-white hover:bg-slate-800 sm:w-auto"
                                 >
-                                    {marketing?.startTraining || "Browse training tracks"}
+                                    {marketing?.startTraining || "View courses"}
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </Link>
@@ -82,7 +82,7 @@ export function Hero() {
                                 Yaïr Knijn
                             </h2>
                             <p className="mt-2 text-sm leading-relaxed text-slate-500">
-                                {marketing?.founderRole || "Microsoft Certified Trainer, Azure architect, and hands-on consultant."}
+                                {marketing?.founderRole || "MCT, Azure architect, and hands-on consultant at Spot Cloud B.V."}
                             </p>
                         </div>
                     </div>

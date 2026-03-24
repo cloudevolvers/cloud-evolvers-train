@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/use-translations";
 
@@ -41,7 +43,7 @@ export function TrainingPathways() {
         {
             id: "az-305",
             title: "AZ-305",
-            subtitle: "Design with confidence",
+            subtitle: "Design for production",
             description: "Use the architecture route for landing zones, resilience, governance choices, and cloud design tradeoffs across environments.",
             slug: "azure-solutions-architect",
             position: "left"
@@ -63,9 +65,13 @@ export function TrainingPathways() {
                 </div>
 
                 <div className="relative mx-auto max-w-4xl">
-                    {stages.map((stage: PathwayStage) => (
-                        <div
+                    {stages.map((stage: PathwayStage, index: number) => (
+                        <motion.div
                             key={stage.id}
+                            initial={{ opacity: 0, y: 32 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-60px" }}
+                            transition={{ duration: 0.5, delay: index * 0.12 }}
                             className={cn(
                                 "relative mb-24 flex flex-col items-center justify-between md:flex-row",
                                 stage.position === "right" ? "md:flex-row-reverse" : ""
@@ -107,9 +113,23 @@ export function TrainingPathways() {
                             </Link>
 
                             <div className="hidden w-full md:block md:w-[45%]" />
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    className="mt-16 text-center"
+                >
+                    <Link to="/contact">
+                        <Button size="lg">
+                            {pathways?.bottomCta || "Plan your team's training route"} <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );

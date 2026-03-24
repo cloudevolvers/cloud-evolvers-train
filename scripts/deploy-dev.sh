@@ -1,21 +1,19 @@
 #!/bin/bash
+set -euo pipefail
 
-# Deploy to Development Environment
+# Deploy to Development Environment (Cloudflare Pages)
 echo "🚀 Deploying to Development Environment..."
 
-# Set environment
-export NODE_ENV=development
-
 # Build the application for development
-echo "📦 Building application for development..."
+echo "📦 Building application..."
 bun run build:dev
 
-# Deploy using SWA CLI
-echo "🌐 Deploying to Static Web App (Development)..."
-bunx swa deploy \
-  --config cloud-evolvers-train-dev \
-  --env development \
-  --no-use-keychain \
-  --verbose
+# Deploy to Cloudflare Pages (dev branch deployment)
+echo "🌐 Deploying to Cloudflare Pages (dev)..."
+npx wrangler pages deploy dist \
+  --project-name cloud-evolvers-train \
+  --branch dev \
+  --commit-dirty=true
 
 echo "✅ Development deployment complete!"
+echo "📋 Preview URL: https://dev.cloud-evolvers-train.pages.dev"

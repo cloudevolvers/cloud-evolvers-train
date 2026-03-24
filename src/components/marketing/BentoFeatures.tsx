@@ -53,7 +53,7 @@ export function BentoFeatures() {
                 <div className="mb-20 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-2xl">
                         <h2 className="font-display text-3xl font-semibold text-slate-900 md:text-5xl">
-                            {b?.title || "Choose the training track that matches the work in front of you."}
+                            {b?.title || "Pick the track that matches what your team actually does."}
                         </h2>
                         <p className="mt-4 text-lg text-slate-500">
                             {b?.subtitle || "Most teams come to us for one of these routes: Microsoft fundamentals, Azure operations, architecture, or Microsoft 365 administration."}
@@ -109,7 +109,6 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.fundamentalsTitle || "AZ-900 Fundamentals"}
                             description={b?.fundamentalsDesc || "For teams that need a clear baseline before they start operating or designing in Azure."}
-
                             to="/training/azure-fundamentals"
                             exploreLabel={exploreLabel}
                             image="/images/unsplash/team-collaboration.jpg"
@@ -117,7 +116,6 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.architectTitle || "AZ-305 Architecture"}
                             description={b?.architectDesc || "For architects shaping landing zones, governance, resilience, and cloud design decisions."}
-
                             to="/training/azure-solutions-architect"
                             exploreLabel={exploreLabel}
                             image="/images/unsplash/coding-laptop.jpg"
@@ -125,15 +123,13 @@ export function BentoFeatures() {
                         <BentoCard
                             title={b?.securityTitle || "AZ-500 Security"}
                             description={b?.securityDesc || "For teams working on identity, posture management, and operational controls across Microsoft cloud."}
-
                             to="/training/azure-security-engineer"
                             exploreLabel={exploreLabel}
                             image="/training-categories/azure-security-engineer.jpg"
                         />
                         <BentoCard
                             title={b?.m365Title || "Microsoft 365 Administration"}
-                            description={b?.m365Desc || "For teams responsible for tenant operations, identity, compliance, and day-to-day Microsoft 365 administration."}
-
+                            description={b?.m365Desc || "For teams running tenant operations: identity, compliance, and day-to-day Microsoft 365 work."}
                             to="/training/microsoft-365-administrator"
                             exploreLabel={exploreLabel}
                             image="/images/unsplash/network-cables.jpg"
@@ -147,7 +143,7 @@ export function BentoFeatures() {
                                     {b?.teamTitle || "In-company Azure sessions"}
                                 </h3>
                                 <p className="mt-3 text-sm leading-7 text-slate-500">
-                                    {b?.teamDesc || "Use the homepage as a route into custom team training: aligned on your roles, your architecture, and the pressure points your teams are dealing with now."}
+                                    {b?.teamDesc || "Sessions built around your team's environment, maturity level, and the pressure points you're dealing with now."}
                                 </p>
                                 <div className="mt-6 flex items-center gap-2 text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
                                     {b?.teamCta || "Plan a team workshop"} <ArrowRight className="h-4 w-4" />
@@ -161,28 +157,19 @@ export function BentoFeatures() {
                     to="/about"
                     className="group mt-6 block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-slate-300 hover:shadow-md sm:p-8"
                 >
-                    <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
-                        <div className="overflow-hidden rounded-[1.5rem] bg-slate-100">
-                            <img
-                                src="/1625557501943.jpg"
-                                alt="Yaïr Knijn"
-                                className="h-full min-h-[210px] w-full object-cover object-[center_18%]"
-                            />
+                    <div className="flex flex-col gap-5">
+                        <div className="inline-flex w-fit items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                            {b?.mctTrainer || "Microsoft Certified Trainer"}
                         </div>
-                        <div>
-                            <div className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                                {b?.mctTrainer || "Microsoft Certified Trainer"}
-                            </div>
-                            <h3 className="font-display mt-5 text-3xl font-semibold text-slate-900">
-                                {b?.founderTitle || "Yaïr leads the training, not a generic content library."}
-                            </h3>
-                            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-500">
-                                {b?.trainerDesc || "More than 15 years of Azure and Microsoft delivery experience, translated into workshops that focus on how teams govern, secure, operate, and scale real environments."}
-                            </p>
-                            <span className="mt-6 inline-flex items-center text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
-                                {b?.founderCta || "Read Yaïr's background"} <ArrowRight className="ml-2 h-4 w-4" />
-                            </span>
-                        </div>
+                        <h3 className="font-display text-3xl font-semibold text-slate-900">
+                            {b?.founderTitle || "Yaïr leads the training, not a generic content library."}
+                        </h3>
+                        <p className="max-w-3xl text-base leading-8 text-slate-500">
+                            {b?.trainerDesc || "More than 15 years of Azure and Microsoft delivery experience, translated into workshops that focus on how teams govern, secure, operate, and scale real environments."}
+                        </p>
+                        <span className="inline-flex items-center text-sm font-medium text-slate-900 transition-transform group-hover:translate-x-1">
+                            {b?.founderCta || "Read Yaïr's background"} <ArrowRight className="ml-2 h-4 w-4" />
+                        </span>
                     </div>
                 </Link>
             </div>

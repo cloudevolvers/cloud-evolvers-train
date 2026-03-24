@@ -1,30 +1,20 @@
 #!/bin/bash
+set -euo pipefail
 
-# Deploy to Production Environment
-echo "🚀 Deploying to Production Environment..."
+# Production deployments are handled exclusively by GitHub Actions.
+# See: .github/workflows/deploy-cloudflare-pages.yml
+#
+# To deploy to production:
+#   1. Merge your PR to master
+#   2. The deploy-cloudflare-pages workflow runs automatically
+#   3. Monitor: gh run watch
+#
+# To trigger manually:
+#   gh workflow run deploy-cloudflare-pages.yml --ref master
 
-# Confirmation prompt for production
-read -p "⚠️  You are about to deploy to PRODUCTION. Are you sure? (y/N): " -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    echo "❌ Production deployment cancelled."
-    exit 1
-fi
-
-# Set environment
-export NODE_ENV=production
-
-# Build the application for production
-echo "📦 Building application for production..."
-bun run build
-
-# Deploy using SWA CLI
-echo "🌐 Deploying to Static Web App (Production)..."
-bunx swa deploy \
-  --config cloud-evolvers-train \
-  --env production \
-  --no-use-keychain \
-  --verbose
-
-echo "✅ Production deployment complete!"
-echo "🎉 Your application is now live!"
+echo "❌ Direct production deploys are not allowed."
+echo ""
+echo "Production deploys go through GitHub Actions only."
+echo "Merge to master or trigger manually:"
+echo "  gh workflow run deploy-cloudflare-pages.yml --ref master"
+exit 1
