@@ -1,0 +1,197 @@
+{
+  "id": "azure-ai-app-agent-developer",
+  "slug": "azure-ai-app-agent-developer",
+  "title": "Azure AI App & Agent Developer Associate (AI-103)",
+  "subtitle": "Build AI-Powered Applications and Autonomous Agents on Azure",
+  "description": "Learn to design, build, and deploy AI-powered applications and autonomous agents using Azure AI Foundry, Azure OpenAI Service, and Semantic Kernel",
+  "overview": "This advanced course prepares you for the AI-103 certification exam by covering the full lifecycle of building AI applications and autonomous agents on Azure. You will learn to architect AI solutions with Azure AI Foundry, implement effective prompt engineering and retrieval-augmented generation (RAG) patterns, orchestrate multi-step agents with function calling and Semantic Kernel, and deploy production-grade AI applications with responsible AI safeguards. The course combines hands-on labs with real-world architectural patterns drawn from enterprise AI deployments.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Development",
+  "difficulty": "Advanced",
+  "tags": [
+    "Azure AI Foundry",
+    "Azure OpenAI Service",
+    "Semantic Kernel",
+    "Prompt Engineering",
+    "RAG",
+    "Function Calling",
+    "Agent Orchestration",
+    "Responsible AI",
+    "AI-103"
+  ],
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-app-architecture",
+      "title": "AI Application Architecture & Azure AI Foundry",
+      "description": "Design scalable AI application architectures using Azure AI Foundry, selecting appropriate models and configuring endpoints for production workloads",
+      "icon": "Code"
+    },
+    {
+      "id": "prompt-engineering-rag",
+      "title": "Prompt Engineering & RAG Implementation",
+      "description": "Craft effective system prompts, implement retrieval-augmented generation with Azure AI Search, and optimise context windows for accuracy and cost",
+      "icon": "Search"
+    },
+    {
+      "id": "agent-orchestration",
+      "title": "Agent Development & Orchestration",
+      "description": "Build autonomous agents using Semantic Kernel, implement function calling patterns, and orchestrate multi-step workflows with tool integration",
+      "icon": "Bot"
+    },
+    {
+      "id": "production-responsible-ai",
+      "title": "Production Deployment & Responsible AI",
+      "description": "Deploy AI applications at scale with content filtering, monitoring, rate limiting, and Microsoft Responsible AI safeguards",
+      "icon": "Shield"
+    }
+  ],
+  "modules": [
+    {
+      "id": "ai-app-architecture-foundry",
+      "title": "AI App Architecture & Azure AI Foundry",
+      "description": "Architect AI applications using Azure AI Foundry and Azure OpenAI Service, selecting models and configuring deployments",
+      "icon": "Code",
+      "duration": "8 hours",
+      "topics": [
+        "Azure AI Foundry project setup and model catalogue navigation",
+        "Selecting and deploying foundation models for specific use cases",
+        "Azure OpenAI Service configuration: endpoints, API keys, and managed identity",
+        "Application architecture patterns for AI-powered solutions",
+        "SDK integration with Python and C# client libraries",
+        "Managing model deployments, quotas, and regional availability",
+        "Cost estimation and token consumption planning",
+        "Connecting AI Foundry to external data sources and APIs"
+      ]
+    },
+    {
+      "id": "prompt-engineering-rag",
+      "title": "Prompt Engineering & Retrieval-Augmented Generation",
+      "description": "Master prompt engineering techniques and implement RAG patterns for grounded, accurate AI responses",
+      "icon": "Search",
+      "duration": "8 hours",
+      "topics": [
+        "System prompt design: persona, constraints, and output formatting",
+        "Few-shot and chain-of-thought prompting strategies",
+        "RAG architecture: chunking, embedding, indexing, and retrieval",
+        "Azure AI Search integration for vector and hybrid search",
+        "Context window management and token optimisation",
+        "Grounding techniques to reduce hallucination",
+        "Structured output generation with JSON mode and function definitions",
+        "Evaluating prompt effectiveness with automated testing"
+      ]
+    },
+    {
+      "id": "agent-development-orchestration",
+      "title": "Agent Development & Orchestration",
+      "description": "Build autonomous agents with Semantic Kernel, implement function calling, and orchestrate complex multi-step workflows",
+      "icon": "Bot",
+      "duration": "8 hours",
+      "topics": [
+        "Semantic Kernel architecture: plugins, planners, and memory",
+        "Function calling: defining tools, handling invocations, and chaining",
+        "Multi-agent orchestration patterns and handoff strategies",
+        "Agent memory management: conversation history and long-term recall",
+        "Integrating agents with enterprise APIs and data sources",
+        "Error handling and retry logic for agent workflows",
+        "Testing and debugging agent behaviour in development",
+        "Copilot Studio integration for low-code agent surfaces"
+      ]
+    },
+    {
+      "id": "production-deployment-responsible-ai",
+      "title": "Production Deployment & Responsible AI",
+      "description": "Deploy AI applications at production scale with monitoring, content safety, and responsible AI compliance",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Production deployment patterns: blue-green, canary, and A/B testing",
+        "Content filtering configuration and custom blocklists",
+        "Rate limiting, throttling, and quota management",
+        "Application monitoring with Azure Monitor and Application Insights",
+        "Microsoft Responsible AI principles and implementation checklist",
+        "Red-teaming and adversarial testing for AI applications",
+        "Data privacy and compliance considerations for AI workloads",
+        "Scaling AI applications: load balancing and failover strategies"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "foundry-setup-lab",
+      "title": "Azure AI Foundry Project Setup",
+      "description": "Create an AI Foundry project, deploy a foundation model, and build a basic chat application with the Python SDK",
+      "duration": "2 hours",
+      "icon": "Code"
+    },
+    {
+      "id": "rag-implementation-lab",
+      "title": "RAG Pipeline Implementation",
+      "description": "Build a retrieval-augmented generation pipeline with Azure AI Search, document chunking, and vector embeddings",
+      "duration": "2 hours",
+      "icon": "Search"
+    },
+    {
+      "id": "agent-building-lab",
+      "title": "Autonomous Agent with Semantic Kernel",
+      "description": "Build a multi-tool agent using Semantic Kernel with function calling, memory, and orchestrated task completion",
+      "duration": "2 hours",
+      "icon": "Bot"
+    },
+    {
+      "id": "production-deployment-lab",
+      "title": "Production Deployment with Safety Controls",
+      "description": "Deploy an AI application with content filtering, monitoring dashboards, and responsible AI evaluations",
+      "duration": "2 hours",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "Programming experience with Python or C#",
+    "Familiarity with Azure AI services and the Azure portal",
+    "Understanding of REST APIs and HTTP-based integrations",
+    "Basic knowledge of machine learning concepts and large language models"
+  ],
+  "targetAudience": [
+    "Developers building AI-powered applications on Azure",
+    "Copilot Studio developers extending agent capabilities",
+    "AI engineers designing autonomous agent solutions",
+    "Software architects integrating AI into existing applications"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with deep experience building AI-powered applications and agent solutions on Azure. Has architected enterprise AI deployments using Azure OpenAI Service, Semantic Kernel, and Azure AI Foundry across multiple industries.",
+    "experience": "7+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "Microsoft Certified: Azure Developer Associate",
+      "AI-102",
+      "AZ-204"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Azure AI App and Agent Developer Associate",
+    "examCode": "AI-103",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Code",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Building AI agents is where cloud development is heading, and I mean that practically, not as a buzzword. Over the past year I have built agents that handle real tasks -- pulling data from APIs, making decisions based on context, and handing off to other agents when the job requires it. The shift from writing prompts to orchestrating autonomous workflows changes how you think about software architecture entirely. This course is built from those production deployments, not from documentation alone."
+  }
+}

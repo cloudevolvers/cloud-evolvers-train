@@ -179,7 +179,8 @@
     "nextSession": "2025-01-10"
   },
   "retired": {
-    "date": "2026-08-31"
+    "date": "2026-08-31",
+    "successor": "cloud-ai-security-engineer"
   },
   "featured": true,
   "icon": "Shield",

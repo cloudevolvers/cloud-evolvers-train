@@ -13,6 +13,10 @@
     "hours": 24,
     "format": "days"
   },
+  "retired": {
+    "date": "2026-06-30",
+    "successor": "windows-server-hybrid-administrator-consolidated"
+  },
   "featured": false,
   "icon": "Desktop",
   "learningObjectives": [
