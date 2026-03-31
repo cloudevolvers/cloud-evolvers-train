@@ -29,13 +29,6 @@ const TrainingOverviewPage: React.FC = () => {
   const [allTrainings, setAllTrainings] = useState<CombinedTraining[]>([]);
   const { t } = useTranslations();
 
-  const getTranslatedCourse = (training: CombinedTraining) => {
-    return {
-      title: training.title,
-      description: training.description
-    };
-  };
-
   useEffect(() => {
     try {
       const jsonTrainings = getAllJSONTrainings();
@@ -63,10 +56,8 @@ const TrainingOverviewPage: React.FC = () => {
         instructor: {
           name: t.instructor.name,
           title: t.instructor.title,
-          experience: (t.instructor as any).experience,
           certifications: t.instructor.certifications,
         },
-        isJsonBased: true,
       }));
       setAllTrainings(convertedTrainings);
     } catch (error) {
@@ -76,7 +67,8 @@ const TrainingOverviewPage: React.FC = () => {
   }, []);
 
   const filteredTrainings = useMemo(() => {
-    let filtered = allTrainings.filter(training => {
+    const now = Date.now();
+    const filtered = allTrainings.filter(training => {
       const searchMatch = !filterState.searchTerm ||
         training.title.toLowerCase().includes(filterState.searchTerm.toLowerCase()) ||
         training.description.toLowerCase().includes(filterState.searchTerm.toLowerCase()) ||
@@ -91,9 +83,8 @@ const TrainingOverviewPage: React.FC = () => {
     });
 
     filtered.sort((a, b) => {
-      // Retired trainings always sort to the bottom
-      const aRetired = a.retired ? (new Date(a.retired.date) <= new Date() ? 2 : 1) : 0;
-      const bRetired = b.retired ? (new Date(b.retired.date) <= new Date() ? 2 : 1) : 0;
+      const aRetired = a.retired ? (new Date(a.retired.date).getTime() <= now ? 2 : 1) : 0;
+      const bRetired = b.retired ? (new Date(b.retired.date).getTime() <= now ? 2 : 1) : 0;
       if (aRetired !== bRetired) return aRetired - bRetired;
 
       if (filterState.sortBy === 'level') {
@@ -182,9 +173,7 @@ const TrainingOverviewPage: React.FC = () => {
             <TrainingCard
               key={training.slug}
               training={training}
-              getTranslatedCourse={getTranslatedCourse}
               formatDuration={formatDuration}
-              t={t}
               allTrainings={allTrainings}
             />
           ))}

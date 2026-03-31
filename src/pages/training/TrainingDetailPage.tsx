@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, CurrencyEur, ArrowRight, Warning } from '@phosphor-icons/react';
+import { ArrowLeft, Calendar, Warning } from '@phosphor-icons/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -26,15 +26,12 @@ export default function TrainingDetailPage() {
   const headerRef = useRef<HTMLDivElement>(null);
   const { sessions, loading: sessionsLoading } = useTrainingSessions(slug);
 
-  if (!slug) {
-    return <Navigate to="/training" replace />;
-  }
-
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (slug) window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [slug]);
 
   useEffect(() => {
+    if (!slug) return;
     const loadTraining = async () => {
       try {
         setLoading(true);
@@ -66,6 +63,10 @@ export default function TrainingDetailPage() {
 
     return () => observer.disconnect();
   }, [training]);
+
+  if (!slug) {
+    return <Navigate to="/training" replace />;
+  }
 
   const heroImage = courseImages[slug] || defaultCourseImage;
 
@@ -133,12 +134,12 @@ export default function TrainingDetailPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-4 flex-shrink-0">
-                  <span className="text-xl font-extrabold text-emerald-600 dark:text-emerald-400">
+                  <span className="text-xl font-extrabold text-emerald-600">
                     {priceDisplay}
                   </span>
                   <a
                     href="#booking-form"
-                    className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 text-sm shadow-md hover:shadow-lg whitespace-nowrap"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 text-sm shadow-md hover:shadow-lg whitespace-nowrap"
                   >
                     <Calendar className="h-4 w-4" />
                     <span className="hidden sm:inline">{t.training?.detail?.inquireAboutTraining || 'Inquire'}</span>
@@ -212,10 +213,7 @@ export default function TrainingDetailPage() {
               />
             </div>
             <TrainingBadges />
-            <TrainingDetailContent
-              training={training}
-              TrainingContentComponent={null}
-            />
+            <TrainingDetailContent training={training} />
           </div>
 
           {/* Sidebar */}
@@ -231,7 +229,7 @@ export default function TrainingDetailPage() {
         >
           <Card className="shadow-2xl bg-card border border-border/50 overflow-hidden">
             {/* Booking header - emerald themed for conversion */}
-            <CardHeader className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 dark:from-emerald-700 dark:via-emerald-800 dark:to-emerald-900 text-white p-8 xl:p-10">
+            <CardHeader className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 text-white p-8 xl:p-10">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
                 <div className="p-3 bg-white/15 rounded-xl">
                   <Calendar className="h-8 w-8 text-white" />

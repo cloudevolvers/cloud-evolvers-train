@@ -154,30 +154,19 @@ export const blogLoader = createContentLoader<BlogJSON>('blog', '../data/blogs')
 
 // Utility functions with language support
 export async function loadTrainingBySlug(slug: string, language: 'en' | 'nl' = 'en'): Promise<TrainingJSON | null> {
-  console.log(`🔍 loadTrainingBySlug called with slug: "${slug}", language: "${language}"`);
-  
-  // Try language-specific version first (e.g., azure-fundamentals-nl.json)
   if (language === 'nl') {
     try {
-      const nlPath = `@/data/training-json/${slug}-nl.json`;
-      console.log(`🇳🇱 Attempting to load Dutch version: ${nlPath}`);
       const nlModule = await import(`@/data/training-json/${slug}-nl.json`);
-      console.log(`✅ Dutch version loaded successfully:`, nlModule.default?.title);
       if (nlModule.default) return nlModule.default;
-    } catch (error) {
-      console.log(`❌ No Dutch version found for ${slug}, falling back to English:`, error.message);
+    } catch {
+      // No Dutch version — fall through to English
     }
   }
-  
-  // Fallback to English version
+
   try {
-    const enPath = `@/data/training-json/${slug}.json`;
-    console.log(`🇬🇧 Loading English version: ${enPath}`);
     const module = await import(`@/data/training-json/${slug}.json`);
-    console.log(`✅ English version loaded successfully:`, module.default?.title);
     return module.default;
-  } catch (error) {
-    console.error(`Failed to load training: ${slug}`, error);
+  } catch {
     return null;
   }
 }
@@ -215,17 +204,3 @@ export async function searchBlogs(query: string): Promise<BlogJSON[]> {
   return blogLoader.search(query);
 }
 
-// Cache for loaded content (optional performance optimization)
-const contentCache = new Map<string, any>();
-
-export function getCachedContent<T>(key: string): T | null {
-  return contentCache.get(key) || null;
-}
-
-export function setCachedContent<T>(key: string, data: T): void {
-  contentCache.set(key, data);
-}
-
-export function clearContentCache(): void {
-  contentCache.clear();
-}
