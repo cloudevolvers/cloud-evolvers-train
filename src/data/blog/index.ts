@@ -67,6 +67,9 @@ import { exchangeRbacAccessPoliciesPost } from './posts/exchange-rbac-access-pol
 import { visualStudio184MarchUpdatePost } from './posts/visual-studio-18-4-march-update';
 import { entraAgentIdPost } from './posts/entra-agent-id';
 import { entraExternalMfaGaPost } from './posts/entra-external-mfa-ga';
+import { microsoftCertRetirements2026Post } from './posts/microsoft-certification-retirements-2026';
+import { microsoftAbSeriesAiCertsPost } from './posts/microsoft-ab-series-ai-certifications';
+import { nextGenAzureAiSecurityExamsPost } from './posts/next-gen-azure-ai-security-exams-2026';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -134,6 +137,9 @@ export {
   visualStudio184MarchUpdatePost,
   entraAgentIdPost,
   entraExternalMfaGaPost,
+  microsoftCertRetirements2026Post,
+  microsoftAbSeriesAiCertsPost,
+  nextGenAzureAiSecurityExamsPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
@@ -200,6 +206,9 @@ export const blogPosts: BlogPost[] = [
   visualStudio184MarchUpdatePost,
   entraAgentIdPost,
   entraExternalMfaGaPost,
+  microsoftCertRetirements2026Post,
+  microsoftAbSeriesAiCertsPost,
+  nextGenAzureAiSecurityExamsPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Helper function to get localized text
