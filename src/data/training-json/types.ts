@@ -81,6 +81,12 @@ export interface TrainingJSON {
     nextSession?: string;
   };
   
+  // Retirement info
+  retired?: {
+    date: string;
+    successor?: string;
+  };
+
   // Metadata
   featured: boolean;
   icon: string;

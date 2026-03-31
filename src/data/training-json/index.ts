@@ -29,6 +29,9 @@ import azureAIEngineerData from './azure-ai-engineer.json';
 import securityOperationsAnalystData from './security-operations-analyst.json';
 import cybersecurityArchitectData from './cybersecurity-architect.json';
 import copilotAgentAdminFundamentalsData from './copilot-agent-administration-fundamentals.json';
+import aiBusinessProfessionalData from './ai-business-professional.json';
+import aiTransformationLeaderData from './ai-transformation-leader.json';
+import agenticAiSolutionsArchitectData from './agentic-ai-solutions-architect.json';
 import microsoft365AdministratorData from './microsoft-365-administrator.json';
 
 // Training data registry
@@ -61,6 +64,9 @@ const trainingRegistry: Record<string, TrainingJSON> = {
   'security-operations-analyst': securityOperationsAnalystData as TrainingJSON,
   'cybersecurity-architect': cybersecurityArchitectData as TrainingJSON,
   'copilot-agent-administration-fundamentals': copilotAgentAdminFundamentalsData as TrainingJSON,
+  'ai-business-professional': aiBusinessProfessionalData as TrainingJSON,
+  'ai-transformation-leader': aiTransformationLeaderData as TrainingJSON,
+  'agentic-ai-solutions-architect': agenticAiSolutionsArchitectData as TrainingJSON,
   'microsoft-365-administrator': microsoft365AdministratorData as TrainingJSON,
 };
 

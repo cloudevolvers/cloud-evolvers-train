@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/use-translations";
+import { BackgroundIcons } from "@/components/BackgroundIcons";
 
 interface PathwayStage {
     description: string;
@@ -52,6 +53,7 @@ export function TrainingPathways() {
 
     return (
         <section className="relative overflow-hidden bg-white py-32">
+            <BackgroundIcons variant="training" />
             <div className="absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-slate-200 to-transparent md:block" />
 
             <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

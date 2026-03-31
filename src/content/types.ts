@@ -170,6 +170,12 @@ export interface TrainingJSON {
   testimonials?: TrainingTestimonial[];
   faqs?: TrainingFAQ[];
 
+  // Retirement info
+  retired?: {
+    date: string;
+    successor?: string;
+  };
+
   // Metadata
   featured: boolean;
   icon: string;

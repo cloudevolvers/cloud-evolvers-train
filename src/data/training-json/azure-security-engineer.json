@@ -178,6 +178,9 @@
     "available": true,
     "nextSession": "2025-01-10"
   },
+  "retired": {
+    "date": "2026-08-31"
+  },
   "featured": true,
   "icon": "Shield",
   "createdAt": "2024-01-01T00:00:00Z",

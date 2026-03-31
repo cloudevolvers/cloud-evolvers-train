@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, CurrencyEur, ArrowRight } from '@phosphor-icons/react';
+import { useParams, Navigate, Link } from 'react-router-dom';
+import { ArrowLeft, Calendar, CurrencyEur, ArrowRight, Warning } from '@phosphor-icons/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -173,6 +173,34 @@ export default function TrainingDetailPage() {
             {t.training?.detail?.backToTraining || 'Back to Training'}
           </Button>
         </div>
+
+        {/* Retirement banner */}
+        {training?.retired && (() => {
+          const retireDate = new Date(training.retired.date);
+          const isRetired = retireDate <= new Date();
+          const dateStr = retireDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+          return (
+            <div className={`mb-6 rounded-lg border p-4 flex items-start gap-3 ${isRetired ? 'bg-red-50 border-red-200 text-red-800' : 'bg-amber-50 border-amber-200 text-amber-800'}`}>
+              <Warning className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-semibold">
+                  {isRetired
+                    ? `This certification was retired on ${dateStr}.`
+                    : `This certification is retiring on ${dateStr}.`}
+                </p>
+                {training.retired.successor && (
+                  <p className="mt-1 text-sm">
+                    Microsoft recommends{' '}
+                    <Link to={`/training/${training.retired.successor}`} className="font-semibold underline hover:no-underline">
+                      the replacement course
+                    </Link>{' '}
+                    instead.
+                  </p>
+                )}
+              </div>
+            </div>
+          );
+        })()}
 
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 xl:gap-12 max-w-[1600px] mx-auto">
           {/* Main Content */}

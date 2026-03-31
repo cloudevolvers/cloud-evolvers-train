@@ -1,0 +1,174 @@
+{
+  "id": "agentic-ai-solutions-architect",
+  "slug": "agentic-ai-solutions-architect",
+  "title": "Agentic AI Business Solutions Architect (AB-100)",
+  "subtitle": "Design Multi-Agent AI Architectures for the Enterprise",
+  "description": "Demonstrate expertise in designing AI-first enterprise architectures that orchestrate multi-agent solutions with Microsoft Copilot, Foundry, and Dynamics 365",
+  "overview": "This expert-level course prepares you for the AB-100 certification exam. You will learn to design and lead AI-first enterprise architectures, orchestrate multi-agent AI solutions, and integrate Microsoft Copilot, Azure AI Foundry, and Dynamics 365 to drive business transformation. This is the most advanced certification in the AB series and requires an active Associate-level Microsoft certification as a prerequisite.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Architecture",
+  "difficulty": "Advanced",
+  "tags": [
+    "AI Architecture",
+    "Multi-Agent AI",
+    "Microsoft Copilot",
+    "Azure AI Foundry",
+    "Dynamics 365",
+    "AB-100",
+    "Enterprise AI"
+  ],
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-architecture",
+      "title": "AI-First Enterprise Architecture",
+      "description": "Design enterprise architectures where AI agents are first-class components, not afterthoughts",
+      "icon": "Blueprint"
+    },
+    {
+      "id": "multi-agent",
+      "title": "Multi-Agent Orchestration",
+      "description": "Orchestrate multiple AI agents to collaborate on complex business processes",
+      "icon": "GitBranch"
+    },
+    {
+      "id": "platform-integration",
+      "title": "Platform Integration",
+      "description": "Integrate Microsoft Copilot, Azure AI Foundry, and Dynamics 365 into cohesive AI solutions",
+      "icon": "Plugs"
+    },
+    {
+      "id": "governance-scale",
+      "title": "Governance at Scale",
+      "description": "Implement governance, monitoring, and lifecycle management for AI agents in production",
+      "icon": "Shield"
+    }
+  ],
+  "modules": [
+    {
+      "id": "ai-first-design",
+      "title": "AI-First Architecture Patterns",
+      "description": "Design patterns for building enterprise systems around AI capabilities",
+      "icon": "Blueprint",
+      "duration": "6 hours",
+      "topics": [
+        "AI-first vs. AI-augmented architecture trade-offs",
+        "Reference architectures for agentic AI systems",
+        "Data architecture for AI agents — retrieval, grounding, memory",
+        "Security architecture for autonomous agents",
+        "Cost modelling and capacity planning for AI workloads"
+      ]
+    },
+    {
+      "id": "agent-orchestration",
+      "title": "Multi-Agent Design and Orchestration",
+      "description": "Design and orchestrate multi-agent systems for complex workflows",
+      "icon": "GitBranch",
+      "duration": "6 hours",
+      "topics": [
+        "Agent design patterns: supervisor, collaborative, chain",
+        "Agent communication and handoff protocols",
+        "Tool use and function calling in multi-agent systems",
+        "Error handling and fallback strategies for agents",
+        "Testing and validating agent behaviour"
+      ]
+    },
+    {
+      "id": "microsoft-platform",
+      "title": "Microsoft AI Platform Integration",
+      "description": "Build solutions with Microsoft Copilot, Azure AI Foundry, and Dynamics 365",
+      "icon": "Plugs",
+      "duration": "6 hours",
+      "topics": [
+        "Extending Microsoft 365 Copilot with custom agents",
+        "Azure AI Foundry for model deployment and management",
+        "Dynamics 365 AI integration patterns",
+        "Microsoft Graph as an AI data source",
+        "Power Platform Copilot Studio for low-code agents"
+      ]
+    },
+    {
+      "id": "production-governance",
+      "title": "Production Governance and Operations",
+      "description": "Run agentic AI systems reliably in production",
+      "icon": "Shield",
+      "duration": "6 hours",
+      "topics": [
+        "Agent lifecycle management and versioning",
+        "Monitoring, observability, and alerting for AI agents",
+        "Compliance and audit trails for autonomous decisions",
+        "Incident response for AI system failures",
+        "Scaling and performance optimisation"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "architecture-lab",
+      "title": "AI Architecture Design Session",
+      "description": "Design an AI-first architecture for a realistic enterprise scenario with multiple agent types",
+      "duration": "2.5 hours",
+      "icon": "Blueprint"
+    },
+    {
+      "id": "multi-agent-lab",
+      "title": "Multi-Agent Orchestration Lab",
+      "description": "Build and test a multi-agent workflow using Copilot Studio and Azure AI Foundry",
+      "duration": "3 hours",
+      "icon": "GitBranch"
+    },
+    {
+      "id": "governance-lab",
+      "title": "Agent Governance Implementation",
+      "description": "Set up monitoring, compliance policies, and lifecycle management for AI agents",
+      "duration": "2 hours",
+      "icon": "Shield"
+    }
+  ],
+  "prerequisites": [
+    "Active Microsoft Associate-level certification (required)",
+    "Experience designing enterprise architectures",
+    "Familiarity with Azure AI services and Microsoft 365",
+    "Understanding of AI and machine learning concepts"
+  ],
+  "targetAudience": [
+    "Solutions architects designing AI-powered systems",
+    "Senior engineers leading AI platform teams",
+    "Technical leads responsible for AI strategy execution",
+    "Professionals seeking AB-100 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Azure Solutions Architect Expert and Microsoft Certified Trainer who designs agentic AI solutions for enterprise clients, from architecture through production deployment.",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Azure Solutions Architect Expert (AZ-305)",
+      "Azure AI Engineer Associate (AI-102)",
+      "AB-900"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Agentic AI Business Solutions Architect",
+    "examCode": "AB-100",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Brain",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Multi-agent systems are where AI gets real in the enterprise. I have built these architectures for clients who need autonomous agents to handle processes that are too complex for a single Copilot prompt. This course takes the architecture patterns I use in production and teaches you how to design, build, and govern them."
+  }
+}

@@ -181,6 +181,10 @@
     "available": true,
     "nextSession": "2024-12-15"
   },
+  "retired": {
+    "date": "2026-03-31",
+    "successor": "copilot-agent-administration-fundamentals"
+  },
   "featured": false,
   "icon": "Cloud",
   "createdAt": "2024-01-01T00:00:00Z",
