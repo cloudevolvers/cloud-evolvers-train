@@ -7,7 +7,6 @@ export interface CombinedTraining {
   category: string;
   level: string;
   duration: { days: number; hours: number };
-  price?: { amount: number; currency: string };
   featured: boolean;
   icon?: string;
   learningObjectives?: string[];
@@ -20,10 +19,8 @@ export interface CombinedTraining {
   instructor?: {
     name: string;
     title: string;
-    experience?: string;
     certifications?: string[];
   };
-  isJsonBased?: boolean;
 }
 
 export interface FilterState {

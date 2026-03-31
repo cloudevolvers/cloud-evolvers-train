@@ -14,9 +14,7 @@ import type { CombinedTraining } from './types';
 
 interface TrainingCardProps {
   training: CombinedTraining;
-  getTranslatedCourse: (training: CombinedTraining) => { title: string; description: string };
   formatDuration: (duration: { days: number; hours: number }) => string;
-  t: any;
   allTrainings?: CombinedTraining[];
 }
 
@@ -29,7 +27,7 @@ function getRetirementStatus(retired?: { date: string; successor?: string }) {
   return { isRetired, label: isRetired ? 'Retired' : `Retiring ${month}`, date: retired.date, successor: retired.successor };
 }
 
-export function TrainingCard({ training, getTranslatedCourse, formatDuration, t, allTrainings }: TrainingCardProps) {
+export function TrainingCard({ training, formatDuration, allTrainings }: TrainingCardProps) {
   const headerImage = courseImages[training.slug] || defaultCourseImage;
   const retirement = getRetirementStatus(training.retired);
   const successorTraining = retirement?.successor && allTrainings?.find(t => t.slug === retirement.successor);
@@ -76,10 +74,10 @@ export function TrainingCard({ training, getTranslatedCourse, formatDuration, t,
 
           {/* Title & description */}
           <h3 className="text-lg font-semibold mb-2 line-clamp-2 text-foreground group-hover:text-primary transition-colors">
-            {getTranslatedCourse(training).title}
+            {training.title}
           </h3>
           <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
-            {getTranslatedCourse(training).description}
+            {training.description}
           </p>
 
           {/* Successor link */}
