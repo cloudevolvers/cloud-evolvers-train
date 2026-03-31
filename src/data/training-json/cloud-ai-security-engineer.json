@@ -1,0 +1,201 @@
+{
+  "id": "cloud-ai-security-engineer",
+  "slug": "cloud-ai-security-engineer",
+  "title": "Cloud & AI Security Engineer Associate (SC-500)",
+  "subtitle": "Secure Cloud Infrastructure and AI Deployments",
+  "description": "Learn to secure cloud infrastructure and AI deployments, covering threat modelling for AI, Azure OpenAI security, content filtering, AI governance frameworks, and security operations with Defender XDR and Sentinel",
+  "overview": "This intermediate course prepares you for the SC-500 certification exam by covering the intersection of cloud security and AI security. You will learn to apply traditional cloud security foundations -- identity, endpoint protection, and SIEM/SOAR -- alongside emerging AI-specific challenges such as AI model threat modelling, securing Azure OpenAI deployments, configuring content filtering, classifying data for AI pipelines, and implementing AI governance frameworks aligned with the Microsoft Responsible AI standard. The course combines defensive security operations with proactive AI risk management.",
+  "category": "Security & Compliance",
+  "subcategory": "AI Security",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Security",
+    "AI Security",
+    "Threat Modelling",
+    "Azure OpenAI",
+    "Content Filtering",
+    "AI Governance",
+    "Responsible AI",
+    "Defender XDR",
+    "Microsoft Sentinel",
+    "SIEM",
+    "SOAR",
+    "SC-500"
+  ],
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "cloud-security-foundations",
+      "title": "Cloud Security Foundations",
+      "description": "Implement identity and endpoint security, configure conditional access, and manage security posture across Azure and Microsoft 365 environments",
+      "icon": "Shield"
+    },
+    {
+      "id": "ai-security-threat-modelling",
+      "title": "AI Security & Threat Modelling",
+      "description": "Perform threat modelling for AI systems, secure Azure OpenAI deployments, configure content filtering, and defend against prompt injection and data exfiltration",
+      "icon": "Lock"
+    },
+    {
+      "id": "data-protection-ai-governance",
+      "title": "Data Protection & AI Governance",
+      "description": "Classify and protect data flowing through AI pipelines, implement AI governance frameworks, and apply the Microsoft Responsible AI standard",
+      "icon": "FileText"
+    },
+    {
+      "id": "security-operations",
+      "title": "Security Operations & Incident Response",
+      "description": "Operate Defender XDR and Microsoft Sentinel for threat detection, investigation, and automated response across cloud and AI workloads",
+      "icon": "AlertTriangle"
+    }
+  ],
+  "modules": [
+    {
+      "id": "cloud-security-foundations",
+      "title": "Cloud Security Foundations",
+      "description": "Build the security baseline for cloud environments with identity, endpoint, and posture management",
+      "icon": "Shield",
+      "duration": "8 hours",
+      "topics": [
+        "Microsoft Entra ID: authentication, conditional access, and PIM",
+        "Endpoint security with Microsoft Defender for Endpoint",
+        "Network security: NSGs, Azure Firewall, and private endpoints",
+        "Microsoft Defender for Cloud: security posture and recommendations",
+        "Identity governance and entitlement management",
+        "Zero Trust architecture principles applied to Azure",
+        "Secure DevOps practices: scanning, secrets management, and supply chain",
+        "Compliance frameworks and regulatory alignment in Azure"
+      ]
+    },
+    {
+      "id": "ai-security-threat-modelling",
+      "title": "AI Security & Threat Modelling",
+      "description": "Identify and mitigate security threats specific to AI systems and large language model deployments",
+      "icon": "Lock",
+      "duration": "8 hours",
+      "topics": [
+        "AI threat landscape: prompt injection, jailbreaking, and data poisoning",
+        "Threat modelling frameworks for AI systems (STRIDE applied to AI)",
+        "Securing Azure OpenAI Service deployments: networking, keys, and managed identity",
+        "Content filtering configuration: built-in and custom categories",
+        "Custom blocklists and output filtering for sensitive content",
+        "Defending against indirect prompt injection attacks",
+        "Model access controls and deployment-level permissions",
+        "Red-teaming AI systems: methodology and tooling"
+      ]
+    },
+    {
+      "id": "data-protection-ai-governance",
+      "title": "Data Protection & AI Governance",
+      "description": "Protect data in AI pipelines and implement governance frameworks for responsible AI adoption",
+      "icon": "FileText",
+      "duration": "8 hours",
+      "topics": [
+        "Data classification for AI training data and RAG knowledge bases",
+        "Microsoft Purview for AI data governance and lineage",
+        "Sensitivity labels applied to AI pipeline data sources",
+        "Data loss prevention policies for AI-generated content",
+        "AI governance frameworks and organisational policies",
+        "Microsoft Responsible AI standard: fairness, reliability, safety, privacy",
+        "AI impact assessments and risk documentation",
+        "Regulatory considerations: EU AI Act, GDPR implications for AI"
+      ]
+    },
+    {
+      "id": "security-operations-incident-response",
+      "title": "Security Operations & Incident Response",
+      "description": "Detect, investigate, and respond to threats across cloud and AI workloads using Defender XDR and Sentinel",
+      "icon": "AlertTriangle",
+      "duration": "8 hours",
+      "topics": [
+        "Microsoft Defender XDR: unified threat detection and investigation",
+        "Microsoft Sentinel: workspace setup, data connectors, and analytics rules",
+        "KQL queries for security investigation and hunting",
+        "Automated response with Sentinel playbooks and SOAR capabilities",
+        "Incident management workflows and escalation procedures",
+        "Threat intelligence integration and indicator management",
+        "Monitoring AI-specific security events and anomalies",
+        "Security operations for AI workloads: logging, alerting, and forensics"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "identity-security-lab",
+      "title": "Identity & Conditional Access Configuration",
+      "description": "Configure conditional access policies, PIM roles, and identity governance for an Azure environment",
+      "duration": "2 hours",
+      "icon": "Shield"
+    },
+    {
+      "id": "ai-threat-modelling-lab",
+      "title": "AI Threat Modelling Workshop",
+      "description": "Perform threat modelling on an AI application using STRIDE, identify attack vectors, and design mitigations",
+      "duration": "2 hours",
+      "icon": "Lock"
+    },
+    {
+      "id": "content-filtering-lab",
+      "title": "Azure OpenAI Content Filtering",
+      "description": "Configure content filtering categories, custom blocklists, and test against adversarial prompts",
+      "duration": "1.5 hours",
+      "icon": "Lock"
+    },
+    {
+      "id": "sentinel-investigation-lab",
+      "title": "Sentinel Threat Investigation",
+      "description": "Set up Sentinel analytics rules, investigate a simulated security incident, and build an automated response playbook",
+      "duration": "2 hours",
+      "icon": "AlertTriangle"
+    }
+  ],
+  "prerequisites": [
+    "SC-200 or SC-300 experience recommended",
+    "Familiarity with Azure security services and Microsoft Defender products",
+    "Understanding of identity and access management concepts",
+    "Basic knowledge of AI services and large language models"
+  ],
+  "targetAudience": [
+    "Security engineers responsible for cloud and AI environments",
+    "Cloud architects designing secure AI solutions",
+    "SOC analysts monitoring AI-integrated workloads",
+    "Compliance officers overseeing AI governance",
+    "Students preparing for SC-500 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with deep expertise in cloud security and emerging AI security challenges. Experienced in securing Azure OpenAI deployments, implementing AI governance frameworks, and operating Microsoft Sentinel and Defender XDR for enterprise organisations.",
+    "experience": "7+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified: Azure Security Engineer Associate",
+      "Microsoft Certified: Security Operations Analyst Associate",
+      "AZ-500",
+      "SC-200"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Cloud and AI Security Engineer Associate",
+    "examCode": "SC-500",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Shield",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Security has always been part of cloud work, but AI has introduced threats that most security teams have never seen before. Prompt injection is not in any traditional playbook. Data exfiltration through a chatbot is not something your firewall rules will catch. I built this course after spending months hardening Azure OpenAI deployments for clients who were rolling out AI features without realising how exposed they were. The good news is that the security fundamentals still apply -- you just need to extend them to cover this new surface area."
+  }
+}

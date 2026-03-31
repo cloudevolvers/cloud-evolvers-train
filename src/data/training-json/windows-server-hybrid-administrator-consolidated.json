@@ -1,0 +1,203 @@
+{
+  "id": "windows-server-hybrid-administrator-consolidated",
+  "slug": "windows-server-hybrid-administrator-consolidated",
+  "title": "Windows Server Hybrid Administrator (AZ-802)",
+  "subtitle": "Manage Windows Server in Hybrid and Cloud Environments",
+  "description": "Learn to manage Windows Server in hybrid and cloud environments, covering Active Directory, Azure Arc, Windows Server 2025, hybrid networking, identity synchronisation, and disaster recovery",
+  "overview": "This intermediate course prepares you for the AZ-802 certification exam, the consolidated replacement for the AZ-800 and AZ-801 exams. You will learn to manage Windows Server infrastructure in hybrid environments that span on-premises datacentres and Azure. The course covers Active Directory in hybrid scenarios with Entra ID synchronisation, server infrastructure management with Azure Arc, Windows Server 2025 features, storage and Hyper-V virtualisation, hybrid networking, and disaster recovery with Azure Site Recovery. The five-day format gives sufficient time for deep hands-on labs alongside the theory.",
+  "category": "Azure",
+  "subcategory": "Hybrid Infrastructure",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Windows Server",
+    "Active Directory",
+    "Azure Arc",
+    "Hybrid",
+    "Entra ID",
+    "Hyper-V",
+    "Azure Site Recovery",
+    "Windows Server 2025",
+    "Containers",
+    "AZ-802"
+  ],
+  "duration": {
+    "days": 5,
+    "hours": 40,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "identity-hybrid-ad",
+      "title": "Identity & Hybrid Active Directory",
+      "description": "Manage Active Directory in hybrid scenarios, synchronise identities with Entra ID, and configure authentication across on-premises and cloud environments",
+      "icon": "Users"
+    },
+    {
+      "id": "server-infrastructure-storage",
+      "title": "Server Infrastructure & Storage",
+      "description": "Deploy and manage Windows Server infrastructure, configure storage solutions, and manage servers at scale with Azure Arc",
+      "icon": "Server"
+    },
+    {
+      "id": "networking-virtualisation",
+      "title": "Networking & Virtualisation",
+      "description": "Configure hybrid networking, manage Hyper-V virtualisation, and deploy containerised workloads on Windows Server",
+      "icon": "Network"
+    },
+    {
+      "id": "azure-integration-dr",
+      "title": "Azure Integration & Disaster Recovery",
+      "description": "Integrate on-premises servers with Azure services, implement Azure Site Recovery, and configure backup and business continuity",
+      "icon": "Cloud"
+    }
+  ],
+  "modules": [
+    {
+      "id": "identity-hybrid-ad",
+      "title": "Identity & Hybrid Active Directory",
+      "description": "Manage Active Directory Domain Services and synchronise identities with Microsoft Entra ID for hybrid environments",
+      "icon": "Users",
+      "duration": "10 hours",
+      "topics": [
+        "Active Directory Domain Services: forests, domains, trusts, and sites",
+        "Group Policy management and troubleshooting in hybrid scenarios",
+        "Microsoft Entra Connect: installation, configuration, and sync rules",
+        "Identity synchronisation between on-premises AD and Entra ID",
+        "Password hash sync, pass-through authentication, and federation",
+        "Conditional access policies for hybrid users",
+        "Entra ID Application Proxy for on-premises application access",
+        "Privileged Access Management and tiered administration",
+        "Certificate Services and PKI for hybrid environments"
+      ]
+    },
+    {
+      "id": "server-infrastructure-storage",
+      "title": "Server Infrastructure & Storage",
+      "description": "Deploy, manage, and monitor Windows Server infrastructure with Azure Arc integration",
+      "icon": "Server",
+      "duration": "10 hours",
+      "topics": [
+        "Windows Server 2025: new features and migration paths",
+        "Server deployment: unattended installation, imaging, and templates",
+        "Azure Arc for servers: onboarding, policy, and extensions",
+        "Windows Admin Center for hybrid server management",
+        "Storage Spaces Direct and Storage Replica",
+        "File server management: DFS, quotas, and file classification",
+        "Data deduplication and storage optimisation",
+        "Windows Server Update Services and patch management",
+        "Performance monitoring and resource optimisation"
+      ]
+    },
+    {
+      "id": "networking-virtualisation",
+      "title": "Networking & Virtualisation",
+      "description": "Configure networking for hybrid environments and manage Hyper-V and container workloads",
+      "icon": "Network",
+      "duration": "10 hours",
+      "topics": [
+        "DNS and DHCP management for hybrid networks",
+        "IPAM configuration and subnet management",
+        "VPN and ExpressRoute connectivity to Azure",
+        "Network Policy Server (NPS) and RADIUS authentication",
+        "Software Defined Networking with Hyper-V",
+        "Hyper-V: VM deployment, live migration, and replication",
+        "Hyper-V networking: virtual switches and NIC teaming",
+        "Windows Server containers: Docker and containerd",
+        "Network load balancing and failover clustering"
+      ]
+    },
+    {
+      "id": "azure-integration-disaster-recovery",
+      "title": "Azure Integration & Disaster Recovery",
+      "description": "Integrate on-premises Windows Server with Azure services and implement disaster recovery",
+      "icon": "Cloud",
+      "duration": "10 hours",
+      "topics": [
+        "Azure Site Recovery: replication, failover, and failback",
+        "Azure Backup for Windows Server and Hyper-V workloads",
+        "Azure File Sync for hybrid file storage",
+        "Azure Monitor Agent and Log Analytics for hybrid monitoring",
+        "Azure Update Manager for cross-environment patching",
+        "Azure Automation: runbooks, DSC, and hybrid workers",
+        "Business continuity planning and RTO/RPO calculations",
+        "Migration strategies: on-premises to Azure and server upgrades",
+        "Windows Server security hardening and compliance baselines"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "hybrid-identity-lab",
+      "title": "Hybrid Identity Configuration",
+      "description": "Set up Entra Connect, configure password hash sync, and verify identity synchronisation between on-premises AD and Entra ID",
+      "duration": "2.5 hours",
+      "icon": "Users"
+    },
+    {
+      "id": "azure-arc-lab",
+      "title": "Azure Arc Server Management",
+      "description": "Onboard servers to Azure Arc, apply policies, deploy extensions, and manage updates from the Azure portal",
+      "duration": "2 hours",
+      "icon": "Server"
+    },
+    {
+      "id": "hyperv-networking-lab",
+      "title": "Hyper-V & Hybrid Networking",
+      "description": "Deploy VMs on Hyper-V, configure virtual switches, and establish VPN connectivity to an Azure virtual network",
+      "duration": "2.5 hours",
+      "icon": "Network"
+    },
+    {
+      "id": "disaster-recovery-lab",
+      "title": "Azure Site Recovery Failover",
+      "description": "Configure Azure Site Recovery for on-premises VMs, execute a test failover, and verify application recovery",
+      "duration": "2 hours",
+      "icon": "Cloud"
+    }
+  ],
+  "prerequisites": [
+    "Experience with Windows Server administration (2016 or later)",
+    "Basic Azure knowledge (AZ-900 recommended)",
+    "Understanding of Active Directory and Group Policy",
+    "Familiarity with networking concepts: DNS, DHCP, VPN, and TCP/IP"
+  ],
+  "targetAudience": [
+    "Windows Server administrators managing hybrid environments",
+    "Infrastructure engineers integrating on-premises servers with Azure",
+    "IT professionals preparing for the AZ-802 certification",
+    "Systems administrators upgrading from AZ-800/AZ-801 knowledge"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with extensive experience in Windows Server administration and hybrid infrastructure. Has led numerous hybrid identity and Azure Arc deployments for enterprise organisations transitioning from on-premises to cloud-integrated environments.",
+    "experience": "7+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+      "Microsoft Certified: Azure Administrator Associate",
+      "AZ-800",
+      "AZ-801",
+      "AZ-104"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Windows Server Hybrid Administrator Associate",
+    "examCode": "AZ-802",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": false,
+  "icon": "Server",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Windows Server is not going anywhere, but how you manage it is changing fast. Most of the organisations I work with have a mix of on-premises servers and Azure resources, and the challenge is managing that hybrid estate without doubling your tooling and processes. Azure Arc and Entra Connect have changed the game -- you can now manage your domain controllers, file servers, and Hyper-V hosts alongside your Azure VMs from a single pane. This course covers the consolidated AZ-802 exam, which finally brings the AZ-800 and AZ-801 content together into one coherent path."
+  }
+}

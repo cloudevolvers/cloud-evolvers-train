@@ -32,6 +32,11 @@ import copilotAgentAdminFundamentalsData from './copilot-agent-administration-fu
 import aiBusinessProfessionalData from './ai-business-professional.json';
 import aiTransformationLeaderData from './ai-transformation-leader.json';
 import agenticAiSolutionsArchitectData from './agentic-ai-solutions-architect.json';
+import azureAiAppAgentDeveloperData from './azure-ai-app-agent-developer.json';
+import azureAiCloudDeveloperData from './azure-ai-cloud-developer.json';
+import mlopsEngineerData from './mlops-engineer.json';
+import cloudAiSecurityEngineerData from './cloud-ai-security-engineer.json';
+import windowsServerHybridAdminConsolidatedData from './windows-server-hybrid-administrator-consolidated.json';
 import microsoft365AdministratorData from './microsoft-365-administrator.json';
 
 // Training data registry
@@ -67,6 +72,11 @@ const trainingRegistry: Record<string, TrainingJSON> = {
   'ai-business-professional': aiBusinessProfessionalData as TrainingJSON,
   'ai-transformation-leader': aiTransformationLeaderData as TrainingJSON,
   'agentic-ai-solutions-architect': agenticAiSolutionsArchitectData as TrainingJSON,
+  'azure-ai-app-agent-developer': azureAiAppAgentDeveloperData as TrainingJSON,
+  'azure-ai-cloud-developer': azureAiCloudDeveloperData as TrainingJSON,
+  'mlops-engineer': mlopsEngineerData as TrainingJSON,
+  'cloud-ai-security-engineer': cloudAiSecurityEngineerData as TrainingJSON,
+  'windows-server-hybrid-administrator-consolidated': windowsServerHybridAdminConsolidatedData as TrainingJSON,
   'microsoft-365-administrator': microsoft365AdministratorData as TrainingJSON,
 };
 

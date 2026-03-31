@@ -1,0 +1,223 @@
+{
+  "id": "mlops-engineer",
+  "slug": "mlops-engineer",
+  "title": "MLOps & GenAIOps Engineer Associate (AI-300)",
+  "subtitle": "Operationalise Machine Learning and Generative AI Solutions",
+  "description": "Learn to operationalise machine learning and generative AI solutions with MLOps pipelines, Azure Machine Learning, MLflow, Microsoft Foundry, and CI/CD automation",
+  "overview": "This advanced course prepares you for the AI-300 certification exam by covering the full MLOps and GenAIOps lifecycle. You will learn to design MLOps infrastructure, manage ML model lifecycles with MLflow and Azure Machine Learning pipelines, build GenAIOps infrastructure with Microsoft Foundry, implement quality assurance and observability for generative AI, and optimise GenAI systems through RAG tuning and fine-tuning. The course follows the official exam study guide weighting and combines infrastructure automation with hands-on model operations.",
+  "category": "AI & Machine Learning",
+  "subcategory": "MLOps",
+  "difficulty": "Advanced",
+  "tags": [
+    "MLOps",
+    "GenAIOps",
+    "Azure Machine Learning",
+    "MLflow",
+    "Microsoft Foundry",
+    "CI/CD",
+    "RAG",
+    "Fine-Tuning",
+    "Bicep",
+    "GitHub Actions",
+    "AI-300"
+  ],
+  "duration": {
+    "days": 4,
+    "hours": 32,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "mlops-infrastructure",
+      "title": "MLOps Infrastructure Design",
+      "description": "Design and provision MLOps infrastructure with Azure Machine Learning workspaces, compute targets, and infrastructure as code using Bicep",
+      "icon": "Gear"
+    },
+    {
+      "id": "ml-model-lifecycle",
+      "title": "ML Model Lifecycle & Operations",
+      "description": "Manage the complete ML model lifecycle with MLflow tracking, Azure Machine Learning pipelines, model registry, and automated retraining",
+      "icon": "RefreshCw"
+    },
+    {
+      "id": "genaiops-infrastructure",
+      "title": "GenAIOps Infrastructure",
+      "description": "Build and manage GenAIOps infrastructure with Microsoft Foundry, prompt flow orchestration, and deployment pipelines for generative AI",
+      "icon": "Bot"
+    },
+    {
+      "id": "genai-quality-observability",
+      "title": "GenAI Quality Assurance & Observability",
+      "description": "Implement quality assurance frameworks and observability for generative AI solutions, including evaluation metrics, content safety, and drift detection",
+      "icon": "BarChart"
+    },
+    {
+      "id": "optimising-genai",
+      "title": "Optimising Generative AI Systems",
+      "description": "Optimise generative AI systems through RAG pipeline tuning, fine-tuning strategies, and prompt optimisation for accuracy and cost",
+      "icon": "Zap"
+    }
+  ],
+  "modules": [
+    {
+      "id": "mlops-infrastructure-design",
+      "title": "MLOps Infrastructure Design (15-20%)",
+      "description": "Design and provision the infrastructure foundation for MLOps workflows",
+      "icon": "Gear",
+      "duration": "5 hours",
+      "topics": [
+        "Azure Machine Learning workspace architecture and configuration",
+        "Compute targets: compute instances, clusters, and serverless compute",
+        "Infrastructure as Code with Bicep for ML environments",
+        "Networking and security for ML workspaces: private endpoints and managed VNets",
+        "Data stores and data asset management",
+        "Role-based access control for ML resources",
+        "Environment management: curated and custom environments",
+        "Cost management strategies for ML compute"
+      ]
+    },
+    {
+      "id": "ml-model-lifecycle-operations",
+      "title": "ML Model Lifecycle & Operations (25-30%)",
+      "description": "Manage the end-to-end ML model lifecycle from experiment tracking to production deployment",
+      "icon": "RefreshCw",
+      "duration": "9 hours",
+      "topics": [
+        "MLflow experiment tracking: metrics, parameters, and artefacts",
+        "Azure Machine Learning pipelines: components, data flow, and scheduling",
+        "Model registry: versioning, staging, and promotion workflows",
+        "Automated retraining with pipeline triggers and data drift detection",
+        "Model packaging and deployment to managed online endpoints",
+        "Batch inference pipelines for large-scale scoring",
+        "A/B testing and traffic splitting for model deployments",
+        "GitHub Actions CI/CD pipelines for ML model delivery",
+        "Feature engineering and feature store integration",
+        "Responsible AI dashboards for model fairness and interpretability"
+      ]
+    },
+    {
+      "id": "genaiops-infrastructure",
+      "title": "GenAIOps Infrastructure (20-25%)",
+      "description": "Build and manage infrastructure for generative AI operations with Microsoft Foundry",
+      "icon": "Bot",
+      "duration": "7 hours",
+      "topics": [
+        "Microsoft Foundry setup and project organisation",
+        "Prompt flow orchestration: flows, tools, and connections",
+        "Deployment pipelines for generative AI solutions",
+        "Model catalogue management and deployment configuration",
+        "Connection management for AI services and data sources",
+        "Infrastructure automation for GenAIOps environments",
+        "Version control and collaboration for prompt flows",
+        "Integration with Azure DevOps and GitHub for GenAI CI/CD"
+      ]
+    },
+    {
+      "id": "genai-quality-assurance",
+      "title": "GenAI Quality Assurance & Observability (10-15%)",
+      "description": "Implement quality frameworks and monitoring for generative AI in production",
+      "icon": "BarChart",
+      "duration": "5 hours",
+      "topics": [
+        "Evaluation metrics for generative AI: groundedness, relevance, coherence",
+        "Automated evaluation pipelines with prompt flow evaluators",
+        "Content safety configuration and monitoring",
+        "Production observability: logging, tracing, and alerting for GenAI",
+        "Drift detection for generative AI outputs",
+        "Human-in-the-loop review workflows",
+        "Red-teaming and adversarial testing frameworks"
+      ]
+    },
+    {
+      "id": "optimising-genai-systems",
+      "title": "Optimising Generative AI Systems (10-15%)",
+      "description": "Optimise RAG pipelines, implement fine-tuning, and improve prompt effectiveness",
+      "icon": "Zap",
+      "duration": "6 hours",
+      "topics": [
+        "RAG pipeline optimisation: chunking strategies, re-ranking, and hybrid search",
+        "Fine-tuning foundation models on Azure: data preparation and training",
+        "Prompt optimisation techniques for accuracy and token efficiency",
+        "Model selection and benchmarking for specific use cases",
+        "Caching strategies for inference cost reduction",
+        "Performance profiling and bottleneck identification",
+        "Scaling inference endpoints for variable demand"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "mlflow-pipeline-lab",
+      "title": "MLflow Tracking & Azure ML Pipeline",
+      "description": "Set up MLflow experiment tracking and build an Azure Machine Learning pipeline with automated data processing and model training",
+      "duration": "2.5 hours",
+      "icon": "RefreshCw"
+    },
+    {
+      "id": "model-deployment-lab",
+      "title": "Model Registry & Deployment Pipeline",
+      "description": "Register a trained model, create a CI/CD pipeline with GitHub Actions, and deploy to a managed online endpoint with traffic splitting",
+      "duration": "2 hours",
+      "icon": "Gear"
+    },
+    {
+      "id": "genaiops-pipeline-lab",
+      "title": "GenAIOps with Prompt Flow",
+      "description": "Build a prompt flow orchestration, configure evaluation metrics, and deploy with automated quality gates",
+      "duration": "2 hours",
+      "icon": "Bot"
+    },
+    {
+      "id": "rag-optimisation-lab",
+      "title": "RAG Pipeline Optimisation",
+      "description": "Optimise a RAG pipeline by experimenting with chunking strategies, re-ranking models, and evaluation metrics",
+      "duration": "1.5 hours",
+      "icon": "Zap"
+    }
+  ],
+  "prerequisites": [
+    "Python programming experience",
+    "Experience with Azure Machine Learning SDK or studio",
+    "Basic DevOps concepts: CI/CD, version control, infrastructure as code",
+    "Data science background: model training, evaluation, and feature engineering"
+  ],
+  "targetAudience": [
+    "ML engineers operationalising models for production",
+    "Data scientists transitioning to MLOps practices",
+    "DevOps engineers supporting ML and GenAI workloads",
+    "AI engineers building automated ML pipelines",
+    "Students preparing for AI-300 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with hands-on experience operationalising machine learning and generative AI solutions on Azure. Specialises in building automated ML pipelines, MLflow-based model management, and GenAIOps workflows for enterprise organisations.",
+    "experience": "7+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified: Azure AI Engineer Associate",
+      "Microsoft Certified: Azure DevOps Engineer Expert",
+      "AI-102",
+      "AZ-400"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Operationalizing Machine Learning and Generative AI Solutions",
+    "examCode": "AI-300",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Gear",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "The gap between a working notebook and a reliable production model is where most ML projects fail. I have spent years helping teams cross that gap -- setting up pipelines that retrain automatically when data shifts, building deployment workflows that do not require a data scientist to SSH into a VM at 2 AM, and now extending those same principles to generative AI with GenAIOps. This course is the playbook I wish existed when I started operationalising my first models."
+  }
+}

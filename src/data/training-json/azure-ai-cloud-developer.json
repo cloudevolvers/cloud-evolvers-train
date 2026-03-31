@@ -1,0 +1,175 @@
+{
+  "id": "azure-ai-cloud-developer",
+  "slug": "azure-ai-cloud-developer",
+  "title": "Azure AI Cloud Developer Associate (AI-200)",
+  "subtitle": "Build, Integrate, and Monitor AI Solutions on Azure",
+  "description": "Learn to build scalable AI solutions on Azure, covering infrastructure design, containerised deployments, API management, and production monitoring for AI workloads",
+  "overview": "This intermediate course prepares you for the AI-200 certification exam by covering the full spectrum of building and operating AI solutions on Azure cloud infrastructure. You will learn to design scalable AI architectures using AKS and serverless compute, manage AI service APIs with Azure API Management, implement vector-enabled databases for semantic search, build event-driven AI pipelines, and monitor production AI workloads for performance and cost. The course bridges the gap between AI model development and production cloud engineering.",
+  "category": "AI & Machine Learning",
+  "subcategory": "AI Cloud Development",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Azure",
+    "AI Architecture",
+    "AKS",
+    "API Management",
+    "Cost Optimisation",
+    "Monitoring",
+    "Containerisation",
+    "Vector Databases",
+    "Serverless",
+    "AI-200"
+  ],
+  "duration": {
+    "days": 3,
+    "hours": 24,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-infrastructure",
+      "title": "AI Infrastructure & Architecture",
+      "description": "Design scalable AI architectures using AKS, serverless functions, and containerised compute for inference and training workloads",
+      "icon": "Cloud"
+    },
+    {
+      "id": "building-deploying",
+      "title": "Building & Deploying AI Solutions",
+      "description": "Build event-driven AI pipelines, integrate vector-enabled databases, manage AI service APIs, and deploy AI solutions with secure secret management",
+      "icon": "Code"
+    },
+    {
+      "id": "monitoring-cost",
+      "title": "Monitoring & Cost Optimisation",
+      "description": "Implement distributed observability for AI workloads and optimise inference costs with scaling strategies and resource right-sizing",
+      "icon": "BarChart"
+    }
+  ],
+  "modules": [
+    {
+      "id": "ai-infrastructure-architecture",
+      "title": "AI Infrastructure & Architecture",
+      "description": "Design and provision Azure infrastructure for AI workloads, from compute selection to networking and storage",
+      "icon": "Cloud",
+      "duration": "8 hours",
+      "topics": [
+        "Scalable AI architecture patterns on Azure",
+        "AKS for AI workloads: GPU node pools, scheduling, and autoscaling",
+        "Containerised compute for model inference and batch processing",
+        "Serverless functions for lightweight AI integrations",
+        "Virtual networking for AI service isolation and security",
+        "Storage strategies for training data, embeddings, and model artefacts",
+        "Infrastructure as Code with Bicep for AI environments",
+        "Secret management with Azure Key Vault for API keys and credentials"
+      ]
+    },
+    {
+      "id": "building-deploying-ai",
+      "title": "Building & Deploying AI Solutions",
+      "description": "Build production AI solutions with event-driven pipelines, vector databases, and API management",
+      "icon": "Code",
+      "duration": "8 hours",
+      "topics": [
+        "API Management for AI services: throttling, caching, and versioning",
+        "Vector-enabled databases: Azure Cosmos DB and Azure AI Search",
+        "Event-driven AI pipelines with Event Grid and Service Bus",
+        "Building AI microservices with container apps and AKS",
+        "Integrating Azure OpenAI Service into application backends",
+        "CI/CD pipelines for AI solution deployments",
+        "Blue-green and canary deployment strategies for AI endpoints",
+        "Authentication and authorisation patterns for AI APIs"
+      ]
+    },
+    {
+      "id": "monitoring-cost-optimisation",
+      "title": "Monitoring & Cost Optimisation",
+      "description": "Implement observability for AI workloads and optimise costs across inference, storage, and compute",
+      "icon": "BarChart",
+      "duration": "8 hours",
+      "topics": [
+        "Distributed observability with Azure Monitor and Application Insights",
+        "Custom metrics and dashboards for AI inference performance",
+        "Log analytics for AI request tracing and error diagnosis",
+        "Alert rules for latency, error rates, and token consumption",
+        "Cost optimisation strategies for inference workloads",
+        "Right-sizing compute for AI: spot instances and reserved capacity",
+        "Token usage analysis and model selection for cost efficiency",
+        "Budgets, cost alerts, and chargeback for AI projects"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "aks-ai-deployment-lab",
+      "title": "AKS Deployment for AI Inference",
+      "description": "Deploy a containerised AI model on AKS with GPU node pools, autoscaling, and health monitoring",
+      "duration": "2 hours",
+      "icon": "Cloud"
+    },
+    {
+      "id": "vector-database-lab",
+      "title": "Vector Database Integration",
+      "description": "Set up a vector-enabled database with Azure Cosmos DB, ingest embeddings, and query with semantic search",
+      "duration": "1.5 hours",
+      "icon": "Database"
+    },
+    {
+      "id": "api-management-lab",
+      "title": "API Management for AI Services",
+      "description": "Configure Azure API Management to front AI endpoints with rate limiting, caching, and usage analytics",
+      "duration": "1.5 hours",
+      "icon": "Code"
+    },
+    {
+      "id": "monitoring-dashboard-lab",
+      "title": "AI Workload Monitoring Dashboard",
+      "description": "Build a custom Azure Monitor dashboard tracking inference latency, token consumption, and cost trends",
+      "duration": "1.5 hours",
+      "icon": "BarChart"
+    }
+  ],
+  "prerequisites": [
+    "Azure fundamentals knowledge (AZ-900 recommended)",
+    "Programming experience with Python, C#, or JavaScript",
+    "Understanding of cloud architecture concepts and patterns",
+    "Basic familiarity with containers and Kubernetes"
+  ],
+  "targetAudience": [
+    "Cloud developers building AI-integrated applications",
+    "Azure developers adding AI capabilities to existing solutions",
+    "DevOps engineers supporting AI workloads in production",
+    "Students preparing for AI-200 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with extensive experience designing and operating AI solutions on Azure. Specialises in bridging the gap between AI development and production cloud infrastructure, with a focus on performance, cost, and reliability.",
+    "experience": "7+ years",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+      "Microsoft Certified: Azure Developer Associate",
+      "AZ-305",
+      "AZ-204"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: Azure AI Cloud Developer Associate",
+    "examCode": "AI-200",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Cloud",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "Most AI courses stop at the model. But I have seen too many proof-of-concept demos that never survived contact with production traffic, cost constraints, or a Monday morning spike. This course exists because the hard part of AI is not calling an API -- it is running that API reliably at scale without burning through your Azure budget. I teach what I have learned from running AI workloads in production: the infrastructure decisions, the monitoring that actually matters, and the cost traps you only discover after the first invoice."
+  }
+}

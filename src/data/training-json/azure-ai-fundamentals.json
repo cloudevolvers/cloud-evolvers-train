@@ -193,7 +193,8 @@
     "available": true
   },
   "retired": {
-    "date": "2026-06-30"
+    "date": "2026-06-30",
+    "successor": "azure-ai-cloud-developer"
   },
   "featured": true,
   "icon": "Brain",
