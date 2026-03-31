@@ -1,0 +1,171 @@
+{
+  "id": "ai-transformation-leader",
+  "slug": "ai-transformation-leader",
+  "title": "AI Transformation Leader (AB-731)",
+  "subtitle": "Lead AI Strategy, Governance, and Organisational Change",
+  "description": "Define the business value of AI transformation and lead governance, ethics, and change management for enterprise AI adoption",
+  "overview": "This course prepares you for the AB-731 certification exam. It is designed for leaders responsible for defining AI strategy, building operating models, ensuring ethical AI governance, and measuring business impact. You will learn to align AI initiatives with business objectives, build cross-functional AI adoption programmes, and manage the organisational change that comes with enterprise AI.",
+  "category": "Microsoft 365",
+  "subcategory": "AI Leadership",
+  "difficulty": "Intermediate",
+  "tags": [
+    "AI Strategy",
+    "Governance",
+    "Microsoft 365",
+    "Copilot",
+    "Change Management",
+    "AB-731",
+    "AI Ethics"
+  ],
+  "duration": {
+    "days": 1,
+    "hours": 8,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "ai-strategy",
+      "title": "AI Strategy and Business Value",
+      "description": "Define and communicate AI strategy that aligns with organisational goals and delivers measurable business outcomes",
+      "icon": "Target"
+    },
+    {
+      "id": "governance-ethics",
+      "title": "AI Governance and Ethics",
+      "description": "Establish governance frameworks and ethical guidelines for responsible AI deployment",
+      "icon": "Shield"
+    },
+    {
+      "id": "operating-models",
+      "title": "AI Operating Models",
+      "description": "Design operating models that support scalable AI adoption across departments",
+      "icon": "Gear"
+    },
+    {
+      "id": "change-management",
+      "title": "Change Management for AI",
+      "description": "Lead organisational change programmes that drive sustained AI adoption",
+      "icon": "Users"
+    }
+  ],
+  "modules": [
+    {
+      "id": "ai-value-strategy",
+      "title": "Defining AI Business Value",
+      "description": "Build a clear AI strategy tied to business objectives and KPIs",
+      "icon": "Target",
+      "duration": "2.5 hours",
+      "topics": [
+        "Mapping AI opportunities to business challenges",
+        "Building an AI business case for executive leadership",
+        "ROI frameworks for AI investments",
+        "Prioritising AI use cases by impact and feasibility"
+      ]
+    },
+    {
+      "id": "governance-frameworks",
+      "title": "AI Governance and Responsible AI",
+      "description": "Establish governance structures and ethical principles for AI",
+      "icon": "Shield",
+      "duration": "2.5 hours",
+      "topics": [
+        "Microsoft Responsible AI principles in practice",
+        "Building an AI governance committee",
+        "Data privacy and compliance in AI deployments",
+        "Risk assessment and mitigation for AI projects",
+        "Regulatory landscape and emerging AI legislation"
+      ]
+    },
+    {
+      "id": "operating-model-design",
+      "title": "AI Operating Models",
+      "description": "Design scalable operating models for enterprise AI",
+      "icon": "Gear",
+      "duration": "1.5 hours",
+      "topics": [
+        "Centre of Excellence vs. federated AI models",
+        "Roles and responsibilities in an AI-ready organisation",
+        "Technology platform decisions for AI at scale",
+        "Copilot deployment and licensing strategies"
+      ]
+    },
+    {
+      "id": "change-adoption",
+      "title": "Leading AI Change and Adoption",
+      "description": "Drive adoption through structured change management",
+      "icon": "Users",
+      "duration": "1.5 hours",
+      "topics": [
+        "Change management frameworks for AI transformation",
+        "Building AI champions and internal advocacy",
+        "Measuring adoption and adjusting programmes",
+        "Communication strategies for AI initiatives"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "strategy-workshop",
+      "title": "AI Strategy Workshop",
+      "description": "Develop an AI strategy document for a realistic business scenario, including use-case prioritisation and success metrics",
+      "duration": "1.5 hours",
+      "icon": "Target"
+    },
+    {
+      "id": "governance-lab",
+      "title": "Governance Framework Design",
+      "description": "Build an AI governance framework including policies, review processes, and risk assessments",
+      "duration": "1 hour",
+      "icon": "Shield"
+    },
+    {
+      "id": "adoption-planning",
+      "title": "Adoption Planning Exercise",
+      "description": "Create an AI adoption roadmap with change management milestones and KPIs",
+      "duration": "1 hour",
+      "icon": "ChartLineUp"
+    }
+  ],
+  "prerequisites": [
+    "Experience in a leadership or management role",
+    "Familiarity with Microsoft 365 and Copilot at a business level",
+    "No technical or programming experience required"
+  ],
+  "targetAudience": [
+    "IT directors and CIOs leading AI strategy",
+    "Digital transformation leads and programme managers",
+    "Business unit leaders adopting AI in their teams",
+    "Students preparing for AB-731 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer and cloud consultant who has helped multiple Dutch enterprises build their AI strategy and governance frameworks, from pilot to production rollout.",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Administrator Expert",
+      "AZ-305",
+      "AI-900",
+      "AB-900"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: AI Transformation Leader",
+    "examCode": "AB-731",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": false,
+  "icon": "Target",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "I have seen AI projects fail not because the technology was wrong, but because nobody aligned the organisation around why it mattered. This course is built from the governance and strategy work I do with clients who are moving past the pilot stage and need a real operating model for AI."
+  }
+}

@@ -192,6 +192,9 @@
   "schedule": {
     "available": true
   },
+  "retired": {
+    "date": "2026-06-30"
+  },
   "featured": true,
   "icon": "Brain",
   "createdAt": "2024-01-01T00:00:00Z",

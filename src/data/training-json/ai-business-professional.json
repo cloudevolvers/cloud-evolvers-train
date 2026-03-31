@@ -1,0 +1,168 @@
+{
+  "id": "ai-business-professional",
+  "slug": "ai-business-professional",
+  "title": "AI Business Professional (AB-730)",
+  "subtitle": "Use Generative AI and Copilot to Streamline Business Workflows",
+  "description": "Validate your ability to use generative AI and Microsoft 365 Copilot to improve business outcomes without writing code",
+  "overview": "This course prepares you for the AB-730 certification exam. You will learn how to apply Copilot across Microsoft 365 apps, use generative AI to streamline workflows, create effective prompts, and measure the business impact of AI adoption. No coding experience required — this is designed for business professionals who want to work smarter with AI tools.",
+  "category": "Microsoft 365",
+  "subcategory": "AI for Business",
+  "difficulty": "Beginner",
+  "tags": [
+    "Microsoft 365",
+    "Copilot",
+    "Generative AI",
+    "Business Productivity",
+    "AB-730",
+    "Prompt Engineering"
+  ],
+  "duration": {
+    "days": 1,
+    "hours": 8,
+    "format": "days"
+  },
+  "learningObjectives": [
+    {
+      "id": "copilot-fundamentals",
+      "title": "Copilot Across Microsoft 365",
+      "description": "Use Copilot in Word, Excel, PowerPoint, Outlook, and Teams to accelerate everyday tasks",
+      "icon": "Lightning"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "Effective Prompt Design",
+      "description": "Write prompts that produce useful, accurate results from generative AI tools",
+      "icon": "ChatCircle"
+    },
+    {
+      "id": "workflow-automation",
+      "title": "Workflow Automation with AI",
+      "description": "Identify repetitive tasks and apply AI to reduce manual effort across business processes",
+      "icon": "ArrowsClockwise"
+    },
+    {
+      "id": "business-impact",
+      "title": "Measuring AI Business Impact",
+      "description": "Track and communicate productivity gains from AI adoption to stakeholders",
+      "icon": "ChartLineUp"
+    }
+  ],
+  "modules": [
+    {
+      "id": "intro-genai",
+      "title": "Generative AI for Business Professionals",
+      "description": "Core generative AI concepts and how they apply to daily business work",
+      "icon": "Brain",
+      "duration": "2 hours",
+      "topics": [
+        "What generative AI is and how it differs from traditional automation",
+        "Microsoft Copilot capabilities across Microsoft 365",
+        "Responsible AI principles for business users",
+        "When to use AI vs. traditional tools"
+      ]
+    },
+    {
+      "id": "copilot-apps",
+      "title": "Copilot in Microsoft 365 Applications",
+      "description": "Hands-on use of Copilot in Word, Excel, PowerPoint, Outlook, and Teams",
+      "icon": "Lightning",
+      "duration": "3 hours",
+      "topics": [
+        "Drafting and refining documents with Copilot in Word",
+        "Data analysis and formula generation in Excel",
+        "Presentation creation and design suggestions in PowerPoint",
+        "Email summarisation and reply drafting in Outlook",
+        "Meeting recaps and action items in Teams"
+      ]
+    },
+    {
+      "id": "prompt-design",
+      "title": "Prompt Engineering for Business",
+      "description": "Design prompts that consistently produce accurate, useful AI output",
+      "icon": "ChatCircle",
+      "duration": "1.5 hours",
+      "topics": [
+        "Anatomy of an effective prompt",
+        "Iterating and refining prompts",
+        "Managing Copilot prompts: saving, sharing, and scheduling",
+        "Common prompt anti-patterns and how to avoid them"
+      ]
+    },
+    {
+      "id": "measuring-impact",
+      "title": "Measuring and Communicating AI Impact",
+      "description": "Track AI adoption outcomes and present them to leadership",
+      "icon": "ChartLineUp",
+      "duration": "1.5 hours",
+      "topics": [
+        "Identifying high-impact AI use cases in your role",
+        "Before-and-after metrics for AI-assisted work",
+        "Building a business case for expanded Copilot licensing",
+        "Communicating AI value to non-technical stakeholders"
+      ]
+    }
+  ],
+  "handsOnLabs": [
+    {
+      "id": "copilot-word-lab",
+      "title": "Document Drafting with Copilot",
+      "description": "Use Copilot to draft, edit, and summarise a business document from scratch",
+      "duration": "1 hour",
+      "icon": "FileText"
+    },
+    {
+      "id": "copilot-excel-lab",
+      "title": "Data Analysis with Copilot",
+      "description": "Use Copilot in Excel to analyse datasets, generate formulas, and create charts",
+      "duration": "1 hour",
+      "icon": "ChartBar"
+    },
+    {
+      "id": "prompt-workshop",
+      "title": "Prompt Engineering Workshop",
+      "description": "Practice writing and iterating prompts for real business scenarios",
+      "duration": "1 hour",
+      "icon": "ChatCircle"
+    }
+  ],
+  "prerequisites": [
+    "Basic familiarity with Microsoft 365 applications",
+    "No programming or AI experience required"
+  ],
+  "targetAudience": [
+    "Business analysts and project managers",
+    "Marketing, sales, and operations professionals",
+    "Team leads looking to adopt AI in their workflows",
+    "Students preparing for AB-730 certification"
+  ],
+  "instructor": {
+    "id": "yair-knijn",
+    "name": "Yair Knijn",
+    "title": "Principal Cloud Architect & Engineer",
+    "bio": "Microsoft Certified Trainer with hands-on experience rolling out Copilot across enterprise teams, helping business users get real productivity gains from AI.",
+    "certifications": [
+      "Microsoft Certified Trainer (MCT)",
+      "Microsoft 365 Certified: Administrator Expert",
+      "AB-900",
+      "AI-900"
+    ]
+  },
+  "certification": {
+    "available": true,
+    "name": "Microsoft Certified: AI Business Professional",
+    "examCode": "AB-730",
+    "provider": "Microsoft"
+  },
+  "maxParticipants": 10,
+  "schedule": {
+    "available": true
+  },
+  "featured": true,
+  "icon": "Lightning",
+  "createdAt": "2026-03-31T00:00:00Z",
+  "updatedAt": "2026-03-31T00:00:00Z",
+  "personalStory": {
+    "instructor": "Yair Knijn",
+    "story": "The biggest unlock I see with Copilot is not the technology — it is when a business user realises they can do in five minutes what used to take an hour. This course is built from real rollout experiences where we helped teams find those moments and turn them into daily habits."
+  }
+}

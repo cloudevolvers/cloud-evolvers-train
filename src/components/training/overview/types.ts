@@ -14,6 +14,7 @@ export interface CombinedTraining {
   prerequisites?: string[];
   targetAudience?: string[];
   certification?: { available: boolean; examCode?: string; examName?: string };
+  retired?: { date: string; successor?: string };
   tags?: string[];
   maxParticipants?: number;
   instructor?: {

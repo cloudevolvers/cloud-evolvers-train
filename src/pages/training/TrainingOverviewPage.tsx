@@ -14,6 +14,7 @@ import {
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import WhyCloudEvolvers from '@/components/training/WhyCloudEvolvers';
 import { PageHeroBg } from '@/components/PageHeroBg';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 
 const TrainingOverviewPage: React.FC = () => {
   const [filterState, setFilterState] = useState<FilterState>({
@@ -56,6 +57,7 @@ const TrainingOverviewPage: React.FC = () => {
           examCode: t.certification.examCode,
           examName: t.certification.name,
         } : undefined,
+        retired: t.retired,
         tags: t.tags,
         maxParticipants: t.maxParticipants,
         instructor: {
@@ -89,6 +91,11 @@ const TrainingOverviewPage: React.FC = () => {
     });
 
     filtered.sort((a, b) => {
+      // Retired trainings always sort to the bottom
+      const aRetired = a.retired ? (new Date(a.retired.date) <= new Date() ? 2 : 1) : 0;
+      const bRetired = b.retired ? (new Date(b.retired.date) <= new Date() ? 2 : 1) : 0;
+      if (aRetired !== bRetired) return aRetired - bRetired;
+
       if (filterState.sortBy === 'level') {
         const levelOrder = { 'Beginner': 1, 'Intermediate': 2, 'Advanced': 3, 'Expert': 4 };
         return (levelOrder[a.level] || 0) - (levelOrder[b.level] || 0);
@@ -132,6 +139,7 @@ const TrainingOverviewPage: React.FC = () => {
     <div className="relative min-h-screen pt-28 md:pt-32 pb-12 bg-background">
       <SEO {...PAGE_SEO.training} />
       <PageHeroBg />
+      <BackgroundIcons variant="training" />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -177,6 +185,7 @@ const TrainingOverviewPage: React.FC = () => {
               getTranslatedCourse={getTranslatedCourse}
               formatDuration={formatDuration}
               t={t}
+              allTrainings={allTrainings}
             />
           ))}
         </div>

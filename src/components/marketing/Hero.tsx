@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "@/hooks/use-translations";
+import { BackgroundIcons } from "@/components/BackgroundIcons";
 
 export function Hero() {
     const { t } = useTranslations();
@@ -9,6 +10,7 @@ export function Hero() {
 
     return (
         <section className="relative overflow-hidden bg-white">
+            <BackgroundIcons variant="hero" />
             <div className="container relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="h-36 sm:h-40 lg:h-36" />
 

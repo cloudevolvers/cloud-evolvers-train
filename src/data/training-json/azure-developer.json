@@ -195,6 +195,9 @@
     "available": true,
     "nextSession": "2025-01-15"
   },
+  "retired": {
+    "date": "2026-07-31"
+  },
   "featured": true,
   "icon": "Code",
   "createdAt": "2024-01-01T00:00:00Z",
