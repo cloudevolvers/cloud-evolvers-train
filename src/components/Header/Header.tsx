@@ -104,9 +104,9 @@ export function Header() {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               <img
-                src="/cloudevolvers-hero-logo.png"
+                src="/cloudevolvers-logo-mountain.png"
                 alt="Cloud Evolvers"
-                className="h-9 sm:h-10 w-auto rounded-md"
+                className="h-9 sm:h-10 w-auto"
               />
               <div className="flex flex-col">
                 <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-800 group-hover:text-slate-700 transition-colors duration-200">
