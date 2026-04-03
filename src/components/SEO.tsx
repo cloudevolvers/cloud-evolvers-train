@@ -61,11 +61,6 @@ export const PAGE_SEO = {
     description: 'Full catalog of Azure and Microsoft certification courses. AZ-900, AZ-104, AZ-204, AZ-305, AZ-400, AZ-500, AI-102 and more. MCT-led with hands-on labs.',
     canonical: '/training',
   },
-  azureExcellence: {
-    title: 'Azure Excellence - Cloud Architecture & Best Practices',
-    description: 'Azure cloud architecture, DevOps implementation, and Microsoft best practices consulting. Certified experts helping you get the most from Azure.',
-    canonical: '/azure-excellence',
-  },
   services: {
     title: 'Cloud Consulting & Training Services',
     description: 'Azure consulting, corporate training, and cloud migration services in the Netherlands. Custom programs tailored to your team.',

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Certificate, Cloud, Article, Globe, Shield, Phone, WhatsappLogo } from "@phosphor-icons/react";
+import { Certificate, Cloud, Article, Globe, Phone, WhatsappLogo } from "@phosphor-icons/react";
 import { useTranslations } from "@/hooks/use-translations";
 import { useLanguageContext } from "@/contexts/LanguageContext";
 
@@ -30,11 +30,6 @@ export function HeaderNavigation({ isScrolled }: HeaderNavigationProps) {
       href: "/blog",
       icon: Article,
       label: t.nav?.blog || "Blog"
-    },
-    {
-      href: "/azure-excellence",
-      icon: Shield,
-      label: t.nav?.azureExcellence || "Azure Excellence"
     },
     {
       href: "/services",

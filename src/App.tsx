@@ -1,7 +1,7 @@
-import { AzureExcellencePage } from "@/pages/AzureExcellencePage";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { BackgroundIcons } from "@/components/BackgroundIcons";
 
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -37,6 +37,7 @@ function App() {
   return (
     <LanguageProvider>
       <div className="min-h-screen relative overflow-hidden bg-background">
+        <BackgroundIcons variant="default" />
         <div className="relative z-20">
           <ScrollToTop />
           <Header />
@@ -45,7 +46,6 @@ function App() {
               <Route path="/" element={<HomePage />} />
 
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/azure-excellence" element={<AzureExcellencePage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:id" element={<BlogPostPage />} />
               <Route path="/contact" element={<ContactPage />} />
