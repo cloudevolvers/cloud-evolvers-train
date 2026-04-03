@@ -26,7 +26,7 @@ export const tokenConfigurationPost: BlogPost = {
   content: {
     introduction: {
       en: "Entra ID tokens come with a handful of default claims, and that is rarely enough. Your app probably needs the user's employee ID, their department, maybe a custom attribute from a directory extension. The good news is Entra gives you fine-grained control over what goes into ID tokens, access tokens, and SAML tokens. The bad news is the configuration is spread across multiple portal blades and manifest properties. Here is how to get the right claims into your tokens without the guesswork.",
-      nl: 'Entra ID-tokens komen met een handvol standaardclaims, en dat is zelden genoeg. Je app heeft waarschijnlijk het employee ID van de gebruiker nodig, de afdeling, misschien een custom attribuut uit een directory extension. Het goede nieuws: Entra geeft je fijnmazige controle over wat er in ID-tokens, access tokens en SAML-tokens terechtkomt. Het slechte nieuws: de configuratie is verspreid over meerdere portalbblades en manifest-properties. Hier lees je hoe je de juiste claims in je tokens krijgt zonder gokwerk.'
+      nl: 'Entra ID-tokens komen met een handvol standaardclaims, en dat is zelden genoeg. Je app heeft waarschijnlijk het employee ID van de gebruiker nodig, de afdeling, misschien een custom attribuut uit een directory extension. Het goede nieuws: Entra geeft je fijnmazige controle over wat er in ID-tokens, access tokens en SAML-tokens terechtkomt. Het slechte nieuws: de configuratie is verspreid over meerdere portalblades en manifest-properties. Hier lees je hoe je de juiste claims in je tokens krijgt zonder gokwerk.'
     },
     sections: [
       {

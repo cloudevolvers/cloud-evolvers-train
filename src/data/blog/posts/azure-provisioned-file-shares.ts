@@ -97,7 +97,7 @@ resource fileShare 'Microsoft.Storage/storageAccounts/fileServices/shares@2023-0
       {
         title: {
           en: 'Cost Optimization Tips',
-          nl: 'Kostenoptimalisatie Tips'
+          nl: 'Kostenoptimalisatietips'
         },
         content: {
           en: 'Right-size your provisioned capacity based on actual usage patterns. Use Azure Monitor to track IOPS consumption and adjust provisioning. Consider reserved capacity for predictable workloads to save up to 36% compared to pay-as-you-go pricing.',

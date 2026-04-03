@@ -8,7 +8,7 @@ export const claudeSonnetPost: BlogPost = {
   },
   description: {
     en: "Anthropic's powerful Claude Sonnet 4.5 model is now integrated into GitHub Copilot, bringing advanced AI capabilities to your coding workflow.",
-    nl: "Anthropic's krachtige Claude Sonnet 4.5 model is nu geïntegreerd in GitHub Copilot, waardoor geavanceerde AI-mogelijkheden naar uw codeerworkflow worden gebracht."
+    nl: "Anthropic's krachtige Claude Sonnet 4.5 model is nu geïntegreerd in GitHub Copilot en brengt geavanceerde AI-mogelijkheden naar je codeerworkflow."
   },
   date: '2025-10-04',
   author: 'Cloud Evolvers Team',
@@ -16,7 +16,7 @@ export const claudeSonnetPost: BlogPost = {
   image: '/images/unsplash/developer-coding-workspace.jpg',
   excerpt: {
     en: "GitHub Copilot now supports Claude Sonnet 4.5, Anthropic's latest and most capable model, offering improved code understanding and generation.",
-    nl: "GitHub Copilot ondersteunt nu Claude Sonnet 4.5, Anthropic's nieuwste en meest capabele model, met verbeterde code begrip en generatie."
+    nl: "GitHub Copilot ondersteunt nu Claude Sonnet 4.5, Anthropic's nieuwste en meest capabele model, met verbeterd codebegrip en -generatie."
   },
   category: {
     en: 'AI Tools',
@@ -56,7 +56,7 @@ export const claudeSonnetPost: BlogPost = {
         },
         content: {
           en: "To use Claude Sonnet 4.5 in GitHub Copilot: Open GitHub Copilot Chat in VS Code or your preferred editor, click the model selector dropdown, select 'Claude Sonnet 4.5' from the available models, and start chatting or generating code. The model will provide more detailed and context-aware responses.",
-          nl: "Om Claude Sonnet 4.5 in GitHub Copilot te gebruiken: Open GitHub Copilot Chat in VS Code of uw favoriete editor, klik op de modelselectie dropdown, selecteer 'Claude Sonnet 4.5' uit de beschikbare modellen, en begin met chatten of code genereren. Het model zal meer gedetailleerde en contextbewuste antwoorden geven."
+          nl: "Om Claude Sonnet 4.5 in GitHub Copilot te gebruiken: Open GitHub Copilot Chat in VS Code of je favoriete editor, klik op de modelselectie dropdown, selecteer 'Claude Sonnet 4.5' uit de beschikbare modellen, en begin met chatten of code genereren. Het model geeft meer gedetailleerde en contextbewuste antwoorden."
         }
       },
       {

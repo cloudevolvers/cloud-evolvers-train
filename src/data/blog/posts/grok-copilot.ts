@@ -62,7 +62,7 @@ export const grokCopilotPost: BlogPost = {
       {
         title: {
           en: 'Learn More',
-          nl: 'Leer Meer'
+          nl: 'Meer informatie'
         },
         content: {
           en: 'Check out the official GitHub changelog and Grok documentation to learn more about all the features and capabilities available.',

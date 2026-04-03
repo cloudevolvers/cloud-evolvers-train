@@ -62,11 +62,11 @@ export const bicepBestPracticesPost: BlogPost = {
       {
         title: {
           en: 'Deployment Strategies',
-          nl: 'Deployment Strategieën'
+          nl: 'Deploymentstrategieën'
         },
         content: {
           en: 'Use what-if deployments to preview changes before applying. Implement CI/CD pipelines for consistent deployments. Consider using deployment stacks for lifecycle management. Test modules independently before integration.',
-          nl: 'Gebruik what-if deployments om wijzigingen te previewan voordat je ze toepast. Implementeer CI/CD pipelines voor consistente deployments. Overweeg deployment stacks te gebruiken voor lifecycle management. Test modules onafhankelijk voordat je integreert.'
+          nl: 'Gebruik what-if deployments om wijzigingen vooraf te bekijken voordat je ze toepast. Implementeer CI/CD pipelines voor consistente deployments. Overweeg deployment stacks te gebruiken voor lifecycle management. Test modules onafhankelijk voordat je integreert.'
         }
       }
     ],

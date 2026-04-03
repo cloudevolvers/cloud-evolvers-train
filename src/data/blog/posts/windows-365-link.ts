@@ -4,7 +4,7 @@ export const windows365LinkPost: BlogPost = {
   id: 'windows-365-link-cloud-pc',
   title: {
     en: 'Windows 365 Link: Microsoft\'s Purpose-Built Cloud PC Device',
-    nl: 'Windows 365 Link: Microsoft\'s Speciaal Gebouwd Cloud PC Apparaat'
+    nl: 'Windows 365 Link: Microsofts speciaal gebouwde Cloud PC-apparaat'
   },
   description: {
     en: 'Explore Windows 365 Link, Microsoft\'s compact thin client designed exclusively for Windows 365 Cloud PCs with zero local data storage and automatic security updates',
@@ -72,7 +72,7 @@ export const windows365LinkPost: BlogPost = {
     ],
     conclusion: {
       en: 'Link is not for everyone. If you need multi-vendor VDI support or local app flexibility, look elsewhere. But if you are all-in on Windows 365 and want the simplest, most locked-down endpoint possible, it hits the mark. Zero local data, automatic updates, Intune management, done. For hot-desking, call centers, regulated industries, and anywhere a stolen device should be a non-event, the trade-off makes sense. You give up local flexibility. You get radical simplicity. For the right environments, that is a good deal.',
-      nl: 'Link is niet voor iedereen. Als je multi-vendor VDI-ondersteuning of lokale app-flexibiliteit nodig hebt, kijk dan ergens anders. Maar als je all-in bent op Windows 365 en het eenvoudigste, meest afgesloten endpoint wilt, raakt het de roos. Nul lokale data, automatische updates, Intune-beheer, klaar. Voor hot-desking, callcenters, gereguleerde industrieen, en overal waar een gestolen apparaat een non-event moet zijn, slaat de afweging aan. Je geeft lokale flexibiliteit op. Je krijgt radicale eenvoud. Voor de juiste omgevingen is dat een goede deal.'
+      nl: 'Link is niet voor iedereen. Als je multi-vendor VDI-ondersteuning of lokale app-flexibiliteit nodig hebt, kijk dan ergens anders. Maar als je all-in bent op Windows 365 en het eenvoudigste, meest afgesloten endpoint wilt, raakt het de roos. Nul lokale data, automatische updates, Intune-beheer, klaar. Voor hot-desking, callcenters, gereguleerde industrieën, en overal waar een gestolen apparaat een non-event moet zijn, slaat de afweging aan. Je geeft lokale flexibiliteit op. Je krijgt radicale eenvoud. Voor de juiste omgevingen is dat een goede deal.'
     }
   }
 };
