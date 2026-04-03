@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { Certificate, Cloud, Article, Globe, Shield, Phone, House } from "@phosphor-icons/react";
+import { Certificate, Cloud, Article, Globe, Phone, House } from "@phosphor-icons/react";
 import { useTranslations } from "@/hooks/use-translations";
 import { useLanguageContext } from "@/contexts/LanguageContext";
 // @ts-ignore
@@ -29,7 +29,6 @@ export function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen }: MobileMenu
     { href: "/", icon: House, label: t.nav?.home || "Home" },
     { href: "/training", icon: Certificate, label: t.nav?.training || "Training" },
     { href: "/blog", icon: Article, label: t.nav?.blog || "Blog" },
-    { href: "/azure-excellence", icon: Shield, label: t.nav?.azureExcellence || "Azure Excellence" },
     { href: "/services", icon: Cloud, label: t.nav?.services || "Services" },
     { href: "/about", icon: Globe, label: t.nav?.about || "About" },
     { href: "/contact", icon: Phone, label: t.nav?.contact || "Contact" }
