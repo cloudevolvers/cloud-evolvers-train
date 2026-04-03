@@ -106,7 +106,7 @@ export function Header() {
               <img
                 src="/cloudevolvers-logo-mountain.png"
                 alt="Cloud Evolvers"
-                className="h-9 sm:h-10 w-auto brightness-0 invert"
+                className="h-9 sm:h-10 w-auto rounded-lg"
               />
               <div className="flex flex-col">
                 <span className="text-lg sm:text-2xl font-bold tracking-tight text-white group-hover:text-brand-100 transition-colors duration-200">
