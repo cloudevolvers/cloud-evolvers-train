@@ -22,14 +22,14 @@ export function LatestBlogPosts() {
   };
 
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-brand-50 py-20 sm:py-28 border-t border-brand-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+            <h2 className="text-3xl font-bold tracking-tight text-brand-900">
               {language === 'nl' ? 'Laatste artikelen' : 'Latest articles'}
             </h2>
-            <p className="mt-2 text-slate-500">
+            <p className="mt-2 text-brand-600">
               {language === 'nl'
                 ? 'Recente inzichten over Azure, AI en cloud-infrastructuur.'
                 : 'Recent insights on Azure, AI, and cloud infrastructure.'}
@@ -37,7 +37,7 @@ export function LatestBlogPosts() {
           </div>
           <Link
             to="/blog"
-            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 hover:text-brand-900 transition-colors"
           >
             {language === 'nl' ? 'Alle artikelen' : 'All articles'}
             <ArrowRight className="h-3.5 w-3.5" />
@@ -48,7 +48,7 @@ export function LatestBlogPosts() {
           {latest.map((post) => (
             <Link key={post.rawId} to={`/blog/${post.rawId}`} className="group">
               {post.image && (
-                <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-slate-100">
+                <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-brand-100">
                   <img
                     src={post.image}
                     alt=""
@@ -57,19 +57,19 @@ export function LatestBlogPosts() {
                 </div>
               )}
 
-              <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">
+              <span className="text-xs font-medium text-brand-400 uppercase tracking-wider">
                 {post.category}
               </span>
 
-              <h3 className="mt-2 text-lg font-semibold text-slate-900 leading-snug group-hover:text-slate-600 transition-colors line-clamp-2">
+              <h3 className="mt-2 text-lg font-semibold text-brand-900 leading-snug group-hover:text-brand-600 transition-colors line-clamp-2">
                 {post.title}
               </h3>
 
-              <p className="mt-2 text-sm text-slate-500 leading-relaxed line-clamp-2">
+              <p className="mt-2 text-sm text-brand-600 leading-relaxed line-clamp-2">
                 {post.excerpt}
               </p>
 
-              <div className="mt-3 flex items-center gap-1.5 text-xs text-slate-400">
+              <div className="mt-3 flex items-center gap-1.5 text-xs text-brand-400">
                 <Calendar className="h-3 w-3" />
                 <span>{formatDate(post.date)}</span>
                 <span className="mx-1">&middot;</span>
@@ -81,7 +81,7 @@ export function LatestBlogPosts() {
 
         <Link
           to="/blog"
-          className="sm:hidden mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors"
+          className="sm:hidden mt-10 inline-flex items-center gap-1.5 text-sm font-medium text-brand-700 hover:text-brand-900 transition-colors"
         >
           {language === 'nl' ? 'Alle artikelen' : 'All articles'}
           <ArrowRight className="h-3.5 w-3.5" />

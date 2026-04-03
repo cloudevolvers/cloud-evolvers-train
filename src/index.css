@@ -4,40 +4,40 @@
 
 @layer base {
   :root {
-    /* Monochrome Light Mode - Pure white */
+    /* Brand Navy Light Mode — derived from logo #1A2E3C / #293141 */
     --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    --foreground: 207 40% 17%;
 
-    /* Cards - Pure white */
+    /* Cards */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card-foreground: 207 40% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover-foreground: 207 40% 17%;
 
-    /* Black primary for monochrome consistency */
-    --primary: 0 0% 9%;
+    /* Brand navy primary */
+    --primary: 207 40% 17%;
     --primary-foreground: 0 0% 100%;
 
-    /* Neutral gray secondary */
-    --secondary: 0 0% 93%;
-    --secondary-foreground: 0 0% 9%;
+    /* Light brand tint secondary */
+    --secondary: 207 20% 94%;
+    --secondary-foreground: 207 40% 17%;
 
-    /* Muted tones */
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 40%;
+    /* Muted tones with brand warmth */
+    --muted: 207 15% 94%;
+    --muted-foreground: 207 10% 40%;
 
-    /* Subtle accent */
-    --accent: 0 0% 94%;
-    --accent-foreground: 0 0% 9%;
+    /* Brand-tinted accent */
+    --accent: 207 20% 94%;
+    --accent-foreground: 207 40% 17%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Neutral borders */
-    --border: 0 0% 87%;
-    --input: 0 0% 87%;
-    --ring: 0 0% 9%;
+    /* Borders with slight brand warmth */
+    --border: 207 10% 87%;
+    --input: 207 10% 87%;
+    --ring: 207 40% 17%;
 
     --radius: 0.5rem;
 
@@ -90,8 +90,8 @@
 
 /* Light mode gradient enhancements */
 :root {
-  --gradient-subtle: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 95%) 100%);
-  --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
+  --gradient-subtle: linear-gradient(135deg, hsl(207 20% 98%) 0%, hsl(207 15% 95%) 100%);
+  --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(207 10% 97%) 100%);
 }
 
 .dark {
