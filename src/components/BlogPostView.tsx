@@ -17,6 +17,51 @@ function slugify(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+function parseInlineFormatting(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground/90 font-semibold">$1</strong>')
+    .replace(/-->/g, '\u2192');
+}
+
+function RichText({ text, className }: { text: string; className?: string }) {
+  const blocks = text.split('\n\n').filter(Boolean);
+
+  return (
+    <div className={className}>
+      {blocks.map((block, i) => {
+        const lines = block.split('\n').filter(Boolean);
+        const isListBlock = lines.length > 0 && lines.every(l => l.trimStart().startsWith('- '));
+
+        if (isListBlock) {
+          return (
+            <ul key={i} className="my-4 space-y-2 pl-5">
+              {lines.map((line, li) => (
+                <li
+                  key={li}
+                  className="text-foreground/70 text-[15px] leading-[1.75] list-disc"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(parseInlineFormatting(line.replace(/^-\s*/, ''))),
+                  }}
+                />
+              ))}
+            </ul>
+          );
+        }
+
+        return (
+          <p
+            key={i}
+            className="text-foreground/70 text-[15.5px] leading-[1.78] mb-4 last:mb-0"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(parseInlineFormatting(block)),
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+}
+
 export function BlogPostView({ post, onBack }: BlogPostViewProps) {
   const { language } = useTranslations();
 
@@ -103,9 +148,10 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
             <div className="space-y-0">
 
               {/* Introduction */}
-              <p className="text-foreground/75 text-[15.5px] leading-[1.78] mb-16">
-                {getText(post.content.introduction)}
-              </p>
+              <RichText
+                text={getText(post.content.introduction)}
+                className="mb-16"
+              />
 
               {/* Sections */}
               {post.content.sections.map((section, index) => {
@@ -125,9 +171,10 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                     </div>
 
                     {/* Section body */}
-                    <p className="text-foreground/70 text-[15.5px] leading-[1.78] mb-6">
-                      {getText(section.content)}
-                    </p>
+                    <RichText
+                      text={getText(section.content)}
+                      className="mb-6"
+                    />
 
                     {/* Callout */}
                     {section.callout && (
@@ -158,9 +205,10 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                         <h3 className="text-[15px] font-medium text-foreground/85 mb-2">
                           {getText(sub.title)}
                         </h3>
-                        <p className="text-foreground/65 text-[15px] leading-[1.75]">
-                          {getText(sub.content)}
-                        </p>
+                        <RichText
+                          text={getText(sub.content)}
+                          className="text-foreground/65 text-[15px] leading-[1.75] [&_p]:text-foreground/65 [&_p]:text-[15px]"
+                        />
                         {sub.list && (
                           <ul className="mt-3 space-y-1 pl-4">
                             {getList(sub.list)?.map((item, i) => (
@@ -210,9 +258,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                     {conclusionLabel}
                   </h2>
                 </div>
-                <p className="text-foreground/70 text-[15.5px] leading-[1.78]">
-                  {getText(post.content.conclusion)}
-                </p>
+                <RichText text={getText(post.content.conclusion)} />
               </section>
             </div>
           </div>
