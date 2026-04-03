@@ -19,7 +19,7 @@ function slugify(text: string): string {
 
 function parseInlineFormatting(text: string): string {
   return text
-    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground/90 font-semibold">$1</strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground font-semibold">$1</strong>')
     .replace(/-->/g, '\u2192');
 }
 
@@ -34,11 +34,11 @@ function RichText({ text, className }: { text: string; className?: string }) {
 
         if (isListBlock) {
           return (
-            <ul key={i} className="my-4 space-y-2 pl-5">
+            <ul key={i} className="my-5 space-y-3 pl-5">
               {lines.map((line, li) => (
                 <li
                   key={li}
-                  className="text-foreground/70 text-[15px] leading-[1.75] list-disc"
+                  className="text-foreground/80 text-[16px] leading-[1.8] list-disc marker:text-brand-400"
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(parseInlineFormatting(line.replace(/^-\s*/, ''))),
                   }}
@@ -51,7 +51,7 @@ function RichText({ text, className }: { text: string; className?: string }) {
         return (
           <p
             key={i}
-            className="text-foreground/70 text-[15.5px] leading-[1.78] mb-4 last:mb-0"
+            className="text-foreground/80 text-[16.5px] leading-[1.85] mb-5 last:mb-0"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(parseInlineFormatting(block)),
             }}
@@ -103,6 +103,17 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
           {language === "nl" ? "Alle artikelen" : "All articles"}
         </button>
 
+        {/* Hero image */}
+        {post.image && (
+          <div className="mb-10 overflow-hidden rounded-2xl">
+            <img
+              src={post.image}
+              alt=""
+              className="w-full h-[280px] sm:h-[360px] object-cover"
+            />
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_240px] gap-16">
 
           {/* Main column */}
@@ -110,20 +121,20 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
 
             {/* ---- HEADER ---- */}
             <header className="mb-14">
-              <p className="text-foreground/40 text-[11px] font-semibold uppercase tracking-[0.15em] mb-4">
+              <p className="text-brand-500 text-[12px] font-semibold uppercase tracking-[0.15em] mb-4">
                 {getText(post.category)}
               </p>
 
-              <h1 className="text-[clamp(1.75rem,4vw,2.5rem)] font-bold text-foreground leading-[1.12] tracking-[-0.025em]">
+              <h1 className="text-[clamp(1.85rem,4vw,2.75rem)] font-bold text-foreground leading-[1.15] tracking-[-0.025em]">
                 {getText(post.title)}
               </h1>
 
-              <p className="mt-5 text-foreground/55 text-[1.05rem] leading-[1.7] max-w-[600px]">
+              <p className="mt-5 text-foreground/65 text-[1.1rem] leading-[1.7] max-w-[640px]">
                 {getText(post.excerpt)}
               </p>
 
-              <div className="flex items-center gap-2 mt-6 text-[13px] text-foreground/40">
-                <span className="text-foreground/70 font-medium">{post.author}</span>
+              <div className="flex items-center gap-2 mt-6 text-[13px] text-foreground/50">
+                <span className="text-foreground/80 font-medium">{post.author}</span>
                 <span>/</span>
                 <time>{formatDate(post.date)}</time>
                 <span>/</span>
@@ -134,7 +145,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] text-foreground/35 border border-border/60 rounded px-2 py-0.5"
+                    className="text-[11px] text-brand-600/60 border border-brand-200 bg-brand-50 rounded-full px-2.5 py-0.5"
                   >
                     {tag}
                   </span>
@@ -150,7 +161,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
               {/* Introduction */}
               <RichText
                 text={getText(post.content.introduction)}
-                className="mb-16"
+                className="mb-16 text-[17px] leading-[1.9] [&_p]:text-foreground/85 [&_p]:text-[17px] [&_p]:leading-[1.9]"
               />
 
               {/* Sections */}
@@ -158,14 +169,14 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                 const sectionId = slugify(getText(section.title));
 
                 return (
-                  <section key={sectionId} id={sectionId} className="mb-16 scroll-mt-28">
+                  <section key={sectionId} id={sectionId} className="mb-16 scroll-mt-28 pt-10 border-t border-border/30 first:border-t-0 first:pt-0">
 
                     {/* Section heading with number */}
-                    <div className="flex items-baseline gap-3 mb-5">
-                      <span className="text-foreground/20 text-sm font-mono tabular-nums">
+                    <div className="flex items-baseline gap-3 mb-6">
+                      <span className="text-brand-400 text-sm font-mono tabular-nums font-medium">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <h2 className="text-[1.3rem] font-semibold text-foreground tracking-[-0.01em] leading-tight">
+                      <h2 className="text-[1.5rem] font-bold text-foreground tracking-[-0.01em] leading-tight">
                         {getText(section.title)}
                       </h2>
                     </div>
@@ -201,18 +212,18 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
 
                     {/* Subsections */}
                     {section.subsections?.map((sub, si) => (
-                      <div key={si} className="mt-8 mb-6 pl-5 border-l border-border/40">
-                        <h3 className="text-[15px] font-medium text-foreground/85 mb-2">
+                      <div key={si} className="mt-8 mb-6 pl-5 border-l-2 border-brand-200">
+                        <h3 className="text-[16px] font-semibold text-foreground/90 mb-3">
                           {getText(sub.title)}
                         </h3>
                         <RichText
                           text={getText(sub.content)}
-                          className="text-foreground/65 text-[15px] leading-[1.75] [&_p]:text-foreground/65 [&_p]:text-[15px]"
+                          className="[&_p]:text-foreground/75 [&_p]:text-[15.5px]"
                         />
                         {sub.list && (
-                          <ul className="mt-3 space-y-1 pl-4">
+                          <ul className="mt-3 space-y-2 pl-4">
                             {getList(sub.list)?.map((item, i) => (
-                              <li key={i} className="text-foreground/65 text-[14.5px] leading-[1.7] list-disc">
+                              <li key={i} className="text-foreground/75 text-[15px] leading-[1.75] list-disc marker:text-brand-400">
                                 {item}
                               </li>
                             ))}
@@ -249,12 +260,12 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
               })}
 
               {/* Conclusion */}
-              <section id="conclusion" className="scroll-mt-28 pt-10 border-t border-border/40">
-                <div className="flex items-baseline gap-3 mb-5">
-                  <span className="text-foreground/20 text-sm font-mono tabular-nums">
+              <section id="conclusion" className="scroll-mt-28 pt-10 border-t border-border/30">
+                <div className="flex items-baseline gap-3 mb-6">
+                  <span className="text-brand-400 text-sm font-mono tabular-nums font-medium">
                     {String(post.content.sections.length + 1).padStart(2, "0")}
                   </span>
-                  <h2 className="text-[1.3rem] font-semibold text-foreground tracking-[-0.01em]">
+                  <h2 className="text-[1.5rem] font-bold text-foreground tracking-[-0.01em]">
                     {conclusionLabel}
                   </h2>
                 </div>
