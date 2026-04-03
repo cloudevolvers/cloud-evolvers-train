@@ -85,8 +85,8 @@ export function Header() {
           fixed top-0 left-0 right-0 z-[9999]
           transition-all duration-500 ease-out
           ${isScrolled
-            ? 'py-2 bg-white/90 backdrop-blur-xl shadow-md shadow-slate-900/5 border-b border-slate-200/50'
-            : 'py-4 bg-white/50 backdrop-blur-md border-b border-transparent'
+            ? 'py-2 bg-brand-900/95 backdrop-blur-xl shadow-lg shadow-brand-950/20'
+            : 'py-4 bg-brand-900 backdrop-blur-md'
           }
         `}
         initial={{ y: -100, opacity: 0 }}
@@ -106,13 +106,13 @@ export function Header() {
               <img
                 src="/cloudevolvers-logo-mountain.png"
                 alt="Cloud Evolvers"
-                className="h-9 sm:h-10 w-auto"
+                className="h-9 sm:h-10 w-auto brightness-0 invert"
               />
               <div className="flex flex-col">
-                <span className="text-lg sm:text-2xl font-bold tracking-tight text-slate-800 group-hover:text-slate-700 transition-colors duration-200">
+                <span className="text-lg sm:text-2xl font-bold tracking-tight text-white group-hover:text-brand-100 transition-colors duration-200">
                   Cloud Evolvers
                 </span>
-                <span className="text-[10px] sm:text-xs font-medium text-slate-500 tracking-wide hidden sm:block">
+                <span className="text-[10px] sm:text-xs font-medium text-brand-300 tracking-wide hidden sm:block">
                   Azure & Microsoft Training
                 </span>
               </div>
@@ -121,7 +121,7 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center">
-              <div className="flex items-center gap-1 p-1 rounded-full bg-slate-100/80 backdrop-blur-sm">
+              <div className="flex items-center gap-1 p-1 rounded-full bg-white/10 backdrop-blur-sm">
                 {navigationItems.map((item) => {
                   const isActive = location.pathname === item.href ||
                     (item.href !== '/' && location.pathname.startsWith(item.href));
@@ -134,15 +134,15 @@ export function Header() {
                         relative px-4 py-2 rounded-full text-sm font-medium
                         transition-all duration-200
                         ${isActive
-                          ? 'text-white'
-                          : 'text-slate-600 hover:text-slate-900'
+                          ? 'text-brand-900'
+                          : 'text-white/70 hover:text-white'
                         }
                       `}
                     >
                       {isActive && (
                         <motion.div
                           layoutId="nav-pill"
-                          className="absolute inset-0 bg-slate-800 rounded-full"
+                          className="absolute inset-0 bg-white rounded-full"
                           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                         />
                       )}
@@ -167,19 +167,19 @@ export function Header() {
 
               {/* Separator */}
               {location.pathname.startsWith('/blog') && (
-                <div className="hidden sm:block w-px h-6 bg-slate-200" />
+                <div className="hidden sm:block w-px h-6 bg-white/20" />
               )}
 
               {/* Language Switcher - Desktop */}
-              <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-slate-100">
+              <div className="hidden sm:flex items-center gap-0.5 p-0.5 rounded-full bg-white/10">
                 <button
                   onClick={() => setLanguage('en')}
                   className={`
                     flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold
                     transition-all duration-200
                     ${language === 'en'
-                      ? 'bg-white text-slate-900 shadow-sm'
-                      : 'text-slate-500 hover:text-slate-700'
+                      ? 'bg-white text-brand-900 shadow-sm'
+                      : 'text-white/70 hover:text-white'
                     }
                   `}
                 >
@@ -192,8 +192,8 @@ export function Header() {
                     flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold
                     transition-all duration-200
                     ${language === 'nl'
-                      ? 'bg-white text-slate-900 shadow-sm'
-                      : 'text-slate-500 hover:text-slate-700'
+                      ? 'bg-white text-brand-900 shadow-sm'
+                      : 'text-white/70 hover:text-white'
                     }
                   `}
                 >
@@ -208,7 +208,7 @@ export function Header() {
                   e.stopPropagation();
                   setIsMobileMenuOpen(!isMobileMenuOpen);
                 }}
-                className="lg:hidden p-2 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors duration-200"
+                className="lg:hidden p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200"
                 aria-label="Toggle menu"
               >
                 <AnimatePresence mode="wait">
@@ -220,9 +220,9 @@ export function Header() {
                     transition={{ duration: 0.2 }}
                   >
                     {isMobileMenuOpen ? (
-                      <X size={20} weight="bold" className="text-slate-700" />
+                      <X size={20} weight="bold" className="text-white" />
                     ) : (
-                      <List size={20} weight="bold" className="text-slate-700" />
+                      <List size={20} weight="bold" className="text-white" />
                     )}
                   </motion.div>
                 </AnimatePresence>
@@ -243,7 +243,7 @@ export function Header() {
             className="fixed top-16 left-0 right-0 z-[9998] p-4 lg:hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+            <div className="bg-brand-900 rounded-2xl shadow-xl border border-brand-700/30 overflow-hidden">
               <nav className="p-2">
                 {navigationItems.map((item, index) => {
                   const isActive = location.pathname === item.href;
@@ -262,8 +262,8 @@ export function Header() {
                           flex items-center gap-3 px-4 py-3 rounded-xl
                           transition-colors duration-200
                           ${isActive
-                            ? 'bg-neutral-100 text-neutral-900'
-                            : 'text-slate-600 hover:bg-slate-50'
+                            ? 'bg-white/15 text-white'
+                            : 'text-white/70 hover:bg-white/10 hover:text-white'
                           }
                         `}
                       >
@@ -277,9 +277,9 @@ export function Header() {
 
               {/* Mobile Theme Toggle (blog pages only) */}
               {location.pathname.startsWith('/blog') && (
-                <div className="p-4 border-t border-slate-100 space-y-3">
+                <div className="p-4 border-t border-white/10 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-slate-600">Theme</span>
+                    <span className="text-sm font-medium text-white/70">Theme</span>
                     <ThemeToggle theme={theme} toggleTheme={toggleTheme} variant="mobile" />
                   </div>
                 </div>
@@ -292,8 +292,8 @@ export function Header() {
                       flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-semibold text-sm
                       transition-all duration-200
                       ${language === 'en'
-                        ? 'bg-white text-black'
-                        : 'bg-slate-100 text-slate-600'
+                        ? 'bg-white text-brand-900'
+                        : 'bg-white/10 text-white/70'
                       }
                     `}
                   >
@@ -306,8 +306,8 @@ export function Header() {
                       flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-semibold text-sm
                       transition-all duration-200
                       ${language === 'nl'
-                        ? 'bg-white text-black'
-                        : 'bg-slate-100 text-slate-600'
+                        ? 'bg-white text-brand-900'
+                        : 'bg-white/10 text-white/70'
                       }
                     `}
                   >

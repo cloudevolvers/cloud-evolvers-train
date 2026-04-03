@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
   const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim();
 
   return (
-    <footer className="bg-white border-t border-slate-200 py-12 relative z-10">
+    <footer className="bg-brand-900 py-12 relative z-10">
       <div className="max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-10">
@@ -66,18 +66,18 @@ const Footer: React.FC = () => {
           {/* Contact Info & Links */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">{t.footer?.contact || 'Contact'}</h3>
-              <div className="space-y-3 text-gray-600">
+              <h3 className="text-lg font-bold text-white mb-4">{t.footer?.contact || 'Contact'}</h3>
+              <div className="space-y-3 text-brand-300">
                 <a
                   href="mailto:training@cloudevolvers.com"
-                  className="flex items-center gap-2 hover:text-slate-900 transition-colors"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Envelope className="w-4 h-4" />
                   training@cloudevolvers.com
                 </a>
                 <a
                   href="tel:+31634272027"
-                  className="flex items-center gap-2 hover:text-slate-900 transition-colors"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   +31 6 34272027
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                   href="https://wa.me/31634272027"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-green-600 transition-colors"
+                  className="flex items-center gap-2 hover:text-green-400 transition-colors"
                 >
                   <WhatsappLogo className="w-4 h-4" weight="fill" />
                   WhatsApp
@@ -95,23 +95,23 @@ const Footer: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">{t.footer?.legal || 'Legal'}</h3>
+              <h3 className="text-lg font-bold text-white mb-4">{t.footer?.legal || 'Legal'}</h3>
               <div className="space-y-2">
                 <Link
                   to="/privacy-policy"
-                  className="block text-gray-600 hover:text-gray-900 transition-colors"
+                  className="block text-brand-300 hover:text-white transition-colors"
                 >
                   {t.footer?.privacyPolicy || 'Privacy Policy'}
                 </Link>
                 <Link
                   to="/terms-of-service"
-                  className="block text-gray-600 hover:text-gray-900 transition-colors"
+                  className="block text-brand-300 hover:text-white transition-colors"
                 >
                   {t.footer?.termsOfService || 'Terms of Service'}
                 </Link>
                 <Link
                   to="/cookie-policy"
-                  className="block text-gray-600 hover:text-gray-900 transition-colors"
+                  className="block text-brand-300 hover:text-white transition-colors"
                 >
                   {t.footer?.cookiePolicy || 'Cookie Policy'}
                 </Link>
@@ -120,9 +120,9 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Form Section */}
-          <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-slate-200 lg:border-t-0">
-            <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <Envelope className="w-5 h-5 text-slate-500" />
+          <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-white/10 lg:border-t-0">
+            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <Envelope className="w-5 h-5 text-brand-300" />
               {t.footer?.getInTouch || 'Get in Touch'}
             </h3>
 
@@ -149,7 +149,7 @@ const Footer: React.FC = () => {
                 placeholder={t.footer?.yourName || 'Your Name'}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="bg-white border-gray-300"
+                className="bg-white/10 border-white/20 text-white placeholder:text-brand-400"
                 required
               />
               <Input
@@ -157,21 +157,21 @@ const Footer: React.FC = () => {
                 placeholder={t.footer?.yourEmail || 'Your Email'}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="bg-white border-gray-300"
+                className="bg-white/10 border-white/20 text-white placeholder:text-brand-400"
                 required
               />
               <Textarea
                 placeholder={t.footer?.howCanWeHelp || 'How can we help you?'}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="sm:col-span-2 bg-white border-gray-300 min-h-[80px]"
+                className="sm:col-span-2 bg-white/10 border-white/20 text-white placeholder:text-brand-400 min-h-[80px]"
                 required
               />
               <div className="sm:col-span-2">
                 <Button
                   type="submit"
                   disabled={!isFormValid || isSubmitting}
-                  className="w-full sm:w-auto bg-black hover:bg-black/90 text-white"
+                  className="w-full sm:w-auto bg-white hover:bg-brand-100 text-brand-900"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
@@ -191,23 +191,23 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-300">
-          <div className="text-gray-600 flex flex-col items-center gap-2 text-center">
+        <div className="pt-8 border-t border-white/10">
+          <div className="text-brand-300 flex flex-col items-center gap-2 text-center">
             <div className="flex items-center gap-2">
-              <Heart size={16} className="text-red-500" />
+              <Heart size={16} className="text-red-400" />
               <span>© {new Date().getFullYear()} Spot Cloud B.V. (Cloud Evolvers). {t.footer?.rights || 'All rights reserved.'}</span>
             </div>
             <div className="flex items-center gap-1">
-              <MapPin size={14} className="text-emerald-600" />
+              <MapPin size={14} className="text-emerald-400" />
               <span>{t.footer?.madeInNetherlands || 'Proudly made in the Netherlands.'}</span>
             </div>
 
             {/* Build Info (hidden in production, visible when text selected) */}
             <div className={`flex items-center gap-2 mt-1 ${buildInfo.environment === 'production'
-              ? 'text-gray-100 selection:text-gray-800 selection:bg-gray-300'
-              : 'text-gray-600'}`}>
+              ? 'text-brand-900 selection:text-brand-200 selection:bg-brand-700'
+              : 'text-brand-400'}`}>
               <Star size={12} className={buildInfo.environment === 'production'
-                ? 'text-gray-100'
+                ? 'text-brand-900'
                 : 'text-yellow-500'} />
               <span className="font-mono text-xs">
                 {getVersionString()} • Built {buildInfo.buildDay} {buildInfo.buildDate} @ {buildInfo.buildTime}
