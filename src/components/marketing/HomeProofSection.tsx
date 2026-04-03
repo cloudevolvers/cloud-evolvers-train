@@ -3,30 +3,38 @@ import { Link } from "react-router-dom";
 import { useTranslations } from "@/hooks/use-translations";
 import { BackgroundIcons } from "@/components/BackgroundIcons";
 
-const deliveryPoints = [
-    {
-        title: "Built around your team",
-        description: "Sessions are scoped to your stack, your roles, and your current Azure maturity — not a generic curriculum everyone gets."
-    },
-    {
-        title: "Labs with operational context",
-        description: "Exercises cover identity, networking, security, and platform decisions using realistic environments — not sanitized toy demos."
-    },
-    {
-        title: "Exam prep without the fluff",
-        description: "Teams prepare for Microsoft certification while learning how to actually design and run the environments they are responsible for."
-    }
-];
+const deliveryPointsI18n = {
+    en: [
+        { title: "Built around your team", description: "Sessions are scoped to your stack, your roles, and your current Azure maturity — not a generic curriculum everyone gets." },
+        { title: "Labs with operational context", description: "Exercises cover identity, networking, security, and platform decisions using realistic environments — not sanitized toy demos." },
+        { title: "Exam prep without the fluff", description: "Teams prepare for Microsoft certification while learning how to actually design and run the environments they are responsible for." },
+    ],
+    nl: [
+        { title: "Afgestemd op jouw team", description: "Sessies zijn afgestemd op jullie stack, rollen en huidige Azure-volwassenheid — geen standaard curriculum dat iedereen krijgt." },
+        { title: "Labs met operationele context", description: "Oefeningen behandelen identity, networking, security en platformkeuzes in realistische omgevingen — geen opgepoetste speelgoeddemo's." },
+        { title: "Examenvoorbereiding zonder omhaal", description: "Teams bereiden zich voor op Microsoft-certificering terwijl ze leren hoe ze de omgevingen die ze beheren echt ontwerpen en draaien." },
+    ],
+};
 
-const trustStats = [
-    { value: "Dutch + English", label: "Delivery languages" },
-    { value: "Remote + in-company", label: "Session formats" },
-    { value: "Azure + M365", label: "Core focus" }
-];
+const trustStatsI18n = {
+    en: [
+        { value: "Dutch + English", label: "Delivery languages" },
+        { value: "Remote + in-company", label: "Session formats" },
+        { value: "Azure + M365", label: "Core focus" },
+    ],
+    nl: [
+        { value: "Nederlands + Engels", label: "Talen" },
+        { value: "Remote + in-company", label: "Sessievormen" },
+        { value: "Azure + M365", label: "Kernfocus" },
+    ],
+};
 
 export function HomeProofSection() {
-    const { t } = useTranslations();
+    const { t, language } = useTranslations();
     const marketing = t.hero?.marketing;
+    const lang = (language === 'nl' ? 'nl' : 'en') as 'en' | 'nl';
+    const deliveryPoints = deliveryPointsI18n[lang];
+    const trustStats = trustStatsI18n[lang];
 
     return (
         <section className="relative overflow-hidden border-t border-brand-100 bg-brand-50 py-24 sm:py-28">

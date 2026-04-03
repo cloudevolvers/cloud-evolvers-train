@@ -5,7 +5,7 @@ import { useTranslations } from "@/hooks/use-translations";
 import { BackgroundIcons } from "@/components/BackgroundIcons";
 
 export function Hero() {
-    const { t } = useTranslations();
+    const { t, isDutch } = useTranslations();
     const marketing = t.hero?.marketing;
 
     return (
@@ -50,19 +50,19 @@ export function Hero() {
                             </Link>
                         </div>
 
-                        {/* Trust signals instead of terminal */}
+                        {/* Trust signals */}
                         <div className="mt-14 flex items-center gap-6 text-sm text-brand-500">
                             <div className="flex items-center gap-2">
                                 <div className="h-1.5 w-1.5 rounded-full bg-brand-400" />
-                                Dutch & English
+                                {isDutch ? "Nederlands & Engels" : "Dutch & English"}
                             </div>
                             <div className="flex items-center gap-2">
                                 <div className="h-1.5 w-1.5 rounded-full bg-brand-400" />
-                                In-company & remote
+                                {isDutch ? "In-company & remote" : "In-company & remote"}
                             </div>
                             <div className="flex items-center gap-2">
                                 <div className="h-1.5 w-1.5 rounded-full bg-brand-400" />
-                                Hands-on labs
+                                {isDutch ? "Hands-on labs" : "Hands-on labs"}
                             </div>
                         </div>
                     </div>
