@@ -80,8 +80,8 @@ function RichText({ text, className, variant = 'body' }: {
         // the bold phrase becomes a colored mini-heading
         if (boldLead) {
           return (
-            <div key={i} className="mb-6 last:mb-0">
-              <p className="text-brand-800 font-semibold text-[16px] mb-1.5">
+            <div key={i} className="mb-8 last:mb-0">
+              <p className="text-brand-800 font-semibold text-[16px] mb-2">
                 {boldLead.lead}
               </p>
               {boldLead.rest && (
@@ -99,7 +99,7 @@ function RichText({ text, className, variant = 'body' }: {
         return (
           <p
             key={i}
-            className={`${textClasses} mb-5 last:mb-0`}
+            className={`${textClasses} mb-6 last:mb-0`}
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(parsed),
             }}
@@ -113,19 +113,21 @@ function RichText({ text, className, variant = 'body' }: {
 export function BlogPostView({ post, onBack }: BlogPostViewProps) {
   const { language } = useTranslations();
 
+  const lang = language as 'en' | 'nl';
+
   const getText = (text: string | { en: string; nl: string }): string =>
-    typeof text === "string" ? text : text.en;
+    typeof text === "string" ? text : (text[lang] || text.en);
 
   const getList = (list: string[] | { en: string[]; nl: string[] } | undefined) => {
     if (!list) return undefined;
-    return Array.isArray(list) ? list : list.en;
+    return Array.isArray(list) ? list : (list[lang] || list.en);
   };
 
   const getHeaders = (headers: string[] | { en: string[]; nl: string[] }) =>
-    Array.isArray(headers) ? headers : headers.en;
+    Array.isArray(headers) ? headers : (headers[lang] || headers.en);
 
   const getRows = (rows: string[][] | { en: string[][]; nl: string[][] }) =>
-    Array.isArray(rows) ? rows : rows.en;
+    Array.isArray(rows) ? rows : (rows[lang] || rows.en);
 
   const formatDate = (dateString: string) =>
     new Date(dateString).toLocaleDateString(language === "nl" ? "nl-NL" : "en-US", {
@@ -216,7 +218,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
                 const sectionId = slugify(getText(section.title));
 
                 return (
-                  <section key={sectionId} id={sectionId} className="mb-14 scroll-mt-28">
+                  <section key={sectionId} id={sectionId} className="mb-16 scroll-mt-28">
 
                     {/* Section heading */}
                     <div className="mb-6">
@@ -305,7 +307,7 @@ export function BlogPostView({ post, onBack }: BlogPostViewProps) {
 
                     {/* Section divider */}
                     {index < post.content.sections.length - 1 && (
-                      <div className="mt-14 border-b border-border/30" />
+                      <div className="mt-16 border-b border-border/30" />
                     )}
                   </section>
                 );
