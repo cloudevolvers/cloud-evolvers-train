@@ -72,7 +72,7 @@ export const claimsMappingPoliciesPost: BlogPost = {
       {
         title: {
           en: 'Group Claims and Token Size Management',
-          nl: 'Groepsclaims en Tokenmaat Beheer'
+          nl: 'Groepsclaims en Tokengroottebeheer'
         },
         content: {
           en: 'Emitting group memberships in tokens is a frequent requirement but comes with a practical constraint: SAML tokens have a 150-group limit before Entra switches to emitting a groups overage claim (a URL pointing to the Graph API). JWT tokens hit the overage at 200 groups. For users with many group memberships, this means your application receives a link instead of actual group data and must call Graph to resolve it. Three strategies to manage this: first, configure the app to emit only groups assigned to the application rather than all group memberships. Second, use security groups instead of distribution lists and keep group structures flat. Third, consider emitting application roles instead of groups — roles are defined on the app registration and assigned to users or groups, and they always appear in the token without overage issues. For synced environments, you can emit the on-premises sAMAccountName or the onPremisesGroupSID attribute instead of object IDs, which makes the claims immediately usable by legacy on-premises applications.',

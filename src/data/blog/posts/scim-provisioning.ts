@@ -4,7 +4,7 @@ export const scimProvisioningPost: BlogPost = {
   id: 'scim-provisioning-entra-id',
   title: {
     en: 'SCIM Provisioning in Entra ID: How Automatic User Provisioning Actually Works',
-    nl: 'SCIM Provisioning in Entra ID: Hoe Automatische Gebruikersprovisioning Echt Werkt'
+    nl: 'SCIM Provisioning in Entra ID: Hoe Automatische Gebruikersprovisioning echt werkt'
   },
   description: {
     en: 'A deep dive into SCIM 2.0 provisioning with Microsoft Entra ID — sync cycles, attribute mappings, scoping filters, quarantine states, and how to troubleshoot common failures.',
@@ -16,7 +16,7 @@ export const scimProvisioningPost: BlogPost = {
   image: '/images/unsplash/identity-access-management.jpg',
   excerpt: {
     en: 'Entra ID provisioning uses the SCIM 2.0 protocol to push identity data to third-party apps. Here is how the sync engine works, what breaks, and how to fix it.',
-    nl: 'Entra ID provisioning gebruikt het SCIM 2.0-protocol om identiteitsgegevens naar externe apps te pushen. Zo werkt de sync-engine, wat er misgaat en hoe je het oplost.'
+    nl: 'Entra ID provisioning gebruikt het SCIM 2.0-protocol om identiteitsdata naar externe apps te pushen. Zo werkt de sync-engine, wat er misgaat en hoe je het oplost.'
   },
   category: {
     en: 'Azure Security',
@@ -26,7 +26,7 @@ export const scimProvisioningPost: BlogPost = {
   content: {
     introduction: {
       en: 'Creating user accounts by hand across ten SaaS apps does not last. At some point someone gets missed, someone leaves and keeps access for weeks, and the audit report looks ugly. Entra ID fixes this with SCIM 2.0 provisioning (RFC 7644) — a standardized REST API that pushes user lifecycle changes to target apps automatically. Fair warning though: the provisioning engine has its own scheduling, retry logic, and quarantine behavior. It is not a simple sync. Knowing how it actually works under the hood will save you real debugging time.',
-      nl: 'Handmatig gebruikersaccounts aanmaken in tien SaaS-apps houdt geen stand. Op een gegeven moment wordt iemand overgeslagen, vertrekt iemand en houdt wekenlang toegang, en het auditrapport ziet er niet fraai uit. Entra ID lost dit op met SCIM 2.0 provisioning (RFC 7644) — een gestandaardiseerde REST API die wijzigingen in de gebruikerslevenscyclus automatisch naar doel-apps pusht. Wees wel gewaarschuwd: de provisioning-engine heeft eigen scheduling, retry-logica en quarantinegedrag. Het is geen simpele sync. Weten hoe het onder de motorkap werkt bespaart je serieuze debugtijd.'
+      nl: 'Handmatig gebruikersaccounts aanmaken in tien SaaS-apps houdt geen stand. Op een gegeven moment wordt iemand overgeslagen, vertrekt iemand en houdt wekenlang toegang, en het auditrapport ziet er niet fraai uit. Entra ID lost dit op met SCIM 2.0 provisioning (RFC 7644) — een gestandaardiseerde REST API die wijzigingen in de gebruikerslevenscyclus automatisch naar doelapps pusht. Wees wel gewaarschuwd: de provisioning-engine heeft eigen scheduling, retry-logica en quarantinegedrag. Het is geen simpele sync. Weten hoe het onder de motorkap werkt bespaart je serieuze debugtijd.'
     },
     sections: [
       {
@@ -105,7 +105,7 @@ export const scimProvisioningPost: BlogPost = {
     ],
     conclusion: {
       en: 'SCIM provisioning works well once you get through the initial setup. The problem is that initial setup has a lot of places to go wrong: attribute mappings, scoping filters, matching rules. Most failures follow the same patterns though. Set up quarantine alerts so you catch problems early. Use on-demand provisioning to test individual users before turning on the full 40-minute cycle. And check the provisioning logs regularly — they show the exact HTTP requests and responses, which is way more useful than the portal error messages.',
-      nl: 'SCIM provisioning werkt goed zodra je door de initigle setup heen bent. Het probleem is dat die initigle setup veel plekken heeft waar het mis kan gaan: attribuutmappings, scoping filters, matchingregels. De meeste fouten volgen echter dezelfde patronen. Stel quarantine-alerts in zodat je problemen vroeg opvangt. Gebruik on-demand provisioning om individuele gebruikers te testen voordat je de volledige 40-minutencyclus aanzet. En controleer de provisioning logs regelmatig — die tonen de exacte HTTP-verzoeken en -antwoorden, wat veel nuttiger is dan de foutmeldingen in de portal.'
+      nl: 'SCIM provisioning werkt goed zodra je door de initiële setup heen bent. Het probleem is dat die initiële setup veel plekken heeft waar het mis kan gaan: attribuutmappings, scoping filters, matchingregels. De meeste fouten volgen echter dezelfde patronen. Stel quarantine-alerts in zodat je problemen vroeg opvangt. Gebruik on-demand provisioning om individuele gebruikers te testen voordat je de volledige 40-minutencyclus aanzet. En controleer de provisioning logs regelmatig — die tonen de exacte HTTP-verzoeken en -antwoorden, wat veel nuttiger is dan de foutmeldingen in de portal.'
     }
   }
 };

@@ -36,17 +36,17 @@ export const azureUpdateManagerPost: BlogPost = {
         },
         content: {
           en: 'Azure Update Manager offers several improvements: no Log Analytics workspace required, native Azure Resource Manager integration, dynamic scoping with Azure Resource Graph queries, support for both Azure VMs and Arc-enabled servers, and built-in maintenance configurations.',
-          nl: 'Azure Update Manager biedt verschillende verbeteringen: geen Log Analytics workspace vereist, native Azure Resource Manager integratie, dynamic scoping met Azure Resource Graph queries, ondersteuning voor zowel Azure VMs als Arc-enabled servers, en ingebouwde maintenance configuraties.'
+          nl: 'Azure Update Manager biedt verschillende verbeteringen: geen Log Analytics workspace vereist, native Azure Resource Manager integratie, dynamic scoping met Azure Resource Graph queries, ondersteuning voor zowel Azure VMs als Arc-enabled servers, en ingebouwde maintenanceconfiguraties.'
         }
       },
       {
         title: {
           en: 'Setting Up Maintenance Configurations',
-          nl: 'Maintenance Configuraties Instellen'
+          nl: 'Maintenanceconfiguraties Instellen'
         },
         content: {
           en: 'Maintenance configurations define when and how updates are applied. Create configurations for different environment tiers (dev, staging, production) with appropriate maintenance windows. Use dynamic scopes to automatically include new machines based on tags or resource groups.',
-          nl: 'Maintenance configuraties definiëren wanneer en hoe updates worden toegepast. Maak configuraties voor verschillende omgevings-tiers (dev, staging, productie) met passende maintenance windows. Gebruik dynamic scopes om automatisch nieuwe machines te includeren op basis van tags of resource groups.'
+          nl: 'Maintenanceconfiguraties definiëren wanneer en hoe updates worden toegepast. Maak configuraties voor verschillende omgevings-tiers (dev, staging, productie) met passende maintenance windows. Gebruik dynamic scopes om automatisch nieuwe machines op te nemen op basis van tags of resource groups.'
         },
         code: {
           language: 'bash',
@@ -71,7 +71,7 @@ az maintenance configuration create \\
         },
         content: {
           en: 'Use Azure Resource Graph queries to dynamically target machines for updates. This ensures newly deployed VMs automatically get included in your patching schedule based on their tags or properties, without manual configuration.',
-          nl: 'Gebruik Azure Resource Graph queries om dynamisch machines voor updates te targeten. Dit zorgt ervoor dat nieuw gedeployde VMs automatisch worden geïncludeerd in je patching schedule op basis van hun tags of properties, zonder handmatige configuratie.'
+          nl: 'Gebruik Azure Resource Graph queries om dynamisch machines voor updates te targeten. Dit zorgt ervoor dat nieuw gedeployde VM\'s automatisch worden opgenomen in je patching schedule op basis van hun tags of properties, zonder handmatige configuratie.'
         }
       },
       {

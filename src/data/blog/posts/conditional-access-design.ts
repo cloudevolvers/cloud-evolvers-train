@@ -32,7 +32,7 @@ export const conditionalAccessDesignPost: BlogPost = {
       {
         title: {
           en: 'The Three-Tier Policy Structure',
-          nl: 'De Drielaagse Policy Structuur'
+          nl: 'De Drielaagse Policystructuur'
         },
         content: {
           en: 'Think of CA policies in three layers. Tier 1 is your baseline — these policies apply to all users and all cloud apps. Microsoft recommends starting with: require MFA for all admin roles (Global Admin, Exchange Admin, SharePoint Admin, etc.), block legacy authentication protocols (IMAP, POP3, SMTP AUTH, older Office clients that don\'t support modern auth), and require MFA for all users as a catch-all. Tier 2 is app-specific: require compliant or Hybrid Azure AD Joined devices for Office 365 access, enforce app protection policies for mobile access to Exchange Online and SharePoint Online, block access to sensitive apps from unmanaged devices entirely. Tier 3 is risk-based: require password change when sign-in risk is high (using Identity Protection signals), block access when user risk is high, require phishing-resistant MFA for high-value applications. This layered approach means your baseline catches everything, your app-specific policies tighten the screws where it matters, and your risk-based policies respond dynamically to threats.',
@@ -42,7 +42,7 @@ export const conditionalAccessDesignPost: BlogPost = {
       {
         title: {
           en: 'Policy Components: Assignments and Access Controls',
-          nl: 'Policy Componenten: Toewijzingen en Toegangscontroles'
+          nl: 'Policycomponenten: Toewijzingen en Toegangscontroles'
         },
         content: {
           en: 'Every CA policy has two sides: assignments (who and what does this policy apply to) and access controls (what happens when the conditions match). On the assignments side, you configure: Users or workload identities — target specific users, groups, directory roles, or even service principals. Cloud apps or actions — select specific applications by their app ID, or target user actions like "Register security information" or "Register or join devices." Conditions — sign-in risk level (none, low, medium, high), user risk level, device platforms (iOS, Android, Windows, macOS, Linux), locations (named locations or trusted IPs), client apps (browser, mobile apps and desktop clients, legacy authentication clients), and device state (filtered devices using device property rules). On the access controls side, you have grant controls and session controls. Grant controls include: require MFA, require device to be marked as compliant (via Intune), require Hybrid Azure AD Joined device, require approved client app, require app protection policy, require password change, or require authentication strength (this is the newer mechanism — you can define custom authentication strengths that demand phishing-resistant methods like FIDO2 or certificate-based auth). Session controls include: sign-in frequency (force re-authentication after a set period), persistent browser session (remember sessions on managed devices), Continuous Access Evaluation (CAE) for near real-time token revocation, and application enforced restrictions (used by SharePoint Online and Exchange Online to limit access on unmanaged devices).',

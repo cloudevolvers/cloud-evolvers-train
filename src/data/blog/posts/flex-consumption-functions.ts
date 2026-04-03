@@ -32,7 +32,7 @@ export const flexConsumptionPost: BlogPost = {
       {
         title: {
           en: 'Key Advantages Over Traditional Consumption',
-          nl: 'Belangrijkste Voordelen Over Traditioneel Consumption'
+          nl: 'Belangrijkste Voordelen ten Opzichte van Traditioneel Consumption'
         },
         content: {
           en: 'Flex Consumption provides significant improvements: Virtual network integration for secure connectivity to private resources, always-ready instances to reduce cold start latency, per-function scaling where each function scales independently, configurable instance memory sizes (512MB, 2048MB, 4096MB), up to 1000 scale-out instances (vs 200 for Consumption), and zero-downtime deployments with rolling updates.',

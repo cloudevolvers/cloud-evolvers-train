@@ -16,7 +16,7 @@ export const workloadIdentityFederationPost: BlogPost = {
   image: '/images/unsplash/ci-cd-pipeline-automation.jpg',
   excerpt: {
     en: 'Client secrets in pipelines expire, leak, and create rotation headaches. Workload identity federation replaces them with token exchange — no stored credentials, no expiry to manage.',
-    nl: 'Client secrets in pipelines verlopen, lekken en creeren rotatiehoofdpijn. Workload identity federation vervangt ze door token exchange — geen opgeslagen credentials, geen verloop om te beheren.'
+    nl: 'Client secrets in pipelines verlopen, lekken en creëren rotatiehoofdpijn. Workload identity federation vervangt ze door token exchange — geen opgeslagen credentials, geen verloop om te beheren.'
   },
   category: {
     en: 'Azure Security',
