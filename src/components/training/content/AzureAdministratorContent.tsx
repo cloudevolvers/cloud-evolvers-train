@@ -7,7 +7,7 @@ export const trainingMetadata = {
   slug: 'azure-administrator',
   title: 'Azure Administrator Associate (AZ-104)',
   description: 'Master Azure administration skills for managing cloud infrastructure and resources',
-  content: 'Comprehensive training covering Azure administration, virtual machines, storage, networking, and governance.',
+  content: 'AZ-104 covering the work admins actually do: identity, networking, storage, virtual machines, monitoring, and governance.',
   category: 'Azure',
   subcategory: 'Administration',
   difficulty: 'Intermediate' as const,
@@ -59,9 +59,8 @@ export default function AzureAdministratorContent() {
             Course Overview
           </h2>
           <p className="text-gray-100 leading-relaxed max-w-4xl">
-            This intensive Azure Administrator Associate training prepares you for the AZ-104 certification exam. 
-            Learn to manage Azure subscriptions, secure identities, administer infrastructure, configure virtual networking, 
-            and ensure business continuity through comprehensive hands-on labs.
+            AZ-104 prep for admins running Azure environments. You'll work with Azure subscriptions, identity, infrastructure,
+            virtual networking, and continuity through hands-on labs in real Azure tenants — not sandboxed simulators.
           </p>
         </div>
       </motion.section>

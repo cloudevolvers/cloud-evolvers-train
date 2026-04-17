@@ -6,7 +6,7 @@ export const trainingMetadata = {
   slug: 'azure-fundamentals',
   title: 'Azure Fundamentals (AZ-900)',
   description: 'Build foundational knowledge of Azure cloud services and core concepts',
-  content: 'Comprehensive fundamentals training covering Azure core services, security, privacy, compliance, and pricing.',
+  content: 'AZ-900 fundamentals — core Azure services, identity basics, governance, and the pricing model. The shared baseline a team needs before deeper tracks make sense.',
   category: 'Azure',
   subcategory: 'Fundamentals',
   difficulty: 'Beginner' as const,
@@ -43,8 +43,8 @@ export default function AzureFundamentalsContent() {
           </h2>
         </div>
         <p className="text-foreground leading-relaxed mb-4">
-          This comprehensive Azure Fundamentals training provides a solid foundation for understanding Microsoft Azure cloud services. 
-          Designed for beginners, this course covers all the essential concepts needed to start working with Azure confidently.
+          AZ-900 covers the Azure baseline every team needs before going deeper — core services, identity, governance, and the pricing model.
+          For people new to Azure who want to be useful in conversations and decisions on day one.
         </p>
       </section>
 
@@ -55,7 +55,7 @@ export default function AzureFundamentalsContent() {
           What You'll Learn
         </h3>
         <p className="text-muted-foreground mb-3">
-          During this comprehensive training, you'll gain practical knowledge of:
+          During the course, you'll get practical working knowledge of:
         </p>
         <div className="grid gap-4">
           <div className="flex items-start gap-3">

@@ -79,7 +79,7 @@ export default function AzureIoTDeveloperContent() {
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
-            Master Azure IoT solutions development with comprehensive training on IoT Hub, Edge computing, device management, and data processing. Build enterprise-ready IoT solutions with security and optimization best practices.
+            Azure IoT for developers building real device fleets: IoT Hub, IoT Edge, device provisioning, message routing, and the security model that has to hold up in production.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

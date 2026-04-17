@@ -15,7 +15,7 @@ export const trainingMetadata = {
   icon: 'IdentificationCard',
   
   learningObjectives: [
-    'Design comprehensive identity architecture',
+    'Design Entra ID identity architecture end-to-end',
     'Implement advanced authentication solutions',
     'Configure identity governance frameworks',
     'Manage hybrid identity scenarios',

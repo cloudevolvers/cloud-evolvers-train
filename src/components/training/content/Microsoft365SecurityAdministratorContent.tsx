@@ -15,7 +15,7 @@ export const trainingMetadata = {
   icon: 'Shield',
   
   learningObjectives: [
-    'Design comprehensive security architectures',
+    'Design Microsoft 365 security architectures end-to-end',
     'Implement advanced threat protection',
     'Configure security and compliance centers',
     'Manage information protection policies',

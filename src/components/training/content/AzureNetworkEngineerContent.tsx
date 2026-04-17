@@ -78,7 +78,7 @@ export default function AzureNetworkEngineerContent() {
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
-            Comprehensive Azure networking training covering virtual networks, hybrid connectivity, traffic management, network security, and monitoring. Essential for network engineers working with Azure infrastructure.
+            Azure networking for engineers running it in production: VNets, hybrid connectivity, ExpressRoute, traffic management, NSGs, Azure Firewall, and the monitoring you need when something stops routing.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

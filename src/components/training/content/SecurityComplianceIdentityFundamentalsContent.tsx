@@ -83,7 +83,7 @@ export default function SecurityComplianceIdentityFundamentalsContent() {
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
-            Master the fundamentals of Microsoft security, compliance, and identity solutions. Learn to protect your organization with comprehensive security strategies and Zero Trust principles.
+            SC-900 fundamentals for teams that need a shared baseline on Microsoft security, compliance, and identity — and the Zero Trust principles that show up in every architecture conversation.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
