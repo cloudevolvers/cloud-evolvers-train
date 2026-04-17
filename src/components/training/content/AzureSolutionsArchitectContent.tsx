@@ -5,7 +5,7 @@ export const trainingMetadata = {
   id: 'azure-solutions-architect',
   slug: 'azure-solutions-architect',
   title: 'Azure Solutions Architect Expert (AZ-305)',
-  description: 'Design and architect comprehensive Azure solutions for enterprise workloads',
+  description: 'AZ-305 architecture training: landing zones, governance, resilience, and the design tradeoffs every architect ends up defending.',
   content: 'Expert-level training covering Azure architecture design, governance, security, and optimization strategies.',
   category: 'Azure',
   subcategory: 'Architecture',
@@ -24,8 +24,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'azure-architect-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Azure Solutions Architect Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 1995, currency: 'EUR' },
   schedule: { available: true },
@@ -48,9 +48,9 @@ export default function AzureSolutionsArchitectContent() {
           </h2>
         </div>
         <p className="text-foreground leading-relaxed mb-4">
-          This advanced Azure Solutions Architect Expert training is designed for experienced professionals who need to design and 
-          implement comprehensive Azure solutions. Master the skills to architect secure, scalable, and resilient cloud solutions 
-          that meet business and technical requirements.
+          AZ-305 for experienced engineers stepping into architecture work. The course covers landing zones, identity, networking,
+          data, and resilience tradeoffs — the design decisions you end up defending in review meetings — using
+          patterns from real Dutch organizations.
         </p>
       </section>
 

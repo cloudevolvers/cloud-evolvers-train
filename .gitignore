@@ -71,3 +71,6 @@ GRAPH_API_CONFIG_COMPLETE.md
 bun.lock
 backup-original-images/
 .claude/
+
+# Git worktrees
+.worktrees/

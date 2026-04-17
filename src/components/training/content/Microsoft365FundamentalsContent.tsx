@@ -6,7 +6,7 @@ export const trainingMetadata = {
   slug: 'microsoft-365-fundamentals',
   title: 'Microsoft 365 Fundamentals (MS-900)',
   description: 'Understand Microsoft 365 cloud productivity and collaboration services',
-  content: 'Comprehensive overview of Microsoft 365 services, security, compliance, and pricing models.',
+  content: 'MS-900 fundamentals: Microsoft 365 services, identity, security, compliance, and the pricing model — the baseline every M365 team needs before going deeper.',
   category: 'Microsoft365',
   subcategory: 'Fundamentals',
   difficulty: 'Beginner' as const,
@@ -22,8 +22,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'm365-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Microsoft 365 Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 495, currency: 'EUR' },
   schedule: { available: true },
@@ -46,8 +46,8 @@ export default function Microsoft365FundamentalsContent() {
           </h2>
         </div>
         <p className="text-foreground leading-relaxed mb-4">
-          This Microsoft 365 Fundamentals training provides a comprehensive introduction to Microsoft's cloud productivity platform. 
-          Learn about the core services, security features, and business value of Microsoft 365 for organizations of all sizes.
+          MS-900 covers the Microsoft 365 baseline — services, identity, security, compliance, and the pricing model.
+          For people who need to be useful in M365 conversations and decisions on day one.
         </p>
       </section>
 

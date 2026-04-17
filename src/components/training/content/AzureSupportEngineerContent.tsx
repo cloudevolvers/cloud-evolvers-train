@@ -42,10 +42,10 @@ export const trainingMetadata = {
   maxParticipants: 16,
   
   instructor: {
-    name: 'Azure Support Expert',
-    title: 'Senior Support Engineer',
-    experience: '8+ years',
-    certifications: ['AZ-104', 'AZ-303', 'AZ-304', 'ITIL']
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
+    certifications: ['AZ-104', 'AZ-305', 'AZ-500']
   }
 };
 

@@ -23,8 +23,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'power-platform-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Power Platform Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 795, currency: 'EUR' },
   schedule: { available: true },

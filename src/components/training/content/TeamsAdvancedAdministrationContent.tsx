@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 16,
   
   instructor: {
-    name: 'Teams Collaboration Expert',
-    title: 'Microsoft Certified Teams Administrator',
-    experience: '8+ years',
-    certifications: ['MS-700', 'MS-900', 'MS-500', 'AZ-900']
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
+    certifications: ['MS-700', 'MS-900', 'MS-500']
   }
 };
 

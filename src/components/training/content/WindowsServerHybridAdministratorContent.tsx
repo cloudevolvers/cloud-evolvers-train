@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Windows Server Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
     experience: '15+ years',
-    certifications: ['AZ-800', 'AZ-801', 'AZ-104', 'MCSE']
+    certifications: ['AZ-800', 'AZ-801', 'AZ-104']
   }
 };
 

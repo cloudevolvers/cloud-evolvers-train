@@ -25,8 +25,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'azure-dev-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Azure Development Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 1695, currency: 'EUR' },
   schedule: { available: true },
@@ -49,9 +49,8 @@ export default function AzureDeveloperContent() {
           </h2>
         </div>
         <p className="text-foreground leading-relaxed mb-4">
-          This comprehensive Azure Developer Associate training prepares developers to build, test, and maintain cloud applications 
-          and services on Microsoft Azure. Master the skills needed to implement Azure solutions using various programming languages 
-          and development tools.
+          AZ-204 for developers building, testing, and shipping cloud apps on Azure. The course covers App Service, Functions,
+          containers, Cosmos DB, identity, and the operational pieces — monitoring, deployment, and security — that ship with every real app.
         </p>
       </section>
 

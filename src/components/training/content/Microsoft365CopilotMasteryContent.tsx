@@ -6,7 +6,7 @@ export const trainingMetadata = {
   id: 'microsoft-365-copilot-mastery',
   slug: 'microsoft-365-copilot-mastery',
   title: 'Microsoft 365 Copilot Mastery',
-  description: 'Unleash the power of AI in your daily work with Microsoft 365 Copilot',
+  description: 'Hands-on Microsoft 365 Copilot training: prompts that work, the patterns power users actually adopt, and the governance behind a real rollout.',
   category: 'Microsoft 365',
   level: 'Intermediate',
   duration: { days: 1, hours: 8 },
@@ -42,10 +42,10 @@ export const trainingMetadata = {
   maxParticipants: 15,
   
   instructor: {
-    name: 'Copilot Productivity Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '5+ years',
-    certifications: ['MS-900', 'MS-500', 'MS-700', 'AI-900']
+    experience: '15+ years',
+    certifications: ['MS-900', 'MS-500', 'AI-900']
   }
 };
 
@@ -79,7 +79,7 @@ export default function Microsoft365CopilotMasteryContent() {
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
-            Unleash the power of AI in your daily work with Microsoft 365 Copilot. Transform how you work, think, and create with cutting-edge AI tools across all M365 applications.
+            One day on Microsoft 365 Copilot for power users. We cover what actually works in Word, Excel, PowerPoint, Outlook, and Teams — and the prompts your team will use the next morning.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

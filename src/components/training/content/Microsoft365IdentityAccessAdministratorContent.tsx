@@ -15,7 +15,7 @@ export const trainingMetadata = {
   icon: 'IdentificationCard',
   
   learningObjectives: [
-    'Design comprehensive identity architecture',
+    'Design Entra ID identity architecture end-to-end',
     'Implement advanced authentication solutions',
     'Configure identity governance frameworks',
     'Manage hybrid identity scenarios',
@@ -46,9 +46,9 @@ export const trainingMetadata = {
   maxParticipants: 14,
   
   instructor: {
-    name: 'Identity Management Expert',
-    title: 'Microsoft Certified Identity Specialist',
-    experience: '10+ years',
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
     certifications: ['SC-300', 'SC-900', 'MS-500', 'AZ-104']
   }
 };

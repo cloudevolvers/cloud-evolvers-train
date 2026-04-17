@@ -42,10 +42,10 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Azure AI Solutions Expert',
-    title: 'Microsoft Certified Azure AI Engineer',
-    experience: '8+ years',
-    certifications: ['AI-102', 'AZ-900', 'AZ-204', 'AI-900']
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
+    certifications: ['AI-102', 'AZ-204', 'AI-900']
   }
 };
 

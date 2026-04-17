@@ -6,7 +6,7 @@ export const trainingMetadata = {
   id: 'power-platform-automation',
   slug: 'power-platform-automation',
   title: 'Power Platform Automation Bootcamp',
-  description: 'Unlock the power of low-code automation with Microsoft Power Platform',
+  description: 'Build production Power Apps, Power Automate flows, and Power BI reports — the parts that survive after the demo is over.',
   category: 'Microsoft 365',
   level: 'Intermediate',
   duration: { days: 2, hours: 16 },
@@ -18,7 +18,7 @@ export const trainingMetadata = {
     'Build powerful apps without traditional coding',
     'Automate complex business processes',
     'Create stunning data visualizations',
-    'Integrate seamlessly with Microsoft 365',
+    'Integrate with Microsoft 365 and external systems',
     'Design and implement Power Platform solutions',
     'Apply governance and security best practices'
   ],
@@ -42,9 +42,9 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Power Platform Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '6+ years',
+    experience: '15+ years',
     certifications: ['PL-900', 'PL-200', 'PL-400']
   }
 };
@@ -79,7 +79,7 @@ export default function PowerPlatformAutomationContent() {
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
-            Unlock the power of low-code automation with Microsoft Power Platform. Master Power Apps, Power Automate, and Power BI to build sophisticated business solutions without traditional programming.
+            Two days on Power Apps, Power Automate, and Power BI for teams building business solutions without a full dev stack. Real builds, not theory — what works at scale and what breaks.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

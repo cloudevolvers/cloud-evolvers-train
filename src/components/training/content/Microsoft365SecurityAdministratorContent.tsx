@@ -15,7 +15,7 @@ export const trainingMetadata = {
   icon: 'Shield',
   
   learningObjectives: [
-    'Design comprehensive security architectures',
+    'Design Microsoft 365 security architectures end-to-end',
     'Implement advanced threat protection',
     'Configure security and compliance centers',
     'Manage information protection policies',
@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 14,
   
   instructor: {
-    name: 'M365 Security Expert',
-    title: 'Microsoft Certified Security Administrator',
-    experience: '12+ years',
-    certifications: ['MS-500', 'SC-300', 'SC-900', 'AZ-500']
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
+    certifications: ['MS-500', 'SC-300', 'AZ-500']
   }
 };
 

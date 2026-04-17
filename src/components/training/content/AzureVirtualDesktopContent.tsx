@@ -42,9 +42,9 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Virtual Desktop Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '8+ years',
+    experience: '15+ years',
     certifications: ['AZ-140', 'AZ-104', 'AZ-305']
   }
 };

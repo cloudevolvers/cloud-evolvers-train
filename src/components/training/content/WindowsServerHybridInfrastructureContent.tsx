@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 10,
   
   instructor: {
-    name: 'Infrastructure Architecture Expert',
-    title: 'Microsoft Certified Master',
-    experience: '20+ years',
-    certifications: ['AZ-801', 'AZ-800', 'AZ-305', 'MCM']
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
+    certifications: ['AZ-801', 'AZ-800', 'AZ-305']
   }
 };
 

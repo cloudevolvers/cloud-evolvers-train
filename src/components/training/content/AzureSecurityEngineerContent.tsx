@@ -6,7 +6,7 @@ export const trainingMetadata = {
   slug: 'azure-security-engineer',
   title: 'Azure Security Engineer Associate (AZ-500)',
   description: 'Implement and manage Azure security controls and threat protection',
-  content: 'Comprehensive security training covering identity management, platform protection, data security, and operations.',
+  content: 'AZ-500 prep covering identity, platform protection, data security, and security operations — built around what teams actually run into in production Azure.',
   category: 'Security',
   subcategory: 'Azure Security',
   difficulty: 'Advanced' as const,
@@ -24,8 +24,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'azure-security-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Azure Security Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 1795, currency: 'EUR' },
   schedule: { available: true },

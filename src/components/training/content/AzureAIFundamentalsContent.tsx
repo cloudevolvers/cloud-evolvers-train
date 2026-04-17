@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 15,
   
   instructor: {
-    name: 'AI Solutions Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '7+ years',
-    certifications: ['AI-900', 'AI-102', 'DP-100', 'AI-050']
+    experience: '15+ years',
+    certifications: ['AI-900', 'AI-102']
   }
 };
 

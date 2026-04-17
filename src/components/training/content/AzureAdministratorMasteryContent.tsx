@@ -6,7 +6,7 @@ export const trainingMetadata = {
   id: 'azure-administrator-mastery',
   slug: 'azure-administrator-mastery',
   title: 'Azure Administrator Mastery (AZ-104)',
-  description: 'Master advanced Azure administration with comprehensive resource management skills',
+  description: 'Advanced AZ-104 track for admins running Azure day-to-day: identity, networking, governance, storage, and the operational decisions that come with scale.',
   category: 'Azure',
   level: 'Intermediate',
   duration: { days: 4, hours: 32 },
@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Azure Infrastructure Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '10+ years',
-    certifications: ['AZ-104', 'AZ-305', 'AZ-500', 'AZ-700']
+    experience: '15+ years',
+    certifications: ['AZ-104', 'AZ-305', 'AZ-500']
   }
 };
 
@@ -83,7 +83,7 @@ export default function AzureAdministratorMasteryContent() {
           </h1>
           
           <p className="text-gray-100 mb-8 max-w-3xl leading-relaxed">
-            Master advanced Azure administration with comprehensive resource management skills. This intensive course prepares you for the AZ-104 certification and advanced Azure infrastructure management.
+            AZ-104 for admins running Azure environments at scale. Identity, networking, storage, governance, and the operational decisions that come up when you actually own the platform.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
