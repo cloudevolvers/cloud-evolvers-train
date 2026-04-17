@@ -70,6 +70,16 @@ import { entraExternalMfaGaPost } from './posts/entra-external-mfa-ga';
 import { microsoftCertRetirements2026Post } from './posts/microsoft-certification-retirements-2026';
 import { microsoftAbSeriesAiCertsPost } from './posts/microsoft-ab-series-ai-certifications';
 import { nextGenAzureAiSecurityExamsPost } from './posts/next-gen-azure-ai-security-exams-2026';
+import { maiModelsFoundryPost } from './posts/mai-models-foundry';
+import { m365E7Agent365Post } from './posts/m365-e7-agent-365';
+import { azureFoundryVoiceLivePost } from './posts/azure-foundry-voice-live';
+import { m365CopilotClaudeSonnetPost } from './posts/m365-copilot-claude-sonnet';
+import { mcpAppsCopilotAgentsPost } from './posts/mcp-apps-copilot-agents';
+import { entraIdProtectionSelfRemediationPost } from './posts/entra-id-protection-self-remediation';
+import { externalMfaGaPost } from './posts/external-mfa-ga';
+import { foundryAgentPrivateNetworkingPost } from './posts/foundry-agent-private-networking';
+import { azureAiProjectsSdk2Post } from './posts/azure-ai-projects-sdk-2';
+import { vmEphemeralOsDiskCachingPost } from './posts/vm-ephemeral-os-disk-caching';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -140,6 +150,16 @@ export {
   microsoftCertRetirements2026Post,
   microsoftAbSeriesAiCertsPost,
   nextGenAzureAiSecurityExamsPost,
+  maiModelsFoundryPost,
+  m365E7Agent365Post,
+  azureFoundryVoiceLivePost,
+  m365CopilotClaudeSonnetPost,
+  mcpAppsCopilotAgentsPost,
+  entraIdProtectionSelfRemediationPost,
+  externalMfaGaPost,
+  foundryAgentPrivateNetworkingPost,
+  azureAiProjectsSdk2Post,
+  vmEphemeralOsDiskCachingPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
@@ -209,6 +229,16 @@ export const blogPosts: BlogPost[] = [
   microsoftCertRetirements2026Post,
   microsoftAbSeriesAiCertsPost,
   nextGenAzureAiSecurityExamsPost,
+  maiModelsFoundryPost,
+  m365E7Agent365Post,
+  azureFoundryVoiceLivePost,
+  m365CopilotClaudeSonnetPost,
+  mcpAppsCopilotAgentsPost,
+  entraIdProtectionSelfRemediationPost,
+  externalMfaGaPost,
+  foundryAgentPrivateNetworkingPost,
+  azureAiProjectsSdk2Post,
+  vmEphemeralOsDiskCachingPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Helper function to get localized text
