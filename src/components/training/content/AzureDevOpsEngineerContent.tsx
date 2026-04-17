@@ -42,10 +42,10 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'DevOps Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '12+ years',
-    certifications: ['AZ-400', 'AZ-204', 'AZ-104']
+    experience: '15+ years',
+    certifications: ['AZ-400', 'AZ-305', 'AZ-104']
   }
 };
 

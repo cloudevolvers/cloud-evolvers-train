@@ -46,9 +46,9 @@ export const trainingMetadata = {
   maxParticipants: 14,
   
   instructor: {
-    name: 'Identity Management Expert',
-    title: 'Microsoft Certified Identity Specialist',
-    experience: '10+ years',
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer',
+    experience: '15+ years',
     certifications: ['SC-300', 'SC-900', 'MS-500', 'AZ-104']
   }
 };

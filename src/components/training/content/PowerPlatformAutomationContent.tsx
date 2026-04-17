@@ -42,9 +42,9 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Power Platform Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '6+ years',
+    experience: '15+ years',
     certifications: ['PL-900', 'PL-200', 'PL-400']
   }
 };

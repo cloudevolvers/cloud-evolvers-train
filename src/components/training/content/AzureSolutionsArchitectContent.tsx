@@ -24,8 +24,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'azure-architect-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Azure Solutions Architect Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 1995, currency: 'EUR' },
   schedule: { available: true },

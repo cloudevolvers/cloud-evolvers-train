@@ -22,8 +22,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'm365-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Microsoft 365 Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 495, currency: 'EUR' },
   schedule: { available: true },

@@ -42,10 +42,10 @@ export const trainingMetadata = {
   maxParticipants: 15,
   
   instructor: {
-    name: 'Copilot Productivity Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '5+ years',
-    certifications: ['MS-900', 'MS-500', 'MS-700', 'AI-900']
+    experience: '15+ years',
+    certifications: ['MS-900', 'MS-500', 'AI-900']
   }
 };
 

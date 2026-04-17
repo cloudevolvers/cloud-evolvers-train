@@ -26,8 +26,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'azure-admin-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Azure Infrastructure Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 1595, currency: 'EUR' },
   schedule: { available: true },

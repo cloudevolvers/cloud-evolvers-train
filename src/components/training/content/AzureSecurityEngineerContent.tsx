@@ -24,8 +24,8 @@ export const trainingMetadata = {
   ],
   instructor: {
     id: 'azure-security-expert',
-    name: 'Microsoft Certified Trainer',
-    title: 'Azure Security Expert'
+    name: 'Yaïr Knijn',
+    title: 'Microsoft Certified Trainer'
   },
   price: { amount: 1795, currency: 'EUR' },
   schedule: { available: true },

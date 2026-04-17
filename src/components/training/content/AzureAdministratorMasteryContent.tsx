@@ -46,10 +46,10 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Azure Infrastructure Expert',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '10+ years',
-    certifications: ['AZ-104', 'AZ-305', 'AZ-500', 'AZ-700']
+    experience: '15+ years',
+    certifications: ['AZ-104', 'AZ-305', 'AZ-500']
   }
 };
 

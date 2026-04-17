@@ -42,10 +42,10 @@ export const trainingMetadata = {
   maxParticipants: 12,
   
   instructor: {
-    name: 'Expert IoT Developer',
+    name: 'Yaïr Knijn',
     title: 'Microsoft Certified Trainer',
-    experience: '10+ years',
-    certifications: ['AZ-220', 'AZ-104', 'AZ-900']
+    experience: '15+ years',
+    certifications: ['AZ-220', 'AZ-104', 'AZ-305']
   }
 };
 
