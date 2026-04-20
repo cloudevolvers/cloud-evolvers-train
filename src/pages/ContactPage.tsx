@@ -1,222 +1,180 @@
-import React, { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { CheckCircle, Users, Calendar, ChatCircle, EnvelopeSimple, Phone, MapPin, ShareNetwork, Sparkle, Copy, Check } from '@phosphor-icons/react';
+import { EnvelopeSimple, Phone, MapPin, WhatsappLogo, Copy, Check } from '@phosphor-icons/react';
 import { useLanguage } from '@/hooks/use-language';
-import { useTranslation } from '@/hooks/use-translation';
 import TrainingConsultationForm from '@/components/TrainingConsultationForm';
-import { DotPattern } from "@/components/ui/dot-pattern";
 import { SEO, PAGE_SEO } from '@/components/SEO';
-import { PageHeroBg } from '@/components/PageHeroBg';
+import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial';
+import { useTranslations } from '@/hooks/use-translations';
 
 export default function ContactPage() {
   const [searchParams] = useSearchParams();
   const [language] = useLanguage();
-  const t = useTranslation();
+  const { isDutch } = useTranslations();
   const [phoneCopied, setPhoneCopied] = useState(false);
 
-  // Animation Ref
-  const formRef = useRef(null);
-  const isInView = useInView(formRef, { once: true, margin: "-100px" });
+  const serviceParam = searchParams.get('service');
+  const trainingTitle = serviceParam || (isDutch ? 'Contact Cloud Evolvers' : 'Contact Cloud Evolvers');
 
-  // Robust fallback for contact data
-  const contactT = t?.contact || {
-    title: 'Start Your Cloud Journey',
-    description: 'Schedule a free consultation with our Architects.',
-    contactInformation: 'Contact Information',
-    emailUs: 'Email Us',
-    callUs: 'Call Us',
-    ourReach: 'Our Reach',
-    locations: 'Netherlands, Belgium & DACH',
-    whyChooseUs: 'Why Choose Us?',
-    expertGuidance: 'Expert Guidance',
-    expertDescription: 'Direct access to MCTs',
-    flexibleScheduling: 'Flexible Scheduling',
-    flexibleDescription: 'Online or On-site',
-    tailoredSolutions: 'Tailored Solutions',
-    tailoredDescription: 'Customized Curriculums',
-    microsoftCertified: 'Microsoft Certified Trainers',
-    mctTrainers: 'Elite Certified Experts',
-    contactForm: 'Contact Form',
-    formDescription: 'Fill out the form and we\'ll get back to you within 24 hours',
+  const copyPhone = () => {
+    navigator.clipboard.writeText('+31 6 34272027');
+    setPhoneCopied(true);
+    setTimeout(() => setPhoneCopied(false), 2000);
   };
 
-  // Get service parameter from URL if provided
-  const serviceParam = searchParams.get('service');
-  const trainingTitle = serviceParam || (contactT.defaultServiceTitle || 'Azure Services Contact');
-
-  const benefits = [
-    {
-      icon: Users,
-      title: contactT.expertGuidance,
-      description: contactT.expertDescription
-    },
-    {
-      icon: Calendar,
-      title: contactT.flexibleScheduling,
-      description: contactT.flexibleDescription
-    },
-    {
-      icon: ChatCircle,
-      title: contactT.tailoredSolutions,
-      description: contactT.tailoredDescription
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-neutral-500/30 relative overflow-hidden">
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.contact} />
-      {/* Ambient Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <DotPattern className="opacity-10 text-neutral-500/20" />
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-neutral-500/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-neutral-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
-      </div>
-      <PageHeroBg />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 relative z-10">
+      <section className="pt-20 sm:pt-28 pb-10">
+        <Wrap>
+          <Eyebrow accent>{isDutch ? 'Neem contact op' : 'Get in touch'}</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
+            {isDutch ? (
+              <>
+                Vertel ons welk team je wilt{' '}
+                <span className="ed-display-italic">opleiden.</span>
+              </>
+            ) : (
+              <>
+                Tell us which team you want to{' '}
+                <span className="ed-display-italic">upskill.</span>
+              </>
+            )}
+          </Display>
+          <Lede className="mt-7">
+            {isDutch
+              ? 'Een intake duurt ongeveer twintig minuten. We bespreken de rollen die je moet opleiden, de tijdlijn, en welke van onze trajecten het beste past. Binnen 24 uur een antwoord.'
+              : 'An intake takes about twenty minutes. We walk through the roles you need to upskill, the timeline, and which of our tracks fits best. A response within 24 hours.'}
+          </Lede>
+        </Wrap>
+      </section>
 
-        <div className="max-w-5xl mx-auto">
-          {/* Page Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-20"
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-neutral-500/5 dark:bg-white/5 text-muted-foreground text-xs font-medium mb-8">
-              <Sparkle className="w-4 h-4" />
-              {contactT.letsConnect || "Let's Connect"}
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-foreground">
-              {contactT.title}
-            </h1>
-            <div className="mb-6 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
-            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl font-light leading-relaxed">
-              {contactT.pageDescription || "Whether you need enterprise training, consulting, or just have a question, our team is ready to help."}
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-
-            {/* Left Column: Contact Info & Benefits */}
-            <div className="lg:col-span-5 space-y-8">
-
-              {/* Contact Card */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="rounded-2xl border border-border bg-card/60 backdrop-blur-md p-6 lg:p-8 shadow-sm"
-              >
-                <h2 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <ShareNetwork className="text-foreground/70" size={24} />
-                  {contactT.contactInformation}
-                </h2>
-
-                <div className="space-y-6">
-                  <a href="mailto:training@cloudevolvers.com" className="group flex items-center gap-4 p-3 rounded-xl hover:bg-muted/50 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-full bg-neutral-100 dark:bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-neutral-200 dark:group-hover:bg-white/15 transition-colors">
-                      <EnvelopeSimple size={24} className="text-foreground/70" weight="fill" />
+      <section className="pb-20 sm:pb-28">
+        <Wrap>
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
+            <aside className="space-y-8">
+              <div>
+                <Eyebrow>{isDutch ? 'Directe kanalen' : 'Direct channels'}</Eyebrow>
+                <ul className="mt-5 divide-y divide-[color:var(--ed-rule)] border-y border-[color:var(--ed-rule)]">
+                  <li className="flex items-center gap-4 py-5">
+                    <EnvelopeSimple className="w-5 h-5 text-[color:var(--ed-ink-2)]" weight="regular" />
+                    <div className="flex-1">
+                      <div className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                        {isDutch ? 'E-mail' : 'Email'}
+                      </div>
+                      <a
+                        href="mailto:training@cloudevolvers.com"
+                        className="text-[15px] text-[color:var(--ed-ink)] hover:text-[color:var(--ed-accent)]"
+                      >
+                        training@cloudevolvers.com
+                      </a>
                     </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">{contactT.emailUs}</div>
-                      <div className="font-medium text-foreground group-hover:text-foreground/70 transition-colors">training@cloudevolvers.com</div>
-                    </div>
-                  </a>
-
-                  <div className="group flex items-center gap-4 p-3 rounded-xl hover:bg-muted/50 transition-all duration-300">
-                    <a href="tel:+31634272027" className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/20 transition-colors">
-                      <Phone size={24} className="text-green-600 dark:text-green-400" weight="fill" />
-                    </a>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm text-muted-foreground">{contactT.callUs}</div>
-                      <div className="flex items-center gap-2">
-                        <a href="tel:+31634272027" className="font-medium text-foreground group-hover:text-green-500 transition-colors">+31 6-34272027</a>
-                        <button
-                          onClick={() => {
-                            navigator.clipboard.writeText('+31 6-34272027');
-                            setPhoneCopied(true);
-                            setTimeout(() => setPhoneCopied(false), 2000);
-                          }}
-                          className="p-1 rounded-md hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
-                          title={(contactT as Record<string, string>).copyPhone || 'Copy phone number'}
+                  </li>
+                  <li className="flex items-center gap-4 py-5">
+                    <Phone className="w-5 h-5 text-[color:var(--ed-ink-2)]" weight="regular" />
+                    <div className="flex-1">
+                      <div className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                        {isDutch ? 'Telefoon' : 'Phone'}
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <a
+                          href="tel:+31634272027"
+                          className="text-[15px] text-[color:var(--ed-ink)] hover:text-[color:var(--ed-accent)]"
                         >
-                          {phoneCopied ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+                          +31 6 34272027
+                        </a>
+                        <button
+                          type="button"
+                          onClick={copyPhone}
+                          aria-label="Copy phone number"
+                          className="p-1 rounded hover:bg-[color:var(--ed-bg-2)] text-[color:var(--ed-ink-3)] hover:text-[color:var(--ed-ink)]"
+                        >
+                          {phoneCopied ? (
+                            <Check className="w-3.5 h-3.5 text-[color:var(--ed-accent)]" />
+                          ) : (
+                            <Copy className="w-3.5 h-3.5" />
+                          )}
                         </button>
                       </div>
                     </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 p-3">
-                    <div className="w-12 h-12 rounded-full bg-neutral-100 dark:bg-white/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin size={24} className="text-foreground/70" weight="fill" />
+                  </li>
+                  <li className="flex items-center gap-4 py-5">
+                    <WhatsappLogo className="w-5 h-5 text-[color:var(--ed-ink-2)]" weight="fill" />
+                    <div className="flex-1">
+                      <div className="ed-eyebrow text-[color:var(--ed-ink-3)]">WhatsApp</div>
+                      <a
+                        href="https://wa.me/31634272027"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[15px] text-[color:var(--ed-ink)] hover:text-[color:var(--ed-accent)]"
+                      >
+                        +31 6 34272027
+                      </a>
                     </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">{contactT.ourReach}</div>
-                      <div className="font-medium text-foreground">{contactT.locations}</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Benefits / MCT Badge */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-neutral-500/5 to-neutral-500/3 border border-border"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center shadow-lg">
-                    <CheckCircle size={24} className="text-background" weight="fill" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground text-lg">{contactT.microsoftCertified}</div>
-                    <div className="text-sm text-muted-foreground">{contactT.mctTrainers || 'Elite Certified Experts'}</div>
-                  </div>
-                </div>
-                <div className="space-y-4 pl-2">
-                  {benefits.map((benefit, i) => {
-                    const Icon = benefit.icon;
-                    return (
-                      <div key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
-                        <Icon size={16} className="text-foreground/70" />
-                        <span>{benefit.title}</span>
+                  </li>
+                  <li className="flex items-center gap-4 py-5">
+                    <MapPin className="w-5 h-5 text-[color:var(--ed-ink-2)]" weight="regular" />
+                    <div className="flex-1">
+                      <div className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                        {isDutch ? 'Bereik' : 'Reach'}
                       </div>
-                    )
-                  })}
-                </div>
-              </motion.div>
-
-            </div>
-
-            {/* Right Column: Form */}
-            <motion.div
-              ref={formRef}
-              initial={{ opacity: 0, x: 20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="lg:col-span-7"
-            >
-              <div className="rounded-2xl border border-border bg-card shadow-xl overflow-hidden relative">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-400 via-neutral-500 to-neutral-600 dark:from-neutral-600 dark:via-neutral-500 dark:to-neutral-400" />
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-6">{contactT.sendUsMessage || 'Send us a message'}</h3>
-                  {/* The Form Component needs to support dark mode styles or we wrap it in a dark context */}
-                  <div className="w-full">
-                    <TrainingConsultationForm
-                      language={language || 'en'}
-                      trainingTitle={trainingTitle}
-                    />
-                  </div>
-                </div>
+                      <p className="text-[15px] text-[color:var(--ed-ink)]">
+                        {isDutch
+                          ? 'Nederland, België, Luxemburg, remote wereldwijd'
+                          : 'Netherlands, Belgium, Luxembourg, remote worldwide'}
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </motion.div>
 
+              <div className="bg-[color:var(--ed-bg-2)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+                <Eyebrow>{isDutch ? 'Wat gebeurt er daarna' : 'What happens next'}</Eyebrow>
+                <ol className="mt-4 space-y-3 text-[14px] text-[color:var(--ed-ink-2)]">
+                  <li className="flex gap-3">
+                    <span className="font-mono text-[color:var(--ed-ink-3)]">01</span>
+                    <span>
+                      {isDutch
+                        ? 'Je krijgt binnen 24 uur een reactie van Yaïr zelf.'
+                        : 'You get a reply from Yaïr himself within 24 hours.'}
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-mono text-[color:var(--ed-ink-3)]">02</span>
+                    <span>
+                      {isDutch
+                        ? 'Korte intake van 20 minuten (video of telefoon).'
+                        : 'A short 20-minute intake (video or phone).'}
+                    </span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-mono text-[color:var(--ed-ink-3)]">03</span>
+                    <span>
+                      {isDutch
+                        ? 'Voorstel met agenda, data en een vaste prijs.'
+                        : 'A proposal with agenda, dates, and a fixed price.'}
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </aside>
+
+            <div className="bg-[color:var(--ed-card)] border border-[color:var(--ed-rule)] rounded-[6px] p-6 sm:p-8">
+              <Eyebrow>{isDutch ? 'Stuur een bericht' : 'Send a message'}</Eyebrow>
+              <p className="mt-3 mb-6 text-[14px] text-[color:var(--ed-ink-2)]">
+                {isDutch
+                  ? 'Vertel ons wat je team wil leren, of waar de pijn zit. We antwoorden binnen 24 uur.'
+                  : 'Tell us what your team wants to learn, or where the pain is. We reply within 24 hours.'}
+              </p>
+              <TrainingConsultationForm
+                language={language || 'en'}
+                trainingTitle={trainingTitle}
+              />
+            </div>
           </div>
-        </div>
-      </div>
+        </Wrap>
+      </section>
     </div>
   );
 }
