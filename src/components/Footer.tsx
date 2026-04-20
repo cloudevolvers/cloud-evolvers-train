@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                 {status === 'error' && (
                   <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-2.5 text-sm text-red-800">
                     <WarningCircle className="w-4 h-4" weight="fill" />
-                    {t.footer?.somethingWentWrong || 'Something went wrong — please email us.'}
+                    {t.footer?.somethingWentWrong || 'Something went wrong. Please email us.'}
                   </div>
                 )}
                 <div className="grid grid-cols-2 gap-2">
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
 
         <div className="py-6 border-t border-[color:var(--ed-rule)] flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-[color:var(--ed-ink-3)]">
           <span>
-            © {year} Spot Cloud B.V. — Cloud Evolvers. KvK 89708873. {t.footer?.rights || 'All rights reserved.'}
+            © {year} Spot Cloud B.V. · Cloud Evolvers · KvK 89708873. {t.footer?.rights || 'All rights reserved.'}
           </span>
           <span className="font-mono">
             {getVersionString()} · {buildInfo.buildDate}

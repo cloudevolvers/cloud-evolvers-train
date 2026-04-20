@@ -7,7 +7,7 @@ interface PlaceholderProps {
   height?: number | string;
 }
 
-/** Striped imagery placeholder — labels spots where real photography drops in. */
+/** Striped imagery placeholder. Labels spots where real photography drops in. */
 export function Placeholder({ label, className, height = 260 }: PlaceholderProps) {
   return (
     <div
