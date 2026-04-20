@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
 
         <div className="py-6 border-t border-[color:var(--ed-rule)] flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-[color:var(--ed-ink-3)]">
           <span>
-            © {year} Spot Cloud B.V. — Cloud Evolvers. {t.footer?.rights || 'All rights reserved.'}
+            © {year} Spot Cloud B.V. — Cloud Evolvers. KvK 89708873. {t.footer?.rights || 'All rights reserved.'}
           </span>
           <span className="font-mono">
             {getVersionString()} · {buildInfo.buildDate}
