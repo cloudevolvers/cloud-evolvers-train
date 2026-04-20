@@ -74,3 +74,4 @@ backup-original-images/
 
 # Git worktrees
 .worktrees/
+.superpowers/
