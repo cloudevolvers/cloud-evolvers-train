@@ -1,209 +1,250 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Funnel } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Warning } from '@phosphor-icons/react';
 import { getAllTrainings as getAllJSONTrainings } from '@/data/training-json';
 import type { TrainingJSON } from '@/data/training-json/types';
 import { useTranslations } from '@/hooks/use-translations';
-import {
-  TrainingFilters,
-  TrainingCard,
-  type CombinedTraining,
-  type FilterState
-} from '@/components/training/overview';
 import { SEO, PAGE_SEO } from '@/components/SEO';
-import WhyCloudEvolvers from '@/components/training/WhyCloudEvolvers';
-import { PageHeroBg } from '@/components/PageHeroBg';
-import { BackgroundIcons } from '@/components/BackgroundIcons';
+import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
+
+interface TrainingItem {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  level: string;
+  days: number;
+  hours: number;
+  featured?: boolean;
+  examCode?: string;
+  retired?: { date: string; successor?: string };
+}
+
+function toItem(t: TrainingJSON): TrainingItem {
+  return {
+    slug: t.slug,
+    title: t.title,
+    description: t.description,
+    category: t.category,
+    level: t.difficulty,
+    days: t.duration.days,
+    hours: t.duration.hours ?? 0,
+    featured: t.featured,
+    examCode: t.certification?.examCode,
+    retired: t.retired,
+  };
+}
+
+function retirementStatus(retired?: { date: string; successor?: string }) {
+  if (!retired) return null;
+  const date = new Date(retired.date);
+  const isRetired = date <= new Date();
+  const label = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  return { isRetired, label };
+}
 
 const TrainingOverviewPage: React.FC = () => {
-  const [filterState, setFilterState] = useState<FilterState>({
-    searchTerm: '',
-    selectedCategory: 'all',
-    selectedLevel: 'all',
-    featuredOnly: false,
-    certificationOnly: false,
-    sortBy: 'title'
-  });
-
-  const [allTrainings, setAllTrainings] = useState<CombinedTraining[]>([]);
-  const { t } = useTranslations();
+  const [all, setAll] = useState<TrainingItem[]>([]);
+  const [category, setCategory] = useState<string>('all');
+  const [query, setQuery] = useState<string>('');
+  const { isDutch } = useTranslations();
 
   useEffect(() => {
     try {
-      const jsonTrainings = getAllJSONTrainings();
-      const convertedTrainings: CombinedTraining[] = jsonTrainings.map((t: TrainingJSON) => ({
-        id: t.id,
-        slug: t.slug,
-        title: t.title,
-        description: t.description,
-        category: t.category,
-        level: t.difficulty,
-        duration: { days: t.duration.days, hours: t.duration.hours ?? 0, format: t.duration.format },
-        featured: t.featured,
-        icon: t.icon,
-        learningObjectives: t.learningObjectives.map(obj => obj.description),
-        prerequisites: t.prerequisites,
-        targetAudience: t.targetAudience,
-        certification: t.certification ? {
-          available: t.certification.available,
-          examCode: t.certification.examCode,
-          examName: t.certification.name,
-        } : undefined,
-        retired: t.retired,
-        tags: t.tags,
-        maxParticipants: t.maxParticipants,
-        instructor: {
-          name: t.instructor.name,
-          title: t.instructor.title,
-          certifications: t.instructor.certifications,
-        },
-      }));
-      setAllTrainings(convertedTrainings);
-    } catch (error) {
-      console.error('Error loading trainings:', error);
-      setAllTrainings([]);
+      setAll(getAllJSONTrainings().map(toItem));
+    } catch {
+      setAll([]);
     }
   }, []);
 
-  const filteredTrainings = useMemo(() => {
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    all.forEach((t) => set.add(t.category));
+    return Array.from(set).sort();
+  }, [all]);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
     const now = Date.now();
-    const filtered = allTrainings.filter(training => {
-      const searchMatch = !filterState.searchTerm ||
-        training.title.toLowerCase().includes(filterState.searchTerm.toLowerCase()) ||
-        training.description.toLowerCase().includes(filterState.searchTerm.toLowerCase()) ||
-        training.tags?.some(tag => tag.toLowerCase().includes(filterState.searchTerm.toLowerCase()));
-
-      const categoryMatch = filterState.selectedCategory === 'all' || training.category === filterState.selectedCategory;
-      const levelMatch = filterState.selectedLevel === 'all' || training.level === filterState.selectedLevel;
-      const featuredMatch = !filterState.featuredOnly || training.featured;
-      const certificationMatch = !filterState.certificationOnly || training.certification?.available;
-
-      return searchMatch && categoryMatch && levelMatch && featuredMatch && certificationMatch;
-    });
-
-    filtered.sort((a, b) => {
-      const aRetired = a.retired ? (new Date(a.retired.date).getTime() <= now ? 2 : 1) : 0;
-      const bRetired = b.retired ? (new Date(b.retired.date).getTime() <= now ? 2 : 1) : 0;
-      if (aRetired !== bRetired) return aRetired - bRetired;
-
-      if (filterState.sortBy === 'level') {
-        const levelOrder = { 'Beginner': 1, 'Intermediate': 2, 'Advanced': 3, 'Expert': 4 };
-        return (levelOrder[a.level] || 0) - (levelOrder[b.level] || 0);
-      } else if (filterState.sortBy === 'duration') {
-        const daysA = a.duration?.days || 0;
-        const daysB = b.duration?.days || 0;
-        return daysA - daysB;
-      }
-      return a.title.localeCompare(b.title);
-    });
-
-    return filtered;
-  }, [allTrainings, filterState]);
-
-  const categoryStats = useMemo(() => {
-    const stats: Record<string, number> = {};
-    allTrainings.forEach(training => {
-      stats[training.category] = (stats[training.category] || 0) + 1;
-    });
-    return stats;
-  }, [allTrainings]);
-
-  const formatDuration = (duration: { days: number; hours: number }) => {
-    const days = duration?.days || 0;
-    const hours = duration?.hours || 0;
-    return days > 0 ? `${days} ${days === 1 ? 'day' : 'days'}` : `${hours} hours`;
-  };
-
-  const clearFilters = () => {
-    setFilterState({
-      searchTerm: '',
-      selectedCategory: 'all',
-      selectedLevel: 'all',
-      featuredOnly: false,
-      certificationOnly: false,
-      sortBy: 'title'
-    });
-  };
+    return all
+      .filter((t) => (category === 'all' ? true : t.category === category))
+      .filter((t) =>
+        q
+          ? t.title.toLowerCase().includes(q) ||
+            t.description.toLowerCase().includes(q) ||
+            (t.examCode?.toLowerCase().includes(q) ?? false)
+          : true
+      )
+      .sort((a, b) => {
+        const aRet = a.retired && new Date(a.retired.date).getTime() <= now ? 1 : 0;
+        const bRet = b.retired && new Date(b.retired.date).getTime() <= now ? 1 : 0;
+        if (aRet !== bRet) return aRet - bRet;
+        return a.title.localeCompare(b.title);
+      });
+  }, [all, category, query]);
 
   return (
-    <div className="relative min-h-screen pt-28 md:pt-32 pb-12 bg-background">
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.training} />
-      <PageHeroBg />
-      <BackgroundIcons variant="training" />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-            {t?.training?.overview?.title || 'Training Courses'}
-          </h1>
-          <div className="mb-4 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
-          <p className="text-muted-foreground max-w-2xl">
-            {t?.training?.overview?.subtitle || 'Azure & Microsoft courses by certified trainers'}
-          </p>
-        </div>
+      <section className="pt-20 sm:pt-28 pb-12">
+        <Wrap>
+          <Eyebrow accent>{isDutch ? 'Trainingen' : 'Training'}</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
+            {isDutch ? (
+              <>
+                Azure en Microsoft 365,{' '}
+                <span className="ed-display-italic">gegeven door iemand die ze draait.</span>
+              </>
+            ) : (
+              <>
+                Azure and Microsoft 365,{' '}
+                <span className="ed-display-italic">taught by someone who runs them.</span>
+              </>
+            )}
+          </Display>
+          <Lede className="mt-7">
+            {isDutch
+              ? 'Elke cursus wordt persoonlijk door Yaïr gegeven, in kleine groepen, met live Azure-labs. Geen content-bibliotheek, geen onderaannemers.'
+              : 'Every course is delivered personally by Yaïr, in small groups, in live Azure labs. No content library, no subcontractors.'}
+          </Lede>
+        </Wrap>
+      </section>
 
-        <WhyCloudEvolvers />
-
-        {/* Filters */}
-        <TrainingFilters
-          filterState={filterState}
-          setSearchTerm={(value) => setFilterState(prev => ({ ...prev, searchTerm: value }))}
-          setSelectedCategory={(value) => setFilterState(prev => ({ ...prev, selectedCategory: value }))}
-          setSelectedLevel={(value) => setFilterState(prev => ({ ...prev, selectedLevel: value }))}
-          setFeaturedOnly={(value) => setFilterState(prev => ({ ...prev, featuredOnly: value }))}
-          setCertificationOnly={(value) => setFilterState(prev => ({ ...prev, certificationOnly: value }))}
-          setSortBy={(value) => setFilterState(prev => ({ ...prev, sortBy: value }))}
-          allTrainings={allTrainings}
-          categoryStats={categoryStats}
-          clearFilters={clearFilters}
-          t={t}
-        />
-
-        {/* Results count */}
-        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
-          <Funnel size={14} />
-          <span>{filteredTrainings.length} of {allTrainings.length} courses{filterState.searchTerm && ` matching "${filterState.searchTerm}"`}</span>
-        </div>
-
-        {/* Course Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-12">
-          {filteredTrainings.map((training) => (
-            <TrainingCard
-              key={training.slug}
-              training={training}
-              formatDuration={formatDuration}
-              allTrainings={allTrainings}
-            />
-          ))}
-        </div>
-
-        {/* No Results */}
-        {filteredTrainings.length === 0 && (
-          <div className="text-center py-16">
-            <p className="text-muted-foreground mb-4">
-              No courses match your filters. Try broadening your search.
-            </p>
-            <Button onClick={clearFilters} variant="outline">
-              Clear Filters
-            </Button>
+      <section className="pb-6">
+        <Wrap>
+          <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6 py-5 border-y border-[color:var(--ed-rule)]">
+            <div className="flex-1">
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={isDutch ? 'Zoek op titel, onderwerp of examencode' : 'Search by title, topic, or exam code'}
+                className="w-full bg-transparent text-[15px] text-[color:var(--ed-ink)] placeholder:text-[color:var(--ed-ink-3)] border-0 focus:outline-none focus:ring-0 py-2"
+              />
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              <button
+                onClick={() => setCategory('all')}
+                className={`ed-eyebrow px-3 py-1.5 rounded-full border transition ${
+                  category === 'all'
+                    ? 'bg-[color:var(--ed-ink)] text-white border-[color:var(--ed-ink)]'
+                    : 'border-[color:var(--ed-rule)] text-[color:var(--ed-ink-2)] hover:border-[color:var(--ed-ink)]'
+                }`}
+              >
+                {isDutch ? 'Alles' : 'All'}
+              </button>
+              {categories.map((c) => (
+                <button
+                  key={c}
+                  onClick={() => setCategory(c)}
+                  className={`ed-eyebrow px-3 py-1.5 rounded-full border transition ${
+                    category === c
+                      ? 'bg-[color:var(--ed-ink)] text-white border-[color:var(--ed-ink)]'
+                      : 'border-[color:var(--ed-rule)] text-[color:var(--ed-ink-2)] hover:border-[color:var(--ed-ink)]'
+                  }`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
           </div>
-        )}
-
-        {/* Contact CTA */}
-        {filteredTrainings.length > 0 && (
-          <div className="border border-border rounded-lg p-8 text-center mt-8">
-            <h2 className="text-xl font-semibold mb-2 text-foreground">Need help choosing?</h2>
-            <p className="text-muted-foreground mb-4">
-              We can help you find the right course for your team's goals and experience level.
-            </p>
-            <Link to="/contact">
-              <Button variant="outline">Get in touch</Button>
-            </Link>
+          <div className="mt-5 text-[13px] font-mono text-[color:var(--ed-ink-3)]">
+            {filtered.length} / {all.length} {isDutch ? 'trainingen' : 'courses'}
           </div>
-        )}
-      </div>
+        </Wrap>
+      </section>
+
+      <section className="pb-20 sm:pb-28">
+        <Wrap>
+          {filtered.length === 0 ? (
+            <div className="py-20 text-center">
+              <p className="text-[15px] text-[color:var(--ed-ink-2)]">
+                {isDutch ? 'Geen trainingen gevonden.' : 'No courses match your search.'}
+              </p>
+              <button
+                onClick={() => {
+                  setCategory('all');
+                  setQuery('');
+                }}
+                className="mt-4 ed-eyebrow text-[color:var(--ed-accent)] hover:underline"
+              >
+                {isDutch ? 'Wis filters' : 'Clear filters'}
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[color:var(--ed-rule)] border border-[color:var(--ed-rule)] rounded-[6px] overflow-hidden">
+              {filtered.map((t) => {
+                const retirement = retirementStatus(t.retired);
+                return (
+                  <Link
+                    key={t.slug}
+                    to={`/training/${t.slug}`}
+                    className={`group bg-[color:var(--ed-card)] p-7 flex flex-col min-h-[280px] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                        {t.examCode || t.category}
+                      </span>
+                      {retirement && (
+                        <span className="ed-eyebrow inline-flex items-center gap-1 text-[color:var(--ed-ink-3)]">
+                          <Warning size={10} weight="regular" />
+                          {retirement.isRetired
+                            ? (isDutch ? 'Uitgefaseerd' : 'Retired')
+                            : `${isDutch ? 'Stopt' : 'Retires'} ${retirement.label}`}
+                        </span>
+                      )}
+                    </div>
+                    <h2 className="mt-5 ed-display text-[22px] text-[color:var(--ed-ink)] leading-tight">
+                      {t.title}
+                    </h2>
+                    <p className="mt-3 text-[14px] leading-relaxed text-[color:var(--ed-ink-2)] line-clamp-3">
+                      {t.description}
+                    </p>
+                    <div className="mt-auto pt-6 flex items-center justify-between border-t border-[color:var(--ed-rule)]">
+                      <span className="text-[13px] text-[color:var(--ed-ink-2)]">
+                        {t.days > 0
+                          ? `${t.days} ${t.days === 1 ? (isDutch ? 'dag' : 'day') : (isDutch ? 'dagen' : 'days')}`
+                          : `${t.hours}h`}
+                        {' · '}
+                        <span className="text-[color:var(--ed-ink-3)]">{t.level}</span>
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </Wrap>
+      </section>
+
+      <section className="py-16 bg-[color:var(--ed-bg-2)] border-y border-[color:var(--ed-rule)]">
+        <Wrap>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <Eyebrow>{isDutch ? 'Niet zeker welke cursus' : 'Not sure which course'}</Eyebrow>
+              <Display as="h2" size="sm" className="mt-3">
+                {isDutch ? 'We helpen je kiezen.' : 'We will help you pick.'}
+              </Display>
+              <p className="mt-4 text-[15px] leading-relaxed text-[color:var(--ed-ink-2)] max-w-md">
+                {isDutch
+                  ? 'Vertel ons over de rollen en het ervaringsniveau van je team. Wij stellen een traject voor.'
+                  : 'Tell us the roles and experience level on your team. We propose a track.'}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
+              <EdButton to="/services" variant="ghost" size="lg">
+                {isDutch ? 'Bekijk diensten' : 'Browse services'}
+              </EdButton>
+              <EdButton to="/contact" variant="primary" size="lg">
+                {isDutch ? 'Neem contact op' : 'Get in touch'}
+                <ArrowRight className="w-4 h-4" />
+              </EdButton>
+            </div>
+          </div>
+        </Wrap>
+      </section>
     </div>
   );
 };
