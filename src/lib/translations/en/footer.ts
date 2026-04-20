@@ -28,5 +28,7 @@ export default {
   yourEmail: "Your Email",
   howCanWeHelp: "How can we help you?",
   sending: "Sending...",
-  sendMessage: "Send Message"
+  sendMessage: "Send Message",
+  tagline: "Microsoft Certified Azure and M365 training, delivered live by MCTs.",
+  explore: "Explore"
 }

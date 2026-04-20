@@ -1,226 +1,188 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Envelope, Phone, WhatsappLogo, CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import { getBuildInfo, getVersionString } from '../lib/version';
-import { Heart, MapPin, Star, PaperPlaneTilt, CheckCircle, WarningCircle, Envelope, Phone, WhatsappLogo } from '@phosphor-icons/react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/use-translations';
 import { useLanguageContext } from '@/contexts/LanguageContext';
+import { Wrap, LogoMark, EdButton, Eyebrow } from '@/components/editorial';
 
 const Footer: React.FC = () => {
   const buildInfo = getBuildInfo();
   const { t } = useTranslations();
   const { language } = useLanguageContext();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-
+    setStatus('idle');
     try {
       const response = await fetch('/api/submit-contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
+          name: form.name,
+          email: form.email,
+          message: form.message,
           source: 'footer-contact-form',
-          language
+          language,
         }),
       });
-
       if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setSubmitStatus('idle'), 5000);
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
       } else {
-        setSubmitStatus('error');
+        setStatus('error');
       }
-    } catch (error) {
-      console.error('Error submitting contact form:', error);
-      setSubmitStatus('error');
+    } catch {
+      setStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim();
+  const valid = form.name.trim() && form.email.trim() && form.message.trim();
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-900 py-12 relative z-10">
-      <div className="max-w-[120rem] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-10">
-
-          {/* Contact Info & Links */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">{t.footer?.contact || 'Contact'}</h3>
-              <div className="space-y-3 text-brand-300">
-                <a
-                  href="mailto:training@cloudevolvers.com"
-                  className="flex items-center gap-2 hover:text-white transition-colors"
-                >
-                  <Envelope className="w-4 h-4" />
-                  training@cloudevolvers.com
-                </a>
-                <a
-                  href="tel:+31634272027"
-                  className="flex items-center gap-2 hover:text-white transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  +31 6 34272027
-                </a>
-                <a
-                  href="https://wa.me/31634272027"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-green-400 transition-colors"
-                >
-                  <WhatsappLogo className="w-4 h-4" weight="fill" />
-                  WhatsApp
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold text-white mb-4">{t.footer?.legal || 'Legal'}</h3>
-              <div className="space-y-2">
-                <Link
-                  to="/privacy-policy"
-                  className="block text-brand-300 hover:text-white transition-colors"
-                >
-                  {t.footer?.privacyPolicy || 'Privacy Policy'}
-                </Link>
-                <Link
-                  to="/terms-of-service"
-                  className="block text-brand-300 hover:text-white transition-colors"
-                >
-                  {t.footer?.termsOfService || 'Terms of Service'}
-                </Link>
-                <Link
-                  to="/cookie-policy"
-                  className="block text-brand-300 hover:text-white transition-colors"
-                >
-                  {t.footer?.cookiePolicy || 'Cookie Policy'}
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form Section */}
-          <div className="lg:col-span-2 pt-6 lg:pt-0 border-t border-white/10 lg:border-t-0">
-            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <Envelope className="w-5 h-5 text-brand-300" />
-              {t.footer?.getInTouch || 'Get in Touch'}
-            </h3>
-
-            {submitStatus === 'success' ? (
-              <div className="flex items-center gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
-                <CheckCircle className="w-6 h-6 text-green-600" weight="fill" />
-                <div>
-                  <p className="font-medium text-green-800">{t.footer?.messageSent || 'Message Sent!'}</p>
-                  <p className="text-sm text-green-600">{t.footer?.messageSuccess || "We'll get back to you within 24 hours."}</p>
-                </div>
-              </div>
-            ) : submitStatus === 'error' ? (
-              <div className="flex items-center gap-3 p-4 bg-red-50 rounded-lg border border-red-200 mb-4">
-                <WarningCircle className="w-6 h-6 text-red-600" weight="fill" />
-                <div>
-                  <p className="font-medium text-red-800">{t.footer?.somethingWentWrong || 'Something went wrong'}</p>
-                  <p className="text-sm text-red-600">{t.footer?.tryAgainOrEmail || 'Please try again or email us directly.'}</p>
-                </div>
-              </div>
-            ) : null}
-
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input
-                placeholder={t.footer?.yourName || 'Your Name'}
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="bg-white/10 border-white/20 text-white placeholder:text-brand-400"
-                required
-              />
-              <Input
-                type="email"
-                placeholder={t.footer?.yourEmail || 'Your Email'}
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="bg-white/10 border-white/20 text-white placeholder:text-brand-400"
-                required
-              />
-              <Textarea
-                placeholder={t.footer?.howCanWeHelp || 'How can we help you?'}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="sm:col-span-2 bg-white/10 border-white/20 text-white placeholder:text-brand-400 min-h-[80px]"
-                required
-              />
-              <div className="sm:col-span-2">
-                <Button
-                  type="submit"
-                  disabled={!isFormValid || isSubmitting}
-                  className="w-full sm:w-auto bg-white hover:bg-brand-100 text-brand-900"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      {t.footer?.sending || 'Sending...'}
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      <PaperPlaneTilt className="w-4 h-4" weight="fill" />
-                      {t.footer?.sendMessage || 'Send Message'}
-                    </span>
-                  )}
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="text-brand-300 flex flex-col items-center gap-2 text-center">
-            <div className="flex items-center gap-2">
-              <Heart size={16} className="text-red-400" />
-              <span>© {new Date().getFullYear()} Spot Cloud B.V. (Cloud Evolvers). {t.footer?.rights || 'All rights reserved.'}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <MapPin size={14} className="text-emerald-400" />
-              <span>{t.footer?.madeInNetherlands || 'Proudly made in the Netherlands.'}</span>
-            </div>
-
-            {/* Build Info (hidden in production, visible when text selected) */}
-            <div className={`flex items-center gap-2 mt-1 ${buildInfo.environment === 'production'
-              ? 'text-brand-900 selection:text-brand-200 selection:bg-brand-700'
-              : 'text-brand-400'}`}>
-              <Star size={12} className={buildInfo.environment === 'production'
-                ? 'text-brand-900'
-                : 'text-yellow-500'} />
-              <span className="font-mono text-xs">
-                {getVersionString()} • Built {buildInfo.buildDay} {buildInfo.buildDate} @ {buildInfo.buildTime}
+    <footer className="bg-[color:var(--ed-bg-2)] border-t border-[color:var(--ed-rule)] mt-24 relative z-10">
+      <Wrap>
+        <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div className="md:col-span-4 space-y-5">
+            <Link to="/" className="inline-flex items-center gap-2.5">
+              <LogoMark />
+              <span className="ed-display text-[20px] text-[color:var(--ed-ink)]">
+                Cloud Evolvers
               </span>
-              {buildInfo.environment !== 'production' && (
-                <span className="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full border border-yellow-300 text-xs">
-                  {buildInfo.environment.toUpperCase()}
-                </span>
-              )}
+            </Link>
+            <p className="ed-lede text-[15px] max-w-[320px]">
+              {t.footer?.tagline || 'Microsoft Certified Azure and M365 training, delivered live by MCTs.'}
+            </p>
+
+            <div className="space-y-2 text-[14px] text-[color:var(--ed-ink-2)]">
+              <a
+                href="mailto:training@cloudevolvers.com"
+                className="flex items-center gap-2 hover:text-[color:var(--ed-ink)]"
+              >
+                <Envelope className="w-4 h-4" />
+                training@cloudevolvers.com
+              </a>
+              <a
+                href="tel:+31634272027"
+                className="flex items-center gap-2 hover:text-[color:var(--ed-ink)]"
+              >
+                <Phone className="w-4 h-4" />
+                +31 6 34272027
+              </a>
+              <a
+                href="https://wa.me/31634272027"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-[color:var(--ed-ink)]"
+              >
+                <WhatsappLogo className="w-4 h-4" weight="fill" />
+                WhatsApp
+              </a>
             </div>
           </div>
+
+          <div className="md:col-span-2">
+            <Eyebrow>{t.footer?.explore || 'Explore'}</Eyebrow>
+            <ul className="mt-4 space-y-2 text-[14px] text-[color:var(--ed-ink-2)]">
+              <li><Link to="/training" className="hover:text-[color:var(--ed-ink)]">{t.nav?.training || 'Training'}</Link></li>
+              <li><Link to="/services" className="hover:text-[color:var(--ed-ink)]">{t.nav?.services || 'Services'}</Link></li>
+              <li><Link to="/blog" className="hover:text-[color:var(--ed-ink)]">{t.nav?.blog || 'Blog'}</Link></li>
+              <li><Link to="/about" className="hover:text-[color:var(--ed-ink)]">{t.nav?.about || 'About'}</Link></li>
+              <li><Link to="/contact" className="hover:text-[color:var(--ed-ink)]">{t.nav?.contact || 'Contact'}</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <Eyebrow>{t.footer?.legal || 'Legal'}</Eyebrow>
+            <ul className="mt-4 space-y-2 text-[14px] text-[color:var(--ed-ink-2)]">
+              <li><Link to="/privacy-policy" className="hover:text-[color:var(--ed-ink)]">{t.footer?.privacyPolicy || 'Privacy Policy'}</Link></li>
+              <li><Link to="/terms-of-service" className="hover:text-[color:var(--ed-ink)]">{t.footer?.termsOfService || 'Terms of Service'}</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-[color:var(--ed-ink)]">{t.footer?.cookiePolicy || 'Cookie Policy'}</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-4">
+            <Eyebrow>{t.footer?.getInTouch || 'Get in touch'}</Eyebrow>
+            {status === 'success' ? (
+              <div className="mt-4 flex items-center gap-3 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm">
+                <CheckCircle className="w-5 h-5 text-emerald-600" weight="fill" />
+                <div>
+                  <p className="font-medium text-emerald-800">{t.footer?.messageSent || 'Message sent'}</p>
+                  <p className="text-emerald-700">{t.footer?.messageSuccess || "We'll reply within 24 hours."}</p>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="mt-4 space-y-2">
+                {status === 'error' && (
+                  <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-2.5 text-sm text-red-800">
+                    <WarningCircle className="w-4 h-4" weight="fill" />
+                    {t.footer?.somethingWentWrong || 'Something went wrong — please email us.'}
+                  </div>
+                )}
+                <div className="grid grid-cols-2 gap-2">
+                  <Input
+                    placeholder={t.footer?.yourName || 'Name'}
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    required
+                    className="bg-white border-[color:var(--ed-rule)]"
+                  />
+                  <Input
+                    type="email"
+                    placeholder={t.footer?.yourEmail || 'Email'}
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    required
+                    className="bg-white border-[color:var(--ed-rule)]"
+                  />
+                </div>
+                <Textarea
+                  placeholder={t.footer?.howCanWeHelp || 'How can we help?'}
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  required
+                  className="bg-white border-[color:var(--ed-rule)] min-h-[80px]"
+                />
+                <EdButton
+                  variant="primary"
+                  size="md"
+                  type="submit"
+                  disabled={!valid || isSubmitting}
+                  className="w-full justify-center"
+                >
+                  {isSubmitting
+                    ? t.footer?.sending || 'Sending…'
+                    : t.footer?.sendMessage || 'Send message'}
+                </EdButton>
+              </form>
+            )}
+          </div>
         </div>
-      </div>
+
+        <div className="py-6 border-t border-[color:var(--ed-rule)] flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-[color:var(--ed-ink-3)]">
+          <span>
+            © {year} Spot Cloud B.V. — Cloud Evolvers. {t.footer?.rights || 'All rights reserved.'}
+          </span>
+          <span className="font-mono">
+            {getVersionString()} · {buildInfo.buildDate}
+            {buildInfo.environment !== 'production' && (
+              <span className="ml-2 rounded bg-amber-100 px-1.5 py-0.5 text-amber-800">
+                {buildInfo.environment.toUpperCase()}
+              </span>
+            )}
+          </span>
+        </div>
+      </Wrap>
     </footer>
   );
 };
