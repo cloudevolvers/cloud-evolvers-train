@@ -1,102 +1,123 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "@phosphor-icons/react";
-import { Card, CardContent } from "@/components/ui/card";
-import { useTranslations } from "@/hooks/use-translations";
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from '@phosphor-icons/react';
+import { useTranslations } from '@/hooks/use-translations';
+import { Wrap, Eyebrow, Display } from '@/components/editorial';
 
 export function PrivacyPolicyPage() {
-  const { t } = useTranslations();
+  const { t, isDutch } = useTranslations();
+  const lastUpdated = new Date('2026-04-20').toLocaleDateString(isDutch ? 'nl-NL' : 'en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
   return (
-    <div className="min-h-screen pt-24 bg-background">
-      <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
-        <Link
-          to="/"
-          className="inline-flex items-center mb-6 text-sm text-green-500 hover:text-green-600 transition-colors"
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          {t.legal?.backToHome || 'Back to Home'}
-        </Link>
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
+      <section className="pt-20 sm:pt-28 pb-10">
+        <Wrap>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1.5 text-[13px] text-[color:var(--ed-ink-3)] hover:text-[color:var(--ed-ink)] mb-8"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            {t.legal?.backToHome || (isDutch ? 'Terug naar home' : 'Back to home')}
+          </Link>
+          <Eyebrow accent>{isDutch ? 'Juridisch' : 'Legal'}</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-2xl">
+            {t.legal?.privacyPolicy || 'Privacy policy'}
+          </Display>
+          <p className="mt-6 ed-eyebrow text-[color:var(--ed-ink-3)]">
+            {t.legal?.lastUpdated || 'Last updated'} {lastUpdated}
+          </p>
+        </Wrap>
+      </section>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Card>
-            <CardContent className="p-8">
-              <h1 className="text-green-600 dark:text-green-400 font-bold mb-8">{t.legal?.privacyPolicy || 'Privacy Policy'}</h1>
+      <section className="pb-20 sm:pb-28">
+        <Wrap>
+          <div className="max-w-2xl text-[16px] leading-relaxed text-[color:var(--ed-ink-2)] space-y-8">
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">1. Introduction</h2>
+              <p>
+                Cloud Evolvers is operated by Spot Cloud B.V., registered in the Netherlands
+                under KvK 89708873. We respect your privacy and are committed to protecting
+                your personal data. This policy explains how we handle personal data when you
+                visit our website and what rights you have under applicable law.
+              </p>
+            </div>
 
-              <div className="prose-invert max-w-none">
-                <p className="text-muted-foreground mb-6">{t.legal?.lastUpdated || 'Last updated:'} {new Date().toLocaleDateString()}</p>
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">2. Data we collect</h2>
+              <p>We may collect the following categories of personal data:</p>
+              <ul className="mt-3 space-y-2 list-disc pl-5">
+                <li><strong className="text-[color:var(--ed-ink)]">Identity data</strong>: name and any identifier you provide in contact forms.</li>
+                <li><strong className="text-[color:var(--ed-ink)]">Contact data</strong>: email address, phone number, company name.</li>
+                <li><strong className="text-[color:var(--ed-ink)]">Technical data</strong>: IP address, browser type, operating system, device information.</li>
+                <li><strong className="text-[color:var(--ed-ink)]">Usage data</strong>: how you navigate the website and interact with its content.</li>
+              </ul>
+            </div>
 
-                <h2>1. Introduction</h2>
-                <p>
-                  At Cloud Evolvers (operated by Spot Cloud B.V.), we respect your privacy and are committed to protecting your personal data.
-                  This privacy policy will inform you about how we look after your personal data when you visit
-                  our website and tell you about your privacy rights and how the law protects you.
-                </p>
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">3. How we use your data</h2>
+              <p>We only process personal data when the law allows. The main grounds we rely on are:</p>
+              <ul className="mt-3 space-y-2 list-disc pl-5">
+                <li>Performing a contract we have entered into with you.</li>
+                <li>Pursuing our legitimate interests, where these do not override your rights.</li>
+                <li>Complying with a legal or regulatory obligation.</li>
+              </ul>
+            </div>
 
-                <h2>2. Data We Collect</h2>
-                <p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>
-                <ul>
-                  <li><strong>Identity Data</strong> includes first name, last name, username or similar identifier.</li>
-                  <li><strong>Contact Data</strong> includes billing address, delivery address, email address and telephone numbers.</li>
-                  <li><strong>Technical Data</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
-                  <li><strong>Usage Data</strong> includes information about how you use our website, products and services.</li>
-                </ul>
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">4. Data sharing</h2>
+              <p>
+                We do not sell your personal data. We may share it with service providers that
+                help us run the website and training operations, and with authorities where
+                required by law.
+              </p>
+            </div>
 
-                <h2>3. How We Use Your Data</h2>
-                <p>
-                  We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:
-                </p>
-                <ul>
-                  <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
-                  <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
-                  <li>Where we need to comply with a legal or regulatory obligation.</li>
-                </ul>
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">5. Data security</h2>
+              <p>
+                We keep access to personal data limited to people who need it to do their work,
+                and we review our technical and organisational measures on a regular basis.
+              </p>
+            </div>
 
-                <h2>4. Data Sharing</h2>
-                <p>
-                  We may share your personal data with the parties set out below for the purposes set out in the table in paragraph 3 above:
-                </p>
-                <ul>
-                  <li>Internal Third Parties as set out in the Glossary.</li>
-                  <li>External Third Parties as set out in the Glossary.</li>
-                  <li>Third parties to whom we may choose to sell, transfer, or merge parts of our business or our assets.</li>
-                </ul>
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">6. Cookies</h2>
+              <p>
+                We use cookies only to maintain session state and improve your experience on
+                the site. We do not use tracking or advertising cookies.
+              </p>
+            </div>
 
-                <h2>5. Data Security</h2>
-                <p>
-                  We have put in place appropriate security measures to prevent your personal data from being accidentally lost,
-                  used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your personal
-                  data to those employees, agents, contractors and other third parties who have a business need to know.
-                </p>
+            <div>
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">7. Changes to this policy</h2>
+              <p>
+                When we update this policy, we update the date at the top of the page. For
+                material changes, we may post a visible notice on the site.
+              </p>
+            </div>
 
-                <h2>6. Cookies</h2>
-                <p>
-                  We use cookies solely for maintaining session states and improving your user experience.
-                  Unlike many websites, we do not use cookies for tracking your online activities or for advertising purposes.
-                  We respect your privacy and only collect the minimum amount of information needed to provide our services effectively.
-                </p>
-
-                <h2>7. Changes to This Privacy Policy</h2>
-                <p>
-                  We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-                  We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "last updated" date at the top of this Privacy Policy.
-                </p>
-
-                <h2>8. Contact Us</h2>
-                <p>
-                  If you have any questions about this Privacy Policy, please contact us at{' '}
-                  <a href="mailto:privacy@cloudevolvers.com" className="text-green-600 dark:text-green-500 hover:underline">
-                    privacy@cloudevolvers.com
-                  </a>
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
+            <div className="pt-6 border-t border-[color:var(--ed-rule)]">
+              <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">8. Contact</h2>
+              <p>
+                Questions about this privacy policy can be sent to{' '}
+                <a
+                  href="mailto:privacy@cloudevolvers.com"
+                  className="text-[color:var(--ed-ink)] underline-offset-4 hover:underline"
+                >
+                  privacy@cloudevolvers.com
+                </a>
+                .
+              </p>
+              <p className="mt-4 font-mono text-[12px] text-[color:var(--ed-ink-3)]">
+                Spot Cloud B.V. · KvK 89708873 · {isDutch ? 'Gevestigd in Nederland' : 'Based in the Netherlands'}
+              </p>
+            </div>
+          </div>
+        </Wrap>
+      </section>
     </div>
   );
 }

@@ -1,114 +1,70 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowLeft, House, MagnifyingGlass, GraduationCap } from '@phosphor-icons/react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight } from '@phosphor-icons/react';
 import { useTranslations } from '@/hooks/use-translations';
+import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 
 export function NotFound() {
-  const { t } = useTranslations();
+  const { t, isDutch } = useTranslations();
+
   return (
-    <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-16">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-2xl mx-auto text-center"
-      >
-        <Card className="border-2 border-dashed border-muted-foreground/20 bg-card/50 backdrop-blur-sm">
-          <CardContent className="pt-12 pb-10 px-8">
-            {/* 404 Icon */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center"
-            >
-              <MagnifyingGlass className="w-12 h-12 text-primary" weight="regular" />
-            </motion.div>
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)] flex items-center">
+      <Wrap>
+        <div className="py-24 sm:py-32 max-w-3xl">
+          <Eyebrow accent>404</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02]">
+            {t.notFound?.pageNotFound || (isDutch ? 'Pagina niet gevonden' : 'Page not found')}
+          </Display>
+          <Lede className="mt-7">
+            {t.notFound?.description ||
+              (isDutch
+                ? 'De pagina die je zoekt bestaat niet of is verplaatst.'
+                : 'The page you are looking for does not exist or has moved.')}
+          </Lede>
 
-            {/* Error Code */}
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-8xl font-bold text-foreground mb-4"
-            >
-              404
-            </motion.h1>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <EdButton to="/" variant="primary" size="lg">
+              {t.notFound?.backToHome || (isDutch ? 'Terug naar home' : 'Back home')}
+              <ArrowRight className="w-4 h-4" />
+            </EdButton>
+            <EdButton to="/training" variant="ghost" size="lg">
+              {t.notFound?.browseTraining || (isDutch ? 'Bekijk trainingen' : 'Browse training')}
+            </EdButton>
+          </div>
 
-            {/* Error Message */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="mb-8"
-            >
-              <h2 className="text-3xl font-semibold text-foreground mb-4">
-                {t.notFound?.pageNotFound || 'Page Not Found'}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                {t.notFound?.description || "The page you're looking for doesn't exist or has been moved to a new location."}
-              </p>
-            </motion.div>
-
-            {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button asChild size="lg" className="group">
-                <Link to="/">
-                  <House className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  {t.notFound?.backToHome || 'Back to Home'}
-                </Link>
-              </Button>
-              
-              <Button asChild variant="outline" size="lg" className="group">
-                <Link to="/#training">
-                  <GraduationCap className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                  {t.notFound?.browseTraining || 'Browse Training'}
-                </Link>
-              </Button>
-            </motion.div>
-
-            {/* Helpful Links */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="mt-8 pt-8 border-t border-muted-foreground/20"
-            >
-              <p className="text-sm text-muted-foreground mb-4">
-                {t.notFound?.lookingForSomething || 'Looking for something specific?'}
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
+          <div className="mt-16 pt-10 border-t border-[color:var(--ed-rule)]">
+            <Eyebrow>
+              {t.notFound?.lookingForSomething ||
+                (isDutch ? 'Zoek je iets specifieks' : 'Looking for something specific')}
+            </Eyebrow>
+            <ul className="mt-5 space-y-2 text-[15px]">
+              <li>
                 <Link
                   to="/training/azure-fundamentals"
-                  className="text-primary hover:text-primary/80 transition-colors underline-offset-4 hover:underline"
+                  className="text-[color:var(--ed-ink)] hover:text-[color:var(--ed-accent)] underline-offset-4 hover:underline"
                 >
                   Azure Fundamentals (AZ-900)
                 </Link>
+              </li>
+              <li>
                 <Link
                   to="/training/azure-administrator"
-                  className="text-primary hover:text-primary/80 transition-colors underline-offset-4 hover:underline"
+                  className="text-[color:var(--ed-ink)] hover:text-[color:var(--ed-accent)] underline-offset-4 hover:underline"
                 >
                   Azure Administrator (AZ-104)
                 </Link>
+              </li>
+              <li>
                 <Link
-                  to="/#services"
-                  className="text-primary hover:text-primary/80 transition-colors underline-offset-4 hover:underline"
+                  to="/services"
+                  className="text-[color:var(--ed-ink)] hover:text-[color:var(--ed-accent)] underline-offset-4 hover:underline"
                 >
-                  {t.notFound?.ourServices || 'Our Services'}
+                  {t.notFound?.ourServices || (isDutch ? 'Onze diensten' : 'Our services')}
                 </Link>
-              </div>
-            </motion.div>
-          </CardContent>
-        </Card>
-      </motion.div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Wrap>
     </div>
   );
 }

@@ -1,134 +1,173 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowLeft, DownloadSimple, FilePdf } from "@phosphor-icons/react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useTranslations } from "@/hooks/use-translations";
+import { Link } from 'react-router-dom';
+import { ArrowLeft, DownloadSimple } from '@phosphor-icons/react';
+import { useTranslations } from '@/hooks/use-translations';
+import { Wrap, Eyebrow, Display } from '@/components/editorial';
 
 export function TermsOfServicePage() {
-  const { t } = useTranslations();
+  const { t, isDutch } = useTranslations();
+  const lastUpdated = new Date('2026-04-20').toLocaleDateString(isDutch ? 'nl-NL' : 'en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
   return (
-    <div className="min-h-screen pt-24 bg-background">
-      <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
-        <Link 
-          to="/" 
-          className="inline-flex items-center mb-6 text-sm text-green-500 hover:text-green-600 transition-colors"
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          {t.legal?.backToHome || 'Back to Home'}
-        </Link>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Card>
-            <CardContent className="p-8">
-              <h1 className="text-green-400 font-bold mb-8">{t.legal?.termsOfService || 'Terms of Service'}</h1>
-              
-              <div className="prose-invert max-w-none">
-                <p className="text-muted-foreground mb-2">{t.legal?.lastUpdated || 'Last updated:'} {new Date().toLocaleDateString()}</p>
-                <p className="text-sm text-muted-foreground mb-6">
-                  Cloud Evolvers is a company of <span className="text-green-400 font-semibold">Spot Cloud B.V.</span>
-                </p>
-                
-                {/* Download Section */}
-                <div className="bg-muted/20 p-6 rounded-lg mb-8 border border-green-500/20">
-                  <div className="flex items-center gap-2 mb-4">
-                    <FilePdf className="h-5 w-5 text-green-400" />
-                    <h3 className="text-lg font-semibold text-green-400 m-0">{t.legal?.downloadTerms || 'Download Terms of Service'}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {t.legal?.downloadDescription || 'Download the complete Terms of Service document in your preferred language:'}
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="border-green-500/50 hover:bg-green-500/10 hover:border-green-500"
-                    >
-                      <a 
-                        href="/Algemene voorwaardenSpotCloud.pdf" 
-                        download="SpotCloud-Terms-of-Service-NL.pdf"
-                        className="inline-flex items-center gap-2"
-                      >
-                        <DownloadSimple className="h-4 w-4" />
-                        Nederlands (Dutch)
-                      </a>
-                    </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="border-green-500/50 hover:bg-green-500/10 hover:border-green-500"
-                    >
-                      <a 
-                        href="/documents/terms-of-service-en.html" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2"
-                      >
-                        <DownloadSimple className="h-4 w-4" />
-                        English
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-                
-                <h2>1. Acceptance of Terms</h2>
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
+      <section className="pt-20 sm:pt-28 pb-10">
+        <Wrap>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1.5 text-[13px] text-[color:var(--ed-ink-3)] hover:text-[color:var(--ed-ink)] mb-8"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            {t.legal?.backToHome || (isDutch ? 'Terug naar home' : 'Back to home')}
+          </Link>
+          <Eyebrow accent>{isDutch ? 'Juridisch' : 'Legal'}</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-2xl">
+            {t.legal?.termsOfService || 'Terms of service'}
+          </Display>
+          <p className="mt-6 ed-eyebrow text-[color:var(--ed-ink-3)]">
+            {t.legal?.lastUpdated || 'Last updated'} {lastUpdated}
+          </p>
+        </Wrap>
+      </section>
+
+      <section className="pb-20 sm:pb-28">
+        <Wrap>
+          <div className="max-w-2xl space-y-8">
+            <div className="bg-[color:var(--ed-bg-2)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+              <Eyebrow>{t.legal?.downloadTerms || 'Download'}</Eyebrow>
+              <p className="mt-3 text-[14px] text-[color:var(--ed-ink-2)] leading-relaxed">
+                {t.legal?.downloadDescription ||
+                  (isDutch
+                    ? 'Download het volledige document in je voorkeurstaal.'
+                    : 'Download the full document in your preferred language.')}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <a
+                  href="/Algemene voorwaardenSpotCloud.pdf"
+                  download="SpotCloud-Terms-of-Service-NL.pdf"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] border border-[color:var(--ed-rule)] text-[color:var(--ed-ink)] hover:border-[color:var(--ed-ink)] transition"
+                >
+                  <DownloadSimple className="w-3.5 h-3.5" />
+                  Nederlands
+                </a>
+                <a
+                  href="/documents/terms-of-service-en.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] border border-[color:var(--ed-rule)] text-[color:var(--ed-ink)] hover:border-[color:var(--ed-ink)] transition"
+                >
+                  <DownloadSimple className="w-3.5 h-3.5" />
+                  English
+                </a>
+              </div>
+            </div>
+
+            <div className="text-[16px] leading-relaxed text-[color:var(--ed-ink-2)] space-y-8">
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">1. Acceptance of terms</h2>
                 <p>
-                  By accessing and using Cloud Evolvers services (operated by Spot Cloud B.V.), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with these terms, please do not use our services.
-                </p>
-                
-                <h2>2. Description of Services</h2>
-                <p>
-                  Spot Cloud B.V., operating under the Cloud Evolvers brand, provides Azure training, Microsoft 365 training, and cloud consulting services. Our services include but are not limited to Microsoft Certified Training (MCT), end-to-end implementations, automation solutions, and strategic consulting.
-                </p>
-                
-                <h2>3. User Obligations</h2>
-                <p>
-                  You agree to provide accurate, current, and complete information as required for using our services. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
-                </p>
-                
-                <h2>4. Intellectual Property Rights</h2>
-                <p>
-                  All content, features, and functionality within the Cloud Evolvers services, including but not limited to text, graphics, logos, and course materials are the exclusive property of Spot Cloud B.V. or its licensors and are protected by copyright, trademark, and other intellectual property laws.
-                </p>
-                
-                <h2>5. Data Protection and GDPR Compliance</h2>
-                <p>
-                  We are committed to protecting your personal data in accordance with applicable data protection laws, including the General Data Protection Regulation (GDPR). For details on how we collect, use, and protect your data, please refer to our <Link to="/privacy-policy" className="text-green-500 hover:underline">Privacy Policy</Link>.
-                </p>
-                
-                <h2>6. Right to Access and Data Portability</h2>
-                <p>
-                  In accordance with GDPR, you have the right to access, correct, or delete your personal data that we process. You may also request to receive your personal data in a structured, commonly used, machine-readable format.
-                </p>
-                
-                <h2>7. Limitation of Liability</h2>
-                <p>
-                  To the fullest extent permitted by applicable law, Spot Cloud B.V. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, resulting from your use of our services.
-                </p>
-                
-                <h2>8. Changes to Terms</h2>
-                <p>
-                  We reserve the right to modify these Terms of Service at any time. We will provide notice of any material changes through our website or by other means. Your continued use of our services after such modifications constitutes acceptance of the updated terms.
-                </p>
-                
-                <h2>9. Governing Law</h2>
-                <p>
-                  These Terms of Service are governed by and construed in accordance with the laws of the Netherlands, without regard to its conflict of law principles.
-                </p>
-                
-                <h2>10. {t.legal?.contactUs || 'Contact Us'}</h2>
-                <p>
-                  If you have any questions about these Terms of Service, please contact us at <a href="mailto:legal@cloudevolvers.com" className="text-green-500 hover:underline">legal@cloudevolvers.com</a>.
+                  By accessing Cloud Evolvers services, operated by Spot Cloud B.V. (KvK 89708873),
+                  you acknowledge that you have read, understood, and agree to be bound by these
+                  terms of service. If you do not agree, please do not use our services.
                 </p>
               </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">2. Description of services</h2>
+                <p>
+                  Spot Cloud B.V., operating under the Cloud Evolvers brand, provides Azure and
+                  Microsoft 365 training, Microsoft Certified Training (MCT) delivery, and cloud
+                  consulting, including implementation, automation, and strategic advisory.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">3. User obligations</h2>
+                <p>
+                  You agree to provide accurate, current, and complete information. You are
+                  responsible for keeping your credentials confidential and for all activity on
+                  your account.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">4. Intellectual property</h2>
+                <p>
+                  All content, features, and course materials are the property of Spot Cloud B.V.
+                  or its licensors and are protected by copyright, trademark, and other
+                  intellectual property laws.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">5. Data protection and GDPR</h2>
+                <p>
+                  We process personal data in accordance with the GDPR. For details, see our{' '}
+                  <Link to="/privacy-policy" className="text-[color:var(--ed-ink)] underline-offset-4 hover:underline">
+                    privacy policy
+                  </Link>
+                  .
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">6. Right to access and portability</h2>
+                <p>
+                  Under the GDPR, you have the right to access, correct, or delete personal data
+                  we hold about you, and to receive it in a structured, commonly used,
+                  machine-readable format.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">7. Limitation of liability</h2>
+                <p>
+                  To the fullest extent permitted by law, Spot Cloud B.V. is not liable for
+                  indirect, incidental, special, consequential, or punitive damages, including
+                  loss of profits, data, or business opportunities, arising from use of our
+                  services.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">8. Changes to these terms</h2>
+                <p>
+                  We may update these terms at any time. Material changes will be posted on the
+                  site. Continued use of our services after an update means you accept the
+                  updated terms.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">9. Governing law</h2>
+                <p>
+                  These terms are governed by the laws of the Netherlands, without regard to
+                  conflict of law principles.
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-[color:var(--ed-rule)]">
+                <h2 className="ed-display text-[22px] text-[color:var(--ed-ink)] mb-3">10. Contact</h2>
+                <p>
+                  Questions about these terms can be sent to{' '}
+                  <a
+                    href="mailto:legal@cloudevolvers.com"
+                    className="text-[color:var(--ed-ink)] underline-offset-4 hover:underline"
+                  >
+                    legal@cloudevolvers.com
+                  </a>
+                  .
+                </p>
+                <p className="mt-4 font-mono text-[12px] text-[color:var(--ed-ink-3)]">
+                  Spot Cloud B.V. · KvK 89708873 · {isDutch ? 'Gevestigd in Nederland' : 'Based in the Netherlands'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </Wrap>
+      </section>
     </div>
   );
 }
