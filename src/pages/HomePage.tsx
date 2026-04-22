@@ -1,23 +1,23 @@
-import { Hero } from "@/components/marketing/Hero";
-import { HomeProofSection } from "@/components/marketing/HomeProofSection";
-import { BentoFeatures } from "@/components/marketing/BentoFeatures";
-import { TrainingPathways } from "@/components/marketing/TrainingPathways";
-import { LatestBlogPosts } from "@/components/marketing/LatestBlogPosts";
-
-import { SEO, PAGE_SEO } from "@/components/SEO";
+import { SEO, PAGE_SEO } from '@/components/SEO';
+import { HeroEd } from '@/components/marketing/editorial/HeroEd';
+import { TrustStripEd } from '@/components/marketing/editorial/TrustStripEd';
+import { ProgramsPreviewEd } from '@/components/marketing/editorial/ProgramsPreviewEd';
+import { EnterprisePanelEd } from '@/components/marketing/editorial/EnterprisePanelEd';
+import { WhyEd } from '@/components/marketing/editorial/WhyEd';
+import { CTABandEd } from '@/components/marketing/editorial/CTABandEd';
 
 export default function HomePage() {
-    return (
-        <div className="bg-background min-h-screen text-foreground selection:bg-neutral-500/30 relative overflow-hidden">
-            <SEO {...PAGE_SEO.home} />
-
-            <main className="relative z-10 flex flex-col">
-                <Hero />
-                <HomeProofSection />
-                <BentoFeatures />
-                <LatestBlogPosts />
-                <TrainingPathways />
-            </main>
-        </div>
-    );
+  return (
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
+      <SEO {...PAGE_SEO.home} />
+      <main className="flex flex-col">
+        <HeroEd />
+        <TrustStripEd />
+        <ProgramsPreviewEd />
+        <EnterprisePanelEd />
+        <WhyEd />
+        <CTABandEd />
+      </main>
+    </div>
+  );
 }

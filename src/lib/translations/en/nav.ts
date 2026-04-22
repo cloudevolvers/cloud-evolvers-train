@@ -4,5 +4,7 @@ export default {
   services: "Services",
   about: "About",
   blog: "Blog",
-  contact: "Contact"
+  contact: "Contact",
+  signUp: "Sign up",
+  planCohort: "Plan a cohort"
 }

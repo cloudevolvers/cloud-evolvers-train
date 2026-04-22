@@ -1,14 +1,9 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useTranslations } from "@/hooks/use-translations";
-import { ArrowLeft, CheckCircle, Phone } from "@phosphor-icons/react";
-import { motion } from "framer-motion";
-import { useNavigate, useParams } from "react-router-dom";
-import { allServices } from "@/data/services";
-import type { Service, ServiceSection as ServiceSectionType } from "@/types/services";
-import { getServiceIcon } from "@/utils/service-icons";
-import { ServiceHero } from "@/components/services/ServiceHero";
-import { ServiceFeatureCard } from "@/components/services/ServiceFeatureCard";
+import { useTranslations } from '@/hooks/use-translations';
+import { ArrowLeft, ArrowRight, CheckCircle } from '@phosphor-icons/react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { allServices } from '@/data/services';
+import type { Service, ServiceSection as ServiceSectionType } from '@/types/services';
+import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 
 interface ServicePageProps {
   serviceId?: string;
@@ -16,31 +11,32 @@ interface ServicePageProps {
 
 function SectionBlock({ section }: { section: ServiceSectionType }) {
   return (
-    <div className="mb-10">
-      <h2 className="text-2xl font-bold text-foreground mb-4 pb-3 border-b border-border">
+    <div className="pb-10 mb-10 border-b border-[color:var(--ed-rule)] last:border-b-0 last:pb-0 last:mb-0">
+      <Display as="h2" size="sm" className="mb-4">
         {section.title}
-      </h2>
-      {section.description && (
-        <p className="text-muted-foreground leading-relaxed mb-6">{section.description}</p>
-      )}
-      {section.items && section.items.length > 0 && (
-        <div className="space-y-3">
+      </Display>
+      {section.description ? (
+        <p className="text-[16px] leading-relaxed text-[color:var(--ed-ink-2)] mb-6 max-w-2xl">
+          {section.description}
+        </p>
+      ) : null}
+      {section.items && section.items.length > 0 ? (
+        <ul className="space-y-4 max-w-2xl">
           {section.items.map((item, j) => (
-            <div key={j} className="flex items-start gap-3">
+            <li key={j} className="flex items-start gap-3">
               <CheckCircle
                 size={18}
-                className="text-emerald-500 mt-1 shrink-0"
-                weight="fill"
+                weight="regular"
+                className="mt-[3px] shrink-0 text-[color:var(--ed-accent)]"
               />
-              <p className="text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-foreground">{item.title}</span>
-                {": "}
+              <p className="text-[15px] leading-relaxed text-[color:var(--ed-ink-2)]">
+                <span className="text-[color:var(--ed-ink)] font-medium">{item.title}.</span>{' '}
                 {item.description}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
-      )}
+        </ul>
+      ) : null}
     </div>
   );
 }
@@ -48,162 +44,141 @@ function SectionBlock({ section }: { section: ServiceSectionType }) {
 export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
   const { serviceId: paramServiceId } = useParams<{ serviceId: string }>();
   const serviceId = propServiceId || paramServiceId;
-  const { language } = useTranslations();
+  const { language, isDutch } = useTranslations();
   const navigate = useNavigate();
 
   if (!serviceId || !allServices[serviceId as keyof typeof allServices]) {
     return (
-      <div className="min-h-screen bg-background">
-        <div className="flex items-center justify-center py-24">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-foreground mb-4">Service Not Found</h1>
-            <Button onClick={() => navigate('/services')}>
-              <ArrowLeft size={16} className="mr-2" />
-              Back to Services
-            </Button>
-          </div>
+      <div className="bg-[color:var(--ed-bg)] min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <Display as="h1" size="sm" className="mb-4">
+            {isDutch ? 'Dienst niet gevonden' : 'Service not found'}
+          </Display>
+          <EdButton to="/services" variant="primary" size="md">
+            <ArrowLeft className="w-4 h-4" />
+            {isDutch ? 'Terug naar diensten' : 'Back to services'}
+          </EdButton>
         </div>
       </div>
     );
   }
 
   const service: Service = allServices[serviceId as keyof typeof allServices][language];
-  const IconComponent = getServiceIcon(service.icon);
-  const benefitsTitle = language === 'nl' ? 'Voordelen' : 'Benefits';
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-background to-background">
-      {/* Background Effects */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-neutral-500/10 via-neutral-400/8 to-neutral-300/5 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-tl from-neutral-500/8 via-neutral-400/5 to-neutral-300/5 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        />
-      </div>
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
+      <section className="pt-20 sm:pt-28 pb-10">
+        <Wrap>
+          <button
+            onClick={() => navigate('/services')}
+            className="inline-flex items-center gap-1.5 text-[13px] text-[color:var(--ed-ink-3)] hover:text-[color:var(--ed-ink)] mb-8"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            {isDutch ? 'Terug naar diensten' : 'Back to services'}
+          </button>
+          <Eyebrow accent>{isDutch ? 'Dienst' : 'Service'}</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
+            {service.title}
+          </Display>
+          <Lede className="mt-7">{service.description}</Lede>
 
-      <div className="relative z-10">
-
-        {/* Hero Section */}
-        <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
-          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div className="max-w-6xl mx-auto">
-              {/* Back Button */}
-              <motion.div
-                className="mb-8"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <Button
-                  variant="ghost"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                  onClick={() => navigate('/services')}
+          {service.features?.length ? (
+            <ul className="mt-10 flex flex-wrap gap-2 max-w-3xl">
+              {service.features.map((f, i) => (
+                <li
+                  key={i}
+                  className="ed-eyebrow px-3 py-1.5 rounded-full border border-[color:var(--ed-rule)] bg-[color:var(--ed-bg-2)] text-[color:var(--ed-ink-2)]"
                 >
-                  <ArrowLeft size={16} className="mr-2" />
-                  {language === 'nl' ? 'Terug naar Services' : 'Back to Services'}
-                </Button>
-              </motion.div>
+                  {f}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </Wrap>
+      </section>
 
-              {/* Main Hero Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-                <div className="lg:col-span-3">
-                  <ServiceHero icon={IconComponent} title={service.title} description={service.description} image={service.image} imageCredit={service.imageCredit} language={language} />
-                </div>
-                <div className="lg:col-span-2">
-                  <ServiceFeatureCard features={service.features} title={language === 'nl' ? 'Belangrijkste functies' : 'Key Features'} />
-                </div>
+      {service.image ? (
+        <section className="pb-12">
+          <Wrap>
+            <figure className="overflow-hidden rounded-[6px] border border-[color:var(--ed-rule)]">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full aspect-[16/7] object-cover"
+                loading="lazy"
+              />
+            </figure>
+            {service.imageCredit ? (
+              <figcaption className="mt-2 text-[11px] font-mono text-[color:var(--ed-ink-3)]">
+                {service.imageCredit}
+              </figcaption>
+            ) : null}
+          </Wrap>
+        </section>
+      ) : null}
+
+      <section className="pb-20 sm:pb-28">
+        <Wrap>
+          <div className="max-w-3xl">
+            {service.sections.map((section, i) => (
+              <SectionBlock key={i} section={section} />
+            ))}
+
+            {service.benefits?.length ? (
+              <div className="pt-10 mt-10 border-t border-[color:var(--ed-rule)]">
+                <Display as="h2" size="sm" className="mb-6">
+                  {isDutch ? 'Voordelen' : 'Benefits'}
+                </Display>
+                <ul className="space-y-4">
+                  {service.benefits.map((b, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle
+                        size={18}
+                        className="mt-[3px] shrink-0 text-[color:var(--ed-accent)]"
+                      />
+                      <p className="text-[15px] leading-relaxed text-[color:var(--ed-ink-2)]">
+                        <span className="text-[color:var(--ed-ink)] font-medium">{b.title}.</span>{' '}
+                        {b.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ) : null}
+
+            {service.closingText ? (
+              <p className="mt-12 text-[16px] leading-relaxed text-[color:var(--ed-ink-2)] border-l border-[color:var(--ed-accent)] pl-5">
+                {service.closingText}
+              </p>
+            ) : null}
+          </div>
+        </Wrap>
+      </section>
+
+      <section className="py-16 bg-[color:var(--ed-bg-2)] border-y border-[color:var(--ed-rule)]">
+        <Wrap>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <Eyebrow>{isDutch ? 'Volgende stap' : 'Next step'}</Eyebrow>
+              <Display as="h2" size="sm" className="mt-3">
+                {isDutch ? 'Wil je hier samen aan werken?' : 'Want to work on this together?'}
+              </Display>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-[14px] text-[15px] border border-[color:var(--ed-rule)] text-[color:var(--ed-ink)] hover:border-[color:var(--ed-ink)] transition"
+              >
+                {isDutch ? 'Alle diensten' : 'All services'}
+              </Link>
+              <EdButton to="/contact" variant="primary" size="lg">
+                {isDutch ? 'Neem contact op' : 'Get in touch'}
+                <ArrowRight className="w-4 h-4" />
+              </EdButton>
             </div>
           </div>
-        </section>
-
-        {/* Content Section */}
-        <section className="py-12 lg:py-16">
-          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div className="max-w-4xl mx-auto">
-              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <Card className="bg-card/80 backdrop-blur-sm border-border shadow-lg overflow-hidden">
-                  <CardContent className="p-8 lg:p-12">
-                    {/* Sections */}
-                    {service.sections.map((section, i) => (
-                      <SectionBlock key={i} section={section} />
-                    ))}
-
-                    {/* Benefits */}
-                    {service.benefits && service.benefits.length > 0 && (
-                      <div className="mb-10">
-                        <h2 className="text-2xl font-bold text-foreground mb-4 pb-3 border-b border-border">
-                          {benefitsTitle}
-                        </h2>
-                        <div className="space-y-3">
-                          {service.benefits.map((benefit, i) => (
-                            <div key={i} className="flex items-start gap-3">
-                              <CheckCircle
-                                size={18}
-                                className="text-emerald-500 mt-1 shrink-0"
-                                weight="fill"
-                              />
-                              <p className="text-muted-foreground leading-relaxed">
-                                <span className="font-semibold text-foreground">{benefit.title}</span>
-                                {": "}
-                                {benefit.description}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Closing */}
-                    {service.closingText && (
-                      <p className="text-muted-foreground leading-relaxed">{service.closingText}</p>
-                    )}
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 lg:py-20">
-          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div className="max-w-4xl mx-auto">
-              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                <Card className="bg-gradient-to-br from-neutral-500/5 via-neutral-400/5 to-neutral-300/5 border-border backdrop-blur-sm shadow-2xl overflow-hidden">
-                  <CardContent className="p-10 lg:p-14 text-center">
-                    <div className="inline-flex items-center justify-center p-4 bg-neutral-500/10 dark:bg-white/10 rounded-2xl mb-6">
-                      <CheckCircle size={32} className="text-foreground/70" weight="regular" />
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl text-foreground font-bold mb-4">
-                      {language === 'nl' ? 'Klaar om te beginnen?' : 'Ready to Get Started?'}
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-                      {language === 'nl' ? 'Neem contact met ons op voor een persoonlijk gesprek over uw behoeften.' : 'Contact us for a personalized consultation about your needs.'}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button size="lg" className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black shadow-lg" onClick={() => navigate('/contact')}>
-                        <Phone size={18} className="mr-2" />
-                        {language === 'nl' ? 'Neem contact op' : 'Contact Us'}
-                      </Button>
-                      <Button variant="outline" size="lg" className="border-border text-foreground hover:bg-muted/50" onClick={() => navigate('/services')}>
-                        {language === 'nl' ? 'Bekijk alle services' : 'View All Services'}
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-      </div>
+        </Wrap>
+      </section>
     </div>
   );
 }

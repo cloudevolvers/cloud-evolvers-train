@@ -1,155 +1,103 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowRight } from '@phosphor-icons/react';
 import { getAllServices } from '@/data/services';
-import { useNavigate } from 'react-router-dom';
 import { useTranslations } from '@/hooks/use-translations';
-import {
-  ArrowRight,
-  CheckCircle,
-  EnvelopeSimple,
-  GraduationCap
-} from '@phosphor-icons/react';
-import { getServiceIcon } from '@/utils/service-icons';
 import { SEO, PAGE_SEO } from '@/components/SEO';
-import { PageHeroBg } from '@/components/PageHeroBg';
+import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 
 export default function ServicesPage() {
-  const { t, language } = useTranslations();
-  const sp = t.servicesPage;
+  const { isDutch, language } = useTranslations();
   const services = getAllServices(language);
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen pt-28 md:pt-32 bg-background">
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.services} />
-      <PageHeroBg />
-      {/* Hero Section */}
-      <section className="py-16 sm:py-20 lg:py-24">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-          <div className="max-w-[120rem] mx-auto">
-            <div className="mb-14 lg:mb-18">
-              <h1 className="text-foreground font-bold mb-6 leading-tight text-3xl md:text-4xl lg:text-5xl">
-                {sp?.title || 'Our Services'}
-              </h1>
-              <div className="mb-6 h-px w-16 bg-gradient-to-r from-emerald-500/40 to-transparent" />
-              <p className="text-muted-foreground max-w-3xl leading-relaxed text-lg">
-                {sp?.subtitle || 'Comprehensive cloud engineering and consulting services to help your organization succeed in the digital transformation journey.'}
-              </p>
-            </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {services.map((service) => {
-                const IconComponent = getServiceIcon(service.icon);
-                return (
-                  <Card
-                    key={service.id}
-                    className="bg-card border-border h-full transition-all duration-200 cursor-pointer hover:border-foreground/20 hover:shadow-md group overflow-hidden"
-                    onClick={() => navigate(`/services/${service.id}`)}
-                  >
-                    {/* Service Image */}
-                    <div className="relative h-44 overflow-hidden">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                      <div className="absolute bottom-3 left-3">
-                        <div className="p-2.5 bg-card/90 backdrop-blur-sm rounded-xl border border-border">
-                          <IconComponent size={20} className="text-foreground/70" weight="regular" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <CardContent className="pt-4 pb-5 space-y-3">
-                      <h3 className="text-foreground font-semibold text-lg leading-tight">
-                        {service.title}
-                      </h3>
-
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                        {service.description}
-                      </p>
-
-                      <div className="flex flex-wrap gap-2">
-                        {service.features.slice(0, 3).map((feature, featureIndex) => (
-                          <Badge
-                            key={featureIndex}
-                            variant="secondary"
-                            className="text-xs py-1 px-2.5 bg-muted/60 text-muted-foreground border-0 font-normal"
-                          >
-                            <CheckCircle size={10} className="mr-1 text-emerald-500" weight="fill" />
-                            {feature}
-                          </Badge>
-                        ))}
-                        {service.features.length > 3 && (
-                          <Badge
-                            variant="outline"
-                            className="text-xs py-1 px-2.5 bg-background/50 text-muted-foreground border-border"
-                          >
-                            +{service.features.length - 3} {language === 'nl' ? 'meer' : 'more'}
-                          </Badge>
-                        )}
-                      </div>
-
-                      <div className="pt-1">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="text-foreground p-0 h-auto font-medium group-hover:translate-x-1 transition-transform duration-300"
-                        >
-                          {language === 'nl' ? 'Meer informatie' : 'Learn more'}
-                          <ArrowRight size={14} className="ml-1.5" />
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+      <section className="pt-20 sm:pt-28 pb-12">
+        <Wrap>
+          <Eyebrow accent>{isDutch ? 'Diensten' : 'Services'}</Eyebrow>
+          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
+            {isDutch ? (
+              <>
+                Naast training bouwen en beheren we ook de{' '}
+                <span className="ed-display-italic">Azure-omgeving.</span>
+              </>
+            ) : (
+              <>
+                Beyond training, we build and run the{' '}
+                <span className="ed-display-italic">Azure environment too.</span>
+              </>
+            )}
+          </Display>
+          <Lede className="mt-7">
+            {isDutch
+              ? 'Cloud Evolvers wordt aangestuurd door Spot Cloud B.V. Dezelfde mensen die je team opleiden, werken bij andere klanten aan landing zones, security, FinOps en 24/7 cloud operations. Je krijgt geen theorie. Je krijgt een partner die het zelf ook bouwt.'
+              : 'Cloud Evolvers is run by Spot Cloud B.V. The same people who train your team work on landing zones, security, FinOps, and 24/7 cloud operations for other customers. You are not getting theory. You are getting a partner who ships the same work.'}
+          </Lede>
+        </Wrap>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 lg:py-20">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-card border-border">
-              <CardContent className="p-10 lg:p-14 text-center">
-                <h2 className="text-foreground font-bold text-2xl md:text-3xl mb-4">
-                  {sp?.contact?.title || 'Ready to Get Started?'}
+      <section className="pb-20 sm:pb-28">
+        <Wrap>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[color:var(--ed-rule)] border border-[color:var(--ed-rule)] rounded-[6px] overflow-hidden">
+            {services.map((service) => (
+              <button
+                key={service.id}
+                onClick={() => navigate(`/services/${service.id}`)}
+                className="group bg-[color:var(--ed-card)] p-7 text-left flex flex-col min-h-[280px] transition-colors hover:bg-[color:var(--ed-bg-2)]"
+              >
+                <span className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                  {service.features?.[0] || service.id}
+                </span>
+                <h2 className="mt-5 ed-display text-[24px] text-[color:var(--ed-ink)] leading-tight">
+                  {service.title}
                 </h2>
-
-                <p className="text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-                  {sp?.contact?.description || 'Contact us today to discuss how our services can help your organization achieve its cloud transformation goals.'}
+                <p className="mt-3 text-[14px] leading-relaxed text-[color:var(--ed-ink-2)] line-clamp-3">
+                  {service.description}
                 </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-black hover:bg-black/90 text-white dark:bg-white dark:hover:bg-white/90 dark:text-black"
-                    onClick={() => navigate('/contact')}
-                  >
-                    <EnvelopeSimple size={18} className="mr-2" />
-                    {sp?.contact?.contactUs || 'Contact Us'}
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-border text-foreground hover:bg-muted/50"
-                    onClick={() => navigate('/training')}
-                  >
-                    <GraduationCap size={18} className="mr-2" />
-                    {sp?.contact?.viewTraining || 'View Training Courses'}
-                  </Button>
+                <div className="mt-auto pt-6 flex items-center justify-between border-t border-[color:var(--ed-rule)]">
+                  <span className="text-[13px] text-[color:var(--ed-ink-2)]">
+                    {isDutch ? 'Details' : 'Details'}
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
                 </div>
-              </CardContent>
-            </Card>
+              </button>
+            ))}
           </div>
-        </div>
+        </Wrap>
+      </section>
+
+      <section className="py-20 bg-[color:var(--ed-ink)] text-white">
+        <Wrap>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <Eyebrow accent>{isDutch ? 'Volgende stap' : 'Next step'}</Eyebrow>
+              <Display as="h2" size="md" className="mt-4 text-white">
+                {isDutch
+                  ? 'Vertel ons over je Azure-omgeving.'
+                  : 'Tell us about your Azure environment.'}
+              </Display>
+              <p className="mt-6 text-[16px] leading-relaxed text-white/80 max-w-md">
+                {isDutch
+                  ? 'We beginnen met een korte scan en een helder voorstel. Geen generieke proposal-deck, wel een lijst met wat we zouden aanraden en waarom.'
+                  : 'We start with a short scan and a clear proposal. Not a generic deck, just a list of what we would recommend and why.'}
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
+              <Link
+                to="/training"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-[14px] text-[15px] text-white border border-white/20 hover:border-white/50 transition"
+              >
+                {isDutch ? 'Bekijk trainingen' : 'Browse training'}
+              </Link>
+              <EdButton to="/contact" variant="accent" size="lg">
+                {isDutch ? 'Neem contact op' : 'Get in touch'}
+                <ArrowRight className="w-4 h-4" />
+              </EdButton>
+            </div>
+          </div>
+        </Wrap>
       </section>
     </div>
   );

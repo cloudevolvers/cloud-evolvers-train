@@ -28,5 +28,7 @@ export default {
   yourEmail: "Uw E-mailadres",
   howCanWeHelp: "Hoe kunnen we u helpen?",
   sending: "Verzenden...",
-  sendMessage: "Bericht Versturen"
+  sendMessage: "Bericht Versturen",
+  tagline: "Microsoft Certified Azure- en M365-trainingen, live gegeven door MCT-trainers.",
+  explore: "Verkennen"
 }

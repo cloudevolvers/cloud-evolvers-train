@@ -1,29 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Warning } from '@phosphor-icons/react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowLeft, Warning, CheckCircle, Users, BookOpen } from '@phosphor-icons/react';
 import { loadTrainingBySlug } from '@/content/loader';
-import TrainingDetailHeader from '@/components/training/TrainingDetailHeader';
 import TrainingDetailContent from '@/components/training/TrainingDetailContent';
-import TrainingDetailSidebar from '@/components/training/TrainingDetailSidebar';
 import TrainingBookingForm from '@/components/training/TrainingBookingForm';
-import TrainingBadges from '@/components/training/TrainingBadges';
 import { useTrainingSessions } from '@/hooks/use-training-sessions';
 import { useLanguageContext } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/use-translations';
 import type { TrainingJSON } from '@/content/types';
-import { courseImages, defaultCourseImage } from '@/components/training/overview/constants';
+import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
+
+function formatPrice(cents: number | null | undefined, language: 'en' | 'nl' = 'en'): string | null {
+  if (!cents || cents <= 0) return null;
+  const locale = language === 'nl' ? 'nl-NL' : 'en-IE';
+  return new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(cents / 100);
+}
 
 export default function TrainingDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const { language } = useLanguageContext();
-  const { t } = useTranslations();
+  const { t, isDutch } = useTranslations();
   const [training, setTraining] = useState<TrainingJSON | null>(null);
   const [loading, setLoading] = useState(true);
-  const [showStickyBar, setShowStickyBar] = useState(false);
-  const headerRef = useRef<HTMLDivElement>(null);
   const { sessions, loading: sessionsLoading } = useTrainingSessions(slug);
 
   useEffect(() => {
@@ -32,260 +30,278 @@ export default function TrainingDetailPage() {
 
   useEffect(() => {
     if (!slug) return;
-    const loadTraining = async () => {
+    const load = async () => {
       try {
         setLoading(true);
-        const trainingData = await loadTrainingBySlug(slug, language);
-        setTraining(trainingData);
-      } catch (error) {
-        console.warn(`No training found for slug: ${slug}, language: ${language}`, error);
+        const data = await loadTrainingBySlug(slug, language);
+        setTraining(data);
+      } catch {
         setTraining(null);
       } finally {
         setLoading(false);
       }
     };
-
-    loadTraining();
+    load();
   }, [slug, language]);
 
-  // Show sticky CTA bar when header scrolls out of view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setShowStickyBar(!entry.isIntersecting);
-      },
-      { threshold: 0, rootMargin: '-80px 0px 0px 0px' }
-    );
-
-    if (headerRef.current) {
-      observer.observe(headerRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [training]);
-
-  if (!slug) {
-    return <Navigate to="/training" replace />;
-  }
-
-  const heroImage = courseImages[slug] || defaultCourseImage;
+  if (!slug) return <Navigate to="/training" replace />;
 
   if (loading) {
     return (
-      <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex items-center justify-center min-h-[400px]">
-            <div className="text-center space-y-4">
-              <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mx-auto"></div>
-              <p className="text-muted-foreground">{t.training?.detail?.loading || 'Loading training details...'}</p>
-            </div>
-          </div>
-        </div>
+      <div className="bg-[color:var(--ed-bg)] min-h-screen flex items-center justify-center">
+        <p className="text-[14px] font-mono text-[color:var(--ed-ink-3)]">
+          {isDutch ? 'Training laden' : 'Loading training'}
+        </p>
       </div>
     );
   }
 
-  if (!loading && !training) {
+  if (!training) {
     return (
-      <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold mb-4">{t.training?.detail?.notFound || 'Training Not Found'}</h1>
-            <p className="text-muted-foreground mb-8">{t.training?.detail?.notFoundDescription || 'The training course you are looking for could not be found.'}</p>
-            <Button
-              onClick={() => window.location.href = '/training'}
-              className="inline-flex items-center gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              {t.training?.detail?.backToTraining || 'Back to Training'}
-            </Button>
-          </div>
+      <div className="bg-[color:var(--ed-bg)] min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <Display as="h1" size="sm" className="mb-4">
+            {isDutch ? 'Training niet gevonden' : 'Training not found'}
+          </Display>
+          <EdButton to="/training" variant="primary" size="md">
+            <ArrowLeft className="w-4 h-4" />
+            {isDutch ? 'Terug naar trainingen' : 'Back to training'}
+          </EdButton>
         </div>
       </div>
     );
   }
 
-  // Price comes from D1 sessions only — no hardcoded fallbacks
-  const sessionPrice = sessions.length > 0 && sessions[0].price
-    ? `€${sessions[0].price / 100}`
+  const sessionPriceCents = sessions.length > 0 ? sessions[0].price : null;
+  const priceFormatted = formatPrice(sessionPriceCents, language as 'en' | 'nl');
+  const priceDisplay = priceFormatted || (isDutch ? 'Op aanvraag' : 'Contact us');
+
+  const retireDate = training.retired ? new Date(training.retired.date) : null;
+  const isRetired = retireDate ? retireDate <= new Date() : false;
+  const retireLabel = retireDate
+    ? retireDate.toLocaleDateString(isDutch ? 'nl-NL' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
     : null;
-  const priceDisplay = sessionPrice || 'Contact us';
 
   return (
-    <div className="min-h-screen pt-28 md:pt-32 pb-12 bg-background relative overflow-hidden">
-      {/* Sticky CTA Bar */}
-      <AnimatePresence>
-        {showStickyBar && (
-          <motion.div
-            initial={{ y: -80, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -80, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="fixed top-[65px] left-0 right-0 z-[9998] bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg"
+    <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
+      <section className="pt-20 sm:pt-28 pb-10">
+        <Wrap>
+          <Link
+            to="/training"
+            className="inline-flex items-center gap-1.5 text-[13px] text-[color:var(--ed-ink-3)] hover:text-[color:var(--ed-ink)] mb-8"
           >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-16 max-w-[1600px] mx-auto">
-                <div className="flex items-center gap-3 min-w-0">
-                  <h2 className="font-bold text-foreground text-sm sm:text-base truncate">
-                    {training?.title}
-                  </h2>
-                  <span className="hidden sm:inline-flex items-center text-xs text-muted-foreground bg-muted px-2 py-1 rounded-md flex-shrink-0">
-                    {training?.duration?.days} {(training?.duration?.days || 0) === 1 ? (t.training?.detail?.daysSingle || 'day') : (t.training?.detail?.daysPlural || 'days')}
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 flex-shrink-0">
-                  <span className="text-xl font-extrabold text-emerald-600">
-                    {priceDisplay}
-                  </span>
-                  <a
-                    href="#booking-form"
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 transition-all duration-200 text-sm shadow-md hover:shadow-lg whitespace-nowrap"
-                  >
-                    <Calendar className="h-4 w-4" />
-                    <span className="hidden sm:inline">{t.training?.detail?.inquireAboutTraining || 'Inquire'}</span>
-                    <span className="sm:hidden">Inquire</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <ArrowLeft className="w-3.5 h-3.5" />
+            {isDutch ? 'Terug naar trainingen' : 'Back to training'}
+          </Link>
 
-      {/* Course hero image */}
-      <div className="absolute inset-x-0 top-0 h-72 sm:h-80 md:h-96">
-        <img
-          src={heroImage}
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
-        {/* Back Navigation */}
-        <div className="mb-6">
-          <Button
-            variant="ghost"
-            onClick={() => window.history.back()}
-            className="hover:bg-muted/80 text-foreground -ml-2"
-          >
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            {t.training?.detail?.backToTraining || 'Back to Training'}
-          </Button>
-        </div>
-
-        {/* Retirement banner */}
-        {training?.retired && (() => {
-          const retireDate = new Date(training.retired.date);
-          const isRetired = retireDate <= new Date();
-          const dateStr = retireDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-          return (
-            <div className={`mb-6 rounded-lg border p-4 flex items-start gap-3 ${isRetired ? 'bg-red-50 border-red-200 text-red-800' : 'bg-amber-50 border-amber-200 text-amber-800'}`}>
-              <Warning className="h-5 w-5 mt-0.5 flex-shrink-0" />
-              <div>
-                <p className="font-semibold">
+          {training.retired && retireLabel && (
+            <div className={`mb-8 rounded-[6px] border p-4 flex items-start gap-3 ${isRetired ? 'border-red-300 bg-red-50 text-red-900' : 'border-amber-300 bg-amber-50 text-amber-900'}`}>
+              <Warning className="h-5 w-5 mt-0.5 flex-shrink-0" weight="regular" />
+              <div className="text-[14px] leading-relaxed">
+                <p className="font-medium">
                   {isRetired
-                    ? `This certification was retired on ${dateStr}.`
-                    : `This certification is retiring on ${dateStr}.`}
+                    ? (isDutch
+                        ? `Deze certificering is uitgefaseerd op ${retireLabel}.`
+                        : `This certification retired on ${retireLabel}.`)
+                    : (isDutch
+                        ? `Deze certificering wordt uitgefaseerd op ${retireLabel}.`
+                        : `This certification retires on ${retireLabel}.`)}
                 </p>
                 {training.retired.successor && (
-                  <p className="mt-1 text-sm">
-                    Microsoft recommends{' '}
+                  <p className="mt-1">
+                    {isDutch ? 'Microsoft raadt ' : 'Microsoft recommends '}
                     <Link to={`/training/${training.retired.successor}`} className="font-semibold underline hover:no-underline">
-                      the replacement course
-                    </Link>{' '}
-                    instead.
+                      {isDutch ? 'de vervangende training' : 'the replacement course'}
+                    </Link>
+                    {isDutch ? ' aan.' : ' instead.'}
                   </p>
                 )}
               </div>
             </div>
-          );
-        })()}
+          )}
 
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 xl:gap-12 max-w-[1600px] mx-auto">
-          {/* Main Content */}
-          <div className="xl:col-span-3">
-            <div ref={headerRef}>
-              <TrainingDetailHeader
-                training={training}
-                priceDisplay={priceDisplay}
-              />
-            </div>
-            <TrainingBadges />
-            <TrainingDetailContent training={training} />
-          </div>
-
-          {/* Sidebar */}
-          <div className="xl:col-span-1">
-            <TrainingDetailSidebar training={training} />
-          </div>
-        </div>
-
-        {/* Booking Form Section */}
-        <div
-          id="booking-form"
-          className="mt-16 max-w-5xl mx-auto scroll-mt-20"
-        >
-          <Card className="shadow-2xl bg-card border border-border/50 overflow-hidden">
-            {/* Booking header - emerald themed for conversion */}
-            <CardHeader className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 text-white p-8 xl:p-10">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-                <div className="p-3 bg-white/15 rounded-xl">
-                  <Calendar className="h-8 w-8 text-white" />
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-start">
+            <div>
+              <Eyebrow accent>
+                {training.certification?.examCode || training.category}
+              </Eyebrow>
+              <Display as="h1" size="lg" className="mt-5 leading-[1.05]">
+                {training.title}
+              </Display>
+              {training.description && (
+                <Lede className="mt-7">{training.description}</Lede>
+              )}
+              <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-[color:var(--ed-rule)] pt-8 max-w-xl">
+                <div>
+                  <dt className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                    {isDutch ? 'Duur' : 'Duration'}
+                  </dt>
+                  <dd className="mt-2 ed-display text-[22px] text-[color:var(--ed-ink)]">
+                    {training.duration?.days || 0}
+                    <span className="text-[14px] font-normal text-[color:var(--ed-ink-2)] ml-1">
+                      {(training.duration?.days || 0) === 1
+                        ? (isDutch ? 'dag' : 'day')
+                        : (isDutch ? 'dagen' : 'days')}
+                    </span>
+                  </dd>
                 </div>
                 <div>
-                  <CardTitle className="text-2xl xl:text-3xl font-bold leading-tight text-white">
-                    {t.training.detail.readyToTransform}
-                  </CardTitle>
-                  <p className="text-emerald-100/80 mt-1 text-sm">
-                    {t.training.detail.formDescription}
-                  </p>
+                  <dt className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                    {isDutch ? 'Niveau' : 'Level'}
+                  </dt>
+                  <dd className="mt-2 ed-display text-[22px] text-[color:var(--ed-ink)]">
+                    {training.difficulty}
+                  </dd>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div className="bg-white/10 rounded-xl p-4 border border-white/15">
-                  <span className="text-xs font-medium text-emerald-100/70 uppercase tracking-wide block mb-1">{t.training.detail.duration}</span>
-                  <p className="text-base font-bold text-white">
-                    {(() => {
-                      const days = training?.duration?.days || 4;
-                      return `${days} ${days === 1 ? t.training.detail.daysSingle : t.training.detail.daysPlural} ${t.training.detail.intensiveTraining}`;
-                    })()}
-                  </p>
-                </div>
-
-                <div className="bg-white/10 rounded-xl p-4 border border-white/15">
-                  <span className="text-xs font-medium text-emerald-100/70 uppercase tracking-wide block mb-1">{t.training.detail.investment}</span>
-                  <p className="text-xl font-extrabold text-white">
+                <div>
+                  <dt className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                    {isDutch ? 'Prijs' : 'Price'}
+                  </dt>
+                  <dd className="mt-2 ed-display text-[22px] text-[color:var(--ed-accent)]">
                     {priceDisplay}
-                  </p>
+                  </dd>
                 </div>
+              </dl>
+            </div>
 
-                <div className="bg-white/10 rounded-xl p-4 border border-white/15">
-                  <span className="text-xs font-medium text-emerald-100/70 uppercase tracking-wide block mb-1">{t.training?.detail?.groupSize || 'Group Size'}</span>
-                  <p className="text-base font-bold text-white">
-                    {t.training?.detail?.minParticipants || 'Minimum 6 participants'}
-                  </p>
+            <aside className="lg:sticky lg:top-28 space-y-6">
+              <div className="bg-[color:var(--ed-card)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+                <Eyebrow>{isDutch ? 'Boek deze training' : 'Book this training'}</Eyebrow>
+                <p className="mt-3 text-[14px] text-[color:var(--ed-ink-2)] leading-relaxed">
+                  {isDutch
+                    ? 'Vraag een plek aan of bespreek een in-company cohort. Yaïr reageert binnen 24 uur.'
+                    : 'Request a seat or discuss an in-company cohort. Yaïr replies within 24 hours.'}
+                </p>
+                <div className="mt-5 flex flex-col gap-2">
+                  <a
+                    href="#booking-form"
+                    className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-[14px] bg-[color:var(--ed-ink)] text-white hover:bg-[color:var(--ed-ink-2)] transition"
+                  >
+                    {isDutch ? 'Vraag details aan' : 'Request details'}
+                  </a>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-[14px] text-[color:var(--ed-ink)] border border-[color:var(--ed-rule)] hover:border-[color:var(--ed-ink)] transition"
+                  >
+                    {isDutch ? 'Algemene intake' : 'General intake'}
+                  </Link>
                 </div>
               </div>
-            </CardHeader>
 
-            <CardContent className="p-8 xl:p-10">
-              <div className="mb-8 text-center">
-                <h3 className="text-xl xl:text-2xl font-bold text-foreground mb-2">{t.training.detail.startLearningJourney}</h3>
-              </div>
+              {training.prerequisites && training.prerequisites.length > 0 && (
+                <div className="bg-[color:var(--ed-bg-2)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+                  <Eyebrow>
+                    {t.training?.detail?.prerequisites || (isDutch ? 'Voorkennis' : 'Prerequisites')}
+                  </Eyebrow>
+                  <ul className="mt-4 space-y-3">
+                    {training.prerequisites.map((p, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[14px] text-[color:var(--ed-ink-2)]">
+                        <CheckCircle size={16} weight="regular" className="mt-[2px] shrink-0 text-[color:var(--ed-accent)]" />
+                        <span className="leading-relaxed">{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
+              {training.targetAudience && training.targetAudience.length > 0 && (
+                <div className="bg-[color:var(--ed-bg-2)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+                  <Eyebrow>
+                    {t.training?.detail?.targetAudience || (isDutch ? 'Doelgroep' : 'Target audience')}
+                  </Eyebrow>
+                  <ul className="mt-4 space-y-3">
+                    {training.targetAudience.map((a, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[14px] text-[color:var(--ed-ink-2)]">
+                        <Users size={16} weight="regular" className="mt-[2px] shrink-0 text-[color:var(--ed-ink-3)]" />
+                        <span className="leading-relaxed">{a}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {training.tags && training.tags.length > 0 && (
+                <div className="bg-[color:var(--ed-bg-2)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+                  <Eyebrow>
+                    {t.training?.detail?.topicsCovered || (isDutch ? 'Onderwerpen' : 'Topics')}
+                  </Eyebrow>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {training.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="ed-eyebrow px-2.5 py-1 rounded-full border border-[color:var(--ed-rule)] bg-[color:var(--ed-card)] text-[color:var(--ed-ink-2)]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {training.instructor?.name && (
+                <div className="bg-[color:var(--ed-card)] border border-[color:var(--ed-rule)] rounded-[6px] p-6">
+                  <Eyebrow>
+                    {t.training?.detail?.instructor || (isDutch ? 'Trainer' : 'Instructor')}
+                  </Eyebrow>
+                  <div className="mt-4 flex items-start gap-4">
+                    <img
+                      src="/1625557501943.jpg"
+                      alt={training.instructor.name}
+                      className="w-14 h-14 rounded-[4px] object-cover object-[center_18%] border border-[color:var(--ed-rule)]"
+                    />
+                    <div>
+                      <p className="text-[15px] font-medium text-[color:var(--ed-ink)]">
+                        {training.instructor.name}
+                      </p>
+                      <p className="mt-1 ed-eyebrow text-[color:var(--ed-ink-3)]">
+                        {training.instructor.title || 'MCT'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </aside>
+          </div>
+        </Wrap>
+      </section>
+
+      <section className="pb-16 sm:pb-24">
+        <Wrap>
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 pb-6 border-b border-[color:var(--ed-rule)]">
+              <BookOpen size={18} weight="regular" className="text-[color:var(--ed-ink-3)]" />
+              <Eyebrow>{isDutch ? 'Programma' : 'Curriculum'}</Eyebrow>
+            </div>
+            <div className="mt-8">
+              <TrainingDetailContent training={training} />
+            </div>
+          </div>
+        </Wrap>
+      </section>
+
+      <section id="booking-form" className="py-16 sm:py-20 bg-[color:var(--ed-bg-2)] border-y border-[color:var(--ed-rule)] scroll-mt-20">
+        <Wrap>
+          <div className="max-w-3xl">
+            <Eyebrow accent>{isDutch ? 'Volgende stap' : 'Next step'}</Eyebrow>
+            <Display as="h2" size="md" className="mt-3">
+              {isDutch ? 'Vraag deze training aan.' : 'Request this training.'}
+            </Display>
+            <p className="mt-5 text-[16px] leading-relaxed text-[color:var(--ed-ink-2)] max-w-xl">
+              {isDutch
+                ? 'Vertel ons over je team en de tijdlijn. We reageren binnen 24 uur met beschikbare data en een vaste prijs.'
+                : 'Tell us about your team and the timeline. We reply within 24 hours with available dates and a fixed price.'}
+            </p>
+            <div className="mt-10 bg-[color:var(--ed-card)] border border-[color:var(--ed-rule)] rounded-[6px] p-6 sm:p-8">
               <TrainingBookingForm
                 training={training}
                 language={language}
                 sessions={sessions}
                 sessionsLoading={sessionsLoading}
               />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
+            </div>
+          </div>
+        </Wrap>
+      </section>
     </div>
   );
 }

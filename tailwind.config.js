@@ -21,7 +21,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ['"Space Grotesk"', "Inter", ...defaultTheme.fontFamily.sans],
+        serif: ['"Instrument Serif"', "ui-serif", "Georgia", "serif"],
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
       screens: {

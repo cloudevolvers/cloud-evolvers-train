@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { BackgroundIcons } from "@/components/BackgroundIcons";
 
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -36,8 +35,7 @@ import HomePage from "@/pages/HomePage";
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen relative overflow-hidden bg-background">
-        <BackgroundIcons variant="default" />
+      <div className="min-h-screen relative bg-[color:var(--ed-bg)]">
         <div className="relative z-20">
           <ScrollToTop />
           <Header />
