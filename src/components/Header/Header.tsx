@@ -5,7 +5,7 @@ import { List, X } from '@phosphor-icons/react';
 import ReactCountryFlag from 'react-country-flag';
 import { useTranslations } from '@/hooks/use-translations';
 import { useLanguageContext } from '@/contexts/LanguageContext';
-import { LogoMark, EdButton, Wrap } from '@/components/editorial';
+import { EdButton, Wrap } from '@/components/editorial';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
 
@@ -60,11 +60,12 @@ export function Header() {
       <header className="sticky top-0 z-[90] bg-[color:var(--ed-bg)]/85 backdrop-blur-md backdrop-saturate-150 border-b border-[color:var(--ed-rule)]">
         <Wrap>
           <div className="flex items-center gap-10 h-16">
-            <Link to="/" className="flex items-center gap-2.5">
-              <LogoMark />
-              <span className="ed-display text-[20px] text-[color:var(--ed-ink)]">
-                Cloud Evolvers
-              </span>
+            <Link to="/" className="flex items-center" aria-label="Cloud Evolvers">
+              <img
+                src="/cloudevolvers-logo-mountain.png"
+                alt="Cloud Evolvers"
+                className="h-12 w-auto"
+              />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-7 text-[14px] text-[color:var(--ed-ink-2)]">

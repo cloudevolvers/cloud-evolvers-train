@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useTranslations } from '@/hooks/use-translations';
 import { useLanguageContext } from '@/contexts/LanguageContext';
-import { Wrap, LogoMark, EdButton, Eyebrow } from '@/components/editorial';
+import { Wrap, EdButton, Eyebrow } from '@/components/editorial';
 
 const Footer: React.FC = () => {
   const buildInfo = getBuildInfo();
@@ -54,11 +54,12 @@ const Footer: React.FC = () => {
       <Wrap>
         <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4 space-y-5">
-            <Link to="/" className="inline-flex items-center gap-2.5">
-              <LogoMark />
-              <span className="ed-display text-[20px] text-[color:var(--ed-ink)]">
-                Cloud Evolvers
-              </span>
+            <Link to="/" className="inline-flex items-center" aria-label="Cloud Evolvers">
+              <img
+                src="/cloudevolvers-logo-mountain.png"
+                alt="Cloud Evolvers"
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="ed-lede text-[15px] max-w-[320px]">
               {t.footer?.tagline || 'Microsoft Certified Azure and M365 training, delivered live by MCTs.'}
