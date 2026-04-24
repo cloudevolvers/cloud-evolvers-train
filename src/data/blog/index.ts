@@ -80,6 +80,8 @@ import { externalMfaGaPost } from './posts/external-mfa-ga';
 import { foundryAgentPrivateNetworkingPost } from './posts/foundry-agent-private-networking';
 import { azureAiProjectsSdk2Post } from './posts/azure-ai-projects-sdk-2';
 import { vmEphemeralOsDiskCachingPost } from './posts/vm-ephemeral-os-disk-caching';
+import { stackitSovereignCloudDutchTeamsPost } from './posts/stackit-sovereign-cloud-dutch-teams';
+import { stackitVsAzureFirstWorkloadPost } from './posts/stackit-vs-azure-first-workload';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -160,6 +162,8 @@ export {
   foundryAgentPrivateNetworkingPost,
   azureAiProjectsSdk2Post,
   vmEphemeralOsDiskCachingPost,
+  stackitSovereignCloudDutchTeamsPost,
+  stackitVsAzureFirstWorkloadPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
@@ -239,6 +243,8 @@ export const blogPosts: BlogPost[] = [
   foundryAgentPrivateNetworkingPost,
   azureAiProjectsSdk2Post,
   vmEphemeralOsDiskCachingPost,
+  stackitSovereignCloudDutchTeamsPost,
+  stackitVsAzureFirstWorkloadPost,
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 // Helper function to get localized text
