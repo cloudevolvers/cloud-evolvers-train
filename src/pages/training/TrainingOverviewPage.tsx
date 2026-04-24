@@ -93,20 +93,20 @@ const TrainingOverviewPage: React.FC = () => {
           <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
             {isDutch ? (
               <>
-                Azure en Microsoft 365,{' '}
+                Azure, Microsoft 365 en STACKIT,{' '}
                 <span className="ed-display-italic">gegeven door iemand die ze draait.</span>
               </>
             ) : (
               <>
-                Azure and Microsoft 365,{' '}
+                Azure, Microsoft 365, and STACKIT,{' '}
                 <span className="ed-display-italic">taught by someone who runs them.</span>
               </>
             )}
           </Display>
           <Lede className="mt-7">
             {isDutch
-              ? 'Elke cursus wordt persoonlijk door Yaïr gegeven, in kleine groepen, met live Azure-labs. Geen content-bibliotheek, geen onderaannemers.'
-              : 'Every course is delivered personally by Yaïr, in small groups, in live Azure labs. No content library, no subcontractors.'}
+              ? 'Elke cursus wordt persoonlijk door Yaïr gegeven, in kleine groepen, met live cloud-labs. Geen content-bibliotheek, geen onderaannemers. STACKIT-training op aanvraag voor teams met een soevereiniteitsvraag.'
+              : 'Every course is delivered personally by Yaïr, in small groups, in live cloud labs. No content library, no subcontractors. STACKIT training on request for teams with a sovereignty requirement.'}
           </Lede>
         </Wrap>
       </section>
@@ -149,8 +149,25 @@ const TrainingOverviewPage: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="mt-5 text-[13px] font-mono text-[color:var(--ed-ink-3)]">
-            {filtered.length} / {all.length} {isDutch ? 'trainingen' : 'courses'}
+          <div className="mt-5 flex items-baseline gap-2 text-[13px] text-[color:var(--ed-ink-3)]">
+            <span className="ed-display text-[18px] text-[color:var(--ed-ink)]">
+              {filtered.length}
+            </span>
+            <span>
+              {isDutch ? 'van' : 'of'} {all.length}{' '}
+              {isDutch ? 'trainingen' : 'courses'}
+            </span>
+            {query || category !== 'all' ? (
+              <button
+                onClick={() => {
+                  setCategory('all');
+                  setQuery('');
+                }}
+                className="ml-auto ed-eyebrow text-[color:var(--ed-accent)] hover:underline"
+              >
+                {isDutch ? 'Wis filters' : 'Clear filters'}
+              </button>
+            ) : null}
           </div>
         </Wrap>
       </section>
@@ -182,8 +199,8 @@ const TrainingOverviewPage: React.FC = () => {
                     to={`/training/${t.slug}`}
                     className={`group bg-[color:var(--ed-card)] p-7 flex flex-col min-h-[280px] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="ed-eyebrow text-[color:var(--ed-accent)]">
                         {t.examCode || t.category}
                       </span>
                       {retirement && (
@@ -195,10 +212,10 @@ const TrainingOverviewPage: React.FC = () => {
                         </span>
                       )}
                     </div>
-                    <h2 className="mt-5 ed-display text-[22px] text-[color:var(--ed-ink)] leading-tight">
+                    <h2 className="mt-5 ed-display text-[22px] text-[color:var(--ed-ink)] leading-[1.15] group-hover:text-[color:var(--ed-accent)] transition-colors">
                       {t.title}
                     </h2>
-                    <p className="mt-3 text-[14px] leading-relaxed text-[color:var(--ed-ink-2)] line-clamp-3">
+                    <p className="mt-3 text-[14px] leading-[1.55] text-[color:var(--ed-ink-2)] line-clamp-3">
                       {t.description}
                     </p>
                     <div className="mt-auto pt-6 flex items-center justify-between border-t border-[color:var(--ed-rule)]">
@@ -206,7 +223,7 @@ const TrainingOverviewPage: React.FC = () => {
                         {t.days > 0
                           ? `${t.days} ${t.days === 1 ? (isDutch ? 'dag' : 'day') : (isDutch ? 'dagen' : 'days')}`
                           : `${t.hours}h`}
-                        {' · '}
+                        <span className="mx-1.5 text-[color:var(--ed-ink-3)]">·</span>
                         <span className="text-[color:var(--ed-ink-3)]">{t.level}</span>
                       </span>
                       <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
