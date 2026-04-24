@@ -6,16 +6,16 @@ export function HeroEd() {
   const { isDutch } = useTranslations();
 
   const eyebrow = isDutch
-    ? 'Microsoft Certified Trainer. 15+ jaar Azure-ervaring.'
-    : 'Microsoft Certified Trainer. 15+ years of Azure delivery.';
+    ? 'Microsoft Certified Trainer. 15+ jaar Azure. Nu ook STACKIT.'
+    : 'Microsoft Certified Trainer. 15+ years of Azure. Now also STACKIT.';
 
   const headline = isDutch
     ? 'Azure-training door iemand die Azure draait.'
     : 'Azure training, taught by someone who still runs Azure.';
 
   const lede = isDutch
-    ? 'Praktijkgerichte Microsoft-training voor IT-teams. Echte labs, architectuurkeuzes en operationele kennis, in het Nederlands of Engels, remote of bij jullie op kantoor.'
-    : 'Practitioner-led Microsoft training for IT teams. Real labs, architecture decisions, and operational know-how, in Dutch or English, remote or at your office.';
+    ? 'Praktijkgerichte Microsoft-training voor IT-teams. Echte labs, architectuurkeuzes en operationele kennis, in het Nederlands of Engels, remote of bij jullie op kantoor. Staat soevereiniteit op de agenda, dan draaien we nu ook een aparte STACKIT-track voor Europese cloud.'
+    : 'Practitioner-led Microsoft training for IT teams. Real labs, architecture decisions, and operational know-how, in Dutch or English, remote or at your office. Sovereignty on the agenda? We now also run a dedicated STACKIT track for European cloud.';
 
   return (
     <section className="relative bg-[color:var(--ed-bg)] pt-16 sm:pt-24 pb-12 sm:pb-16">
