@@ -6,5 +6,4 @@ export { EdCard } from './Card';
 export { SectionHead } from './SectionHead';
 export { StatBlock } from './StatBlock';
 export { Wrap } from './Wrap';
-export { LogoMark } from './LogoMark';
 export { Placeholder } from './Placeholder';
