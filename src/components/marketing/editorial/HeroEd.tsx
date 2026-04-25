@@ -1,6 +1,7 @@
 import { ArrowRight } from '@phosphor-icons/react';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { useTranslations } from '@/hooks/use-translations';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 
 export function HeroEd() {
   const { isDutch } = useTranslations();
@@ -18,7 +19,10 @@ export function HeroEd() {
     : 'Practitioner-led Microsoft training for IT teams. Real labs, architecture decisions, and operational know-how, in Dutch or English, remote or at your office. Sovereignty on the agenda? We now also run a dedicated STACKIT track for European cloud.';
 
   return (
-    <section className="relative bg-[color:var(--ed-bg)] pt-16 sm:pt-24 pb-12 sm:pb-16">
+    <section className="relative bg-[color:var(--ed-bg)] pt-16 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">
+      <div className="absolute inset-0 lg:right-1/2 pointer-events-none" aria-hidden="true">
+        <BackgroundIcons variant="hero" />
+      </div>
       <Wrap>
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
           <div>
