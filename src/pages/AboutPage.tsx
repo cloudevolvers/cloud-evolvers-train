@@ -2,6 +2,7 @@ import { useTranslations } from '@/hooks/use-translations';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { ArrowRight } from '@phosphor-icons/react';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 
 export function AboutPage() {
   const { isDutch } = useTranslations();
@@ -56,8 +57,12 @@ export function AboutPage() {
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.about} />
 
-      <section className="pt-20 sm:pt-28 pb-12 sm:pb-16">
+      <section className="relative pt-20 sm:pt-28 pb-12 sm:pb-16 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <BackgroundIcons variant="default" />
+        </div>
         <Wrap>
+          <div className="relative">
           <Eyebrow accent>{isDutch ? 'Over Cloud Evolvers' : 'About Cloud Evolvers'}</Eyebrow>
           <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
             {isDutch ? (
@@ -76,6 +81,7 @@ export function AboutPage() {
               ? 'Cloud Evolvers is de trainingspoot van Spot Cloud B.V., een Microsoft Solutions Partner die Azure-omgevingen bouwt en beheert. We leren teams wat er écht telt in productie: identity, netwerken, governance en cost control.'
               : 'Cloud Evolvers is the training arm of Spot Cloud B.V., a Microsoft Solutions Partner that builds and runs Azure environments. We teach teams the things that actually matter in production: identity, networking, governance, and cost control.'}
           </Lede>
+          </div>
         </Wrap>
       </section>
 
