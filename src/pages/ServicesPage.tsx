@@ -4,6 +4,7 @@ import { getAllServices } from '@/data/services';
 import { useTranslations } from '@/hooks/use-translations';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 
 export default function ServicesPage() {
   const { isDutch, language } = useTranslations();
@@ -14,8 +15,12 @@ export default function ServicesPage() {
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.services} />
 
-      <section className="pt-20 sm:pt-28 pb-12">
+      <section className="relative pt-20 sm:pt-28 pb-12 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <BackgroundIcons variant="services" />
+        </div>
         <Wrap>
+          <div className="relative">
           <Eyebrow accent>{isDutch ? 'Diensten' : 'Services'}</Eyebrow>
           <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
             {isDutch ? (
@@ -35,6 +40,7 @@ export default function ServicesPage() {
               ? 'Cloud Evolvers wordt aangestuurd door Spot Cloud B.V. Dezelfde mensen die je team opleiden, werken bij andere klanten aan landing zones, security, FinOps en 24/7 cloud operations. Je krijgt geen theorie. Je krijgt een partner die het zelf ook bouwt.'
               : 'Cloud Evolvers is run by Spot Cloud B.V. The same people who train your team work on landing zones, security, FinOps, and 24/7 cloud operations for other customers. You are not getting theory. You are getting a partner who ships the same work.'}
           </Lede>
+          </div>
         </Wrap>
       </section>
 

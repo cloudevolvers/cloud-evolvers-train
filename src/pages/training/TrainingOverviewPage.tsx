@@ -18,6 +18,7 @@ interface TrainingItem {
   hours: number;
   featured?: boolean;
   examCode?: string;
+  certName?: string;
   retired?: { date: string; successor?: string };
 }
 
@@ -32,8 +33,26 @@ function toItem(t: TrainingJSON): TrainingItem {
     hours: t.duration.hours ?? 0,
     featured: t.featured,
     examCode: t.certification?.examCode,
+    certName: t.certification?.name,
     retired: t.retired,
   };
+}
+
+type Tier = 'fundamentals' | 'associate' | 'expert' | 'specialty';
+
+function examTier(certName?: string): Tier | null {
+  if (!certName) return null;
+  if (/Fundamentals\b/i.test(certName)) return 'fundamentals';
+  if (/Specialty\b/i.test(certName)) return 'specialty';
+  if (/Expert\b/i.test(certName)) return 'expert';
+  if (/Associate\b/i.test(certName)) return 'associate';
+  return null;
+}
+
+function badgeSrc(examCode?: string, certName?: string): string | null {
+  if (examCode === 'STACKIT') return '/images/cert-badges/stackit.svg';
+  const tier = examTier(certName);
+  return tier ? `/images/cert-badges/ms-${tier}.svg` : null;
 }
 
 function retirementStatus(retired?: { date: string; successor?: string }) {
@@ -261,25 +280,41 @@ const TrainingOverviewPage: React.FC = () => {
               {filtered.map((t) => {
                 const retirement = retirementStatus(t.retired);
                 const color = examColor(t.examCode);
+                const badge = badgeSrc(t.examCode, t.certName);
+                const isStackit = t.examCode === 'STACKIT';
                 return (
                   <Link
                     key={t.slug}
                     to={`/training/${t.slug}`}
                     className={`group bg-[color:var(--ed-card)] p-7 flex flex-col min-h-[280px] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      {t.examCode ? (
-                        <span
-                          className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
-                          style={{ backgroundColor: color }}
-                        >
-                          {t.examCode}
-                        </span>
-                      ) : (
-                        <span className="ed-eyebrow text-[color:var(--ed-accent)]">
-                          {t.category}
-                        </span>
-                      )}
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-center gap-2.5">
+                        {badge ? (
+                          <span
+                            className={`inline-flex items-center justify-center rounded-md ${isStackit ? 'h-9 px-2 bg-[#0c2c2e]' : 'h-9 w-9'}`}
+                          >
+                            <img
+                              src={badge}
+                              alt=""
+                              aria-hidden="true"
+                              className={isStackit ? 'h-3.5 w-auto' : 'h-9 w-9'}
+                            />
+                          </span>
+                        ) : null}
+                        {t.examCode ? (
+                          <span
+                            className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
+                            style={{ backgroundColor: color }}
+                          >
+                            {t.examCode}
+                          </span>
+                        ) : (
+                          <span className="ed-eyebrow text-[color:var(--ed-accent)]">
+                            {t.category}
+                          </span>
+                        )}
+                      </div>
                       {retirement && (
                         <span className="ed-eyebrow inline-flex items-center gap-1 text-[color:var(--ed-ink-3)]">
                           <Warning size={10} weight="regular" />
@@ -314,12 +349,26 @@ const TrainingOverviewPage: React.FC = () => {
               {filtered.map((t) => {
                 const retirement = retirementStatus(t.retired);
                 const color = examColor(t.examCode);
+                const badge = badgeSrc(t.examCode, t.certName);
+                const isStackit = t.examCode === 'STACKIT';
                 return (
                   <Link
                     key={t.slug}
                     to={`/training/${t.slug}`}
                     className={`group flex items-center gap-4 px-5 py-4 bg-[color:var(--ed-card)] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
                   >
+                    {badge ? (
+                      <span
+                        className={`flex-shrink-0 inline-flex items-center justify-center rounded-md ${isStackit ? 'h-7 px-2 bg-[#0c2c2e]' : 'h-7 w-7'}`}
+                      >
+                        <img
+                          src={badge}
+                          alt=""
+                          aria-hidden="true"
+                          className={isStackit ? 'h-3 w-auto' : 'h-7 w-7'}
+                        />
+                      </span>
+                    ) : null}
                     <span
                       className="flex-shrink-0 inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-1 text-[10px] tracking-[0.04em] min-w-[56px] h-6"
                       style={{ backgroundColor: color }}
