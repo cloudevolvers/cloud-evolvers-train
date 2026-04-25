@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { 
-  CloudArrowUp, 
-  Shield, 
-  Code, 
-  Users, 
+import {
+  CloudArrowUp,
+  Shield,
+  Code,
+  Users,
   Gear,
   GraduationCap,
   Certificate,
@@ -17,7 +17,9 @@ import {
   ShieldCheck,
   Rocket,
   GitBranch,
-  Terminal
+  Terminal,
+  GridFour,
+  Cloud,
 } from "@phosphor-icons/react";
 
 interface BackgroundIconsProps {
@@ -50,14 +52,14 @@ export function BackgroundIcons({ variant = 'default' }: BackgroundIconsProps) {
       { Icon: Brain, size: 36, position: 'top-1/3 right-[8%]', color: 'text-brand-500/25', duration: 21, delay: 9 },
     ],
     training: [
-      { Icon: GraduationCap, size: 48, position: 'top-20 right-[20%]', color: 'text-brand-400/30', duration: 8, delay: 0 },
-      { Icon: Certificate, size: 40, position: 'bottom-32 left-[15%]', color: 'text-violet-400/25', duration: 12, delay: 2 },
-      { Icon: BookOpen, size: 36, position: 'top-1/2 left-[8%]', color: 'text-brand-500/25', duration: 15, delay: 4 },
-      { Icon: Trophy, size: 32, position: 'top-40 right-[8%]', color: 'text-amber-400/25', duration: 18, delay: 6 },
-      { Icon: Star, size: 28, position: 'bottom-40 left-[25%]', color: 'text-sky-400/20', duration: 20, delay: 8 },
-      { Icon: ChartLineUp, size: 34, position: 'top-1/3 right-[12%]', color: 'text-emerald-400/20', duration: 16, delay: 3 },
-      { Icon: Lightning, size: 30, position: 'bottom-1/4 right-[30%]', color: 'text-violet-500/20', duration: 19, delay: 7 },
-      { Icon: Rocket, size: 38, position: 'top-52 left-[18%]', color: 'text-brand-400/25', duration: 14, delay: 5 },
+      { Icon: Cloud, size: 52, position: 'top-16 right-[18%]', color: 'text-sky-500/30', duration: 10, delay: 0 },
+      { Icon: GridFour, size: 40, position: 'top-44 right-[6%]', color: 'text-orange-500/25', duration: 14, delay: 2 },
+      { Icon: Certificate, size: 44, position: 'bottom-32 left-[14%]', color: 'text-violet-500/25', duration: 12, delay: 4 },
+      { Icon: GraduationCap, size: 38, position: 'top-1/2 left-[6%]', color: 'text-sky-500/25', duration: 15, delay: 6 },
+      { Icon: Shield, size: 32, position: 'top-32 left-[22%]', color: 'text-emerald-500/22', duration: 18, delay: 3 },
+      { Icon: Brain, size: 36, position: 'top-1/3 right-[10%]', color: 'text-violet-400/22', duration: 16, delay: 5 },
+      { Icon: BookOpen, size: 30, position: 'bottom-44 left-[28%]', color: 'text-amber-500/22', duration: 20, delay: 7 },
+      { Icon: Trophy, size: 28, position: 'bottom-20 right-[20%]', color: 'text-amber-400/22', duration: 17, delay: 1 },
     ],
     blog: [
       { Icon: Brain, size: 46, position: 'top-24 right-[18%]', color: 'text-violet-400/30', duration: 9, delay: 0 },

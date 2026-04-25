@@ -1,11 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Warning } from '@phosphor-icons/react';
+import { ArrowRight, Warning, SquaresFour, ListBullets } from '@phosphor-icons/react';
 import { getAllTrainings as getAllJSONTrainings } from '@/data/training-json';
 import type { TrainingJSON } from '@/data/training-json/types';
 import { useTranslations } from '@/hooks/use-translations';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 
 interface TrainingItem {
   slug: string;
@@ -43,10 +44,35 @@ function retirementStatus(retired?: { date: string; successor?: string }) {
   return { isRetired, label };
 }
 
+const EXAM_COLORS: Record<string, string> = {
+  AZ: '#0078D4',
+  AI: '#8b5cf6',
+  SC: '#ef4444',
+  MS: '#0ea5e9',
+  PL: '#059669',
+  AB: '#6366f1',
+  STACKIT: '#00a8b5',
+};
+
+function examColor(examCode?: string): string {
+  if (!examCode) return '#78716c';
+  const prefix = examCode.split('-')[0];
+  return EXAM_COLORS[prefix] || '#78716c';
+}
+
+type ViewMode = 'cards' | 'list';
+
+const VIEW_STORAGE_KEY = 'training-view-mode';
+
 const TrainingOverviewPage: React.FC = () => {
   const [all, setAll] = useState<TrainingItem[]>([]);
   const [category, setCategory] = useState<string>('all');
   const [query, setQuery] = useState<string>('');
+  const [view, setView] = useState<ViewMode>(() => {
+    if (typeof window === 'undefined') return 'cards';
+    const stored = window.localStorage.getItem(VIEW_STORAGE_KEY);
+    return stored === 'list' ? 'list' : 'cards';
+  });
   const { isDutch } = useTranslations();
 
   useEffect(() => {
@@ -56,6 +82,12 @@ const TrainingOverviewPage: React.FC = () => {
       setAll([]);
     }
   }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(VIEW_STORAGE_KEY, view);
+    }
+  }, [view]);
 
   const categories = useMemo(() => {
     const set = new Set<string>();
@@ -87,27 +119,32 @@ const TrainingOverviewPage: React.FC = () => {
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.training} />
 
-      <section className="pt-20 sm:pt-28 pb-12">
+      <section className="relative pt-20 sm:pt-28 pb-12 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <BackgroundIcons variant="training" />
+        </div>
         <Wrap>
-          <Eyebrow accent>{isDutch ? 'Trainingen' : 'Training'}</Eyebrow>
-          <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
-            {isDutch ? (
-              <>
-                Azure en Microsoft 365,{' '}
-                <span className="ed-display-italic">gegeven door iemand die ze draait.</span>
-              </>
-            ) : (
-              <>
-                Azure and Microsoft 365,{' '}
-                <span className="ed-display-italic">taught by someone who runs them.</span>
-              </>
-            )}
-          </Display>
-          <Lede className="mt-7">
-            {isDutch
-              ? 'Elke cursus wordt persoonlijk door Yaïr gegeven, in kleine groepen, met live Azure-labs. Geen content-bibliotheek, geen onderaannemers.'
-              : 'Every course is delivered personally by Yaïr, in small groups, in live Azure labs. No content library, no subcontractors.'}
-          </Lede>
+          <div className="relative">
+            <Eyebrow accent>{isDutch ? 'Trainingen' : 'Training'}</Eyebrow>
+            <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
+              {isDutch ? (
+                <>
+                  Azure, Microsoft 365 en STACKIT,{' '}
+                  <span className="ed-display-italic">gegeven door iemand die ze draait.</span>
+                </>
+              ) : (
+                <>
+                  Azure, Microsoft 365, and STACKIT,{' '}
+                  <span className="ed-display-italic">taught by someone who runs them.</span>
+                </>
+              )}
+            </Display>
+            <Lede className="mt-7">
+              {isDutch
+                ? 'Elke cursus wordt persoonlijk door Yaïr gegeven, in kleine groepen, met live cloud-labs. Geen content-bibliotheek, geen onderaannemers. STACKIT-training op aanvraag voor teams met een soevereiniteitsvraag.'
+                : 'Every course is delivered personally by Yaïr, in small groups, in live cloud labs. No content library, no subcontractors. STACKIT training on request for teams with a sovereignty requirement.'}
+            </Lede>
+          </div>
         </Wrap>
       </section>
 
@@ -149,8 +186,55 @@ const TrainingOverviewPage: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="mt-5 text-[13px] font-mono text-[color:var(--ed-ink-3)]">
-            {filtered.length} / {all.length} {isDutch ? 'trainingen' : 'courses'}
+          <div className="mt-5 flex items-baseline gap-2 text-[13px] text-[color:var(--ed-ink-3)]">
+            <span className="ed-display text-[18px] text-[color:var(--ed-ink)]">
+              {filtered.length}
+            </span>
+            <span>
+              {isDutch ? 'van' : 'of'} {all.length}{' '}
+              {isDutch ? 'trainingen' : 'courses'}
+            </span>
+            {query || category !== 'all' ? (
+              <button
+                onClick={() => {
+                  setCategory('all');
+                  setQuery('');
+                }}
+                className="ed-eyebrow text-[color:var(--ed-accent)] hover:underline"
+              >
+                {isDutch ? 'Wis filters' : 'Clear filters'}
+              </button>
+            ) : null}
+            <div className="ml-auto inline-flex rounded-md border border-[color:var(--ed-rule)] p-0.5">
+              <button
+                type="button"
+                onClick={() => setView('cards')}
+                aria-pressed={view === 'cards'}
+                title={isDutch ? 'Kaartweergave' : 'Card view'}
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] text-[12px] font-600 transition ${
+                  view === 'cards'
+                    ? 'bg-[color:var(--ed-ink)] text-white'
+                    : 'text-[color:var(--ed-ink-2)] hover:text-[color:var(--ed-ink)]'
+                }`}
+              >
+                <SquaresFour size={14} weight="bold" />
+                {isDutch ? 'Kaarten' : 'Cards'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setView('list')}
+                aria-pressed={view === 'list'}
+                title={isDutch ? 'Lijstweergave' : 'List view'}
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] text-[12px] font-600 transition ${
+                  view === 'list'
+                    ? 'bg-[color:var(--ed-ink)] text-white'
+                    : 'text-[color:var(--ed-ink-2)] hover:text-[color:var(--ed-ink)]'
+                }`}
+              >
+                <ListBullets size={14} weight="bold" />
+                {isDutch ? 'Lijst' : 'List'}
+              </button>
+            </div>
           </div>
         </Wrap>
       </section>
@@ -172,20 +256,30 @@ const TrainingOverviewPage: React.FC = () => {
                 {isDutch ? 'Wis filters' : 'Clear filters'}
               </button>
             </div>
-          ) : (
+          ) : view === 'cards' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[color:var(--ed-rule)] border border-[color:var(--ed-rule)] rounded-[6px] overflow-hidden">
               {filtered.map((t) => {
                 const retirement = retirementStatus(t.retired);
+                const color = examColor(t.examCode);
                 return (
                   <Link
                     key={t.slug}
                     to={`/training/${t.slug}`}
                     className={`group bg-[color:var(--ed-card)] p-7 flex flex-col min-h-[280px] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="ed-eyebrow text-[color:var(--ed-ink-3)]">
-                        {t.examCode || t.category}
-                      </span>
+                    <div className="flex items-center justify-between gap-3">
+                      {t.examCode ? (
+                        <span
+                          className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
+                          style={{ backgroundColor: color }}
+                        >
+                          {t.examCode}
+                        </span>
+                      ) : (
+                        <span className="ed-eyebrow text-[color:var(--ed-accent)]">
+                          {t.category}
+                        </span>
+                      )}
                       {retirement && (
                         <span className="ed-eyebrow inline-flex items-center gap-1 text-[color:var(--ed-ink-3)]">
                           <Warning size={10} weight="regular" />
@@ -195,10 +289,10 @@ const TrainingOverviewPage: React.FC = () => {
                         </span>
                       )}
                     </div>
-                    <h2 className="mt-5 ed-display text-[22px] text-[color:var(--ed-ink)] leading-tight">
+                    <h2 className="mt-5 ed-display text-[22px] text-[color:var(--ed-ink)] leading-[1.15] group-hover:text-[color:var(--ed-accent)] transition-colors">
                       {t.title}
                     </h2>
-                    <p className="mt-3 text-[14px] leading-relaxed text-[color:var(--ed-ink-2)] line-clamp-3">
+                    <p className="mt-3 text-[14px] leading-[1.55] text-[color:var(--ed-ink-2)] line-clamp-3">
                       {t.description}
                     </p>
                     <div className="mt-auto pt-6 flex items-center justify-between border-t border-[color:var(--ed-rule)]">
@@ -206,11 +300,62 @@ const TrainingOverviewPage: React.FC = () => {
                         {t.days > 0
                           ? `${t.days} ${t.days === 1 ? (isDutch ? 'dag' : 'day') : (isDutch ? 'dagen' : 'days')}`
                           : `${t.hours}h`}
-                        {' · '}
+                        <span className="mx-1.5 text-[color:var(--ed-ink-3)]">·</span>
                         <span className="text-[color:var(--ed-ink-3)]">{t.level}</span>
                       </span>
                       <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
                     </div>
+                  </Link>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="border border-[color:var(--ed-rule)] rounded-[6px] overflow-hidden divide-y divide-[color:var(--ed-rule)]">
+              {filtered.map((t) => {
+                const retirement = retirementStatus(t.retired);
+                const color = examColor(t.examCode);
+                return (
+                  <Link
+                    key={t.slug}
+                    to={`/training/${t.slug}`}
+                    className={`group flex items-center gap-4 px-5 py-4 bg-[color:var(--ed-card)] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
+                  >
+                    <span
+                      className="flex-shrink-0 inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-1 text-[10px] tracking-[0.04em] min-w-[56px] h-6"
+                      style={{ backgroundColor: color }}
+                    >
+                      {t.examCode || t.category.slice(0, 6)}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-[15px] font-600 text-[color:var(--ed-ink)] truncate group-hover:text-[color:var(--ed-accent)] transition-colors">
+                          {t.title}
+                        </h3>
+                        {retirement && (
+                          <span className="ed-eyebrow inline-flex items-center gap-1 text-[color:var(--ed-ink-3)] flex-shrink-0">
+                            <Warning size={10} weight="regular" />
+                            {retirement.isRetired
+                              ? (isDutch ? 'Uitgefaseerd' : 'Retired')
+                              : retirement.label}
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-0.5 text-[13px] text-[color:var(--ed-ink-2)] truncate">
+                        {t.description}
+                      </p>
+                    </div>
+                    <div className="hidden sm:flex flex-shrink-0 items-center gap-4 text-[13px] text-[color:var(--ed-ink-3)]">
+                      <span>{t.category}</span>
+                      <span className="w-px h-4 bg-[color:var(--ed-rule)]" aria-hidden="true" />
+                      <span>{t.level}</span>
+                      <span className="w-px h-4 bg-[color:var(--ed-rule)]" aria-hidden="true" />
+                      <span className="min-w-[60px] text-right">
+                        {t.days > 0
+                          ? `${t.days} ${t.days === 1 ? (isDutch ? 'dag' : 'day') : (isDutch ? 'dagen' : 'days')}`
+                          : `${t.hours}h`}
+                      </span>
+                    </div>
+                    <ArrowRight className="flex-shrink-0 w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                 );
               })}
