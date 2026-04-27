@@ -5,6 +5,7 @@ import { useLanguage } from '@/hooks/use-language';
 import TrainingConsultationForm from '@/components/TrainingConsultationForm';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 import { useTranslations } from '@/hooks/use-translations';
 
 export default function ContactPage() {
@@ -26,8 +27,12 @@ export default function ContactPage() {
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO {...PAGE_SEO.contact} />
 
-      <section className="pt-20 sm:pt-28 pb-10">
+      <section className="relative pt-20 sm:pt-28 pb-10 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <BackgroundIcons variant="default" />
+        </div>
         <Wrap>
+          <div className="relative">
           <Eyebrow accent>{isDutch ? 'Neem contact op' : 'Get in touch'}</Eyebrow>
           <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
             {isDutch ? (
@@ -47,6 +52,7 @@ export default function ContactPage() {
               ? 'Een intake duurt ongeveer twintig minuten. We bespreken de rollen die je moet opleiden, de tijdlijn, en welke van onze trajecten het beste past. Binnen 24 uur een antwoord.'
               : 'An intake takes about twenty minutes. We walk through the roles you need to upskill, the timeline, and which of our tracks fits best. A response within 24 hours.'}
           </Lede>
+          </div>
         </Wrap>
       </section>
 

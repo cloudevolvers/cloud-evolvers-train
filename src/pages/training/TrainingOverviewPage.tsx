@@ -7,6 +7,7 @@ import { useTranslations } from '@/hooks/use-translations';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { BackgroundIcons } from '@/components/BackgroundIcons';
+import { examColor, badgeSrc } from '@/lib/cert-badge';
 
 interface TrainingItem {
   slug: string;
@@ -38,45 +39,12 @@ function toItem(t: TrainingJSON): TrainingItem {
   };
 }
 
-type Tier = 'fundamentals' | 'associate' | 'expert' | 'specialty';
-
-function examTier(certName?: string): Tier | null {
-  if (!certName) return null;
-  if (/Fundamentals\b/i.test(certName)) return 'fundamentals';
-  if (/Specialty\b/i.test(certName)) return 'specialty';
-  if (/Expert\b/i.test(certName)) return 'expert';
-  if (/Associate\b/i.test(certName)) return 'associate';
-  return null;
-}
-
-function badgeSrc(examCode?: string, certName?: string): string | null {
-  if (examCode === 'STACKIT') return '/images/cert-badges/stackit.svg';
-  const tier = examTier(certName);
-  return tier ? `/images/cert-badges/ms-${tier}.svg` : null;
-}
-
 function retirementStatus(retired?: { date: string; successor?: string }) {
   if (!retired) return null;
   const date = new Date(retired.date);
   const isRetired = date <= new Date();
   const label = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
   return { isRetired, label };
-}
-
-const EXAM_COLORS: Record<string, string> = {
-  AZ: '#0078D4',
-  AI: '#8b5cf6',
-  SC: '#ef4444',
-  MS: '#0ea5e9',
-  PL: '#059669',
-  AB: '#6366f1',
-  STACKIT: '#00a8b5',
-};
-
-function examColor(examCode?: string): string {
-  if (!examCode) return '#78716c';
-  const prefix = examCode.split('-')[0];
-  return EXAM_COLORS[prefix] || '#78716c';
 }
 
 type ViewMode = 'cards' | 'list';

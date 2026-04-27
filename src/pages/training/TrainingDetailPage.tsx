@@ -9,6 +9,8 @@ import { useLanguageContext } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/use-translations';
 import type { TrainingJSON } from '@/content/types';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
+import { examColor, badgeSrc, isStackit } from '@/lib/cert-badge';
 
 function formatPrice(cents: number | null | undefined, language: 'en' | 'nl' = 'en'): string | null {
   if (!cents || cents <= 0) return null;
@@ -82,9 +84,16 @@ export default function TrainingDetailPage() {
     ? retireDate.toLocaleDateString(isDutch ? 'nl-NL' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
     : null;
 
+  const badge = badgeSrc(training.certification?.examCode, training.certification?.name);
+  const badgeIsStackit = isStackit(training.certification?.examCode);
+  const examPillColor = examColor(training.certification?.examCode);
+
   return (
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
-      <section className="pt-20 sm:pt-28 pb-10">
+      <section className="relative pt-20 sm:pt-28 pb-10 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <BackgroundIcons variant="training" />
+        </div>
         <Wrap>
           <Link
             to="/training"
@@ -120,11 +129,37 @@ export default function TrainingDetailPage() {
             </div>
           )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-start">
+          <div className="relative grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-start">
             <div>
-              <Eyebrow accent>
-                {training.certification?.examCode || training.category}
-              </Eyebrow>
+              <div className="flex items-center gap-3">
+                {badge && (
+                  <span
+                    className={`inline-flex items-center justify-center rounded-md ${badgeIsStackit ? 'h-12 px-3 bg-[#0c2c2e]' : 'h-12 w-12'}`}
+                  >
+                    <img
+                      src={badge}
+                      alt=""
+                      aria-hidden="true"
+                      className={badgeIsStackit ? 'h-4 w-auto' : 'h-12 w-12'}
+                    />
+                  </span>
+                )}
+                {training.certification?.examCode ? (
+                  <span
+                    className="inline-flex items-center justify-center rounded-md text-white font-700 px-2.5 py-1 text-[11px] tracking-[0.04em]"
+                    style={{ backgroundColor: examPillColor }}
+                  >
+                    {training.certification.examCode}
+                  </span>
+                ) : (
+                  <Eyebrow accent>{training.category}</Eyebrow>
+                )}
+                {training.certification?.name && (
+                  <span className="ed-eyebrow text-[color:var(--ed-ink-3)] truncate">
+                    {training.certification.name.replace(/^Microsoft (Certified|365 Certified|Security, Compliance, and Identity): ?/, '')}
+                  </span>
+                )}
+              </div>
               <Display as="h1" size="lg" className="mt-5 leading-[1.05]">
                 {training.title}
               </Display>

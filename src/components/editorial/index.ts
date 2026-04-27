@@ -7,3 +7,4 @@ export { SectionHead } from './SectionHead';
 export { StatBlock } from './StatBlock';
 export { Wrap } from './Wrap';
 export { Placeholder } from './Placeholder';
+export { CloudEvolversMark } from './CloudEvolversMark';

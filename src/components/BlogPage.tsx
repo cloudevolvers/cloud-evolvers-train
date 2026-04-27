@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { getAllBlogPosts, getLocalizedBlogPost } from '@/data/blog-posts';
+import { BackgroundIcons } from '@/components/BackgroundIcons';
 import {
   Calendar,
   Clock,
@@ -76,8 +77,11 @@ export function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-36 pb-20">
-      <div className="max-w-5xl mx-auto px-6">
+    <div className="min-h-screen bg-background pt-36 pb-20 relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-[420px] pointer-events-none" aria-hidden="true">
+        <BackgroundIcons variant="blog" />
+      </div>
+      <div className="max-w-5xl mx-auto px-6 relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
