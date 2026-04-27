@@ -3,6 +3,7 @@ import { ArrowRight } from '@phosphor-icons/react';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { useTranslations } from '@/hooks/use-translations';
 import { useCatalog, formatPrice, type CatalogItem } from '@/hooks/use-catalog';
+import { examColor, badgeSrc, isStackit } from '@/lib/cert-badge';
 
 const HOMEPAGE_SLUGS = [
   'azure-fundamentals',
@@ -71,16 +72,42 @@ export function ProgramsPreviewEd() {
 
 function ProgramCard({ item, lang }: { item: CatalogItem; lang: 'en' | 'nl' }) {
   const price = formatPrice(item.price_cents, lang);
+  const badge = badgeSrc(item.certification, item.certificationName);
+  const stackit = isStackit(item.certification);
+  const pillColor = examColor(item.certification);
   return (
     <Link
       to={`/training/${item.slug}`}
       className="group bg-[color:var(--ed-card)] p-8 flex flex-col min-h-[260px] transition-colors hover:bg-[color:var(--ed-bg-2)]"
     >
-      <div className="flex items-center justify-between">
-        <span className="ed-eyebrow text-[color:var(--ed-ink-3)]">
-          {item.certification || item.category}
-        </span>
-        <span className="font-mono text-[11px] text-[color:var(--ed-ink-3)]">
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2.5 min-w-0">
+          {badge && (
+            <span
+              className={`inline-flex items-center justify-center rounded-md ${stackit ? 'h-9 px-2 bg-[#0c2c2e]' : 'h-9 w-9'}`}
+            >
+              <img
+                src={badge}
+                alt=""
+                aria-hidden="true"
+                className={stackit ? 'h-3.5 w-auto' : 'h-9 w-9'}
+              />
+            </span>
+          )}
+          {item.certification ? (
+            <span
+              className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
+              style={{ backgroundColor: pillColor }}
+            >
+              {item.certification}
+            </span>
+          ) : (
+            <span className="ed-eyebrow text-[color:var(--ed-ink-3)] truncate">
+              {item.category}
+            </span>
+          )}
+        </div>
+        <span className="font-mono text-[11px] text-[color:var(--ed-ink-3)] flex-shrink-0">
           {item.duration_days}d · {item.difficulty}
         </span>
       </div>
