@@ -1,0 +1,22 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="wkBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f3a52"/>
+      <stop offset="1" stop-color="#0f1f30"/>
+    </linearGradient>
+    <linearGradient id="wkRibbon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3aa0a8"/>
+      <stop offset="1" stop-color="#1f7479"/>
+    </linearGradient>
+  </defs>
+  <path d="M150 14 L256 50 V134 C256 198 210 248 150 282 C90 248 44 198 44 134 V50 Z" fill="url(#wkBg)" stroke="#0a1622" stroke-width="3"/>
+  <path d="M150 28 L242 60 V132 C242 188 202 232 150 264 C98 232 58 188 58 132 V60 Z" fill="none" stroke="#3aa0a8" stroke-width="2" opacity="0.55"/>
+  <g transform="translate(150 130)">
+    <path d="M-66 0 L0 -32 L66 0 L0 32 Z" fill="#f5f6f8"/>
+    <path d="M-44 8 V32 C-44 42 -22 50 0 50 C22 50 44 42 44 32 V8 L0 28 Z" fill="#f5f6f8"/>
+    <path d="M62 -2 V40" stroke="#f5f6f8" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="62" cy="46" r="5" fill="#f5f6f8"/>
+  </g>
+  <path d="M58 220 H242 V250 H58 Z" fill="url(#wkRibbon)"/>
+  <text x="150" y="241" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="800" fill="#fff" letter-spacing="2">WORKSHOP</text>
+</svg>

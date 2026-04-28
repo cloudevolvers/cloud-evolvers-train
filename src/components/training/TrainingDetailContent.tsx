@@ -1,182 +1,240 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Target, CheckCircle, Clock } from '@phosphor-icons/react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Target, CheckCircle, Clock, Book, Flask, Quotes } from '@phosphor-icons/react';
+import { Eyebrow } from '@/components/editorial';
 import { useTranslations } from '@/hooks/use-translations';
 
-interface TrainingDetailContentProps {
-  training: any;
+interface LearningObjective {
+  id?: string;
+  title: string;
+  description: string;
+  icon?: string;
 }
 
-export default function TrainingDetailContent({ training }: TrainingDetailContentProps) {
-  const { t } = useTranslations();
+interface TrainingModule {
+  id?: string;
+  title: string;
+  description?: string;
+  duration?: string;
+  topics?: string[];
+}
+
+interface HandsOnLab {
+  id?: string;
+  title: string;
+  description?: string;
+  duration?: string;
+}
+
+interface PersonalStory {
+  instructor: string;
+  story: string;
+}
+
+interface TrainingShape {
+  overview?: string;
+  description?: string;
+  personalStory?: PersonalStory;
+  learningObjectives?: Array<LearningObjective | string>;
+  modules?: TrainingModule[];
+  handsOnLabs?: HandsOnLab[];
+}
+
+export default function TrainingDetailContent({ training }: { training: TrainingShape }) {
+  const { t, isDutch } = useTranslations();
+
+  const hasOverview = Boolean(training.overview || training.description);
+  const objectives = training.learningObjectives ?? [];
+  const modules = training.modules ?? [];
+  const labs = training.handsOnLabs ?? [];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1 }}
-    >
-        <div className="space-y-8">
-          {/* Course Overview */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Card className="shadow-xl bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm border border-white/10 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-transparent to-neutral-500/3 pointer-events-none"></div>
-              <CardContent className="p-5 sm:p-6 lg:p-8 relative z-10">
-                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl sm:rounded-2xl flex-shrink-0">
-                    <BookOpen className="h-5 w-5 sm:h-7 sm:w-7 text-primary" />
-                  </div>
-                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{t.training?.detail?.courseOverview || 'Course Overview'}</h2>
-                </div>
-                <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
-                  {training.overview || training.description}
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
+    <div className="space-y-16 sm:space-y-20">
+      {hasOverview && (
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.4 }}
+        >
+          <Eyebrow>
+            {t.training?.detail?.courseOverview || (isDutch ? 'Cursusoverzicht' : 'Course overview')}
+          </Eyebrow>
+          <p className="mt-5 text-[17px] sm:text-[18px] leading-[1.65] text-[color:var(--ed-ink-2)] max-w-2xl">
+            {training.overview || training.description}
+          </p>
+        </motion.section>
+      )}
 
-          {/* Personal Story Section - Mobile-optimized layout */}
-          {training.personalStory && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <Card className="shadow-2xl bg-gradient-to-br from-amber-50/95 to-orange-50/90 backdrop-blur-sm border-2 border-amber-200/50 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/8 via-transparent to-orange-500/8 pointer-events-none"></div>
-                <CardContent className="p-5 sm:p-8 lg:p-10 relative z-10">
-                  {/* Header with badge */}
-                  <div className="text-center sm:text-left mb-4 sm:mb-6">
-                    <div className="inline-block px-4 py-1.5 sm:px-5 sm:py-2 bg-gradient-to-r from-amber-400/30 to-orange-400/30 rounded-full border-2 border-amber-400/40 shadow-sm">
-                      <span className="text-xs sm:text-sm font-bold text-amber-800 uppercase tracking-wide">{t.training?.detail?.personalStory || 'Personal Story'}</span>
-                    </div>
-                  </div>
-                  {/* Instructor name */}
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground mb-4 text-center sm:text-left">{training.personalStory.instructor}</h3>
-                  {/* Quote */}
-                  <blockquote className="relative bg-white/50 rounded-xl p-4 sm:p-6">
-                    <p className="text-base sm:text-lg lg:text-xl text-foreground/90 leading-relaxed italic font-medium">
-                      "{training.personalStory.story}"
-                    </p>
-                  </blockquote>
-                </CardContent>
-              </Card>
-            </motion.div>
-          )}
+      {training.personalStory && (
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.4 }}
+          className="border-l-2 border-[color:var(--ed-accent)] pl-6 sm:pl-8 py-2 max-w-2xl"
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <Quotes size={18} weight="fill" className="text-[color:var(--ed-accent)]" />
+            <Eyebrow accent>
+              {t.training?.detail?.personalStory || (isDutch ? 'Van de trainer' : 'From the trainer')}
+            </Eyebrow>
+          </div>
+          <blockquote className="ed-display text-[20px] sm:text-[22px] leading-[1.4] text-[color:var(--ed-ink)] italic">
+            &ldquo;{training.personalStory.story}&rdquo;
+          </blockquote>
+          <p className="mt-4 text-[14px] text-[color:var(--ed-ink-3)]">
+            &mdash; {training.personalStory.instructor}
+          </p>
+        </motion.section>
+      )}
 
-          {/* Learning Objectives - After Personal Story */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <Card className="shadow-xl bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm border border-white/10 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-transparent to-neutral-500/3 pointer-events-none"></div>
-              <CardContent className="p-5 sm:p-6 lg:p-8 relative z-10">
-                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-xl sm:rounded-2xl flex-shrink-0">
-                    <Target className="h-5 w-5 sm:h-7 sm:w-7 text-emerald-600" />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{t.training?.detail?.learningObjectives || 'Learning Objectives'}</h3>
-                </div>
-                <div className="grid gap-3 sm:gap-4">
-                  {training.learningObjectives?.map((objective: any, index: number) => (
-                    <motion.div 
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 + index * 0.1 }}
-                      className="flex items-start gap-3 sm:gap-4 p-3 sm:p-5 bg-gradient-to-r from-emerald-500/10 to-transparent rounded-lg sm:rounded-xl border border-emerald-500/20"
-                    >
-                      <div className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 bg-emerald-500/20 rounded-md sm:rounded-lg flex-shrink-0 mt-0.5">
-                        <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-emerald-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        {typeof objective === 'string' ? (
-                          <span className="text-foreground text-sm sm:text-base lg:text-lg leading-relaxed">{objective}</span>
-                        ) : (
-                          <>
-                            <h4 className="font-bold text-foreground mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">{objective.title}</h4>
-                            <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{objective.description}</p>
-                          </>
-                        )}
-                      </div>
-                    </motion.div>
-                  )) || (
-                    <p className="text-muted-foreground text-center py-8">{t.training?.detail?.noLearningObjectives || 'No learning objectives available.'}</p>
+      {objectives.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="flex items-center gap-3 pb-5 border-b border-[color:var(--ed-rule)]">
+            <Target size={18} weight="regular" className="text-[color:var(--ed-ink-3)]" />
+            <Eyebrow>
+              {t.training?.detail?.learningObjectives || (isDutch ? 'Leerdoelen' : 'Learning objectives')}
+            </Eyebrow>
+          </div>
+          <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+            {objectives.map((objective, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <CheckCircle
+                  size={18}
+                  weight="regular"
+                  className="mt-[3px] shrink-0 text-[color:var(--ed-accent)]"
+                />
+                <div className="min-w-0">
+                  {typeof objective === 'string' ? (
+                    <p className="text-[15px] leading-[1.55] text-[color:var(--ed-ink)]">{objective}</p>
+                  ) : (
+                    <>
+                      <p className="text-[15px] font-600 text-[color:var(--ed-ink)] leading-[1.4]">
+                        {objective.title}
+                      </p>
+                      {objective.description && (
+                        <p className="mt-1 text-[14px] leading-[1.55] text-[color:var(--ed-ink-2)]">
+                          {objective.description}
+                        </p>
+                      )}
+                    </>
                   )}
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+              </li>
+            ))}
+          </ul>
+        </motion.section>
+      )}
 
-          {/* Course Modules - Clean and Professional */}
-          {training.modules && training.modules.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              <Card className="shadow-xl bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-sm border border-white/10 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-transparent to-neutral-500/3 pointer-events-none"></div>
-                <CardContent className="p-5 sm:p-6 lg:p-8 relative z-10">
-                  <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-8">
-                    <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-neutral-100 rounded-xl sm:rounded-2xl shadow-lg flex-shrink-0">
-                      <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 text-foreground/70" />
+      {modules.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="flex items-center justify-between pb-5 border-b border-[color:var(--ed-rule)]">
+            <div className="flex items-center gap-3">
+              <Book size={18} weight="regular" className="text-[color:var(--ed-ink-3)]" />
+              <Eyebrow>
+                {t.training?.detail?.courseModules || (isDutch ? 'Modules' : 'Course modules')}
+              </Eyebrow>
+            </div>
+            <span className="text-[12px] text-[color:var(--ed-ink-3)] font-mono">
+              {modules.length.toString().padStart(2, '0')} {isDutch ? 'modules' : 'modules'}
+            </span>
+          </div>
+          <ol className="mt-2 divide-y divide-[color:var(--ed-rule)]">
+            {modules.map((mod, index) => (
+              <li key={mod.id || index} className="py-7 first:pt-8">
+                <div className="flex items-start gap-5">
+                  <span className="ed-display text-[26px] sm:text-[30px] text-[color:var(--ed-ink-3)] leading-none shrink-0 w-12 sm:w-14">
+                    {(index + 1).toString().padStart(2, '0')}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                      <h4 className="ed-display text-[20px] sm:text-[22px] leading-[1.2] text-[color:var(--ed-ink)]">
+                        {mod.title}
+                      </h4>
+                      {mod.duration && (
+                        <span className="inline-flex items-center gap-1 text-[12px] text-[color:var(--ed-ink-3)] font-mono">
+                          <Clock size={12} weight="regular" />
+                          {mod.duration}
+                        </span>
+                      )}
                     </div>
-                    <div>
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{t.training?.detail?.courseModules || 'Course Modules'}</h3>
-                      <p className="text-muted-foreground text-xs sm:text-sm mt-1">{t.training?.detail?.modulesCurriculum || 'Structured curriculum for complete mastery'}</p>
-                    </div>
+                    {mod.description && (
+                      <p className="mt-2 text-[14.5px] leading-[1.6] text-[color:var(--ed-ink-2)]">
+                        {mod.description}
+                      </p>
+                    )}
+                    {mod.topics && mod.topics.length > 0 && (
+                      <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                        {mod.topics.map((topic, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-[13.5px] leading-[1.5] text-[color:var(--ed-ink-2)]"
+                          >
+                            <span
+                              className="mt-[8px] h-[5px] w-[5px] rounded-full bg-[color:var(--ed-accent)] shrink-0"
+                              aria-hidden="true"
+                            />
+                            <span>{topic}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
-                  <div className="grid gap-4 sm:gap-5">
-                    {training.modules.map((module: any, index: number) => (
-                      <motion.div 
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5 + index * 0.1 }}
-                        className="group bg-gradient-to-r from-neutral-500/10 via-neutral-500/5 to-transparent rounded-xl sm:rounded-2xl border border-border overflow-hidden"
-                      >
-                        <div className="p-4 sm:p-6">
-                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-2 sm:mb-3">
-                            <div className="flex items-baseline gap-2 sm:gap-3">
-                              <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">{index + 1}.</span>
-                              <h4 className="font-bold text-foreground text-base sm:text-xl lg:text-2xl leading-tight">{module.title}</h4>
-                            </div>
-                            {module.duration && (
-                              <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold text-foreground/70 bg-neutral-100 px-2.5 sm:px-4 py-1 sm:py-2 rounded-full flex-shrink-0 border border-border shadow-sm w-fit">
-                                <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
-                                <span>{module.duration}</span>
-                              </div>
-                            )}
-                          </div>
-                          {module.description && (
-                            <p className="text-muted-foreground mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">{module.description}</p>
-                          )}
-                          {module.topics && module.topics.length > 0 && (
-                            <div className="space-y-2 sm:space-y-3 mt-3 sm:mt-4">
-                              {module.topics.map((topic: string, topicIndex: number) => (
-                                <div key={topicIndex} className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3.5 bg-gradient-to-r from-neutral-50 to-transparent rounded-lg sm:rounded-xl border border-border">
-                                  <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-500 flex-shrink-0" weight="fill" />
-                                  <span className="text-foreground leading-relaxed text-sm sm:text-base font-medium">{topic}</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          )}
-        </div>
-    </motion.div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </motion.section>
+      )}
+
+      {labs.length > 0 && (
+        <motion.section
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="flex items-center gap-3 pb-5 border-b border-[color:var(--ed-rule)]">
+            <Flask size={18} weight="regular" className="text-[color:var(--ed-ink-3)]" />
+            <Eyebrow>{isDutch ? 'Hands-on labs' : 'Hands-on labs'}</Eyebrow>
+          </div>
+          <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {labs.map((lab, index) => (
+              <li
+                key={lab.id || index}
+                className="bg-[color:var(--ed-bg-2)] border border-[color:var(--ed-rule)] rounded-[6px] p-5"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <h5 className="text-[15px] font-600 text-[color:var(--ed-ink)] leading-[1.35]">
+                    {lab.title}
+                  </h5>
+                  {lab.duration && (
+                    <span className="inline-flex items-center gap-1 text-[11.5px] text-[color:var(--ed-ink-3)] font-mono shrink-0">
+                      <Clock size={11} weight="regular" />
+                      {lab.duration}
+                    </span>
+                  )}
+                </div>
+                {lab.description && (
+                  <p className="mt-2 text-[13.5px] leading-[1.55] text-[color:var(--ed-ink-2)]">
+                    {lab.description}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </motion.section>
+      )}
+    </div>
   );
 }
