@@ -7,19 +7,23 @@ import { useTranslations } from '@/hooks/use-translations';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { BackgroundIcons } from '@/components/BackgroundIcons';
-import { examColor, badgeSrc } from '@/lib/cert-badge';
+import { examColor, badgeSrc, categoryCode, isStackit, isWorkshopBadge } from '@/lib/cert-badge';
 
 interface TrainingItem {
   slug: string;
   title: string;
+  subtitle?: string;
   description: string;
   category: string;
+  subcategory?: string;
   level: string;
   days: number;
   hours: number;
   featured?: boolean;
   examCode?: string;
   certName?: string;
+  tags: string[];
+  moduleCount: number;
   retired?: { date: string; successor?: string };
 }
 
@@ -27,14 +31,18 @@ function toItem(t: TrainingJSON): TrainingItem {
   return {
     slug: t.slug,
     title: t.title,
+    subtitle: t.subtitle,
     description: t.description,
     category: t.category,
+    subcategory: t.subcategory,
     level: t.difficulty,
     days: t.duration.days,
     hours: t.duration.hours ?? 0,
     featured: t.featured,
     examCode: t.certification?.examCode,
     certName: t.certification?.name,
+    tags: Array.isArray(t.tags) ? t.tags : [],
+    moduleCount: Array.isArray(t.modules) ? t.modules.length : 0,
     retired: t.retired,
   };
 }
@@ -247,39 +255,39 @@ const TrainingOverviewPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[color:var(--ed-rule)] border border-[color:var(--ed-rule)] rounded-[6px] overflow-hidden">
               {filtered.map((t) => {
                 const retirement = retirementStatus(t.retired);
-                const color = examColor(t.examCode);
-                const badge = badgeSrc(t.examCode, t.certName);
-                const isStackit = t.examCode === 'STACKIT';
+                const color = examColor(t.examCode, t.category);
+                const badge = badgeSrc(t.examCode, t.certName, t.title);
+                const stackit = isStackit(t.examCode);
+                const workshop = isWorkshopBadge(badge);
+                const code = t.examCode || categoryCode(t.category);
+                const visibleTags = t.tags.slice(0, 3);
                 return (
                   <Link
                     key={t.slug}
                     to={`/training/${t.slug}`}
-                    className={`group bg-[color:var(--ed-card)] p-7 flex flex-col min-h-[280px] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
+                    className={`group bg-[color:var(--ed-card)] p-7 flex flex-col min-h-[320px] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-2.5">
-                        {badge ? (
-                          <span
-                            className={`inline-flex items-center justify-center rounded-md ${isStackit ? 'h-9 px-2 bg-[#0c2c2e]' : 'h-9 w-9'}`}
-                          >
-                            <img
-                              src={badge}
-                              alt=""
-                              aria-hidden="true"
-                              className={isStackit ? 'h-3.5 w-auto' : 'h-9 w-9'}
-                            />
-                          </span>
-                        ) : null}
-                        {t.examCode ? (
-                          <span
-                            className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
-                            style={{ backgroundColor: color }}
-                          >
-                            {t.examCode}
-                          </span>
-                        ) : (
-                          <span className="ed-eyebrow text-[color:var(--ed-accent)]">
-                            {t.category}
+                        <span
+                          className={`inline-flex items-center justify-center rounded-md ${stackit ? 'h-9 px-2 bg-[#0c2c2e]' : 'h-9 w-9'}`}
+                        >
+                          <img
+                            src={badge}
+                            alt=""
+                            aria-hidden="true"
+                            className={stackit ? 'h-3.5 w-auto' : 'h-9 w-9'}
+                          />
+                        </span>
+                        <span
+                          className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
+                          style={{ backgroundColor: color }}
+                        >
+                          {code}
+                        </span>
+                        {workshop && (
+                          <span className="ed-eyebrow text-[color:var(--ed-ink-3)]">
+                            {isDutch ? 'Workshop' : 'Workshop'}
                           </span>
                         )}
                       </div>
@@ -298,6 +306,18 @@ const TrainingOverviewPage: React.FC = () => {
                     <p className="mt-3 text-[14px] leading-[1.55] text-[color:var(--ed-ink-2)] line-clamp-3">
                       {t.description}
                     </p>
+                    {visibleTags.length > 0 && (
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {visibleTags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="inline-flex items-center rounded-full border border-[color:var(--ed-rule)] bg-[color:var(--ed-bg-2)] px-2 py-0.5 text-[10.5px] tracking-[0.02em] text-[color:var(--ed-ink-2)]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <div className="mt-auto pt-6 flex items-center justify-between border-t border-[color:var(--ed-rule)]">
                       <span className="text-[13px] text-[color:var(--ed-ink-2)]">
                         {t.days > 0
@@ -305,6 +325,17 @@ const TrainingOverviewPage: React.FC = () => {
                           : `${t.hours}h`}
                         <span className="mx-1.5 text-[color:var(--ed-ink-3)]">·</span>
                         <span className="text-[color:var(--ed-ink-3)]">{t.level}</span>
+                        {t.moduleCount > 0 && (
+                          <>
+                            <span className="mx-1.5 text-[color:var(--ed-ink-3)]">·</span>
+                            <span className="text-[color:var(--ed-ink-3)]">
+                              {t.moduleCount}{' '}
+                              {t.moduleCount === 1
+                                ? (isDutch ? 'module' : 'module')
+                                : (isDutch ? 'modules' : 'modules')}
+                            </span>
+                          </>
+                        )}
                       </span>
                       <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
                     </div>
@@ -316,32 +347,31 @@ const TrainingOverviewPage: React.FC = () => {
             <div className="border border-[color:var(--ed-rule)] rounded-[6px] overflow-hidden divide-y divide-[color:var(--ed-rule)]">
               {filtered.map((t) => {
                 const retirement = retirementStatus(t.retired);
-                const color = examColor(t.examCode);
-                const badge = badgeSrc(t.examCode, t.certName);
-                const isStackit = t.examCode === 'STACKIT';
+                const color = examColor(t.examCode, t.category);
+                const badge = badgeSrc(t.examCode, t.certName, t.title);
+                const stackit = isStackit(t.examCode);
+                const code = t.examCode || categoryCode(t.category);
                 return (
                   <Link
                     key={t.slug}
                     to={`/training/${t.slug}`}
                     className={`group flex items-center gap-4 px-5 py-4 bg-[color:var(--ed-card)] transition-colors hover:bg-[color:var(--ed-bg-2)] ${retirement?.isRetired ? 'opacity-70' : ''}`}
                   >
-                    {badge ? (
-                      <span
-                        className={`flex-shrink-0 inline-flex items-center justify-center rounded-md ${isStackit ? 'h-7 px-2 bg-[#0c2c2e]' : 'h-7 w-7'}`}
-                      >
-                        <img
-                          src={badge}
-                          alt=""
-                          aria-hidden="true"
-                          className={isStackit ? 'h-3 w-auto' : 'h-7 w-7'}
-                        />
-                      </span>
-                    ) : null}
+                    <span
+                      className={`flex-shrink-0 inline-flex items-center justify-center rounded-md ${stackit ? 'h-7 px-2 bg-[#0c2c2e]' : 'h-7 w-7'}`}
+                    >
+                      <img
+                        src={badge}
+                        alt=""
+                        aria-hidden="true"
+                        className={stackit ? 'h-3 w-auto' : 'h-7 w-7'}
+                      />
+                    </span>
                     <span
                       className="flex-shrink-0 inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-1 text-[10px] tracking-[0.04em] min-w-[56px] h-6"
                       style={{ backgroundColor: color }}
                     >
-                      {t.examCode || t.category.slice(0, 6)}
+                      {code}
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">

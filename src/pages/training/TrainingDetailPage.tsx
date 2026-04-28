@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { ArrowLeft, Warning, CheckCircle, Users, BookOpen } from '@phosphor-icons/react';
+import { ArrowLeft, Warning, CheckCircle, Users } from '@phosphor-icons/react';
 import { loadTrainingBySlug } from '@/content/loader';
 import TrainingDetailContent from '@/components/training/TrainingDetailContent';
 import TrainingBookingForm from '@/components/training/TrainingBookingForm';
@@ -10,7 +10,7 @@ import { useTranslations } from '@/hooks/use-translations';
 import type { TrainingJSON } from '@/content/types';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { BackgroundIcons } from '@/components/BackgroundIcons';
-import { examColor, badgeSrc, isStackit } from '@/lib/cert-badge';
+import { examColor, badgeSrc, isStackit, categoryCode } from '@/lib/cert-badge';
 
 function formatPrice(cents: number | null | undefined, language: 'en' | 'nl' = 'en'): string | null {
   if (!cents || cents <= 0) return null;
@@ -84,9 +84,10 @@ export default function TrainingDetailPage() {
     ? retireDate.toLocaleDateString(isDutch ? 'nl-NL' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
     : null;
 
-  const badge = badgeSrc(training.certification?.examCode, training.certification?.name);
+  const badge = badgeSrc(training.certification?.examCode, training.certification?.name, training.title);
   const badgeIsStackit = isStackit(training.certification?.examCode);
-  const examPillColor = examColor(training.certification?.examCode);
+  const examPillColor = examColor(training.certification?.examCode, training.category);
+  const headerCode = training.certification?.examCode || categoryCode(training.category);
 
   return (
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
@@ -131,34 +132,32 @@ export default function TrainingDetailPage() {
 
           <div className="relative grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-16 items-start">
             <div>
-              <div className="flex items-center gap-3">
-                {badge && (
-                  <span
-                    className={`inline-flex items-center justify-center rounded-md ${badgeIsStackit ? 'h-12 px-3 bg-[#0c2c2e]' : 'h-12 w-12'}`}
-                  >
-                    <img
-                      src={badge}
-                      alt=""
-                      aria-hidden="true"
-                      className={badgeIsStackit ? 'h-4 w-auto' : 'h-12 w-12'}
-                    />
-                  </span>
-                )}
-                {training.certification?.examCode ? (
-                  <span
-                    className="inline-flex items-center justify-center rounded-md text-white font-700 px-2.5 py-1 text-[11px] tracking-[0.04em]"
-                    style={{ backgroundColor: examPillColor }}
-                  >
-                    {training.certification.examCode}
-                  </span>
-                ) : (
-                  <Eyebrow accent>{training.category}</Eyebrow>
-                )}
-                {training.certification?.name && (
+              <div className="flex items-center gap-3 flex-wrap">
+                <span
+                  className={`inline-flex items-center justify-center rounded-md ${badgeIsStackit ? 'h-12 px-3 bg-[#0c2c2e]' : 'h-12 w-12'}`}
+                >
+                  <img
+                    src={badge}
+                    alt=""
+                    aria-hidden="true"
+                    className={badgeIsStackit ? 'h-4 w-auto' : 'h-12 w-12'}
+                  />
+                </span>
+                <span
+                  className="inline-flex items-center justify-center rounded-md text-white font-700 px-2.5 py-1 text-[11px] tracking-[0.04em]"
+                  style={{ backgroundColor: examPillColor }}
+                >
+                  {headerCode}
+                </span>
+                {training.certification?.name ? (
                   <span className="ed-eyebrow text-[color:var(--ed-ink-3)] truncate">
                     {training.certification.name.replace(/^Microsoft (Certified|365 Certified|Security, Compliance, and Identity): ?/, '')}
                   </span>
-                )}
+                ) : training.subcategory ? (
+                  <span className="ed-eyebrow text-[color:var(--ed-ink-3)] truncate">
+                    {training.subcategory}
+                  </span>
+                ) : null}
               </div>
               <Display as="h1" size="lg" className="mt-5 leading-[1.05]">
                 {training.title}
@@ -300,16 +299,10 @@ export default function TrainingDetailPage() {
         </Wrap>
       </section>
 
-      <section className="pb-16 sm:pb-24">
+      <section className="pb-16 sm:pb-24 pt-4">
         <Wrap>
           <div className="max-w-3xl">
-            <div className="flex items-center gap-3 pb-6 border-b border-[color:var(--ed-rule)]">
-              <BookOpen size={18} weight="regular" className="text-[color:var(--ed-ink-3)]" />
-              <Eyebrow>{isDutch ? 'Programma' : 'Curriculum'}</Eyebrow>
-            </div>
-            <div className="mt-8">
-              <TrainingDetailContent training={training} />
-            </div>
+            <TrainingDetailContent training={training} />
           </div>
         </Wrap>
       </section>
