@@ -4,6 +4,8 @@ import { ArrowRight, Warning, SquaresFour, ListBullets } from '@phosphor-icons/r
 import { getAllTrainings as getAllJSONTrainings } from '@/data/training-json';
 import type { TrainingJSON } from '@/data/training-json/types';
 import { useTranslations } from '@/hooks/use-translations';
+import { useLanguageContext } from '@/contexts/LanguageContext';
+import { useAllTrainingSessions, formatLowestPrice } from '@/hooks/use-all-training-sessions';
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { BackgroundIcons } from '@/components/BackgroundIcons';
@@ -69,6 +71,8 @@ const TrainingOverviewPage: React.FC = () => {
     return stored === 'list' ? 'list' : 'cards';
   });
   const { isDutch } = useTranslations();
+  const { language } = useLanguageContext();
+  const { byCourse: pricesByCourse } = useAllTrainingSessions();
 
   useEffect(() => {
     try {
@@ -261,6 +265,10 @@ const TrainingOverviewPage: React.FC = () => {
                 const workshop = isWorkshopBadge(badge);
                 const code = t.examCode || categoryCode(t.category);
                 const visibleTags = t.tags.slice(0, 3);
+                const priceInfo = pricesByCourse[t.slug];
+                const priceLabel = priceInfo
+                  ? `${isDutch ? 'Vanaf' : 'From'} ${formatLowestPrice(priceInfo.priceCents, language as 'en' | 'nl')}`
+                  : (isDutch ? 'Op aanvraag' : 'Contact us');
                 return (
                   <Link
                     key={t.slug}
@@ -318,17 +326,25 @@ const TrainingOverviewPage: React.FC = () => {
                         ))}
                       </div>
                     )}
-                    <div className="mt-auto pt-6 flex items-center justify-between border-t border-[color:var(--ed-rule)]">
-                      <span className="text-[13px] text-[color:var(--ed-ink-2)]">
+                    <div className="mt-auto pt-6 border-t border-[color:var(--ed-rule)]">
+                      <div className="flex items-baseline justify-between gap-3">
+                        <span
+                          className={`ed-display text-[20px] leading-none ${priceInfo ? 'text-[color:var(--ed-accent)]' : 'text-[color:var(--ed-ink-3)] text-[14px]'}`}
+                        >
+                          {priceLabel}
+                        </span>
+                        <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
+                      </div>
+                      <div className="mt-2 text-[12.5px] text-[color:var(--ed-ink-3)]">
                         {t.days > 0
                           ? `${t.days} ${t.days === 1 ? (isDutch ? 'dag' : 'day') : (isDutch ? 'dagen' : 'days')}`
                           : `${t.hours}h`}
-                        <span className="mx-1.5 text-[color:var(--ed-ink-3)]">·</span>
-                        <span className="text-[color:var(--ed-ink-3)]">{t.level}</span>
+                        <span className="mx-1.5">·</span>
+                        <span>{t.level}</span>
                         {t.moduleCount > 0 && (
                           <>
-                            <span className="mx-1.5 text-[color:var(--ed-ink-3)]">·</span>
-                            <span className="text-[color:var(--ed-ink-3)]">
+                            <span className="mx-1.5">·</span>
+                            <span>
                               {t.moduleCount}{' '}
                               {t.moduleCount === 1
                                 ? (isDutch ? 'module' : 'module')
@@ -336,8 +352,7 @@ const TrainingOverviewPage: React.FC = () => {
                             </span>
                           </>
                         )}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />
+                      </div>
                     </div>
                   </Link>
                 );
@@ -400,6 +415,14 @@ const TrainingOverviewPage: React.FC = () => {
                         {t.days > 0
                           ? `${t.days} ${t.days === 1 ? (isDutch ? 'dag' : 'day') : (isDutch ? 'dagen' : 'days')}`
                           : `${t.hours}h`}
+                      </span>
+                      <span className="w-px h-4 bg-[color:var(--ed-rule)]" aria-hidden="true" />
+                      <span
+                        className={`min-w-[80px] text-right font-600 ${pricesByCourse[t.slug] ? 'text-[color:var(--ed-accent)]' : ''}`}
+                      >
+                        {pricesByCourse[t.slug]
+                          ? `${isDutch ? 'Vanaf' : 'From'} ${formatLowestPrice(pricesByCourse[t.slug].priceCents, language as 'en' | 'nl')}`
+                          : (isDutch ? 'Op aanvraag' : 'Contact us')}
                       </span>
                     </div>
                     <ArrowRight className="flex-shrink-0 w-4 h-4 text-[color:var(--ed-accent)] group-hover:translate-x-0.5 transition-transform" />

@@ -20,11 +20,11 @@ export function HeroEd() {
 
   return (
     <section className="relative bg-[color:var(--ed-bg)] pt-16 sm:pt-24 pb-12 sm:pb-16 overflow-hidden">
-      <div className="absolute inset-0 lg:right-1/2 pointer-events-none" aria-hidden="true">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <BackgroundIcons variant="hero" />
       </div>
       <Wrap>
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_0.65fr] gap-12 lg:gap-16 items-start">
           <div>
             <Eyebrow accent>{eyebrow}</Eyebrow>
 
@@ -75,7 +75,7 @@ export function HeroEd() {
             </dl>
           </div>
 
-          <figure className="relative lg:pt-4">
+          <figure className="relative lg:pt-8 max-w-[280px] lg:ml-auto">
             <div className="relative overflow-hidden rounded-[6px] border border-[color:var(--ed-rule)]">
               <img
                 src="/1625557501943.jpg"

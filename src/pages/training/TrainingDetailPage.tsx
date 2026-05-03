@@ -281,7 +281,7 @@ export default function TrainingDetailPage() {
                     <img
                       src="/1625557501943.jpg"
                       alt={training.instructor.name}
-                      className="w-14 h-14 rounded-[4px] object-cover object-[center_18%] border border-[color:var(--ed-rule)]"
+                      className="w-10 h-10 rounded-[4px] object-cover object-[center_18%] border border-[color:var(--ed-rule)]"
                     />
                     <div>
                       <p className="text-[15px] font-medium text-[color:var(--ed-ink)]">
