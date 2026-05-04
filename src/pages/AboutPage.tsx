@@ -59,7 +59,7 @@ export function AboutPage() {
 
       <section className="relative pt-20 sm:pt-28 pb-12 sm:pb-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <BackgroundIcons variant="default" />
+          <BackgroundIcons variant="services" />
         </div>
         <Wrap>
           <div className="relative">
@@ -87,8 +87,8 @@ export function AboutPage() {
 
       <section className="py-12 sm:py-20 bg-[color:var(--ed-bg-2)] border-y border-[color:var(--ed-rule)]">
         <Wrap>
-          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
-            <figure className="relative">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.55fr_1.45fr] gap-10 lg:gap-16 items-start">
+            <figure className="relative max-w-[280px]">
               <div className="overflow-hidden rounded-[6px] border border-[color:var(--ed-rule)]">
                 <img
                   src="/1625557501943.jpg"
