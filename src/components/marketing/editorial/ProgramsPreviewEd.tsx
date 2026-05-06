@@ -29,7 +29,7 @@ export function ProgramsPreviewEd() {
           <div className="md:col-span-5">
             <Eyebrow>{isDutch ? 'Programma\u2019s' : 'Programs'}</Eyebrow>
             <Display as="h2" size="md" className="mt-4">
-              {isDutch ? 'Voor de rollen die je team al heeft.' : 'Built around the roles your team already has.'}
+              {isDutch ? 'Tracks voor de rollen die je al draait.' : 'Tracks for the roles you already run.'}
             </Display>
           </div>
           <div className="md:col-span-6 md:col-start-7">

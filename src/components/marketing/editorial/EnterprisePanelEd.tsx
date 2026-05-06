@@ -43,8 +43,8 @@ export function EnterprisePanelEd() {
             <Eyebrow accent>{isDutch ? 'Voor L&D en teamleads' : 'For L&D and team leads'}</Eyebrow>
             <Display as="h2" size="md" className="mt-5 text-white">
               {isDutch
-                ? 'Een hele ploeg op Azure tegelijk.'
-                : 'Bring a whole team up on Azure at once.'}
+                ? 'Train het hele team in één eigen cohort.'
+                : 'Train your full team in one private cohort.'}
             </Display>
             <p className="mt-6 text-[17px] leading-relaxed text-white/80 max-w-md">
               {isDutch

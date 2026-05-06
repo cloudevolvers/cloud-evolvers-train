@@ -13,8 +13,8 @@ export function CTABandEd() {
             <Eyebrow accent>{isDutch ? 'Volgende stap' : 'Next step'}</Eyebrow>
             <Display as="h2" size="md" className="mt-4">
               {isDutch
-                ? 'Vertel ons welk team je wilt opleiden.'
-                : 'Tell us which team you want to upskill.'}
+                ? 'Wat moet jullie team leren?'
+                : 'What does your team need to learn?'}
             </Display>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
