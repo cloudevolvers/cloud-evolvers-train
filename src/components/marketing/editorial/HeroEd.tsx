@@ -11,8 +11,8 @@ export function HeroEd() {
     : 'Microsoft Certified Trainer. 15+ years of Azure. Now also STACKIT.';
 
   const headline = isDutch
-    ? 'Azure-training door iemand die Azure draait.'
-    : 'Azure training, taught by someone who still runs Azure.';
+    ? 'Azure-training, door een actieve Azure-architect.'
+    : 'Azure training, by an active Azure architect.';
 
   const lede = isDutch
     ? 'Praktijkgerichte Microsoft-training voor IT-teams. Echte labs, architectuurkeuzes en operationele kennis, in het Nederlands of Engels, remote of bij jullie op kantoor. Staat soevereiniteit op de agenda, dan draaien we nu ook een aparte STACKIT-track voor Europese cloud.'
