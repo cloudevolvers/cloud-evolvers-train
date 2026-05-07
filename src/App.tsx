@@ -31,6 +31,8 @@ import {
 } from "@/pages/services";
 
 import HomePage from "@/pages/HomePage";
+import ToolsIndexPage from "@/pages/tools/ToolsIndexPage";
+import Az104ReadinessQuizPage from "@/pages/tools/Az104ReadinessQuizPage";
 
 function App() {
   return (
@@ -50,6 +52,9 @@ function App() {
 
               <Route path="/training" element={<TrainingOverviewPage />} />
               <Route path="/training/:slug" element={<TrainingDetailPage />} />
+
+              <Route path="/tools" element={<ToolsIndexPage />} />
+              <Route path="/tools/az-104-readiness-quiz" element={<Az104ReadinessQuizPage />} />
 
               {/* Services Pages */}
               <Route path="/services" element={<ServicesPage />} />

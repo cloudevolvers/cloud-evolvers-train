@@ -41,6 +41,8 @@ const marketing: UrlEntry[] = [
   { loc: `${SITE}/services/network-engineering`, lastmod: today, changefreq: "monthly", priority: 0.7 },
   { loc: `${SITE}/training`, lastmod: today, changefreq: "weekly", priority: 0.9 },
   { loc: `${SITE}/blog`, lastmod: today, changefreq: "weekly", priority: 0.9 },
+  { loc: `${SITE}/tools`, lastmod: today, changefreq: "weekly", priority: 0.9 },
+  { loc: `${SITE}/tools/az-104-readiness-quiz`, lastmod: today, changefreq: "monthly", priority: 0.8 },
   { loc: `${SITE}/privacy-policy`, lastmod: today, changefreq: "yearly", priority: 0.3 },
   { loc: `${SITE}/terms-of-service`, lastmod: today, changefreq: "yearly", priority: 0.3 },
   { loc: `${SITE}/cookie-policy`, lastmod: today, changefreq: "yearly", priority: 0.3 },
