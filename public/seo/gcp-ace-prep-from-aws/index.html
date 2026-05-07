@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GCP Associate Cloud Engineer Prep for an AWS Engineer (2026)</title>
+  <meta name="description" content="GCP ACE prep for AWS engineers: AWS to GCP service translation, what is genuinely different (project hierarchy, IAM, networking), and time to prep from AWS associate or pro level." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/gcp-ace-prep-from-aws/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="GCP Associate Cloud Engineer Prep for an AWS Engineer (2026)" />
+  <meta property="og:description" content="GCP ACE prep for AWS engineers: AWS to GCP service translation, what is genuinely different (project hierarchy, IAM, networking), and time to prep from AWS associate or pro level." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/gcp-ace-prep-from-aws/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GCP Associate Cloud Engineer Prep for an AWS Engineer (2026)" />
+  <meta name="twitter:description" content="GCP ACE prep for AWS engineers: AWS to GCP service translation, what is genuinely different (project hierarchy, IAM, networking), and time to prep from AWS associate or pro level." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"GCP Associate Cloud Engineer Prep for an AWS Engineer (2026)","description":"GCP ACE prep for AWS engineers: AWS to GCP service translation, what is genuinely different (project hierarchy, IAM, networking), and time to prep from AWS associate or pro level.","url":"https://cloudevolvers.com/seo/gcp-ace-prep-from-aws/","provider":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com"},"datePublished":"2026-05-07"}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does it take to prep for GCP ACE coming from AWS?","acceptedAnswer":{"@type":"Answer","text":"From AWS Pro level (SAP-C02 or DOP-C02), 4-6 weeks of evening study. From AWS Associate level, 6-9 weeks. The mental model transfers; the prep time is mostly spent on gcloud CLI syntax and GCP-specific concepts like project hierarchy and IAM."}},{"@type":"Question","name":"What is the biggest conceptual difference between AWS and GCP?","acceptedAnswer":{"@type":"Answer","text":"Project hierarchy. GCP organises resources by project, with billing, IAM, and API enablement all scoped to the project. AWS organises by account. You cannot use a GCP service until you enable its API on the project, which is friction AWS engineers consistently underestimate."}},{"@type":"Question","name":"Is GCP ACE worth getting if I already hold AWS SAA-C03?","acceptedAnswer":{"@type":"Answer","text":"Yes if you target multi-cloud, platform engineering, or data engineering roles where BigQuery is standard. The 5-8% salary uplift over AWS-only correlates strongest at companies running multi-cloud or evaluating migrations. Less useful for pure AWS career trajectories."}},{"@type":"Question","name":"Are GCP VPCs the same as AWS VPCs?","acceptedAnswer":{"@type":"Answer","text":"No. GCP VPCs are global by default with subnets per region. A single GCP VPC can span all GCP regions. AWS VPCs are regional; cross-region traffic requires VPC peering or Transit Gateway. This shifts how engineers design network topologies."}},{"@type":"Question","name":"What is the GCP equivalent of AWS Lambda?","acceptedAnswer":{"@type":"Answer","text":"Cloud Functions for event-driven workloads, Cloud Run for containerised serverless workloads. Cloud Run accepts any container image and is closer to AWS Fargate plus Lambda combined. The exam tests both services and the use cases for each."}},{"@type":"Question","name":"How much does the GCP ACE exam cost?","acceptedAnswer":{"@type":"Answer","text":"$200 USD via Webassessor with Kryterion proctoring. Renewal after 2 years requires a full re-sit at the same cost. Google does not currently offer renewal-by-assessment."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>GCP Associate Cloud Engineer prep for an AWS engineer</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>If you already hold AWS SAA-C03 or higher, the GCP Associate Cloud Engineer (ACE) is the fastest second-cloud cert you can add. The mental model transfers; the syntax and a few core concepts do not. Below is the AWS-to-GCP translation table you actually need, the genuinely different parts to focus on, and a realistic time estimate.</p>
+
+<h2>Exam facts</h2>
+<ul>
+  <li>Cost: <strong>$200 USD</strong> via Webassessor (Kryterion proctoring)</li>
+  <li>Format: 50 multiple choice and multiple select questions, 120 minutes</li>
+  <li>Passing score: not officially published; community estimate around 70%</li>
+  <li>Validity: 2 years; renewal requires a full re-sit</li>
+  <li>Recommended experience: 6+ months on GCP</li>
+</ul>
+<p>Source: cloud.google.com/learn/certification/cloud-engineer, accessed May 2026.</p>
+
+<h2>AWS to GCP service translation</h2>
+<table>
+  <thead>
+    <tr><th>AWS service</th><th>GCP equivalent</th><th>Conceptual mapping</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>EC2</td><td>Compute Engine</td><td>Direct equivalent; instance types differ by name</td></tr>
+    <tr><td>S3</td><td>Cloud Storage</td><td>Direct equivalent; bucket naming and storage classes differ</td></tr>
+    <tr><td>RDS</td><td>Cloud SQL</td><td>Direct equivalent; supports MySQL, PostgreSQL, SQL Server</td></tr>
+    <tr><td>DynamoDB</td><td>Firestore (NoSQL) or Bigtable (wide-column)</td><td>Use case dependent; GCP has separate services</td></tr>
+    <tr><td>Lambda</td><td>Cloud Functions or Cloud Run</td><td>Cloud Functions for events; Cloud Run for containers</td></tr>
+    <tr><td>ECS / EKS</td><td>GKE (Google Kubernetes Engine)</td><td>GKE is the Kubernetes path; no direct ECS analogue</td></tr>
+    <tr><td>VPC</td><td>VPC Network</td><td>Different model: GCP VPCs are global, not regional</td></tr>
+    <tr><td>IAM</td><td>Cloud IAM</td><td>Very different model; see below</td></tr>
+    <tr><td>CloudWatch</td><td>Cloud Monitoring + Cloud Logging</td><td>Two separate services in GCP</td></tr>
+    <tr><td>CloudFormation</td><td>Deployment Manager or Terraform</td><td>GCP shipped Deployment Manager; community standard is Terraform</td></tr>
+    <tr><td>Route 53</td><td>Cloud DNS</td><td>Direct equivalent</td></tr>
+    <tr><td>SQS</td><td>Pub/Sub</td><td>GCP Pub/Sub is a hybrid of SQS plus SNS</td></tr>
+    <tr><td>SNS</td><td>Pub/Sub</td><td>Same Pub/Sub service for fan-out patterns</td></tr>
+    <tr><td>Kinesis Data Streams</td><td>Pub/Sub or Dataflow</td><td>Use case dependent</td></tr>
+    <tr><td>Athena</td><td>BigQuery</td><td>BigQuery is broader; covers Athena and Redshift use cases</td></tr>
+    <tr><td>Redshift</td><td>BigQuery</td><td>Same; BigQuery is the canonical GCP analytics warehouse</td></tr>
+    <tr><td>Secrets Manager</td><td>Secret Manager</td><td>Direct equivalent</td></tr>
+    <tr><td>KMS</td><td>Cloud KMS</td><td>Direct equivalent</td></tr>
+    <tr><td>CloudTrail</td><td>Cloud Audit Logs</td><td>Built into Cloud Logging</td></tr>
+  </tbody>
+</table>
+
+<h2>What is genuinely different</h2>
+<h3>Project hierarchy</h3>
+<p>AWS organises resources by account; you can have many accounts under an Organization. GCP organises by project, with a separate Organization at the top and Folders in between. Every GCP resource lives inside a project. The project is the unit of billing, IAM scope, and API enablement.</p>
+<p>Practical impact: you cannot just "spin up a GCP resource." You first create or select a project, enable the relevant API on the project, configure IAM on the project, and only then create the resource. This is friction that AWS engineers underestimate at the start.</p>
+
+<h3>IAM model</h3>
+<p>AWS IAM grants permissions through policies attached to users, groups, or roles. GCP IAM grants roles to identities (users, groups, service accounts) at a specific scope (project, folder, or organization). The same role bound at different scopes produces very different effective permissions.</p>
+<p>Key concepts that the ACE exam tests:</p>
+<ul>
+  <li><strong>Predefined roles vs custom roles:</strong> GCP ships hundreds of predefined roles. The exam expects you to know roles/owner, roles/editor, roles/viewer, and the principle of least privilege.</li>
+  <li><strong>Service accounts:</strong> in GCP, service accounts are first-class identities used by applications running on Compute Engine or GKE to authenticate to other GCP services. AWS has IAM roles for similar purposes, but the GCP service account model is more explicit.</li>
+  <li><strong>Workload Identity:</strong> the modern way GKE pods authenticate to GCP APIs. Comparable to IRSA in AWS EKS but with different setup.</li>
+</ul>
+
+<h3>Networking</h3>
+<p>The biggest mental model shift: GCP VPCs are global by default, with subnets per region. You can have a single VPC that spans all GCP regions. AWS VPCs are regional; cross-region traffic requires VPC peering or Transit Gateway.</p>
+<p>Practical impact: networking design in GCP is simpler for global apps and harder to mentally separate for engineers used to AWS regional thinking. The exam tests Shared VPC, VPC peering, Cloud NAT, Cloud Router, and Cloud Interconnect.</p>
+
+<h3>Billing and quotas</h3>
+<p>GCP has per-project quotas that you frequently bump into during lab work. AWS has account-level service quotas. The exam tests how to view and request quota increases through the GCP console and gcloud CLI.</p>
+
+<h2>Time to prep</h2>
+<p><strong>From AWS Pro level (SAP-C02 or DOP-C02):</strong> 4-6 weeks of evening study. The mental model transfers; you spend most prep time learning gcloud syntax and the GCP-specific concepts above.</p>
+<p><strong>From AWS Associate (SAA-C03 or equivalent):</strong> 6-9 weeks. Add time for deeper hands-on with GCP-specific services like BigQuery, Pub/Sub, and GKE.</p>
+<p><strong>From AWS Cloud Practitioner only:</strong> 10-14 weeks. The cert is achievable but you are essentially learning cloud concepts and GCP simultaneously.</p>
+
+<h2>Recommended study resources</h2>
+<ol>
+  <li><strong>Coursera Google Cloud Associate Cloud Engineer Professional Certificate</strong> (free to audit). Six-course series covering exam topics. Source: coursera.org/professional-certificates/cloud-engineering-gcp.</li>
+  <li><strong>Google Cloud Skills Boost</strong> (formerly Qwiklabs). Hands-on labs in real GCP environments. Around $29/month subscription. The fastest way to get gcloud muscle memory.</li>
+  <li><strong>Dan Sullivan's GCP Associate Cloud Engineer Study Guide</strong> (Sybex / Wiley). Covers exam objectives systematically; useful as a structured reference.</li>
+  <li><strong>Practice exams:</strong> Whizlabs and ExamTopics for volume; Tutorials Dojo for quality (smaller GCP catalogue than AWS but the questions that exist are well-written).</li>
+  <li><strong>Free Google Cloud documentation:</strong> the cloud.google.com docs are unusually well-written. Read the IAM, VPC, and Compute Engine sections directly.</li>
+</ol>
+
+<h2>The honest career framing</h2>
+<p>Adding GCP ACE to an AWS-heavy resume is most useful in three scenarios: you are pivoting to a multi-cloud or platform engineering role, your employer is starting GCP adoption, or you are targeting data-engineering roles where BigQuery is the standard analytics warehouse. For pure AWS-only career trajectories, GCP ACE adds limited value compared to deepening AWS expertise.</p>
+<p>Salary impact: holding both AWS SAA-C03 and GCP ACE correlates with roughly a 5-8% additional salary uplift versus AWS-only at the same experience level, per Dice Tech Salary Report 2025-2026 data. The signal is strongest at companies running multi-cloud or evaluating cloud migration.</p>
+
+<h2>Quick gcloud commands AWS engineers should learn first</h2>
+<pre><code># Authenticate and set the active project
+gcloud auth login
+gcloud config set project &lt;PROJECT_ID&gt;
+gcloud config list
+
+# List Compute Engine VMs (the EC2 equivalent)
+gcloud compute instances list
+
+# List Cloud Storage buckets (the S3 equivalent)
+gcloud storage buckets list
+
+# Check IAM bindings on the current project
+gcloud projects get-iam-policy &lt;PROJECT_ID&gt;
+
+# Enable an API on the project (no AWS analogue, this is GCP-specific)
+gcloud services enable compute.googleapis.com
+</code></pre>
+<p>The "enable API" step is the one that catches AWS engineers most often. In GCP, services are off by default per project, and you cannot use them until you enable the corresponding API. There is no equivalent step in AWS.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">How long does it take to prep for GCP ACE coming from AWS?</h3>
+        <p class="faq-answer">From AWS Pro level (SAP-C02 or DOP-C02), 4-6 weeks of evening study. From AWS Associate level, 6-9 weeks. The mental model transfers; the prep time is mostly spent on gcloud CLI syntax and GCP-specific concepts like project hierarchy and IAM.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the biggest conceptual difference between AWS and GCP?</h3>
+        <p class="faq-answer">Project hierarchy. GCP organises resources by project, with billing, IAM, and API enablement all scoped to the project. AWS organises by account. You cannot use a GCP service until you enable its API on the project, which is friction AWS engineers consistently underestimate.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Is GCP ACE worth getting if I already hold AWS SAA-C03?</h3>
+        <p class="faq-answer">Yes if you target multi-cloud, platform engineering, or data engineering roles where BigQuery is standard. The 5-8% salary uplift over AWS-only correlates strongest at companies running multi-cloud or evaluating migrations. Less useful for pure AWS career trajectories.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Are GCP VPCs the same as AWS VPCs?</h3>
+        <p class="faq-answer">No. GCP VPCs are global by default with subnets per region. A single GCP VPC can span all GCP regions. AWS VPCs are regional; cross-region traffic requires VPC peering or Transit Gateway. This shifts how engineers design network topologies.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the GCP equivalent of AWS Lambda?</h3>
+        <p class="faq-answer">Cloud Functions for event-driven workloads, Cloud Run for containerised serverless workloads. Cloud Run accepts any container image and is closer to AWS Fargate plus Lambda combined. The exam tests both services and the use cases for each.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much does the GCP ACE exam cost?</h3>
+        <p class="faq-answer">$200 USD via Webassessor with Kryterion proctoring. Renewal after 2 years requires a full re-sit at the same cost. Google does not currently offer renewal-by-assessment.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification</a>
+      <a href="https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/" class="related-link">AWS SAA-C03 vs AZ-104</a>
+      <a href="https://cloudevolvers.com/seo/free-aws-practice-exams-2026/" class="related-link">Free AWS practice exams 2026</a>
+      <a href="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" class="related-link">Cloud engineer roadmap 2026</a>
+      <a href="https://cloudevolvers.com/seo/aws-devops-engineer-pro-prep-2026/" class="related-link">AWS DOP-C02 prep guide 2026</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

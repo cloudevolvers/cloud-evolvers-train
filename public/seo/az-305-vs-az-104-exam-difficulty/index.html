@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZ-305 vs AZ-104: Exam Difficulty, Cost, and What You Actually Need to Know</title>
+  <meta name="description" content="AZ-305 vs AZ-104 compared on difficulty, domains, cost, study time, and prerequisites. Honest breakdown for engineers deciding which Azure cert to pursue next." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AZ-305 vs AZ-104: Exam Difficulty, Cost, and What You Actually Need to Know" />
+  <meta property="og:description" content="AZ-305 vs AZ-104 compared on difficulty, domains, cost, study time, and prerequisites. Honest breakdown for engineers deciding which Azure cert to pursue next." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AZ-305 vs AZ-104: Exam Difficulty, Cost, and What You Actually Need to Know" />
+  <meta name="twitter:description" content="AZ-305 vs AZ-104 compared on difficulty, domains, cost, study time, and prerequisites. Honest breakdown for engineers deciding which Azure cert to pursue next." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AZ-305 vs AZ-104: difficulty, domains, and what each exam actually tests","description":"AZ-305 vs AZ-104 compared on difficulty, domains, cost, study time, and prerequisites. Honest breakdown for engineers deciding which Azure cert to pursue next.","url":"https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AZ-305 harder than AZ-104?","acceptedAnswer":{"@type":"Answer","text":"Yes. AZ-305 tests architectural design and trade-off reasoning, while AZ-104 tests operational configuration knowledge. Most candidates find AZ-305 harder, with lower first-attempt pass rates."}},{"@type":"Question","name":"Do I need AZ-104 before AZ-305?","acceptedAnswer":{"@type":"Answer","text":"You need to hold the Azure Administrator Associate certification (by passing AZ-104) to earn the Azure Solutions Architect Expert certification. You can sit the AZ-305 exam without AZ-104 but cannot claim the Expert credential without both."}},{"@type":"Question","name":"How much does AZ-305 cost?","acceptedAnswer":{"@type":"Answer","text":"AZ-305 costs $165 USD per attempt via Pearson VUE. Earning the Azure Solutions Architect Expert certification requires passing both AZ-104 and AZ-305, totaling $330 in exam fees."}},{"@type":"Question","name":"How long does it take to prepare for AZ-305?","acceptedAnswer":{"@type":"Answer","text":"Candidates who recently passed AZ-104 typically need 40-60 hours of preparation for AZ-305. Allow more time if your AZ-104 knowledge is not recent or if you have limited hands-on architecture experience."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>AZ-305 vs AZ-104: difficulty, domains, and what each exam actually tests</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>AZ-305 is harder than AZ-104. That is the honest answer. The question is by how much, and whether the difficulty is the kind that rewards the study you have already done or requires a different approach entirely.</p>
+
+<h2>The prerequisite relationship</h2>
+<p>AZ-305 has a formal prerequisite: you must hold the Microsoft Certified: Azure Administrator Associate certification (earned by passing AZ-104) before you can earn the Azure Solutions Architect Expert credential. You can sit the AZ-305 exam without holding AZ-104, but you cannot claim the Expert certification until you have passed both.</p>
+<p>Cost: Both exams cost <strong>$165 USD</strong> each via <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/" target="_blank" rel="noopener">Pearson VUE</a>. Earning the Expert certification requires passing AZ-104 + AZ-305, so budget $330 in exam fees at minimum.</p>
+
+<h2>Domain comparison</h2>
+<p><strong>AZ-104</strong> tests operational configuration across five domains:</p>
+<ul>
+  <li>Manage Azure Identities and Governance (15-20%)</li>
+  <li>Implement and Manage Storage (15-20%)</li>
+  <li>Deploy and Manage Azure Compute Resources (20-25%)</li>
+  <li>Implement and Manage Virtual Networking (15-20%)</li>
+  <li>Monitor and Maintain Azure Resources (10-15%)</li>
+</ul>
+
+<p><strong>AZ-305</strong> tests architectural design across four domains:</p>
+<ul>
+  <li>Design Identity, Governance, and Monitoring Solutions (25-30%)</li>
+  <li>Design Data Storage Solutions (25-30%)</li>
+  <li>Design Business Continuity Solutions (10-15%)</li>
+  <li>Design Infrastructure Solutions (25-30%)</li>
+</ul>
+
+<h2>The fundamental difference in what each exam tests</h2>
+<p>AZ-104 asks: "How do you configure this?" You get a task and you need to know the correct CLI command, the portal setting, or the correct policy assignment. Questions have a right answer and a wrong answer.</p>
+
+<p>AZ-305 asks: "Given these constraints, which design is best and why?" Questions present a scenario with business requirements (cost target, compliance obligation, availability SLA) and ask you to select the most appropriate architecture. The challenge is that multiple options are plausible, and you need to identify which trade-offs the question is actually testing.</p>
+
+<p>This is a fundamentally different cognitive skill. Many people who score well on AZ-104 underestimate AZ-305 because they expect the same kind of "do I know the right command" pattern. AZ-305 requires you to reason about trade-offs, not recall configuration details.</p>
+
+<h2>Difficulty by the numbers</h2>
+<p>Community-reported data from r/AzureCertifications suggests first-attempt pass rates of 70-75% for AZ-104 and 60-65% for AZ-305 among candidates who have done structured preparation. The gap widens for candidates who do not complete case study practice before sitting AZ-305.</p>
+
+<h2>What you need to know for AZ-305 that AZ-104 does not prepare you for</h2>
+<ul>
+  <li><strong>Azure Well-Architected Framework.</strong> AZ-305 questions reference the five pillars (Reliability, Security, Cost Optimization, Operational Excellence, Performance Efficiency) and expect you to apply them to design choices.</li>
+  <li><strong>Data storage design.</strong> Cosmos DB consistency levels, Azure SQL vs Synapse Analytics vs Azure Data Lake trade-offs, storage redundancy patterns for compliance requirements.</li>
+  <li><strong>Business continuity architecture.</strong> RTO/RPO requirements mapped to specific Azure backup and disaster recovery configurations (Azure Site Recovery, backup vaults, geo-redundant storage).</li>
+  <li><strong>Hybrid and multi-region design.</strong> ExpressRoute vs VPN Gateway trade-offs, Azure Front Door vs Traffic Manager, designing for latency vs cost vs availability.</li>
+</ul>
+
+<h2>Study resources for AZ-305</h2>
+<p>The <a href="https://learn.microsoft.com/en-us/training/paths/microsoft-azure-architect-design-prerequisites/" target="_blank" rel="noopener">Microsoft Learn paths for AZ-305</a> are the starting point. John Savill's Azure Master Class on YouTube provides architecture-level explanations that map well to the AZ-305 question style. Case study practice is non-negotiable: download the official exam case studies from Microsoft Learn and practice structuring your reasoning before you sit the exam.</p>
+
+<h2>Study time estimate</h2>
+<p>Candidates who passed AZ-104 within the last 6 months typically need 40-60 hours of dedicated AZ-305 preparation. Candidates who earned AZ-104 more than a year ago and have not been doing hands-on architecture work should budget 80+ hours and refresh their AZ-104 knowledge before starting.</p>
+
+<h2>Architecture decision example</h2>
+<pre><code># AZ-305 tests decisions like this one:
+# Bicep snippet for a geo-redundant storage account
+# (Understanding when to choose this over LRS or ZRS is an AZ-305 topic)
+
+resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+  name: 'stproddatawe001'
+  location: 'westeurope'
+  kind: 'StorageV2'
+  sku: {
+    name: 'Standard_RAGRS'  // Read-access geo-redundant. AZ-305 tests WHY you choose RAGRS vs GRS vs ZRS
+  }
+  properties: {
+    minimumTlsVersion: 'TLS1_2'
+    allowBlobPublicAccess: false
+    supportsHttpsTrafficOnly: true
+  }
+}
+</code></pre>
+<p>AZ-104 tests whether you can deploy a storage account. AZ-305 tests whether you know when to use <code>Standard_RAGRS</code> vs <code>Standard_ZRS</code> vs <code>Standard_GRS</code> given a specific RPO and compliance requirement. Study the trade-offs, not just the syntax.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">Is AZ-305 harder than AZ-104?</h3>
+        <p class="faq-answer">Yes. AZ-305 tests architectural design and trade-off reasoning, while AZ-104 tests operational configuration knowledge. Most candidates find AZ-305 harder, with lower first-attempt pass rates.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Do I need AZ-104 before AZ-305?</h3>
+        <p class="faq-answer">You need to hold the Azure Administrator Associate certification (by passing AZ-104) to earn the Azure Solutions Architect Expert certification. You can sit the AZ-305 exam without AZ-104 but cannot claim the Expert credential without both.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much does AZ-305 cost?</h3>
+        <p class="faq-answer">AZ-305 costs $165 USD per attempt via Pearson VUE. Earning the Azure Solutions Architect Expert certification requires passing both AZ-104 and AZ-305, totaling $330 in exam fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long does it take to prepare for AZ-305?</h3>
+        <p class="faq-answer">Candidates who recently passed AZ-104 typically need 40-60 hours of preparation for AZ-305. Allow more time if your AZ-104 knowledge is not recent or if you have limited hands-on architecture experience.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" class="related-link">AZ-900 vs AZ-104: which to take first</a>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+      <a href="https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/" class="related-link">AWS SAA-C03 vs AZ-104</a>
+      <a href="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" class="related-link">Cloud engineer roadmap 2026</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

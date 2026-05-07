@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZ-700 vs AZ-104: Should You Specialize in Azure Networking? (2026)</title>
+  <meta name="description" content="AZ-700 vs AZ-104 in 2026: foundation versus specialty, salary delta, job market reality, and when the Azure networking specialty is worth pursuing for enterprise and consultancy roles." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AZ-700 vs AZ-104: Should You Specialize in Azure Networking? (2026)" />
+  <meta property="og:description" content="AZ-700 vs AZ-104 in 2026: foundation versus specialty, salary delta, job market reality, and when the Azure networking specialty is worth pursuing for enterprise and consultancy roles." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AZ-700 vs AZ-104: Should You Specialize in Azure Networking? (2026)" />
+  <meta name="twitter:description" content="AZ-700 vs AZ-104 in 2026: foundation versus specialty, salary delta, job market reality, and when the Azure networking specialty is worth pursuing for enterprise and consultancy roles." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AZ-700 vs AZ-104: should you specialize in Azure networking?","description":"AZ-700 vs AZ-104 in 2026: foundation versus specialty, salary delta, job market reality, and when the Azure networking specialty is worth pursuing for enterprise and consultancy roles.","url":"https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I take AZ-104 or AZ-700 first?","acceptedAnswer":{"@type":"Answer","text":"AZ-104 first. It is the foundation cert that AZ-700 builds on. The networking domain on AZ-104 covers fundamentals (VNets, NSGs, basic peering) that AZ-700 expects you to know coming in. Taking AZ-700 without AZ-104 is possible but inefficient."}},{"@type":"Question","name":"How much does AZ-700 raise salary versus AZ-104 alone?","acceptedAnswer":{"@type":"Answer","text":"Roughly 10-20% in roles where networking is the primary responsibility, particularly at enterprise consultancies and in hybrid migration projects. The premium is smaller (5-10%) at cloud-native SaaS companies where complex networking is less common."}},{"@type":"Question","name":"How long does it take to prep AZ-700 from AZ-104?","acceptedAnswer":{"@type":"Answer","text":"Most candidates need 50-70 hours over 6-8 weeks. Engineers with prior Cisco or Juniper networking experience can prep in 30-40 hours because the conceptual layer transfers directly. Engineers without networking foundations need additional time on TCP/IP and routing basics."}},{"@type":"Question","name":"Is AZ-700 worth it for a DevOps engineer?","acceptedAnswer":{"@type":"Answer","text":"Generally no. DevOps roles focus on CI/CD, Kubernetes, and observability. Networking specialty is rarely a hiring criterion for pure DevOps roles. AZ-400 (DevOps Engineer Expert) or CKA is a higher-leverage next cert for that career direction."}},{"@type":"Question","name":"What is the difference between AZ-700 and AZ-305 for networking topics?","acceptedAnswer":{"@type":"Answer","text":"AZ-305 tests architecture design including networking at the conceptual level (when to choose Front Door vs Traffic Manager, ExpressRoute vs VPN). AZ-700 tests implementation of those topologies in detail. They are complementary, with AZ-305 fitting architects and AZ-700 fitting hands-on network engineers."}},{"@type":"Question","name":"Does AZ-700 require AZ-104 as a formal prerequisite?","acceptedAnswer":{"@type":"Answer","text":"No. AZ-700 has no formal prerequisite. Microsoft strongly recommends prior AZ-104 completion because the foundational networking knowledge tested on AZ-104 is assumed on AZ-700, but you can sit AZ-700 without holding AZ-104."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>AZ-700 vs AZ-104: should you specialize in Azure networking?</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>AZ-104 is the foundation. AZ-700 is the specialty. The question is whether the specialty pays back the time investment, and the answer depends almost entirely on the kind of work you target. Below is the direct comparison plus the honest take on where AZ-700 actually moves the needle.</p>
+
+<h2>Exam facts side by side</h2>
+<table>
+  <thead>
+    <tr><th>Dimension</th><th>AZ-104</th><th>AZ-700</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Cost</td><td>$165 USD</td><td>$165 USD</td></tr>
+    <tr><td>Duration</td><td>100 minutes</td><td>120 minutes</td></tr>
+    <tr><td>Questions</td><td>40-60</td><td>40-60</td></tr>
+    <tr><td>Passing score</td><td>700/1000</td><td>700/1000</td></tr>
+    <tr><td>Tier</td><td>Associate</td><td>Associate (specialty)</td></tr>
+    <tr><td>Renewal</td><td>1 year, free online</td><td>1 year, free online</td></tr>
+    <tr><td>Prerequisites</td><td>None formal</td><td>None formal; AZ-104 strongly recommended</td></tr>
+  </tbody>
+</table>
+<p>Source: learn.microsoft.com certification pages, accessed May 2026.</p>
+
+<h2>Scope difference</h2>
+<p>AZ-104 covers Azure operations broadly: identities and governance, storage, compute, virtual networking basics, and monitoring. The networking domain on AZ-104 is roughly 15-20% of the exam and tests foundational concepts: VNets, subnets, NSGs, basic load balancers, simple peering, and VPN Gateway basics.</p>
+<p>AZ-700 is networking-specific and goes deep on the topics AZ-104 only touches:</p>
+<ul>
+  <li><strong>VNet peering at scale:</strong> hub-and-spoke topologies, transit, gateway transit, encrypted peering</li>
+  <li><strong>ExpressRoute:</strong> circuit types, peering models, ExpressRoute Direct, ExpressRoute Global Reach, FastPath</li>
+  <li><strong>Azure Firewall:</strong> Standard vs Premium, rule processing order, threat intelligence, IDPS, TLS inspection</li>
+  <li><strong>Azure Front Door:</strong> Standard, Premium, classic; routing rules, WAF integration, caching behaviour</li>
+  <li><strong>Application Gateway:</strong> v1 vs v2, autoscaling, WAF v2, mutual TLS, header rewrite</li>
+  <li><strong>Azure Bastion:</strong> Standard vs Premium SKU, host pools, native client support</li>
+  <li><strong>Private DNS, Private Endpoints, Private Link, Service Endpoints:</strong> the four overlapping options for private connectivity, when each applies, cost trade-offs</li>
+  <li><strong>Network monitoring:</strong> Network Watcher, Connection Monitor, NSG flow logs, Traffic Analytics, VNet flow logs (the newer offering replacing some NSG flow log scenarios)</li>
+</ul>
+
+<h2>Time to prep AZ-700 from AZ-104</h2>
+<p>Most candidates with a fresh AZ-104 need 50-70 hours of focused study over 6-8 weeks. Candidates without strong networking fundamentals (TCP/IP, BGP, routing tables) need additional time on the foundations. Candidates with prior Cisco or Juniper networking experience can compress this to 30-40 hours because the conceptual layer transfers directly.</p>
+
+<h2>Salary delta in 2026</h2>
+<p>Azure Network Engineers (AZ-700 holders) in the US earn $130,000-$160,000 mid-level and $165,000-$220,000 senior, per Glassdoor 2026 data. Compared with AZ-104-only Azure Administrators at the same experience level, the specialty cert correlates with roughly a 10-20% salary uplift in roles where networking is the primary responsibility.</p>
+<p>In the EU, AZ-700 holders at consultancies (Avanade, Insight, Atos, Sopra Steria) earn EUR 75,000-95,000 mid-level versus EUR 65,000-85,000 for AZ-104-only consultants. The premium is consistent and reflects the genuine scarcity of engineers who can design ExpressRoute topologies and Azure Firewall rule sets.</p>
+<p>In-house roles at SaaS companies show a smaller delta (5-10%) because most SaaS companies do not run complex hybrid network topologies; the specialty knowledge has fewer use cases.</p>
+
+<h2>Job market reality</h2>
+<h3>Where AZ-700 matters most</h3>
+<ul>
+  <li><strong>Enterprise Azure migrations:</strong> banks, healthcare, government, large retail. These companies move on-prem workloads to Azure and need engineers who can design ExpressRoute, hub-and-spoke topologies, and complex firewall rules. AZ-700 is frequently a hiring filter.</li>
+  <li><strong>Microsoft consultancies:</strong> Avanade, Insight, EPAM, Sopra Steria. Migration projects involve heavy networking work, and partner-status requirements push consultancies to maintain certified networking specialists.</li>
+  <li><strong>Hybrid cloud and multi-cloud connectivity roles:</strong> companies running Azure plus on-prem or Azure plus AWS need network engineers who can wire the two together. AZ-700 plus AWS Advanced Networking specialty is a powerful combination.</li>
+</ul>
+
+<h3>Where AZ-700 matters less</h3>
+<ul>
+  <li><strong>Cloud-native SaaS:</strong> companies building applications that run entirely in the cloud, often without on-prem connectivity. The networking design is simpler and AZ-104 networking knowledge is usually sufficient.</li>
+  <li><strong>Pure DevOps and platform engineering:</strong> the focus is CI/CD, Kubernetes, and observability. Networking is a smaller part of the job.</li>
+  <li><strong>Startup engineering:</strong> small teams, simple architectures. Networking specialists are rarely hired below 50 engineers.</li>
+</ul>
+
+<h2>The decision framework</h2>
+<p>Take AZ-700 if:</p>
+<ul>
+  <li>Your current or target job involves enterprise hybrid connectivity (ExpressRoute, VPN, hub-and-spoke)</li>
+  <li>You work at or want to work at a Microsoft consultancy doing migration projects</li>
+  <li>You enjoy networking work and want to specialise rather than stay general-purpose</li>
+  <li>You have already cleared AZ-104 and are looking for a high-signal next cert that is not a full architecture jump</li>
+</ul>
+<p>Skip AZ-700 if:</p>
+<ul>
+  <li>Your job runs cloud-native SaaS workloads with simple network topologies</li>
+  <li>You target DevOps or platform engineering roles where Kubernetes and CI/CD are the differentiators</li>
+  <li>You plan to move to AZ-305 (Azure Solutions Architect Expert) next; the architecture cert covers networking at the design level and is more broadly recognised</li>
+</ul>
+
+<h2>AZ-305 versus AZ-700: a common confusion</h2>
+<p>AZ-305 tests architecture design across all Azure domains, including networking design at the conceptual level (when to choose Front Door vs Application Gateway vs Traffic Manager, when to use ExpressRoute vs VPN, etc.). AZ-700 tests implementation of the networking topology that an AZ-305 architect would design. They are complementary, not competing.</p>
+<p>Practical recommendation: if you are an architect or aspire to be one, AZ-305 is the right next cert. If you are an engineer who will own the implementation and operation of complex Azure networking, AZ-700 is the right next cert. Many senior engineers in enterprise consultancies hold both.</p>
+
+<h2>Study plan: 8 weeks for AZ-700 from AZ-104</h2>
+<ul>
+  <li><strong>Weeks 1-2:</strong> Microsoft Learn AZ-700 paths. Cover hybrid connectivity (VPN Gateway, ExpressRoute) and core VNet topics.</li>
+  <li><strong>Weeks 3-4:</strong> Application delivery (Application Gateway, Front Door, Load Balancer) and security (Azure Firewall, NSG, ASG, Private Link).</li>
+  <li><strong>Weeks 5-6:</strong> Hands-on labs in a personal Azure subscription. Build a hub-and-spoke topology with Azure Firewall, deploy Application Gateway with WAF, set up Private Endpoint to a Storage Account.</li>
+  <li><strong>Week 7:</strong> Practice exams (MeasureUp official, plus Whizlabs for volume). Review every wrong answer against documentation.</li>
+  <li><strong>Week 8:</strong> Final practice exam, targeted review, and book the real exam.</li>
+</ul>
+
+<h2>Useful CLI commands for AZ-700 hands-on prep</h2>
+<pre><code># Create a hub VNet (typical AZ-700 lab starting point)
+az network vnet create \
+  --name vnet-hub \
+  --resource-group rg-network-lab \
+  --address-prefix 10.0.0.0/16 \
+  --subnet-name AzureFirewallSubnet \
+  --subnet-prefix 10.0.1.0/26
+
+# Set up VNet peering between hub and spoke
+az network vnet peering create \
+  --name hub-to-spoke \
+  --resource-group rg-network-lab \
+  --vnet-name vnet-hub \
+  --remote-vnet vnet-spoke \
+  --allow-vnet-access \
+  --allow-forwarded-traffic
+
+# Verify effective routes on a NIC (the most useful AZ-700 troubleshooting command)
+az network nic show-effective-route-table \
+  --name nic-vm01 \
+  --resource-group rg-network-lab \
+  --output table
+</code></pre>
+<p>The effective route table command is the single most useful tool for diagnosing networking issues in Azure. AZ-700 questions repeatedly probe scenarios where the effective routes are not what the candidate expects; muscle memory on this command translates to faster troubleshooting in real production work.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">Should I take AZ-104 or AZ-700 first?</h3>
+        <p class="faq-answer">AZ-104 first. It is the foundation cert that AZ-700 builds on. The networking domain on AZ-104 covers fundamentals (VNets, NSGs, basic peering) that AZ-700 expects you to know coming in. Taking AZ-700 without AZ-104 is possible but inefficient.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much does AZ-700 raise salary versus AZ-104 alone?</h3>
+        <p class="faq-answer">Roughly 10-20% in roles where networking is the primary responsibility, particularly at enterprise consultancies and in hybrid migration projects. The premium is smaller (5-10%) at cloud-native SaaS companies where complex networking is less common.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long does it take to prep AZ-700 from AZ-104?</h3>
+        <p class="faq-answer">Most candidates need 50-70 hours over 6-8 weeks. Engineers with prior Cisco or Juniper networking experience can prep in 30-40 hours because the conceptual layer transfers directly. Engineers without networking foundations need additional time on TCP/IP and routing basics.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Is AZ-700 worth it for a DevOps engineer?</h3>
+        <p class="faq-answer">Generally no. DevOps roles focus on CI/CD, Kubernetes, and observability. Networking specialty is rarely a hiring criterion for pure DevOps roles. AZ-400 (DevOps Engineer Expert) or CKA is a higher-leverage next cert for that career direction.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the difference between AZ-700 and AZ-305 for networking topics?</h3>
+        <p class="faq-answer">AZ-305 tests architecture design including networking at the conceptual level (when to choose Front Door vs Traffic Manager, ExpressRoute vs VPN). AZ-700 tests implementation of those topologies in detail. They are complementary, with AZ-305 fitting architects and AZ-700 fitting hands-on network engineers.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Does AZ-700 require AZ-104 as a formal prerequisite?</h3>
+        <p class="faq-answer">No. AZ-700 has no formal prerequisite. Microsoft strongly recommends prior AZ-104 completion because the foundational networking knowledge tested on AZ-104 is assumed on AZ-700, but you can sit AZ-700 without holding AZ-104.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" class="related-link">AZ-900 vs AZ-104: which to take first</a>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+      <a href="https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/" class="related-link">AZ-305 vs AZ-104: exam difficulty</a>
+      <a href="https://cloudevolvers.com/seo/azure-administrator-az-104-salary-2026/" class="related-link">AZ-104 Azure Administrator salary 2026</a>
+      <a href="https://cloudevolvers.com/seo/sc-100-microsoft-cybersecurity-architect-prep/" class="related-link">SC-100 Microsoft Cybersecurity Architect prep</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

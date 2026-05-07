@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SC-100 Microsoft Cybersecurity Architect Prep Guide (2026)</title>
+  <meta name="description" content="SC-100 Microsoft Cybersecurity Architect prep guide for 2026: prerequisites, four exam domains, study resources, and why this expert cert is undervalued vs CISSP for cloud-native security." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/sc-100-microsoft-cybersecurity-architect-prep/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="SC-100 Microsoft Cybersecurity Architect Prep Guide (2026)" />
+  <meta property="og:description" content="SC-100 Microsoft Cybersecurity Architect prep guide for 2026: prerequisites, four exam domains, study resources, and why this expert cert is undervalued vs CISSP for cloud-native security." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/sc-100-microsoft-cybersecurity-architect-prep/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SC-100 Microsoft Cybersecurity Architect Prep Guide (2026)" />
+  <meta name="twitter:description" content="SC-100 Microsoft Cybersecurity Architect prep guide for 2026: prerequisites, four exam domains, study resources, and why this expert cert is undervalued vs CISSP for cloud-native security." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"SC-100 Microsoft Cybersecurity Architect Prep Guide (2026)","description":"SC-100 Microsoft Cybersecurity Architect prep guide for 2026: prerequisites, four exam domains, study resources, and why this expert cert is undervalued vs CISSP for cloud-native security.","url":"https://cloudevolvers.com/seo/sc-100-microsoft-cybersecurity-architect-prep/","provider":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com"},"datePublished":"2026-05-07"}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the prerequisites for SC-100?","acceptedAnswer":{"@type":"Answer","text":"You must hold one of: AZ-500 (Azure Security Engineer), SC-300 (Identity and Access Administrator), SC-200 (Security Operations Analyst), or the legacy MS-500 to be issued the Cybersecurity Architect Expert credential. You can sit SC-100 without these but the cert will not be issued until a prerequisite is in place."}},{"@type":"Question","name":"How hard is the SC-100 exam?","acceptedAnswer":{"@type":"Answer","text":"It is one of the harder Microsoft exams. Most candidates with 2+ years of cloud security experience and a security associate prerequisite need 60-90 hours of preparation. The questions test design reasoning across complex multi-constraint scenarios rather than recall of specific configurations."}},{"@type":"Question","name":"Is SC-100 better than CISSP for cloud security work?","acceptedAnswer":{"@type":"Answer","text":"For Azure-native security architecture roles, yes. SC-100 tests design reasoning for Microsoft cloud security stacks (Defender, Sentinel, Entra ID, Zero Trust). CISSP is vendor-neutral and broader; it remains stronger for compliance, audit, and traditional infosec roles. Many engineers hold both for different reasons."}},{"@type":"Question","name":"How much does SC-100 cost?","acceptedAnswer":{"@type":"Answer","text":"$165 USD via Pearson VUE. Annual renewal is free via online assessment on Microsoft Learn. Practice exams from MeasureUp cost roughly $100 for the full bundle."}},{"@type":"Question","name":"What is the salary for a Microsoft Cybersecurity Architect in 2026?","acceptedAnswer":{"@type":"Answer","text":"US mid-level cybersecurity architects with SC-100 typically earn $145,000 to $200,000 total comp, senior $200,000 to $280,000 per Glassdoor and Levels.fyi 2026 data. EU mid-level salaries run EUR 70,000 to 100,000."}},{"@type":"Question","name":"Should I take AZ-500 or SC-300 as the SC-100 prerequisite?","acceptedAnswer":{"@type":"Answer","text":"AZ-500 for most engineers. It covers identity, platform protection, security operations, and data and application security on Azure, with strong topical overlap with SC-100. SC-300 is the right choice for engineers focused specifically on identity and access management roles."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>SC-100 Microsoft Cybersecurity Architect prep guide</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>SC-100 is Microsoft's expert-level cybersecurity architect certification. It is one of the harder Microsoft exams in the security portfolio, and one of the more useful credentials for cloud-native security work. Below is the prep approach that maps to the actual exam, plus the reason this cert is undervalued in many job markets.</p>
+
+<h2>Exam facts</h2>
+<ul>
+  <li>Cost: <strong>$165 USD</strong> via Pearson VUE</li>
+  <li>Format: 40-60 questions including case studies and design scenarios, 100 minutes</li>
+  <li>Passing score: 700/1000</li>
+  <li>English version last updated: April 27, 2026</li>
+  <li>Validity: 1 year, free annual online assessment renewal</li>
+</ul>
+
+<h2>The prerequisite reality</h2>
+<p>To earn the Microsoft Certified: Cybersecurity Architect Expert credential, you must hold one of the following before SC-100 itself counts:</p>
+<ul>
+  <li>Microsoft Certified: Azure Security Engineer Associate (AZ-500)</li>
+  <li>Microsoft Certified: Identity and Access Administrator Associate (SC-300)</li>
+  <li>Microsoft Certified: Security Operations Analyst Associate (SC-200)</li>
+  <li>Microsoft Certified: Information Protection and Compliance Administrator Associate (legacy MS-500)</li>
+</ul>
+<p>You can sit SC-100 without one of these in hand, but the certification will not be issued until the prerequisite is in place. Plan for two exam fees, not one. Source: Microsoft Learn certification page, accessed May 2026.</p>
+
+<h2>Recommended prerequisite path</h2>
+<p>For most engineers, AZ-500 (Azure Security Engineer Associate) is the most useful prerequisite. It covers identity, platform protection, security operations, and data and application security on Azure, and the topics overlap directly with SC-100 case studies. If your role focuses on identity (SSO, MFA, conditional access, governance), SC-300 is the right prerequisite. If you do SOC or threat-hunting work, SC-200 makes sense.</p>
+
+<h2>The four functional groups (skills outline)</h2>
+<table>
+  <thead>
+    <tr><th>Domain</th><th>Weight</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Design solutions that align with security best practices and priorities</td><td>20-25%</td></tr>
+    <tr><td>Design security operations, identity, and compliance capabilities</td><td>25-30%</td></tr>
+    <tr><td>Design security solutions for infrastructure</td><td>25-30%</td></tr>
+    <tr><td>Design security solutions for applications and data</td><td>20-25%</td></tr>
+  </tbody>
+</table>
+<p>The first domain is the one most candidates underprepare for. Microsoft expects you to apply the Microsoft Cybersecurity Reference Architectures (MCRA), Zero Trust principles, and the Cloud Adoption Framework to design choices. Read these documents directly; do not rely on a course summary.</p>
+
+<h2>Real study resources that work</h2>
+<ol>
+  <li><strong>Official Microsoft Learn paths for SC-100.</strong> Free, structured, and the closest alignment to the actual question style. Start here. Source: learn.microsoft.com/training.</li>
+  <li><strong>Microsoft Cybersecurity Reference Architectures (MCRA).</strong> Free PDF from Microsoft. The exam pulls scenarios directly from these architectures. Read all sections relevant to identity, network, endpoint, and SaaS security.</li>
+  <li><strong>Zero Trust Maturity Model.</strong> Microsoft's Zero Trust documentation maps to several SC-100 case study scenarios. Free at microsoft.com/security/business/zero-trust.</li>
+  <li><strong>John Savill's SC-100 master class on YouTube.</strong> Free, multi-hour, and covers the design reasoning the exam tests. The most-recommended video resource on r/AzureCertification for this cert.</li>
+  <li><strong>MeasureUp practice exams.</strong> Microsoft's official practice partner. The questions are representative of exam style. Around $100 for the full bundle.</li>
+  <li><strong>Charbel Nemnom's SC-100 study guide.</strong> Free, written by an MVP, structured by exam domain. Good complement to the Microsoft Learn paths.</li>
+</ol>
+
+<h2>Time to prepare</h2>
+<p>If you already hold one of the security associate prerequisites and have 2+ years of cloud security experience, plan for 60-90 hours of preparation over 8-10 weeks. If you are coming from a general cloud architecture background without specific security operations experience, budget 120+ hours and consider taking SC-300 or AZ-500 first as scaffolding.</p>
+
+<h2>Why SC-100 is undervalued vs CISSP for cloud-native work</h2>
+<p>CISSP is the dominant security credential in many job markets. It signals broad security knowledge across 8 domains and is widely recognised by HR filters. The honest comparison:</p>
+<ul>
+  <li><strong>CISSP:</strong> vendor-neutral, broad, requires 5 years of paid security work experience to certify, covers traditional infosec topics plus some cloud. Cost: $749 plus annual maintenance fees of $135 plus 40 CPE credits per year.</li>
+  <li><strong>SC-100:</strong> Microsoft-specific, tests design reasoning for Azure-native security, requires a Microsoft associate cert prerequisite, covers Zero Trust, MCRA, Defender, Sentinel, Entra ID. Cost: $165 plus zero renewal fees.</li>
+</ul>
+<p>For roles where the work is genuinely cloud-native security (designing Azure landing zones with security baked in, Sentinel-based SOC operations, identity-first security architecture), SC-100 tests skills that actually transfer to the day-to-day. CISSP tests breadth that is useful in compliance, audit, and traditional security roles but is less aligned with Azure-specific design work.</p>
+<p>In Europe, particularly in financial services and government, CISSP still holds a reputation premium. In US tech and EU consultancies focused on Microsoft cloud, SC-100 holders report comparable or higher offer rates per anonymous reports on r/AzureCertification and Microsoft Tech Community in 2025-2026.</p>
+
+<h2>Salary expectations</h2>
+<p>SC-100 holders in the US typically earn $145,000-$200,000 mid-level total comp, $200,000-$280,000 senior, per Glassdoor and Levels.fyi 2026 data for "cybersecurity architect" titles. In the EU, mid-level cybersecurity architects earn EUR 70,000-100,000, senior EUR 100,000-140,000. The cert plus 5+ years of cloud security experience is the threshold for the senior bands.</p>
+
+<h2>Practical preparation plan (10 weeks)</h2>
+<ul>
+  <li>Weeks 1-2: Microsoft Learn SC-100 paths, full read-through. Take notes by domain.</li>
+  <li>Weeks 3-4: MCRA documentation deep dive. Sketch reference architectures from memory after reading.</li>
+  <li>Weeks 5-6: Zero Trust documentation plus John Savill master class.</li>
+  <li>Weeks 7-8: Practice case studies. Microsoft Learn provides several free; MeasureUp adds depth.</li>
+  <li>Week 9: Full-length practice exam. Review every wrong answer against documentation.</li>
+  <li>Week 10: Final practice exam plus targeted review of weakest domain. Book the real exam at the end of the week.</li>
+</ul>
+
+<h2>What the exam looks like in practice</h2>
+<p>SC-100 questions present a fictional company with multiple business and technical constraints, then ask you to design a security solution that meets the constraints. There is rarely one objectively correct answer; there is usually one best-aligned answer given the priorities the question states. The skill being tested is reading carefully, identifying the dominant constraint, and matching the design to it. Practice this with real-world architecture review documents, not only with quiz questions.</p>
+<pre><code># Useful for SC-100 study: probe Entra ID conditional access policies
+az ad signed-in-user show
+az role assignment list --assignee &lt;userPrincipalName&gt; --output table
+
+# List Defender for Cloud security alerts in your subscription
+az security alert list --output table
+</code></pre>
+<p>The exam tests architectural reasoning, not CLI fluency. The commands above are useful for building the mental model of what the architecture you are designing will actually configure.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">What are the prerequisites for SC-100?</h3>
+        <p class="faq-answer">You must hold one of: AZ-500 (Azure Security Engineer), SC-300 (Identity and Access Administrator), SC-200 (Security Operations Analyst), or the legacy MS-500 to be issued the Cybersecurity Architect Expert credential. You can sit SC-100 without these but the cert will not be issued until a prerequisite is in place.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How hard is the SC-100 exam?</h3>
+        <p class="faq-answer">It is one of the harder Microsoft exams. Most candidates with 2+ years of cloud security experience and a security associate prerequisite need 60-90 hours of preparation. The questions test design reasoning across complex multi-constraint scenarios rather than recall of specific configurations.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Is SC-100 better than CISSP for cloud security work?</h3>
+        <p class="faq-answer">For Azure-native security architecture roles, yes. SC-100 tests design reasoning for Microsoft cloud security stacks (Defender, Sentinel, Entra ID, Zero Trust). CISSP is vendor-neutral and broader; it remains stronger for compliance, audit, and traditional infosec roles. Many engineers hold both for different reasons.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much does SC-100 cost?</h3>
+        <p class="faq-answer">$165 USD via Pearson VUE. Annual renewal is free via online assessment on Microsoft Learn. Practice exams from MeasureUp cost roughly $100 for the full bundle.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the salary for a Microsoft Cybersecurity Architect in 2026?</h3>
+        <p class="faq-answer">US mid-level cybersecurity architects with SC-100 typically earn $145,000 to $200,000 total comp, senior $200,000 to $280,000 per Glassdoor and Levels.fyi 2026 data. EU mid-level salaries run EUR 70,000 to 100,000.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Should I take AZ-500 or SC-300 as the SC-100 prerequisite?</h3>
+        <p class="faq-answer">AZ-500 for most engineers. It covers identity, platform protection, security operations, and data and application security on Azure, with strong topical overlap with SC-100. SC-300 is the right choice for engineers focused specifically on identity and access management roles.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/" class="related-link">AZ-305 vs AZ-104: exam difficulty</a>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification</a>
+      <a href="https://cloudevolvers.com/seo/cert-renewal-strategy-2026/" class="related-link">Cert renewal strategy 2026</a>
+      <a href="https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/" class="related-link">AZ-700 vs AZ-104 network specialty</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

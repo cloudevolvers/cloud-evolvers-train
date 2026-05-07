@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DP-203 vs AZ-204: Data Engineer or Developer Cert First? (2026)</title>
+  <meta name="description" content="DP-203 vs AZ-204 compared in 2026: scope, prep time, salary uplift, and what to do given DP-203 was retired and replaced by DP-700 Fabric Data Engineer." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/dp-203-vs-az-204-which-first/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="DP-203 vs AZ-204: Data Engineer or Developer Cert First? (2026)" />
+  <meta property="og:description" content="DP-203 vs AZ-204 compared in 2026: scope, prep time, salary uplift, and what to do given DP-203 was retired and replaced by DP-700 Fabric Data Engineer." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/dp-203-vs-az-204-which-first/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DP-203 vs AZ-204: Data Engineer or Developer Cert First? (2026)" />
+  <meta name="twitter:description" content="DP-203 vs AZ-204 compared in 2026: scope, prep time, salary uplift, and what to do given DP-203 was retired and replaced by DP-700 Fabric Data Engineer." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"DP-203 vs AZ-204: data engineer or developer first?","description":"DP-203 vs AZ-204 compared in 2026: scope, prep time, salary uplift, and what to do given DP-203 was retired and replaced by DP-700 Fabric Data Engineer.","url":"https://cloudevolvers.com/seo/dp-203-vs-az-204-which-first/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/dp-203-vs-az-204-which-first/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is DP-203 still available in 2026?","acceptedAnswer":{"@type":"Answer","text":"No. DP-203 (Data Engineering on Microsoft Azure) was retired by Microsoft on March 31, 2025. The successor certification is DP-700 (Fabric Data Engineer Associate), which covers Microsoft Fabric workloads including Lakehouse, Data Warehouse, and Real-Time Intelligence."}},{"@type":"Question","name":"What is the difference between AZ-204 and DP-700?","acceptedAnswer":{"@type":"Answer","text":"AZ-204 is the developer certification covering Azure App Service, Functions, Cosmos DB, and application development with Azure SDKs. DP-700 is the data engineering certification covering Microsoft Fabric, Lakehouse, Data Warehouse, and pipeline orchestration. They serve different roles and career paths."}},{"@type":"Question","name":"Should a software engineer take AZ-204 or DP-700 first?","acceptedAnswer":{"@type":"Answer","text":"AZ-204 first. It builds directly on existing software engineering skills and tests application development on Azure. DP-700 makes sense as a follow-on if you want to pivot toward data engineering or analytics roles."}},{"@type":"Question","name":"How long does it take to prepare for AZ-204?","acceptedAnswer":{"@type":"Answer","text":"Most candidates with 1+ years of Azure development experience need 50-70 hours over 6-8 weeks. Without prior Azure exposure, plan for 90-120 hours over 10-12 weeks. The exam includes code-snippet questions in C# and Python."}},{"@type":"Question","name":"Can I use DP-203 study materials for the DP-700 exam?","acceptedAnswer":{"@type":"Answer","text":"Partially. About 60-70% of the conceptual content (data lake design, batch vs streaming, data modelling) transfers. The tool-specific content does not, since DP-700 covers Microsoft Fabric instead of Synapse and Databricks. Use DP-203 material as background and study DP-700-specific content for the actual exam."}},{"@type":"Question","name":"What salary uplift does AZ-204 provide?","acceptedAnswer":{"@type":"Answer","text":"AZ-204 correlates with roughly a 5-10% salary uplift over uncertified Azure developers at the same experience level, per Dice and Glassdoor 2026 data. The mid-level total comp range in the US is $140,000 to $180,000 depending on employer type."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>DP-203 vs AZ-204: data engineer or developer first?</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>Important context first: DP-203 (Data Engineering on Microsoft Azure) was retired by Microsoft on March 31, 2025. The successor is <strong>DP-700 (Fabric Data Engineer Associate)</strong>. If you are searching DP-203 vs AZ-204 in 2026, you are almost certainly looking at the question of "data engineer cert or developer cert first?" rather than the literal exam codes. The comparison below answers both: how DP-700 (the live data engineer cert) compares to AZ-204 today, and what to do if you are looking at DP-203 study material online.</p>
+
+<h2>What each exam covers</h2>
+<h3>AZ-204 (Developing Solutions for Microsoft Azure)</h3>
+<p>AZ-204 is the live Microsoft developer certification. Cost: <strong>$165 USD</strong> via Pearson VUE. The exam covers building Azure-native applications across these areas: Azure App Service, Azure Functions, Azure Storage (Blob, Table, Queue), Cosmos DB at the developer level, Service Bus, Event Grid and Event Hubs, API Management, Azure Container Apps and AKS basics, secure development with Key Vault and Managed Identity, and monitoring with Application Insights.</p>
+<p>The bar: you can write code that runs on Azure, integrate with managed services, secure secrets and identities properly, and instrument the application for observability.</p>
+
+<h3>DP-203 (retired) and DP-700 (replacement)</h3>
+<p>DP-203 covered Azure Synapse Analytics, Azure Databricks, Azure Stream Analytics, Azure Data Lake Storage Gen2, Cosmos DB at the data engineering level, and the design of batch and streaming pipelines. The exam was retired because Microsoft consolidated its data engineering story around Microsoft Fabric.</p>
+<p>DP-700 (Fabric Data Engineer Associate) is the current cert. Cost: <strong>$165 USD</strong>. It covers Microsoft Fabric workloads including Lakehouse, Data Warehouse, Data Factory pipelines in Fabric, Real-Time Intelligence, Spark notebooks, and the OneLake storage layer. It also tests data modelling, SQL transformations, and Spark-based processing.</p>
+<p>If you have DP-203 study material from 2024-2025, the underlying concepts (data lake design, batch vs streaming, data modelling, performance tuning) are still valid. The specific tooling has shifted from Synapse and Databricks to Fabric. About 60-70% of conceptual content transfers; the tool-specific knowledge does not.</p>
+
+<h2>Which to take first based on your background</h2>
+<table>
+  <thead>
+    <tr><th>Background</th><th>Take first</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Software engineer, Java/.NET/Python web</td><td>AZ-204</td><td>Builds on existing developer skills directly</td></tr>
+    <tr><td>Data engineer, on-prem SQL or ETL</td><td>DP-700</td><td>Maps to data engineering work directly</td></tr>
+    <tr><td>Data analyst with SQL fluency</td><td>DP-700</td><td>Closer to existing data work; AZ-204 requires application coding</td></tr>
+    <tr><td>Backend engineer wanting to do data work</td><td>AZ-204</td><td>Easier ramp; pivot to DP-700 after</td></tr>
+    <tr><td>Pure ops or sysadmin</td><td>Neither yet</td><td>AZ-104 first, then either as a specialisation</td></tr>
+  </tbody>
+</table>
+
+<h2>Time to prep</h2>
+<p>AZ-204: most candidates with 1+ years of Azure development experience need 50-70 hours over 6-8 weeks. Without prior Azure exposure, plan for 90-120 hours over 10-12 weeks. The exam includes code-snippet questions in C# and Python, so reading code under pressure is part of the skill set.</p>
+<p>DP-700: most candidates with prior data engineering experience (any platform) need 60-80 hours over 8-10 weeks. The Fabric-specific tooling adds learning curve even for experienced data engineers because Microsoft consolidated several legacy products into a new unified UX.</p>
+<p>If you are studying DP-203 material because you found it cheap or already paid for it: stop. Use it as background for the data lake and pipeline design concepts, then study DP-700 specifically for the Fabric-based questions you will see on the live exam.</p>
+
+<h2>Salary uplift expected</h2>
+<p>AZ-204 holders in the US earn a median total comp of $140,000-$180,000 at the mid-level (3-5 YoE) per Glassdoor 2026 and Levels.fyi data, depending on the type of employer. The cert correlates with roughly a 5-10% salary uplift over uncertified Azure developers at the same experience level.</p>
+<p>DP-700 is too new to have stable salary data. DP-203 data from 2023-2024 showed Azure data engineer roles in the US at $130,000-$170,000 mid-level. Fabric-specific roles in 2026 are appearing in the same band, with consultancies paying a premium because Fabric expertise is still scarce.</p>
+<p>In the EU, AZ-204 holders typically earn EUR 60,000-85,000 mid-level (Netherlands, Germany), DP-700 holders EUR 65,000-90,000. The data engineering premium is real and consistent across regions.</p>
+
+<h2>The honest career framing</h2>
+<p>If you want to build applications, AZ-204 is the right cert and the path opens to senior backend engineer, full-stack engineer, or Azure-focused application architect. If you want to work with data, DP-700 is the right cert and the path opens to data engineer, analytics engineer, or data platform architect. The two paths increasingly diverge after the associate level: AZ-204 leads to AZ-305 (architect) or AZ-400 (DevOps); DP-700 leads to DP-600 (Fabric Analytics Engineer) or DP-100 (Azure Data Scientist).</p>
+<p>One concrete tactical note: if your current job involves writing code that loads or queries data, AZ-204 first will give you immediate utility while you decide whether to pivot toward data engineering. The reverse is less true: DP-700 study assumes Fabric tooling familiarity that does not transfer back to general application development.</p>
+
+<h2>What to verify before booking either exam</h2>
+<pre><code># Confirm Azure CLI version (both exams assume current CLI)
+az --version
+
+# Verify you have the developer extensions installed if studying AZ-204
+az extension list --output table
+# Expected: appservice-kube, functionapp, etc.
+
+# For DP-700, confirm you have a Fabric-enabled tenant
+az login
+# Then sign in to https://app.fabric.microsoft.com to verify access
+</code></pre>
+<p>The lab work for both exams assumes a working Azure subscription and CLI. Free trial credits cover most of the lab requirements for AZ-204; DP-700 lab work benefits from a Fabric capacity F2 SKU which you can pay-as-you-go.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">Is DP-203 still available in 2026?</h3>
+        <p class="faq-answer">No. DP-203 (Data Engineering on Microsoft Azure) was retired by Microsoft on March 31, 2025. The successor certification is DP-700 (Fabric Data Engineer Associate), which covers Microsoft Fabric workloads including Lakehouse, Data Warehouse, and Real-Time Intelligence.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the difference between AZ-204 and DP-700?</h3>
+        <p class="faq-answer">AZ-204 is the developer certification covering Azure App Service, Functions, Cosmos DB, and application development with Azure SDKs. DP-700 is the data engineering certification covering Microsoft Fabric, Lakehouse, Data Warehouse, and pipeline orchestration. They serve different roles and career paths.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Should a software engineer take AZ-204 or DP-700 first?</h3>
+        <p class="faq-answer">AZ-204 first. It builds directly on existing software engineering skills and tests application development on Azure. DP-700 makes sense as a follow-on if you want to pivot toward data engineering or analytics roles.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long does it take to prepare for AZ-204?</h3>
+        <p class="faq-answer">Most candidates with 1+ years of Azure development experience need 50-70 hours over 6-8 weeks. Without prior Azure exposure, plan for 90-120 hours over 10-12 weeks. The exam includes code-snippet questions in C# and Python.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Can I use DP-203 study materials for the DP-700 exam?</h3>
+        <p class="faq-answer">Partially. About 60-70% of the conceptual content (data lake design, batch vs streaming, data modelling) transfers. The tool-specific content does not, since DP-700 covers Microsoft Fabric instead of Synapse and Databricks. Use DP-203 material as background and study DP-700-specific content for the actual exam.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What salary uplift does AZ-204 provide?</h3>
+        <p class="faq-answer">AZ-204 correlates with roughly a 5-10% salary uplift over uncertified Azure developers at the same experience level, per Dice and Glassdoor 2026 data. The mid-level total comp range in the US is $140,000 to $180,000 depending on employer type.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" class="related-link">AZ-900 vs AZ-104: which to take first</a>
+      <a href="https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/" class="related-link">AZ-305 vs AZ-104: exam difficulty</a>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+      <a href="https://cloudevolvers.com/seo/azure-administrator-az-104-salary-2026/" class="related-link">AZ-104 Azure Administrator salary 2026</a>
+      <a href="https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/" class="related-link">AZ-700 vs AZ-104: Azure networking specialty</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

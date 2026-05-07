@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Certification Renewal Strategy 2026: What to Renew, What to Skip</title>
+  <meta name="description" content="Cloud certification renewal strategy for 2026: AWS, Azure, Google Cloud, CKA renewal cycles, costs, and which renewals to skip when changing roles." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/cert-renewal-strategy-2026/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cloud Certification Renewal Strategy 2026: What to Renew, What to Skip" />
+  <meta property="og:description" content="Cloud certification renewal strategy for 2026: AWS, Azure, Google Cloud, CKA renewal cycles, costs, and which renewals to skip when changing roles." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/cert-renewal-strategy-2026/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloud Certification Renewal Strategy 2026: What to Renew, What to Skip" />
+  <meta name="twitter:description" content="Cloud certification renewal strategy for 2026: AWS, Azure, Google Cloud, CKA renewal cycles, costs, and which renewals to skip when changing roles." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloud certification renewal strategy that actually saves time","description":"Cloud certification renewal strategy for 2026: AWS, Azure, Google Cloud, CKA renewal cycles, costs, and which renewals to skip when changing roles.","url":"https://cloudevolvers.com/seo/cert-renewal-strategy-2026/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/cert-renewal-strategy-2026/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How often do AWS certifications expire?","acceptedAnswer":{"@type":"Answer","text":"AWS associate, professional, and specialty certifications all expire after 3 years. Renewal is by re-sitting the same exam at full cost or by passing a higher-tier exam in the same path."}},{"@type":"Question","name":"Are Microsoft Azure certification renewals free?","acceptedAnswer":{"@type":"Answer","text":"Yes. As of 2026, Microsoft role-based and specialty certifications renew via free online assessment on Microsoft Learn. The assessment is 30-50 questions, takes 45-90 minutes, and is open book. Fundamentals certifications do not expire."}},{"@type":"Question","name":"How long are Google Cloud certifications valid?","acceptedAnswer":{"@type":"Answer","text":"Google Cloud Associate Cloud Engineer and Professional certifications are valid for 2 years. Renewal requires re-sitting the full exam at the original cost. Google does not offer a renewal-by-assessment option."}},{"@type":"Question","name":"How long is the CKA certification valid?","acceptedAnswer":{"@type":"Answer","text":"The CKA is valid for 2 years (changed from 3 years in early 2025). Renewal is by re-sitting the full exam at the current price of $445."}},{"@type":"Question","name":"Should I let old certifications lapse when changing roles?","acceptedAnswer":{"@type":"Answer","text":"Yes, generally. Maintain certs that are still relevant to your current daily work or to job descriptions you would pursue in the next 12-18 months. Certs from previous roles add maintenance overhead without proportional career value."}},{"@type":"Question","name":"What is the cheapest way to maintain a cloud cert stack?","acceptedAnswer":{"@type":"Answer","text":"Lean toward Microsoft Azure where renewal is free. For AWS, renew via passing the next-tier exam (associate to professional) which resets both clocks. For Google Cloud and CNCF, plan for full exam re-sits and budget accordingly."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Cloud certification renewal strategy that actually saves time</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>Cert renewal is overhead. Once you hold three or four cloud certs, the calendar of renewals starts eating real time. The question is which ones are worth maintaining and which ones to let lapse when you change roles. Below is the renewal model for each major cert family in 2026, plus a practical strategy.</p>
+
+<h2>AWS renewal model</h2>
+<p>AWS associate certs (SAA-C03, DVA-C02, SOA-C02) are valid for 3 years. Renewal options:</p>
+<ul>
+  <li>Pass the next exam in the same path (SAA-C03 holders can renew by passing SAP-C02 Professional). This resets the clock on both the associate and the professional.</li>
+  <li>Re-sit the same exam at full cost ($150 for associate, $300 for professional).</li>
+</ul>
+<p>AWS professional certs (SAP-C02, DOP-C02) are also valid for 3 years. Renewal is by re-sitting the same exam at $300, or by passing a more advanced specialty cert. AWS specialty certs are 3 years, $300 each.</p>
+<p><strong>Free renewal path:</strong> none in the AWS ecosystem. AWS does not offer free online assessments. Every renewal costs money or requires passing a higher-tier exam.</p>
+
+<h2>Azure (Microsoft) renewal model</h2>
+<p>Microsoft moved to a unified annual renewal model in 2026. All role-based and specialty certs (AZ-104, AZ-305, AZ-500, AZ-700, SC-100, MS-102, etc.) are valid for 1 year. Renewal is via free online assessment on Microsoft Learn:</p>
+<ul>
+  <li>30-50 questions, 45-90 minutes, open book</li>
+  <li>Free, unproctored, repeatable until you pass</li>
+  <li>Six-month eligibility window before expiration</li>
+</ul>
+<p>Fundamentals certs (AZ-900, AI-900, DP-900) do not expire. Source: Microsoft Learn certification renewal documentation, accessed May 2026.</p>
+<p><strong>Practical impact:</strong> Annual renewal sounds aggressive but takes about 60 minutes per cert per year. The cost is zero. There is no reason to let an active Azure cert lapse if you are still using the technology.</p>
+
+<h2>Google Cloud renewal model</h2>
+<p>Google Cloud Professional certs (Cloud Architect, Data Engineer, DevOps Engineer, Cloud Developer, Network Engineer, Security Engineer) are valid for 2 years. Associate Cloud Engineer is also 2 years. Renewal is by re-sitting the full exam at the original cost ($200 associate, $200 professional). Google does not offer a renewal-by-assessment option as of May 2026.</p>
+<p><strong>Practical impact:</strong> Google's renewal model is the most demanding of the three major clouds. Plan for 30-40 hours of refresh study and a full proctored exam every 2 years.</p>
+
+<h2>Linux Foundation (CKA, CKAD, CKS, KCNA)</h2>
+<p>Linux Foundation Kubernetes certs are valid for 2 years (this changed from 3 years in early 2025). Renewal is by re-sitting the same exam at the current price. CKA is currently $445. There is no free renewal path.</p>
+<p><strong>Practical impact:</strong> Kubernetes evolves quickly. The 2-year cycle aligns with roughly 4 minor version bumps. Renewal is genuinely useful study, not a paper exercise.</p>
+
+<h2>FinOps Foundation (FOCP, FOCP-P)</h2>
+<p>FOCP is valid for 2 years. Renewal is via continuing education credits earned through FinOps Foundation events, training, or community contributions, with a smaller fee than the original exam. FOCP-P (Professional) follows the same model.</p>
+
+<h2>Renewal calendar template</h2>
+<p>Build this as a spreadsheet or calendar. The structure is what matters: renewal dates by cert, cost, and time required.</p>
+<table>
+  <thead>
+    <tr><th>Cert</th><th>Validity</th><th>Renewal cost</th><th>Time per renewal</th><th>Renewal type</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>AWS SAA-C03</td><td>3 yrs</td><td>$150 or pass SAP-C02</td><td>40-80 hrs study + exam</td><td>Full re-sit</td></tr>
+    <tr><td>AWS SAP-C02</td><td>3 yrs</td><td>$300 or pass specialty</td><td>50-100 hrs study + exam</td><td>Full re-sit</td></tr>
+    <tr><td>Azure AZ-104</td><td>1 yr</td><td>Free</td><td>1-2 hrs assessment</td><td>Online open book</td></tr>
+    <tr><td>Azure AZ-305</td><td>1 yr</td><td>Free</td><td>1-2 hrs assessment</td><td>Online open book</td></tr>
+    <tr><td>GCP ACE</td><td>2 yrs</td><td>$200</td><td>30-40 hrs study + exam</td><td>Full re-sit</td></tr>
+    <tr><td>GCP PCA</td><td>2 yrs</td><td>$200</td><td>40-60 hrs study + exam</td><td>Full re-sit</td></tr>
+    <tr><td>CKA</td><td>2 yrs</td><td>$445</td><td>20-30 hrs refresh + exam</td><td>Full re-sit</td></tr>
+    <tr><td>FOCP</td><td>2 yrs</td><td>~$100 + CE credits</td><td>variable</td><td>Continuing education</td></tr>
+  </tbody>
+</table>
+
+<h2>Which renewals to skip when you change roles</h2>
+<p>The honest answer: any cert that is no longer in your daily work and is not on any near-term job description you would pursue. Specifically:</p>
+<ul>
+  <li><strong>You moved from AWS to Azure:</strong> let the AWS associate certs lapse. Renew the AWS Pro only if your job market still values it. Azure renewals are free and worth maintaining.</li>
+  <li><strong>You moved from infrastructure to security:</strong> renew SC-100 and AZ-500 free; let AZ-104 lapse if you are no longer doing operations.</li>
+  <li><strong>You moved into engineering management:</strong> renew the most senior cert in your current cloud as a credibility signal. Let the rest lapse.</li>
+  <li><strong>You moved from cloud engineering to platform engineering:</strong> renew CKA. Let GCP ACE lapse if you do not work with GCP.</li>
+</ul>
+
+<h2>The compounding cost of over-certification</h2>
+<p>Engineers who hold 8+ active certs spend 80-160 hours per year on renewals. That time has an opportunity cost: a single side project shipped to GitHub, a conference talk, or a deep technical blog post often produces more career value than a renewed associate cert. Calculate the hours you spend on renewals annually and compare against alternatives.</p>
+
+<h2>Practical strategy</h2>
+<ol>
+  <li><strong>Identify your "active" cloud.</strong> The one you work with daily. Maintain its full cert stack at every level you have earned.</li>
+  <li><strong>Identify your "secondary" cloud.</strong> The one you might use again. Maintain only the highest-tier cert you hold; let associates lapse.</li>
+  <li><strong>Drop everything else.</strong> Certs from previous roles you do not anticipate returning to are pure overhead.</li>
+  <li><strong>Default to keeping anything Microsoft.</strong> Free annual renewal removes the maintenance argument; only drop it if the cert is genuinely irrelevant to your current and near-future work.</li>
+</ol>
+
+<h2>What to put in your calendar</h2>
+<p>For each active cert, set three reminders: 90 days before expiration (start prep), 30 days before (book exam or assessment), and 7 days before (final block in calendar). The 90-day window is the difference between casually maintaining a cert and panic-cramming the week before expiration.</p>
+<pre><code># Example: track cert expirations in a flat file your shell can grep
+# ~/.cert-calendar
+SAA-C03  2027-08-12  150  AWS
+AZ-104   2027-03-04  0    MS
+AZ-305   2027-04-22  0    MS
+CKA      2027-11-30  445  CNCF
+</code></pre>
+<p>The discipline is what matters, not the tool. A spreadsheet, a flat file, or a calendar app all work. What does not work: assuming you will remember.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">How often do AWS certifications expire?</h3>
+        <p class="faq-answer">AWS associate, professional, and specialty certifications all expire after 3 years. Renewal is by re-sitting the same exam at full cost or by passing a higher-tier exam in the same path.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Are Microsoft Azure certification renewals free?</h3>
+        <p class="faq-answer">Yes. As of 2026, Microsoft role-based and specialty certifications renew via free online assessment on Microsoft Learn. The assessment is 30-50 questions, takes 45-90 minutes, and is open book. Fundamentals certifications do not expire.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long are Google Cloud certifications valid?</h3>
+        <p class="faq-answer">Google Cloud Associate Cloud Engineer and Professional certifications are valid for 2 years. Renewal requires re-sitting the full exam at the original cost. Google does not offer a renewal-by-assessment option.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long is the CKA certification valid?</h3>
+        <p class="faq-answer">The CKA is valid for 2 years (changed from 3 years in early 2025). Renewal is by re-sitting the full exam at the current price of $445.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Should I let old certifications lapse when changing roles?</h3>
+        <p class="faq-answer">Yes, generally. Maintain certs that are still relevant to your current daily work or to job descriptions you would pursue in the next 12-18 months. Certs from previous roles add maintenance overhead without proportional career value.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the cheapest way to maintain a cloud cert stack?</h3>
+        <p class="faq-answer">Lean toward Microsoft Azure where renewal is free. For AWS, renew via passing the next-tier exam (associate to professional) which resets both clocks. For Google Cloud and CNCF, plan for full exam re-sits and budget accordingly.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification</a>
+      <a href="https://cloudevolvers.com/seo/cka-prep-for-ops-engineers/" class="related-link">CKA prep for ops engineers</a>
+      <a href="https://cloudevolvers.com/seo/free-aws-practice-exams-2026/" class="related-link">Free AWS practice exams 2026</a>
+      <a href="https://cloudevolvers.com/seo/azure-administrator-az-104-salary-2026/" class="related-link">AZ-104 Azure Administrator salary 2026</a>
+      <a href="https://cloudevolvers.com/seo/devops-engineer-cloud-cert-roadmap-2026/" class="related-link">DevOps engineer cloud cert roadmap 2026</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>
