@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CKA Exam Prep for Ops Engineers: What to Study and How (2026)</title>
+  <meta name="description" content="CKA prep guide for ops engineers in 2026. Exam costs $445, covers 5 domains, 2 hours hands-on. What to study, what trips people up, and how to build speed under pressure." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/cka-prep-for-ops-engineers/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="CKA Exam Prep for Ops Engineers: What to Study and How (2026)" />
+  <meta property="og:description" content="CKA prep guide for ops engineers in 2026. Exam costs $445, covers 5 domains, 2 hours hands-on. What to study, what trips people up, and how to build speed under pressure." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/cka-prep-for-ops-engineers/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CKA Exam Prep for Ops Engineers: What to Study and How (2026)" />
+  <meta name="twitter:description" content="CKA prep guide for ops engineers in 2026. Exam costs $445, covers 5 domains, 2 hours hands-on. What to study, what trips people up, and how to build speed under pressure." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"CKA Exam Prep for Ops Engineers: What to Study and How (2026)","description":"CKA prep guide for ops engineers in 2026. Exam costs $445, covers 5 domains, 2 hours hands-on. What to study, what trips people up, and how to build speed under pressure.","url":"https://cloudevolvers.com/seo/cka-prep-for-ops-engineers/","provider":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com"},"datePublished":"2026-05-07"}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does the CKA exam cost in 2026?","acceptedAnswer":{"@type":"Answer","text":"The CKA exam costs $445 USD through the Linux Foundation and includes one free retake. A bundle with the THRIVE subscription is available for $625."}},{"@type":"Question","name":"How long does it take to prepare for the CKA?","acceptedAnswer":{"@type":"Answer","text":"Most candidates with ops or sysadmin experience need 6-8 weeks of focused preparation. Plan for daily practice on a real Kubernetes cluster, not just reading."}},{"@type":"Question","name":"Can you use documentation during the CKA exam?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can access kubernetes.io/docs during the exam. You cannot use any other resources, and the time cost of looking things up is significant, so strong hands-on preparation is still required."}},{"@type":"Question","name":"What is the CKA passing score?","acceptedAnswer":{"@type":"Answer","text":"The CKA passing score is 66%. The exam is performance-based with 17 tasks across 5 domains."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>CKA exam prep for ops engineers: the practical study guide</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>The CKA is a hands-on exam. You get a terminal, a set of Kubernetes clusters, and 17 tasks to complete in 2 hours. There are no multiple-choice questions. If you cannot type <code>kubectl</code> commands without looking them up, you will not pass.</p>
+
+<h2>Exam facts</h2>
+<ul>
+  <li>Cost: <strong>$445 USD</strong>, includes one free retake. Via <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/" target="_blank" rel="noopener">Linux Foundation / CNCF</a>.</li>
+  <li>Format: Performance-based, 2 hours, remotely proctored browser-based terminal</li>
+  <li>Kubernetes version: v1.34 (as of 2026)</li>
+  <li>Open book: You can use kubernetes.io/docs during the exam. Nothing else.</li>
+  <li>Passing score: 66%</li>
+</ul>
+
+<h2>The five domains and their weightings</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Domain</th>
+      <th>Weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cluster Architecture, Installation and Configuration</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td>Services and Networking</td>
+      <td>20%</td>
+    </tr>
+    <tr>
+      <td>Troubleshooting</td>
+      <td>30%</td>
+    </tr>
+    <tr>
+      <td>Workloads and Scheduling</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>10%</td>
+    </tr>
+  </tbody>
+</table>
+<p>Troubleshooting is the biggest domain at 30%. Most candidates under-prepare for it. You need to be fast at diagnosing cluster issues: broken kubelet configs, crashlooping pods, misconfigured network policies, and storage mount failures.</p>
+
+<h2>Study approach for ops engineers</h2>
+<p>Ops engineers (sysadmin, SRE, platform engineering background) have an advantage on the troubleshooting domain because they already know how to read logs, diagnose service failures, and work methodically under time pressure. The disadvantage is that most ops engineers are less familiar with Kubernetes-specific objects like NetworkPolicy, PodDisruptionBudget, and CustomResourceDefinitions.</p>
+
+<p>Recommended study path:</p>
+<ul>
+  <li><strong>Weeks 1-2:</strong> Killer.sh CKA simulator (included free with exam purchase). Do every task, read every explanation. This is the closest thing to the real exam environment.</li>
+  <li><strong>Weeks 3-4:</strong> Mumshad Mannambeth's CKA course on Udemy is the most complete structured course available. Do the mock exams at the end of each section.</li>
+  <li><strong>Week 5-6:</strong> Daily practice on a local <code>kind</code> or <code>minikube</code> cluster. Focus on speed: aim to complete any single task in under 4 minutes.</li>
+</ul>
+
+<h2>What trips ops engineers up</h2>
+<p>The most common failure points for ops engineers taking the CKA:</p>
+<ol>
+  <li><strong>NetworkPolicy syntax.</strong> The YAML spec for NetworkPolicy is not intuitive. Practice writing NetworkPolicy manifests from scratch, not from copy-paste.</li>
+  <li><strong>etcd backup and restore.</strong> This appears consistently. Know the <code>etcdctl snapshot save</code> and <code>etcdctl snapshot restore</code> commands with all required flags.</li>
+  <li><strong>RBAC.</strong> ClusterRole vs Role, ClusterRoleBinding vs RoleBinding. The exam will ask you to create both and test them with <code>kubectl auth can-i</code>.</li>
+  <li><strong>Node troubleshooting.</strong> You will get a broken node. Know how to SSH to it, check <code>kubelet</code> status with <code>systemctl</code>, and fix common config errors.</li>
+</ol>
+
+<h2>Essential kubectl commands to have at muscle memory</h2>
+<pre><code># Create a pod imperatively (faster than writing YAML from scratch)
+kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml
+
+# Check what is wrong with a node
+kubectl describe node &lt;node-name&gt;
+kubectl get events --sort-by='.lastTimestamp'
+
+# RBAC: create a role and bind it
+kubectl create role reader --verb=get,list --resource=pods -n default
+kubectl create rolebinding reader-binding --role=reader --user=jane -n default
+
+# Verify RBAC
+kubectl auth can-i get pods --as=jane -n default
+
+# etcd backup
+ETCDCTL_API=3 etcdctl snapshot save /tmp/backup.db   --endpoints=https://127.0.0.1:2379   --cacert=/etc/kubernetes/pki/etcd/ca.crt   --cert=/etc/kubernetes/pki/etcd/server.crt   --key=/etc/kubernetes/pki/etcd/server.key
+
+# Get all nodes and their status
+kubectl get nodes -o wide
+</code></pre>
+
+<h2>The open-book strategy</h2>
+<p>You can use kubernetes.io/docs during the exam. This is not a lifeline for topics you do not know; it is a reference for exact YAML syntax when you need it. If you are spending more than 90 seconds looking something up, you have not studied enough. Use the docs for: PersistentVolume/PersistentVolumeClaim YAML structure, NetworkPolicy examples, and StorageClass spec fields.</p>
+
+<h2>Time management</h2>
+<p>17 tasks, 120 minutes, means roughly 7 minutes per task. Higher-weighted tasks are worth more points. If a task is taking more than 10 minutes, flag it and move on. Come back at the end. Leaving a partially completed high-weight task is worse than leaving it blank and finishing three easier tasks.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">How much does the CKA exam cost in 2026?</h3>
+        <p class="faq-answer">The CKA exam costs $445 USD through the Linux Foundation and includes one free retake. A bundle with the THRIVE subscription is available for $625.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long does it take to prepare for the CKA?</h3>
+        <p class="faq-answer">Most candidates with ops or sysadmin experience need 6-8 weeks of focused preparation. Plan for daily practice on a real Kubernetes cluster, not just reading.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Can you use documentation during the CKA exam?</h3>
+        <p class="faq-answer">Yes. You can access kubernetes.io/docs during the exam. You cannot use any other resources, and the time cost of looking things up is significant, so strong hands-on preparation is still required.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What is the CKA passing score?</h3>
+        <p class="faq-answer">The CKA passing score is 66%. The exam is performance-based with 17 tasks across 5 domains.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" class="related-link">Cloud engineer roadmap 2026</a>
+      <a href="https://cloudevolvers.com/seo/finops-certified-practitioner-study-guide-2026/" class="related-link">FinOps Certified Practitioner study guide</a>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification</a>
+      <a href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" class="related-link">AZ-900 vs AZ-104 comparison</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>
