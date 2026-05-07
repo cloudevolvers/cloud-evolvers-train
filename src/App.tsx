@@ -33,6 +33,7 @@ import {
 import HomePage from "@/pages/HomePage";
 import ToolsIndexPage from "@/pages/tools/ToolsIndexPage";
 import Az104ReadinessQuizPage from "@/pages/tools/Az104ReadinessQuizPage";
+import MicrosoftExamCostCalculatorPage from "@/pages/tools/MicrosoftExamCostCalculatorPage";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
 
               <Route path="/tools" element={<ToolsIndexPage />} />
               <Route path="/tools/az-104-readiness-quiz" element={<Az104ReadinessQuizPage />} />
+              <Route path="/tools/microsoft-exam-cost-calculator" element={<MicrosoftExamCostCalculatorPage />} />
 
               {/* Services Pages */}
               <Route path="/services" element={<ServicesPage />} />
