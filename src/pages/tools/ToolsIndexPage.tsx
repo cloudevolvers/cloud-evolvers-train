@@ -37,12 +37,12 @@ const tools: Tool[] = [
     available: false,
   },
   {
-    href: '#',
+    href: '/tools/azure-rbac-role-chooser',
     title: 'Azure RBAC role chooser',
     description:
       'Describe what someone needs to do and we map it to the least-privilege built-in role.',
     icon: Shield,
-    available: false,
+    available: true,
   },
 ];
 
