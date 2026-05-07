@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useTranslations } from '@/hooks/use-translations';
 import { useLanguageContext } from '@/contexts/LanguageContext';
-import { Wrap, EdButton, Eyebrow, CloudEvolversMark } from '@/components/editorial';
+import { Wrap, EdButton, Eyebrow } from '@/components/editorial';
 
 const Footer: React.FC = () => {
   const buildInfo = getBuildInfo();
@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
       <Wrap>
         <div className="py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4 space-y-5">
-            <Link to="/" className="inline-flex items-center gap-2.5" aria-label="Cloud Evolvers">
-              <CloudEvolversMark size={36} />
-              <span className="ed-display text-[22px] text-[color:var(--ed-ink)]">
-                Cloud Evolvers
-              </span>
+            <Link to="/" className="inline-block" aria-label="Cloud Evolvers — MCT Powered Training and Services">
+              <img
+                src="/cloudevolvers-logo-with-slogan.png"
+                alt="Cloud Evolvers — MCT Powered Training and Services"
+                width={220}
+                height={220}
+                className="block w-[220px] h-auto -ml-3"
+              />
             </Link>
-            <p className="ed-lede text-[15px] max-w-[320px]">
-              {t.footer?.tagline || 'Microsoft Certified Azure and M365 training, delivered live by MCTs.'}
-            </p>
 
             <div className="space-y-2 text-[14px] text-[color:var(--ed-ink-2)]">
               <a
