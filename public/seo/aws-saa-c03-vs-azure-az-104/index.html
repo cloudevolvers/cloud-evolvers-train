@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS SAA-C03 vs AZ-104: Which Associate Cert Should You Take? (2026)</title>
+  <meta name="description" content="AWS SAA-C03 vs AZ-104 compared side by side: exam cost, domains, study time, question style, and job market value. Which associate cert is right for your situation." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AWS SAA-C03 vs AZ-104: Which Associate Cert Should You Take? (2026)" />
+  <meta property="og:description" content="AWS SAA-C03 vs AZ-104 compared side by side: exam cost, domains, study time, question style, and job market value. Which associate cert is right for your situation." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AWS SAA-C03 vs AZ-104: Which Associate Cert Should You Take? (2026)" />
+  <meta name="twitter:description" content="AWS SAA-C03 vs AZ-104 compared side by side: exam cost, domains, study time, question style, and job market value. Which associate cert is right for your situation." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AWS SAA-C03 vs AZ-104: direct comparison for 2026","description":"AWS SAA-C03 vs AZ-104 compared side by side: exam cost, domains, study time, question style, and job market value. Which associate cert is right for your situation.","url":"https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AWS SAA-C03 or AZ-104 harder?","acceptedAnswer":{"@type":"Answer","text":"They are roughly equivalent in difficulty, but different in style. SAA-C03 requires more architectural decision-making and service memorization. AZ-104 requires more hands-on configuration practice and tests you through interactive questions."}},{"@type":"Question","name":"Which cert pays more: AWS SAA-C03 or AZ-104?","acceptedAnswer":{"@type":"Answer","text":"Salary depends on the job market and role, not the specific cert. In the US, AWS-certified engineers often command higher salaries due to job volume. In Europe, Azure-certified engineers are competitive in the enterprise market."}},{"@type":"Question","name":"How long does AWS SAA-C03 take to study for?","acceptedAnswer":{"@type":"Answer","text":"Most candidates need 50-80 hours of study. Stephane Maarek's Udemy course (around 27 hours of video) combined with practice exams from Tutorials Dojo is the most common and effective study combination."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>AWS SAA-C03 vs AZ-104: direct comparison for 2026</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>Both are associate-level certifications from their respective clouds. Both are legitimate career credentials that hiring managers recognise. The question is which one to prioritise given your current situation. Here is a direct comparison.</p>
+
+<h2>Exam basics</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>AWS SAA-C03</th>
+      <th>AZ-104</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cost</td>
+      <td><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank" rel="noopener">$150 USD</a></td>
+      <td><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/" target="_blank" rel="noopener">$165 USD</a></td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td>130 minutes</td>
+      <td>100 minutes</td>
+    </tr>
+    <tr>
+      <td>Questions</td>
+      <td>65 (50 scored)</td>
+      <td>40-60 (varies)</td>
+    </tr>
+    <tr>
+      <td>Format</td>
+      <td>Multiple choice + multiple response</td>
+      <td>Multiple choice, case study, interactive</td>
+    </tr>
+    <tr>
+      <td>Passing score</td>
+      <td>720/1000</td>
+      <td>700/1000</td>
+    </tr>
+    <tr>
+      <td>Renewal</td>
+      <td>Every 3 years</td>
+      <td>Every 12 months (free online)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Domain coverage</h2>
+<p><strong>AWS SAA-C03</strong> covers four domains:</p>
+<ul>
+  <li>Design Secure Architectures (30%)</li>
+  <li>Design Resilient Architectures (26%)</li>
+  <li>Design High-Performing Architectures (24%)</li>
+  <li>Design Cost-Optimised Architectures (20%)</li>
+</ul>
+<p>The exam is architecture-focused. Questions present a business scenario and ask you to choose the most appropriate AWS services and configuration. You need to know the nuances between EC2 instance types, S3 storage classes, RDS configurations, VPC design patterns, and IAM policies.</p>
+
+<p><strong>AZ-104</strong> covers five domains:</p>
+<ul>
+  <li>Manage Azure Identities and Governance (15-20%)</li>
+  <li>Implement and Manage Storage (15-20%)</li>
+  <li>Deploy and Manage Azure Compute Resources (20-25%)</li>
+  <li>Implement and Manage Virtual Networking (15-20%)</li>
+  <li>Monitor and Maintain Azure Resources (10-15%)</li>
+</ul>
+<p>AZ-104 is administrator-focused. Questions test whether you can configure and manage specific Azure resources. You get interactive lab-style questions where you perform tasks in a simulated Azure portal.</p>
+
+<h2>The key difference: architect vs administrator</h2>
+<p>AWS SAA-C03 tests your ability to design solutions using AWS services. You are selecting the right tool for a given scenario. AZ-104 tests your ability to configure and manage Azure resources operationally. Both require hands-on familiarity, but the emphasis is different.</p>
+
+<p>If your job involves deciding which cloud services to use, SAA-C03 maps better to your work. If your job involves deploying, configuring, and operating Azure resources daily, AZ-104 maps better.</p>
+
+<h2>Study time and pass rates</h2>
+<p>SAA-C03: Most candidates need 50-80 hours. Community-reported pass rates on first attempt are around 65-70%. Stephane Maarek's Udemy course is the most recommended resource by a significant margin based on r/AWSCertifications community data.</p>
+
+<p>AZ-104: Most candidates need 60-80 hours including lab time. Candidates who complete all 11 official Microsoft lab exercises pass at higher rates than those who only study video courses. The interactive exam format rewards hands-on practice more than SAA-C03 does.</p>
+
+<h2>Job market value</h2>
+<p>In the Netherlands: AZ-104 is listed in more enterprise job descriptions than SAA-C03. The Netherlands is an Azure-heavy market due to Microsoft's strong enterprise presence and data centre availability in West Europe.</p>
+
+<p>Globally: SAA-C03 is listed more frequently overall. AWS's larger market share means more raw job volume. SAA-C03 is listed as a requirement or preference in more job postings across the US and Asia-Pacific than AZ-104.</p>
+
+<h2>Can you study for both at once?</h2>
+<p>You can, but it is slower. The concepts overlap at about 40-50% (networking, identity, storage, compute fundamentals transfer between clouds). The service-specific knowledge is different and can confuse you during exam prep if you are switching between the two simultaneously. The standard recommendation is to get one cert, use it to get or advance in a job, then prepare for the second cert.</p>
+
+<h2>Cross-cloud CLI comparison</h2>
+<pre><code># AWS: list EC2 instances in a region
+aws ec2 describe-instances   --query 'Reservations[].Instances[].{ID:InstanceId,State:State.Name,Type:InstanceType}'   --output table
+
+# Azure: list VMs in a resource group
+az vm list   --resource-group my-rg   --query "[].{name:name, size:hardwareProfile.vmSize, state:powerState}"   --output table
+</code></pre>
+<p>Running both CLIs side by side when you start your second cloud study is the fastest way to map familiar concepts to new syntax. The mental model transfers; the commands do not.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">Is AWS SAA-C03 or AZ-104 harder?</h3>
+        <p class="faq-answer">They are roughly equivalent in difficulty, but different in style. SAA-C03 requires more architectural decision-making and service memorization. AZ-104 requires more hands-on configuration practice and tests you through interactive questions.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Which cert pays more: AWS SAA-C03 or AZ-104?</h3>
+        <p class="faq-answer">Salary depends on the job market and role, not the specific cert. In the US, AWS-certified engineers often command higher salaries due to job volume. In Europe, Azure-certified engineers are competitive in the enterprise market.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long does AWS SAA-C03 take to study for?</h3>
+        <p class="faq-answer">Most candidates need 50-80 hours of study. Stephane Maarek&#39;s Udemy course (around 27 hours of video) combined with practice exams from Tutorials Dojo is the most common and effective study combination.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification overall</a>
+      <a href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" class="related-link">AZ-900 vs AZ-104: which to take first</a>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+      <a href="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" class="related-link">Cloud engineer roadmap 2026</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZ-900 vs AZ-104: Which Azure Cert Should You Take First? (2026)</title>
+  <meta name="description" content="AZ-900 is not a prerequisite for AZ-104. Here is when to skip it and when skipping costs you an exam attempt. Honest comparison for working engineers." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AZ-900 vs AZ-104: Which Azure Cert Should You Take First? (2026)" />
+  <meta property="og:description" content="AZ-900 is not a prerequisite for AZ-104. Here is when to skip it and when skipping costs you an exam attempt. Honest comparison for working engineers." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AZ-900 vs AZ-104: Which Azure Cert Should You Take First? (2026)" />
+  <meta name="twitter:description" content="AZ-900 is not a prerequisite for AZ-104. Here is when to skip it and when skipping costs you an exam attempt. Honest comparison for working engineers." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AZ-900 vs AZ-104: the honest comparison for working engineers","description":"AZ-900 is not a prerequisite for AZ-104. Here is when to skip it and when skipping costs you an exam attempt. Honest comparison for working engineers.","url":"https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AZ-900 required before AZ-104?","acceptedAnswer":{"@type":"Answer","text":"No. AZ-900 is not a formal prerequisite for AZ-104. Microsoft does not require you to hold AZ-900 before scheduling AZ-104. If you have prior IT or Azure experience, you can book AZ-104 directly."}},{"@type":"Question","name":"How much does AZ-900 cost?","acceptedAnswer":{"@type":"Answer","text":"AZ-900 costs $99 USD when booked through Pearson VUE. Pricing may vary by country."}},{"@type":"Question","name":"How much does AZ-104 cost?","acceptedAnswer":{"@type":"Answer","text":"AZ-104 costs $165 USD when booked through Pearson VUE. Pricing may vary by country."}},{"@type":"Question","name":"How long should I study for AZ-104?","acceptedAnswer":{"@type":"Answer","text":"Most candidates with some IT background pass AZ-104 in 60-80 hours of combined study and hands-on lab time over 8-10 weeks."}},{"@type":"Question","name":"Can I use Microsoft Learn for free to study for both exams?","acceptedAnswer":{"@type":"Answer","text":"Yes. Microsoft Learn has free learning paths for both AZ-900 and AZ-104, including free practice assessments for each exam."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>AZ-900 vs AZ-104: the honest comparison for working engineers</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>If you have ever Googled "do I need AZ-900 before AZ-104," you already know the answer the forums give you: "it depends." That answer is not useful. Here is the direct version.</p>
+
+<h2>The short answer</h2>
+<p>AZ-900 is not a formal prerequisite for AZ-104. Microsoft does not block you from scheduling AZ-104 without passing AZ-900 first. If you have hands-on Azure experience already, you can, and probably should, skip AZ-900 and go straight to AZ-104.</p>
+
+<h2>What each exam actually tests</h2>
+<p>AZ-900 (Azure Fundamentals) is a 45-minute exam with three skill domains: cloud concepts, Azure architecture and services, and Azure management and governance. It costs <strong>$99 USD</strong> via <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" target="_blank" rel="noopener">Pearson VUE</a>. The questions are conceptual. There are no labs, no CLI tasks, nothing requiring hands-on time in the portal.</p>
+
+<p>AZ-104 (Azure Administrator) is a 100-minute exam with five skill domains: identities and governance, storage, compute, virtual networking, and monitoring. It costs <strong>$165 USD</strong> via <a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/" target="_blank" rel="noopener">Pearson VUE</a>. Questions mix multiple-choice with interactive drag-and-drop and case-study scenarios. Expect PowerShell and Azure CLI syntax to appear.</p>
+
+<h2>The overlap is real but limited</h2>
+<p>AZ-900 covers Azure services at a surface level: what is a virtual machine, what is Azure Blob Storage, what is role-based access control. AZ-104 assumes you know those things and tests whether you can actually configure them. There is roughly a 10-15% content overlap. Studying for AZ-900 does not meaningfully prepare you for AZ-104 beyond that overlap.</p>
+
+<h2>Who should skip AZ-900</h2>
+<p>Skip AZ-900 if any of the following apply to you:</p>
+<ul>
+  <li>You have worked with Azure for six months or more in any capacity.</li>
+  <li>You come from a sysadmin or network engineering background and are pivoting to cloud.</li>
+  <li>You are preparing for AZ-104 as your target cert and have a study plan that includes hands-on lab time.</li>
+  <li>Your employer is paying for the exam and does not require the fundamentals cert for internal reasons.</li>
+</ul>
+
+<h2>Who should take AZ-900 first</h2>
+<p>Take AZ-900 first if:</p>
+<ul>
+  <li>You have never worked in IT and want a low-stakes way to confirm that cloud concepts click for you before investing $165 in AZ-104.</li>
+  <li>Your organisation requires the fundamentals badge as part of an internal learning programme.</li>
+  <li>You are supporting a Microsoft sales or licensing role and the fundamentals cert is the endpoint, not a stepping stone.</li>
+  <li>You want a confidence boost on exam mechanics before sitting a harder proctored exam.</li>
+</ul>
+
+<h2>Study time estimates</h2>
+<p>AZ-900: Most people with some IT background pass in 10-15 hours of study using <a href="https://learn.microsoft.com/en-us/training/paths/azure-fundamentals-describe-cloud-concepts/" target="_blank" rel="noopener">the free Microsoft Learn paths</a>. The free practice assessment on Microsoft Learn is genuinely representative of the real exam.</p>
+
+<p>AZ-104: Expect 60-80 hours of combined study and lab time. The <a href="https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/" target="_blank" rel="noopener">Microsoft Learning GitHub repo</a> has all 11 official lab exercises. Do them. The exam will test you on tasks, not definitions.</p>
+
+<h2>Salary and employer signal</h2>
+<p>AZ-900 alone does not move the needle on job descriptions. Employers list AZ-104 (Azure Administrator Associate) as a hiring criterion; AZ-900 shows up mostly as "nice to have" on non-technical roles. If a pay raise or a new job is the goal, AZ-104 is the cert that counts.</p>
+
+<h2>The recommendation</h2>
+<p>If you are reading this to make a decision: skip AZ-900, book AZ-104, and give yourself 8-10 weeks of study with consistent lab time. The $99 saved covers a cloud sandbox subscription for two months. Use <a href="https://cloudevolvers.com/training" target="_blank" rel="noopener">an MCT-led course</a> if you want structured lab guidance; use Microsoft Learn and John Savill's YouTube series if you prefer self-paced.</p>
+
+<h2>CLI check: verify your Azure CLI version before exam prep</h2>
+<pre><code># Confirm az CLI is installed and authenticated
+az --version
+az login
+az account show --output table
+</code></pre>
+<p>AZ-104 lab exercises assume Azure CLI 2.50 or later. The command above confirms you are authenticated to the right subscription before starting lab work.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">Is AZ-900 required before AZ-104?</h3>
+        <p class="faq-answer">No. AZ-900 is not a formal prerequisite for AZ-104. Microsoft does not require you to hold AZ-900 before scheduling AZ-104. If you have prior IT or Azure experience, you can book AZ-104 directly.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much does AZ-900 cost?</h3>
+        <p class="faq-answer">AZ-900 costs $99 USD when booked through Pearson VUE. Pricing may vary by country.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How much does AZ-104 cost?</h3>
+        <p class="faq-answer">AZ-104 costs $165 USD when booked through Pearson VUE. Pricing may vary by country.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long should I study for AZ-104?</h3>
+        <p class="faq-answer">Most candidates with some IT background pass AZ-104 in 60-80 hours of combined study and hands-on lab time over 8-10 weeks.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Can I use Microsoft Learn for free to study for both exams?</h3>
+        <p class="faq-answer">Yes. Microsoft Learn has free learning paths for both AZ-900 and AZ-104, including free practice assessments for each exam.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+      <a href="https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/" class="related-link">AZ-305 vs AZ-104: exam difficulty compared</a>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification</a>
+      <a href="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" class="related-link">Cloud engineer roadmap 2026</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

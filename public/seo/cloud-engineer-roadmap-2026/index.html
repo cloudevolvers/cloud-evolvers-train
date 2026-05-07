@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Engineer Roadmap 2026: Skills, Certs, and Career Path</title>
+  <meta name="description" content="Cloud engineer roadmap for 2026: which skills to build first, which certifications to get and in what order, and what the job market actually wants. No fluff." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cloud Engineer Roadmap 2026: Skills, Certs, and Career Path" />
+  <meta property="og:description" content="Cloud engineer roadmap for 2026: which skills to build first, which certifications to get and in what order, and what the job market actually wants. No fluff." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloud Engineer Roadmap 2026: Skills, Certs, and Career Path" />
+  <meta name="twitter:description" content="Cloud engineer roadmap for 2026: which skills to build first, which certifications to get and in what order, and what the job market actually wants. No fluff." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cloud engineer roadmap 2026: skills, certs, and where to start","description":"Cloud engineer roadmap for 2026: which skills to build first, which certifications to get and in what order, and what the job market actually wants. No fluff.","url":"https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/","datePublished":"2026-05-07","dateModified":"2026-05-07","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the best first certification for cloud engineering?","acceptedAnswer":{"@type":"Answer","text":"For Azure: start with AZ-104 (Azure Administrator) if you have IT experience, or AZ-900 if you are new to cloud. For AWS: start with SAA-C03. Skip entry-level fundamentals certs if you already work in IT."}},{"@type":"Question","name":"How long does it take to become a cloud engineer?","acceptedAnswer":{"@type":"Answer","text":"With consistent daily study and hands-on lab work, most people with an IT background can reach a hireable cloud engineering level in 6-12 months. Without prior IT experience, plan for 12-18 months."}},{"@type":"Question","name":"Is Kubernetes required for cloud engineering?","acceptedAnswer":{"@type":"Answer","text":"Not for all cloud engineering roles. Kubernetes is expected in platform engineering, SRE, and DevOps roles. It is less required for pure infrastructure or security engineering positions."}},{"@type":"Question","name":"Do I need both AWS and Azure certifications?","acceptedAnswer":{"@type":"Answer","text":"Not immediately. Get one cloud's associate cert first, get a job, then add the second cloud. Engineers with both associate-level certs are more hireable and earn more, but chasing both simultaneously slows your progress."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Cloud engineer roadmap 2026: skills, certs, and where to start</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 7 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>Cloud engineering is not a single job. It spans infrastructure ops, security engineering, platform engineering, DevOps, and FinOps. The roadmap below is structured for someone starting from a sysadmin or on-premises networking background who wants to move into cloud roles in 2026. Adjust the entry point based on where you already are.</p>
+
+<h2>Stage 1: foundation (0-3 months)</h2>
+<p>The goal at stage 1 is to get comfortable with cloud fundamentals and pass a first cert to signal intent to employers.</p>
+
+<ul>
+  <li><strong>Pick one cloud first.</strong> Azure if you are in Europe or a Microsoft-heavy org. AWS if you are in the US or targeting startups. Do not try to learn both simultaneously at this stage.</li>
+  <li><strong>Core skills:</strong> Networking basics (TCP/IP, subnetting, DNS, firewalls), Linux command line, scripting basics (Bash or PowerShell), and an understanding of virtualisation.</li>
+  <li><strong>First cert:</strong> AZ-900 (if Azure) or AWS Cloud Practitioner (if AWS). These are 2-4 week commitments and cost under $100. They are not career-defining, but they confirm you know the vocabulary and signal commitment to a hiring manager.</li>
+</ul>
+
+<h2>Stage 2: associate level (3-9 months)</h2>
+<p>This is the most important stage. The associate cert is what most job descriptions list as a requirement for cloud engineering roles.</p>
+
+<ul>
+  <li><strong>Azure track:</strong> AZ-104 (Azure Administrator). Cost $165. Tests identity, storage, compute, networking, and monitoring. Hands-on labs are required preparation.</li>
+  <li><strong>AWS track:</strong> AWS SAA-C03 (Solutions Architect Associate). Cost $150. Tests secure, resilient, high-performing, and cost-optimised architectures.</li>
+  <li><strong>Hands-on time:</strong> Budget at least 100 hours of real work in the cloud. Build a home lab, contribute to an employer project, or use free-tier accounts. Reading without building does not produce exam-ready skills.</li>
+</ul>
+
+<h2>Stage 3: specialisation (9-18 months)</h2>
+<p>After the associate cert, the roadmap forks based on the role you are targeting.</p>
+
+<h3>Infrastructure and platform engineering</h3>
+<ul>
+  <li>AZ-305 (Azure Solutions Architect Expert) or AWS SAP-C02 for architecture breadth</li>
+  <li>Terraform Associate certification for Infrastructure as Code credibility</li>
+  <li>CKA (Certified Kubernetes Administrator) if your target role involves container platforms</li>
+</ul>
+
+<h3>Security engineering</h3>
+<ul>
+  <li>AZ-500 (Azure Security Engineer) or AWS Security Specialty</li>
+  <li>CompTIA Security+ as a baseline if coming from a non-security background</li>
+</ul>
+
+<h3>FinOps and cloud financial management</h3>
+<ul>
+  <li>FinOps Certified Practitioner (FOCP) from the FinOps Foundation. Cost $300. Conceptual, 50 questions, 1 hour.</li>
+  <li>Relevant for roles that own cloud spend, operate cost dashboards, or present cloud cost data to finance teams.</li>
+</ul>
+
+<h3>DevOps and automation</h3>
+<ul>
+  <li>AZ-400 (DevOps Engineer Expert) for Azure-specific CI/CD pipelines</li>
+  <li>GitHub Actions, Terraform, and Ansible skills are expected in most platform roles regardless of cert</li>
+</ul>
+
+<h2>Skills that matter more than certs (but need certs to signal them)</h2>
+<p>The cert gets you the interview. These skills get you the job:</p>
+<ul>
+  <li>Infrastructure as Code: Terraform or Bicep, not just portal clicking</li>
+  <li>Monitoring and observability: Azure Monitor / CloudWatch, log querying with KQL or Athena</li>
+  <li>Networking: VPN gateways, peering, network security groups, DNS resolution across VNets</li>
+  <li>Identity and access management: RBAC, Entra ID (Azure AD), service principals, managed identities</li>
+  <li>Scripting: Bash and PowerShell, enough to automate deployments and parse JSON output from CLI tools</li>
+</ul>
+
+<h2>Salary benchmarks (Netherlands market, 2026)</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Typical annual salary (EUR)</th>
+      <th>Common certs required</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Junior cloud engineer</td>
+      <td>€45,000 - €60,000</td>
+      <td>AZ-900 or AZ-104</td>
+    </tr>
+    <tr>
+      <td>Cloud engineer (mid)</td>
+      <td>€65,000 - €85,000</td>
+      <td>AZ-104, AZ-305 or equivalent</td>
+    </tr>
+    <tr>
+      <td>Senior cloud engineer</td>
+      <td>€85,000 - €110,000</td>
+      <td>AZ-305, AZ-500 or specialisation</td>
+    </tr>
+    <tr>
+      <td>Cloud architect</td>
+      <td>€100,000 - €130,000</td>
+      <td>Expert-level certs, multi-cloud experience</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Infrastructure as Code: start here</h2>
+<pre><code># Terraform: initialise a new Azure project
+terraform init
+
+# Preview what will be created
+terraform plan
+
+# Deploy
+terraform apply
+
+# Bicep: deploy a resource group via Azure CLI
+az deployment sub create   --location westeurope   --template-file main.bicep   --parameters @main.parameters.json
+</code></pre>
+<p>Every cloud engineering job description in 2026 lists Terraform or Bicep. If you can write a working module that deploys a VNet with subnets and NSGs, you are ahead of most candidates who only know the portal.</p>
+
+<h2>How to structure 12 months</h2>
+<ul>
+  <li>Months 1-2: Foundation cert + core skills setup (Linux, networking, CLI tools)</li>
+  <li>Months 3-6: Associate cert study + 100+ hours hands-on time</li>
+  <li>Months 7-9: First job or role change using associate cert</li>
+  <li>Months 10-12: Specialisation cert based on role (architecture, security, containers, or FinOps)</li>
+</ul>
+<p>This is aggressive but achievable. The engineers who compress this timeline do daily lab work and treat cert prep as a second job for 6-9 months. Consistency beats cramming every time.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">What is the best first certification for cloud engineering?</h3>
+        <p class="faq-answer">For Azure: start with AZ-104 (Azure Administrator) if you have IT experience, or AZ-900 if you are new to cloud. For AWS: start with SAA-C03. Skip entry-level fundamentals certs if you already work in IT.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How long does it take to become a cloud engineer?</h3>
+        <p class="faq-answer">With consistent daily study and hands-on lab work, most people with an IT background can reach a hireable cloud engineering level in 6-12 months. Without prior IT experience, plan for 12-18 months.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Is Kubernetes required for cloud engineering?</h3>
+        <p class="faq-answer">Not for all cloud engineering roles. Kubernetes is expected in platform engineering, SRE, and DevOps roles. It is less required for pure infrastructure or security engineering positions.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Do I need both AWS and Azure certifications?</h3>
+        <p class="faq-answer">Not immediately. Get one cloud&#39;s associate cert first, get a job, then add the second cloud. Engineers with both associate-level certs are more hireable and earn more, but chasing both simultaneously slows your progress.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/" class="related-link">AZ-900 vs AZ-104: which to take first</a>
+      <a href="https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/" class="related-link">AWS vs Azure certification compared</a>
+      <a href="https://cloudevolvers.com/seo/cka-prep-for-ops-engineers/" class="related-link">CKA prep for ops engineers</a>
+      <a href="https://cloudevolvers.com/seo/finops-certified-practitioner-study-guide-2026/" class="related-link">FinOps Certified Practitioner study guide</a>
+      <a href="https://cloudevolvers.com/seo/best-az-104-course-2026/" class="related-link">Best AZ-104 courses in 2026</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>
