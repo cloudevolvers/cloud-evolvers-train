@@ -21,12 +21,12 @@ const tools: Tool[] = [
     available: true,
   },
   {
-    href: '#',
+    href: '/tools/microsoft-exam-cost-calculator',
     title: 'Microsoft exam cost calculator',
     description:
       'Total spend per certification path including exam vouchers, retake risk, training, and renewal cycle.',
     icon: Calculator,
-    available: false,
+    available: true,
   },
   {
     href: '#',
