@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft, CheckCircle, XCircle, ArrowClockwise } from '@phosphor-icons/react';
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
+import { RelatedTools } from '@/components/tools/RelatedTools';
 import {
   AZ_104_QUESTIONS,
   DOMAIN_LABELS,
@@ -268,6 +269,8 @@ export function Az104ReadinessQuizPage() {
                   );
                 })}
               </ol>
+
+              <RelatedTools currentSlug="az-104-readiness-quiz" />
 
               <div className="flex flex-wrap items-center gap-3">
                 <Link
