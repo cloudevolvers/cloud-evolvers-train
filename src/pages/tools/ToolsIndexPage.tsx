@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Calculator, Shield, ChartLine } from '@phosphor-icons/react';
+import { ArrowRight, CheckCircle, Calculator, Shield, Path } from '@phosphor-icons/react';
 import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 
@@ -29,12 +29,12 @@ const tools: Tool[] = [
     available: true,
   },
   {
-    href: '#',
-    title: 'MCT renewal tracker',
+    href: '/tools/microsoft-cert-path-planner',
+    title: 'Microsoft cert path planner',
     description:
-      'Plug in your MCT enrolment date and get reminders for the credential renewal window and required CE points.',
-    icon: ChartLine,
-    available: false,
+      'Pick a target role, answer five questions, get an ordered cert sequence with realistic time estimates.',
+    icon: Path,
+    available: true,
   },
   {
     href: '/tools/azure-rbac-role-chooser',
@@ -51,7 +51,7 @@ export function ToolsIndexPage() {
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO
         title="Free Azure Tools and Calculators"
-        description="Free tools for Azure professionals: AZ-104 readiness quiz, exam cost calculator, MCT renewal tracker, and RBAC role chooser. Built by a working MCT."
+        description="Free tools for Azure professionals: AZ-104 readiness quiz, exam cost calculator, cert path planner, and RBAC role chooser. Built by a working MCT."
         canonical="/tools"
       />
 
