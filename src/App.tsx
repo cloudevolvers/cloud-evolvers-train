@@ -31,6 +31,8 @@ import {
 } from "@/pages/services";
 
 import HomePage from "@/pages/HomePage";
+import PracticeIndexPage from "@/pages/practice/PracticeIndexPage";
+import PracticeExamPage from "@/pages/practice/PracticeExamPage";
 import ToolsIndexPage from "@/pages/tools/ToolsIndexPage";
 import Az104ReadinessQuizPage from "@/pages/tools/Az104ReadinessQuizPage";
 import MicrosoftExamCostCalculatorPage from "@/pages/tools/MicrosoftExamCostCalculatorPage";
@@ -55,6 +57,9 @@ function App() {
 
               <Route path="/training" element={<TrainingOverviewPage />} />
               <Route path="/training/:slug" element={<TrainingDetailPage />} />
+
+              <Route path="/practice/:lang" element={<PracticeIndexPage />} />
+              <Route path="/practice/:lang/:exam" element={<PracticeExamPage />} />
 
               <Route path="/tools" element={<ToolsIndexPage />} />
               <Route path="/tools/az-104-readiness-quiz" element={<Az104ReadinessQuizPage />} />
