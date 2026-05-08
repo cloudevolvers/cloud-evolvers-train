@@ -43,9 +43,11 @@ export function Header() {
     return () => window.removeEventListener('click', close);
   }, []);
 
+  const practiceLang = language === 'nl' ? 'nl' : 'en';
   const nav = [
     { href: '/training', label: t.nav?.training || 'Training' },
     { href: '/services', label: t.nav?.services || 'Services' },
+    { href: `/practice/${practiceLang}`, label: t.nav?.practice || 'Practice' },
     { href: '/about', label: t.nav?.about || 'About' },
     { href: '/blog', label: t.nav?.blog || 'Blog' },
     { href: '/contact', label: t.nav?.contact || 'Contact' },
