@@ -4,6 +4,7 @@ import { ArrowRight, Path, ArrowClockwise, Compass, GraduationCap } from '@phosp
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 import { CertPathStop } from '@/components/tools/CertPathStop';
+import { RelatedTools } from '@/components/tools/RelatedTools';
 import {
   PLANNER_CERTS,
   PLANNER_ROLES,
@@ -453,6 +454,8 @@ export function MicrosoftCertPathPlannerPage() {
               <RoleMatrix />
 
               <FaqSection />
+
+              <RelatedTools currentSlug="microsoft-cert-path-planner" />
 
               <div className="flex flex-wrap items-center gap-3">
                 <Link

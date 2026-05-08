@@ -5,6 +5,7 @@ import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 import { RbacRoleCard } from '@/components/tools/RbacRoleCard';
 import { RbacExplainer } from '@/components/tools/RbacExplainer';
+import { RelatedTools } from '@/components/tools/RelatedTools';
 import {
   RBAC_TASKS,
   SCOPE_LABELS,
@@ -198,6 +199,8 @@ export function AzureRbacRoleChooserPage() {
           )}
 
           <RbacExplainer />
+
+          <RelatedTools currentSlug="azure-rbac-role-chooser" />
 
           <div className="flex flex-wrap items-center gap-3">
             <Link

@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, ChalkboardTeacher } from '@phosphor-icons/react';
 import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 import { CostResultCard, type CostBreakdown } from '@/components/tools/CostResultCard';
+import { RelatedTools } from '@/components/tools/RelatedTools';
 import {
   CERT_PATHS,
   COURSE_HOURS_PER_DAY,
@@ -220,6 +221,8 @@ export function MicrosoftExamCostCalculatorPage() {
               </li>
             </ul>
           </section>
+
+          <RelatedTools currentSlug="microsoft-exam-cost-calculator" />
 
           <div className="flex flex-wrap items-center gap-3">
             <Link
