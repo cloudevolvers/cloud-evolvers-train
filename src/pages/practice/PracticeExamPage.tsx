@@ -23,6 +23,9 @@ export default function PracticeExamPage() {
 
   const pack = getLanguagePack(lang)
   const examSet = getExamSet(lang, exam)
+  if (!examSet) {
+    return <Navigate to={`/practice/${lang}`} replace />
+  }
   const ui = pack.ui
 
   const metaTitle = ui.examMetaTitle(examSet.examCode, examSet.examName)
@@ -60,7 +63,7 @@ export default function PracticeExamPage() {
           <div className="mt-4 flex items-baseline justify-between gap-3">
             <Eyebrow accent>{examSet.examCode}</Eyebrow>
             <span className="text-[11px] font-semibold uppercase tracking-wide text-[color:var(--ed-ink-3)]">
-              {ui.practiceTenQuestions}
+              {ui.practiceQuestionsLabel(examSet.questions.length)}
             </span>
           </div>
           <Display as="h1" size="md" className="mt-4 leading-[1.05]">

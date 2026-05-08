@@ -24,7 +24,7 @@ export const ui: ExamUiCopy = {
   nextQuestion: 'Nächste Frage',
   seeScore: 'Ergebnis ansehen',
   startExam: 'Übung starten',
-  practiceTenQuestions: '10 Szenariofragen',
+  practiceQuestionsLabel: (count) => `${count} Szenariofragen`,
 
   resultEyebrow: 'Fertig',
   resultHeading: (score, total) => `${score} von ${total} richtig beantwortet.`,

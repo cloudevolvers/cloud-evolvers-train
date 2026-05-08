@@ -2,7 +2,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial'
 import {
-  EXAM_SLUGS,
+  getAvailableSlugs,
   getLanguagePack,
   isExamLanguage,
 } from '@/data/exam-questions'
@@ -58,8 +58,9 @@ export default function PracticeIndexPage() {
             {ui.pickExamHeading}
           </h2>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            {EXAM_SLUGS.map((slug) => {
+            {getAvailableSlugs(lang).map((slug) => {
               const exam = pack.exams[slug]
+              if (!exam) return null
               return (
                 <li key={slug}>
                   <Link

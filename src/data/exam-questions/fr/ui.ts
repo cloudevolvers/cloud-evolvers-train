@@ -24,7 +24,7 @@ export const ui: ExamUiCopy = {
   nextQuestion: 'Question suivante',
   seeScore: 'Voir votre score',
   startExam: "Commencer l'entraînement",
-  practiceTenQuestions: '10 questions de scénario',
+  practiceQuestionsLabel: (count) => `${count} questions de scénario`,
 
   resultEyebrow: 'Terminé',
   resultHeading: (score, total) =>

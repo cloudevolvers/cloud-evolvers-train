@@ -1,8 +1,29 @@
 export type ExamLanguage = 'en' | 'nl' | 'de' | 'fr' | 'es'
-export type ExamSlug = 'az-900' | 'az-104' | 'az-305' | 'ai-900'
+export type ExamSlug =
+  | 'az-900'
+  | 'az-104'
+  | 'az-305'
+  | 'ai-900'
+  | 'ai-102'
+  | 'az-204'
+  | 'az-500'
+  | 'sc-900'
+  | 'ms-900'
+  | 'pl-300'
 
 export const EXAM_LANGUAGES: ExamLanguage[] = ['en', 'nl', 'de', 'fr', 'es']
-export const EXAM_SLUGS: ExamSlug[] = ['az-900', 'az-104', 'az-305', 'ai-900']
+export const EXAM_SLUGS: ExamSlug[] = [
+  'az-900',
+  'az-104',
+  'az-305',
+  'ai-900',
+  'ai-102',
+  'az-204',
+  'az-500',
+  'sc-900',
+  'ms-900',
+  'pl-300',
+]
 
 export interface ExamOption {
   id: 'a' | 'b' | 'c' | 'd'
@@ -49,7 +70,7 @@ export interface ExamUiCopy {
   nextQuestion: string
   seeScore: string
   startExam: string
-  practiceTenQuestions: string
+  practiceQuestionsLabel: (count: number) => string
 
   // Result screen
   resultEyebrow: string
@@ -83,5 +104,5 @@ export interface ExamLanguagePack {
   language: ExamLanguage
   htmlLang: string
   ui: ExamUiCopy
-  exams: Record<ExamSlug, ExamSet>
+  exams: Partial<Record<ExamSlug, ExamSet>>
 }
