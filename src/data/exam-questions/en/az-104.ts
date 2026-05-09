@@ -205,7 +205,7 @@ export const az104: ExamSet = {
       ],
       correctId: 'c',
       explanation:
-        'The built-in policy "Inherit a tag from the resource group" copies the tag onto child resources, and a remediation task applies it to existing resources. Locks and Defender recommendations cannot apply tags.',
+        'The built-in policy "Inherit a tag from the resource group" uses the Modify effect to copy the tag onto child resources. A remediation task (backed by a managed identity) applies it to existing resources. Locks and Defender recommendations cannot apply tags.',
     },
     {
       id: 'az104-13',
@@ -874,7 +874,7 @@ export const az104: ExamSet = {
       id: 'az104-57',
       topic: 'Storage',
       question:
-        'You want to share a blob URL that requires the recipient to sign in with their own Entra ID rather than carry credentials in the URL. Which SAS variant do you generate?',
+        'You want to share a blob URL signed by the creator\'s Entra ID credential rather than the storage account key, so the token can be revoked by revoking the creator\'s Entra access. Which SAS variant do you generate?',
       options: [
         { id: 'a', text: 'Account SAS.' },
         { id: 'b', text: 'Service SAS.' },
@@ -883,7 +883,7 @@ export const az104: ExamSet = {
       ],
       correctId: 'c',
       explanation:
-        'User delegation SAS is signed by an Entra ID credential and is the recommended choice when you want to track identity. Account and service SAS are signed by the storage key.',
+        'User delegation SAS is signed by the creator\'s Entra ID credential (a user delegation key), not the storage account key. This means the token can be revoked by revoking the creator\'s Entra access, and the creator\'s identity is tracked in audit logs. The recipient still uses the SAS token directly — no Entra sign-in is required on the recipient side. Account and service SAS are both signed by the storage account key.',
     },
     {
       id: 'az104-58',
@@ -1144,16 +1144,16 @@ export const az104: ExamSet = {
       id: 'az104-75',
       topic: 'Monitoring',
       question:
-        'You want to capture NSG flow logs and analyze them for top talkers and anomalies. Which configuration do you set up?',
+        'You want to capture VNet flow logs and analyze them for top talkers and anomalies. Which configuration do you set up?',
       options: [
         { id: 'a', text: 'Activity Log alerts for NSG rule changes.' },
-        { id: 'b', text: 'Enable diagnostic settings on the NSG to send logs to event hub only.' },
-        { id: 'c', text: 'Enable NSG flow logs (v2) to a storage account, with Traffic Analytics and a Log Analytics workspace.' },
+        { id: 'b', text: 'Enable diagnostic settings on the VNet to send logs to event hub only.' },
+        { id: 'c', text: 'Enable VNet flow logs to a storage account, with Traffic Analytics and a Log Analytics workspace.' },
         { id: 'd', text: 'Connection Monitor only.' },
       ],
       correctId: 'c',
       explanation:
-        'Flow logs v2 to storage with Traffic Analytics enriches data and surfaces top talkers in Log Analytics. Activity Log alerts only watch rule edits, not actual flows.',
+        'VNet flow logs (the successor to NSG flow logs, which were retired on June 30, 2025) capture network flows at the virtual network level. Sending them to storage with Traffic Analytics enriches the data and surfaces top talkers and anomalies in Log Analytics. Activity Log alerts only watch rule edits, not actual flows.',
     },
     {
       id: 'az104-76',

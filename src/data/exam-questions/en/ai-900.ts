@@ -82,7 +82,7 @@ export const ai900: ExamSet = {
       ],
       correctId: 'c',
       explanation:
-        'Question Answering (the successor to QnA Maker) connects a knowledge base to a conversational interface. Translator translates between languages and does no Q&A.',
+        'Question Answering (the successor to QnA Maker, which retired March 31, 2025) connects a knowledge base to a conversational interface. Note that Custom Question Answering is itself scheduled for retirement on March 31, 2029; Microsoft recommends migrating to Azure AI Foundry models for new projects. Translator translates between languages and does no Q&A.',
     },
     {
       id: 'ai900-6',
@@ -445,7 +445,7 @@ export const ai900: ExamSet = {
       ],
       correctId: 'c',
       explanation:
-        'Face verification compares two faces and returns whether they belong to the same person, the standard pattern for badge-photo confirmation. Detection only finds that a face exists, with no identity check.',
+        'Face verification compares two faces and returns whether they belong to the same person, the standard pattern for badge-photo confirmation. Like Face Identify, Face Verify requires Limited Access registration under Microsoft\'s Responsible AI policy before it can be used in production. Detection only finds that a face exists, with no identity check.',
     },
     {
       id: 'ai900-30',
@@ -1351,7 +1351,7 @@ export const ai900: ExamSet = {
       id: 'ai900-90',
       topic: 'Generative AI',
       question:
-        'In Azure AI Foundry / Azure AI Studio, what is the main purpose of content filters?',
+        'In Azure AI Foundry, what is the main purpose of content filters?',
       options: [
         { id: 'a', text: 'Detect and block harmful content categories such as hate, sexual, violence, and self-harm in prompts and completions.' },
         { id: 'b', text: 'Speed up model responses by caching.' },

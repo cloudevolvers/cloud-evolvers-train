@@ -6,6 +6,14 @@ import { az900 as enAz900 } from './en/az-900'
 import { az104 as enAz104 } from './en/az-104'
 import { az305 as enAz305 } from './en/az-305'
 import { ai900 as enAi900 } from './en/ai-900'
+import { ai102 as enAi102 } from './en/ai-102'
+import { az204 as enAz204 } from './en/az-204'
+import { az500 as enAz500 } from './en/az-500'
+import { sc900 as enSc900 } from './en/sc-900'
+import { ms900 as enMs900 } from './en/ms-900'
+import { pl300 as enPl300 } from './en/pl-300'
+import { dp900 as enDp900 } from './en/dp-900'
+import { pl900 as enPl900 } from './en/pl-900'
 
 import { ui as nlUi } from './nl/ui'
 import { az900 as nlAz900 } from './nl/az-900'
@@ -36,7 +44,20 @@ const packs: Record<ExamLanguage, ExamLanguagePack> = {
     language: 'en',
     htmlLang: 'en',
     ui: enUi,
-    exams: { 'az-900': enAz900, 'az-104': enAz104, 'az-305': enAz305, 'ai-900': enAi900 },
+    exams: {
+      'az-900': enAz900,
+      'az-104': enAz104,
+      'az-305': enAz305,
+      'ai-900': enAi900,
+      'ai-102': enAi102,
+      'az-204': enAz204,
+      'az-500': enAz500,
+      'sc-900': enSc900,
+      'ms-900': enMs900,
+      'pl-300': enPl300,
+      'dp-900': enDp900,
+      'pl-900': enPl900,
+    },
   },
   nl: {
     language: 'nl',
@@ -84,8 +105,17 @@ export function getLanguagePack(lang: ExamLanguage): ExamLanguagePack {
   return packs[lang]
 }
 
-export function getExamSet(lang: ExamLanguage, slug: ExamSlug): ExamSet {
+export function getExamSet(lang: ExamLanguage, slug: ExamSlug): ExamSet | undefined {
   return packs[lang].exams[slug]
+}
+
+export function getAvailableSlugs(lang: ExamLanguage): ExamSlug[] {
+  const pack = packs[lang]
+  return EXAM_SLUGS.filter((slug) => pack.exams[slug] !== undefined)
+}
+
+export function getLanguagesWithSlug(slug: ExamSlug): ExamLanguage[] {
+  return EXAM_LANGUAGES.filter((lang) => packs[lang].exams[slug] !== undefined)
 }
 
 export { EXAM_LANGUAGES, EXAM_SLUGS }

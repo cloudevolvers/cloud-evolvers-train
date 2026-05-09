@@ -4,14 +4,14 @@ export const ui: ExamUiCopy = {
   practiceLabel: 'Practice',
   indexTitle: 'Free Azure exam practice',
   indexLede:
-    'Ten scenario questions per exam, written by a Microsoft Certified Trainer. Pick an exam, work through it, and see where you stand before you book the real test.',
-  indexMetaTitle: 'Free Azure Exam Practice (AZ-900, AZ-104, AZ-305, AI-900)',
+    'Scenario questions per exam, written by a Microsoft Certified Trainer. Pick an exam, work through it, and see where you stand before you book the real test.',
+  indexMetaTitle: 'Free Microsoft Exam Practice (AZ-900, AZ-104, AZ-305, AI-900, AI-102, AZ-204, AZ-500, SC-900, MS-900, PL-300)',
   indexMetaDescription:
-    'Free practice questions for the AZ-900, AZ-104, AZ-305 and AI-900 exams. Scenario-based, MCT-written, with answer explanations.',
+    'Free practice questions for ten Microsoft certification exams across Azure, AI, security, Microsoft 365, and Power BI. Scenario-based, MCT-written, with answer explanations.',
   examMetaTitle: (examCode, examName) =>
     `${examCode} ${examName} practice questions`,
   examMetaDescription: (examCode, examName) =>
-    `Ten scenario practice questions for ${examCode} (${examName}). Written by a Microsoft Certified Trainer, with full explanations.`,
+    `Scenario practice questions for ${examCode} (${examName}). Written by a Microsoft Certified Trainer, with full explanations.`,
 
   disclaimerLabel: 'Disclaimer',
   disclaimer:
@@ -23,7 +23,7 @@ export const ui: ExamUiCopy = {
   nextQuestion: 'Next question',
   seeScore: 'See your score',
   startExam: 'Start practice',
-  practiceTenQuestions: '10 scenario questions',
+  practiceQuestionsLabel: (count) => `${count} scenario questions`,
 
   resultEyebrow: 'Done',
   resultHeading: (score, total) => `You got ${score} out of ${total}.`,

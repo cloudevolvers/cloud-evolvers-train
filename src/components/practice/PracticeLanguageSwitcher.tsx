@@ -3,6 +3,8 @@ import ReactCountryFlag from 'react-country-flag'
 import {
   EXAM_LANGUAGES,
   LANGUAGE_DISPLAY,
+  getLanguagesWithSlug,
+  isExamSlug,
   type ExamLanguage,
 } from '@/data/exam-questions'
 import { cn } from '@/lib/utils'
@@ -16,6 +18,8 @@ interface Props {
 
 export function PracticeLanguageSwitcher({ current, examSlug, label, className }: Props) {
   const location = useLocation()
+  const languages =
+    examSlug && isExamSlug(examSlug) ? getLanguagesWithSlug(examSlug) : EXAM_LANGUAGES
 
   return (
     <div className={cn('flex flex-wrap items-center gap-2', className)}>
@@ -23,7 +27,7 @@ export function PracticeLanguageSwitcher({ current, examSlug, label, className }
         {label}
       </span>
       <div className="flex flex-wrap items-center gap-1 rounded-full border border-[color:var(--ed-rule)] bg-[color:var(--ed-card)] p-1">
-        {EXAM_LANGUAGES.map((lang) => {
+        {languages.map((lang) => {
           const display = LANGUAGE_DISPLAY[lang]
           const target = examSlug ? `/practice/${lang}/${examSlug}` : `/practice/${lang}`
           const isActive = lang === current

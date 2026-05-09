@@ -625,7 +625,7 @@ export const az900: ExamSet = {
       ],
       correctId: 'b',
       explanation:
-        'Region pairs are linked regions where Microsoft staggers updates and prioritizes recovery, and where some services replicate by default. They do not merge billing or change egress pricing.',
+        'Region pairs are linked regions where Microsoft staggers updates and prioritizes recovery, and where some services (such as GRS storage) replicate by default. Note that many newer Azure regions are non-paired and rely on availability zones for redundancy instead. They do not merge billing or change egress pricing.',
     },
     {
       id: 'az900-42',
@@ -1345,7 +1345,7 @@ export const az900: ExamSet = {
       ],
       correctId: 'a',
       explanation:
-        'ARM templates (and Bicep on top of them) version a deployable package of resources, policies, and role assignments. Tags are metadata only and cannot deploy policy.',
+        'ARM templates (and Bicep on top of them) bundle resources, policies, and role assignments in a single deployment. Versioning is provided by Template Specs or source control, not ARM templates themselves. Azure Blueprints was the purpose-built service for versioned governance packages, but it is retiring on July 11, 2026; Microsoft now recommends Template Specs and Deployment Stacks. Tags are metadata only and cannot deploy policy.',
     },
     {
       id: 'az900-90',
@@ -1465,7 +1465,7 @@ export const az900: ExamSet = {
       ],
       correctId: 'a',
       explanation:
-        'PaaS shifts engine patching, backups, and HA to Microsoft, which is the headline reason to pick it. Wanting kernel-level control points to IaaS instead.',
+        'With a PaaS service such as Azure SQL Database, Microsoft handles engine patching, automated backups, and high availability — the headline reason to choose PaaS over IaaS. Wanting kernel-level control or custom OS agents points to IaaS (SQL Server on a VM) instead.',
     },
     {
       id: 'az900-98',
