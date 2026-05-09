@@ -25,20 +25,20 @@ export default function ServicesPage() {
           <Display as="h1" size="lg" className="mt-5 leading-[1.02] max-w-3xl">
             {isDutch ? (
               <>
-                Naast training bouwen en beheren we ook de{' '}
-                <span className="ed-display-italic">Azure-omgeving.</span>
+                Naast training beveiligen we ook de{' '}
+                <span className="ed-display-italic">Azure en Microsoft 365 omgeving.</span>
               </>
             ) : (
               <>
-                Beyond training, we build and run the{' '}
-                <span className="ed-display-italic">Azure environment too.</span>
+                Beyond training, we secure the{' '}
+                <span className="ed-display-italic">Azure and Microsoft 365 environment too.</span>
               </>
             )}
           </Display>
           <Lede className="mt-7">
             {isDutch
-              ? 'Cloud Evolvers wordt aangestuurd door Spot Cloud B.V. Dezelfde mensen die je team opleiden, werken bij andere klanten aan landing zones, security, FinOps en 24/7 cloud operations. Je krijgt geen theorie. Je krijgt een partner die het zelf ook bouwt.'
-              : 'Cloud Evolvers is run by Spot Cloud B.V. The same people who train your team work on landing zones, security, FinOps, and 24/7 cloud operations for other customers. You are not getting theory. You are getting a partner who ships the same work.'}
+              ? 'Cloud Evolvers wordt aangestuurd door Spot Cloud B.V. Dezelfde mensen die je team opleiden, werken bij andere klanten aan landing zones, Microsoft 365, security, compliance readiness, FinOps en cloud operations. Je krijgt geen theorie. Je krijgt een partner die het zelf ook bouwt.'
+              : 'Cloud Evolvers is run by Spot Cloud B.V. The same people who train your team work on landing zones, Microsoft 365, security, compliance readiness, FinOps, and cloud operations for other customers. You are not getting theory. You are getting a partner who ships the same work.'}
           </Lede>
           </div>
         </Wrap>
@@ -81,13 +81,13 @@ export default function ServicesPage() {
               <Eyebrow accent>{isDutch ? 'Volgende stap' : 'Next step'}</Eyebrow>
               <Display as="h2" size="md" className="mt-4 text-white">
                 {isDutch
-                  ? 'Vertel ons over je Azure-omgeving.'
-                  : 'Tell us about your Azure environment.'}
+                  ? 'Vertel ons over je Azure of Microsoft 365 omgeving.'
+                  : 'Tell us about your Azure or Microsoft 365 environment.'}
               </Display>
               <p className="mt-6 text-[16px] leading-relaxed text-white/80 max-w-md">
                 {isDutch
                   ? 'We beginnen met een korte scan en een helder voorstel. Geen generieke proposal-deck, wel een lijst met wat we zouden aanraden en waarom.'
-                  : 'We start with a short scan and a clear proposal. Not a generic deck, just a list of what we would recommend and why.'}
+                  : 'We start with a short scan and a clear proposal. No generic deck, just a list of what we would recommend and why.'}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">

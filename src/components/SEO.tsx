@@ -63,7 +63,7 @@ export const PAGE_SEO = {
   },
   services: {
     title: 'Cloud Consulting & Training Services',
-    description: 'Azure consulting, corporate training, and cloud migration services in the Netherlands. Custom programs tailored to your team.',
+    description: 'Azure and Microsoft 365 training, security readiness scans, DORA and NIS2 evidence reviews, cloud consulting, and remediation workshops in the Netherlands.',
     canonical: '/services',
   },
   about: {

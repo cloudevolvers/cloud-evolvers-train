@@ -177,7 +177,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
               >
                 {isDutch ? 'Alle diensten' : 'All services'}
               </Link>
-              <EdButton to="/contact" variant="primary" size="lg">
+              <EdButton to={`/contact?service=${encodeURIComponent(service.id)}`} variant="primary" size="lg">
                 {isDutch ? 'Neem contact op' : 'Get in touch'}
                 <ArrowRight className="w-4 h-4" />
               </EdButton>

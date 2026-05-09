@@ -82,6 +82,7 @@ import { azureAiProjectsSdk2Post } from './posts/azure-ai-projects-sdk-2';
 import { vmEphemeralOsDiskCachingPost } from './posts/vm-ephemeral-os-disk-caching';
 import { stackitSovereignCloudDutchTeamsPost } from './posts/stackit-sovereign-cloud-dutch-teams';
 import { stackitVsAzureFirstWorkloadPost } from './posts/stackit-vs-azure-first-workload';
+import { azureM365ComplianceReadinessGetStartedPost } from './posts/azure-m365-compliance-readiness-get-started';
 
 import type { BlogPost, LocalizedBlogPost, LocalizedText } from './types';
 
@@ -164,10 +165,12 @@ export {
   vmEphemeralOsDiskCachingPost,
   stackitSovereignCloudDutchTeamsPost,
   stackitVsAzureFirstWorkloadPost,
+  azureM365ComplianceReadinessGetStartedPost,
 };
 
 // Combined array of all blog posts (sorted by date, newest first)
 export const blogPosts: BlogPost[] = [
+  azureM365ComplianceReadinessGetStartedPost,
   m365CopilotGpt5AgentsPost,
   visualStudio2026AiPost,
   copilotStudioComputerUsePost,

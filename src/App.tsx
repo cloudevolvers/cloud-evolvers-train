@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -38,6 +39,7 @@ import Az104ReadinessQuizPage from "@/pages/tools/Az104ReadinessQuizPage";
 import MicrosoftExamCostCalculatorPage from "@/pages/tools/MicrosoftExamCostCalculatorPage";
 import MicrosoftCertPathPlannerPage from "@/pages/tools/MicrosoftCertPathPlannerPage";
 import AzureRbacRoleChooserPage from "@/pages/tools/AzureRbacRoleChooserPage";
+import { trackPortfolioEvent } from "@/lib/portfolio-analytics";
 
 function App() {
   return (
@@ -45,6 +47,7 @@ function App() {
       <div className="min-h-screen relative bg-[color:var(--ed-bg)]">
         <div className="relative z-20">
           <ScrollToTop />
+          <PortfolioRouteTracker />
           <Header />
           <main className="bg-background min-h-screen">
             <Routes>
@@ -94,6 +97,26 @@ function App() {
       </div>
     </LanguageProvider>
   );
+}
+
+function PortfolioRouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    const eventName = path.startsWith('/tools/')
+      ? 'tool_viewed'
+      : path === '/' || path === '/services/security-compliance'
+        ? 'landing_viewed'
+        : 'page_view';
+
+    trackPortfolioEvent(eventName, {
+      page: path,
+      is_security_compliance_offer: path === '/services/security-compliance',
+    });
+  }, [location.pathname, location.search]);
+
+  return null;
 }
 
 export default App;

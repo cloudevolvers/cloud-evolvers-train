@@ -22,6 +22,7 @@ import { Card, CardContent, CardHeader } from './ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { DatePicker } from './ui/date-picker';
 import { getAllTrainings } from '@/data/training-json';
+import { trackPortfolioEvent } from '@/lib/portfolio-analytics';
 
 interface TrainingConsultationFormProps {
   language: 'en' | 'nl';
@@ -185,6 +186,13 @@ export default function TrainingConsultationForm({
       }
 
       console.log('Training consultation form submitted successfully via Azure Functions API');
+      trackPortfolioEvent('contact_requested', {
+        training: trainingTitle,
+        language,
+        has_phone: Boolean(formData.phone),
+        has_preferred_dates: formData.preferredDates.length > 0,
+        source_form: 'training_consultation',
+      });
 
       // Reset form
       setFormData({
