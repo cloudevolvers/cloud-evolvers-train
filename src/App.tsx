@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -62,7 +62,8 @@ function App() {
               <Route path="/practice/:lang/:exam" element={<PracticeExamPage />} />
 
               <Route path="/tools" element={<ToolsIndexPage />} />
-              <Route path="/tools/az-104-readiness-quiz" element={<Az104ReadinessQuizPage />} />
+              <Route path="/tools/az-104-readiness-quiz" element={<Navigate to="/tools/az-104-readiness-quiz/en" replace />} />
+              <Route path="/tools/az-104-readiness-quiz/:lang" element={<Az104ReadinessQuizPage />} />
               <Route path="/tools/microsoft-exam-cost-calculator" element={<MicrosoftExamCostCalculatorPage />} />
               <Route path="/tools/microsoft-cert-path-planner" element={<MicrosoftCertPathPlannerPage />} />
               <Route path="/tools/azure-rbac-role-chooser" element={<AzureRbacRoleChooserPage />} />
