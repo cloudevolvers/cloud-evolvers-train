@@ -259,16 +259,16 @@ export const az305: ExamSet = {
       id: 'az305-17',
       topic: 'Cosmos DB',
       question:
-        'A read-heavy product catalog with single-document reads needs the strongest consistency that still allows multi-region distribution without write-region contention. Which level fits?',
+        'A read-heavy product catalog with single-document reads uses a single-write, multi-read-region Cosmos DB account. Which consistency level gives read-your-writes guarantees per session while working well across multiple regions?',
       options: [
         { id: 'a', text: 'Strong consistency across all regions.' },
         { id: 'b', text: 'Eventual.' },
         { id: 'c', text: 'Session.' },
         { id: 'd', text: 'Bounded staleness.' },
       ],
-      correctId: 'd',
+      correctId: 'c',
       explanation:
-        'Bounded staleness is the strongest level that supports multi-region writes and predictable lag bounds. Strong consistency forces single-region writes and increases latency for distributed deployments.',
+        'Session consistency gives read-your-writes, monotonic reads, and monotonic writes guarantees within a client session. It is the recommended level for most multi-region scenarios. Bounded staleness is the strongest option for single-write/multi-read accounts with predictable cross-region lag, but Microsoft explicitly flags it as an anti-pattern for multi-region write accounts. Strong consistency is incompatible with multi-region writes entirely.',
     },
     {
       id: 'az305-18',
@@ -1309,7 +1309,7 @@ export const az305: ExamSet = {
       id: 'az305-87',
       topic: 'Compute',
       question:
-        'A team must run a backend web API with up to 50 deployment slots, integrated VNet, and managed TLS, without operating containers. Which service fits?',
+        'A team must run a backend web API with up to 20 deployment slots, integrated VNet, and managed TLS, without operating containers. Which service fits?',
       options: [
         { id: 'a', text: 'Azure App Service Premium v3.' },
         { id: 'b', text: 'Azure Functions Consumption.' },
@@ -1318,7 +1318,7 @@ export const az305: ExamSet = {
       ],
       correctId: 'a',
       explanation:
-        'App Service Premium v3 supports many slots, VNet integration, and managed TLS without containers. Functions Consumption has limited slot support and cold-start trade-offs.',
+        'App Service Premium v3 supports up to 20 deployment slots per app (the maximum for Premium and Isolated tiers), VNet integration, and managed TLS without containers. Functions Consumption allows only 2 slots total and has cold-start trade-offs.',
     },
     {
       id: 'az305-88',
@@ -1468,7 +1468,7 @@ export const az305: ExamSet = {
       ],
       correctId: 'b',
       explanation:
-        'Auto-failover groups automate failover and expose listener endpoints with RPO in seconds. Active geo-replication needs manual orchestration to fail over and update connection strings.',
+        'Auto-failover groups automate failover and expose read/write listener endpoints so the application connection string does not change during a regional failure. Active geo-replication needs manual orchestration to fail over and update connection strings. Note that geo-replication is asynchronous, so RPO is not guaranteed to be a fixed number of seconds — it depends on replication lag at the moment of failure. The 5-minute data-loss tolerance in this scenario is a realistic bound for typical geo-replication lag.',
     },
     {
       id: 'az305-98',
