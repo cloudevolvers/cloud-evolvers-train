@@ -4,9 +4,9 @@ import { ArrowRight, ArrowLeft, CheckCircle, XCircle, ArrowClockwise } from '@ph
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 import { RelatedTools } from '@/components/tools/RelatedTools';
+import { useTranslations } from '@/hooks/use-translations';
 import {
   AZ_104_QUESTIONS,
-  DOMAIN_LABELS,
   DOMAIN_WEIGHTS,
   type Az104Domain,
   type Az104Question,
@@ -30,9 +30,9 @@ function calculateDomainScores(answers: Answers, questions: Az104Question[]): Do
     networking: { correct: 0, total: 0 },
     'monitoring-backup': { correct: 0, total: 0 },
   };
-  for (const q of questions) {
-    buckets[q.domain].total += 1;
-    if (answers[q.id] === q.correctId) buckets[q.domain].correct += 1;
+  for (const aq of questions) {
+    buckets[aq.domain].total += 1;
+    if (answers[aq.id] === aq.correctId) buckets[aq.domain].correct += 1;
   }
   return (Object.keys(buckets) as Az104Domain[]).map((domain) => ({
     domain,
@@ -42,39 +42,38 @@ function calculateDomainScores(answers: Answers, questions: Az104Question[]): Do
   }));
 }
 
-function readinessVerdict(percent: number): { label: string; tone: 'ok' | 'warn' | 'bad'; advice: string } {
-  if (percent >= 80)
-    return {
-      label: 'Likely ready',
-      tone: 'ok',
-      advice: 'Score this high in our pretest typically passes the real exam. Book a date and finish weak domains in lab.',
-    };
-  if (percent >= 60)
-    return {
-      label: 'Close, but exposed',
-      tone: 'warn',
-      advice: 'Knowledge is solid but some domains will hurt you. Spend a week per weak domain in hands-on labs before booking.',
-    };
-  return {
-    label: 'Not yet',
-    tone: 'bad',
-    advice: 'Booking now risks a failed first attempt. A structured AZ-104 course with labs gets you here in 2 to 4 weeks.',
-  };
+function getVerdictTone(percent: number): 'ok' | 'warn' | 'bad' {
+  if (percent >= 80) return 'ok';
+  if (percent >= 60) return 'warn';
+  return 'bad';
 }
 
 export function Az104ReadinessQuizPage() {
+  const { t } = useTranslations();
+  const q = t.quiz.az104Readiness;
+
   const [phase, setPhase] = useState<Phase>('intro');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
 
   const question = AZ_104_QUESTIONS[currentIndex];
   const totalCorrect = useMemo(
-    () => AZ_104_QUESTIONS.filter((q) => answers[q.id] === q.correctId).length,
+    () => AZ_104_QUESTIONS.filter((aq) => answers[aq.id] === aq.correctId).length,
     [answers],
   );
   const percent = Math.round((totalCorrect / AZ_104_QUESTIONS.length) * 100);
   const domainScores = useMemo(() => calculateDomainScores(answers, AZ_104_QUESTIONS), [answers]);
-  const verdict = readinessVerdict(percent);
+  const verdictTone = getVerdictTone(percent);
+
+  const verdictLabel =
+    verdictTone === 'ok' ? q.verdictLikelyReady
+    : verdictTone === 'warn' ? q.verdictClose
+    : q.verdictNotYet;
+
+  const verdictAdvice =
+    verdictTone === 'ok' ? q.adviceLikelyReady
+    : verdictTone === 'warn' ? q.adviceClose
+    : q.adviceNotYet;
 
   function handleSelect(optionId: string) {
     setAnswers((prev) => ({ ...prev, [question.id]: optionId }));
@@ -97,8 +96,8 @@ export function Az104ReadinessQuizPage() {
   return (
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO
-        title="AZ-104 Readiness Quiz - Free Azure Administrator Self-Assessment"
-        description="Free 12-question AZ-104 readiness quiz covering all five Microsoft Azure Administrator exam domains. Get domain-level feedback on whether you are ready to book."
+        title={q.seoTitle}
+        description={q.seoDescription}
         canonical="/tools/az-104-readiness-quiz"
       />
 
@@ -107,38 +106,36 @@ export function Az104ReadinessQuizPage() {
           <nav className="text-sm text-black/60 mb-6">
             <Link to="/" className="hover:text-black">Home</Link>
             <span className="mx-2">/</span>
-            <Link to="/tools" className="hover:text-black">Tools</Link>
+            <Link to="/tools" className="hover:text-black">{q.breadcrumbTools}</Link>
             <span className="mx-2">/</span>
-            <span className="text-black">AZ-104 readiness quiz</span>
+            <span className="text-black">{q.breadcrumbQuiz}</span>
           </nav>
 
           {phase === 'intro' && (
             <>
-              <Eyebrow>Free quiz · 12 questions · ~6 minutes</Eyebrow>
+              <Eyebrow>{q.eyebrow}</Eyebrow>
               <Display as="h1" size="md" className="mt-3 mb-4">
-                AZ-104 readiness quiz
+                {q.title}
               </Display>
-              <Lede className="mb-8">
-                Twelve scenario-style questions across the five Azure Administrator exam domains. We score per domain so you can see exactly where to spend study time before booking the real exam.
-              </Lede>
+              <Lede className="mb-8">{q.lede}</Lede>
 
               <ul className="space-y-2 mb-8 text-black/80">
                 <li className="flex items-start gap-2">
                   <CheckCircle size={20} weight="duotone" className="text-[color:var(--ed-accent)] mt-0.5" />
-                  Three questions per major domain, weighted to match the real exam blueprint.
+                  {q.bullet1}
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={20} weight="duotone" className="text-[color:var(--ed-accent)] mt-0.5" />
-                  Explanations for every answer at the end, not just a score.
+                  {q.bullet2}
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle size={20} weight="duotone" className="text-[color:var(--ed-accent)] mt-0.5" />
-                  No login, no email capture. Runs entirely in your browser.
+                  {q.bullet3}
                 </li>
               </ul>
 
               <EdButton onClick={() => setPhase('quiz')}>
-                Start quiz
+                {q.startButton}
                 <ArrowRight size={16} weight="bold" className="ml-1" />
               </EdButton>
             </>
@@ -149,9 +146,11 @@ export function Az104ReadinessQuizPage() {
               <div className="mb-6">
                 <div className="flex items-center justify-between text-sm text-black/60 mb-2">
                   <span>
-                    Question {currentIndex + 1} of {AZ_104_QUESTIONS.length}
+                    {q.questionOf
+                      .replace('{current}', String(currentIndex + 1))
+                      .replace('{total}', String(AZ_104_QUESTIONS.length))}
                   </span>
-                  <span>{DOMAIN_LABELS[question.domain]}</span>
+                  <span>{q.domainLabels[question.domain]}</span>
                 </div>
                 <div className="h-1.5 w-full rounded-full bg-black/[0.08] overflow-hidden">
                   <div
@@ -195,10 +194,10 @@ export function Az104ReadinessQuizPage() {
                   className="inline-flex items-center gap-1.5 text-sm text-black/70 hover:text-black disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   <ArrowLeft size={14} weight="bold" />
-                  Back
+                  {q.backButton}
                 </button>
                 <EdButton onClick={handleNext} disabled={!answers[question.id]}>
-                  {currentIndex === AZ_104_QUESTIONS.length - 1 ? 'See results' : 'Next'}
+                  {currentIndex === AZ_104_QUESTIONS.length - 1 ? q.seeResults : q.nextButton}
                   <ArrowRight size={16} weight="bold" className="ml-1" />
                 </EdButton>
               </div>
@@ -207,20 +206,22 @@ export function Az104ReadinessQuizPage() {
 
           {phase === 'results' && (
             <>
-              <Eyebrow>Results</Eyebrow>
+              <Eyebrow>{q.resultsEyebrow}</Eyebrow>
               <Display as="h1" size="md" className="mt-3 mb-2">
-                You scored {totalCorrect} of {AZ_104_QUESTIONS.length}
+                {q.scoreHeading
+                  .replace('{correct}', String(totalCorrect))
+                  .replace('{total}', String(AZ_104_QUESTIONS.length))}
               </Display>
               <p className={`text-lg font-medium mb-2 ${
-                verdict.tone === 'ok' ? 'text-emerald-700'
-                  : verdict.tone === 'warn' ? 'text-amber-700'
+                verdictTone === 'ok' ? 'text-emerald-700'
+                  : verdictTone === 'warn' ? 'text-amber-700'
                   : 'text-red-700'
               }`}>
-                {verdict.label} · {percent}%
+                {verdictLabel} · {percent}%
               </p>
-              <p className="text-black/70 mb-10 leading-relaxed">{verdict.advice}</p>
+              <p className="text-black/70 mb-10 leading-relaxed">{verdictAdvice}</p>
 
-              <h2 className="text-lg font-semibold mb-4">By domain</h2>
+              <h2 className="text-lg font-semibold mb-4">{q.byDomain}</h2>
               <ul className="space-y-3 mb-10">
                 {domainScores.map((score) => {
                   const pct = Math.round((score.correct / score.total) * 100);
@@ -229,8 +230,8 @@ export function Az104ReadinessQuizPage() {
                     <li key={score.domain} className="rounded-xl border border-black/[0.08] bg-white p-4">
                       <div className="flex items-center justify-between mb-2">
                         <div>
-                          <span className="font-medium">{DOMAIN_LABELS[score.domain]}</span>
-                          <span className="ml-2 text-xs text-black/50 font-mono">{score.weight} of exam</span>
+                          <span className="font-medium">{q.domainLabels[score.domain]}</span>
+                          <span className="ml-2 text-xs text-black/50 font-mono">{score.weight} {q.examPortion}</span>
                         </div>
                         <span className="font-mono text-sm">
                           {score.correct}/{score.total}
@@ -244,13 +245,13 @@ export function Az104ReadinessQuizPage() {
                 })}
               </ul>
 
-              <h2 className="text-lg font-semibold mb-4">Answer review</h2>
+              <h2 className="text-lg font-semibold mb-4">{q.answerReview}</h2>
               <ol className="space-y-4 mb-10">
-                {AZ_104_QUESTIONS.map((q, idx) => {
-                  const userAnswer = answers[q.id];
-                  const correct = userAnswer === q.correctId;
+                {AZ_104_QUESTIONS.map((aq, idx) => {
+                  const userAnswer = answers[aq.id];
+                  const correct = userAnswer === aq.correctId;
                   return (
-                    <li key={q.id} className="rounded-xl border border-black/[0.08] bg-white p-4">
+                    <li key={aq.id} className="rounded-xl border border-black/[0.08] bg-white p-4">
                       <div className="flex items-start gap-2 mb-2">
                         {correct ? (
                           <CheckCircle size={20} weight="duotone" className="text-emerald-600 mt-0.5 shrink-0" />
@@ -258,13 +259,14 @@ export function Az104ReadinessQuizPage() {
                           <XCircle size={20} weight="duotone" className="text-red-600 mt-0.5 shrink-0" />
                         )}
                         <span className="text-sm font-medium">
-                          {idx + 1}. {q.question}
+                          {idx + 1}. {aq.question}
                         </span>
                       </div>
                       <p className="text-sm text-black/70 ml-7">
-                        <span className="font-mono text-xs">Correct:</span> {q.options.find((o) => o.id === q.correctId)?.text}
+                        <span className="font-mono text-xs">{q.correctLabel}</span>{' '}
+                        {aq.options.find((o) => o.id === aq.correctId)?.text}
                       </p>
-                      <p className="text-sm text-black/60 ml-7 mt-1 italic">{q.explanation}</p>
+                      <p className="text-sm text-black/60 ml-7 mt-1 italic">{aq.explanation}</p>
                     </li>
                   );
                 })}
@@ -277,7 +279,7 @@ export function Az104ReadinessQuizPage() {
                   to="/training/azure-administrator"
                   className="inline-flex items-center gap-1.5 rounded-full bg-[color:var(--ed-accent)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90"
                 >
-                  See AZ-104 course
+                  {q.seeCourseCta}
                   <ArrowRight size={14} weight="bold" />
                 </Link>
                 <button
@@ -286,7 +288,7 @@ export function Az104ReadinessQuizPage() {
                   className="inline-flex items-center gap-1.5 rounded-full border border-black/[0.15] bg-white px-5 py-2.5 text-sm font-medium hover:border-black/[0.3]"
                 >
                   <ArrowClockwise size={14} weight="bold" />
-                  Retake
+                  {q.retakeButton}
                 </button>
               </div>
             </>

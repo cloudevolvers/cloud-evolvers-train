@@ -335,7 +335,47 @@ export const translations = {
           ]
         }
       ]
-    }
+    },
+    quiz: {
+      az104Readiness: {
+        seoTitle: 'AZ-104 Readiness Quiz - Free Azure Administrator Self-Assessment',
+        seoDescription: 'Free 12-question AZ-104 readiness quiz covering all five Microsoft Azure Administrator exam domains. Get domain-level feedback on whether you are ready to book.',
+        breadcrumbTools: 'Tools',
+        breadcrumbQuiz: 'AZ-104 readiness quiz',
+        eyebrow: 'Free quiz · 12 questions · ~6 minutes',
+        title: 'AZ-104 readiness quiz',
+        lede: 'Twelve scenario-style questions across the five Azure Administrator exam domains. We score per domain so you can see exactly where to spend study time before booking the real exam.',
+        bullet1: 'Three questions per major domain, weighted to match the real exam blueprint.',
+        bullet2: 'Explanations for every answer at the end, not just a score.',
+        bullet3: 'No login, no email capture. Runs entirely in your browser.',
+        startButton: 'Start quiz',
+        questionOf: 'Question {current} of {total}',
+        backButton: 'Back',
+        nextButton: 'Next',
+        seeResults: 'See results',
+        resultsEyebrow: 'Results',
+        scoreHeading: 'You scored {correct} of {total}',
+        byDomain: 'By domain',
+        examPortion: 'of exam',
+        answerReview: 'Answer review',
+        correctLabel: 'Correct:',
+        verdictLikelyReady: 'Likely ready',
+        verdictClose: 'Close, but exposed',
+        verdictNotYet: 'Not yet',
+        adviceLikelyReady: 'Score this high in our pretest typically passes the real exam. Book a date and finish weak domains in lab.',
+        adviceClose: 'Knowledge is solid but some domains will hurt you. Spend a week per weak domain in hands-on labs before booking.',
+        adviceNotYet: 'Booking now risks a failed first attempt. A structured AZ-104 course with labs gets you here in 2 to 4 weeks.',
+        seeCourseCta: 'See AZ-104 course',
+        retakeButton: 'Retake',
+        domainLabels: {
+          'identity-governance': 'Identity & governance',
+          storage: 'Storage',
+          compute: 'Compute',
+          networking: 'Networking',
+          'monitoring-backup': 'Monitoring & backup',
+        },
+      },
+    },
   },
   nl: {
     nav: navNl,
@@ -655,6 +695,46 @@ export const translations = {
           ]
         }
       ]
-    }
+    },
+    quiz: {
+      az104Readiness: {
+        seoTitle: 'AZ-104 Gereedheidtest - Gratis Azure Administrator Zelfbeoordeling',
+        seoDescription: 'Gratis 12-vragen AZ-104 gereedheidtest over alle vijf domeinen van het Microsoft Azure Administrator-examen. Krijg per domein feedback of je klaar bent om te boeken.',
+        breadcrumbTools: 'Tools',
+        breadcrumbQuiz: 'AZ-104 gereedheidtest',
+        eyebrow: 'Gratis quiz · 12 vragen · ~6 minuten',
+        title: 'AZ-104 gereedheidtest',
+        lede: 'Twaalf scenario-vragen verdeeld over de vijf domeinen van het Azure Administrator-examen. Per domein gescoord zodat je precies ziet waar je nog studietijd in moet steken voor je het echte examen boekt.',
+        bullet1: 'Drie vragen per hoofddomein, gewogen op basis van de echte examen-blueprint.',
+        bullet2: 'Uitleg bij elk antwoord aan het einde, niet alleen een score.',
+        bullet3: 'Geen aanmelding, geen e-mailregistratie. Draait volledig in je browser.',
+        startButton: 'Quiz starten',
+        questionOf: 'Vraag {current} van {total}',
+        backButton: 'Terug',
+        nextButton: 'Volgende',
+        seeResults: 'Resultaten bekijken',
+        resultsEyebrow: 'Resultaten',
+        scoreHeading: 'Je scoorde {correct} van {total}',
+        byDomain: 'Per domein',
+        examPortion: 'van examen',
+        answerReview: 'Antwoorden bekijken',
+        correctLabel: 'Correct:',
+        verdictLikelyReady: 'Waarschijnlijk klaar',
+        verdictClose: 'Bijna, maar nog kwetsbaar',
+        verdictNotYet: 'Nog niet',
+        adviceLikelyReady: 'Kandidaten die hier scoren op onze voortest slagen doorgaans voor het echte examen. Boek een datum en haal de zwakke domeinen bij via een lab.',
+        adviceClose: 'De kennis is solide, maar sommige domeinen zullen je punten kosten. Spend een week per zwak domein in hands-on labs voor je boekt.',
+        adviceNotYet: 'Nu boeken riskeert een mislukte eerste poging. Een gestructureerde AZ-104-cursus met labs brengt je er in 2 tot 4 weken.',
+        seeCourseCta: 'Bekijk AZ-104-cursus',
+        retakeButton: 'Opnieuw doen',
+        domainLabels: {
+          'identity-governance': 'Identity & governance',
+          storage: 'Opslag',
+          compute: 'Compute',
+          networking: 'Netwerken',
+          'monitoring-backup': 'Monitoring & backup',
+        },
+      },
+    },
   }
 } as const;
