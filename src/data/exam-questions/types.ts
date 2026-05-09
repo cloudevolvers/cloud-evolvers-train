@@ -10,6 +10,8 @@ export type ExamSlug =
   | 'sc-900'
   | 'ms-900'
   | 'pl-300'
+  | 'dp-900'
+  | 'pl-900'
 
 export const EXAM_LANGUAGES: ExamLanguage[] = ['en', 'nl', 'de', 'fr', 'es']
 export const EXAM_SLUGS: ExamSlug[] = [
@@ -23,6 +25,8 @@ export const EXAM_SLUGS: ExamSlug[] = [
   'sc-900',
   'ms-900',
   'pl-300',
+  'dp-900',
+  'pl-900',
 ]
 
 export interface ExamOption {

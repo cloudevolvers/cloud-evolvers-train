@@ -12,6 +12,8 @@ import { az500 as enAz500 } from './en/az-500'
 import { sc900 as enSc900 } from './en/sc-900'
 import { ms900 as enMs900 } from './en/ms-900'
 import { pl300 as enPl300 } from './en/pl-300'
+import { dp900 as enDp900 } from './en/dp-900'
+import { pl900 as enPl900 } from './en/pl-900'
 
 import { ui as nlUi } from './nl/ui'
 import { az900 as nlAz900 } from './nl/az-900'
@@ -53,6 +55,8 @@ const packs: Record<ExamLanguage, ExamLanguagePack> = {
       'sc-900': enSc900,
       'ms-900': enMs900,
       'pl-300': enPl300,
+      'dp-900': enDp900,
+      'pl-900': enPl900,
     },
   },
   nl: {
