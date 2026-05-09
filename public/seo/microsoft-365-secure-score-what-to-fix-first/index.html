@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microsoft 365 Secure Score: What to Fix First</title>
+  <meta name="description" content="Microsoft 365 Secure Score prioritization guide for IT teams: identity, admin roles, device posture, Defender, and low-risk quick wins." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/microsoft-365-secure-score-what-to-fix-first/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Microsoft 365 Secure Score: What to Fix First" />
+  <meta property="og:description" content="Microsoft 365 Secure Score prioritization guide for IT teams: identity, admin roles, device posture, Defender, and low-risk quick wins." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/microsoft-365-secure-score-what-to-fix-first/" />
+  <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Cloud Evolvers" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Microsoft 365 Secure Score: What to Fix First" />
+  <meta name="twitter:description" content="Microsoft 365 Secure Score prioritization guide for IT teams: identity, admin roles, device posture, Defender, and low-risk quick wins." />
+  <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
+
+  <!-- Primary schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Microsoft 365 Secure Score: what to fix first","description":"Microsoft 365 Secure Score prioritization guide for IT teams: identity, admin roles, device posture, Defender, and low-risk quick wins.","url":"https://cloudevolvers.com/seo/microsoft-365-secure-score-what-to-fix-first/","datePublished":"2026-05-10","dateModified":"2026-05-10","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/microsoft-365-secure-score-what-to-fix-first/"}}</script>
+
+  <!-- FAQ schema (always present when FAQ array is non-empty) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should we fix every Secure Score recommendation?","acceptedAnswer":{"@type":"Answer","text":"No. Some recommendations need business approval, licensing, testing, or compensating controls. Use Secure Score as a prioritization source, not an automatic change script."}},{"@type":"Question","name":"What Secure Score actions usually come first?","acceptedAnswer":{"@type":"Answer","text":"Admin MFA, privileged role cleanup, audit settings, identity protection basics, and low-risk email protections usually come before disruptive access or device policy changes."}}]}</script>
+
+  <!-- Minimal styles: readable without the SPA bundle -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.65;
+      padding: 0;
+    }
+    .site-header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header a { text-decoration: none; color: inherit; font-weight: 600; }
+    .site-header nav { margin-left: auto; display: flex; gap: 1.5rem; }
+    .site-header nav a { font-size: 0.9rem; color: #374151; }
+    main { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.25rem; }
+    h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: #16a34a; }
+    a:hover { text-decoration: underline; }
+    pre {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.875em; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem 0.875rem; text-align: left; }
+    th { background: #f9fafb; font-weight: 600; }
+    .meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 1.75rem; }
+    .cta-band {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .cta-band p { margin: 0; font-weight: 500; }
+    .cta-button {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .cta-button:hover { background: #15803d; text-decoration: none; }
+    .related-pages {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .related-pages h2 { margin-top: 0; font-size: 1rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .related-link {
+      display: block;
+      padding: 0.4rem 0;
+      color: #16a34a;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .related-link:hover { text-decoration: underline; }
+    .faq-section { margin-top: 2.5rem; border-top: 1px solid #e5e7eb; padding-top: 1.5rem; }
+    .faq-item { margin-bottom: 1.5rem; }
+    .faq-question { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .faq-answer { color: #374151; }
+    .site-footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .site-footer a { color: #6b7280; }
+    @media (max-width: 600px) {
+      main { padding: 1.5rem 1rem 3rem; }
+      .site-header nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://cloudevolvers.com/">Cloud Evolvers</a>
+    <nav>
+      <a href="https://cloudevolvers.com/training">Training</a>
+      <a href="https://cloudevolvers.com/blog">Blog</a>
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Microsoft 365 Secure Score: what to fix first</h1>
+      <p class="meta">
+        By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
+        Updated 10 May 2026
+      </p>
+
+      <div class="article-content">
+        <p>Secure Score is useful only when it becomes a safe change plan. Chasing points blindly can break users, service accounts, legacy apps, and support workflows. The right first pass separates low-risk identity and admin fixes from changes that need testing.</p>
+<p>Primary source checked on 2026-05-10: <a href="https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score" target="_blank" rel="noopener">Microsoft Secure Score</a>. Use the Microsoft page as the final source of truth before booking an exam or committing a remediation plan.</p>
+
+<h2>Who this is for</h2>
+<ul><li>Microsoft 365 admins who inherited a tenant with a low or noisy Secure Score.</li><li>Security teams preparing a quick-win backlog before an audit or management review.</li><li>IT leads who need a practical order of operations instead of a screenshot of a score.</li></ul>
+
+<h2>What to work on first</h2>
+<ul><li>Start with admin hygiene: emergency access accounts, privileged role count, MFA coverage, and inactive admins.</li><li>Then handle low-risk baseline controls: audit logging, mailbox protections, safe links, safe attachments, and external sharing review.</li><li>Treat Conditional Access, legacy authentication blocking, DLP, and device compliance as tested changes with rollback plans.</li></ul>
+
+<h2>Team training angle</h2>
+<p>A Secure Score workshop should not end with points. It should end with owners, risk levels, change windows, evidence links, and a before-and-after posture report.</p>
+
+<h2>One-week action plan</h2>
+<ul><li>Day 1: export Secure Score actions and group them by identity, email, device, data, and admin controls.</li><li>Day 2: mark each action quick win, test first, policy decision, or not applicable.</li><li>Day 3: implement admin and audit hygiene.</li><li>Day 4: pilot Conditional Access and email protection changes with a small group.</li><li>Day 5: write the remediation backlog and evidence pack.</li></ul>
+
+<h2>Where Cloud Evolvers fits</h2>
+<p>Cloud Evolvers can run a Microsoft 365 Secure Score sprint that turns the score into safe changes and evidence your team can defend.</p>
+      </div>
+
+      <div class="cta-band">
+        <p>Want MCT-led preparation? Browse the course catalog.</p>
+        <a href="https://cloudevolvers.com/training" class="cta-button">Browse the course catalog</a>
+      </div>
+
+      
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>Frequently asked questions</h2>
+      
+      <div class="faq-item">
+        <h3 class="faq-question">Should we fix every Secure Score recommendation?</h3>
+        <p class="faq-answer">No. Some recommendations need business approval, licensing, testing, or compensating controls. Use Secure Score as a prioritization source, not an automatic change script.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What Secure Score actions usually come first?</h3>
+        <p class="faq-answer">Admin MFA, privileged role cleanup, audit settings, identity protection basics, and low-risk email protections usually come before disruptive access or device policy changes.</p>
+      </div>
+    </section>
+      
+    <aside class="related-pages">
+      <h2>Related guides</h2>
+      <a href="https://cloudevolvers.com/seo/purview-compliance-manager-improvement-actions/" class="related-link">Purview improvement actions</a>
+      <a href="https://cloudevolvers.com/seo/ms-102-administrator-study-plan-2026/" class="related-link">MS-102 administrator plan</a>
+      <a href="https://cloudevolvers.com/seo/microsoft-365-admin-training-path-for-it-teams/" class="related-link">M365 team path</a>
+    </aside>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Cloud Evolvers &mdash; Spot Cloud B.V. &mdash;
+      <a href="https://cloudevolvers.com/privacy-policy">Privacy</a> &middot;
+      <a href="https://cloudevolvers.com/training">Training catalog</a> &middot;
+      <a href="https://cloudevolvers.com/contact">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

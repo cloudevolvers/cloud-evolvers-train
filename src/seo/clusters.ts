@@ -38,6 +38,549 @@ export interface SeoCluster {
   modifiedDate: string;
 }
 
+const CLOUD_EVOLVERS_BATCH_DATE = "2026-05-10";
+
+type TrainingSeoPageInput = {
+  slug: string;
+  title: string;
+  metaDescription: string;
+  h1: string;
+  targetKeyword: string;
+  officialSourceUrl: string;
+  officialSourceLabel: string;
+  lede: string;
+  who: string[];
+  firstMoves: string[];
+  teamTraining: string;
+  oneWeekPlan: string[];
+  cta: string;
+  faq: FaqItem[];
+  links: InternalLink[];
+  schemaType?: SchemaType;
+};
+
+function trainingSeoPage(input: TrainingSeoPageInput): SeoCluster {
+  return {
+    slug: input.slug,
+    title: input.title,
+    metaDescription: input.metaDescription,
+    h1: input.h1,
+    cluster: "study-guide",
+    schemaType: input.schemaType ?? "Article",
+    targetKeyword: input.targetKeyword,
+    publishedDate: CLOUD_EVOLVERS_BATCH_DATE,
+    modifiedDate: CLOUD_EVOLVERS_BATCH_DATE,
+    internalLinks: input.links,
+    content: `
+<p>${input.lede}</p>
+<p>Primary source checked on ${CLOUD_EVOLVERS_BATCH_DATE}: <a href="${input.officialSourceUrl}" target="_blank" rel="noopener">${input.officialSourceLabel}</a>. Use the Microsoft page as the final source of truth before booking an exam or committing a remediation plan.</p>
+
+<h2>Who this is for</h2>
+${htmlList(input.who)}
+
+<h2>What to work on first</h2>
+${htmlList(input.firstMoves)}
+
+<h2>Team training angle</h2>
+<p>${input.teamTraining}</p>
+
+<h2>One-week action plan</h2>
+${htmlList(input.oneWeekPlan)}
+
+<h2>Where Cloud Evolvers fits</h2>
+<p>${input.cta}</p>
+    `,
+    faq: input.faq,
+  };
+}
+
+function htmlList(items: string[]): string {
+  return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+}
+
+const microsoftTrainingSeoBatch: SeoCluster[] = [
+  trainingSeoPage({
+    slug: "ms-102-administrator-study-plan-2026",
+    title: "MS-102 Study Plan 2026: Microsoft 365 Administrator",
+    metaDescription:
+      "MS-102 study plan for Microsoft 365 administrators: tenant management, Entra identity, Defender XDR, and Purview compliance mapped to team training.",
+    h1: "MS-102 study plan for Microsoft 365 administrators in 2026",
+    targetKeyword: "ms-102 study plan",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/credentials/certifications/exams/ms-102/",
+    officialSourceLabel: "Exam MS-102: Microsoft 365 Administrator",
+    lede:
+      "MS-102 is the practical Microsoft 365 administrator exam for teams that own tenants, identities, security operations, and compliance workflows. The 2026 blueprint puts the heaviest weight on Defender XDR and Entra identity, so a useful plan starts there instead of treating the exam as a generic M365 overview.",
+    who: [
+      "Microsoft 365 admins moving from helpdesk or endpoint work into tenant ownership.",
+      "IT teams that need one administrator to connect Entra, Defender, Purview, and tenant governance.",
+      "Consultants preparing to run M365 readiness or hardening workshops for customers.",
+    ],
+    firstMoves: [
+      "Map your tenant work to the four MS-102 domains: tenant management, Entra identity and access, Defender XDR, and Purview compliance.",
+      "Build labs around real admin decisions: break-glass accounts, admin roles, Conditional Access, alert triage, retention, and audit evidence.",
+      "Use practice assessment results as a routing tool, not as proof of readiness. Weak Defender or Purview scores usually mean the tenant concepts are not connected yet.",
+    ],
+    teamTraining:
+      "For a team, MS-102 works best as a 3 to 5 day sequence: day one on tenant and role governance, day two on Entra and access controls, day three on Defender XDR, and day four on Purview evidence. Add a fifth day only when the team needs lab time in its own tenant.",
+    oneWeekPlan: [
+      "Day 1: inventory your tenant, admin roles, licensing, and identity sync assumptions.",
+      "Day 2: review Conditional Access, privileged roles, access reviews, and authentication methods.",
+      "Day 3: walk Defender XDR incidents from alert to remediation.",
+      "Day 4: map Purview retention, DLP, audit, and compliance score actions.",
+      "Day 5: run a mock change review and write the remediation backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can run MS-102 as an exam prep course or as an operational Microsoft 365 administrator workshop where the output is a tenant backlog, not just a certificate plan.",
+    links: [
+      { slug: "microsoft-365-admin-training-path-for-it-teams", label: "M365 admin training path" },
+      { slug: "sc-300-identity-administrator-study-plan-2026", label: "SC-300 identity plan" },
+      { slug: "microsoft-365-secure-score-what-to-fix-first", label: "Secure Score fixes" },
+    ],
+    faq: [
+      {
+        q: "Is MS-102 only for exam candidates?",
+        a: "No. The MS-102 domains are also a useful operating model for Microsoft 365 administrators who own tenant security and compliance.",
+      },
+      {
+        q: "What should I study first for MS-102?",
+        a: "Start with Entra identity and Defender XDR, then connect those decisions to tenant governance and Purview compliance.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "sc-300-identity-administrator-study-plan-2026",
+    title: "SC-300 Study Plan 2026: Identity and Access Administrator",
+    metaDescription:
+      "SC-300 study plan for Microsoft Entra identity administrators: Zero Trust, authentication, authorization, app access, and identity governance.",
+    h1: "SC-300 study plan for Microsoft identity administrators",
+    targetKeyword: "sc-300 study plan",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300",
+    officialSourceLabel: "Study guide for Exam SC-300",
+    lede:
+      "SC-300 is the identity exam for people who design, operate, and troubleshoot access in Microsoft Entra. It is not just an MFA exam. A useful study plan covers the full lifecycle: users, devices, applications, permissions, governance, and Zero Trust controls.",
+    who: [
+      "Microsoft 365 or Azure admins who keep getting pulled into Conditional Access and Entra incidents.",
+      "Security engineers who need identity governance muscle memory before designing Zero Trust rollouts.",
+      "Teams preparing to clean up app registrations, privileged roles, access reviews, and authentication methods.",
+    ],
+    firstMoves: [
+      "Document the current identity estate: hybrid sync, external identities, app registrations, privileged roles, and break-glass accounts.",
+      "Practice Conditional Access design with exclusions, report-only mode, authentication strengths, and device compliance.",
+      "Lab identity governance: access packages, entitlement management, reviews, lifecycle workflows, and privileged identity management.",
+    ],
+    teamTraining:
+      "SC-300 becomes valuable when a team trains on its own identity decisions. The course should include role assignment reviews, application access cleanup, and a draft Conditional Access policy set.",
+    oneWeekPlan: [
+      "Day 1: Entra tenant inventory and identity lifecycle review.",
+      "Day 2: authentication methods, MFA, passwordless, and Conditional Access.",
+      "Day 3: app registrations, enterprise applications, consent, and access troubleshooting.",
+      "Day 4: identity governance, access reviews, PIM, and entitlement management.",
+      "Day 5: exam drills plus a tenant hardening backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can teach SC-300 as exam prep or as an Entra hardening workshop for teams that need better access control before an audit or migration.",
+    links: [
+      { slug: "ms-102-administrator-study-plan-2026", label: "MS-102 administrator plan" },
+      { slug: "sc-900-vs-ms-900-which-fundamentals", label: "SC-900 vs MS-900" },
+      { slug: "microsoft-365-admin-training-path-for-it-teams", label: "M365 team path" },
+    ],
+    faq: [
+      {
+        q: "Is SC-300 harder than SC-900?",
+        a: "Yes. SC-900 is fundamentals. SC-300 expects you to operate Microsoft Entra identity and access controls.",
+      },
+      {
+        q: "Does SC-300 help Azure administrators?",
+        a: "Yes. Azure administrators depend on Entra roles, identities, Conditional Access, and application access, so SC-300 is a strong follow-up to AZ-104.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "md-102-intune-endpoint-administrator-study-plan-2026",
+    title: "MD-102 Study Plan 2026: Intune and Endpoint Administrator",
+    metaDescription:
+      "MD-102 study plan for endpoint administrators: Intune, Windows deployment, device compliance, app management, and endpoint security.",
+    h1: "MD-102 study plan for Intune and endpoint administrators",
+    targetKeyword: "md-102 study plan",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/md-102",
+    officialSourceLabel: "Study guide for Exam MD-102",
+    lede:
+      "MD-102 is the endpoint administration exam for teams that manage Windows devices through Intune and Microsoft 365. The useful path is not memorizing console names. It is learning how enrollment, compliance, configuration, apps, and security baselines interact in a real device lifecycle.",
+    who: [
+      "Endpoint administrators moving from classic imaging or Group Policy to Intune.",
+      "Helpdesk leads who need to understand compliance failures, app deployment, and device lifecycle issues.",
+      "Microsoft 365 teams preparing for a modern workplace rollout or tenant cleanup.",
+    ],
+    firstMoves: [
+      "Create a lab tenant or test group with Windows enrollment, compliance policies, configuration profiles, and app deployment.",
+      "Practice failure paths: noncompliant device, missing app, stale enrollment, broken update ring, and user-driven Autopilot issues.",
+      "Connect endpoint security baselines to Defender and Conditional Access so device posture actually changes access decisions.",
+    ],
+    teamTraining:
+      "MD-102 training should produce an endpoint runbook: enrollment flow, naming rules, compliance policy, update rings, app assignment model, support escalation, and security baseline exceptions.",
+    oneWeekPlan: [
+      "Day 1: Intune architecture, groups, roles, and enrollment methods.",
+      "Day 2: compliance, configuration profiles, update rings, and device filters.",
+      "Day 3: application deployment, Win32 packaging, and troubleshooting.",
+      "Day 4: endpoint security baselines, Defender integration, and access decisions.",
+      "Day 5: Autopilot and incident drills.",
+    ],
+    cta:
+      "Cloud Evolvers can run MD-102 as Intune exam prep or as a modern endpoint workshop for teams that need reliable deployment and support operations.",
+    links: [
+      { slug: "ms-102-administrator-study-plan-2026", label: "MS-102 administrator plan" },
+      { slug: "microsoft-365-admin-training-path-for-it-teams", label: "M365 team path" },
+      { slug: "microsoft-365-secure-score-what-to-fix-first", label: "Secure Score fixes" },
+    ],
+    faq: [
+      {
+        q: "Is MD-102 an Intune exam?",
+        a: "Intune is central to MD-102, but the exam also covers Windows deployment, device compliance, app management, and endpoint security.",
+      },
+      {
+        q: "Should a helpdesk team study MD-102?",
+        a: "Yes, if they support managed Windows devices. MD-102 gives the operational model behind common endpoint incidents.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "az-500-security-engineer-retirement-path-2026",
+    title: "AZ-500 Retirement Path 2026: What Azure Security Teams Should Do",
+    metaDescription:
+      "AZ-500 retires in 2026. Here is how Azure security teams should plan certification, skill coverage, and training before the exam disappears.",
+    h1: "AZ-500 retirement path for Azure security teams",
+    targetKeyword: "az-500 retirement 2026",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/learn/certifications/retired-certification-exams",
+    officialSourceLabel: "Microsoft retired certification exams list",
+    lede:
+      "AZ-500 remains a useful skills map for Azure security work, but Microsoft lists the Azure Security Engineer Associate exam for retirement in 2026. Teams should not ignore the content. They should decide whether to finish the exam path before retirement or turn the domains into an internal Azure security workshop.",
+    who: [
+      "Azure administrators who planned to use AZ-500 as their security follow-up.",
+      "Security engineers responsible for Defender for Cloud, Key Vault, network security, identities, and platform hardening.",
+      "Managers who need to keep Azure security skills current even when a certification path changes.",
+    ],
+    firstMoves: [
+      "Confirm the retirement date on Microsoft Learn before booking any exam attempt.",
+      "Prioritize reusable skills: identity protection, network security, data protection, Defender for Cloud, Key Vault, and workload hardening.",
+      "If the exam window is too tight, convert the study plan into a security readiness workshop with tenant and subscription evidence.",
+    ],
+    teamTraining:
+      "The best AZ-500 replacement for a team is a hands-on Azure security sprint. Use the exam domains as the agenda, but make the output a set of real controls and remediation actions.",
+    oneWeekPlan: [
+      "Day 1: role assignments, privileged access, managed identities, and Key Vault.",
+      "Day 2: network controls, private endpoints, firewalls, WAF, and NSGs.",
+      "Day 3: Defender for Cloud recommendations and regulatory compliance.",
+      "Day 4: logging, alerting, Sentinel handoff, and incident workflow.",
+      "Day 5: remediation backlog and certification decision.",
+    ],
+    cta:
+      "Cloud Evolvers can help teams turn AZ-500 content into a practical Azure security workshop even if the public certification path changes.",
+    links: [
+      { slug: "defender-for-cloud-cis-nist-dora-standards", label: "Defender for Cloud compliance standards" },
+      { slug: "az-104-lab-checklist-for-teams", label: "AZ-104 lab checklist" },
+      { slug: "sc-300-identity-administrator-study-plan-2026", label: "SC-300 identity plan" },
+    ],
+    faq: [
+      {
+        q: "Is AZ-500 retiring?",
+        a: "Microsoft's retired certification exams list shows AZ-500 with a 2026 retirement date. Always verify the current date on Microsoft Learn before booking.",
+      },
+      {
+        q: "Should teams still learn AZ-500 topics?",
+        a: "Yes. The exam may retire, but Azure security engineering skills remain necessary for production operations and compliance evidence.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "sc-900-vs-ms-900-which-fundamentals",
+    title: "SC-900 vs MS-900 in 2026: Which Fundamentals Path Still Makes Sense?",
+    metaDescription:
+      "SC-900 vs MS-900 for Microsoft fundamentals training in 2026, including the MS-900 retirement and the practical team training decision.",
+    h1: "SC-900 vs MS-900: which fundamentals path still makes sense in 2026",
+    targetKeyword: "sc-900 vs ms-900",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-900",
+    officialSourceLabel: "Study guide for Exam SC-900",
+    lede:
+      "SC-900 and MS-900 used to be the two obvious fundamentals paths for Microsoft cloud teams. In 2026 the decision changed because MS-900 is retired. For most teams, SC-900 is now the better fundamentals route unless they need a custom Microsoft 365 orientation without an exam endpoint.",
+    who: [
+      "Managers choosing a baseline training path for non-specialist IT staff.",
+      "Helpdesk and operations teams that need security, compliance, and identity vocabulary.",
+      "Microsoft 365 users or admins who missed the MS-900 retirement window.",
+    ],
+    firstMoves: [
+      "Use SC-900 when the goal is shared language around Entra, Defender, Purview, Zero Trust, and compliance.",
+      "Use a custom Microsoft 365 fundamentals workshop when the team needs apps, licensing, collaboration, and admin basics without an exam.",
+      "Avoid building new onboarding around a retired exam unless the content is clearly separated from certification claims.",
+    ],
+    teamTraining:
+      "A practical fundamentals path starts with SC-900 language and adds Microsoft 365 tenant orientation. That gives business stakeholders, helpdesk staff, and junior admins the same baseline before moving into MS-102, SC-300, or MD-102.",
+    oneWeekPlan: [
+      "Day 1: explain the MS-900 retirement and choose an exam or non-exam path.",
+      "Day 2: map SC-900 concepts to your tenant: identity, security, compliance, and Microsoft services.",
+      "Day 3: connect fundamentals to daily tickets and admin decisions.",
+      "Day 4: run short practice assessment drills for vocabulary and service boundaries.",
+      "Day 5: route people into MS-102, SC-300, MD-102, or a non-certification workshop.",
+    ],
+    cta:
+      "Cloud Evolvers can deliver SC-900 as certification prep or design a Microsoft 365 fundamentals workshop for teams that no longer have MS-900 as a clean exam endpoint.",
+    links: [
+      { slug: "ms-102-administrator-study-plan-2026", label: "MS-102 administrator plan" },
+      { slug: "sc-300-identity-administrator-study-plan-2026", label: "SC-300 identity plan" },
+      { slug: "microsoft-365-admin-training-path-for-it-teams", label: "M365 team path" },
+    ],
+    faq: [
+      {
+        q: "Is MS-900 retired?",
+        a: "Yes. Microsoft listed MS-900 for retirement on March 31, 2026. Use Microsoft Learn to verify any regional or historical exam information.",
+      },
+      {
+        q: "Is SC-900 a replacement for MS-900?",
+        a: "Not exactly. SC-900 is security, compliance, and identity fundamentals. It is a better current certification baseline, but it does not cover all Microsoft 365 productivity and licensing topics.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "microsoft-365-secure-score-what-to-fix-first",
+    title: "Microsoft 365 Secure Score: What to Fix First",
+    metaDescription:
+      "Microsoft 365 Secure Score prioritization guide for IT teams: identity, admin roles, device posture, Defender, and low-risk quick wins.",
+    h1: "Microsoft 365 Secure Score: what to fix first",
+    targetKeyword: "microsoft 365 secure score what to fix first",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-secure-score",
+    officialSourceLabel: "Microsoft Secure Score",
+    lede:
+      "Secure Score is useful only when it becomes a safe change plan. Chasing points blindly can break users, service accounts, legacy apps, and support workflows. The right first pass separates low-risk identity and admin fixes from changes that need testing.",
+    who: [
+      "Microsoft 365 admins who inherited a tenant with a low or noisy Secure Score.",
+      "Security teams preparing a quick-win backlog before an audit or management review.",
+      "IT leads who need a practical order of operations instead of a screenshot of a score.",
+    ],
+    firstMoves: [
+      "Start with admin hygiene: emergency access accounts, privileged role count, MFA coverage, and inactive admins.",
+      "Then handle low-risk baseline controls: audit logging, mailbox protections, safe links, safe attachments, and external sharing review.",
+      "Treat Conditional Access, legacy authentication blocking, DLP, and device compliance as tested changes with rollback plans.",
+    ],
+    teamTraining:
+      "A Secure Score workshop should not end with points. It should end with owners, risk levels, change windows, evidence links, and a before-and-after posture report.",
+    oneWeekPlan: [
+      "Day 1: export Secure Score actions and group them by identity, email, device, data, and admin controls.",
+      "Day 2: mark each action quick win, test first, policy decision, or not applicable.",
+      "Day 3: implement admin and audit hygiene.",
+      "Day 4: pilot Conditional Access and email protection changes with a small group.",
+      "Day 5: write the remediation backlog and evidence pack.",
+    ],
+    cta:
+      "Cloud Evolvers can run a Microsoft 365 Secure Score sprint that turns the score into safe changes and evidence your team can defend.",
+    links: [
+      { slug: "purview-compliance-manager-improvement-actions", label: "Purview improvement actions" },
+      { slug: "ms-102-administrator-study-plan-2026", label: "MS-102 administrator plan" },
+      { slug: "microsoft-365-admin-training-path-for-it-teams", label: "M365 team path" },
+    ],
+    faq: [
+      {
+        q: "Should we fix every Secure Score recommendation?",
+        a: "No. Some recommendations need business approval, licensing, testing, or compensating controls. Use Secure Score as a prioritization source, not an automatic change script.",
+      },
+      {
+        q: "What Secure Score actions usually come first?",
+        a: "Admin MFA, privileged role cleanup, audit settings, identity protection basics, and low-risk email protections usually come before disruptive access or device policy changes.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "purview-compliance-manager-improvement-actions",
+    title: "Purview Compliance Manager Improvement Actions: Practical Triage",
+    metaDescription:
+      "How to triage Microsoft Purview Compliance Manager improvement actions into quick wins, evidence work, policy decisions, and project backlog.",
+    h1: "Purview Compliance Manager improvement actions: practical triage",
+    targetKeyword: "purview compliance manager improvement actions",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/purview/compliance-manager-improvement-actions",
+    officialSourceLabel: "Working with improvement actions in Compliance Manager",
+    lede:
+      "Compliance Manager improvement actions are useful because they mix technical controls, operational work, and evidence handling in one place. They are also easy to misuse if every action becomes an urgent ticket. The first job is triage.",
+    who: [
+      "Compliance owners who need IT actions translated into accountable work.",
+      "Microsoft 365 admins asked to improve a Purview compliance score without breaking tenant operations.",
+      "Teams preparing for ISO, NIST, DORA, or customer security review evidence.",
+    ],
+    firstMoves: [
+      "Split actions by type: technical configuration, operational process, documentation, and evidence collection.",
+      "Assign owners and due dates only after deciding whether the action is automatically tested or manually evidenced.",
+      "Map high-value actions to the framework or customer question they support so the team knows why the work matters.",
+    ],
+    teamTraining:
+      "A Purview session works best when the group brings a real assessment. The trainer can walk through action categories, evidence storage, testing status, owners, and what not to do yet.",
+    oneWeekPlan: [
+      "Day 1: choose one assessment and export improvement actions.",
+      "Day 2: classify actions by technical, operational, documentation, and evidence work.",
+      "Day 3: implement safe technical actions and collect screenshots or audit evidence.",
+      "Day 4: write owners and review cadence for manual actions.",
+      "Day 5: produce a one-page compliance backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can run a Purview Compliance Manager triage workshop that converts improvement actions into a defensible remediation plan.",
+    links: [
+      { slug: "microsoft-365-secure-score-what-to-fix-first", label: "Secure Score fixes" },
+      { slug: "defender-for-cloud-cis-nist-dora-standards", label: "Defender for Cloud standards" },
+      { slug: "ms-102-administrator-study-plan-2026", label: "MS-102 administrator plan" },
+    ],
+    faq: [
+      {
+        q: "Are Purview improvement actions all technical?",
+        a: "No. Improvement actions can be technical or nontechnical, and some require documentation or operational process rather than a configuration change.",
+      },
+      {
+        q: "Can Compliance Manager automatically test every action?",
+        a: "No. Some actions are automatically tested through Microsoft signals, while others require manual evidence and status management.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "defender-for-cloud-cis-nist-dora-standards",
+    title: "Defender for Cloud Standards: CIS, NIST, DORA, and What to Use First",
+    metaDescription:
+      "Defender for Cloud regulatory compliance standards explained: CIS, NIST CSF, DORA, NIS2, ISO, SOC, and how to choose the first standard for Azure teams.",
+    h1: "Defender for Cloud standards: CIS, NIST, DORA, and what to use first",
+    targetKeyword: "defender for cloud cis nist dora",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards",
+    officialSourceLabel: "Regulatory compliance in Defender for Cloud",
+    lede:
+      "Defender for Cloud can assess Azure, AWS, and GCP environments against multiple compliance standards, including CIS, NIST CSF, NIS2, and DORA. The mistake is assigning every standard at once. The useful move is choosing one operating baseline and one regulatory lens.",
+    who: [
+      "Azure teams asked to report posture against CIS, NIST, DORA, or NIS2.",
+      "Security leads who need a cloud compliance backlog that maps to real resources.",
+      "Consultants building readiness scans for Microsoft cloud environments.",
+    ],
+    firstMoves: [
+      "Start with Microsoft Cloud Security Benchmark or CIS Azure Foundations as the technical baseline.",
+      "Add NIST CSF when leadership wants a risk framework and DORA or NIS2 when regulation or customer pressure requires it.",
+      "Separate automatically assessed controls from controls that need policy, process, or evidence outside Defender for Cloud.",
+    ],
+    teamTraining:
+      "A Defender for Cloud compliance workshop should teach the dashboard, but the output should be a prioritized remediation list grouped by resource owner, standard, severity, and evidence status.",
+    oneWeekPlan: [
+      "Day 1: confirm subscriptions, management groups, Defender plans, and assigned standards.",
+      "Day 2: review failed recommendations by resource owner and exposure.",
+      "Day 3: remediate quick technical findings and document exceptions.",
+      "Day 4: map remaining findings to CIS, NIST, DORA, or NIS2 controls.",
+      "Day 5: create an executive posture report and engineering backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can run an Azure and Microsoft 365 compliance readiness scan that turns Defender for Cloud standards into a practical remediation sprint.",
+    links: [
+      { slug: "purview-compliance-manager-improvement-actions", label: "Purview improvement actions" },
+      { slug: "microsoft-365-secure-score-what-to-fix-first", label: "Secure Score fixes" },
+      { slug: "az-500-security-engineer-retirement-path-2026", label: "AZ-500 retirement path" },
+    ],
+    faq: [
+      {
+        q: "Does Defender for Cloud include DORA?",
+        a: "Microsoft lists Digital Operational Resilience Act among the available regulatory compliance standards in Defender for Cloud.",
+      },
+      {
+        q: "Should we use CIS or NIST first?",
+        a: "Use CIS as a technical hardening baseline and NIST CSF as a broader risk and governance frame. Many teams use both, but not as the same report.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "az-104-lab-checklist-for-teams",
+    title: "AZ-104 Lab Checklist for Teams Preparing Azure Administrators",
+    metaDescription:
+      "AZ-104 lab checklist for teams: identity, governance, storage, compute, networking, monitoring, and hands-on readiness before the exam.",
+    h1: "AZ-104 lab checklist for teams preparing Azure administrators",
+    targetKeyword: "az-104 lab checklist",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104",
+    officialSourceLabel: "Study guide for Exam AZ-104",
+    lede:
+      "AZ-104 is not passed by reading alone. The official skills map covers identity, governance, storage, compute, networking, and monitoring. Teams should turn those domains into labs that look like production operations.",
+    who: [
+      "IT administrators moving from on-prem infrastructure into Azure operations.",
+      "Team leads planning an internal Azure administrator upskilling program.",
+      "Consultants who need a repeatable AZ-104 readiness checklist for customer teams.",
+    ],
+    firstMoves: [
+      "Create a shared lab subscription with budget alerts, tagging, and cleanup rules before anyone deploys resources.",
+      "Cover each AZ-104 domain with at least one build task and one troubleshooting task.",
+      "Require CLI or PowerShell practice for repeated operations, not only portal screenshots.",
+    ],
+    teamTraining:
+      "The strongest AZ-104 team program combines instructor-led explanation, guided labs, and a final scenario day where participants diagnose broken resources without step-by-step instructions.",
+    oneWeekPlan: [
+      "Day 1: Entra users, groups, RBAC, policies, locks, tags, and budgets.",
+      "Day 2: storage accounts, blobs, files, lifecycle, access keys, SAS, and private access.",
+      "Day 3: VMs, App Service, containers, backup, and recovery.",
+      "Day 4: VNets, subnets, NSGs, peering, load balancing, DNS, and Bastion.",
+      "Day 5: Azure Monitor, alerts, logs, workbook basics, and final troubleshooting scenario.",
+    ],
+    cta:
+      "Cloud Evolvers can run AZ-104 as a hands-on administrator course with real labs, cleanup rules, and operational scenarios rather than slide-only prep.",
+    links: [
+      { slug: "best-az-104-course-2026", label: "Best AZ-104 courses" },
+      { slug: "az-900-vs-az-104-which-first", label: "AZ-900 vs AZ-104" },
+      { slug: "az-700-vs-az-104-network-or-admin", label: "AZ-700 vs AZ-104" },
+    ],
+    faq: [
+      {
+        q: "How many labs should an AZ-104 team complete?",
+        a: "At minimum, one build task and one troubleshooting task per official exam domain. Strong programs run 10 to 15 labs.",
+      },
+      {
+        q: "Can AZ-104 be prepared without Azure access?",
+        a: "Not well. The exam expects operational familiarity with Azure resources, so a lab subscription is strongly recommended.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "microsoft-365-admin-training-path-for-it-teams",
+    title: "Microsoft 365 Admin Training Path for IT Teams",
+    metaDescription:
+      "Microsoft 365 admin training path for IT teams: fundamentals, endpoint, identity, tenant administration, security, and compliance.",
+    h1: "Microsoft 365 admin training path for IT teams",
+    targetKeyword: "microsoft 365 admin training path",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/credentials/certifications/exams/ms-102/",
+    officialSourceLabel: "Exam MS-102: Microsoft 365 Administrator",
+    lede:
+      "A Microsoft 365 admin path should not start with a random certification list. It should start with the jobs the team performs: user support, endpoint operations, identity control, tenant administration, security response, and compliance evidence.",
+    who: [
+      "IT managers building a Microsoft 365 upskilling plan for helpdesk, endpoint, identity, and tenant admins.",
+      "Teams moving from reactive ticket handling to structured tenant operations.",
+      "Consultancies that want a clean path from fundamentals into MS-102, SC-300, and MD-102.",
+    ],
+    firstMoves: [
+      "Start with fundamentals vocabulary: Microsoft 365 services, Entra, Defender, Purview, Intune, and licensing boundaries.",
+      "Split the role tracks: endpoint administrators go MD-102, identity administrators go SC-300, tenant administrators go MS-102.",
+      "Add Secure Score and Compliance Manager workshops once the team can understand the operational impact of each recommendation.",
+    ],
+    teamTraining:
+      "The best training path is role-based. A helpdesk engineer does not need the same depth as a tenant owner, but both need shared language around identity, device posture, data protection, and user impact.",
+    oneWeekPlan: [
+      "Day 1: map roles, current tickets, tenant risks, and target certifications.",
+      "Day 2: fundamentals workshop around Entra, Intune, Defender, Purview, and M365 admin center.",
+      "Day 3: choose role tracks: MD-102, SC-300, MS-102, or non-certification operations.",
+      "Day 4: run tenant readiness checks: Secure Score, Compliance Manager, and admin role inventory.",
+      "Day 5: build a 30-day training and remediation backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can turn Microsoft 365 administration into a team training path with certification options and a practical tenant hardening output.",
+    links: [
+      { slug: "ms-102-administrator-study-plan-2026", label: "MS-102 administrator plan" },
+      { slug: "md-102-intune-endpoint-administrator-study-plan-2026", label: "MD-102 endpoint plan" },
+      { slug: "sc-300-identity-administrator-study-plan-2026", label: "SC-300 identity plan" },
+    ],
+    faq: [
+      {
+        q: "What is the best Microsoft 365 admin certification path?",
+        a: "For most teams: SC-900 or a fundamentals workshop first, then MD-102 for endpoint admins, SC-300 for identity admins, and MS-102 for tenant administrators.",
+      },
+      {
+        q: "Should every admin take MS-102?",
+        a: "No. MS-102 is best for people responsible for tenant administration, security, and compliance. Endpoint-only staff may get more immediate value from MD-102.",
+      },
+    ],
+  }),
+];
+
 export const seoClusters: SeoCluster[] = [
   // -------------------------------------------------------------------------
   // 1. AZ-900 vs AZ-104
@@ -2478,4 +3021,5 @@ az network nic show-effective-route-table \\
       },
     ],
   },
+  ...microsoftTrainingSeoBatch,
 ];
