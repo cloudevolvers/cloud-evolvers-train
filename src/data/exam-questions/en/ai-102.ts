@@ -553,7 +553,7 @@ export const ai102: ExamSet = {
       id: 'ai102-37',
       topic: 'Document Intelligence',
       question:
-        'Your healthcare client wants structured extraction of patient demographics, insurer, and procedure codes from a US 1500 claim form. Which Document Intelligence model fits best?',
+        'Your healthcare client wants structured extraction of member ID, group number, payer ID, and plan name from a wallet-sized US health insurance card. Which Document Intelligence model fits best?',
       options: [
         { id: 'a', text: 'Layout model only.' },
         { id: 'b', text: 'Prebuilt US tax forms model.' },
@@ -562,7 +562,7 @@ export const ai102: ExamSet = {
       ],
       correctId: 'd',
       explanation:
-        'Document Intelligence ships a prebuilt model for US health insurance forms with the relevant fields. Tax forms and receipts target different document types.',
+        'The prebuilt health insurance card model (prebuilt-healthInsuranceCard.us) extracts fields like member ID, group number, payer ID, and plan name from wallet-sized US insurance cards. It does not cover the CMS-1500 claim submission form — that structure requires a custom model. Tax form and receipt prebuilts target different document types entirely.',
     },
     {
       id: 'ai102-38',

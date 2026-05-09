@@ -136,13 +136,13 @@ export const az500: ExamSet = {
         "Customers sign in to your retail app with Google or a local email and password. You need a separate identity directory for these external customers, kept apart from your employees. Which service do you use?",
       options: [
         { id: 'a', text: "Microsoft Entra ID B2B collaboration." },
-        { id: 'b', text: "Microsoft Entra External ID for customers (formerly Azure AD B2C)." },
+        { id: 'b', text: "Microsoft Entra External ID for customers (the next-generation CIAM solution)." },
         { id: 'c', text: "Active Directory Domain Services on a VM." },
         { id: 'd', text: "Microsoft Entra Domain Services." },
       ],
       correctId: 'b',
       explanation:
-        "Microsoft Entra External ID for customers is the consumer identity service with social sign-in and a separate directory from your employees. B2B is for guest collaboration with other businesses, not retail customers.",
+        "Microsoft Entra External ID for customers is the next-generation CIAM solution with social sign-in and a separate directory from your employees. It is not a rename of Azure AD B2C — Azure AD B2C is a distinct legacy product that remains available to existing customers. B2B collaboration is for partner/guest scenarios with other businesses, not retail consumer identity.",
     },
     {
       id: 'az500-10',
@@ -916,13 +916,13 @@ export const az500: ExamSet = {
         "An access package in Microsoft Entra ID Entitlement Management is created so that staff can request access to a SharePoint site that requires a manager's approval. Which licence does the user requesting the access need?",
       options: [
         { id: 'a', text: "Microsoft Entra ID Free." },
-        { id: 'b', text: "Microsoft Entra ID P1 or P2." },
+        { id: 'b', text: "Microsoft Entra ID Governance or Microsoft Entra Suite." },
         { id: 'c', text: "Microsoft Defender for Cloud." },
         { id: 'd', text: "Azure RBAC built-in role." },
       ],
       correctId: 'b',
       explanation:
-        "Entitlement Management is part of Microsoft Entra ID Governance, which requires P1 or P2 licensing for the users involved. Free does not include Entitlement Management.",
+        "Entitlement Management requires Microsoft Entra ID Governance (or Microsoft Entra Suite) for the users involved. Some limited capabilities work with a Microsoft Entra ID P2 subscription, but P1 alone does not cover Entitlement Management. The Free tier does not include Entitlement Management.",
     },
     {
       id: 'az500-62',
@@ -1453,16 +1453,16 @@ export const az500: ExamSet = {
       id: 'az500-97',
       topic: 'Identity and Access',
       question:
-        "An application uses Microsoft Entra ID single sign-on. You want to require that every sign-in by the user comes from a hybrid joined or Entra joined device. Which Conditional Access control fits?",
+        "An application uses Microsoft Entra ID single sign-on. You want to require that every sign-in by the user comes from a device that is either hybrid Entra joined or Entra joined and managed by Intune. Which Conditional Access grant configuration fits?",
       options: [
         { id: 'a', text: "Require a Microsoft Entra ID Premium P2 license." },
         { id: 'b', text: "Block access entirely." },
-        { id: 'c', text: "Grant control with require Hybrid Microsoft Entra joined device." },
+        { id: 'c', text: "Enable both 'Require Hybrid Microsoft Entra joined device' and 'Require device to be marked as compliant' grant controls, set to require one of the selected controls." },
         { id: 'd', text: "Disable MFA." },
       ],
       correctId: 'c',
       explanation:
-        "The Conditional Access grant control require Hybrid Microsoft Entra joined device or require Microsoft Entra joined device enforces device join state at sign-in. Licensing and MFA are separate controls.",
+        "These are two separate Conditional Access grant controls: 'Require Hybrid Microsoft Entra joined device' covers on-premises domain-joined devices synced to Entra ID, while 'Require device to be marked as compliant' covers Entra-joined devices managed by Intune. Combining them with 'require one of the selected controls' satisfies both join types. Licensing and MFA are separate controls.",
     },
     {
       id: 'az500-98',

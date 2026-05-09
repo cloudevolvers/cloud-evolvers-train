@@ -322,7 +322,7 @@ export const pl300: ExamSet = {
       ],
       correctId: 'b',
       explanation:
-        "ALLEXCEPT keeps the Category filter while removing other Product filters, so RANKX numbers products inside their category. RANK.EQ is an Excel-style function not supported here.",
+        "ALLEXCEPT keeps the Category filter while removing other Product filters, so RANKX numbers products inside their category. RANK.EQ is a valid DAX function, but it takes a column reference rather than a table expression, so the proposed pattern (RANK.EQ inside SUMX) cannot replicate RANKX's per-category ranking. TOPN returns rows, not rank numbers.",
     },
     {
       id: 'pl300-22',

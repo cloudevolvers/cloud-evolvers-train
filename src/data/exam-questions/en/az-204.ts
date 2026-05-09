@@ -13,16 +13,16 @@ export const az204: ExamSet = {
       id: 'az204-1',
       topic: 'Develop Azure compute solutions',
       question:
-        "Your Azure Functions app on the Consumption plan must respond within 200 ms after a long idle period, but users keep hitting cold starts on the first request of the morning. Which change addresses cold start without leaving a serverless billing model?",
+        "Your Azure Functions app on the Consumption plan must respond within 200 ms after a long idle period, but users keep hitting cold starts on the first request of the morning. Which change addresses cold start while keeping a true serverless (pay-per-execution) billing model?",
       options: [
-        { id: 'a', text: 'Switch to the Functions Premium plan and enable a minimum of pre-warmed instances.' },
+        { id: 'a', text: 'Switch to the Flex Consumption plan and configure always-ready instances.' },
         { id: 'b', text: 'Increase the functionTimeout setting in host.json.' },
         { id: 'c', text: 'Set WEBSITE_RUN_FROM_PACKAGE to 0 to keep files on the local disk.' },
         { id: 'd', text: 'Enable Always On in the Configuration blade of the Consumption plan.' },
       ],
       correctId: 'a',
       explanation:
-        "The Functions Premium plan supports pre-warmed instances that stay ready, which removes cold start while keeping per-execution scaling. Always On is not available on Consumption, and increasing functionTimeout does not change start latency.",
+        "The Flex Consumption plan supports always-ready instances that eliminate cold starts while retaining serverless per-execution billing. The Premium plan also removes cold start but bills a minimum per-core-second charge regardless of executions, so it is not a true serverless model. Always On is unavailable on Consumption, and increasing functionTimeout does not affect start latency.",
     },
     {
       id: 'az204-2',

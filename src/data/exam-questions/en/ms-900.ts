@@ -435,14 +435,14 @@ export const ms900: ExamSet = {
       question:
         "Which prerequisite must a tenant meet before assigning Microsoft Copilot for Microsoft 365 licences to its users?",
       options: [
-        { id: 'a', text: 'Users must have a qualifying Microsoft 365 base licence such as Business Standard, Business Premium, E3, or E5.' },
+        { id: 'a', text: 'Users must have a qualifying Microsoft 365 base licence (includes Business Basic, Standard, Premium, E3, E5, F1, F3, A3, A5, Office 365 E1/E3/E5, and Teams Enterprise, among others).' },
         { id: 'b', text: 'Users must already use Microsoft Defender for Endpoint.' },
         { id: 'c', text: 'The tenant must be on the Government Community Cloud High plan.' },
         { id: 'd', text: 'Each user needs Power BI Pro before Copilot can be enabled.' },
       ],
       correctId: 'a',
       explanation:
-        "Copilot for Microsoft 365 requires a qualifying base licence such as Business Standard or Premium, or Enterprise E3 or E5. Defender and Power BI Pro are not gating requirements.",
+        "Copilot for Microsoft 365 requires a qualifying base licence. The list includes Microsoft 365 Business Basic, Business Standard, Business Premium, E3, E5, F1, F3, A3, A5; Office 365 E1, E3, E5, F3, A1, A3, A5; and Teams Enterprise — not just Business Standard/Premium and E3/E5. Defender for Endpoint and Power BI Pro are not gating requirements.",
     },
     {
       id: 'ms900-30',
@@ -1282,7 +1282,7 @@ export const ms900: ExamSet = {
       ],
       correctId: 'a',
       explanation:
-        "ID Protection scores user and sign-in risk and feeds risk-based Conditional Access. Application Proxy publishes on-premises web apps and is unrelated.",
+        "ID Protection scores user and sign-in risk and feeds risk-based Conditional Access policies that can block access or require MFA. This capability requires Microsoft Entra ID P2 (included in Microsoft 365 E5 or available as an add-on) — standard Conditional Access with Entra ID P1 does not include automatic risk detection. Application Proxy publishes on-premises web apps and is unrelated.",
     },
     {
       id: 'ms900-86',

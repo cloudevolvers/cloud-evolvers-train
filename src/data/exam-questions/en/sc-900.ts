@@ -373,7 +373,7 @@ export const sc900: ExamSet = {
       id: 'sc900-25',
       topic: 'Identity Protection',
       question:
-        "Which Microsoft Entra ID capability detects risky sign-ins (such as impossible travel) and risky users and feeds those risk levels into Conditional Access?",
+        "Which Microsoft Entra ID capability detects risky sign-ins (such as atypical travel or sign-ins from anonymous IP addresses) and risky users and feeds those risk levels into Conditional Access?",
       options: [
         { id: 'a', text: "Microsoft Purview Insider Risk Management." },
         { id: 'b', text: "Microsoft Defender for Office 365." },
@@ -382,7 +382,7 @@ export const sc900: ExamSet = {
       ],
       correctId: 'c',
       explanation:
-        "Microsoft Entra ID Protection scores sign-in and user risk and exposes those risk levels as signals to Conditional Access. Insider Risk Management focuses on internal data risk, not authentication anomalies.",
+        "Microsoft Entra ID Protection scores sign-in and user risk using native detections such as atypical travel and anonymous IP addresses, and exposes those risk levels as signals to Conditional Access. The 'impossible travel' detection is a separate premium signal sourced from Microsoft Defender for Cloud Apps, not from Entra ID Protection alone. Insider Risk Management focuses on internal data risk, not authentication anomalies.",
     },
     {
       id: 'sc900-26',
@@ -442,7 +442,7 @@ export const sc900: ExamSet = {
       ],
       correctId: 'b',
       explanation:
-        "Microsoft Entra External ID for customers (the successor to Azure AD B2C) is built for customer-facing identity with branded sign-in and social identity providers. B2B is for partner collaboration.",
+        "Microsoft Entra External ID for customers is the next-generation CIAM platform from Microsoft, built for customer-facing identity with branded sign-in and social identity providers. It is not a rename of Azure AD B2C — Azure AD B2C is a distinct predecessor product (no longer available to new customers as of May 2025) that remains supported until at least May 2030. B2B collaboration is for partner and guest scenarios, not consumer identity.",
     },
     {
       id: 'sc900-30',
@@ -682,7 +682,7 @@ export const sc900: ExamSet = {
       ],
       correctId: 'c',
       explanation:
-        "Microsoft Defender XDR (formerly Microsoft 365 Defender) correlates signals across email, endpoints, identities, and apps into unified incidents. Sentinel is a broader SIEM that can ingest those incidents.",
+        "Microsoft Defender XDR (formerly Microsoft 365 Defender) correlates signals across email, endpoints, identities, and apps into unified incidents in the Microsoft Defender portal (security.microsoft.com). Sentinel is a broader SIEM that can ingest those incidents.",
     },
     {
       id: 'sc900-46',
@@ -1342,7 +1342,7 @@ export const sc900: ExamSet = {
       ],
       correctId: 'b',
       explanation:
-        "Compliance Manager weights actions by how they reduce risk: preventative, detective, or corrective, and the breadth of impact. Microsoft-owned actions count separately and do not increase customer score.",
+        "Compliance Manager weights actions by how they reduce risk: preventative mandatory actions score highest (27 points), detective and corrective mandatory actions score lower (3 points each), and breadth of impact matters too. Microsoft-owned actions are implemented by Microsoft and their points automatically count toward the overall compliance score — customers cannot change the implementation status, but those points are included in the total. Customers improve their score by completing the customer-managed improvement actions.",
     },
     {
       id: 'sc900-90',
