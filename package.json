@@ -20,7 +20,7 @@
         "kill:ports": "./scripts/kill-dev-servers.sh",
         "seo:generate": "bun scripts/generate-seo-pages.ts",
         "sitemap:generate": "bun scripts/generate-sitemap.ts",
-        "build": "bun run seo:generate && bun run sitemap:generate && tsc -b --noCheck && vite build --mode production",
+        "build": "bun run seo:generate && bun run sitemap:generate && tsc -b --noCheck && vite build --mode production && bun scripts/generate-route-metadata.ts",
         "build:staging": "tsc -b --noCheck && vite build --mode staging",
         "build:dev": "tsc -b --noCheck && vite build --mode development",
         "lint": "eslint .",

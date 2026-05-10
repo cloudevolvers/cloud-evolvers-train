@@ -10,6 +10,7 @@ const SITE_URL = "https://cloudevolvers.com";
 const SITE_NAME = "Cloud Evolvers";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/cloudevolvers-social-card.png`;
 const TRAINING_URL = `${SITE_URL}/training`;
+const COMPLIANCE_SCANNER_URL = `${SITE_URL}/tools/microsoft-cloud-compliance-readiness`;
 
 // -----------------------------------------------------------------------
 // Schema generators
@@ -139,7 +140,7 @@ function renderFaq(faq: SeoCluster["faq"]): string {
   return `
     <section class="faq-section" aria-label="Frequently asked questions">
       <h2>Frequently asked questions</h2>
-      ${items}
+${items}
     </section>`;
 }
 
@@ -158,6 +159,7 @@ function escapeHtml(s: string): string {
 
 export function renderPage(c: SeoCluster): string {
   const canonicalUrl = `${SITE_URL}/seo/${c.slug}/`;
+  const cta = ctaFor(c);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -320,12 +322,12 @@ export function renderPage(c: SeoCluster): string {
       </div>
 
       <div class="cta-band">
-        <p>Want MCT-led preparation? Browse the course catalog.</p>
-        <a href="${TRAINING_URL}" class="cta-button">Browse the course catalog</a>
+        <p>${escapeHtml(cta.text)}</p>
+        <a href="${cta.href}" class="cta-button">${escapeHtml(cta.button)}</a>
       </div>
 
-      ${renderFaq(c.faq)}
-      ${renderNav(c.internalLinks)}
+${renderFaq(c.faq)}
+${renderNav(c.internalLinks)}
     </article>
   </main>
 
@@ -339,4 +341,24 @@ export function renderPage(c: SeoCluster): string {
   </footer>
 </body>
 </html>`;
+}
+
+function ctaFor(c: SeoCluster) {
+  const complianceIntent = /(dora|nis2|nist|cis|secure score|defender|purview|compliance|security)/i.test(
+    `${c.slug} ${c.title} ${c.targetKeyword}`,
+  );
+
+  if (complianceIntent) {
+    return {
+      text: "Need a first Microsoft cloud compliance backlog? Run the free readiness scanner.",
+      href: COMPLIANCE_SCANNER_URL,
+      button: "Run the readiness scanner",
+    };
+  }
+
+  return {
+    text: "Want MCT-led preparation? Browse the course catalog.",
+    href: TRAINING_URL,
+    button: "Browse the course catalog",
+  };
 }

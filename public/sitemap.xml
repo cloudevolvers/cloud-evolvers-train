@@ -140,6 +140,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://cloudevolvers.com/security-questionnaire/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/status/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://cloudevolvers.com/brand/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>yearly</changefreq>
@@ -1249,6 +1261,36 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/microsoft-365-admin-training-path-for-it-teams/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/seo/dora-microsoft-cloud-evidence-checklist/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/seo/cis-microsoft-365-azure-quick-wins/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/seo/nist-csf-2-azure-microsoft-365-mapping/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/seo/sentinel-microsoft-365-dora-log-sources/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/seo/entra-access-review-audit-evidence/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

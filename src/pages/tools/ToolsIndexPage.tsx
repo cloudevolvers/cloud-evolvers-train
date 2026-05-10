@@ -59,7 +59,7 @@ export function ToolsIndexPage() {
     <div className="bg-[color:var(--ed-bg)] min-h-screen text-[color:var(--ed-ink)]">
       <SEO
         title="Free Azure Tools and Calculators"
-        description="Free tools for Azure professionals: AZ-104 readiness quiz, exam cost calculator, cert path planner, and RBAC role chooser. Built by a working MCT."
+        description="Free tools for Azure and Microsoft 365 professionals: AZ-104 quiz, exam cost calculator, cert path planner, RBAC role chooser, and compliance readiness scanner. Built by a working MCT."
         canonical="/tools"
       />
 

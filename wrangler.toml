@@ -18,7 +18,7 @@ database_id = "c07b171f-987f-4d91-9126-64663b107611"
 # Preview/Test environment (for PRs and branches)
 # URL: test.cloudevolvers.com (via branch deployments)
 [env.preview]
-vars = { VITE_ENVIRONMENT = "preview", VITE_SITE_URL = "https://test.cloudevolvers.com", EMAIL_TENANT_ID = "34dd9821-1508-4858-974c-e5fd1493a58f", EMAIL_CLIENT_ID = "61cfceb9-9bf4-456c-8170-2a4a521abf8d", EMAIL_SENDER_ADDRESS = "hello@cloudevolvers.com" }
+vars = { NODE_ENV = "production", VITE_SHOW_CONSTRUCTION_BANNER = "false", VITE_ENVIRONMENT = "preview", VITE_SITE_URL = "https://test.cloudevolvers.com", EMAIL_TENANT_ID = "34dd9821-1508-4858-974c-e5fd1493a58f", EMAIL_CLIENT_ID = "61cfceb9-9bf4-456c-8170-2a4a521abf8d", EMAIL_SENDER_ADDRESS = "hello@cloudevolvers.com" }
 
 [[env.preview.d1_databases]]
 binding = "PRICING_DB"
@@ -28,7 +28,7 @@ database_id = "c07b171f-987f-4d91-9126-64663b107611"
 # Production environment (master branch)
 # URL: cloudevolvers.com / www.cloudevolvers.com
 [env.production]
-vars = { VITE_ENVIRONMENT = "production", VITE_SITE_URL = "https://cloudevolvers.com", EMAIL_TENANT_ID = "34dd9821-1508-4858-974c-e5fd1493a58f", EMAIL_CLIENT_ID = "61cfceb9-9bf4-456c-8170-2a4a521abf8d", EMAIL_SENDER_ADDRESS = "hello@cloudevolvers.com" }
+vars = { NODE_ENV = "production", VITE_SHOW_CONSTRUCTION_BANNER = "false", VITE_ENVIRONMENT = "production", VITE_SITE_URL = "https://cloudevolvers.com", EMAIL_TENANT_ID = "34dd9821-1508-4858-974c-e5fd1493a58f", EMAIL_CLIENT_ID = "61cfceb9-9bf4-456c-8170-2a4a521abf8d", EMAIL_SENDER_ADDRESS = "hello@cloudevolvers.com" }
 
 [[env.production.d1_databases]]
 binding = "PRICING_DB"

@@ -1,5 +1,6 @@
 import { SEO, PAGE_SEO } from '@/components/SEO';
 import { HeroEd } from '@/components/marketing/editorial/HeroEd';
+import { HomeQuickIntakeEd } from '@/components/marketing/editorial/HomeQuickIntakeEd';
 import { TrustStripEd } from '@/components/marketing/editorial/TrustStripEd';
 import { ProgramsPreviewEd } from '@/components/marketing/editorial/ProgramsPreviewEd';
 import { EnterprisePanelEd } from '@/components/marketing/editorial/EnterprisePanelEd';
@@ -12,6 +13,7 @@ export default function HomePage() {
       <SEO {...PAGE_SEO.home} />
       <main className="flex flex-col">
         <HeroEd />
+        <HomeQuickIntakeEd />
         <TrustStripEd />
         <ProgramsPreviewEd />
         <EnterprisePanelEd />

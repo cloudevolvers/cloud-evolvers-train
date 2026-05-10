@@ -581,6 +581,249 @@ const microsoftTrainingSeoBatch: SeoCluster[] = [
   }),
 ];
 
+const microsoftComplianceSeoBatch: SeoCluster[] = [
+  trainingSeoPage({
+    slug: "dora-microsoft-cloud-evidence-checklist",
+    title: "DORA Microsoft Cloud Evidence Checklist for Azure and Microsoft 365",
+    metaDescription:
+      "DORA evidence checklist for Microsoft cloud teams: identity, logging, recovery testing, third-party inventory, incident process, and practical first sprint.",
+    h1: "DORA evidence checklist for Microsoft cloud teams",
+    targetKeyword: "DORA Microsoft cloud evidence checklist",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/compliance/",
+    officialSourceLabel: "Microsoft Compliance",
+    lede:
+      "DORA readiness is not a dashboard screenshot. For Microsoft cloud teams, the useful first pass is proving identity controls, operational logging, recovery testing, incident roles, and critical ICT supplier ownership.",
+    who: [
+      "Financial-services IT teams preparing for DORA conversations with risk, audit, or customers.",
+      "Microsoft 365 and Azure administrators asked to turn tenant settings into evidence.",
+      "Consultants scoping a first operational resilience sprint without overclaiming compliance.",
+    ],
+    firstMoves: [
+      "Collect identity evidence first: admin MFA coverage, break-glass accounts, PIM usage, privileged role reviews, and risky sign-in handling.",
+      "Export logging coverage from Entra, Defender, Microsoft 365 audit, Azure Activity, and Sentinel or Log Analytics.",
+      "Document restore tests, incident roles, escalation timelines, supplier ownership, and known exceptions before changing more controls.",
+    ],
+    teamTraining:
+      "A DORA-focused Microsoft cloud workshop should produce an evidence backlog, not a compliance promise. The best output is a scoped list of owners, proof sources, gaps, and next remediation steps.",
+    oneWeekPlan: [
+      "Day 1: inventory critical Microsoft cloud services, admins, and suppliers.",
+      "Day 2: gather identity and privileged access evidence.",
+      "Day 3: verify audit logs, Sentinel connectors, and retention assumptions.",
+      "Day 4: review backup and restore evidence for critical workloads.",
+      "Day 5: package the findings into a DORA evidence backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can run a DORA-oriented Microsoft cloud readiness scan and turn it into a remediation sprint for Azure and Microsoft 365 teams.",
+    links: [
+      { slug: "defender-for-cloud-cis-nist-dora-standards", label: "Defender standards" },
+      { slug: "sentinel-microsoft-365-dora-log-sources", label: "Sentinel log sources" },
+      { slug: "entra-access-review-audit-evidence", label: "Access review evidence" },
+    ],
+    faq: [
+      {
+        q: "Does this checklist certify DORA compliance?",
+        a: "No. It is a technical readiness and evidence checklist for Microsoft cloud environments. Legal and regulatory interpretation still needs the right compliance owner.",
+      },
+      {
+        q: "What Microsoft evidence is usually useful first?",
+        a: "Identity controls, audit logs, recovery tests, incident process evidence, and supplier inventory are usually more useful than a generic compliance score.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "cis-microsoft-365-azure-quick-wins",
+    title: "CIS Quick Wins for Microsoft 365 and Azure Teams",
+    metaDescription:
+      "CIS quick wins for Microsoft cloud teams: admin MFA, least privilege, logging, Defender for Cloud, Secure Score, and safe remediation order.",
+    h1: "CIS quick wins for Microsoft 365 and Azure teams",
+    targetKeyword: "CIS Microsoft 365 Azure quick wins",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards",
+    officialSourceLabel: "Regulatory compliance in Defender for Cloud",
+    lede:
+      "CIS is most useful when it becomes a safe hardening baseline. For Microsoft cloud teams, the first wins are usually admin MFA, least-privilege cleanup, audit logging, Defender for Cloud standards, and a short exception list.",
+    who: [
+      "Azure administrators who need a hardening baseline before customer or audit reviews.",
+      "Microsoft 365 admins who want to prioritize Secure Score actions without breaking users.",
+      "Security teams trying to group CIS findings into changes that can ship safely.",
+    ],
+    firstMoves: [
+      "Start with admin accounts, role assignments, emergency access accounts, and stale privileged access.",
+      "Turn on or verify the core audit trails before changing disruptive access policies.",
+      "Use Defender for Cloud regulatory compliance standards for Azure findings, then separate quick fixes from policy decisions.",
+    ],
+    teamTraining:
+      "A CIS hardening session should teach administrators how to reason about controls, exceptions, and rollback, not just where the dashboard lives.",
+    oneWeekPlan: [
+      "Day 1: inventory privileged roles and admin authentication.",
+      "Day 2: verify audit logs, Defender plans, and Secure Score baseline.",
+      "Day 3: remediate low-risk identity and logging controls.",
+      "Day 4: review network, storage, and exposure recommendations.",
+      "Day 5: document exceptions and the second sprint backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can run a CIS-oriented Microsoft cloud hardening sprint that produces a safe change plan and evidence pack.",
+    links: [
+      { slug: "microsoft-365-secure-score-what-to-fix-first", label: "Secure Score fixes" },
+      { slug: "defender-for-cloud-cis-nist-dora-standards", label: "Defender standards" },
+      { slug: "sc-300-identity-administrator-study-plan-2026", label: "SC-300 identity plan" },
+    ],
+    faq: [
+      {
+        q: "Should CIS controls all be fixed immediately?",
+        a: "No. Some controls are quick wins, while others need user impact testing, licensing, or compensating controls.",
+      },
+      {
+        q: "Where do Azure CIS findings show up?",
+        a: "Defender for Cloud regulatory compliance can show assigned CIS standards and related recommendations for Azure scopes.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "nist-csf-2-azure-microsoft-365-mapping",
+    title: "NIST CSF 2.0 Mapping for Azure and Microsoft 365",
+    metaDescription:
+      "NIST CSF 2.0 mapping for Azure and Microsoft 365 teams: Govern, Identify, Protect, Detect, Respond, Recover translated into practical controls.",
+    h1: "NIST CSF 2.0 mapping for Azure and Microsoft 365",
+    targetKeyword: "NIST CSF 2.0 Azure Microsoft 365 mapping",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/azure/defender-for-cloud/concept-regulatory-compliance-standards",
+    officialSourceLabel: "Regulatory compliance in Defender for Cloud",
+    lede:
+      "NIST CSF 2.0 is a useful executive and risk language, but Microsoft cloud teams still need to translate it into tenant controls, evidence, and operational habits.",
+    who: [
+      "IT leads asked to report Microsoft cloud posture in NIST language.",
+      "Azure and Microsoft 365 admins who need a practical control map instead of abstract framework text.",
+      "Security teams aligning Defender, Entra, Sentinel, Purview, and backup evidence.",
+    ],
+    firstMoves: [
+      "Govern: name owners, scope critical services, and document risk decisions.",
+      "Protect and Detect: map Entra, Defender, Purview, Azure Policy, and Sentinel controls to actual evidence sources.",
+      "Respond and Recover: verify incident roles, alert workflows, backup restore tests, and post-incident review records.",
+    ],
+    teamTraining:
+      "A NIST mapping workshop should end with a Microsoft cloud control matrix that links owners, evidence sources, gaps, and the next sprint.",
+    oneWeekPlan: [
+      "Day 1: scope systems and owners under Govern and Identify.",
+      "Day 2: map identity, device, data, and cloud posture controls.",
+      "Day 3: validate logs, alerts, and detection coverage.",
+      "Day 4: review incident and recovery evidence.",
+      "Day 5: publish the NIST-aligned backlog.",
+    ],
+    cta:
+      "Cloud Evolvers can map Azure and Microsoft 365 controls to NIST CSF 2.0 and turn the gaps into a concrete remediation backlog.",
+    links: [
+      { slug: "defender-for-cloud-cis-nist-dora-standards", label: "Defender standards" },
+      { slug: "purview-compliance-manager-improvement-actions", label: "Purview actions" },
+      { slug: "sentinel-microsoft-365-dora-log-sources", label: "Sentinel log sources" },
+    ],
+    faq: [
+      {
+        q: "Can Defender for Cloud help with NIST?",
+        a: "Yes. Microsoft lists NIST CSF v2.0 among available Defender for Cloud regulatory compliance standards for cloud scopes.",
+      },
+      {
+        q: "Is NIST the same as CIS?",
+        a: "No. CIS is often used as a technical hardening baseline, while NIST CSF is broader risk and governance language.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "sentinel-microsoft-365-dora-log-sources",
+    title: "Microsoft Sentinel Log Sources for DORA and NIS2 Evidence",
+    metaDescription:
+      "Microsoft Sentinel log source checklist for DORA and NIS2 readiness: Entra ID, Microsoft 365 audit, Defender XDR, Azure Activity, and retention questions.",
+    h1: "Microsoft Sentinel log sources for DORA and NIS2 evidence",
+    targetKeyword: "Microsoft Sentinel DORA log sources",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/azure/sentinel/connect-microsoft-365-defender",
+    officialSourceLabel: "Stream data from Microsoft Defender XDR to Microsoft Sentinel",
+    lede:
+      "Operational resilience evidence depends on logs you can actually search. For Microsoft cloud teams, the first Sentinel question is whether identity, Microsoft 365 audit, Defender, and Azure activity signals are landing where responders can use them.",
+    who: [
+      "Security teams preparing incident evidence for DORA, NIS2, or customer reviews.",
+      "Microsoft 365 admins who need to prove audit coverage beyond screenshots.",
+      "Azure teams deciding which connectors and retention settings matter first.",
+    ],
+    firstMoves: [
+      "Verify Entra sign-in and audit logs, Microsoft 365 activity logs, Defender XDR incidents, Azure Activity, and key workload logs.",
+      "Document retention, workspace ownership, alert rules, and who can query each evidence source.",
+      "Test one incident walkthrough from alert to investigation notes and post-incident evidence.",
+    ],
+    teamTraining:
+      "A Sentinel readiness workshop should connect data connectors to incident response duties, not only enable every connector in the gallery.",
+    oneWeekPlan: [
+      "Day 1: inventory required evidence sources.",
+      "Day 2: connect or validate Entra and Microsoft 365 audit signals.",
+      "Day 3: stream Defender XDR incidents and alerts where appropriate.",
+      "Day 4: review retention, access, and alert routing.",
+      "Day 5: run a mini incident exercise and capture evidence gaps.",
+    ],
+    cta:
+      "Cloud Evolvers can review Microsoft Sentinel evidence coverage and produce the first remediation plan for DORA, NIS2, NIST, or CIS discussions.",
+    links: [
+      { slug: "dora-microsoft-cloud-evidence-checklist", label: "DORA evidence checklist" },
+      { slug: "nist-csf-2-azure-microsoft-365-mapping", label: "NIST mapping" },
+      { slug: "microsoft-365-secure-score-what-to-fix-first", label: "Secure Score fixes" },
+    ],
+    faq: [
+      {
+        q: "Do we need every Sentinel connector for DORA?",
+        a: "No. Start with the evidence sources that support identity, incident, cloud activity, and critical workload investigations.",
+      },
+      {
+        q: "Is Microsoft 365 audit data useful in Sentinel?",
+        a: "Yes. Microsoft documents Microsoft 365 activity logs as Sentinel connector data for user and admin activity investigations.",
+      },
+    ],
+  }),
+  trainingSeoPage({
+    slug: "entra-access-review-audit-evidence",
+    title: "Entra Access Review Audit Evidence for Microsoft Cloud Teams",
+    metaDescription:
+      "How to use Microsoft Entra access reviews, audit logs, privileged roles, and owner evidence in DORA, NIST, CIS, and customer security reviews.",
+    h1: "Entra access review audit evidence for Microsoft cloud teams",
+    targetKeyword: "Entra access review audit evidence",
+    officialSourceUrl: "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-audit-logs",
+    officialSourceLabel: "Audit logs in Microsoft Entra ID",
+    lede:
+      "Access review evidence is one of the easiest places to look mature or unprepared. The useful proof is not only that a review exists, but that privileged access has owners, decisions, removals, and a repeatable cadence.",
+    who: [
+      "Identity administrators preparing for DORA, NIST, CIS, or customer access-control questions.",
+      "Microsoft 365 admins cleaning up stale privileged roles, guest access, and app owners.",
+      "Security teams that need defensible evidence for who approved access and when.",
+    ],
+    firstMoves: [
+      "Start with privileged roles, emergency access accounts, inactive admins, and guest access to sensitive groups.",
+      "Keep evidence of review scope, reviewer, decisions, removals, exceptions, and next review date.",
+      "Pair access reviews with Entra audit logs so changes can be traced back to real operations.",
+    ],
+    teamTraining:
+      "An Entra access review workshop should include role cleanup, review design, exception handling, and audit evidence collection.",
+    oneWeekPlan: [
+      "Day 1: inventory privileged roles and high-risk groups.",
+      "Day 2: define access review scopes and reviewers.",
+      "Day 3: run the first review and remove stale access.",
+      "Day 4: export evidence and verify audit logs.",
+      "Day 5: document cadence and exceptions.",
+    ],
+    cta:
+      "Cloud Evolvers can run an Entra access review sprint that produces practical identity evidence for compliance and security reviews.",
+    links: [
+      { slug: "sc-300-identity-administrator-study-plan-2026", label: "SC-300 identity plan" },
+      { slug: "dora-microsoft-cloud-evidence-checklist", label: "DORA evidence checklist" },
+      { slug: "cis-microsoft-365-azure-quick-wins", label: "CIS quick wins" },
+    ],
+    faq: [
+      {
+        q: "Are Entra audit logs useful for compliance evidence?",
+        a: "Yes. Microsoft describes Entra audit logs as system activity records often needed for compliance.",
+      },
+      {
+        q: "Which access reviews should come first?",
+        a: "Start with privileged roles, emergency access accounts, sensitive groups, and guest access before broad low-risk reviews.",
+      },
+    ],
+  }),
+];
+
 export const seoClusters: SeoCluster[] = [
   // -------------------------------------------------------------------------
   // 1. AZ-900 vs AZ-104
@@ -3022,4 +3265,5 @@ az network nic show-effective-route-table \\
     ],
   },
   ...microsoftTrainingSeoBatch,
+  ...microsoftComplianceSeoBatch,
 ];

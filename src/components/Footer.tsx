@@ -21,14 +21,16 @@ const Footer: React.FC = () => {
     setIsSubmitting(true);
     setStatus('idle');
     try {
-      const response = await fetch('/api/submit-contact', {
+      const response = await fetch('/api/submit-consultation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          training: 'General Cloud Evolvers inquiry',
           message: form.message,
-          source: 'footer-contact-form',
+          preferredDates: [],
+          source_form: 'footer_contact_form',
           language,
         }),
       });
@@ -107,6 +109,8 @@ const Footer: React.FC = () => {
             <ul className="mt-4 space-y-2 text-[14px] text-[color:var(--ed-ink-2)]">
               <li><a href="/help/" className="hover:text-[color:var(--ed-ink)]">Help</a></li>
               <li><a href="/trust/" className="hover:text-[color:var(--ed-ink)]">Trust center</a></li>
+              <li><a href="/security-questionnaire/" className="hover:text-[color:var(--ed-ink)]">Security questionnaire</a></li>
+              <li><a href="/status/" className="hover:text-[color:var(--ed-ink)]">Status</a></li>
               <li><a href="/brand/" className="hover:text-[color:var(--ed-ink)]">Brand</a></li>
               <li><Link to="/privacy-policy" className="hover:text-[color:var(--ed-ink)]">{t.footer?.privacyPolicy || 'Privacy Policy'}</Link></li>
               <li><Link to="/terms-of-service" className="hover:text-[color:var(--ed-ink)]">{t.footer?.termsOfService || 'Terms of Service'}</Link></li>

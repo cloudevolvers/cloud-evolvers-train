@@ -9,12 +9,17 @@
 const runtimeBuildDate = import.meta.env.VITE_BUILD_DATE;
 const runtimeCommitSha = import.meta.env.VITE_COMMIT_SHA;
 const runtimeEnvironment = import.meta.env.VITE_ENVIRONMENT;
+const modeEnvironment = import.meta.env.MODE || 'development';
+const environment =
+  runtimeEnvironment && runtimeEnvironment !== 'development'
+    ? runtimeEnvironment
+    : modeEnvironment;
 
 export const VERSION_INFO = {
   version: '1.0.6',
   buildDate: runtimeBuildDate || new Date().toISOString(),
   commitSha: runtimeCommitSha || 'dev-local',
-  environment: runtimeEnvironment || import.meta.env.MODE || 'development'
+  environment
 } as const;
 
 export const getBuildInfo = () => {
@@ -47,6 +52,10 @@ export const getBuildInfo = () => {
 
 export const getVersionString = () => {
   const info = getBuildInfo();
+  if (info.environment === 'production') {
+    return `v${info.version}`;
+  }
+
   return `${info.fullVersion} - ${info.environment}`;
 };
 

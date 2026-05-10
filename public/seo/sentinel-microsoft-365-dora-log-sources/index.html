@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZ-500 Retirement Path 2026: What Azure Security Teams Should Do</title>
-  <meta name="description" content="AZ-500 retires in 2026. Here is how Azure security teams should plan certification, skill coverage, and training before the exam disappears." />
-  <link rel="canonical" href="https://cloudevolvers.com/seo/az-500-security-engineer-retirement-path-2026/" />
+  <title>Microsoft Sentinel Log Sources for DORA and NIS2 Evidence</title>
+  <meta name="description" content="Microsoft Sentinel log source checklist for DORA and NIS2 readiness: Entra ID, Microsoft 365 audit, Defender XDR, Azure Activity, and retention questions." />
+  <link rel="canonical" href="https://cloudevolvers.com/seo/sentinel-microsoft-365-dora-log-sources/" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="AZ-500 Retirement Path 2026: What Azure Security Teams Should Do" />
-  <meta property="og:description" content="AZ-500 retires in 2026. Here is how Azure security teams should plan certification, skill coverage, and training before the exam disappears." />
-  <meta property="og:url" content="https://cloudevolvers.com/seo/az-500-security-engineer-retirement-path-2026/" />
+  <meta property="og:title" content="Microsoft Sentinel Log Sources for DORA and NIS2 Evidence" />
+  <meta property="og:description" content="Microsoft Sentinel log source checklist for DORA and NIS2 readiness: Entra ID, Microsoft 365 audit, Defender XDR, Azure Activity, and retention questions." />
+  <meta property="og:url" content="https://cloudevolvers.com/seo/sentinel-microsoft-365-dora-log-sources/" />
   <meta property="og:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,15 +20,15 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AZ-500 Retirement Path 2026: What Azure Security Teams Should Do" />
-  <meta name="twitter:description" content="AZ-500 retires in 2026. Here is how Azure security teams should plan certification, skill coverage, and training before the exam disappears." />
+  <meta name="twitter:title" content="Microsoft Sentinel Log Sources for DORA and NIS2 Evidence" />
+  <meta name="twitter:description" content="Microsoft Sentinel log source checklist for DORA and NIS2 readiness: Entra ID, Microsoft 365 audit, Defender XDR, Azure Activity, and retention questions." />
   <meta name="twitter:image" content="https://cloudevolvers.com/cloudevolvers-social-card.png" />
 
   <!-- Primary schema -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AZ-500 retirement path for Azure security teams","description":"AZ-500 retires in 2026. Here is how Azure security teams should plan certification, skill coverage, and training before the exam disappears.","url":"https://cloudevolvers.com/seo/az-500-security-engineer-retirement-path-2026/","datePublished":"2026-05-10","dateModified":"2026-05-10","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/az-500-security-engineer-retirement-path-2026/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Microsoft Sentinel log sources for DORA and NIS2 evidence","description":"Microsoft Sentinel log source checklist for DORA and NIS2 readiness: Entra ID, Microsoft 365 audit, Defender XDR, Azure Activity, and retention questions.","url":"https://cloudevolvers.com/seo/sentinel-microsoft-365-dora-log-sources/","datePublished":"2026-05-10","dateModified":"2026-05-10","author":{"@type":"Person","name":"Yaïr Knijn","jobTitle":"Microsoft Certified Trainer","url":"https://cloudevolvers.com/about"},"publisher":{"@type":"Organization","name":"Cloud Evolvers","url":"https://cloudevolvers.com","logo":{"@type":"ImageObject","url":"https://cloudevolvers.com/cloudevolvers-logo-mountain.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://cloudevolvers.com/seo/sentinel-microsoft-365-dora-log-sources/"}}</script>
 
   <!-- FAQ schema (always present when FAQ array is non-empty) -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AZ-500 retiring?","acceptedAnswer":{"@type":"Answer","text":"Microsoft's retired certification exams list shows AZ-500 with a 2026 retirement date. Always verify the current date on Microsoft Learn before booking."}},{"@type":"Question","name":"Should teams still learn AZ-500 topics?","acceptedAnswer":{"@type":"Answer","text":"Yes. The exam may retire, but Azure security engineering skills remain necessary for production operations and compliance evidence."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do we need every Sentinel connector for DORA?","acceptedAnswer":{"@type":"Answer","text":"No. Start with the evidence sources that support identity, incident, cloud activity, and critical workload investigations."}},{"@type":"Question","name":"Is Microsoft 365 audit data useful in Sentinel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Microsoft documents Microsoft 365 activity logs as Sentinel connector data for user and admin activity investigations."}}]}</script>
 
   <!-- Minimal styles: readable without the SPA bundle -->
   <style>
@@ -148,30 +148,30 @@
 
   <main>
     <article>
-      <h1>AZ-500 retirement path for Azure security teams</h1>
+      <h1>Microsoft Sentinel log sources for DORA and NIS2 evidence</h1>
       <p class="meta">
         By <a href="https://cloudevolvers.com/about">Yaïr Knijn</a>, Microsoft Certified Trainer &mdash;
         Updated 10 May 2026
       </p>
 
       <div class="article-content">
-        <p>AZ-500 remains a useful skills map for Azure security work, but Microsoft lists the Azure Security Engineer Associate exam for retirement in 2026. Teams should not ignore the content. They should decide whether to finish the exam path before retirement or turn the domains into an internal Azure security workshop.</p>
-<p>Primary source checked on 2026-05-10: <a href="https://learn.microsoft.com/en-us/learn/certifications/retired-certification-exams" target="_blank" rel="noopener">Microsoft retired certification exams list</a>. Use the Microsoft page as the final source of truth before booking an exam or committing a remediation plan.</p>
+        <p>Operational resilience evidence depends on logs you can actually search. For Microsoft cloud teams, the first Sentinel question is whether identity, Microsoft 365 audit, Defender, and Azure activity signals are landing where responders can use them.</p>
+<p>Primary source checked on 2026-05-10: <a href="https://learn.microsoft.com/en-us/azure/sentinel/connect-microsoft-365-defender" target="_blank" rel="noopener">Stream data from Microsoft Defender XDR to Microsoft Sentinel</a>. Use the Microsoft page as the final source of truth before booking an exam or committing a remediation plan.</p>
 
 <h2>Who this is for</h2>
-<ul><li>Azure administrators who planned to use AZ-500 as their security follow-up.</li><li>Security engineers responsible for Defender for Cloud, Key Vault, network security, identities, and platform hardening.</li><li>Managers who need to keep Azure security skills current even when a certification path changes.</li></ul>
+<ul><li>Security teams preparing incident evidence for DORA, NIS2, or customer reviews.</li><li>Microsoft 365 admins who need to prove audit coverage beyond screenshots.</li><li>Azure teams deciding which connectors and retention settings matter first.</li></ul>
 
 <h2>What to work on first</h2>
-<ul><li>Confirm the retirement date on Microsoft Learn before booking any exam attempt.</li><li>Prioritize reusable skills: identity protection, network security, data protection, Defender for Cloud, Key Vault, and workload hardening.</li><li>If the exam window is too tight, convert the study plan into a security readiness workshop with tenant and subscription evidence.</li></ul>
+<ul><li>Verify Entra sign-in and audit logs, Microsoft 365 activity logs, Defender XDR incidents, Azure Activity, and key workload logs.</li><li>Document retention, workspace ownership, alert rules, and who can query each evidence source.</li><li>Test one incident walkthrough from alert to investigation notes and post-incident evidence.</li></ul>
 
 <h2>Team training angle</h2>
-<p>The best AZ-500 replacement for a team is a hands-on Azure security sprint. Use the exam domains as the agenda, but make the output a set of real controls and remediation actions.</p>
+<p>A Sentinel readiness workshop should connect data connectors to incident response duties, not only enable every connector in the gallery.</p>
 
 <h2>One-week action plan</h2>
-<ul><li>Day 1: role assignments, privileged access, managed identities, and Key Vault.</li><li>Day 2: network controls, private endpoints, firewalls, WAF, and NSGs.</li><li>Day 3: Defender for Cloud recommendations and regulatory compliance.</li><li>Day 4: logging, alerting, Sentinel handoff, and incident workflow.</li><li>Day 5: remediation backlog and certification decision.</li></ul>
+<ul><li>Day 1: inventory required evidence sources.</li><li>Day 2: connect or validate Entra and Microsoft 365 audit signals.</li><li>Day 3: stream Defender XDR incidents and alerts where appropriate.</li><li>Day 4: review retention, access, and alert routing.</li><li>Day 5: run a mini incident exercise and capture evidence gaps.</li></ul>
 
 <h2>Where Cloud Evolvers fits</h2>
-<p>Cloud Evolvers can help teams turn AZ-500 content into a practical Azure security workshop even if the public certification path changes.</p>
+<p>Cloud Evolvers can review Microsoft Sentinel evidence coverage and produce the first remediation plan for DORA, NIS2, NIST, or CIS discussions.</p>
       </div>
 
       <div class="cta-band">
@@ -184,20 +184,20 @@
       <h2>Frequently asked questions</h2>
 
       <div class="faq-item">
-        <h3 class="faq-question">Is AZ-500 retiring?</h3>
-        <p class="faq-answer">Microsoft&#39;s retired certification exams list shows AZ-500 with a 2026 retirement date. Always verify the current date on Microsoft Learn before booking.</p>
+        <h3 class="faq-question">Do we need every Sentinel connector for DORA?</h3>
+        <p class="faq-answer">No. Start with the evidence sources that support identity, incident, cloud activity, and critical workload investigations.</p>
       </div>
       <div class="faq-item">
-        <h3 class="faq-question">Should teams still learn AZ-500 topics?</h3>
-        <p class="faq-answer">Yes. The exam may retire, but Azure security engineering skills remain necessary for production operations and compliance evidence.</p>
+        <h3 class="faq-question">Is Microsoft 365 audit data useful in Sentinel?</h3>
+        <p class="faq-answer">Yes. Microsoft documents Microsoft 365 activity logs as Sentinel connector data for user and admin activity investigations.</p>
       </div>
     </section>
 
     <aside class="related-pages">
       <h2>Related guides</h2>
-      <a href="https://cloudevolvers.com/seo/defender-for-cloud-cis-nist-dora-standards/" class="related-link">Defender for Cloud compliance standards</a>
-      <a href="https://cloudevolvers.com/seo/az-104-lab-checklist-for-teams/" class="related-link">AZ-104 lab checklist</a>
-      <a href="https://cloudevolvers.com/seo/sc-300-identity-administrator-study-plan-2026/" class="related-link">SC-300 identity plan</a>
+      <a href="https://cloudevolvers.com/seo/dora-microsoft-cloud-evidence-checklist/" class="related-link">DORA evidence checklist</a>
+      <a href="https://cloudevolvers.com/seo/nist-csf-2-azure-microsoft-365-mapping/" class="related-link">NIST mapping</a>
+      <a href="https://cloudevolvers.com/seo/microsoft-365-secure-score-what-to-fix-first/" class="related-link">Secure Score fixes</a>
     </aside>
     </article>
   </main>

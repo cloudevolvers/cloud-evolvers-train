@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -12,7 +12,7 @@ import {
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 import { RelatedTools } from '@/components/tools/RelatedTools';
-import { trackPortfolioEvent } from '@/lib/portfolio-analytics';
+import { getPortfolioAttribution, trackPortfolioEvent } from '@/lib/portfolio-analytics';
 
 const EXPERIMENT_ID = 'exp_cloudevolvers_compliance_scan_20260510';
 const TOOL_SLUG = 'microsoft-cloud-compliance-readiness';
@@ -74,7 +74,7 @@ const CHECKPOINTS: Checkpoint[] = [
     id: 'backups',
     pillar: 'Data',
     label: 'Backups, recovery points, and restore tests exist for critical systems.',
-    detail: 'DORA operational resilience depends on tested recovery, not just backup settings.',
+    detail: 'DORA operational resilience depends on tested recovery and recorded backup evidence.',
     frameworks: ['DORA', 'NIST'],
     fix: 'Run restore tests for the top systems and record evidence for each test.',
   },
@@ -90,7 +90,7 @@ const CHECKPOINTS: Checkpoint[] = [
     id: 'incident-process',
     pillar: 'Operations',
     label: 'Incident response roles, escalation paths, and timelines are written down.',
-    detail: 'DORA and NIS2 style readiness needs operational proof, not only technical controls.',
+    detail: 'DORA and NIS2 style readiness needs operational proof alongside technical controls.',
     frameworks: ['DORA', 'NIS2', 'NIST'],
     fix: 'Write the escalation path and run a short tabletop exercise with the IT owner.',
   },
@@ -119,6 +119,16 @@ const ANSWER_LABELS: Record<AnswerValue, string> = {
 const PILLARS: Pillar[] = ['Identity', 'Cloud', 'Data', 'Operations'];
 
 type Answers = Record<string, AnswerValue>;
+type ReviewLeadForm = {
+  name: string;
+  email: string;
+  company: string;
+};
+
+type QuickLeadForm = {
+  email: string;
+  company: string;
+};
 
 function initialAnswers(): Answers {
   return CHECKPOINTS.reduce<Answers>((acc, item) => {
@@ -170,6 +180,20 @@ export function MicrosoftCloudComplianceReadinessPage() {
   const [answers, setAnswers] = useState<Answers>(() => initialAnswers());
   const [hasScored, setHasScored] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [reviewLead, setReviewLead] = useState<ReviewLeadForm>({
+    name: '',
+    email: '',
+    company: '',
+  });
+  const [reviewStatus, setReviewStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [reviewError, setReviewError] = useState<string | null>(null);
+  const [quickLead, setQuickLead] = useState<QuickLeadForm>({
+    email: '',
+    company: '',
+  });
+  const [quickStatus, setQuickStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [quickError, setQuickError] = useState<string | null>(null);
+  const [quickStarted, setQuickStarted] = useState(false);
   const score = useMemo(() => scoreAnswers(answers), [answers]);
   const band = getBand(score.percent);
   const fixes = topFixes(answers);
@@ -222,6 +246,152 @@ export function MicrosoftCloudComplianceReadinessPage() {
     });
   }
 
+  function markQuickStarted() {
+    if (quickStarted) return;
+    setQuickStarted(true);
+    trackPortfolioEvent('lead_form_started', {
+      tool: TOOL_SLUG,
+      experiment: EXPERIMENT_ID,
+      source_form: 'compliance_readiness_quick_start',
+      capture_mode: 'email_only',
+    });
+  }
+
+  async function requestQuickStart(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setQuickError(null);
+
+    if (!quickLead.email.trim()) {
+      setQuickStatus('error');
+      setQuickError('Work email is required.');
+      return;
+    }
+
+    setQuickStatus('sending');
+    const company = quickLead.company.trim();
+    const response = await fetch('/api/submit-consultation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': import.meta.env.VITE_FORM_API_KEY,
+      },
+      body: JSON.stringify({
+        name: company || quickLead.email.trim(),
+        email: quickLead.email.trim(),
+        training: 'Microsoft cloud compliance readiness quick start',
+        message: [
+          'QUICK START REQUEST',
+          company ? `Company: ${company}` : 'Company: not provided',
+          'Requested first evidence route for Azure, Microsoft 365, DORA, NIS2, NIST, and CIS.',
+        ].join('\n'),
+        language: 'en',
+        ...getPortfolioAttribution(),
+        sourcePath: window.location.pathname,
+        sourceUrl: window.location.href,
+        portfolioEventName: 'tool_report_requested',
+        portfolioMetadata: {
+          tool: TOOL_SLUG,
+          experiment: EXPERIMENT_ID,
+          source_form: 'compliance_readiness_quick_start',
+          capture_mode: 'email_only',
+          has_company: Boolean(company),
+        },
+      }),
+    }).catch(() => null);
+
+    if (!response?.ok) {
+      setQuickStatus('error');
+      setQuickError('Could not send the quick path. Use the mail button or try again.');
+      trackPortfolioEvent('lead_form_failed', {
+        tool: TOOL_SLUG,
+        experiment: EXPERIMENT_ID,
+        source_form: 'compliance_readiness_quick_start',
+        capture_mode: 'email_only',
+      });
+      return;
+    }
+
+    setQuickStatus('sent');
+    setQuickLead({ email: '', company: '' });
+    trackPortfolioEvent('lead_form_submitted', {
+      tool: TOOL_SLUG,
+      experiment: EXPERIMENT_ID,
+      source_form: 'compliance_readiness_quick_start',
+      lead_type: 'compliance_readiness',
+      capture_mode: 'email_only',
+      has_company: Boolean(company),
+    });
+  }
+
+  async function requestReview(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setReviewError(null);
+
+    if (!reviewLead.name.trim() || !reviewLead.email.trim()) {
+      setReviewStatus('error');
+      setReviewError('Name and work email are required.');
+      return;
+    }
+
+    const report = buildReport(score.percent, band.label, fixes, answers);
+    const companyLine = reviewLead.company.trim()
+      ? `Company: ${reviewLead.company.trim()}\n\n`
+      : '';
+
+    setReviewStatus('sending');
+    const response = await fetch('/api/submit-consultation', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': import.meta.env.VITE_FORM_API_KEY,
+      },
+      body: JSON.stringify({
+        name: reviewLead.name.trim(),
+        email: reviewLead.email.trim(),
+        training: 'Microsoft cloud compliance readiness scan',
+        message: `${companyLine}${report}`,
+        language: 'en',
+        ...getPortfolioAttribution(),
+        sourcePath: window.location.pathname,
+        sourceUrl: window.location.href,
+        portfolioEventName: 'tool_report_requested',
+        portfolioMetadata: {
+          tool: TOOL_SLUG,
+          experiment: EXPERIMENT_ID,
+          source_form: 'compliance_readiness_review',
+          capture_mode: 'scored_report',
+          score_percent: score.percent,
+          readiness_band: band.label,
+          has_company: Boolean(reviewLead.company.trim()),
+        },
+      }),
+    }).catch(() => null);
+
+    if (!response?.ok) {
+      setReviewStatus('error');
+      setReviewError('Could not send the review request. Use the mail button or try again.');
+      trackPortfolioEvent('lead_form_failed', {
+        tool: TOOL_SLUG,
+        experiment: EXPERIMENT_ID,
+        source_form: 'compliance_readiness_review',
+        score_percent: score.percent,
+        readiness_band: band.label,
+      });
+      return;
+    }
+
+    setReviewStatus('sent');
+    trackPortfolioEvent('lead_form_submitted', {
+      tool: TOOL_SLUG,
+      experiment: EXPERIMENT_ID,
+      source_form: 'compliance_readiness_review',
+      lead_type: 'compliance_readiness',
+      score_percent: score.percent,
+      readiness_band: band.label,
+      has_company: Boolean(reviewLead.company.trim()),
+    });
+  }
+
   const mailtoBody = encodeURIComponent(buildReport(score.percent, band.label, fixes, answers));
 
   return (
@@ -265,6 +435,55 @@ export function MicrosoftCloudComplianceReadinessPage() {
               <ClipboardText size={22} weight="duotone" className="mb-3 text-[color:var(--ed-accent)]" />
               <p className="text-sm font-semibold">Actionable output</p>
               <p className="mt-1 text-xs leading-relaxed text-black/60">Copy the report or send it for a scoped review.</p>
+            </div>
+          </section>
+
+          <section className="mb-8 rounded-2xl border border-black/[0.08] bg-white p-5 sm:p-6">
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-end">
+              <div>
+                <h2 className="text-lg font-semibold">Get a first Microsoft cloud review path</h2>
+                <p className="mt-2 text-sm leading-relaxed text-black/70">
+                  Send a work email and we will map the first Azure and Microsoft 365 evidence route before you run a deeper scan.
+                </p>
+                <ul className="mt-4 grid gap-2 text-sm text-black/70 sm:grid-cols-3">
+                  <li className="rounded-xl bg-[color:var(--ed-bg)] px-3 py-2">Secure Score and Defender</li>
+                  <li className="rounded-xl bg-[color:var(--ed-bg)] px-3 py-2">Purview and evidence</li>
+                  <li className="rounded-xl bg-[color:var(--ed-bg)] px-3 py-2">DORA, NIST, CIS backlog</li>
+                </ul>
+              </div>
+              <form onSubmit={requestQuickStart} onFocus={markQuickStarted} className="grid gap-2">
+                <input
+                  value={quickLead.email}
+                  onChange={(event) => setQuickLead((prev) => ({ ...prev, email: event.target.value }))}
+                  className="rounded-lg border border-black/[0.12] bg-white px-3 py-2.5 text-sm text-black outline-none focus:border-[color:var(--ed-accent)]"
+                  autoComplete="email"
+                  type="email"
+                  placeholder="Work email"
+                  required
+                />
+                <input
+                  value={quickLead.company}
+                  onChange={(event) => setQuickLead((prev) => ({ ...prev, company: event.target.value }))}
+                  className="rounded-lg border border-black/[0.12] bg-white px-3 py-2.5 text-sm text-black outline-none focus:border-[color:var(--ed-accent)]"
+                  autoComplete="organization"
+                  placeholder="Company (optional)"
+                />
+                <button
+                  type="submit"
+                  disabled={quickStatus === 'sending' || quickStatus === 'sent'}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--ed-accent)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <EnvelopeSimple size={16} weight="bold" />
+                  {quickStatus === 'sent'
+                    ? 'Quick path sent'
+                    : quickStatus === 'sending'
+                      ? 'Sending...'
+                      : 'Send quick path'}
+                </button>
+                {quickError ? (
+                  <p className="text-sm font-medium text-red-700">{quickError}</p>
+                ) : null}
+              </form>
             </div>
           </section>
 
@@ -405,6 +624,64 @@ export function MicrosoftCloudComplianceReadinessPage() {
                       <ArrowRight size={16} weight="bold" />
                     </Link>
                   </div>
+
+                  <form
+                    onSubmit={requestReview}
+                    className="mt-6 rounded-xl border border-black/[0.08] bg-[color:var(--ed-bg)] p-4"
+                  >
+                    <div className="grid gap-3 sm:grid-cols-3">
+                      <label className="flex flex-col gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-black/50">
+                        Name
+                        <input
+                          value={reviewLead.name}
+                          onChange={(event) => setReviewLead((prev) => ({ ...prev, name: event.target.value }))}
+                          className="rounded-lg border border-black/[0.12] bg-white px-3 py-2 text-sm normal-case tracking-normal text-black outline-none focus:border-[color:var(--ed-accent)]"
+                          autoComplete="name"
+                          required
+                        />
+                      </label>
+                      <label className="flex flex-col gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-black/50">
+                        Work email
+                        <input
+                          value={reviewLead.email}
+                          onChange={(event) => setReviewLead((prev) => ({ ...prev, email: event.target.value }))}
+                          className="rounded-lg border border-black/[0.12] bg-white px-3 py-2 text-sm normal-case tracking-normal text-black outline-none focus:border-[color:var(--ed-accent)]"
+                          autoComplete="email"
+                          type="email"
+                          required
+                        />
+                      </label>
+                      <label className="flex flex-col gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-black/50">
+                        Company
+                        <input
+                          value={reviewLead.company}
+                          onChange={(event) => setReviewLead((prev) => ({ ...prev, company: event.target.value }))}
+                          className="rounded-lg border border-black/[0.12] bg-white px-3 py-2 text-sm normal-case tracking-normal text-black outline-none focus:border-[color:var(--ed-accent)]"
+                          autoComplete="organization"
+                        />
+                      </label>
+                    </div>
+                    <div className="mt-4 flex flex-wrap items-center gap-3">
+                      <button
+                        type="submit"
+                        disabled={reviewStatus === 'sending' || reviewStatus === 'sent'}
+                        className="inline-flex items-center gap-2 rounded-full bg-[color:var(--ed-accent)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                      >
+                        <EnvelopeSimple size={16} weight="bold" />
+                        {reviewStatus === 'sent'
+                          ? 'Review request sent'
+                          : reviewStatus === 'sending'
+                            ? 'Sending...'
+                            : 'Email me the review path'}
+                      </button>
+                      <p className="text-xs leading-relaxed text-black/50">
+                        Sends the score and first backlog to Cloud Evolvers for a scoped follow-up.
+                      </p>
+                    </div>
+                    {reviewError ? (
+                      <p className="mt-3 text-sm font-medium text-red-700">{reviewError}</p>
+                    ) : null}
+                  </form>
                 </div>
               </div>
             </section>
