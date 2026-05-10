@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Calculator, Shield, Path } from '@phosphor-icons/react';
+import { ArrowRight, CheckCircle, Calculator, ClipboardText, Shield, Path } from '@phosphor-icons/react';
 import { Wrap, Eyebrow, Display, Lede } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 
@@ -42,6 +42,14 @@ const tools: Tool[] = [
     description:
       'Describe what someone needs to do and we map it to the least-privilege built-in role.',
     icon: Shield,
+    available: true,
+  },
+  {
+    href: '/tools/microsoft-cloud-compliance-readiness',
+    title: 'Microsoft cloud compliance readiness scanner',
+    description:
+      'A practical DORA, NIS2, NIST, CIS, Azure, and Microsoft 365 checklist that turns compliance anxiety into a first remediation backlog.',
+    icon: ClipboardText,
     available: true,
   },
 ];

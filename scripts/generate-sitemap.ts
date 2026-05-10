@@ -46,6 +46,7 @@ const marketing: UrlEntry[] = [
   { loc: `${SITE}/tools/microsoft-exam-cost-calculator`, lastmod: today, changefreq: "monthly", priority: 0.8 },
   { loc: `${SITE}/tools/microsoft-cert-path-planner`, lastmod: today, changefreq: "monthly", priority: 0.8 },
   { loc: `${SITE}/tools/azure-rbac-role-chooser`, lastmod: today, changefreq: "monthly", priority: 0.8 },
+  { loc: `${SITE}/tools/microsoft-cloud-compliance-readiness`, lastmod: today, changefreq: "monthly", priority: 0.8 },
   { loc: `${SITE}/privacy-policy`, lastmod: today, changefreq: "yearly", priority: 0.3 },
   { loc: `${SITE}/terms-of-service`, lastmod: today, changefreq: "yearly", priority: 0.3 },
   { loc: `${SITE}/cookie-policy`, lastmod: today, changefreq: "yearly", priority: 0.3 },

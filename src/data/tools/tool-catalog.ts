@@ -34,6 +34,13 @@ export const TOOL_CATALOG: ToolCatalogEntry[] = [
       'Pick a target role, answer five questions, get an ordered cert sequence with realistic time estimates.',
     href: '/tools/microsoft-cert-path-planner',
   },
+  {
+    slug: 'microsoft-cloud-compliance-readiness',
+    title: 'Microsoft cloud compliance readiness scanner',
+    description:
+      'Check DORA, NIS2, NIST, CIS, Azure, and Microsoft 365 readiness and get the first remediation backlog.',
+    href: '/tools/microsoft-cloud-compliance-readiness',
+  },
 ];
 
 export function relatedTools(currentSlug: string): ToolCatalogEntry[] {

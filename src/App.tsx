@@ -39,6 +39,7 @@ import Az104ReadinessQuizPage from "@/pages/tools/Az104ReadinessQuizPage";
 import MicrosoftExamCostCalculatorPage from "@/pages/tools/MicrosoftExamCostCalculatorPage";
 import MicrosoftCertPathPlannerPage from "@/pages/tools/MicrosoftCertPathPlannerPage";
 import AzureRbacRoleChooserPage from "@/pages/tools/AzureRbacRoleChooserPage";
+import MicrosoftCloudComplianceReadinessPage from "@/pages/tools/MicrosoftCloudComplianceReadinessPage";
 import { trackPortfolioEvent } from "@/lib/portfolio-analytics";
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
               <Route path="/tools/microsoft-exam-cost-calculator" element={<MicrosoftExamCostCalculatorPage />} />
               <Route path="/tools/microsoft-cert-path-planner" element={<MicrosoftCertPathPlannerPage />} />
               <Route path="/tools/azure-rbac-role-chooser" element={<AzureRbacRoleChooserPage />} />
+              <Route path="/tools/microsoft-cloud-compliance-readiness" element={<MicrosoftCloudComplianceReadinessPage />} />
 
               {/* Services Pages */}
               <Route path="/services" element={<ServicesPage />} />
