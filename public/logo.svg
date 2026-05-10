@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud Evolvers logo</title>
+  <desc id="desc">Cloud Evolvers circular cloud training mark</desc>
+  <rect width="240" height="240" rx="40" fill="#293141"/>
+  <circle cx="120" cy="120" r="70" fill="none" stroke="#74d6b4" stroke-width="10"/>
+  <path d="M62 129c11-26 31-39 59-39 25 0 45 11 58 34 19 2 31 14 31 31 0 19-15 31-37 31H78c-25 0-41-13-41-32 0-14 9-23 25-25Z" fill="#ffffff"/>
+  <path d="M72 126c10-17 26-25 48-25 20 0 36 8 48 24" fill="none" stroke="#293141" stroke-width="8" stroke-linecap="round"/>
+  <text x="120" y="216" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Cloud Evolvers</text>
+</svg>

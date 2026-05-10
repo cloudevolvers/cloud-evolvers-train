@@ -105,6 +105,9 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <Eyebrow>{t.footer?.legal || 'Legal'}</Eyebrow>
             <ul className="mt-4 space-y-2 text-[14px] text-[color:var(--ed-ink-2)]">
+              <li><a href="/help/" className="hover:text-[color:var(--ed-ink)]">Help</a></li>
+              <li><a href="/trust/" className="hover:text-[color:var(--ed-ink)]">Trust center</a></li>
+              <li><a href="/brand/" className="hover:text-[color:var(--ed-ink)]">Brand</a></li>
               <li><Link to="/privacy-policy" className="hover:text-[color:var(--ed-ink)]">{t.footer?.privacyPolicy || 'Privacy Policy'}</Link></li>
               <li><Link to="/terms-of-service" className="hover:text-[color:var(--ed-ink)]">{t.footer?.termsOfService || 'Terms of Service'}</Link></li>
               <li><Link to="/cookie-policy" className="hover:text-[color:var(--ed-ink)]">{t.footer?.cookiePolicy || 'Cookie Policy'}</Link></li>

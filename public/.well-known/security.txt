@@ -1,0 +1,4 @@
+Contact: mailto:training@cloudevolvers.com
+Preferred-Languages: en, nl
+Canonical: https://cloudevolvers.com/.well-known/security.txt
+Policy: https://cloudevolvers.com/trust/
