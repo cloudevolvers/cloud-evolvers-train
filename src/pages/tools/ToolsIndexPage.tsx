@@ -52,6 +52,14 @@ const tools: Tool[] = [
     icon: ClipboardText,
     available: true,
   },
+  {
+    href: '/tools/microsoft-cloud-evidence-pack-generator',
+    title: 'Microsoft cloud evidence pack generator',
+    description:
+      'Pick available Entra, Defender, Sentinel, Purview, backup, endpoint, supplier, and incident evidence and get a review-ready outline.',
+    icon: ClipboardText,
+    available: true,
+  },
 ];
 
 export function ToolsIndexPage() {

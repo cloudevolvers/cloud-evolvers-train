@@ -41,6 +41,13 @@ export const TOOL_CATALOG: ToolCatalogEntry[] = [
       'Check DORA, NIS2, NIST, CIS, Azure, and Microsoft 365 readiness and get the first remediation backlog.',
     href: '/tools/microsoft-cloud-compliance-readiness',
   },
+  {
+    slug: 'microsoft-cloud-evidence-pack-generator',
+    title: 'Microsoft cloud evidence pack generator',
+    description:
+      'Generate a DORA, NIST, CIS, Azure, and Microsoft 365 evidence pack outline for a review or workshop.',
+    href: '/tools/microsoft-cloud-evidence-pack-generator',
+  },
 ];
 
 export function relatedTools(currentSlug: string): ToolCatalogEntry[] {
