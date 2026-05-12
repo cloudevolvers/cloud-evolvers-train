@@ -12,7 +12,7 @@ import {
 import { Wrap, Eyebrow, Display, Lede, EdButton } from '@/components/editorial';
 import { SEO } from '@/components/SEO';
 import { RelatedTools } from '@/components/tools/RelatedTools';
-import { getPortfolioAttribution, trackPortfolioEvent } from '@/lib/portfolio-analytics';
+import { getCampaignMetadata, getPortfolioAttribution, trackPortfolioEvent } from '@/lib/portfolio-analytics';
 
 const EXPERIMENT_ID = 'exp_cloudevolvers_compliance_scan_20260510';
 const TOOL_SLUG = 'microsoft-cloud-compliance-readiness';
@@ -187,6 +187,7 @@ export function MicrosoftCloudComplianceReadinessPage() {
   });
   const [reviewStatus, setReviewStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [reviewError, setReviewError] = useState<string | null>(null);
+  const [reviewStarted, setReviewStarted] = useState(false);
   const [quickLead, setQuickLead] = useState<QuickLeadForm>({
     email: '',
     company: '',
@@ -257,6 +258,20 @@ export function MicrosoftCloudComplianceReadinessPage() {
     });
   }
 
+  function markReviewStarted() {
+    if (reviewStarted) return;
+    setReviewStarted(true);
+    trackPortfolioEvent('lead_form_started', {
+      tool: TOOL_SLUG,
+      experiment: EXPERIMENT_ID,
+      source_form: 'compliance_readiness_scored_report',
+      capture_mode: 'email_first_scored_report',
+      score_percent: score.percent,
+      readiness_band: band.label,
+      missing_controls: fixes.length,
+    });
+  }
+
   async function requestQuickStart(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setQuickError(null);
@@ -269,11 +284,12 @@ export function MicrosoftCloudComplianceReadinessPage() {
 
     setQuickStatus('sending');
     const company = quickLead.company.trim();
+    const apiKey = import.meta.env.VITE_FORM_API_KEY as string | undefined;
     const response = await fetch('/api/submit-consultation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': import.meta.env.VITE_FORM_API_KEY,
+        ...(apiKey ? { 'x-api-key': apiKey } : {}),
       },
       body: JSON.stringify({
         name: company || quickLead.email.trim(),
@@ -290,6 +306,7 @@ export function MicrosoftCloudComplianceReadinessPage() {
         sourceUrl: window.location.href,
         portfolioEventName: 'tool_report_requested',
         portfolioMetadata: {
+          ...getCampaignMetadata(),
           tool: TOOL_SLUG,
           experiment: EXPERIMENT_ID,
           source_form: 'compliance_readiness_quick_start',
@@ -327,42 +344,49 @@ export function MicrosoftCloudComplianceReadinessPage() {
     event.preventDefault();
     setReviewError(null);
 
-    if (!reviewLead.name.trim() || !reviewLead.email.trim()) {
+    if (!reviewLead.email.trim()) {
       setReviewStatus('error');
-      setReviewError('Name and work email are required.');
+      setReviewError('Work email is required.');
       return;
     }
 
     const report = buildReport(score.percent, band.label, fixes, answers);
+    const trimmedName = reviewLead.name.trim();
+    const trimmedEmail = reviewLead.email.trim();
+    const trimmedCompany = reviewLead.company.trim();
     const companyLine = reviewLead.company.trim()
       ? `Company: ${reviewLead.company.trim()}\n\n`
       : '';
 
     setReviewStatus('sending');
+    const apiKey = import.meta.env.VITE_FORM_API_KEY as string | undefined;
     const response = await fetch('/api/submit-consultation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': import.meta.env.VITE_FORM_API_KEY,
+        ...(apiKey ? { 'x-api-key': apiKey } : {}),
       },
       body: JSON.stringify({
-        name: reviewLead.name.trim(),
-        email: reviewLead.email.trim(),
+        name: trimmedName || trimmedCompany || trimmedEmail,
+        email: trimmedEmail,
         training: 'Microsoft cloud compliance readiness scan',
-        message: `${companyLine}${report}`,
+        message: `SCORED REPORT REQUEST\n\n${companyLine}${report}`,
         language: 'en',
         ...getPortfolioAttribution(),
         sourcePath: window.location.pathname,
         sourceUrl: window.location.href,
         portfolioEventName: 'tool_report_requested',
         portfolioMetadata: {
+          ...getCampaignMetadata(),
           tool: TOOL_SLUG,
           experiment: EXPERIMENT_ID,
-          source_form: 'compliance_readiness_review',
-          capture_mode: 'scored_report',
+          source_form: 'compliance_readiness_scored_report',
+          capture_mode: 'email_first_scored_report',
           score_percent: score.percent,
           readiness_band: band.label,
-          has_company: Boolean(reviewLead.company.trim()),
+          missing_controls: fixes.length,
+          has_company: Boolean(trimmedCompany),
+          has_name: Boolean(trimmedName),
         },
       }),
     }).catch(() => null);
@@ -373,7 +397,8 @@ export function MicrosoftCloudComplianceReadinessPage() {
       trackPortfolioEvent('lead_form_failed', {
         tool: TOOL_SLUG,
         experiment: EXPERIMENT_ID,
-        source_form: 'compliance_readiness_review',
+        source_form: 'compliance_readiness_scored_report',
+        capture_mode: 'email_first_scored_report',
         score_percent: score.percent,
         readiness_band: band.label,
       });
@@ -384,11 +409,14 @@ export function MicrosoftCloudComplianceReadinessPage() {
     trackPortfolioEvent('lead_form_submitted', {
       tool: TOOL_SLUG,
       experiment: EXPERIMENT_ID,
-      source_form: 'compliance_readiness_review',
+      source_form: 'compliance_readiness_scored_report',
       lead_type: 'compliance_readiness',
+      capture_mode: 'email_first_scored_report',
       score_percent: score.percent,
       readiness_band: band.label,
-      has_company: Boolean(reviewLead.company.trim()),
+      missing_controls: fixes.length,
+      has_company: Boolean(trimmedCompany),
+      has_name: Boolean(trimmedName),
     });
   }
 
@@ -627,19 +655,16 @@ export function MicrosoftCloudComplianceReadinessPage() {
 
                   <form
                     onSubmit={requestReview}
+                    onFocus={markReviewStarted}
                     className="mt-6 rounded-xl border border-black/[0.08] bg-[color:var(--ed-bg)] p-4"
                   >
-                    <div className="grid gap-3 sm:grid-cols-3">
-                      <label className="flex flex-col gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-black/50">
-                        Name
-                        <input
-                          value={reviewLead.name}
-                          onChange={(event) => setReviewLead((prev) => ({ ...prev, name: event.target.value }))}
-                          className="rounded-lg border border-black/[0.12] bg-white px-3 py-2 text-sm normal-case tracking-normal text-black outline-none focus:border-[color:var(--ed-accent)]"
-                          autoComplete="name"
-                          required
-                        />
-                      </label>
+                    <div>
+                      <h3 className="text-base font-semibold">Send me the first three fixes</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-black/60">
+                        Email is enough. Company and name help with routing, but the score and backlog carry the context.
+                      </p>
+                    </div>
+                    <div className="mt-4 grid gap-3 sm:grid-cols-3">
                       <label className="flex flex-col gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-black/50">
                         Work email
                         <input
@@ -660,6 +685,15 @@ export function MicrosoftCloudComplianceReadinessPage() {
                           autoComplete="organization"
                         />
                       </label>
+                      <label className="flex flex-col gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-black/50">
+                        Name optional
+                        <input
+                          value={reviewLead.name}
+                          onChange={(event) => setReviewLead((prev) => ({ ...prev, name: event.target.value }))}
+                          className="rounded-lg border border-black/[0.12] bg-white px-3 py-2 text-sm normal-case tracking-normal text-black outline-none focus:border-[color:var(--ed-accent)]"
+                          autoComplete="name"
+                        />
+                      </label>
                     </div>
                     <div className="mt-4 flex flex-wrap items-center gap-3">
                       <button
@@ -669,13 +703,13 @@ export function MicrosoftCloudComplianceReadinessPage() {
                       >
                         <EnvelopeSimple size={16} weight="bold" />
                         {reviewStatus === 'sent'
-                          ? 'Review request sent'
+                          ? 'Fix route requested'
                           : reviewStatus === 'sending'
                             ? 'Sending...'
-                            : 'Email me the review path'}
+                            : 'Email me three fixes'}
                       </button>
                       <p className="text-xs leading-relaxed text-black/50">
-                        Sends the score and first backlog to Cloud Evolvers for a scoped follow-up.
+                        Sends the score and first backlog to Cloud Evolvers without connecting to your tenant.
                       </p>
                     </div>
                     {reviewError ? (

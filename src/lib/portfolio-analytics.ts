@@ -20,7 +20,10 @@ export function trackPortfolioEvent(eventName: string, metadata: Metadata = {}) 
     visitorId: attribution.visitorId,
     sessionId: attribution.sessionId,
     occurredAt: Math.floor(Date.now() / 1000),
-    metadata,
+    metadata: {
+      ...getCampaignMetadata(),
+      ...metadata,
+    },
   };
 
   void fetch(`${DASHBOARD_API_URL}/api/events/collect`, {
@@ -37,6 +40,21 @@ export function getPortfolioAttribution() {
     visitorId: getOrCreateId('cloud-evolvers:visitor-id', localStorage),
     sessionId: getOrCreateId('cloud-evolvers:session-id', sessionStorage),
   };
+}
+
+export function getCampaignMetadata(): Metadata {
+  if (typeof window === 'undefined') return {};
+
+  const params = new URLSearchParams(window.location.search);
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'source'];
+  const metadata: Metadata = {};
+
+  for (const key of keys) {
+    const value = params.get(key)?.trim();
+    if (value) metadata[key] = value.slice(0, 120);
+  }
+
+  return metadata;
 }
 
 function getOrCreateId(key: string, storage: Storage): string {

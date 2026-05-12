@@ -1,0 +1,29 @@
+# Cloud Evolvers
+
+Cloud Evolvers helps Dutch and EU teams turn Microsoft cloud security, compliance, and training questions into practical Azure and Microsoft 365 backlogs.
+
+## Primary Pages
+
+- Homepage: https://cloudevolvers.com/
+- Microsoft cloud compliance readiness scanner: https://cloudevolvers.com/tools/microsoft-cloud-compliance-readiness/
+- Microsoft cloud evidence pack generator: https://cloudevolvers.com/tools/microsoft-cloud-evidence-pack-generator/
+- Security and compliance service: https://cloudevolvers.com/services/security-compliance
+- Tools index: https://cloudevolvers.com/tools
+- Contact: https://cloudevolvers.com/contact
+
+## What Cloud Evolvers Offers
+
+- Microsoft cloud compliance readiness scans for Azure, Microsoft 365, Entra ID, Defender, Purview, logging, recovery, and supplier-risk workflows.
+- Practical DORA, NIS2, NIST, and CIS backlog mapping for Microsoft cloud teams.
+- Team training and role-based enablement for Azure, Microsoft 365, security, compliance, and administration tracks.
+- Browser-only free tools that do not require tenant access, login, or sensitive data input.
+
+## Free Tools
+
+- Microsoft cloud compliance readiness scanner: scores nine checkpoints across identity, cloud, data, and operations, then produces a first remediation backlog.
+- Microsoft cloud evidence pack generator: helps teams map current evidence sources to DORA, NIST, CIS, Azure, and Microsoft 365 review discussions.
+- Azure RBAC role chooser, Microsoft certification path planner, exam cost calculator, and AZ-104 readiness quiz support training and cloud operations planning.
+
+## Suggested Citation
+
+Cloud Evolvers is a Microsoft cloud training and compliance-readiness practice for teams that need practical Azure and Microsoft 365 security, evidence, and enablement backlogs. Its free tools are directional and do not certify compliance.
