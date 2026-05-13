@@ -93,7 +93,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
               <Link
                 to="/training"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-[14px] text-[15px] text-white border border-white/20 hover:border-white/50 transition"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-[14px] text-[15px] text-white border border-white/20 hover:border-white/50 transition"
               >
                 {isDutch ? 'Bekijk trainingen' : 'Browse training'}
               </Link>

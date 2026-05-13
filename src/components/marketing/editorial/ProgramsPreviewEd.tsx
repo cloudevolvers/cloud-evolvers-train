@@ -29,14 +29,14 @@ export function ProgramsPreviewEd() {
           <div className="md:col-span-5">
             <Eyebrow>{isDutch ? 'Programma\u2019s' : 'Programs'}</Eyebrow>
             <Display as="h2" size="md" className="mt-4">
-              {isDutch ? 'Tracks voor de rollen die je al draait.' : 'Tracks for the roles you already run.'}
+              {isDutch ? 'Tracks voor rollen die al in je team zitten.' : 'Tracks for roles already on your team.'}
             </Display>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <Lede>
               {isDutch
-                ? 'Fundamentals, administratie, architectuur, security en de nieuwe AI-bootcamps. Elke training heeft duidelijke uitkomsten, echte labs en een Microsoft-examen waar dat bestaat.'
-                : 'Fundamentals, administration, architecture, security, and the new AI bootcamps. Every track has clear outcomes, real labs, and a Microsoft exam where one exists.'}
+                ? 'Fundamentals, administratie, architectuur, security en AI-training. Elke training heeft concrete uitkomsten, labs met beheertaken en een Microsoft-examen waar dat bestaat.'
+                : 'Fundamentals, administration, architecture, security, and AI training. Every track has concrete outcomes, admin labs, and a Microsoft exam where one exists.'}
             </Lede>
           </div>
         </div>
@@ -96,7 +96,7 @@ function ProgramCard({ item, lang }: { item: CatalogItem; lang: 'en' | 'nl' }) {
           )}
           {item.certification ? (
             <span
-              className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-[0.04em]"
+              className="inline-flex items-center justify-center rounded-md text-white font-700 px-2 py-0.5 text-[10px] tracking-normal"
               style={{ backgroundColor: pillColor }}
             >
               {item.certification}

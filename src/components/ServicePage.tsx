@@ -92,7 +92,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
               {service.features.map((f, i) => (
                 <li
                   key={i}
-                  className="ed-eyebrow px-3 py-1.5 rounded-full border border-[color:var(--ed-rule)] bg-[color:var(--ed-bg-2)] text-[color:var(--ed-ink-2)]"
+                  className="ed-eyebrow px-3 py-1.5 rounded-lg border border-[color:var(--ed-rule)] bg-[color:var(--ed-bg-2)] text-[color:var(--ed-ink-2)]"
                 >
                   {f}
                 </li>
@@ -173,7 +173,7 @@ export function ServicePage({ serviceId: propServiceId }: ServicePageProps) {
             <div className="flex flex-col sm:flex-row gap-3 lg:justify-end">
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-[14px] text-[15px] border border-[color:var(--ed-rule)] text-[color:var(--ed-ink)] hover:border-[color:var(--ed-ink)] transition"
+                className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-[14px] text-[15px] border border-[color:var(--ed-rule)] text-[color:var(--ed-ink)] hover:border-[color:var(--ed-ink)] transition"
               >
                 {isDutch ? 'Alle diensten' : 'All services'}
               </Link>

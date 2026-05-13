@@ -34,7 +34,7 @@
     },
     {
       "title": "Microsoft 365 Copilot",
-      "description": "Transform your productivity with AI-powered Microsoft 365 Copilot implementation and training",
+      "description": "Plan and train a Microsoft 365 Copilot rollout with governance, prompts, and adoption support",
       "features": ["Copilot implementation", "AI productivity training", "Workflow optimization", "Change management"]
     },
     {
@@ -44,12 +44,12 @@
     },
     {
       "title": "Network Engineering",
-      "description": "Design and implement robust networking solutions in Azure",
+      "description": "Design and implement Azure networking that operators can understand and support",
       "features": ["Network design", "Implementation", "Security management", "Performance optimization"]
     },
     {
       "title": "AI Engineering & Consultancy",
-      "description": "Transform your business with AI-powered solutions and consultancy",
+      "description": "Validate AI use cases, data readiness, and Azure OpenAI architecture before teams spend on a build",
       "features": ["Machine learning implementation", "AI strategy", "Intelligent automation", "Data science consulting"]
     }
   ],

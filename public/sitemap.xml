@@ -3,193 +3,199 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cloudevolvers.com/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/about</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/contact</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/cloud-management</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/azure-monitoring</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/security-compliance</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/cost-optimization</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/microsoft-365-copilot</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/cloud-engineering</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/infrastructure-as-code</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/ai-engineering</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/services/network-engineering</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/blog</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/tools</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/tools/az-104-readiness-quiz</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/tools/microsoft-exam-cost-calculator</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/tools/microsoft-cert-path-planner</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/tools/azure-rbac-role-chooser</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/tools/microsoft-cloud-compliance-readiness</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cloudevolvers.com/tools/microsoft-cloud-evidence-pack-generator</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/help/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/trust/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/security-questionnaire/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/status/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/brand/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/privacy/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/terms/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/privacy-policy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/terms-of-service</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/cookie-policy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-developer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-developer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-developer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -197,25 +203,25 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/cloud-ai-security-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/power-platform-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/ai-business-professional</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/microsoft-365-security-administrator</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/microsoft-365-security-administrator"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/microsoft-365-security-administrator?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -223,7 +229,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/microsoft-365-copilot-mastery</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/microsoft-365-copilot-mastery"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/microsoft-365-copilot-mastery?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -231,13 +237,13 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/microsoft-365-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-solutions-architect</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-solutions-architect"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-solutions-architect?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -245,7 +251,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-stack-hub</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-stack-hub"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-stack-hub?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -253,7 +259,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/teams-advanced-administration</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/teams-advanced-administration"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/teams-advanced-administration?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -261,7 +267,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-administrator</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-administrator"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-administrator?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -269,7 +275,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-ai-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-ai-fundamentals"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-ai-fundamentals?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -277,7 +283,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/microsoft-365-identity-access-administrator</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/microsoft-365-identity-access-administrator"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/microsoft-365-identity-access-administrator?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -285,7 +291,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-network-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-network-engineer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-network-engineer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -293,7 +299,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/windows-server-hybrid-administrator</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/windows-server-hybrid-administrator"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/windows-server-hybrid-administrator?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -301,7 +307,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-security-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-security-engineer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-security-engineer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -309,7 +315,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/power-platform-automation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/power-platform-automation"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/power-platform-automation?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -317,13 +323,13 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/agentic-ai-solutions-architect</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/security-operations-analyst</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/security-operations-analyst"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/security-operations-analyst?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -331,7 +337,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-support-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-support-engineer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-support-engineer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -339,7 +345,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/cybersecurity-architect</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/cybersecurity-architect"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/cybersecurity-architect?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -347,7 +353,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-fundamentals"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-fundamentals?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -355,13 +361,13 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/mlops-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/microsoft-365-administrator</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/microsoft-365-administrator"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/microsoft-365-administrator?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -369,7 +375,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-ai-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-ai-engineer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-ai-engineer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -377,7 +383,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-ai-developer-bootcamp</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-ai-developer-bootcamp"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-ai-developer-bootcamp?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -385,19 +391,19 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/ai-transformation-leader</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-ai-cloud-developer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/windows-server-hybrid-infrastructure</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/windows-server-hybrid-infrastructure"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/windows-server-hybrid-infrastructure?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -405,7 +411,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-iot-developer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-iot-developer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-iot-developer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -413,7 +419,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/security-compliance-identity-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/security-compliance-identity-fundamentals"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/security-compliance-identity-fundamentals?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -421,13 +427,13 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-security-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-virtual-desktop</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-virtual-desktop"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-virtual-desktop?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -435,7 +441,7 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/copilot-agent-administration-fundamentals</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/copilot-agent-administration-fundamentals"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/copilot-agent-administration-fundamentals?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -443,19 +449,19 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-ai-app-agent-developer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/windows-server-hybrid-administrator-consolidated</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/training/azure-devops-engineer</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudevolvers.com/training/azure-devops-engineer"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://cloudevolvers.com/training/azure-devops-engineer?lang=nl"/>
     <changefreq>monthly</changefreq>
@@ -1087,211 +1093,211 @@
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/az-900-vs-az-104-which-first/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/aws-vs-azure-certification-which-better/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/finops-certified-practitioner-study-guide-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/cka-prep-for-ops-engineers/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/best-az-104-course-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/cloud-engineer-roadmap-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/aws-saa-c03-vs-azure-az-104/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/finops-foundation-vs-google-cloud-cert/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/az-305-vs-az-104-exam-difficulty/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/free-aws-practice-exams-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/aws-saa-c03-salary-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/azure-administrator-az-104-salary-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/cloud-architect-career-path-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/cert-renewal-strategy-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/devops-engineer-cloud-cert-roadmap-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/dp-203-vs-az-204-which-first/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/sc-100-microsoft-cybersecurity-architect-prep/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/aws-devops-engineer-pro-prep-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/gcp-ace-prep-from-aws/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/az-700-vs-az-104-network-or-admin/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/ms-102-administrator-study-plan-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/sc-300-identity-administrator-study-plan-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/md-102-intune-endpoint-administrator-study-plan-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/az-500-security-engineer-retirement-path-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/sc-900-vs-ms-900-which-fundamentals/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/microsoft-365-secure-score-what-to-fix-first/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/purview-compliance-manager-improvement-actions/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/defender-for-cloud-cis-nist-dora-standards/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/az-104-lab-checklist-for-teams/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/microsoft-365-admin-training-path-for-it-teams/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/dora-microsoft-cloud-evidence-checklist/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/cis-microsoft-365-azure-quick-wins/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/nist-csf-2-azure-microsoft-365-mapping/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/sentinel-microsoft-365-dora-log-sources/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cloudevolvers.com/seo/entra-access-review-audit-evidence/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

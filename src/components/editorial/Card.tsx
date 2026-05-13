@@ -11,7 +11,7 @@ export function EdCard({ children, className, tone = 'paper' }: CardProps) {
   return (
     <div
       className={cn(
-        'rounded-[14px] border',
+        'rounded-lg border',
         tone === 'paper'
           ? 'bg-[color:var(--ed-card)] border-[color:var(--ed-rule)] shadow-[var(--ed-shadow)]'
           : 'bg-[color:var(--ed-accent-deep)] border-white/5 text-white',

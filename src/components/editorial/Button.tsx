@@ -56,7 +56,7 @@ interface ButtonProps extends BaseProps {
 type Props = LinkProps | AnchorProps | ButtonProps;
 
 const base =
-  'inline-flex items-center gap-2 rounded-full font-medium transition-[transform,background,color,border-color] duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
+  'inline-flex items-center gap-2 rounded-lg font-medium transition-[transform,background,color,border-color] duration-150 disabled:opacity-50 disabled:cursor-not-allowed';
 
 export function EdButton({
   variant = 'primary',

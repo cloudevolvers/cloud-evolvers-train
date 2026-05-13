@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react';
-import { EnvelopeSimple, GraduationCap, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { EnvelopeSimple } from '@phosphor-icons/react';
 import { Wrap, Eyebrow } from '@/components/editorial';
 import { useTranslations } from '@/hooks/use-translations';
 import { getPortfolioAttribution, trackPortfolioEvent } from '@/lib/portfolio-analytics';
@@ -11,25 +11,21 @@ const EXPERIMENT_ID = 'exp_cloudevolvers_home_quick_intake_20260510';
 
 const TOPICS: Array<{
   id: IntakeTopic;
-  icon: typeof ShieldCheck;
   label: { en: string; nl: string };
   training: string;
 }> = [
   {
     id: 'compliance',
-    icon: ShieldCheck,
     label: { en: 'DORA/NIST/CIS route', nl: 'DORA/NIST/CIS route' },
     training: 'Microsoft cloud compliance readiness intake',
   },
   {
     id: 'training',
-    icon: GraduationCap,
     label: { en: 'Team training', nl: 'Teamtraining' },
     training: 'Azure and Microsoft 365 team training intake',
   },
   {
     id: 'security',
-    icon: LockKey,
     label: { en: 'M365 security', nl: 'M365 security' },
     training: 'Microsoft 365 security and Entra readiness intake',
   },
@@ -149,15 +145,14 @@ export function HomeQuickIntakeEd() {
             </h2>
             <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[color:var(--ed-ink-2)]">
               {isDutch
-                ? 'Handig voor teams die training, Secure Score, Entra, Purview, DORA, NIST of CIS willen omzetten naar een concrete backlog.'
-                : 'Useful when a team needs training, Secure Score, Entra, Purview, DORA, NIST, or CIS turned into a concrete backlog.'}
+                ? 'Voor teams die training, Secure Score, Entra, Purview, DORA, NIST of CIS willen omzetten naar een concrete backlog.'
+                : 'For teams that need to turn training, Secure Score, Entra, Purview, DORA, NIST, or CIS into a concrete backlog.'}
             </p>
           </div>
 
           <form onSubmit={submitIntake} onFocus={markStarted} className="grid gap-3">
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
               {TOPICS.map((item) => {
-                const Icon = item.icon;
                 const active = topic === item.id;
                 return (
                   <button
@@ -170,11 +165,10 @@ export function HomeQuickIntakeEd() {
                     className={`flex min-h-12 items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
                       active
                         ? 'border-[color:var(--ed-accent)] bg-[color:var(--ed-accent)]/[0.08] text-[color:var(--ed-accent)]'
-                        : 'border-black/[0.12] bg-white text-[color:var(--ed-ink-2)] hover:border-black/[0.25]'
+                      : 'border-black/[0.12] bg-white text-[color:var(--ed-ink-2)] hover:border-black/[0.25]'
                     }`}
                     aria-pressed={active}
                   >
-                    <Icon className="h-4 w-4 shrink-0" weight={active ? 'duotone' : 'regular'} />
                     <span>{item.label[language]}</span>
                   </button>
                 );
@@ -203,7 +197,7 @@ export function HomeQuickIntakeEd() {
             <button
               type="submit"
               disabled={status === 'sending' || status === 'sent'}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[color:var(--ed-accent)] px-5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-[color:var(--ed-accent)] px-5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
             >
               <EnvelopeSimple size={16} weight="bold" />
               {status === 'sent'

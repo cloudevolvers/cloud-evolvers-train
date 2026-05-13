@@ -13,7 +13,7 @@ export function EnterprisePanelEd() {
         },
         {
           label: 'Track op maat',
-          body: 'We passen de agenda aan op jullie Azure-landschap, governance en de rollen die jullie echt moeten opleiden.',
+          body: 'We passen de agenda aan op jullie Azure-omgeving, governance en de rollen die jullie echt moeten opleiden.',
         },
         {
           label: 'Certificering inbegrepen',
@@ -27,7 +27,7 @@ export function EnterprisePanelEd() {
         },
         {
           label: 'Custom track',
-          body: 'We shape the agenda around your Azure footprint, governance, and the roles you actually need to upskill.',
+          body: 'We shape the agenda around your Azure environment, governance, and the roles you need to train.',
         },
         {
           label: 'Certification included',

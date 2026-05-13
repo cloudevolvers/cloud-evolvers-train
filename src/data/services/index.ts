@@ -6,7 +6,7 @@ export const allServices: AllServicesTranslations = {
       id: 'cloud-management',
       title: 'Cloud Management',
       slug: 'cloud-management',
-      description: 'Proactive management of your Azure cloud environment — from FinOps and governance to 24/7 operational support.',
+      description: 'Proactive management of your Azure cloud environment, from FinOps and governance to 24/7 operational support.',
       icon: 'Cloud',
       image: '/images/services/cloud-management.jpg',
       imageCredit: 'Brett Sayles / Pexels',
@@ -34,7 +34,7 @@ export const allServices: AllServicesTranslations = {
       id: 'cloud-management',
       title: 'Cloud Beheer',
       slug: 'cloud-management',
-      description: 'Proactief beheer van uw Azure cloud omgeving — van FinOps en governance tot 24/7 operationele ondersteuning.',
+      description: 'Proactief beheer van uw Azure cloud omgeving, van FinOps en governance tot 24/7 operationele ondersteuning.',
       icon: 'Cloud',
       image: '/images/services/cloud-management.jpg',
       imageCredit: 'Brett Sayles / Pexels',
@@ -72,7 +72,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'Resource monitoring that pages the right people',
-          description: 'We set up Azure Monitor, Log Analytics, and Application Insights so the metrics that matter — availability, latency, errors — show up where your team already works. No noisy dashboards, no alert fatigue.',
+          description: 'We set up Azure Monitor, Log Analytics, and Application Insights so availability, latency, and errors show up where your team already works. No noisy dashboards, no alert fatigue.',
         },
         {
           title: 'Custom Alert Configuration',
@@ -87,8 +87,8 @@ export const allServices: AllServicesTranslations = {
           description: 'Track resource utilization over time to identify growth patterns, seasonal variations, and optimization opportunities. Our trend analysis helps with capacity planning and cost management.',
         },
         {
-          title: 'AI-Driven Observability',
-          description: 'Leverage Azure Monitor\'s AI-powered insights and AIOps capabilities to automatically detect anomalies, correlate alerts, and reduce mean time to resolution. With integration into Microsoft Copilot for Azure, your operations team gets intelligent recommendations in natural language.',
+          title: 'AIOps observability',
+          description: 'Use Azure Monitor, anomaly detection, alert correlation, and Microsoft Copilot for Azure to spot incidents earlier and explain what changed in plain language.',
         },
       ],
       benefits: [
@@ -116,7 +116,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'Resource monitoring die de juiste mensen pingt',
-          description: 'We zetten Azure Monitor, Log Analytics en Application Insights zo op dat de metrics die ertoe doen — beschikbaarheid, latency, errors — daar landen waar jullie team al werkt. Geen ruis, geen alert fatigue.',
+          description: 'We zetten Azure Monitor, Log Analytics en Application Insights zo op dat beschikbaarheid, latency en errors landen waar jullie team al werkt. Geen ruis, geen alert fatigue.',
         },
         {
           title: 'Aangepaste Alert Configuratie',
@@ -266,7 +266,7 @@ export const allServices: AllServicesTranslations = {
       id: 'cost-optimization',
       title: 'Cost Optimization',
       slug: 'cost-optimization',
-      description: 'Find what is actually driving your Azure bill — right-size resources, claim reservations, and set up alerts before the next surprise invoice.',
+      description: 'Find what is actually driving your Azure bill. Right-size resources, claim reservations, and set up alerts before the next surprise invoice.',
       icon: 'PiggyBank',
       image: '/images/services/cost-optimization.jpg',
       imageCredit: 'Negative Space / Pexels',
@@ -274,7 +274,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'Where your Azure bill actually goes',
-          description: 'We pull cost data across subscriptions, resource groups, and tags to show what is driving the bill — not at the service level, but at the workload level. Most reviews surface 20-40% of spend that nobody owns.',
+          description: 'We pull cost data across subscriptions, resource groups, and tags to show what is driving the bill by workload. Most reviews surface 20-40% of spend that nobody owns.',
         },
         {
           title: 'Resource Right-sizing Recommendations',
@@ -282,7 +282,7 @@ export const allServices: AllServicesTranslations = {
         },
         {
           title: 'Reservation and Commitment Recommendations',
-          description: "We identify opportunities to leverage Azure's discount options such as Reserved Instances and Savings Plans based on your historical usage patterns, potentially saving 40-70% compared to pay-as-you-go pricing.",
+          description: "We identify where Reserved Instances, Savings Plans, or a simpler SKU change fit your usage patterns. The target is lower spend without hiding the trade-offs.",
         },
         {
           title: 'Budget Forecasting',
@@ -310,7 +310,7 @@ export const allServices: AllServicesTranslations = {
       id: 'cost-optimization',
       title: 'Kosten Optimalisatie',
       slug: 'cost-optimization',
-      description: 'Vind wat jullie Azure-rekening echt drijft — right-size resources, claim reservations en zet alerts op voor de volgende verrassingsfactuur.',
+      description: 'Vind wat jullie Azure-rekening echt drijft. Right-size resources, claim reservations en zet alerts op voor de volgende verrassingsfactuur.',
       icon: 'PiggyBank',
       image: '/images/services/cost-optimization.jpg',
       imageCredit: 'Negative Space / Pexels',
@@ -318,7 +318,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'Waar jullie Azure-rekening écht naartoe gaat',
-          description: 'We trekken kostendata over subscriptions, resource groups en tags om te laten zien wat de rekening drijft — niet op service-niveau, maar per workload. De meeste reviews leggen 20-40% bloot waar niemand eigenaar van is.',
+          description: 'We trekken kostendata over subscriptions, resource groups en tags om te laten zien wat de rekening per workload drijft. De meeste reviews leggen 20-40% bloot waar niemand eigenaar van is.',
         },
         {
           title: 'Resource Right-sizing Aanbevelingen',
@@ -356,15 +356,15 @@ export const allServices: AllServicesTranslations = {
       id: 'microsoft-365-copilot',
       title: 'Microsoft 365 Copilot',
       slug: 'microsoft-365-copilot',
-      description: 'Microsoft 365 Copilot rollout, governance, and adoption work — from licensing decisions and tenant readiness to user training and Copilot Studio agents.',
+      description: 'Microsoft 365 Copilot rollout, governance, and adoption work: licensing decisions, tenant readiness, user training, and Copilot Studio agents.',
       icon: 'Bot',
       image: '/images/services/microsoft-365-copilot.jpg',
       imageCredit: 'Matheus Bertelli / Pexels',
-      features: ['AI-powered assistance', 'Productivity optimization', 'Integration with Microsoft 365', 'User training and support'],
+      features: ['Copilot rollout', 'Prompt training', 'Microsoft 365 integration', 'User support'],
       sections: [
         {
           title: 'What we do with Copilot',
-          description: "Two things, mostly. First: rollout work — licensing, tenant readiness, the data governance and DLP checks that have to happen before you turn it on. Second: adoption — training power users, building usage patterns that stick, and writing prompts that match how your team actually works.",
+          description: "Two things, mostly. First: rollout work, including licensing, tenant readiness, data governance, and DLP checks before you turn it on. Second: adoption, including power-user training, usage patterns that stick, and prompts that match how your team works.",
         },
         {
           title: 'Our Copilot Implementation Services',
@@ -433,15 +433,15 @@ export const allServices: AllServicesTranslations = {
       id: 'microsoft-365-copilot',
       title: 'Microsoft 365 Copilot',
       slug: 'microsoft-365-copilot',
-      description: 'Microsoft 365 Copilot uitrol, governance en adoptie — van licentiekeuzes en tenant-readiness tot gebruikerstraining en Copilot Studio agents.',
+      description: 'Microsoft 365 Copilot uitrol, governance en adoptie: licentiekeuzes, tenant-readiness, gebruikerstraining en Copilot Studio agents.',
       icon: 'Bot',
       image: '/images/services/microsoft-365-copilot.jpg',
       imageCredit: 'Matheus Bertelli / Pexels',
-      features: ['AI-powered assistance', 'Productivity optimization', 'Integration with Microsoft 365', 'User training and support'],
+      features: ['Copilot uitrol', 'Prompttraining', 'Microsoft 365 integratie', 'Gebruiker support'],
       sections: [
         {
           title: 'What we do with Copilot',
-          description: "Two things, mostly. First: rollout work — licensing, tenant readiness, the data governance and DLP checks that have to happen before you turn it on. Second: adoption — training power users, building usage patterns that stick, and writing prompts that match how your team actually works.",
+          description: "Twee dingen vooral. Eerst de uitrol: licenties, tenant-readiness, datagovernance en DLP-checks voordat je het aanzet. Daarna adoptie: power-user training, gebruikspatronen die blijven hangen en prompts die passen bij hoe je team werkt.",
         },
         {
           title: 'Our Copilot Implementation Services',
@@ -520,7 +520,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'How we actually engage',
-          description: "We start with what you have running. Whether that is a brand-new tenant or a five-year-old environment full of click-deployed VMs, we work in increments — landing zone first, then governance, then automation. No big-bang rebuilds.",
+          description: "We start with what you have running. Whether that is a brand-new tenant or a five-year-old environment full of click-deployed VMs, we work in increments: landing zone first, then governance, then automation. No big-bang rebuilds.",
         },
         {
           title: 'Architecture Design',
@@ -574,7 +574,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'Hoe we daadwerkelijk werken',
-          description: 'We beginnen bij wat er nu draait. Of dat nu een gloednieuwe tenant is of een vijf jaar oude omgeving vol click-deployed VM\'s — we werken in stappen: eerst landing zone, dan governance, dan automatisering. Geen big-bang herbouw.',
+          description: 'We beginnen bij wat er nu draait. Of dat nu een gloednieuwe tenant is of een vijf jaar oude omgeving vol click-deployed VM\'s, we werken in stappen: eerst landing zone, dan governance, dan automatisering. Geen big-bang herbouw.',
         },
         {
           title: 'Architectuur Ontwerp',
@@ -662,7 +662,7 @@ export const allServices: AllServicesTranslations = {
         },
         {
           title: 'AI-Assisted IaC',
-          description: 'Leverage GitHub Copilot and Azure AI to accelerate IaC development. We help teams adopt AI pair-programming for Terraform, Bicep, and OpenTofu — reducing boilerplate, catching misconfigurations early, and speeding up infrastructure reviews.',
+          description: 'Use GitHub Copilot and Azure AI during IaC development. We help teams apply pair-programming patterns for Terraform, Bicep, and OpenTofu so boilerplate, misconfigurations, and review delays are easier to spot.',
         },
         {
           title: 'CI/CD Pipeline Integration',
@@ -690,7 +690,7 @@ export const allServices: AllServicesTranslations = {
         { title: 'Version Control', description: 'Track changes and implement proper governance' },
         { title: 'Cost Control', description: 'Better visibility and management of cloud resources' },
       ],
-      closingText: 'Tired of click-ops? Send us your current Azure environment and we will help your team move it into Bicep, Terraform, or OpenTofu — without a six-month rewrite.',
+      closingText: 'Tired of click-ops? Send us your current Azure environment and we will help your team move it into Bicep, Terraform, or OpenTofu without a six-month rewrite.',
       isPublished: true,
       publishedAt: '2024-01-05T00:00:00Z',
       updatedAt: '2026-03-17T00:00:00Z',
@@ -740,7 +740,7 @@ export const allServices: AllServicesTranslations = {
         },
         {
           title: 'AI-Ondersteunde IaC',
-          description: 'Benut GitHub Copilot en Azure AI om IaC-ontwikkeling te versnellen. We helpen teams AI pair-programming te adopteren voor Terraform, Bicep en OpenTofu — minder boilerplate, vroege detectie van misconfiguraties en snellere infrastructure reviews.',
+          description: 'Gebruik GitHub Copilot en Azure AI tijdens IaC-ontwikkeling. We helpen teams pair-programming patronen toepassen voor Terraform, Bicep en OpenTofu, zodat boilerplate, misconfiguraties en reviewvertraging sneller zichtbaar worden.',
         },
         {
           title: 'CI/CD Pipeline Integratie',
@@ -768,7 +768,7 @@ export const allServices: AllServicesTranslations = {
         { title: 'Versie Controle', description: 'Volg wijzigingen en implementeer juiste governance' },
         { title: 'Kosten Controle', description: 'Betere zichtbaarheid en beheer van cloud resources' },
       ],
-      closingText: 'Klaar met click-ops? Stuur jullie huidige Azure-omgeving op, dan helpen we jullie team het naar Bicep, Terraform of OpenTofu te brengen — zonder een herschrijfproject van zes maanden.',
+      closingText: 'Klaar met click-ops? Stuur jullie huidige Azure-omgeving op, dan helpen we jullie team het naar Bicep, Terraform of OpenTofu te brengen zonder een herschrijfproject van zes maanden.',
       isPublished: true,
       publishedAt: '2024-01-05T00:00:00Z',
       updatedAt: '2026-03-17T00:00:00Z',
@@ -788,7 +788,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'How we approach AI work',
-          description: 'Most AI projects fail not because the model is wrong, but because the data is messy and nobody owns the result. We start with the use case and the data — if either does not hold up, we will tell you before you spend on Azure OpenAI.',
+          description: 'Most AI projects fail because the data is messy and nobody owns the result. We start with the use case and the data. When either does not hold up, we will tell you before you spend on Azure OpenAI.',
         },
         {
           title: 'Azure OpenAI Integration',
@@ -796,7 +796,7 @@ export const allServices: AllServicesTranslations = {
             { title: 'Custom GPT Implementation', description: 'Develop tailored solutions using Azure OpenAI' },
             { title: 'Prompt Engineering', description: 'Create effective prompts for optimal AI responses' },
             { title: 'Content Filtering', description: 'Implement appropriate content controls' },
-            { title: 'Integration Architecture', description: 'Design robust, scalable systems that incorporate Azure OpenAI' },
+            { title: 'Integration Architecture', description: 'Design maintainable systems that incorporate Azure OpenAI' },
           ],
         },
         {
@@ -841,7 +841,7 @@ export const allServices: AllServicesTranslations = {
         { title: 'Cross-Domain Knowledge', description: 'Industry experience across healthcare, finance, manufacturing, and more' },
         { title: 'End-to-End Support', description: 'From strategy and planning to implementation and ongoing management' },
       ],
-      closingText: 'Have an AI use case in mind but not sure if it actually works on your data? Send us the use case and we will tell you what is realistic — and what is hype.',
+      closingText: 'Have an AI use case in mind but not sure it works on your data? Send us the use case and we will tell you what is realistic and what is hype.',
       isPublished: true,
       publishedAt: '2024-01-06T00:00:00Z',
       updatedAt: '2026-03-17T00:00:00Z',
@@ -859,7 +859,7 @@ export const allServices: AllServicesTranslations = {
       sections: [
         {
           title: 'Hoe we AI-werk aanpakken',
-          description: 'De meeste AI-projecten falen niet omdat het model verkeerd is, maar omdat de data rommelig is en niemand eigenaar is van het resultaat. We beginnen bij de use case en de data — houdt een van die twee geen stand, dan zeggen we het voordat je geld uitgeeft aan Azure OpenAI.',
+          description: 'De meeste AI-projecten falen omdat de data rommelig is en niemand eigenaar is van het resultaat. We beginnen bij de use case en de data. Houdt een van die twee geen stand, dan zeggen we het voordat je geld uitgeeft aan Azure OpenAI.',
         },
         {
           title: 'Azure OpenAI Integratie',
@@ -912,7 +912,7 @@ export const allServices: AllServicesTranslations = {
         { title: 'Cross-Domain Kennis', description: 'Industrie ervaring in gezondheidszorg, financiën, productie en meer' },
         { title: 'End-to-End Ondersteuning', description: 'Van strategie en planning tot implementatie en voortdurend beheer' },
       ],
-      closingText: 'Een AI-use case in gedachten maar niet zeker of het echt werkt op jullie data? Stuur de use case op, dan vertellen we wat realistisch is — en wat hype.',
+      closingText: 'Een AI-use case in gedachten maar niet zeker of het echt werkt op jullie data? Stuur de use case op, dan vertellen we wat realistisch is en wat hype.',
       isPublished: true,
       publishedAt: '2024-01-06T00:00:00Z',
       updatedAt: '2026-03-17T00:00:00Z',
